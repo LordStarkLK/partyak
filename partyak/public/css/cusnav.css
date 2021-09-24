@@ -1,0 +1,344 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Actor&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* background-color: black; */
+/* }
+.nav-bar {
+  background-color: #202020;
+  margin: 0;
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+  align-items: center;
+  padding:0;
+  padding-top: 15px;
+  padding-left: 55px;
+  padding-right: 55px;
+  top: 0;
+  left: 0;
+  height: auto;
+} 
+
+.logo-img {
+  height: 59px;
+  width: auto;
+  cursor: pointer;
+}
+
+.nav-links {
+  padding: 0;
+  margin:0;
+  list-style: none;
+}
+.nav-links li {
+  list-style: none;
+  position:relative;
+  display: inline-block;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.nav-links li , a{
+  color: #e8f0f2;
+  font-size: 25px;
+  font-family: "Actor", sans-serif;
+}
+.nav-links li a:hover{
+  background:black;
+}
+
+.nav-links ul{
+  position:absolute;
+  top:60px;
+  display:none;
+}
+
+.nav-items .nav-links li:hover > ul{
+  display:block;
+} 
+
+a:link {
+  text-decoration: none;
+}
+button {
+  background-color: darkcyan;
+  border-radius: 28px;
+  border: none;
+  cursor: pointer;
+  font-family: Arial;
+  font-size: 25px;
+  line-height: 23px;
+  color: #e8f0f2;
+  padding: 6px 35px;
+  text-decoration: none;
+}
+.login-button {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0;
+  padding-right: 10px;
+}
+.signup-button:hover {
+  background-color: #026faa;
+}
+.signup-button {
+  background-color: #39a2db;
+  transition: all 0.5s ease 0s;
+}
+
+@media screen and (max-width: 1200px) {
+  button {
+    font-size: 20px;
+  }
+  ul li,
+  a,
+  button {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .toggle-button { */
+/* display: flex;
+  vertical-align: middle;
+  align-items: center;
+}
+/* .nav-items {
+  display: none;
+} */
+/* .buttons {
+    display: none;
+  }
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .nav-links ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .nav-items {
+    width: 100%;
+  }
+  ul li,
+  a,
+  button {
+    font-size: 20px;
+  }
+  .nav-links li {
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 450px) {
+  ul li,
+  a,
+  button {
+    font-size: 15px;
+  }
+  @media screen and (max-width: 350px) {
+    ul li,
+    a,
+    button {
+      font-size: 12px;
+    }
+  }
+}   */
+@import url("https://fonts.googleapis.com/css2?family=Actor&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+}
+
+.nav-bar {
+  background-color: #202020;
+  margin: 0;
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  vertical-align: top;
+  align-items: center;
+  padding-top: 15px;
+  padding-left: 55px;
+  padding-right: 55px;
+  top: 0;
+  left: 0;
+  height: auto;
+}
+
+.logo-img {
+  height: 59px;
+  width: auto;
+  cursor: pointer;
+}
+
+.nav-items {
+  width: 100%;
+  padding-left: 200px;
+}
+
+.nav-links {
+  align-items: center;
+  justify-content: space-around;
+  padding-left: 50px;
+  width: 100%;
+  margin: 0;
+}
+
+.nav-links li {
+  position: relative;
+  list-style: none;
+  padding-left: 20px;
+  display: inline-block;
+}
+
+.nav-links li a, a {
+  color: #e8f0f2;
+  font-size: 25px;
+  font-family: "Actor", sans-serif;
+  text-decoration: none;
+}
+
+.nav-links li a:hover {
+  background: black;
+  color: white;
+}
+
+.nav-links .browse-links {
+  position: absolute;
+  top: 30px;
+  display: none;
+}
+
+.nav-items .nav-links li:hover > .browse-links {
+  display: block;
+}
+
+.nav-links .browse-links {
+  text-align: center;
+  backdrop-filter: blur(1200px);
+  -webkit-backdrop-filter: blur(1200px);
+  background-color: linear-gradient(114.1deg, rgba(40, 40, 40, 0.91) 18.52%, rgba(15, 15, 15, 0.73) 98.52%), linear-gradient(106.04deg, rgba(255, 255, 255, 0.12) 10.95%, rgba(255, 255, 255, 0.1) 98.32%);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.nav-links .browse-links li {
+  background-color: transparent;
+  width: 300px;
+  float: none;
+  display: list-item;
+  position: relative;
+  padding: 5px;
+}
+
+.nav-links .plan-links {
+  position: absolute;
+  top: 30px;
+  display: none;
+}
+
+.nav-items .nav-links li:hover > .plan-links {
+  display: block;
+}
+
+.nav-links .plan-links {
+  text-align: center;
+  backdrop-filter: blur(1200px);
+  -webkit-backdrop-filter: blur(1200px);
+  background-color: linear-gradient(114.1deg, rgba(40, 40, 40, 0.91) 18.52%, rgba(15, 15, 15, 0.73) 98.52%), linear-gradient(106.04deg, rgba(255, 255, 255, 0.12) 10.95%, rgba(255, 255, 255, 0.1) 98.32%);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.nav-links .plan-links li {
+  background-color: transparent;
+  width: 200px;
+  float: none;
+  display: list-item;
+  position: relative;
+  padding: 5px;
+}
+
+.nav-chata a, .nav-notifi a, .nav-buttons a {
+  padding-left: 40px;
+}
+
+/* 
+.nav-buttons { 
+  align-items: center;
+  justify-content: space-around;
+  padding-left:50px; 
+  width: 100%;
+  margin:0;
+} 
+
+.nav-buttons li {
+  position: relative;
+  list-style: none;
+  padding-left:20px;
+  display:inline-block;
+
+}  */
+.nav-buttons {
+  padding-right: 30px;
+}
+
+.nav-buttons .button-links a {
+  color: #e8f0f2;
+  font-size: 25px;
+  font-family: "Actor", sans-serif;
+  text-decoration: none;
+}
+
+.nav-buttons li a:hover {
+  background: black;
+  color: white;
+}
+
+.nav-buttons .button-links {
+  position: absolute;
+  top: 60px;
+  display: none;
+}
+
+.nav-buttons li:hover > .button-links {
+  display: block;
+}
+
+.nav-buttons .button-links {
+  text-align: center;
+  backdrop-filter: blur(1200px);
+  -webkit-backdrop-filter: blur(1200px);
+  background-color: linear-gradient(114.1deg, rgba(40, 40, 40, 0.91) 18.52%, rgba(15, 15, 15, 0.73) 98.52%), linear-gradient(106.04deg, rgba(255, 255, 255, 0.12) 10.95%, rgba(255, 255, 255, 0.1) 98.32%);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 20px;
+  padding: 1px;
+}
+
+.nav-buttons .button-links li {
+  background-color: transparent;
+  width: 150px;
+  display: list-item;
+  position: relative;
+  padding: 5px;
+}/*# sourceMappingURL=cusnav.css.map */

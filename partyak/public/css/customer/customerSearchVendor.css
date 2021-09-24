@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color:#202020; 
+    background-image:url(../../public/img/confetti.png); 
+    background-repeat: round;
+}
+.container{
+    padding: 0%; 
+    display: flex;
+}
+
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  order:0;
+  border-radius: 30px 0px 0px 30px;
+  margin-top: 2%;
+  position: fixed;
+  height: 90%;
+  width: 260px;
+  background-color: rgb(0, 0, 0);
+  background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
+  backdrop-filter: blur(120px); 
+  transition: all 0.5s ease;
+}
+.sidebar.active{
+  width: 20%;
+}
+
+.sidebar .sidenav-links{
+  margin-top: 10px;
+}
+.sidebar .sidenav-links li{
+  position: relative;
+  list-style: none;
+  height: 45px;
+}
+.sidebar .sidenav-links li a{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  
+}
+.sidebar .sidenav-links li a.active{
+  background: #626a79;
+}
+.sidebar .sidenav-links li a:hover{
+   background: linear-gradient(114.1deg, rgba(129, 129, 129, 0.08) 18.52%, rgba(49, 49, 49, 0.51) 98.52%);
+   backdrop-filter: blur(120px);
+     /* Note: backdrop-filter has minimal browser support */
+   border-radius: 19px 0px 0px 19px;
+}
+.sidebar .sidenav-links li i{
+  min-width: 60px;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+.sidebar .sidenav-links li a .links_name{
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.cusContent{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  order:1;
+  height: 90%;
+  width: calc(100% - 260px);
+  left: 260px;
+  transition: all 0.5s ease;
+  border-radius: 30px; 
+  background-color: rgb(0, 0, 0);
+  background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
+  backdrop-filter: blur(120px);
+  padding:2%;
+  /* backdrop-filter: blur(120px);
+  -webkit-backdrop-filter: blur(120px);
+  background-color:linear-gradient(114.1deg, rgba(40, 40, 40, 0.91) 18.52%, rgba(15, 15, 15, 0.73) 98.52%), linear-gradient(106.04deg, rgba(255, 255, 255, 0.12) 10.95%, rgba(255, 255, 255, 0.1) 98.32%); */
+  /* Note: backdrop-filter has minimal browser support */
+} 
+
+.cusSearch{
+  padding-bottom:3%;
+}
+
+form.cuse{
+  width: 550px;
+  height: 38px;
+  background: rgba(255, 253, 253, 0.8);
+  border-radius: 26px;
+}
+
+form.cuse input[type=text] {
+  border-radius: 26px 0px 0px 26px; 
+  height: 38px;
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background-color: transparent;
+}
+
+/* Style the submit button */
+form.cuse .cusbtn {
+  height: 38px;
+  border-radius: 0px 26px 26px 0px;
+  float: left;
+  width: 20%;
+  padding: 5px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.cuse .cusbtn:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.cuse::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+.cusDetail{
+  position:relative;
+  padding:2%;
+  border-radius: 30px; 
+  background-color: rgb(0, 0, 0);
+  background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
+  backdrop-filter: blur(120px);
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.cusraw1{
+  position:relative;
+  display: flex;
+  flex-direction: raw;
+  order:0;
+  /* padding:2%; */
+}
+
+.cusraw2{
+  position:relative;
+  display: flex;
+  flex-direction: raw;
+  order:1;
+  /* padding:2%; */
+}
+
+.cusGallery1{
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  order:0;
+}
+
+.cusGallery2{
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  order:1;
+}
+
+.cusGallery3{
+  display:flex;
+  position:relative;
+  flex-direction: column;
+  order:2;
+}
+
+
+.cusGallery4{
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  order:0;
+}
+
+.cusGallery5{
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  order:1;
+}
+
+.cusGallery6{
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  order:2;
+}
+
+
+.cusGallery1, .cusGallery2, .cusGallery3,.cusGallery4,.cusGallery5,.cusGallery6{
+  position:relative;
+  padding:2%;
+}
+
+.cusGallery1 img, .cusGallery2 img, .cusGallery3 img, .cusGallery4 img, .cusGallery5 img,.cusGallery6 img{
+  position:relative;
+  border-radius: 10px;
+  width:300px;
+  height:200px;
+}
+
+.cusDes1, .cusDes2, .cusDes3, .cusDes4, .cusDes5, .cusDes6{
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* .sidebar{
+   background-image:url(image/left.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+} */

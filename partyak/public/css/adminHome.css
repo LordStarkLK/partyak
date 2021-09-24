@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+/* href="https://fonts.googleapis.com/css2?family=Alatsi&display=swap"
+font-family: 'Alatsi', sans-serif; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: black;
+  background-image: url(venBack.png);
+  background-repeat: round;
+}
+
+.container {
+  padding: 40px;
+}
+
+.sidebar {
+  border-radius: 23px 0px 0px 23px;
+  margin-top: 3%;
+  position: fixed;
+  height: 75%;
+  width: 240px;
+  background-color: black;
+  background: linear-gradient(114.1deg, rgba(24, 24, 24, 0.65) 18.52%, rgba(15, 15, 15, 0.75) 98.52%);
+  -webkit-backdrop-filter: blur(120px);
+          backdrop-filter: blur(120px);
+  transition: all 0.5s ease;
+}
+
+.sidebar.active {
+  width: 20%;
+}
+
+.sidebar .nav-links {
+  margin-top: 10px;
+}
+
+.sidebar .nav-links li {
+  position: relative;
+  list-style: none;
+  height: 50px;
+}
+
+.sidebar .nav-links li a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+.sidebar .nav-links li a.active {
+  background: #081D45;
+}
+
+.sidebar .nav-links li a:hover {
+  background: #0f5368;
+  border-radius: 15px;
+}
+
+.sidebar .nav-links li i {
+  min-width: 60px;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+
+.sidebar .nav-links li a .links_name {
+  color: whitesmoke;
+  font-size: 18px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.sidebar .nav-links .log_out {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.content-section {
+  position: relative;
+  height: 85%;
+  width: calc(100% - 240px);
+  left: 240px;
+  transition: all 0.5s ease;
+  border-radius: 43px;
+  background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.36) 18.52%, rgba(15, 15, 15, 0.12) 98.52%);
+  -webkit-backdrop-filter: blur(120px);
+          backdrop-filter: blur(120px);
+}
+
+.sidebar.active ~ .content-section {
+  width: calc(100% - 60px);
+  left: 60px;
+}
+
+.content-section nav {
+  display: flex;
+  height: 60px;
+  position: fixed;
+  width: 500px;
+  z-index: 100;
+  padding: 0 20px;
+  transition: all 0.5s ease;
+  border-radius: 43px 0 0 0;
+  color: white;
+}
+
+.content-section nav .sidebar-button {
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+nav .sidebar-button i {
+  font-size: 40px;
+  margin-right: 10px;
+}
+
+.content-section .content {
+  position: relative;
+  padding-top: 60px;
+}
+
+.content .overview-boxes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px 50px 20px 50px;
+  border-radius: 43px;
+}
+
+.overview-boxes .box {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% / 3 - 15px);
+  background: black;
+  padding: 7px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.overview-boxes .box-topic {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.content .box .number {
+  display: inline-block;
+  font-size: 35px;
+  margin-top: -6px;
+  font-weight: 500;
+}
+
+.content .box .cart {
+  display: inline-block;
+  font-size: 32px;
+  height: 50px;
+  width: 50px;
+  background: #cce5ff;
+  line-height: 50px;
+  text-align: center;
+  color: #66b0ff;
+  border-radius: 12px;
+  margin: -15px 0 0 6px;
+}
+
+.content .box .cart.two {
+  color: #2BD47D;
+  background: #C0F2D8;
+}
+
+.content .box .cart.three {
+  color: #ffac5e;
+  background: #ffe8a9;
+}
+
+.content .total-order {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.content .summery-box {
+  margin: 0 60px 0 60px;
+  border-radius: 30px;
+  background-color: #068ab3;
+  display: flex;
+  justify-content: center;
+}
+
+.content .summery-box .chart {
+  width: 65%;
+  height: 350px;
+  padding: 20px 30px;
+  margin: 0 20px 0 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content .summery-box .chart-details {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.summery-box .box .title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.content .summery-box .top-sales {
+  width: 35%;
+  height: 350px;
+  padding: 20px 30px;
+  margin: 0 20px 0 20px;
+  border-radius: 12px;
+  line-height: 1.5cm;
+}
+
+.monthly-details, .daily-details {
+  margin-top: 10px;
+  width: 80%;
+  height: 45%;
+  border-radius: 40px;
+  background-color: #c2e2ff;
+  text-align: center;
+  padding: 10px;
+}
+
+.monthly-details, .daily-details, .name {
+  font-size: 30px;
+  font-weight: bold;
+  color: #042a72;
+}
+
+.monthly-details, .daily-details, .amount {
+  font-size: 45px;
+  font-weight: bold;
+  color: #000000;
+}
+
+@media (max-width: 1240px) {
+  .sidebar {
+    width: 60px;
+  }
+
+  .sidebar.active {
+    width: 220px;
+  }
+
+  .content-section {
+    width: calc(100% - 60px);
+    left: 60px;
+  }
+
+  .sidebar.active ~ .content-section {
+    overflow: hidden;
+    left: 220px;
+  }
+
+  .content-section nav {
+    width: 300px;
+  }
+}
+@media (max-width: 1240px) and (max-width: 1150px) {
+  .content .summery-box {
+    flex-direction: column;
+  }
+
+  .content .summery-box .box {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .content .summery-box {
+    margin: 0;
+    padding: 10px;
+  }
+
+  .content .summery-box .top-sales {
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  .content .summery-box .chart {
+    margin: 0;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 1240px) and (max-width: 1000px) {
+  .overview-boxes .box {
+    width: calc(100% / 2 - 15px);
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 1240px) and (max-width: 700px) {
+  nav .sidebar-button .dashboard i {
+    display: flex;
+  }
+
+  .content .summery-box .chart-details {
+    width: 560px;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 1240px) and (max-width: 550px) {
+  .overview-boxes .box {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}/*# sourceMappingURL=adminHome.css.map */
