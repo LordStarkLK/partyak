@@ -117,7 +117,7 @@
       <div>
       <ul class="breadcrumb">
         <li><a href="#">Users</a></li>
-        <li><a href="#">Customers</a></li>
+        <li><a href="#">Service Providers</a></li>
         </ul>
 
         <div class="search-container">
@@ -144,9 +144,10 @@
         
         <table>
   <tr>
-    <th>Customer ID</th>
-    <th>Custoner Name</th>
+    <th>Service Provider ID</th>
+    <th>Service Name</th>
     <th>Email</th>
+    <th>Service Type</th>
     <th>More Actions</th>
 
   </tr>
@@ -154,35 +155,38 @@
     <td>01</td>
     <td>Griffin</td>
     <td>griffin@gmail.com</td>
-    <td>
-    <div class="dropdown">
-  <button class="dropbtn">Dropdown</button>
-  <div class="dropdown-content">
-  <a href="#">Link 1</a>
-  <a href="#">Link 2</a>
-  <a href="#">Link 3</a>
-  </div>
-</div>
-    </td>
+    <td>griffin@gmail.com</td>
+    <td>Null</td>
   </tr>
   <tr>
     <td>02</td>
     <td>Forrest</td>
-    <td>$forrest@gmail.com</td>
+    <td>forrest@gmail.com</td>
+    <td>photography</td>
     <td>Null</td>
   </tr>
   <tr>
     <td>03</td>
     <td>Swanson</td>
-    <td>$swanson@gmail.com</td>
+    <td>swanson@gmail.com</td>
+    <td>Decorations</td>
     <td>Null</td>
   </tr>
   <tr>
     <td>04</td>
     <td>Brown</td>
-    <td>$brown@gmail.com</td>
+    <td>brown@gmail.com</td>
+    <td>Musician</td>
     <td>Null</td>
 </tr>
+<tr>
+    <td>05</td>
+    <td>JK photography</td>
+    <td>jkphoto@gmail.com</td>
+    <td>venue</td>
+    <td>Null</td>
+  </tr>
+
 </table>
           
         
