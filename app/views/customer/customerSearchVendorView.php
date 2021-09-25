@@ -104,21 +104,24 @@
       <div class="cusraw1">
         <div class="cusGallery1">
           <a  href="#">
-            <img src="image/chanceFlowers.png" alt="Chance Flowers">
+          <img <?php srcIMG("chanceFlowers.png") ?> alt="Chance Flowers">
+            <!-- <img src="img/chanceFlowers.png" alt="Chance Flowers"> -->
           </a>
           <div class="cusDes1">2nd Chance Flowers <br> Colombo, Sri Lanka</div>
         </div>
   
         <div class="cusGallery2">
           <a  href="#">
-            <img src="image/degrees.png" alt="8 degrees">
+          <img <?php srcIMG("degrees.png") ?> alt="Chance Flowers">
+            <!-- <img src="image/degrees.png" alt="8 degrees"> -->
           </a>
           <div class="cusDes2">8 Degrees Hotel <br> Colombo, Sri Lanka</div>
         </div>
   
         <div class="cusGallery3">
           <a  href="#">
-            <img src="image/bakeriya.jpg" alt="ape bakeriya">
+          <img <?php srcIMG("bakeriya.jpg") ?> alt="Chance Flowers">
+            <!-- <img src="image/bakeriya.jpg" alt="ape bakeriya"> -->
           </a><div class="cusDes3">APE BAKERIYA <br>Galle, Sri Lanka</div>
         </div>  
 
@@ -127,21 +130,24 @@
       <div class="cusraw2">
         <div class="cusGallery4">
           <a  href="#">
-            <img src="image/ashane.jpg" alt="ashane">
+          <img <?php srcIMG("ashane.jpg") ?> alt="Chance Flowers">
+            <!-- <img src="image/ashane.jpg" alt="ashane"> -->
           </a>
           <div class="cusDes4">Ashane Gunarathne <br>Malabe, Sri Lanka</div>
         </div>
   
         <div class="cusGallery5">
           <a  href="#">
-            <img src="image/dark.jpg" alt="dark shine">
+          <img <?php srcIMG("dark.jpg") ?> alt="Chance Flowers">
+            <!-- <img src="image/dark.jpg" alt="dark shine"> -->
           </a>
           <div class="cusDes5">Dark Shine <br> Mathara, Sri Lanka</div>
         </div>
   
         <div class="cusGallery6">
           <a  href="#">
-            <img src="image/dukes.png" alt="dukes">
+          <img <?php srcIMG("dukes.png") ?> alt="Chance Flowers">
+            <!-- <img src="image/dukes.png" alt="dukes"> -->
           </a>
           <div class="cusDes3">Dukes Court 1 <br>Katunayaka,Sri Lanka</div>
         </div>
@@ -155,6 +161,7 @@
 </div>
 
 <?php linkJS("customer/customerSearchVendor"); ?>
+<script src="https://kit.fontawesome.com/3220c9480a.js" crossorigin="anonymous"></script>
 
 </body>
 
