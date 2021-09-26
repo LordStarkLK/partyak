@@ -12,72 +12,7 @@
    </head>
 <body>
 <div class="container">
-  <div class="sidebar">
-    
-      <ul class="nav-links">
-        <li>
-            <a href="#">
-              <i class='bx bx-pie-chart-alt-2' ></i>
-              <span class="links_name">Analytics</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class='bx bx-user' ></i>
-              <span class="links_name" onclick="window.location='<?php echo BASEURL . '/adminUsers'; ?>'">Users</span>
-            </a>
-          </li>
-        <li>
-          <a href="#">
-            <i class='bx bx-box' ></i>
-            <span class="links_name">Bookings</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class='bx bx-list-ul' ></i>
-            <span class="links_name">Marketing</span>
-          </a>
-        </li>
-        
-        <li>
-          <a href="#">
-            <i class='bx bx-coin-stack' ></i>
-            <span class="links_name">Payments</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class='bx bx-list-plus' ></i>
-            <span class="links_name">Requests</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class='bx bx-message' ></i>
-            <span class="links_name">Chat</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class='bx bx-calendar' ></i>
-            <span class="links_name">Calendar</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class='bx bxs-star' ></i>
-            <span class="links_name">Review</span>
-          </a>
-        </li>
-        <li class="log_out">
-          <a href= "<?php echo BASEURL . '/logout';?>">
-          <i class='bx bx-log-out'></i>
-            <span class="links_name">Log out</span>
-          </a>
-        </li>
-      </ul>
-  </div>
+  <?php linkPHP("adminSidebar");?>
   <section class="home-section">
     
       <div class="sidebar-button">

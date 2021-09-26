@@ -59,7 +59,7 @@ body{
   font-size: 18px;
   color: #fff;
 }
-.sidebar .nav-links li a .links_name{
+.sidebar .nav-links li a .side-links{
   color: rgb(245, 245, 245);
   font-size: 18px;
   font-weight: 500;
@@ -179,7 +179,7 @@ nav .sidebar-button i{
 }
 .home-content .sales-boxes{
     margin: 50px 60px 0 60px;
-    border-radius: 30px;
+    /* border-radius: 30px; */
   background-color: #068ab3;
   display: flex;
   justify-content: center;
@@ -317,12 +317,16 @@ ul.breadcrumb {
   }
 
   .dropbtn {
-    background-color: #4CAF50;
+    background-color: #3498DB;
     color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
   }
   
   .dropdown {
@@ -333,8 +337,9 @@ ul.breadcrumb {
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #f1f1f1;
     min-width: 160px;
+    overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
@@ -346,15 +351,9 @@ ul.breadcrumb {
     display: block;
   }
   
-  .dropdown-content a:hover {background-color: #f1f1f1}
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-  }
+  .dropdown a:hover {background-color: #ddd;}
+
+  .show {display: block;}
 
 .customer-image{
   align-items: center;

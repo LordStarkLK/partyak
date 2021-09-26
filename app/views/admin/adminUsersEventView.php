@@ -22,7 +22,7 @@
       </div>
    
     <div class="home-content">
-    <div class="overview-boxes">
+      <div class="overview-boxes">
         <div class="box" id="box-customer">
             <span class="links_name" onclick="window.location='<?php echo BASEURL . '/adminUsers'; ?>'"><img class="customer-image" <?php srcIMG("consumer.png") ?> width="40" height="40">
             <div class="box-topic">Customers</div></span>
@@ -51,12 +51,12 @@
           
           
         </div>
-        </div>
+      </div>
 
       <div>
       <ul class="breadcrumb">
         <li><a href="#">Users</a></li>
-        <li><a href="#">Service Providers</a></li>
+        <li><a href="#">Event Planners</a></li>
         </ul>
 
         <div class="search-container">
@@ -83,17 +83,15 @@
         
         <table>
   <tr>
-    <th>Service Provider ID</th>
-    <th>Service Name</th>
+    <th>Event Planner ID</th>
+    <th>Name</th>
     <th>Email</th>
-    <th>Service Type</th>
     <th>More Actions</th>
 
   </tr>
   <tr>
     <td>01</td>
     <td>Griffin</td>
-    <td>griffin@gmail.com</td>
     <td>griffin@gmail.com</td>
     <td>
     <div class="dropdown">
@@ -110,28 +108,24 @@
     <td>02</td>
     <td>Forrest</td>
     <td>forrest@gmail.com</td>
-    <td>photography</td>
     <td>Null</td>
   </tr>
   <tr>
     <td>03</td>
     <td>Swanson</td>
     <td>swanson@gmail.com</td>
-    <td>Decorations</td>
     <td>Null</td>
   </tr>
   <tr>
     <td>04</td>
     <td>Brown</td>
     <td>brown@gmail.com</td>
-    <td>Musician</td>
     <td>Null</td>
 </tr>
 <tr>
     <td>05</td>
     <td>JK photography</td>
     <td>jkphoto@gmail.com</td>
-    <td>venue</td>
     <td>Null</td>
   </tr>
 

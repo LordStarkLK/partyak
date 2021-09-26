@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
  
     <?php linkCSS("admin/adminUsers"); ?>
+    <?php linkCSS("css/all"); ?>
+
     
    
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -13,73 +15,7 @@
    </head>
 <body>
 <div class="container">
-  <div class="sidebar">
-    
-      <ul class="nav-links">
-        <li>
-            <a href="#">
-              <i class='bx bx-pie-chart-alt-2' ></i>
-              <span class="links_name">Analytics</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class='bx bx-user' ></i>
-              <span class="links_name" onclick="window.location='<?php echo BASEURL . '/adminUsers'; ?>'">Users</span>
-            </a>
-          </li>
-        <li>
-          <a href="#">
-            <i class='bx bx-box' ></i>
-            <span class="links_name">Bookings</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class='bx bx-list-ul' ></i>
-            <span class="links_name">Marketing</span>
-          </a>
-        </li>
-        
-        <li>
-          <a href="#">
-            
-            <i class='bx bx-coin-stack' ></i>
-            <span class="links_name">Payments</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class='bx bx-list-plus' ></i>
-            <span class="links_name">Requests</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class='bx bx-message' ></i>
-            <span class="links_name">Chat</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class='bx bx-calendar' ></i>
-            <span class="links_name">Calendar</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class='bx bxs-star' ></i>
-            <span class="links_name">Review</span>
-          </a>
-        </li>
-        <li class="log_out">
-          <a href= "<?php echo BASEURL . '/logout';?>">
-          <i class='bx bx-log-out'></i>
-            <span class="links_name">Log out</span>
-          </a>
-        </li>
-      </ul>
-  </div>
+  <?php linkPHP("adminSidebar");?>
   <section class="home-section">
     
       <div class="sidebar-button">
@@ -88,31 +24,36 @@
       </div>
    
     <div class="home-content">
-      <div class="overview-boxes">
+    <div class="overview-boxes">
         <div class="box" id="box-customer">
-        
-          
-          <img class="customer-image" <?php srcIMG("consumer.png") ?> width="40" height="40">
-            <div class="box-topic">Customers</div>
+            <span class="links_name" onclick="window.location='<?php echo BASEURL . '/adminUsers'; ?>'"><img class="customer-image" <?php srcIMG("consumer.png") ?> width="40" height="40">
+            <div class="box-topic">Customers</div></span>
+            <!-- <a href="<?php echo BASEURL . 'adminUsers'; ?>"></a>
+            <img class="customer-image" <?php srcIMG("consumer.png") ?> width="40" height="40">
+            <div class="box-topic">Customers</div> -->
           
           
           <!-- <i class='bx bxs-user cart'></i> -->
         </div>
         <div class="box" id="box-service">
-          
-            <img class="service-image" <?php srcIMG("service.png") ?> width="40" height="40">
+        <span class="links_name" onclick="window.location='<?php echo BASEURL . '/adminUsersService'; ?>'">
+        <img class="service-image" <?php srcIMG("service.png") ?> width="40" height="40">
             <div class="box-topic">Service Providers</div>
+    </span>
+            
           
           <!-- <i clss='bx bxs-user-rectangle cart two' ></i> -->
         </div>
         <div class="box" id="box-event">
-          
-            <img class="event-image" <?php srcIMG("event.png") ?> width="40" height="40">   
+        <span class="links_name" onclick="window.location='<?php echo BASEURL . '/adminUsersEvent'; ?>'">
+        <img class="event-image" <?php srcIMG("event.png") ?> width="40" height="40">   
             <div class="box-topic">Event Planners</div>
+    </span>
+            
           
           
         </div>
-      </div>
+        </div>
 
       <div>
       <ul class="breadcrumb">
@@ -155,12 +96,13 @@
     <td>Griffin</td>
     <td>griffin@gmail.com</td>
     <td>
+    <!-- <i class="fas fa-cog"></i><i class="fas fa-caret-down"></i> -->
     <div class="dropdown">
-  <button class="dropbtn">Dropdown</button>
-  <div class="dropdown-content">
-  <a href="#">Link 1</a>
-  <a href="#">Link 2</a>
-  <a href="#">Link 3</a>
+  <button onclick="myFunction()" class="dropbtn"><i class="fas fa-cog"></i><i class="fas fa-caret-down"></i></button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#home">Delete User</a>
+    <a href="#about">View Profile</a>
+    <!-- <a href="#contact">Contact</a> -->
   </div>
 </div>
     </td>
@@ -191,7 +133,6 @@
 </div>
 
 <?php linkJS("adminHomeView"); ?>
-
 
   
 
