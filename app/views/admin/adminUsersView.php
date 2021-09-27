@@ -86,45 +86,41 @@
         <table>
   <tr>
     <th>Customer ID</th>
-    <th>Custoner Name</th>
+    <th>Customer Name</th>
     <th>Email</th>
     <th>More Actions</th>
 
   </tr>
-  <tr>
-    <td>01</td>
-    <td>Griffin</td>
-    <td>griffin@gmail.com</td>
-    <td>
-    <!-- <i class="fas fa-cog"></i><i class="fas fa-caret-down"></i> -->
-    <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn"><i class="fas fa-cog"></i><i class="fas fa-caret-down"></i></button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="#home">Delete User</a>
-    <a href="#about">View Profile</a>
-    <!-- <a href="#contact">Contact</a> -->
+ 
+<?php while($row=mysqli_fetch_assoc($data['customers']) ){
+    $row2=mysqli_fetch_assoc($data['customer_email']);
+    echo"
+    <tr>
+    <td>$row[user_id]</td>
+    <td>$row[f_name]</td>
+    
+    <td>$row2[email]</td>
+    
+    <td>  
+    <div class=\"dropdown\">
+    <button onclick=\"myFunction()\" class=\"dropbtn\"><i class=\"fas fa-cog\"></i><i class=\"fas fa-caret-down\"></i></button>
+    <div id=\"myDropdown\" class=\"dropdown-content\">
+      <a>Delete User</a>
+      <a >View Profile</a>
+      
+    </div>
   </div>
-</div>
+
+    
     </td>
-  </tr>
-  <tr>
-    <td>02</td>
-    <td>Forrest</td>
-    <td>$forrest@gmail.com</td>
-    <td>Null</td>
-  </tr>
-  <tr>
-    <td>03</td>
-    <td>Swanson</td>
-    <td>$swanson@gmail.com</td>
-    <td>Null</td>
-  </tr>
-  <tr>
-    <td>04</td>
-    <td>Brown</td>
-    <td>$brown@gmail.com</td>
-    <td>Null</td>
-</tr>
+</tr>   
+    ";
+
+}?>
+
+<!-- && $row2=mysqli_fetch_assoc($data['customer_email']) -->
+ <!-- <td>$row2[email']</td> -->
+
 </table>
           
         
