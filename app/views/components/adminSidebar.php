@@ -1,24 +1,67 @@
-
-<div class="sidebar" id="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a class ="active" href="">Analytics</a>
-        <a href="">Users</a>
-        <a href="">Marketing</a>
-        <a href="">Bookings</a>
-        <a href="">Requests</a>
-        <a href="">Payments</a>
-        <a href="">Chat</a>
-        <a href="">Calendar</a>
-        <a href="">Review</a>
-        <a href="">Logout</a>
+<div class="sidebar">
+    
+      <ul class="nav-links">
+        <li>
+            <a href="#">
+              <i class='bx bx-pie-chart-alt-2' ></i>
+              <span class="links_name side-links" onclick="window.location='<?php echo BASEURL . '/adminDashboard'; ?>'">Analytics</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bx-user' ></i>
+              <span class="links_name side-links" onclick="window.location='<?php echo BASEURL . '/adminUsers'; ?>'">Users</span>
+            </a>
+          </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-box' ></i>
+            <span class="links_name side-links">Bookings</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-list-ul' ></i>
+            <span class="links_name side-links">Marketing</span>
+          </a>
+        </li>
         
-
-    </div>
-    
-    <div id="main" class="main">
-    <button class="openbtn" onclick="openNav()">☰ Partyak</button>
-    </div>
-
-
-
-    
+        <li>
+          <a href="#">
+            
+            <i class='bx bx-coin-stack' ></i>
+            <span class="links_name side-links">Payments</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-list-plus' ></i>
+            <span class="links_name side-links">Requests</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-message' ></i>
+            <span class="links_name side-links">Chat</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-calendar' ></i>
+            <span class="links_name side-links">Calendar</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bxs-star' ></i>
+            <span class="links_name side-links">Review</span>
+          </a>
+        </li>
+        <li class="log_out">
+          <a href= "<?php echo BASEURL . '/logout';?>">
+          <i class='bx bx-log-out'></i>
+            <span class="links_name side-links">Log out</span>
+          </a>
+        </li>
+      </ul>
+  </div>

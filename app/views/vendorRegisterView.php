@@ -15,7 +15,10 @@
 </head>
 
 <body>
+  <header>
   <?php linkPhp("navigation") ?>
+  </header>
+  
 
   <div class="content">
     <form action="<?php echo BASEURL . '/vendorRegister/index'; ?>" class="form-area" method="POST">
@@ -40,6 +43,9 @@
           <input type="text" placeholder="Username" name="username">
           <div class="error"><?php echo $errors["username"] ?></div>
         </div> -->
+      
+        
+        
 
 
         <select name="type">

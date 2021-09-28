@@ -6,8 +6,6 @@
  
     <?php linkCSS("admin/adminUsers"); ?>
     <?php linkCSS("css/all"); ?>
-
-    
    
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +22,7 @@
       </div>
    
     <div class="home-content">
-    <div class="overview-boxes">
+      <div class="overview-boxes">
         <div class="box" id="box-customer">
             <span class="links_name" onclick="window.location='<?php echo BASEURL . '/adminUsers'; ?>'"><img class="customer-image" <?php srcIMG("consumer.png") ?> width="40" height="40">
             <div class="box-topic">Customers</div></span>
@@ -53,12 +51,12 @@
           
           
         </div>
-        </div>
+      </div>
 
       <div>
       <ul class="breadcrumb">
         <li><a href="#">Users</a></li>
-        <li><a href="#">Customers</a></li>
+        <li><a href="#">Event Planners</a></li>
         </ul>
 
         <div class="search-container">
@@ -85,41 +83,51 @@
         
         <table>
   <tr>
-    <th>Customer ID</th>
-    <th>Customer Name</th>
+    <th>Event Planner ID</th>
+    <th>Name</th>
     <th>Email</th>
     <th>More Actions</th>
 
   </tr>
- 
-<?php while($row=mysqli_fetch_assoc($data['customers']) ){
-    $row2=mysqli_fetch_assoc($data['customer_email']);
-    echo"
-    <tr>
-    <td>$row[user_id]</td>
-    <td>$row[f_name]</td>
-    
-    <td>$row2[email]</td>
-    
-    <td>  
-    <div class=\"dropdown\">
-    <button onclick=\"myFunction()\" class=\"dropbtn\"><i class=\"fas fa-cog\"></i><i class=\"fas fa-caret-down\"></i></button>
-    <div id=\"myDropdown\" class=\"dropdown-content\">
-      <a>Delete User</a>
-      <a >View Profile</a>
-      
-    </div>
+  <tr>
+    <td>01</td>
+    <td>Griffin</td>
+    <td>griffin@gmail.com</td>
+    <td>
+    <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn"><i class="fas fa-cog"></i><i class="fas fa-caret-down"></i></button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#home">Delete User</a>
+    <a href="#about">View Profile</a>
+    <!-- <a href="#contact">Contact</a> -->
   </div>
-
-    
+</div>
     </td>
-</tr>   
-    ";
-
-}?>
-
-<!-- && $row2=mysqli_fetch_assoc($data['customer_email']) -->
- <!-- <td>$row2[email']</td> -->
+  </tr>
+  <tr>
+    <td>02</td>
+    <td>Forrest</td>
+    <td>forrest@gmail.com</td>
+    <td>Null</td>
+  </tr>
+  <tr>
+    <td>03</td>
+    <td>Swanson</td>
+    <td>swanson@gmail.com</td>
+    <td>Null</td>
+  </tr>
+  <tr>
+    <td>04</td>
+    <td>Brown</td>
+    <td>brown@gmail.com</td>
+    <td>Null</td>
+</tr>
+<tr>
+    <td>05</td>
+    <td>JK photography</td>
+    <td>jkphoto@gmail.com</td>
+    <td>Null</td>
+  </tr>
 
 </table>
           
@@ -129,6 +137,7 @@
 </div>
 
 <?php linkJS("adminHomeView"); ?>
+
 
   
 
