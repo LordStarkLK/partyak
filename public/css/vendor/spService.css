@@ -6,7 +6,7 @@
   font-family: 'Poppins', sans-serif;
 }
 body{
-    background-image: radial-gradient( rgb(211, 111, 250), rgb(125, 255, 255), rgb(250, 237, 116), rgb(241, 106, 201));
+  background-image: radial-gradient( rgb(211, 111, 250), rgb(125, 255, 255), rgb(250, 237, 116), rgb(241, 106, 201));
 }
 .container{
   padding: 1% 10% 1% 10%;
@@ -100,66 +100,32 @@ nav .sidebar-button i{
   border-radius: 43px;
   position: relative;
   padding: 60px 30px 30px 30px;
-  background-color: rgb(0, 0, 0);
 }
-.home-content .sales-boxes{
-  margin: 0 60px 0 60px;
-  border-radius: 30px;
-  display: flex;
+.home-content .services-box{
   justify-content: center;
+  padding: 36px 43px 3px 43px;
+  background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.64) 18.52%, rgba(15, 15, 15, 0.8) 98.52%);
+  backdrop-filter: blur(120px);
+  border-radius: 43px;
 }
-.home-content .sales-boxes .recent-sales{
-  width: 65%;
-  height: 350px;
-  padding: 20px 30px;
-  margin: 0 20px 0 20px;
-  border-radius: 12px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-.home-content .sales-boxes .sales-details{
-    width: 70%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.sales-boxes .box .title{
-  color: white;
-  font-size: 28px;
-  font-weight: bold;
-}
-.home-content .sales-boxes .chart{
-  width: 50%;
-  padding-top: 50px;
-  border-radius: 12px;
-  line-height: 1.5cm;
-}
-.chart .chart-details{
-  padding: 10px 0 0 30px;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1cm;
-  color: white;
-}
-.home-content .bookings-box{
-  border-radius: 30px;
-  box-shadow: 0 0 5px 10px rgba(0,0,0,0.1);
-}
-.home-content .bookings-box .title{
-  font-size: 25px;
-  font-weight: bold; 
-  color: white;
+.home-content .packages-box{
+  display: none;
+  justify-content: center;
+  padding: 36px 43px 3px 43px;
+  background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.64) 18.52%, rgba(15, 15, 15, 0.8) 98.52%);
+  backdrop-filter: blur(120px);
+  border-radius: 43px;
 }
 .table-content{
   border-collapse: collapse;
+  min-height: 340px;
   margin: 10px;
-  font-size: 0.9em;
-  font-family: sans-serif;
+  font-size: 17px;
   width: 100%;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   overflow-y:auto;
 }
 .table-content thead tr {
-  width: 100%;
   background-color: rgb(104, 104, 104);
   color: #000000;
   text-align: center;
@@ -169,15 +135,84 @@ nav .sidebar-button i{
     padding: 5px 5px;
     border: 2px solid #000000;
 }
+.table-content tbody th a{
+  color: #005cb3;
+  font-size: 23px;
+}
 .table-content tbody tr {
   background-color: #b4dbff;
 }
 .table-content tbody tr:nth-of-type(even) {
   background-color: #81a7c0;
 }
-.table-content tbody tr:hover{
+.name-container{
+  display: flex;
+  top: 60px;
+  margin: 20px 20px 0 20px;
+  width: 100%;
+}
+.service {
+  justify-content: right;
+  display: flex;
+  width: 50%;
+}
+.package{
+  display: flex;
+  width: 50%;
+}
+.name-container button{
+  width: 250px;
+  height: 50px;
+  font-size: 23px;
+  font-weight: bold;
+  border-radius: 10px 10px 0 0;
+  background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.4) 18.52%, rgba(15, 15, 15, 0.8) 98.52%);
+  backdrop-filter: blur(120px);
+  border-radius: 13px 13px 0px 0px;
+}
+.name-container button:hover{
+    cursor: pointer;
+}
+.add-service, .add-package{
+  height: 50px;
+  margin: 30px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 25px;
   color: white;
-  background-color: rgb(0, 58, 124);
+  justify-content: right;
+  align-items: center;
+  display: flex;
+}
+.new-service ,.new-package {
+  height: 50px;
+  width: 50px;
+  margin-left: 20px;
+  border-radius: 20px;
+  border-width: 3px;
+  background: #FFBF74;
+}
+.new-service:hover , .new-package:hover{
+  color: white;
+  background-color: #000000;
+}
+.delete-service , .edit-package , .delete-package{
+  justify-content: center;
+  display: flex;
+  width: 80px;
+  margin: 3px;
+  padding: 3px;
+  color: rgb(255, 0, 0);
+  background-color: rgb(198, 255, 255);
+  font-size: 16px;
+  font-weight: bold;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 10px;
+}
+.delete-service:hover , .edit-package:hover , .delete-package:hover{
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
 }
 @media (max-width: 1240px) {
   .sidebar{
@@ -197,33 +232,10 @@ nav .sidebar-button i{
   .home-section nav{
     width: 300px;
   }
-  
 }
-@media (max-width: 1150px) {
-  .home-content .sales-boxes{
-    flex-direction: column;
-  }
-  .home-content .sales-boxes .box{
-    width: 100%;
-    margin-bottom: 30px;
-  }
-  .home-content .sales-boxes {
-    margin: 0;
-    padding: 10px;
-  }
-  .home-content .sales-boxes .recent-sales{
-    margin: 0;
-    margin-bottom: 15px;
-  }
-}
-
 @media (max-width: 700px) {
   nav .sidebar-button .dashboard
    i{
     display: flex;
-  }
-  .home-content .sales-boxes .sales-details{
-    width: 560px;
-    margin-bottom: 15px;
   }
 }

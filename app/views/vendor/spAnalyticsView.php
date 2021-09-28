@@ -3,19 +3,22 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
-    
     <?php linkCSS("vendor/spAnalytics");  ?>
+    <?php linkCSS("vendorNavigation"); ?>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
 <body>
+<header>
+    <?php linkPhp("vendorNavigation") ?>
+</header>
 <div class="container">
   <div class="sidebar">
     
       <ul class="sidenav-links">
         <li>
-          <a href="#">
+          <a href="<?php echo BASEURL . '/spAnalytics'; ?>">
               <i class="fa fa-pie-chart" aria-hidden="true"></i>
             <span class="links_name">Analytics</span>
           </a>
@@ -27,7 +30,7 @@
           </a>
         </li>
       <li>
-        <a href="#">
+        <a href="<?php echo BASEURL . '/spService'; ?>">
           <i class="fa fa-server" aria-hidden="true"></i>
           <span class="links_name">Services</span>
         </a>
