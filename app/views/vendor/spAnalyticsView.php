@@ -207,9 +207,9 @@
     </section>
   </div>
 
-  
-<?php linkJS("vendor/spAnalytics"); ?>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<?php linkJS("vendor/spAnalytics"); ?>
+
 
 
 
