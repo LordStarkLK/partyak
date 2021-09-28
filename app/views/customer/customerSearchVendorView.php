@@ -6,6 +6,7 @@
  
     <?php linkCSS("customer/customerSearchVendor"); ?>
     <?php linkCSS("customerNavigation"); ?>
+    <?php linkCSS("footer");?>
     
    
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -19,7 +20,6 @@
     </header>
 <div class="container">
   <div class="sidebar">
-    
       <ul class="sidenav-links">
         <li>
             <a href="#">
@@ -161,8 +161,7 @@
 </div>
 
 <?php linkJS("customer/customerSearchVendor"); ?>
-<script src="https://kit.fontawesome.com/3220c9480a.js" crossorigin="anonymous"></script>
-
+<?php linkPhp("footer") ?>
 </body>
 
 </html>

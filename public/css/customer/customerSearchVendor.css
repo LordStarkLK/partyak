@@ -7,11 +7,11 @@
 }
 body{
     background-color:#202020; 
-    background-image:url(../../public/img/confetti.png); 
+    background-image: url("../../public/img/confetti.png");
     background-repeat: round;
 }
 .container{
-    padding: 0%; 
+    padding: 3%; 
     display: flex;
 }
 
@@ -20,15 +20,17 @@ body{
   flex-direction: column;
   order:0;
   border-radius: 30px 0px 0px 30px;
-  margin-top: 5%;
+  margin-top: 3%;
   position: fixed;
-  height: 90%;
+  height: 72%;
   width: 260px;
   background-color: rgb(0, 0, 0);
   background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
   backdrop-filter: blur(120px); 
   transition: all 0.5s ease;
+  
 }
+
 .sidebar.active{
   width: 20%;
 }
@@ -77,6 +79,7 @@ body{
   display: flex;
   flex-direction: column;
   order:1;
+  /* margin-top: 1%; */
   height: 90%;
   width: calc(100% - 260px);
   left: 260px;
@@ -91,6 +94,10 @@ body{
   background-color:linear-gradient(114.1deg, rgba(40, 40, 40, 0.91) 18.52%, rgba(15, 15, 15, 0.73) 98.52%), linear-gradient(106.04deg, rgba(255, 255, 255, 0.12) 10.95%, rgba(255, 255, 255, 0.1) 98.32%); */
   /* Note: backdrop-filter has minimal browser support */
 } 
+
+
+
+ 
 
 .cusSearch{
   padding-bottom:3%;
@@ -215,6 +222,7 @@ form.cuse::after {
 .cusGallery1, .cusGallery2, .cusGallery3,.cusGallery4,.cusGallery5,.cusGallery6{
   position:relative;
   padding:2%;
+  padding-left:4%; 
 }
 
 .cusGallery1 img, .cusGallery2 img, .cusGallery3 img, .cusGallery4 img, .cusGallery5 img,.cusGallery6 img{
