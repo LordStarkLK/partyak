@@ -130,7 +130,7 @@
         </table>
           <div class="add-service">
             <a>Add New Service </a>
-            <button class="new-service"><i class='bx-plus-circle' ></i></button> 
+            <button class="new-service"><i class="fa fa-plus" aria-hidden="true"></i></button> 
           </div>
         </div>              
         
@@ -176,7 +176,7 @@
           </table>
           <div class="add-package">
             <a>Add New Package </a>
-            <button class="new-package"><i class='bx-plus-circle' ></i></button> 
+            <button class="new-package"><i class="fa fa-plus" aria-hidden="true"></i></button> 
           </div>
         </div>
     </div>

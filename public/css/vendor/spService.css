@@ -186,11 +186,16 @@ nav .sidebar-button i{
 }
 .new-service ,.new-package {
   height: 50px;
-  width: 50px;
+  width: 10px;
   margin-left: 20px;
-  border-radius: 20px;
+  border-radius: 50%;
   border-width: 3px;
+  color: black;
+  font-size: 40px;
   background: #FFBF74;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 .new-service:hover , .new-package:hover{
   color: white;
