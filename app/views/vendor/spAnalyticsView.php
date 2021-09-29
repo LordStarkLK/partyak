@@ -36,7 +36,7 @@
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="<?php echo BASEURL . '/spBooking'; ?>">
           <i class="fa fa-list" aria-hidden="true"></i>
           <span class="links_name">Booking</span>
         </a>
