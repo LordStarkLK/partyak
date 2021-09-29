@@ -21,4 +21,3 @@ function loadClass($className)
 
 // Create routing object
 $router = new Router;
-
