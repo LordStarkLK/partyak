@@ -49,7 +49,7 @@
       </li>
       
       <li>
-        <a href="#">
+        <a href="<?php echo BASEURL . '/spWallet'; ?>">
           <i class="fa fa-usd" aria-hidden="true"></i>
           <span class="links_name">Wallet</span>
         </a>
