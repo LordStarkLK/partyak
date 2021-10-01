@@ -7,6 +7,7 @@
 <head>
   <?php linkCSS("navigation"); ?>
   <?php linkCSS("customerRegister"); ?>
+  <?php linkCSS("footer");?>
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -90,6 +91,7 @@
     </form>
   </div>
   </div>
+  <?php linkPhp("footer") ?>
 </body>
 
 </html>

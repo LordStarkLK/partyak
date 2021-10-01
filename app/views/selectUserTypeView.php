@@ -3,6 +3,8 @@
 
 <head>
     <?php linkCSS("selectUSerTypeView"); ?>
+    <?php linkCSS("customerNavigation"); ?>
+    <?php linkCSS("footer");?>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +17,9 @@
 </head>
 
 <body>
+    <header>
+    <?php linkPhp("navigation") ?>
+    </header>
     <div class="container">
         <div class="container-asVendor">
             <h1>as a<br> vendor</h1>
@@ -40,6 +45,7 @@
             </div>
         </div>
     </div>
+    <?php linkPhp("footer") ?>
 </body>
 
 </html>

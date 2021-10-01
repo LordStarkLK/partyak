@@ -1,7 +1,7 @@
 <?php
 
 
-class CustomerHome extends FrameworkPartyak{
+class CustomerPlanNewEvent extends FrameworkPartyak{
     public function __construct(){
         $this->helper("linker");
     }
@@ -12,7 +12,7 @@ class CustomerHome extends FrameworkPartyak{
         //     $this->redirect("login");
         // }
         // $this->preventBack("customer");
-        $this->view("customer/customerHomeView");
+        $this->view("customer/customerPlanNewEventView");
     }
 
 }

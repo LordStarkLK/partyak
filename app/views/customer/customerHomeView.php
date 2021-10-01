@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php linkCSS("customerHomeView"); ?>
     <?php linkCSS("customerNavigation"); ?>
-    <?php linkCSS("footer.php");?>
+    <?php linkCSS("footer");?>
 
     <title>Home</title>
 </head>
@@ -19,7 +19,7 @@
                 <div class="test">
                     <label>Life is an event.<br>Make it memorable.</label><br><br>
                     <div class="button">
-                        <input type="button" value="Search Vendor">
+                         <a href="<?php echo BASEURL . '/customerSearchVendor'; ?>"> Search Vendor</a>
                     </div>
                  </div>
                  <!--<div class="scroll">
