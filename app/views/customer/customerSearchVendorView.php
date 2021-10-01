@@ -163,7 +163,10 @@
 </div>
 
 <?php linkJS("customer/customerSearchVendor"); ?>
+
 <?php linkPhp("footer") ?>
+
+
 </body>
 
 </html>
