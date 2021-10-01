@@ -90,50 +90,40 @@
     <th>More Actions</th>
 
   </tr>
-  <tr>
+  <!-- <tr>
     <td>01</td>
     <td>Griffin</td>
     <td>griffin@gmail.com</td>
     <td>griffin@gmail.com</td>
     <td>
-    <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn"><i class="fas fa-cog"></i><i class="fas fa-caret-down"></i></button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="#home">Delete User</a>
-    <a href="#about">View Profile</a>
-    <!-- <a href="#contact">Contact</a> -->
-  </div>
-</div>
+      <div class="btn-group">
+        <button>View Profile</button>
+        <button>Delete User</button>
+        
+      </div>
     </td>
-  </tr>
+  </tr> -->
+
+<?php while($row=mysqli_fetch_assoc($data['service'])){
+  $i = 1;
+  $row2 = mysqli_fetch_assoc($data['service_email']);
+  echo"
   <tr>
-    <td>02</td>
-    <td>Forrest</td>
-    <td>forrest@gmail.com</td>
-    <td>photography</td>
-    <td>Null</td>
+  <td>$row[user_id]</td>
+  <td>$row[f_name] $row[l_name]</td>
+  <td>$row2[email]</td>
+  <td>Not Defined</td>
+  <td>
+    <div class=\"btn-group\">
+      <button>View Profile</button>
+      <button>Delete User</button>
+      </div>
+
+  </td>
   </tr>
-  <tr>
-    <td>03</td>
-    <td>Swanson</td>
-    <td>swanson@gmail.com</td>
-    <td>Decorations</td>
-    <td>Null</td>
-  </tr>
-  <tr>
-    <td>04</td>
-    <td>Brown</td>
-    <td>brown@gmail.com</td>
-    <td>Musician</td>
-    <td>Null</td>
-</tr>
-<tr>
-    <td>05</td>
-    <td>JK photography</td>
-    <td>jkphoto@gmail.com</td>
-    <td>venue</td>
-    <td>Null</td>
-  </tr>
+  ";
+  $i++;
+} ?> 
 
 </table>
           

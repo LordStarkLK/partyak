@@ -2,13 +2,13 @@
     
       <ul class="nav-links">
         <li>
-            <a href="#">
+        <a href="<?php echo BASEURL . '/adminDashboard'; ?>">
               <i class='bx bx-pie-chart-alt-2' ></i>
               <span class="links_name side-links" onclick="window.location='<?php echo BASEURL . '/adminDashboard'; ?>'">Analytics</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="<?php echo BASEURL . '/adminUsers'; ?>">
               <i class='bx bx-user' ></i>
               <span class="links_name side-links" onclick="window.location='<?php echo BASEURL . '/adminUsers'; ?>'">Users</span>
             </a>
@@ -20,17 +20,17 @@
           </a>
         </li>
         <li>
-          <a href="#">
+        <a href="<?php echo BASEURL . '/adminMarketing'; ?>">
             <i class='bx bx-list-ul' ></i>
-            <span class="links_name side-links">Marketing</span>
+            <span class="links_name side-links" onclick="window.location'<?php echo BASEURL . '/adminMarketing'; ?>'">Marketing</span>
           </a>
         </li>
         
         <li>
-          <a href="#">
+        <a href="<?php echo BASEURL . '/adminPayment'; ?>">
             
             <i class='bx bx-coin-stack' ></i>
-            <span class="links_name side-links">Payments</span>
+            <span class="links_name side-links" onclick="window.location'<?php echo BASEURL . '/adminPayment'; ?>'">Payments</span>
           </a>
         </li>
         <li>
