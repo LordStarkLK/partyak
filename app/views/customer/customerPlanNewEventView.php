@@ -20,7 +20,7 @@
     <div class="container">
     <div class="cusBox">
         <div class="cusop1">
-            <a href="#">On Your Own Planning</a>
+            <a href="<?php echo BASEURL . '/customerOnYourOwnPlan'; ?>">On Your Own Planning</a>
         </div>
 
         <div class="cusop2">

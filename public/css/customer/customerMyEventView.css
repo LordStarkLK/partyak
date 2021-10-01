@@ -8,8 +8,8 @@
 
 body{
     background-color:#202020; 
-    background-image:url(image/confetti.png);  
-    background-repeat: round;
+    background-image: url("../../../public/img/confetti.png");
+    background-repeat:round;
 }
 
 .container{

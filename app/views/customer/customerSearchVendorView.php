@@ -19,6 +19,7 @@
 
     </header>
 <div class="container">
+  <div class="side">
   <div class="sidebar">
       <ul class="sidenav-links">
         <li>
@@ -90,15 +91,16 @@
           </li>
       </ul>
   </div>
+  </div>
 
   <div class="cusContent">
 
-    <div class="cusSearch">
+    <!-- <div class="cusSearch">
       <form class="cuse" action="#" method="POST">
         <input type="text" name="search">
         <button class="cusbtn" type="submit"><i class="fa fa-search"></i>Search</button>
       </form>
-    </div>
+    </div> -->
 
     <div class="cusDetail">
       <div class="cusraw1">

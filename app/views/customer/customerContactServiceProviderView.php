@@ -18,7 +18,7 @@
     </header>
 <div class="container">
   <div class="side">
-  <div class="sidebar">
+    <div class="sidebar">
     
       <ul class="sidenav-links">
           <li>
@@ -83,7 +83,7 @@
             </a>
           </li>
       </ul>
-  </div>
+    </div>
   </div>
 
   <div class="cusContent" id="con"> 
@@ -101,8 +101,13 @@
       <div class="venueq">
     
         <div class="input-box1">
-          <input type="text" placeholder="Venue Type" name="venueType">
-          <!-- <div class="error"><?php echo $errors["venueType"] ?></div> -->
+          <select name="venueType" placeholder="Venue Type">
+          <option value="null">Venue Type</option>
+          <option value="indoor">Indoor Venue</option>
+          <option value="outdoor">Outdoor Venue</option>
+          <option value="both">Both</option>
+          </select>
+        <!-- <div class="error"><?php echo $errors["venueType"] ?></div>  -->
         </div>
 
         <div class="input-box2">
@@ -111,12 +116,39 @@
         </div>
 
         <div class="input-box3">
-          <input type="text" placeholder="City" name="city">
+          <select name="city">
+          <option value="null">City</option>
+          <option value="indoor">Colombo</option>
+          <option value="outdoor">Gampaha</option>
+          <option value="both">Kaluthara</option>
+          <option value="null">Galle</option>
+          <option value="indoor">Mathara</option>
+          <option value="outdoor">Hambanthota</option>
+          <option value="both">Rathnapura</option>
+          <option value="null">Kegalle</option>
+          <option value="indoor">Kandy</option>
+          <option value="outdoor">Nuwara Eliya</option>
+          <option value="both">Matale</option>
+          <option value="null">Kurunegala</option>
+          <option value="indoor">Puttalam</option>
+          <option value="outdoor">Badulla</option>
+          <option value="both">Monaragala</option>
+          <option value="null">Batticaloa</option>
+          <option value="indoor">Trincomalee</option>
+          <option value="outdoor">Ampara</option>
+          <option value="both">Anuradapura</option>
+          <option value="null">Polonnaruwa</option>
+          <option value="indoor">Vavuniya</option>
+          <option value="outdoor">Kilinochchi</option>
+          <option value="both">Jaffna</option>
+          <option value="both">Mannar</option>
+          <option value="both">Mullathivu</option>
+          </select>
           <!-- <div class="error"><?php echo $errors["city"] ?></div> -->
         </div>
 
         <div class="input-box4">
-          <input type="text" placeholder="Event Date" name="eventDate">
+          <input type="date" placeholder="Event Date" name="eventDate">
           <!-- <div class="error"><?php echo $errors["eventDate"] ?></div> -->
         </div>
 
@@ -126,25 +158,46 @@
         </div>
 
         <div class="input-box6">
-          <input type="text" placeholder="Dancing Floor" name="dancing">
-          <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
+          <div class="dancet">
+            <input placeholder="Dancing Floor" name="dancing">
+          </div>
+          
+          <div class="dancetick">
+            <input type="checkbox" placeholder="Agree" name="agree">
+            <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
+          </div>
         </div>
 
         <div class="input-box7">
-          <input type="text" placeholder="Seti Back" name="seti">
-          <!-- <div class="error"><?php echo $errors["seti"] ?></div> -->
+          <div class="setit">
+            <input  placeholder="Seti Back" name="seti">
+          </div>
+
+          <div class="setitick">
+            <input type="checkbox" placeholder="Agree" name="agree">
+            <!-- <div class="error"><?php echo $errors["seti"] ?></div> -->
+          </div>
         </div>
 
         <div class="input-box8">
-          <input type="text" placeholder="Poruwa" name="poruwa">
-          <!-- <div class="error"><?php echo $errors["poruwa"] ?></div> -->
+          <div class="poruwat">
+            <input  placeholder="Poruwa" name="poruwa">
+          </div>
+
+          <div class="poruwatick">
+            <input type="checkbox" placeholder="Agree" name="agree">
+            <!-- <div class="error"><?php echo $errors["poruwa"] ?></div> -->
+          </div>
         </div>
 
         <div class="input-box9">
           <input type="text" placeholder="Estimated Budget Range" name="budget">
           <!-- <div class="error"><?php echo $errors["budget"] ?></div> -->
         </div>
-       
+
+       <div class="save">
+          <button type="submit" class="saveb" value="Submit">Submit</button>
+       </div>
 
       </div>
     </form>
@@ -157,7 +210,13 @@
       <div class="cateringq">
     
         <div class="input-box11">
-          <input type="text" placeholder="Event Type" name="eventType">
+          <select name="eventType" placeholder="Event Type">
+          <option value="null">Event Type</option>
+          <option value="wedding">Wedding</option>
+          <option value="partyf">Party/Festival</option>
+          <option value="corparate">Corporate event</option>
+          <option value="other">Other</option>
+          </select>
           <!-- <div class="error"><?php echo $errors["eventType"] ?></div> -->
         </div>
 
@@ -167,23 +226,62 @@
         </div>
 
         <div class="input-box13">
-          <input type="text" placeholder="City" name="city">
+          <select name="city">
+          <option value="null">City</option>
+          <option value="indoor">Colombo</option>
+          <option value="outdoor">Gampaha</option>
+          <option value="both">Kaluthara</option>
+          <option value="null">Galle</option>
+          <option value="indoor">Mathara</option>
+          <option value="outdoor">Hambanthota</option>
+          <option value="both">Rathnapura</option>
+          <option value="null">Kegalle</option>
+          <option value="indoor">Kandy</option>
+          <option value="outdoor">Nuwara Eliya</option>
+          <option value="both">Matale</option>
+          <option value="null">Kurunegala</option>
+          <option value="indoor">Puttalam</option>
+          <option value="outdoor">Badulla</option>
+          <option value="both">Monaragala</option>
+          <option value="null">Batticaloa</option>
+          <option value="indoor">Trincomalee</option>
+          <option value="outdoor">Ampara</option>
+          <option value="both">Anuradapura</option>
+          <option value="null">Polonnaruwa</option>
+          <option value="indoor">Vavuniya</option>
+          <option value="outdoor">Kilinochchi</option>
+          <option value="both">Jaffna</option>
+          <option value="both">Mannar</option>
+          <option value="both">Mullathivu</option>
+          </select>
           <!-- <div class="error"><?php echo $errors["city"] ?></div> -->
         </div>
 
         <div class="input-box14">
-          <input type="text" placeholder="Event Date" name="eventDate">
+          <input type="date" placeholder="Event Date" name="eventDate">
           <!-- <div class="error"><?php echo $errors["eventDate"] ?></div> -->
         </div>
 
         <div class="input-box15">
-          <input type="text" placeholder="Meal Time" name="mealT">
+          <select name="mealTime" placeholder="Meal Time">
+          <option value="null">Meal Time</option>
+          <option value="breakfast">Breakfast</option>
+          <option value="lunch">Lunch</option>
+          <option value="tea">Tea Time</option>
+          <option value="dinner">Dinner</option>
+          </select>
           <!-- <div class="error"><?php echo $errors["mealT"] ?></div> -->
         </div>
 
         <div class="input-box16">
-          <input type="text" placeholder="Buffe" name="buffe">
-          <!-- <div class="error"><?php echo $errors["buffe"] ?></div> -->
+          <div class="buffet">
+            <input placeholder="Buffe" name="buffe">
+          </div>
+          
+          <div class="buffetick">
+            <input type="checkbox" placeholder="Agree" name="agree">
+            <!-- <div class="error"><?php echo $errors["buffe"] ?></div> -->
+          </div>
         </div>
 
         <div class="input-box17">
@@ -194,6 +292,10 @@
         <div class="input-box18">
           <input type="text" placeholder="Estimated Budget Range" name="budget">
           <!-- <div class="error"><?php echo $errors["budget"] ?></div> -->
+        </div>
+
+        <div class="save">
+          <button type="submit" class="saveb" value="Submit">Submit</button>
         </div>
        
 
@@ -208,8 +310,13 @@
       <div class="photoq">
     
         <div class="input-box21">
-          <input type="text" placeholder="Event Type" name="eventType">
-          <!-- <div class="error"><?php echo $errors["eventType"] ?></div> -->
+          <select name="eventType" placeholder="Event Type">
+          <option value="null">Event Type</option>
+          <option value="wedding">Wedding</option>
+          <option value="partyf">Party/Festival</option>
+          <option value="corparate">Corporate event</option>
+          <option value="other">Other</option>
+          </select>
         </div>
 
         <div class="input-box22">
@@ -218,18 +325,49 @@
         </div>
 
         <div class="input-box23">
-          <input type="text" placeholder="City" name="city">
+        <select name="city">
+          <option value="null">City</option>
+          <option value="indoor">Colombo</option>
+          <option value="outdoor">Gampaha</option>
+          <option value="both">Kaluthara</option>
+          <option value="null">Galle</option>
+          <option value="indoor">Mathara</option>
+          <option value="outdoor">Hambanthota</option>
+          <option value="both">Rathnapura</option>
+          <option value="null">Kegalle</option>
+          <option value="indoor">Kandy</option>
+          <option value="outdoor">Nuwara Eliya</option>
+          <option value="both">Matale</option>
+          <option value="null">Kurunegala</option>
+          <option value="indoor">Puttalam</option>
+          <option value="outdoor">Badulla</option>
+          <option value="both">Monaragala</option>
+          <option value="null">Batticaloa</option>
+          <option value="indoor">Trincomalee</option>
+          <option value="outdoor">Ampara</option>
+          <option value="both">Anuradapura</option>
+          <option value="null">Polonnaruwa</option>
+          <option value="indoor">Vavuniya</option>
+          <option value="outdoor">Kilinochchi</option>
+          <option value="both">Jaffna</option>
+          <option value="both">Mannar</option>
+          <option value="both">Mullathivu</option>
+          </select>
           <!-- <div class="error"><?php echo $errors["city"] ?></div> -->
         </div>
 
         <div class="input-box24">
-          <input type="text" placeholder="Event Date" name="eventDate">
+          <input type="date" placeholder="Event Date" name="eventDate">
           <!-- <div class="error"><?php echo $errors["eventDate"] ?></div> -->
         </div>
 
         <div class="input-box25">
           <input type="text" placeholder="Estimated Budget Range" name="budget">
           <!-- <div class="error"><?php echo $errors["budget"] ?></div> -->
+        </div>
+
+        <div class="save">
+          <button type="submit" class="saveb" value="Submit">Submit</button>
         </div>
        
 
@@ -245,28 +383,77 @@
       <div class="musicq">
     
         <div class="input-box31">
-          <input type="text" placeholder="Event Date" name="eventDate">
+          <input type="date" placeholder="Event Date" name="eventDate">
           <!-- <div class="error"><?php echo $errors["eventDate"] ?></div> -->
         </div>
 
         <div class="input-box32">
-          <input type="text" placeholder="City" name="city">
+          <select name="city">
+          <option value="null">City</option>
+          <option value="indoor">Colombo</option>
+          <option value="outdoor">Gampaha</option>
+          <option value="both">Kaluthara</option>
+          <option value="null">Galle</option>
+          <option value="indoor">Mathara</option>
+          <option value="outdoor">Hambanthota</option>
+          <option value="both">Rathnapura</option>
+          <option value="null">Kegalle</option>
+          <option value="indoor">Kandy</option>
+          <option value="outdoor">Nuwara Eliya</option>
+          <option value="both">Matale</option>
+          <option value="null">Kurunegala</option>
+          <option value="indoor">Puttalam</option>
+          <option value="outdoor">Badulla</option>
+          <option value="both">Monaragala</option>
+          <option value="null">Batticaloa</option>
+          <option value="indoor">Trincomalee</option>
+          <option value="outdoor">Ampara</option>
+          <option value="both">Anuradapura</option>
+          <option value="null">Polonnaruwa</option>
+          <option value="indoor">Vavuniya</option>
+          <option value="outdoor">Kilinochchi</option>
+          <option value="both">Jaffna</option>
+          <option value="both">Mannar</option>
+          <option value="both">Mullathivu</option>
+          </select>
           <!-- <div class="error"><?php echo $errors["city"] ?></div> -->
         </div>
 
         <div class="input-box33">
-          <input type="text" placeholder="Music Band" name="musicBand">
-          <!-- <div class="error"><?php echo $errors["musicBand"] ?></div> -->
+          <div class="mbandt">
+            <input placeholder="Music Band" name="mband">
+          </div>
+          
+          <div class="mbandtick">
+            <input type="checkbox" placeholder="Agree" name="agree">
+            <!-- <div class="error"><?php echo $errors["mband"] ?></div> -->
+          </div>
         </div>
 
         <div class="input-box34">
-          <input type="text" placeholder="Djs" name="djs">
-          <!-- <div class="error"><?php echo $errors["djs"] ?></div> -->
+         <div class="djst">
+            <input placeholder="Djs" name="djs">
+          </div>
+          
+          <div class="djstick">
+            <input type="checkbox" placeholder="Agree" name="agree">
+            <!-- <div class="error"><?php echo $errors["djs"] ?></div> -->
+          </div>
         </div>
 
         <div class="input-box35">
-          <input type="text" placeholder="Solo Singer" name="solo">
-          <!-- <div class="error"><?php echo $errors["solo"] ?></div> -->
+          <div class="solot">
+            <input placeholder="Solo Singer" name="solo">
+          </div>
+          
+          <div class="solotick">
+            <input type="checkbox" placeholder="Agree" name="agree">
+            <!-- <div class="error"><?php echo $errors["solo"] ?></div> -->
+          </div>
+        </div>
+
+        <div class="save">
+          <button type="submit" class="saveb" value="Submit">Submit</button>
         </div>
        
 
@@ -282,28 +469,88 @@
       <div class="danceq">
     
         <div class="input-box41">
-          <input type="text" placeholder="Event Date" name="eventDate">
+          <input type="date" placeholder="Event Date" name="eventDate">
           <!-- <div class="error"><?php echo $errors["eventDate"] ?></div> -->
         </div>
 
         <div class="input-box42">
-          <input type="text" placeholder="City" name="city">
+          <select name="city">
+          <option value="null">City</option>
+          <option value="indoor">Colombo</option>
+          <option value="outdoor">Gampaha</option>
+          <option value="both">Kaluthara</option>
+          <option value="null">Galle</option>
+          <option value="indoor">Mathara</option>
+          <option value="outdoor">Hambanthota</option>
+          <option value="both">Rathnapura</option>
+          <option value="null">Kegalle</option>
+          <option value="indoor">Kandy</option>
+          <option value="outdoor">Nuwara Eliya</option>
+          <option value="both">Matale</option>
+          <option value="null">Kurunegala</option>
+          <option value="indoor">Puttalam</option>
+          <option value="outdoor">Badulla</option>
+          <option value="both">Monaragala</option>
+          <option value="null">Batticaloa</option>
+          <option value="indoor">Trincomalee</option>
+          <option value="outdoor">Ampara</option>
+          <option value="both">Anuradapura</option>
+          <option value="null">Polonnaruwa</option>
+          <option value="indoor">Vavuniya</option>
+          <option value="outdoor">Kilinochchi</option>
+          <option value="both">Jaffna</option>
+          <option value="both">Mannar</option>
+          <option value="both">Mullathivu</option>
+          </select>
           <!-- <div class="error"><?php echo $errors["city"] ?></div> -->
         </div>
 
         <div class="input-box43">
-          <input type="text" placeholder="Kandyan Dancers" name="kandyan">
-          <!-- <div class="error"><?php echo $errors["kandyan"] ?></div> -->
+          <div class="kandyt">
+            <input placeholder="Kandyan Dancer" name="kandy">
+          </div>
+          
+          <div class="kandytick">
+            <input type="checkbox" placeholder="Agree" name="agree">
+            <!-- <div class="error"><?php echo $errors["kandy"] ?></div> -->
+          </div>
         </div>
 
         <div class="input-box44">
-          <input type="text" placeholder="Sabaragamuwa Dancers" name="saba">
-          <!-- <div class="error"><?php echo $errors["saba"] ?></div> -->
+          <div class="lawt">
+            <input placeholder="Law Country Dancer" name="law">
+          </div>
+          
+          <div class="lawtick">
+            <input type="checkbox" placeholder="Agree" name="agree">
+            <!-- <div class="error"><?php echo $errors["law"] ?></div> -->
+          </div>
         </div>
 
         <div class="input-box45">
-          <input type="text" placeholder="Western Dancers" name="wes">
-          <!-- <div class="error"><?php echo $errors["wes"] ?></div> -->
+          <div class="sabat">
+            <input placeholder="Sabaragamuwa Dancer" name="saba">
+          </div>
+          
+          <div class="sabatick">
+            <input type="checkbox" placeholder="Agree" name="agree">
+            <!-- <div class="error"><?php echo $errors["saba"] ?></div> -->
+          </div>
+        </div>
+
+        <div class="input-box46">
+          <div class="west">
+            <input placeholder="Western Dancer" name="wes">
+          </div>
+          
+          <div class="westick">
+            <input type="checkbox" placeholder="Agree" name="agree">
+            <!-- <div class="error"><?php echo $errors["wes"] ?></div> -->
+          </div>
+        </div>
+
+        <div class="save">
+          <button type="submit" class="saveb" value="Submit">Submit</button>
         </div>
        
 
@@ -319,22 +566,59 @@
       <div class="salonq">
     
         <div class="input-box51">
-          <input type="text" placeholder="Male" name="male">
-          <!-- <div class="error"><?php echo $errors["male"] ?></div> -->
+          <input type="date" placeholder="Event date" name="eventDate">
+          <!-- <div class="error"><?php echo $errors["eventDate"] ?></div> -->
         </div>
 
         <div class="input-box52">
-          <input type="text" placeholder="Female" name="female">
-          <!-- <div class="error"><?php echo $errors["female"] ?></div> -->
-        </div>
-
-        <div class="input-box53">
-          <input type="text" placeholder="Event Type" name="eventType">
+          <select name="eventType" placeholder="Event Type">
+          <option value="null">Event Type</option>
+          <option value="wedding">Wedding</option>
+          <option value="partyf">Party/Festival</option>
+          <option value="corparate">Corporate event</option>
+          <option value="other">Other</option>
+          </select>
           <!-- <div class="error"><?php echo $errors["eventType"] ?></div> -->
         </div>
 
+        <div class="input-box53">
+          <select name="gender" placeholder="Gender">
+          <option value="null">Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          </select>
+          <!-- <div class="error"><?php echo $errors["gender"] ?></div> -->
+        </div>
+
         <div class="input-box54">
-          <input type="text" placeholder="City" name="city">
+          <select name="city">
+          <option value="null">City</option>
+          <option value="indoor">Colombo</option>
+          <option value="outdoor">Gampaha</option>
+          <option value="both">Kaluthara</option>
+          <option value="null">Galle</option>
+          <option value="indoor">Mathara</option>
+          <option value="outdoor">Hambanthota</option>
+          <option value="both">Rathnapura</option>
+          <option value="null">Kegalle</option>
+          <option value="indoor">Kandy</option>
+          <option value="outdoor">Nuwara Eliya</option>
+          <option value="both">Matale</option>
+          <option value="null">Kurunegala</option>
+          <option value="indoor">Puttalam</option>
+          <option value="outdoor">Badulla</option>
+          <option value="both">Monaragala</option>
+          <option value="null">Batticaloa</option>
+          <option value="indoor">Trincomalee</option>
+          <option value="outdoor">Ampara</option>
+          <option value="both">Anuradapura</option>
+          <option value="null">Polonnaruwa</option>
+          <option value="indoor">Vavuniya</option>
+          <option value="outdoor">Kilinochchi</option>
+          <option value="both">Jaffna</option>
+          <option value="both">Mannar</option>
+          <option value="both">Mullathivu</option>
+          </select>
           <!-- <div class="error"><?php echo $errors["city"] ?></div> -->
         </div>
 
@@ -347,6 +631,10 @@
         <div class="input-box56">
           <input type="text" placeholder="No of Dressers" name="dresses">
           <!-- <div class="error"><?php echo $errors["dressers"] ?></div> -->
+        </div>
+
+        <div class="save">
+          <button type="submit" class="saveb" value="Submit">Submit</button>
         </div>
        
 
@@ -363,23 +651,65 @@
       <div class="cakeq">
     
         <div class="input-box61">
-          <input type="text" placeholder="Event Type" name="eventType">
-          <!-- <div class="error"><?php echo $errors["eventType"] ?></div> -->
-        </div>
-
-        <div class="input-box62">
-          <input type="text" placeholder="Event Date" name="eventDate">
+          <input type="date" placeholder="Event Date" name="eventDate">
           <!-- <div class="error"><?php echo $errors["eventDate"] ?></div> -->
         </div>
 
+        <div class="input-box62">
+          <select name="eventType" placeholder="Event Type">
+          <option value="null">Event Type</option>
+          <option value="wedding">Wedding</option>
+          <option value="partyf">Party/Festival</option>
+          <option value="corparate">Corporate event</option>
+          <option value="other">Other</option>
+          </select>
+          <!-- <div class="error"><?php echo $errors["eventType"] ?></div> --> 
+        </div>
+
         <div class="input-box63">
-          <input type="text" placeholder="City" name="city">
+          <select name="city">
+          <option value="null">City</option>
+          <option value="indoor">Colombo</option>
+          <option value="outdoor">Gampaha</option>
+          <option value="both">Kaluthara</option>
+          <option value="null">Galle</option>
+          <option value="indoor">Mathara</option>
+          <option value="outdoor">Hambanthota</option>
+          <option value="both">Rathnapura</option>
+          <option value="null">Kegalle</option>
+          <option value="indoor">Kandy</option>
+          <option value="outdoor">Nuwara Eliya</option>
+          <option value="both">Matale</option>
+          <option value="null">Kurunegala</option>
+          <option value="indoor">Puttalam</option>
+          <option value="outdoor">Badulla</option>
+          <option value="both">Monaragala</option>
+          <option value="null">Batticaloa</option>
+          <option value="indoor">Trincomalee</option>
+          <option value="outdoor">Ampara</option>
+          <option value="both">Anuradapura</option>
+          <option value="null">Polonnaruwa</option>
+          <option value="indoor">Vavuniya</option>
+          <option value="outdoor">Kilinochchi</option>
+          <option value="both">Jaffna</option>
+          <option value="both">Mannar</option>
+          <option value="both">Mullathivu</option>
+          </select>
           <!-- <div class="error"><?php echo $errors["city"] ?></div> -->
         </div>
 
         <div class="input-box64">
-          <input type="text" placeholder="Cake Type" name="cakeType">
-          <!-- <div class="error"><?php echo $errors["cakeType"] ?></div> -->
+          <select name="cakeType" placeholder="Cake Type">
+          <option value="null">Cake Type</option>
+          <option value="weddingCake">Wedding Cakes</option>
+          <option value="partyCake">Party Cake</option>
+          <option value="sweet">Sweets</option>
+          </select>
+          <!-- <div class="error"><?php echo $errors["eventType"] ?></div> --> 
+        </div>
+
+        <div class="save">
+          <button type="submit" class="saveb" value="Submit">Submit</button>
         </div>
 
       </div>
@@ -394,28 +724,65 @@
       <div class="decoq">
     
         <div class="input-box71">
-          <input type="text" placeholder="Event Type" name="eventType">
-          <!-- <div class="error"><?php echo $errors["eventType"] ?></div> -->
-        </div>
-
-        <div class="input-box72">
-          <input type="text" placeholder="Event Date" name="eventDate">
+          <input type="date" placeholder="Event Date" name="eventDate">
           <!-- <div class="error"><?php echo $errors["eventDate"] ?></div> -->
         </div>
 
+        <div class="input-box72">
+          <select name="eventType" placeholder="Event Type">
+          <option value="null">Event Type</option>
+          <option value="wedding">Wedding</option>
+          <option value="partyf">Party/Festival</option>
+          <option value="corparate">Corporate event</option>
+          <option value="other">Other</option>
+          </select>
+          <!-- <div class="error"><?php echo $errors["eventType"] ?></div> --> 
+        </div>
+
         <div class="input-box73">
-          <input type="text" placeholder="City" name="city">
+          <select name="city">
+          <option value="null">City</option>
+          <option value="indoor">Colombo</option>
+          <option value="outdoor">Gampaha</option>
+          <option value="both">Kaluthara</option>
+          <option value="null">Galle</option>
+          <option value="indoor">Mathara</option>
+          <option value="outdoor">Hambanthota</option>
+          <option value="both">Rathnapura</option>
+          <option value="null">Kegalle</option>
+          <option value="indoor">Kandy</option>
+          <option value="outdoor">Nuwara Eliya</option>
+          <option value="both">Matale</option>
+          <option value="null">Kurunegala</option>
+          <option value="indoor">Puttalam</option>
+          <option value="outdoor">Badulla</option>
+          <option value="both">Monaragala</option>
+          <option value="null">Batticaloa</option>
+          <option value="indoor">Trincomalee</option>
+          <option value="outdoor">Ampara</option>
+          <option value="both">Anuradapura</option>
+          <option value="null">Polonnaruwa</option>
+          <option value="indoor">Vavuniya</option>
+          <option value="outdoor">Kilinochchi</option>
+          <option value="both">Jaffna</option>
+          <option value="both">Mannar</option>
+          <option value="both">Mullathivu</option>
+          </select>
           <!-- <div class="error"><?php echo $errors["city"] ?></div> -->
         </div>
 
         <div class="input-box74">
-          <input type="text" placeholder="Seti Back & Poruwa" name="seti">
-          <!-- <div class="error"><?php echo $errors["seti"] ?></div> -->
+          <select name="decoType" placeholder="Decoration Type">
+          <option value="null">Decoration Type</option>
+          <option value="seti">Seti Back & Poruwa</option>
+          <option value="floral">Floral Arrangements</option>
+          <option value="corparate">Both</option>
+          </select>
+          <!-- <div class="error"><?php echo $errors["decoType"] ?></div> --> 
         </div>
 
-        <div class="input-box75">
-          <input type="text" placeholder="Floral Arrangement" name="floral">
-          <!-- <div class="error"><?php echo $errors["floral"] ?></div> -->
+        <div class="save">
+          <button type="submit" class="saveb" value="Submit">Submit</button>
         </div>
 
       </div>
@@ -431,38 +798,76 @@
       <div class="soundq">
     
         <div class="input-box81">
-          <input type="text" placeholder="Event Type" name="eventType">
-          <!-- <div class="error"><?php echo $errors["eventType"] ?></div> -->
+          <input type="date" placeholder="Event Date" name="eventDate">
+          <!-- <div class="error"><?php echo $errors["eventDate"] ?></div> -->
+          
         </div>
 
         <div class="input-box82">
-          <input type="text" placeholder="Event Date" name="eventDate">
-          <!-- <div class="error"><?php echo $errors["eventDate"] ?></div> -->
+          <select name="eventType" placeholder="Event Type">
+          <option value="null">Event Type</option>
+          <option value="wedding">Wedding</option>
+          <option value="partyf">Party/Festival</option>
+          <option value="corparate">Corporate event</option>
+          <option value="other">Other</option>
+          </select>
+          <!-- <div class="error"><?php echo $errors["eventType"] ?></div> --> 
         </div>
 
         <div class="input-box83">
-          <input type="text" placeholder="City" name="city">
+          <select name="city">
+          <option value="null">City</option>
+          <option value="indoor">Colombo</option>
+          <option value="outdoor">Gampaha</option>
+          <option value="both">Kaluthara</option>
+          <option value="null">Galle</option>
+          <option value="indoor">Mathara</option>
+          <option value="outdoor">Hambanthota</option>
+          <option value="both">Rathnapura</option>
+          <option value="null">Kegalle</option>
+          <option value="indoor">Kandy</option>
+          <option value="outdoor">Nuwara Eliya</option>
+          <option value="both">Matale</option>
+          <option value="null">Kurunegala</option>
+          <option value="indoor">Puttalam</option>
+          <option value="outdoor">Badulla</option>
+          <option value="both">Monaragala</option>
+          <option value="null">Batticaloa</option>
+          <option value="indoor">Trincomalee</option>
+          <option value="outdoor">Ampara</option>
+          <option value="both">Anuradapura</option>
+          <option value="null">Polonnaruwa</option>
+          <option value="indoor">Vavuniya</option>
+          <option value="outdoor">Kilinochchi</option>
+          <option value="both">Jaffna</option>
+          <option value="both">Mannar</option>
+          <option value="both">Mullathivu</option>
+          </select>
           <!-- <div class="error"><?php echo $errors["city"] ?></div> -->
         </div>
 
         <div class="input-box84">
-          <input type="text" placeholder="Sounds" name="sounds">
-          <!-- <div class="error"><?php echo $errors["sounds"] ?></div> -->
+          <select name="soundlightType" placeholder="Sounds & Lightings">
+          <option value="null">Want Service</option>
+          <option value="sound">Sounds</option>
+          <option value="sound">Lightings</option>
+          <option value="both">Both</option>
+          </select>
+          <!-- <div class="error"><?php echo $errors["soundlightType"] ?></div> --> 
         </div>
 
         <div class="input-box85">
-          <input type="text" placeholder="Lightings" name="light">
-          <!-- <div class="error"><?php echo $errors["light"] ?></div> -->
+          <select name="environment" placeholder="Event Environment">
+          <option value="null">Event Environment</option>
+          <option value="indoor">Indoor Event</option>
+          <option value="outdoor">Outdoor Event</option>
+          <option value="both">Both</option>
+          </select>
+          <!-- <div class="error"><?php echo $errors["environment"] ?></div> --> 
         </div>
 
-        <div class="input-box86">
-          <input type="text" placeholder="Indoor Event" name="indoor">
-          <!-- <div class="error"><?php echo $errors["indoor"] ?></div> -->
-        </div>
-
-        <div class="input-box87">
-          <input type="text" placeholder="Outdoor Event" name="outdoor">
-          <!-- <div class="error"><?php echo $errors["outdoor"] ?></div> -->
+        <div class="save">
+          <button type="submit" class="saveb" value="Submit">Submit</button>
         </div>
 
       </div>
@@ -478,209 +883,76 @@
       <div class="dressq">
     
         <div class="input-box91">
-          <input type="text" placeholder="Event Type" name="eventType">
-          <!-- <div class="error"><?php echo $errors["eventType"] ?></div> -->
+          <input type="date" placeholder="Event Date" name="eventDate">
+          <!-- <div class="error"><?php echo $errors["eventDate"] ?></div> --> 
         </div>
 
         <div class="input-box92">
-          <input type="text" placeholder="Event Date" name="eventDate">
-          <!-- <div class="error"><?php echo $errors["eventDate"] ?></div> -->
+          <select name="eventType" placeholder="Event Type">
+          <option value="null">Event Type</option>
+          <option value="wedding">Wedding</option>
+          <option value="partyf">Party/Festival</option>
+          <option value="corparate">Corporate event</option>
+          <option value="other">Other</option>
+          </select>
+          <!-- <div class="error"><?php echo $errors["eventType"] ?></div> --> 
         </div>
 
         <div class="input-box93">
-          <input type="text" placeholder="City" name="city">
+          <select name="city">
+          <option value="null">City</option>
+          <option value="indoor">Colombo</option>
+          <option value="outdoor">Gampaha</option>
+          <option value="both">Kaluthara</option>
+          <option value="null">Galle</option>
+          <option value="indoor">Mathara</option>
+          <option value="outdoor">Hambanthota</option>
+          <option value="both">Rathnapura</option>
+          <option value="null">Kegalle</option>
+          <option value="indoor">Kandy</option>
+          <option value="outdoor">Nuwara Eliya</option>
+          <option value="both">Matale</option>
+          <option value="null">Kurunegala</option>
+          <option value="indoor">Puttalam</option>
+          <option value="outdoor">Badulla</option>
+          <option value="both">Monaragala</option>
+          <option value="null">Batticaloa</option>
+          <option value="indoor">Trincomalee</option>
+          <option value="outdoor">Ampara</option>
+          <option value="both">Anuradapura</option>
+          <option value="null">Polonnaruwa</option>
+          <option value="indoor">Vavuniya</option>
+          <option value="outdoor">Kilinochchi</option>
+          <option value="both">Jaffna</option>
+          <option value="both">Mannar</option>
+          <option value="both">Mullathivu</option>
+          </select>
           <!-- <div class="error"><?php echo $errors["city"] ?></div> -->
         </div>
 
         <div class="input-box94">
-          <input type="text" placeholder="Male" name="male">
-          <!-- <div class="error"><?php echo $errors["male"] ?></div> -->
+          <select name="dressType" placeholder="Dress type">
+          <option value="null">Dress Type</option>
+          <option value="male">Male Dress</option>
+          <option value="female">Female Dress</option>
+          </select>
+          <!-- <div class="error"><?php echo $errors["dressType"] ?></div> -->
         </div>
 
-        <div class="input-box95">
-          <input type="text" placeholder="Female" name="female">
-          <!-- <div class="error"><?php echo $errors["female"] ?></div> -->
-        </div>
-
-        <div class="input-box96">
-          <input type="text" placeholder="No of Hiring Dates" name="hire">
-          <!-- <div class="error"><?php echo $errors["hire"] ?></div> -->
+        <div class="save">
+          <button type="submit" class="saveb" value="Submit">Submit</button>
         </div>
 
       </div>
     </form>
-
   </div>
-
-
 </div>
-
-<script>
-  var ven = document.getElementById("popup-1");
-  var cate = document.getElementById("popup-2");
-  var photo = document.getElementById("popup-3");
-  var music =  document.getElementById("popup-4");
-  var dance =  document.getElementById("popup-5");
-  var salon =  document.getElementById("popup-6");
-  var cake =  document.getElementById("popup-7");
-  var deco =  document.getElementById("popup-8");
-  var sound =  document.getElementById("popup-9");
-  var dress =  document.getElementById("popup-10");
-  var conent = document.getElementById("con");
-
-  var vBtn = document.getElementById("venue");
-  var cBtn = document.getElementById("catering");
-  var pBtn = document.getElementById("photo");
-  var mBtn =  document.getElementById("music");
-  var dBtn =  document.getElementById("dance");
-  var sBtn =  document.getElementById("salon");
-  var caBtn =  document.getElementById("cake");
-  var deBtn =  document.getElementById("deco");
-  var slBtn =  document.getElementById("sound");
-  var dsBtn =  document.getElementById("dress");
-
-  vBtn.onclick = function(){
-    ven.style.display="block";
-    cate.style.display="none";
-    photo.style.display="none";
-    music.style.display="none";
-    dance.style.display="none";
-    salon.style.display="none";
-    cake.style.display="none";
-    deco.style.display="none";
-    sound.style.display="none";
-    dress.style.display="none";
-    conent.style.display="none";
-  }
-
-  cBtn.onclick = function(){
-    cate.style.display="block";
-    ven.style.display="none";
-    photo.style.display="none";
-    music.style.display="none";
-    dance.style.display="none";
-    salon.style.display="none";
-    cake.style.display="none";
-    deco.style.display="none";
-    sound.style.display="none";
-    dress.style.display="none";
-    conent.style.display="none";
-  }
-   
-  pBtn.onclick = function(){
-    cate.style.display="none";
-    ven.style.display="none";
-    photo.style.display="block";
-    music.style.display="none";
-    dance.style.display="none";
-    salon.style.display="none";
-    cake.style.display="none";
-    sound.style.display="none";
-    dress.style.display="none";
-    conent.style.display="none";
-  }
-
-  mBtn.onclick = function(){
-    cate.style.display="none";
-    ven.style.display="none";
-    photo.style.display="none";
-    music.style.display="block";
-    dance.style.display="none";
-    salon.style.display="none";
-    cake.style.display="none";
-    sound.style.display="none";
-    dress.style.display="none";
-    conent.style.display="none";
-  }
-
-  dBtn.onclick = function(){
-    cate.style.display="none";
-    ven.style.display="none";
-    photo.style.display="none";
-    music.style.display="none";
-    dance.style.display="block";
-    salon.style.display="none";
-    cake.style.display="none";
-    deco.style.display="none";
-    sound.style.display="none";
-    dress.style.display="none";
-    conent.style.display="none";
-  }
-
-  sBtn.onclick = function(){
-    cate.style.display="none";
-    ven.style.display="none";
-    photo.style.display="none";
-    music.style.display="none";
-    dance.style.display="none";
-    salon.style.display="block";
-    cake.style.display="none";
-    deco.style.display="none";
-    sound.style.display="none";
-    dress.style.display="none";
-    conent.style.display="none";
-  }
-
-  caBtn.onclick = function(){
-    cate.style.display="none";
-    ven.style.display="none";
-    photo.style.display="none";
-    music.style.display="none";
-    dance.style.display="none";
-    salon.style.display="none";
-    cake.style.display="block";
-    deco.style.display="none";
-    sound.style.display="none";
-    dress.style.display="none";
-    conent.style.display="none";
-  }
-
-  deBtn.onclick = function(){
-    cate.style.display="none";
-    ven.style.display="none";
-    photo.style.display="none";
-    music.style.display="none";
-    dance.style.display="none";
-    salon.style.display="none";
-    cake.style.display="none";
-    deco.style.display="block";
-    sound.style.display="none";
-    dress.style.display="none";
-    conent.style.display="none";
-  }
-
-  slBtn.onclick = function(){
-    cate.style.display="none";
-    ven.style.display="none";
-    photo.style.display="none";
-    music.style.display="none";
-    dance.style.display="none";
-    salon.style.display="none";
-    cake.style.display="none";
-    deco.style.display="none";
-    sound.style.display="block";
-    dress.style.display="none";
-    conent.style.display="none";
-  }
-
-  dsBtn.onclick = function(){
-    cate.style.display="none";
-    ven.style.display="none";
-    photo.style.display="none";
-    music.style.display="none";
-    dance.style.display="none";
-    salon.style.display="none";
-    cake.style.display="none";
-    deco.style.display="none";
-    sound.style.display="none";
-    dress.style.display="block";
-    conent.style.display="none";
-  }
-
-</script>
-
 
 </body>
 <?php linkJS("customer/customerSearchVendor"); ?>
+<?php linkJS("customer/customerContactServiceProvicer"); ?>
 <?php linkPhp("footer") ?>
 </html>
+
+
+
