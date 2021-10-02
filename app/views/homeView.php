@@ -14,12 +14,17 @@
 
 
 <body>
-    <header>
-        <?php linkPhp("navigation") ?>
-    </header>
     
     
+    <?php linkPhp("navigation") ?>
+    
+    
+    
+    
+    
+    <div class= "top-container">
 
+    
     <div class="container">
 
         <div class="left">
@@ -45,9 +50,13 @@
                 <img <?php srcIMG("Group 6.png") ?> alt="Request Vector">
             </div>
         </div>
+        
+    </div>
+    <?php linkPhp("footer") ?>
+
     </div>
 
-    <?php linkPhp("footer") ?>
+    
 
 </body>
 
