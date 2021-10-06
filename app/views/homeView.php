@@ -34,10 +34,16 @@
                     <img class="hamburger-png" <?php srcIMG("hamburger-menu.png") ?>>
                 </div>
                 <div class="glass inner-glass">
+                    <h2 class="cake-bakery-name">cake bakery</h2>
                     <img class="cake-icon" <?php srcIMG("caek.png") ?> alt="cake icon">
+                    <img class="stars-img" <?php srcIMG("stars.png") ?> alt="stars icon">
                 </div>
-                <div class="descripton"></div>
-                <div class="button request"></div>
+                <div class="descripton">
+                    <p class="seller-description">We are a bake-house offering services for custom bake orders including cakes etc.
+                        We accpet all the kinds of events including weddings, birthday parties and cooperate events. Send a request for reservations.
+                    </p>
+                </div>
+                <img class="request-icon" <?php srcIMG("request.png") ?> alt="request icon">
             </div>
 
         </div>

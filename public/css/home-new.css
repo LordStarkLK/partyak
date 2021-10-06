@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alatsi&family=Roboto&display=swap");
 
 * {
   margin: 0;
@@ -109,9 +110,44 @@ body {
 
   border-radius: 19px;
 }
+.cake-bakery-name {
+  font-family: "Alatsi", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 27px;
+  line-height: 35px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
 .cake-icon {
-  position: absolute;
-  top: 50%;
+  position: relative;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.stars-img {
+  position: relative;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.seller-description {
+  position: relative;
+  font-family: Actor;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 105.4%;
+  /* or 16px */
+  text-align: center;
+  color: rgba(255, 255, 255, 0.93);
+  top: 300px;
+}
+.request-icon {
+  position: relative;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
