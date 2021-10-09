@@ -28,10 +28,19 @@
                 <li><br>
                 <li>+94 112 581 245</li>
             </ul>
+            <div class="condown">
+                <img class="fb" <?php srcIMG("facebook.png") ?> alt="Chance Flowers">
+                <img class="insta" <?php srcIMG("instagram.png") ?> alt="Chance Flowers">
+                <img class="gmail" <?php srcIMG("gmail.png") ?> alt="Chance Flowers">
+            </div>
+          
+
         </div>
     </div>
     <div class="foot-down">
-
+        <img class="vi" <?php srcIMG("visa.png") ?> alt="Chance Flowers">
+        <img class="mas" <?php srcIMG("master.png") ?> alt="Chance Flowers">
+        <img class="pay" <?php srcIMG("payhere.png") ?> alt="Chance Flowers">
     </div>
 </div>
 

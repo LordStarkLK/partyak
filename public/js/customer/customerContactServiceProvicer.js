@@ -1,4 +1,5 @@
 
+  var eventp =document.getElementById("popup-0");
   var ven = document.getElementById("popup-1");
   var cate = document.getElementById("popup-2");
   var photo = document.getElementById("popup-3");
@@ -11,6 +12,7 @@
   var dress =  document.getElementById("popup-10");
   var conent = document.getElementById("con");
 
+  var eBtn = document.getElementById("ep");
   var vBtn = document.getElementById("venue");
   var cBtn = document.getElementById("catering");
   var pBtn = document.getElementById("photo");
@@ -21,6 +23,23 @@
   var deBtn =  document.getElementById("deco");
   var slBtn =  document.getElementById("sound");
   var dsBtn =  document.getElementById("dress");
+  var backBtn =  document.getElementById("backb");
+  
+
+  eBtn.onclick = function(){
+    eventp.style.display="block";
+    ven.style.display="none";
+    cate.style.display="none";
+    photo.style.display="none";
+    music.style.display="none";
+    dance.style.display="none";
+    salon.style.display="none";
+    cake.style.display="none";
+    deco.style.display="none";
+    sound.style.display="none";
+    dress.style.display="none";
+    conent.style.display="none";
+  }
 
   vBtn.onclick = function(){
     ven.style.display="block";
@@ -34,6 +53,7 @@
     sound.style.display="none";
     dress.style.display="none";
     conent.style.display="none";
+    eventp.style.display="none";
   }
 
   cBtn.onclick = function(){
@@ -48,6 +68,7 @@
     sound.style.display="none";
     dress.style.display="none";
     conent.style.display="none";
+    eventp.style.display="none";
   }
    
   pBtn.onclick = function(){
@@ -61,6 +82,7 @@
     sound.style.display="none";
     dress.style.display="none";
     conent.style.display="none";
+    eventp.style.display="none";
   }
 
   mBtn.onclick = function(){
@@ -74,6 +96,7 @@
     sound.style.display="none";
     dress.style.display="none";
     conent.style.display="none";
+    eventp.style.display="none";
   }
 
   dBtn.onclick = function(){
@@ -88,6 +111,7 @@
     sound.style.display="none";
     dress.style.display="none";
     conent.style.display="none";
+    eventp.style.display="none";
   }
 
   sBtn.onclick = function(){
@@ -102,6 +126,7 @@
     sound.style.display="none";
     dress.style.display="none";
     conent.style.display="none";
+    eventp.style.display="none";
   }
 
   caBtn.onclick = function(){
@@ -116,6 +141,7 @@
     sound.style.display="none";
     dress.style.display="none";
     conent.style.display="none";
+    eventp.style.display="none";
   }
 
   deBtn.onclick = function(){
@@ -130,6 +156,7 @@
     sound.style.display="none";
     dress.style.display="none";
     conent.style.display="none";
+    eventp.style.display="none";
   }
 
   slBtn.onclick = function(){
@@ -144,6 +171,7 @@
     sound.style.display="block";
     dress.style.display="none";
     conent.style.display="none";
+    eventp.style.display="none";
   }
 
   dsBtn.onclick = function(){
@@ -158,4 +186,20 @@
     sound.style.display="none";
     dress.style.display="block";
     conent.style.display="none";
+    eventp.style.display="none";
+  }
+
+  backBtn.onclick = function(){
+    cate.style.display="none";
+    ven.style.display="none";
+    photo.style.display="none";
+    music.style.display="none";
+    dance.style.display="none";
+    salon.style.display="none";
+    cake.style.display="none";
+    deco.style.display="none";
+    sound.style.display="none";
+    dress.style.display="none";
+    conent.style.display="block";
+    eventp.style.display="none";
   }
