@@ -35,7 +35,7 @@
             <div class="home-content">
                 <div class="overview-boxes">
                     <div class="box" id="box-marketing">
-                        <span class="links_name"><img class="customer-image" <?php srcIMG("request.png") ?> width="50"
+                        <span class="links_name"><img class="customer-image" <?php srcIMG("adminrequest.png") ?> width="50"
                                 height="50">
                             <div class="box-topic">Requests</div>
                         </span>
