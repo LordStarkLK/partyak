@@ -6,6 +6,7 @@
  
     <?php linkCSS("customer/customerSearchVendor"); ?>
     <?php linkCSS("customerNavigation"); ?>
+    <?php linkCSS("footer");?>
     
    
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -18,8 +19,8 @@
 
     </header>
 <div class="container">
+  <div class="side">
   <div class="sidebar">
-    
       <ul class="sidenav-links">
         <li>
             <a href="#">
@@ -90,15 +91,16 @@
           </li>
       </ul>
   </div>
+  </div>
 
   <div class="cusContent">
 
-    <div class="cusSearch">
+    <!-- <div class="cusSearch">
       <form class="cuse" action="#" method="POST">
         <input type="text" name="search">
         <button class="cusbtn" type="submit"><i class="fa fa-search"></i>Search</button>
       </form>
-    </div>
+    </div> -->
 
     <div class="cusDetail">
       <div class="cusraw1">
@@ -161,7 +163,9 @@
 </div>
 
 <?php linkJS("customer/customerSearchVendor"); ?>
-<script src="https://kit.fontawesome.com/3220c9480a.js" crossorigin="anonymous"></script>
+
+<?php linkPhp("footer") ?>
+
 
 </body>
 

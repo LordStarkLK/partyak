@@ -1,0 +1,126 @@
+.footer {
+
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #202020;
+    padding: 1%;
+  }
+  
+  .foot-up {
+    display: flex;
+    flex-direction: raw;
+    order: 0;
+    padding: 1%;
+  }
+  
+  .footlo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    order: 0;
+    width: 350px;
+  }
+  
+  .footlo .footlog {
+    position: relative;
+    width: 408px;
+    height: 408px;
+  }
+  
+  .support {
+    display: flex;
+    flex-direction: column;
+    order: 1;
+    padding: 5%;
+    width: 350px;
+  }
+  
+  .support label {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 24px;
+    color: #FFD4D7;
+  }
+  
+  .support ul {
+    list-style-type: none;
+  }
+  
+  .support ul li a {
+    text-decoration: none;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.93);
+  }
+  
+  .quick {
+    display: flex;
+    flex-direction: column;
+    order: 2;
+    padding: 5%;
+    width: 350px;
+  }
+  
+  .quick label {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 24px;
+    color: #FFD4D7;
+  }
+  
+  .quick ul li a {
+    text-decoration: none;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.93);
+  }
+  
+  .quick ul {
+    list-style-type: none;
+  }
+  
+  .contact {
+    display: flex;
+    flex-direction: column;
+    order: 3;
+    padding: 5%;
+    width: 350px;
+  }
+  
+  .contact label {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 24px;
+    color: #FFD4D7;
+  }
+  
+  .contact ul li {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.93);
+  }
+  
+  .contact ul {
+    list-style-type: none;
+  }
+  
+  .foot-up {
+    display: flex;
+    flex-direction: raw;
+    order: 1;
+  }/*# sourceMappingURL=customerHome.css.map */

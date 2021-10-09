@@ -8,8 +8,9 @@ sidebarBtn.onclick = function() {
   sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
 }
 
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
+function myFunction(num) {
+
+  document.getElementById("myDropdown"+num).classList.toggle("show");
 }
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
