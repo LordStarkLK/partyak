@@ -112,9 +112,7 @@ nav .sidebar-button i{
   padding-top: 0;
 }
 
-.customer-image{
-    margin-left: 30px
-  }
+
 .home-content .overview-boxes{
    
   display: flex;
@@ -182,7 +180,7 @@ nav .sidebar-button i{
   font-weight: 500;
 }
 .home-content .sales-boxes{
-    margin: 50px 30px 0 30px;
+    margin: 50px 60px 0 60px;
     /* border-radius: 30px; */
   background-color: #50717b;
   display: flex;
@@ -249,7 +247,6 @@ nav .sidebar-button i{
 ul.breadcrumb {
     padding: 10px 16px;
     list-style: none;
-    margin-right: 50%;
     
   }
   ul.breadcrumb li {
@@ -308,10 +305,10 @@ ul.breadcrumb {
   table {
     border-collapse: collapse;
     width: 100%;
+    color: white;
   }
   
   th, td {
-    color: white;
     text-align: left;
     padding: 8px;
   }
@@ -391,233 +388,7 @@ ul.breadcrumb {
 
 /* Drop down end */
 
-/* Pill navigation start */
-.pill-nav a {
-    display: inline-block;
-    color: whitesmoke;
-    text-align: center;
-    padding: 14px;
-    text-decoration: none;
-    font-size: 17px;
-    border-radius: 5px;
-  }
-  
-  .pill-nav a:hover {
-    background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.61) 18.52%, rgba(15, 15, 15, 0) 98.52%), linear-gradient(106.04deg, rgba(255, 255, 255, 0.12) 10.95%, rgba(255, 255, 255, 0.1) 98.32%);
-    backdrop-filter: blur(60px);
-    color: white;
-  }
-  
-  .pill-nav a.active {
-    background-color: #6d0c75;
-    color: white;
-  }
-/* Pill navigation end */
 
-/* Horizontal-container start */
-
-.horizontal-container{
-  display:flex;
-  flex-direction: row;
-  
- 
-  
-}
-/* Addnew button start */
-.addnew-button {
-  
-  display: inline-block;
-  border-radius: 100px;
-  background-color: #55DC52;
-  border: none;
-  color: black;
-  text-align: center;
-  font-size: 20px;
-  width: 150px;
-  height: 50px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-}
-
-.addnew-button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.addnew-button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.addnew-button:hover span {
-  padding-right: 25px;
-}
-
-.addnew-button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-/* Addnew button ends */
-
-/* Horizontal-container end */
-
-/* Popup window start */
-.modal {
-  color: white;
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-  
-  height: 400px;
-  left: 498px;
-  top: 363px;
-  background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.61) 18.52%, rgba(15, 15, 15, 0) 98.52%), linear-gradient(106.04deg, rgba(255, 255, 255, 0.12) 10.95%, rgba(255, 255, 255, 0.1) 98.32%);
-backdrop-filter: blur(60px);
-
-/* Note: backdrop-filter has minimal browser support */
-  border-radius: 43px;
-  background-color: #706d6d;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 60%;
-}
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.popup-container{
-  display: flex;
- 
-  flex-direction: row;
-}
-
-.popup-left{
-  margin-right: 100px;  
-}
-
-/* submit button start */
-.submit-button {
-  background-color: #2fe62c;
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  font-size: 16px;
-  margin: 4px 2px;
-  opacity: 0.6;
-  transition: 0.3s;
-  display: inline-block;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.submit-button:hover {opacity: 1}
-
-/* submit button end */
-.popup-right {
-  display: flex;
-  flex-direction: column;
-  padding: 3%;
-  
-  
-}
-
-.popup-right div{
-  padding:3%;
-  
-}
-
-.popup-right div input{
-  height: 30px;
-  width: 250px;
-  padding:3%;
-  opacity: 0.9;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 15px;
-  background-color: transparent;
-  border-radius: 5px;
-  border: 1px solid #FFFFFF;
-  box-sizing: border-box;
-  color: #F5F5F5; 
-}
-
-
-
- .search-popup {
-    float: left;
-  }
-
-  .search-popup input[type=text] {
-    width: 200px;
-    height: 35px;
-    margin-left: 10px;
-    border-radius: 18px 0px 0px 18px;
-    padding: 6px;
-    margin-top: 8px;
-    font-size: 17px;
-    border: none;
-  }
-
-  .search-popup button {
-    width: 40px;
-    height: 35px;
-    float: right;
-    padding: 6px 10px;
-    margin-top: 8px;
-    margin-right: 16px;
-    margin-bottom: 30px;
-    background: #ddd;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-
-    /* background: url(../../public/img/search.png); */
-  }
-
-  .search-popup button:hover {
-    background: #ccc;
-  }
-
-.popup-left div p{
-  margin-bottom: 5%;
-  
-}
-
-/* Popup window end */
 
 @media (max-width: 1240px) {
   .sidebar{

@@ -11,6 +11,7 @@ body{
     background-repeat: round;
 }
 .container{
+    color: white;
     padding: 40px;
 }
 
@@ -182,7 +183,7 @@ nav .sidebar-button i{
   font-weight: 500;
 }
 .home-content .sales-boxes{
-    margin: 50px 30px 0 30px;
+    margin: 50px 60px 0 60px;
     /* border-radius: 30px; */
   background-color: #50717b;
   display: flex;
@@ -246,229 +247,50 @@ nav .sidebar-button i{
   color:#fff;
 }
 
-ul.breadcrumb {
-    padding: 10px 16px;
-    list-style: none;
-    margin-right: 50%;
-    
-  }
-  ul.breadcrumb li {
-    display: inline;
-    font-size: 18px;
-  }
-  ul.breadcrumb li+li:before {
-    padding: 8px;
-    color: black;
-    content: "/\00a0";
-  }
-  ul.breadcrumb li a {
-    color: #FFFFFF;
-    text-decoration: none;
-  }
-  ul.breadcrumb li a:hover {
-    cursor: context-menu;    
-    color: #01447e;
-    text-decoration: underline;
-  }
+/* .container-tc div{
+  padding-bottom: 5%;
+} */
 
-  .search-container {
-    float: left;
-  }
+.section-tc{
+  padding: 30px;
+  
+  align-content: center;
+  
+  border-bottom-style: solid;
+  border-width: 1px;
+  
+  
+}
 
-  .search-container input[type=text] {
-    width: 250px;
-    height: 40px;
+
+.title-container,.content-container{
+  
+  display: flex;
+  flex-direction: row;
+  
+}
+
+#content{
+  width: 90%;
+}
+
+.addnew-button{
     margin-left: 10px;
-    border-radius: 18px 0px 0px 18px;
-    padding: 6px;
-    margin-top: 8px;
-    font-size: 17px;
-    border: none;
-  }
-
-  .search-container button {
-    width: 45px;
-    height: 40px;
-    float: right;
-    padding: 6px 10px;
-    margin-top: 8px;
-    margin-right: 16px;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
     background: #ddd;
     font-size: 17px;
     border: none;
     cursor: pointer;
-
-    /* background: url(../../public/img/search.png); */
-  }
-
-  .search-container button:hover {
-    background: #ccc;
-  }
-
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  th, td {
-    color: white;
-    text-align: left;
-    padding: 8px;
-  }
-  
-  tr:nth-child(even){background-color: #505050}
-  
-  th {
-    background-color: #2D2D2D;
-    color: white;
-  }
-
-  /* Button group start */
-  .btn-group button {
-    background-color: #8ecccc; 
-    border: 1px solid black; /* Green border */
-     /* White text */
-    padding: 10px 24px; /* Some padding */
-    cursor: pointer; /* Pointer/hand icon */
-    width: 90%; /* Set a width if needed */
-    display: block; /* Make the buttons appear below each other */
-  }
-  
-  .btn-group button:not(:last-child) {
-    border-bottom: none; /* Prevent double borders */
-  }
-  
-  /* Add a background color on hover */
-  .btn-group button:hover {
-    color: white;
-    background-color: #212121;
-  }
-
-/* button group end */
-
- 
-
-  .show {display: block;}
-
-.customer-image{
-  align-items: center;
-}  
-  
-.fa-circle{
-  color: green;
 }
 
-/* Drop down button select status start */
-
-
-/* .dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
-}
- */
-
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #8ecccc;
-  min-width: 135px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+.addnew-button:hover{
+  transition-delay: 0.3s;
+  opacity: 0.6;
 }
 
-.dropdown-content a {
-  font-size: 13px;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
 
-.dropdown a:hover {background-color: #50717b;}
-
-.show {display: block;}
-
-/* Drop down end */
-
-/* Pill navigation start */
-.pill-nav a {
-    display: inline-block;
-    color: whitesmoke;
-    text-align: center;
-    padding: 14px;
-    text-decoration: none;
-    font-size: 17px;
-    border-radius: 5px;
-  }
-  
-  .pill-nav a:hover {
-    background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.61) 18.52%, rgba(15, 15, 15, 0) 98.52%), linear-gradient(106.04deg, rgba(255, 255, 255, 0.12) 10.95%, rgba(255, 255, 255, 0.1) 98.32%);
-    backdrop-filter: blur(60px);
-    color: white;
-  }
-  
-  .pill-nav a.active {
-    background-color: #6d0c75;
-    color: white;
-  }
-/* Pill navigation end */
-
-/* Horizontal-container start */
-
-.horizontal-container{
-  display:flex;
-  flex-direction: row;
-  
- 
-  
-}
-/* Addnew button start */
-.addnew-button {
-  
-  display: inline-block;
-  border-radius: 100px;
-  background-color: #55DC52;
-  border: none;
-  color: black;
-  text-align: center;
-  font-size: 20px;
-  width: 150px;
-  height: 50px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-}
-
-.addnew-button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.addnew-button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.addnew-button:hover span {
-  padding-right: 25px;
-}
-
-.addnew-button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-/* Addnew button ends */
-
-/* Horizontal-container end */
-
-/* Popup window start */
 .modal {
   color: white;
   display: none; /* Hidden by default */
@@ -487,7 +309,7 @@ ul.breadcrumb {
 /* Modal Content */
 .modal-content {
   
-  height: 400px;
+  height: 500px;
   left: 498px;
   top: 363px;
   background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.61) 18.52%, rgba(15, 15, 15, 0) 98.52%), linear-gradient(106.04deg, rgba(255, 255, 255, 0.12) 10.95%, rgba(255, 255, 255, 0.1) 98.32%);
@@ -523,9 +345,7 @@ backdrop-filter: blur(60px);
   flex-direction: row;
 }
 
-.popup-left{
-  margin-right: 100px;  
-}
+
 
 /* submit button start */
 .submit-button {
@@ -546,78 +366,139 @@ backdrop-filter: blur(60px);
 .submit-button:hover {opacity: 1}
 
 /* submit button end */
-.popup-right {
-  display: flex;
-  flex-direction: column;
-  padding: 3%;
-  
-  
-}
 
-.popup-right div{
-  padding:3%;
-  
-}
-
-.popup-right div input{
-  height: 30px;
-  width: 250px;
-  padding:3%;
-  opacity: 0.9;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 15px;
-  background-color: transparent;
-  border-radius: 5px;
-  border: 1px solid #FFFFFF;
+/* popup window content start */
+* {
   box-sizing: border-box;
-  color: #F5F5F5; 
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  font-size: 15px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  font-size: 25px;
+  color: white;
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
 }
 
 
 
- .search-popup {
-    float: left;
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
   }
+}
 
-  .search-popup input[type=text] {
-    width: 200px;
-    height: 35px;
-    margin-left: 10px;
-    border-radius: 18px 0px 0px 18px;
-    padding: 6px;
-    margin-top: 8px;
-    font-size: 17px;
-    border: none;
-  }
 
-  .search-popup button {
-    width: 40px;
-    height: 35px;
-    float: right;
-    padding: 6px 10px;
-    margin-top: 8px;
-    margin-right: 16px;
-    margin-bottom: 30px;
-    background: #ddd;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
 
-    /* background: url(../../public/img/search.png); */
-  }
+ /* popup window content end */
 
-  .search-popup button:hover {
-    background: #ccc;
-  }
 
-.popup-left div p{
-  margin-bottom: 5%;
+
+
+
+
+
+
+
+
+
   
-}
+
+
+
 
 /* Popup window end */
+
+/* Addnew button start */
+.addnew {
+  
+  display: inline-block;
+  border-radius: 100px;
+  background-color: #55DC52;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 20px;
+  width: 200px;
+  height: 50px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.addnew span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.addnew span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.addnew:hover span {
+  padding-right: 25px;
+}
+
+.addnew:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/* Addnew button ends */
+
+
+
+
+
 
 @media (max-width: 1240px) {
   .sidebar{
@@ -629,6 +510,7 @@ backdrop-filter: blur(60px);
   .home-section{
     width: calc(100% - 60px);
     left: 60px;
+    
   }
   .sidebar.active ~ .home-section{
     overflow: hidden;
