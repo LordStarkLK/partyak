@@ -19,8 +19,6 @@ body{
   display: flex;
   flex-direction: column;
   order:0;
-  padding-left: 1%;
-  padding-right: 1%;
   border-radius: 30px 0px 0px 30px;
   margin-top: 2%;
   position: fixed;
@@ -75,37 +73,6 @@ body{
   white-space: nowrap;
 }
 
-.buttonS{
-  position:relative;
-  margin-top: 15%;
-  text-align: center;
-  padding:3%;
-  border-radius: 10px;
-  border: 1px solid #18ab29;
-  display: inline-block; 
-  cursor: pointer;
-  color: #ffffff;
-  font-size: 19px;
-  line-height: 23px;
-  background-color: #18ab29 ;
-
-}
-
-.sideDe{
-  position:relative;
-  margin-top: 10%;
-  padding:3%;
-  display: flex;
-  opacity: 85%;
-  text-align:center;
-  color: #ffffff;
-  font-size: 20px;
-  line-height: 28px;
-
-}
-
-
-
 /* .side{ 
   background-image:url("../../../public/img/searchVenR.png"); 
   background-size: contain;
@@ -131,23 +98,14 @@ body{
     padding:2%;
 }
 
-.input-box01, .input-box02,.input-box04,.input-box05{
+.input-box01, .input-box02,.input-box03,.input-box04,.input-box05{
   display:flex;
-  flex-wrap: wrap;
   flex-direction: column;
   order:0;
   padding:3%;
 }
 
-.input-box03{
-  display:flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  order:0;
-
-}
-
-.input-box02 input, .input-box05 input{
+.input-box02 input,.input-box03 input, .input-box05 input{
   height: 44px;
   padding:2%;
   opacity: 0.9;
@@ -219,7 +177,7 @@ body{
 }
 
 
-.venueq p1, .venueq p2, .musicq p3, .danceq p,.cakeq p4, .decoq p5, .soundq p6, .soundq p7, .dressq p8,.cateringq p0, .cateringq p10, .salonq p1{
+.venueq p1, .venueq p2, .musicq p3, .danceq p,.cakeq p4, .decoq p5, .soundq p6, .soundq p7, .dressq p8,.cateringq p0, .cateringq p10, .salonq p17{
   height: 44px;
   padding:3%;
   opacity: 0.9;
@@ -229,18 +187,6 @@ body{
   line-height: 24px;
   background-color: transparent;
   color: #F5F5F5; 
-  
-}
-
-.begin p15, .stop p16{
-  opacity: 0.9;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 19px;
-  line-height: 24px;
-  background-color: transparent;
-  color: #F5F5F5; 
-  
   
 }
 
@@ -258,68 +204,13 @@ body{
 
 }
 
-.da{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  padding-left:3%;
-  order:0;
-}
-
-.dates{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  order:1;
-  padding-left:3%;
-}
-
-.begin{
-  display:flex;
-  flex-direction:column;
-  order:0;
-  padding-bottom: 10%;
-}
-
-.bdate{
-  display:flex;
-  flex-direction:column;
-  order:0;
-  padding-left:2%;
-}
-
-.stop{
-  display:flex;
-  flex-direction:column;
-  order:1;
-  padding-left: 20%;;
-}
-
-.arrow{
-  display:flex;
-  flex-direction:column;
-  order:1;
-  padding-top:1%;
-  padding-left:27%;;
-  padding-right: 0%;
-  color: #FFFFFF;
-
-}
-
-.sdate{
-  display:flex;
-  flex-direction:column;
-  order:2;
-  padding-left: 7%;;
-
-}
 
 .cateringq p0{
   padding-top:0%;
 }
 
 
-.indoort, .setit, .dancet,.mbandt, .solot, .kandyt, .sabat, .wedt, .sweet, .backt ,.soundt, .int, .malet, .breakt, .dinnert, .buffet,.hairt{
+.indoort, .setit, .dancet,.mbandt, .solot, .kandyt, .sabat, .wedt, .sweet, .backt ,.soundt, .int, .malet, .breakt, .dinnert, .buffet, .start,.hairt{
   display:flex;
   flex-direction: column;
   order:0;
@@ -329,15 +220,14 @@ body{
 }
 
 
-.indoortick, .dancetick, .setitick, .mbandtick, .solotick, .kandytick, .sabatick, .wedtick, .sweetick, .backtick , .soundtick,.intick, .maletick, .breaktick, .dinnertick, .buffetick, .hairtick{
+.indoortick, .dancetick, .setitick, .mbandtick, .solotick, .kandytick, .sabatick, .wedtick, .sweetick, .backtick , .soundtick,.intick, .maletick, .breaktick, .dinnertick, .buffetick, .end, .hairtick{
   display:flex;
   flex-direction: column;
   order:1;
   padding:3%;
-  padding-left:5%;
+  padding-left:5%;padding-left:5%;
   padding-top:0.5%;
 }
-
 
 
 .outdoort,  .poruwat, .djst,.lawt, .west, .partyt, .floralt, .light, .out, .femalet, .luncht, .teat, .nos, .makeupt{
@@ -366,9 +256,9 @@ body{
   
 }
 
-.indoort input, .outdoort input,.dancet input, .setit input , .poruwat input, .mbandt input, .djst input, .solot input, .kandyt input, .lawt input, .west input, .wedt input, .partyt input,.sweet input, .backt input, .floralt input, .soundt input, .light input, .int input, .out input, .malet input, .femalet input, .breakt input, .luncht input, .dinnert input, .teat input, .buffet input, .nos input, .start input, .end input, .hairt input, .makeupt input{
+.indoort input, .outdoort input,.dancet input, .setit input , .poruwat input, .mbandt input, .djst input, .solot input, .kandyt input, .lawt input, .west input, .wedt input, .partyt input,.sweet input, .backt input, .floralt input, .soundt input, .light input, .int input, .out input, .malet input, .femalet input, .breakt input, .luncht input, .dinnert input, .teat input, .buffet input, .nos input, .end input, .hairt input, .makeupt input{
     height: 44px;
-    padding:2%; 
+    padding:2%;
     opacity: 0.9;
     font-style: normal;
     font-weight: normal;
@@ -380,24 +270,6 @@ body{
     box-sizing: border-box;
     color: #F5F5F5; 
   }
-
-  .bdate input, .sdate input{
-    height: 44px;
-    padding:2%; 
-    width:200%;
-    opacity: 0.9;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 19px;
-    line-height: 24px;
-    background-color: transparent;
-    border-radius: 5px;
-    border: 1px solid #FFFFFF;
-    box-sizing: border-box;
-    color: #F5F5F5; 
-
-  }
-
 
 
    .input-box3 select, .seat select,.input-box15 select, .input-box21 select , .input-box23 select, .input-box32 select, .input-box42 select  , .input-box52 select, .input-box53 select, .input-box54 select, .input-box62 select, .input-box63 select, .input-box64 select, .input-box72 select, .input-box73 select, .input-box74 select , .input-box82 select, .input-box83 select, .input-box84 select , .input-box85 select, .input-box92 select, .input-box93 select, .input-box94 select {
@@ -427,7 +299,6 @@ body{
   }
 
 
-
 .input-box1,.input-box15,.input-box33 , .input-box43, .input-box64,.input-box74, .input-box84, .input-box94, .input-box55{
     display:flex;
     flex-direction:row;
@@ -455,7 +326,7 @@ body{
     order:3;
     padding-left:82%;
   }
-  
+
  
 
 .indoortick input, .outdoortick input,.dancetick input, .setitick input, .poruwatick input, .mbandtick input, .djstick input, .solotick input, .kandytick input, .lawtick input, .sabatick input, .westick input,.wedtick input, .partytick input, .sweetick input, .backtick input, .floraltick input, .soundtick input, .lightick input, .intick input, .outick input, .maletick input, .femaletick input, .breaktick input, .lunchtick input, .dinnertick input, .teatick input, .buffetick input, .hairtick input, .makeuptick input{
@@ -792,7 +663,6 @@ font-size: 19px;
 line-height: 23px;
 background-color: #9593ff;
 }
-
 
 .bac {
   position:relative;
