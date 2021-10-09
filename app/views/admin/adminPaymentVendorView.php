@@ -35,14 +35,77 @@
 
                 </div>
 
-                <div>
+                <div class="horizontal-container">
+
                     <ul class="breadcrumb">
                         <li><a>Payment</a></li>
 
                     </ul>
+
+                    <button class="addnew-button" id="myBtn" style="vertical-align:middle"><span>Add new
+                        </span></button>
+
+                    <div id="myModal" class="modal">
+
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2>Add payment</h2>
+                            
+                            <div class="popup-container">
+                            <div class="popup-left">
+                            <div class="search-popup">
+                                <form action="/action_page.php">
+                                    <input type="text" placeholder="Search users.." name="search">
+
+                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                    <!-- <i class="fas fa-search"></i> -->
+
+
+                                </form>
+
+                            </div>
+                            <div>
+                                    <p>vendor Details:</p>
+                                    <p>Vendor Name: John Clark</p>
+                                    <p>Service Name: JK photography</p>
+                                    <p>Wallet ID: 01</p>
+
+                                    <button class="submit-button">Submit</button>
+
+
+                                </div>
+
+                            </div>    
+                            
+                                <div class="popup-right">
+                                
+                                    <div>
+                                        <p>Wallet amount: 10000 </p>
+
+                                    </div>
+                                    <div>
+                                        <input type="text" placeholder="paid amount.." name="paid">
+                                    </div>
+                                    <div>
+                                        <input type="date" placeholder="date paid.." name="date">
+                                    </div>
+                                    <div>
+                                        <input type="text" placeholder="transaction id.." name="transaction-id">
+                                    </div>
+                                </div>
+                               
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
                 </div>
                 <div class="pill-nav">
-                    <a  href="<?php echo BASEURL . '/adminPayment' ?>">Customer</a>
+                    <a href="<?php echo BASEURL . '/adminPayment' ?>">Customer</a>
                     <a class="active" href="">vendor</a>
 
                 </div>
@@ -85,7 +148,7 @@
                             <td>Monthly Payment</td>
                             <td>Sep 10 2021</td>
                             <td>Paid</td>
-                            
+
                             <td>Rs. 25000</td>
                         </tr>
 
@@ -95,7 +158,7 @@
                             <td>Monthly Payment</td>
                             <td>Sep 10 2021</td>
                             <td>Paid</td>
-                            
+
                             <td>Rs. 25000</td>
                         </tr>
 
@@ -105,19 +168,21 @@
                             <td>Monthly Payment</td>
                             <td>Sep 10 2021</td>
                             <td>Paid</td>
-                            
+
                             <td>Rs. 25000</td>
                         </tr>
-            
 
-            </table>
+
+                    </table>
 
 
 
         </section>
     </div>
-
+    <?php linkJS("admin/adminPayment");?>
     <?php linkJS("adminHomeView"); ?>
+
+
 
 
 
