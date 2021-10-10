@@ -15,6 +15,13 @@ body{
     display: flex;
 }
 
+.container{
+  background-image: url("../../../public/img/searchVenR.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .sidebar{
   display: flex;
   flex-direction: column;
@@ -247,6 +254,7 @@ body{
 .cusContent p11{
   height: 44px;
   padding:3%;
+  padding-left: 40%;
   opacity: 0.9;
   font-style: normal;
   font-weight: bold;
