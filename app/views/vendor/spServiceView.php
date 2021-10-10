@@ -24,7 +24,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="<?php echo BASEURL . '/spProfile'; ?>">
               <i class="fa fa-user-circle-o" aria-hidden="true"></i>
             <span class="links_name">Profile</span>
           </a>
@@ -42,7 +42,7 @@
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="<?php echo BASEURL . '/spMarketing'; ?>">
           <i class="fa fa-sticky-note" aria-hidden="true"></i>
           <span class="links_name">Marketing</span>
         </a>
@@ -67,7 +67,7 @@
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="<?php echo BASEURL . '/spReview '; ?>">
           <i class="fa fa-star" aria-hidden="true"></i>
           <span class="links_name">Review</span>
         </a>
