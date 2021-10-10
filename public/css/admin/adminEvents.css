@@ -16,9 +16,9 @@ body{
 
 .sidebar{
   border-radius: 23px 0px 0px 23px;
-  margin-top: 3%;
+  margin-top: 4%;
   position: fixed;
-  height: 75%;
+  height: 73%;
   width: 200px;
   background-color: rgb(95, 89, 89);
   background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
@@ -35,7 +35,7 @@ body{
 .sidebar .nav-links li{
   position: relative;
   list-style: none;
-  height: 50px;
+  height: 40px;
 }
 .sidebar .nav-links li a{
   height: 100%;
@@ -61,7 +61,7 @@ body{
 }
 .sidebar .nav-links li a .side-links{
   color: rgb(245, 245, 245);
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
   white-space: nowrap;
 }
