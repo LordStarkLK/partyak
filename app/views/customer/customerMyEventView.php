@@ -24,15 +24,16 @@
 
     <table class="cusevent">
       <div class="cusraw1">
+        <table>
         <tr>
           <th>Event ID</th>
-          <th>Public</th>
-          <th>Event Type</th>
           <th>Event Name</th>
+          <th>Event Type</th>
           <th>Location</th>
           <th>Date & Time</th>
+          <th>Number of Guests</th>
+          <th>Planning type</th>
           <th>Status</th>
-          <th>Number of guest</th>
           <th>Event Schedule Board</th>
           <th>More Actions</th>
         </tr>

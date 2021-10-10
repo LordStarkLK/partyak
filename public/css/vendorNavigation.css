@@ -35,17 +35,17 @@
   padding-left: 10px;
 }
 
-ul li,
-a,
-button {
+.nav-bar ul li,
+.nav-bar a,
+.nav-bar button {
   color: #e8f0f2;
   font-size: 25px;
   font-family: "Actor", sans-serif;
 }
-a:link {
+.nav-bar a:link {
   text-decoration: none;
 }
-button {
+.nav-bar button {
   background-color: darkcyan;
   border-radius: 28px;
   border: none;
@@ -71,12 +71,12 @@ button {
 }
 
 @media screen and (max-width: 1200px) {
-  button {
+  .nav-bar button {
     font-size: 20px;
   }
-  ul li,
-  a,
-  button {
+  .nav-bar ul li,
+  .nav-bar a,
+  .nav-bar button {
     font-size: 20px;
   }
 }
@@ -105,9 +105,9 @@ button {
   .nav-items {
     width: 100%;
   }
-  ul li,
-  a,
-  button {
+  .nav-bar ul li,
+  .nav-bar a,
+  .nav-bar button {
     font-size: 20px;
   }
   .nav-links li {
@@ -115,15 +115,15 @@ button {
   }
 }
 @media screen and (max-width: 450px) {
-  ul li,
-  a,
-  button {
+  .nav-bar ul li,
+  .nav-bar a,
+  .nav-bar button {
     font-size: 15px;
   }
   @media screen and (max-width: 350px) {
-    ul li,
-    a,
-    button {
+    .nav-bar ul li,
+    .nav-bar a,
+    .nav-bar button {
       font-size: 12px;
     }
   }
