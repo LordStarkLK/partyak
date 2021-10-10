@@ -23,7 +23,9 @@
         <button type="button" class="buttonS" name="Own" > <a href ="<?php echo BASEURL . '/customerOnYourOwnS'; ?>"> Add Service Details</a></button> 
         <div class="sideDe">
           <p>You can add service details which are required for your event by clicking here.</p>
-        </div>   
+        </div> 
+
+        <br><br><img <?php srcIMG("servicepees.png") ?> alt="Chance Flowers"> 
     </div>
   </div>
 
