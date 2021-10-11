@@ -30,78 +30,45 @@
         <tr>
           <th>Payment No</th>
           <th>Vendor</th>
-          <th>Description</th>
-          <th>Date</th>
-          <th>Status</th>
-          <th>Paid Amount</th>
-          <th>Total Amount</th>
+          <th> Date</th>
+          <th>Payment Status</th>
+          <th>Paid Amount(LKR)</th>
+          <th>Total Amount(LKR)</th>
+          <th>Action</th>
         </tr>
       </div>
-        <tr>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          
+
+      <tr>
+          <td>01</td>
+          <td>Jaal Salon</td>
+          <td>10.08.2021</td>
+          <td>Full Payment</td>
+          <td>8000.00</td>
+          <td>30000.00</td>  
+          <td> <button class="go-payment">Go</button></td>     
         </tr>
+        
         <tr>
-          <td>            </td>
-          <td>            </td>
-          <td>            </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
+          <td>02</td>
+          <td>8 Degree</td>
+          <td>19.11.2021</td>
+          <td>Advanced Paid</td>
+          <td>50000.00</td>
+          <td>300000.00</td>  
+          <td> <button class="go-payment">Go</button></td>     
         </tr>
+
         <tr>
-          <td>            </td>
-          <td>            </td>
-          <td>            </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
+          <td>03</td>
+          <td>JK Photography</td>
+          <td>10.12.2021</td>
+          <td>Advanced Paid</td>
+          <td>5000.00</td>
+          <td>25000.00</td>  
+          <td> <button class="go-payment">Go</button></td>     
         </tr>
-        <tr>
-          <td>            </td>
-          <td>            </td>
-          <td>            </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-        </tr>
-        <tr>
-          <td>            </td>
-          <td>            </td>
-          <td>            </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-         
-        </tr>
-        <tr>
-          <td>           </td>
-          <td>           </td>
-          <td>           </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-        </tr>
-        <tr>
-          <td>           </td>
-          <td>           </td>
-          <td>           </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-        </tr>
+ 
+        
       </table>
     </div>
      
