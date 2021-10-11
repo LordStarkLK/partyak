@@ -24,83 +24,74 @@
 
 
     <div class="cusevent">
-    <table>
-      <div class="cusraw1">
-        <tr>
-          <th>Booking ID</th>
-          <th>Vendor</th>
-          <th>Vendor ID</th>
-          <th>Booking Date</th>
-          <th>Booking Request Status</th>
-          <th>Payment Status</th>
-          <th>More Actions</th>
-        </tr>
-      </div>
-        <tr>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          
-        </tr>
-        <tr>
-          <td>            </td>
-          <td>            </td>
-          <td>            </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-        </tr>
-        <tr>
-          <td>            </td>
-          <td>            </td>
-          <td>            </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-        </tr>
-        <tr>
-          <td>            </td>
-          <td>            </td>
-          <td>            </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-        </tr>
-        <tr>
-          <td>            </td>
-          <td>            </td>
-          <td>            </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
+    <table class="table-content">
+          <tr>
+            <th>Booking_ID</th>
+            <th>Vendor</th>
+            <th>Vendor Name</th>
+            <th>Event_Date</th>
+            <th>Booking Request Status</th>
+            <th>Payment_Status</th>
+            <th>More Actions</th>
+          </tr>
+  
+         <tr>
+            <td>01</td>
+            <td>Salon</td>
+            <td>Jaal Salon</td>
+            <td>10.08.2020</td>
+            <td>Accepted</td>
+            <td>Completed</td>
+            <td class="btn-row">
+                <button class="edit-booking">Edit</button>
+                <button class="cancel-booking">Cancel</button>
+            </td>
+            
+          </tr>
+
+          <tr>
+            <td>02</td>
+            <td>Photographer</td>
+            <td>DARKEYE</td>
+            <td>31.10.2020</td>
+            <td>Accepted</td>
+            <td>Pending</td>
+            <td class="btn-row">
+                <button class="edit-booking">Edit</button>
+                <button class="cancel-booking">Cancel</button>
+            </td>
+            
+          </tr>
+
+          <tr>
+            <td>03</td>
+            <td>Venues & Halls</td>
+            <td>8 Degree</td>
+            <td>20.11.2020</td>
+            <td>Accepted</td>
+            <td>Pending</td>
+            <td class="btn-row">
+                <button class="edit-booking">Edit</button>
+                <button class="cancel-booking">Cancel</button>
+            </td>
+            
+          </tr>
+
+          <tr>
+            <td>04</td>
+            <td>Catering Service</td>
+            <td>Dushan Catering</td>
+            <td>25.11.2020</td>
+            <td>Pending</td>
+            <td>Pending</td>
+            <td class="btn-row">
+                <button class="edit-booking">Edit</button>
+                <button class="cancel-booking">Cancel</button>
+            </td>
+            
+          </tr>
          
-        </tr>
-        <tr>
-          <td>           </td>
-          <td>           </td>
-          <td>           </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-        </tr>
-        <tr>
-          <td>           </td>
-          <td>           </td>
-          <td>           </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-        </tr>
+        
       </table>
     </div>
      
