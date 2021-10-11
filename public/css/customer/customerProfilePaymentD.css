@@ -44,7 +44,7 @@ body{
 .custopic p{
     position: relative;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 24px;
     line-height: 33px;
     text-align: center;
 
@@ -77,19 +77,28 @@ th{
     background: #2D2D2D;
 }
 
-
-  
-td, th {
+th {
     border: 1px solid #464646;
-    text-align: left;
-    padding: 26px;
+    padding: 2%;
     font-weight: normal;
-    font-size: 15px;
-    line-height: 84.5%;
+    font-size: 18px;
+    line-height: 90%;
     /* or 14px */
     
     text-align: center;
     
+    color: #FFFFFF;
+}
+
+td{
+    border: 1px solid #464646;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 84.5%;
+    /* or 14px */
+    /* padding-top: 0.5%;
+    padding-bottom: 0.5%; */
     color: #FFFFFF;
 }
   
@@ -99,5 +108,29 @@ tr:nth-child(even) {
 
 tr:nth-child(odd) {
     background: #5B5B5B;
+}
+
+tr:hover{
+    cursor: pointer;
+    color: white;
+    background-color:#424242;
+}
+
+.go-payment{
+    width: 60%;
+    margin: 2px;
+    padding: 2%;
+    color:#202020;
+    background-color:#18ab29;
+    font-size: 16px;
+    font-weight: bold;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+.go-payment:hover {
+    background-color:#18ab29;
+    cursor: pointer;
 }
 
