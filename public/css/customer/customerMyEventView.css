@@ -6,11 +6,15 @@
   font-family: 'Poppins', sans-serif;
 }
 
-body{
-    background-color:#202020; 
-    background-image: url("../../../public/img/confetti.png");
-    background-repeat:round;
-}
+body {
+    margin: 0;
+    background-color: #202020;
+    background-image: url("../../../public/img/home-confetti.png");
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    background-size: 100%;
+  }
 
 .container{
     position:relative;
@@ -73,22 +77,31 @@ table {
 th{
     position: relative;
     background: #2D2D2D;
-    padding: 30px;
 }
 
 
-  
-td, th {
+th {
     border: 1px solid #464646;
-    text-align: left;
-    padding: 30px;
+    padding: 1%;
     font-weight: normal;
-    font-size: 15px;
-    line-height: 84.5%;
+    font-size: 18px;
+    line-height: 100%;
     /* or 14px */
     
     text-align: center;
     
+    color: #FFFFFF;
+}
+
+td{
+    border: 1px solid #464646;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 84.5%;
+    /* or 14px */
+    /* padding-top: 0.5%;
+    padding-bottom: 0.5%; */
     color: #FFFFFF;
 }
   
@@ -99,3 +112,34 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
     background: #5B5B5B;
 }
+
+
+.edit-event , .cancel-event, .go-event{
+    width: 60%;
+    margin: 2px;
+    padding: 2%;
+    color:#202020;
+    background-color: rgb(198, 255, 255);
+    font-size: 16px;
+    font-weight: bold;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+.edit-event:hover {
+    background-color:#18ab29;
+    cursor: pointer;
+}
+
+.go-event:hover {
+    background-color:#18ab29;
+    cursor: pointer;
+}
+
+
+.cancel-event:hover {
+    background-color:brown;
+    cursor: pointer;
+}
+
