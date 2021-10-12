@@ -182,3 +182,58 @@ body {
   height: 768px;
   background-color: #ffebec;
 }
+.section3 {
+  display: flex;
+  flex-direction: row;
+}
+.vendor-span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  margin: 0 49px;
+  margin-bottom: 0;
+  resize: none;
+}
+.best-seller-text {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.best-seller-icons {
+  /* margin: 30px 5px; */
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+}
+.seller-name {
+  font-family: Actor;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 99%;
+  /* or 15px */
+
+  text-align: center;
+
+  color: #000000;
+}
+.best-seller-h2 {
+  color: #000000;
+  font-family: Alatsi;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 88.5%;
+  /* or 44px */
+
+  text-align: center;
+}
+.vendor-stars {
+  padding: 10px 0 10px 0;
+}

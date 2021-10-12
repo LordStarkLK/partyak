@@ -57,24 +57,71 @@
     </div>
     <div class="container section3">
         <div class="column best-seller-text">
-            <h2 class="best-seller-h2">Best<br>Seller</h2>
+            <h2 class="best-seller-h2">Best<br>Sellers</h2>
         </div>
         <div class="column best-seller-icons">
-            <table class="best-seller-table">
-                <tr>
-                    <th>Company</th>
-                    <th>Contact</th>
-                    <th>Country</th>
-                </tr>
-                <tr>
-                    <th>Company</th>
-                    <th>Contact</th>
-                    <th>Country</th>
-                </tr>
-            </table>
+            <div class="vendor-span icon">
+                <img class="best-seller vendor-icons" <?php srcIMG("logo-icons/galadari.circle.png") ?>>
+                <img class="best-seller vendor-stars" <?php srcIMG("stars.png") ?>>
+                <p class="seller-name">
+                    GALADARI Hotel,<br>Colombo
+                </p>
+            </div>
+            <div class="vendor-span icon">
+                <img class="best-seller vendor-icons" <?php srcIMG("logo-icons/marians.circle.png") ?>>
+                <img class="best-seller vendor-stars" <?php srcIMG("stars.png") ?>>
+                <p class="seller-name">
+                    MARIANS Band,<br>Negombo
+                </p>
+            </div>
+            <div class="vendor-span icon">
+                <img class="best-seller vendor-icons" <?php srcIMG("logo-icons/mv.circle.png") ?>>
+                <img class="best-seller vendor-stars" <?php srcIMG("stars.png") ?>>
+                <p class="seller-name">
+                    MOUNT LAVINIA Hotel,<br>Mount Lavinia
+                </p>
+            </div>
+            <div class="vendor-span icon">
+                <img class="best-seller vendor-icons" <?php srcIMG("logo-icons/abba.circle.png") ?>>
+                <img class="best-seller vendor-stars" <?php srcIMG("stars.png") ?>>
+                <p class="seller-name">
+                    ABBA International,<br>Panadura
+                </p>
+            </div>
+            <br>
+            <div class="vendor-span icon">
+                <img class="best-seller vendor-icons" <?php srcIMG("logo-icons/cake.circle.png") ?>>
+                <img class="best-seller vendor-stars" <?php srcIMG("stars.png") ?>>
+                <p class="seller-name">
+                    WASANA Bakers,<br>Horana
+                </p>
+            </div>
+            <div class="vendor-span icon">
+                <img class="best-seller vendor-icons" <?php srcIMG("logo-icons/flower.circle.png") ?>>
+                <img class="best-seller vendor-stars" <?php srcIMG("stars.png") ?>>
+                <p class="seller-name">
+                    MAL Samayan,<br>Galle
+                </p>
+            </div>
+            <div class="vendor-span icon">
+                <img class="best-seller vendor-icons" <?php srcIMG("logo-icons/bar.circle.png") ?>>
+                <img class="best-seller vendor-stars" <?php srcIMG("stars.png") ?>>
+                <p class="seller-name">
+                    ONESHOT,<br>Mount Lavinia
+                </p>
+            </div>
+            <div class="vendor-span icon">
+                <img class="best-seller vendor-icons" <?php srcIMG("logo-icons/dance.circle.png") ?>>
+                <img class="best-seller vendor-stars" <?php srcIMG("stars.png") ?>>
+                <p class="seller-name">
+                    PUNSARA ROCKS,<br>Panadura
+                </p>
+            </div>
         </div>
     </div>
+    <div class="container section4">
 
+    </div>
 
 </body>
 
