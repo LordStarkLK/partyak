@@ -10,10 +10,8 @@ body {
   margin: 0;
   background-color: #202020;
   background-image: url("../../public/img/home-confetti.png");
-  background-position: center;
-  background-repeat: repeat;
-  background-size: cover;
-  background-size: 100%;
+  background-position: 50% 50%;
+  background-size: contain;
 }
 .home-blob {
   position: absolute;
@@ -236,4 +234,50 @@ body {
 }
 .vendor-stars {
   padding: 10px 0 10px 0;
+}
+.section-3-end {
+  width: 100%;
+}
+.section4-header {
+  font-family: Actor;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 85px;
+  line-height: 99%;
+  /* or 84px */
+
+  text-align: center;
+
+  color: #ffffff;
+  margin-bottom: 100px;
+}
+.supplier-logo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 50%;
+}
+.supplier-name {
+  text-align: center;
+  font-family: Actor;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 23px;
+  line-height: 35px;
+
+  color: #ffffff;
+}
+.supplier-icon {
+  height: 178px;
+  width: 178px;
+}
+.section4 {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+.supplier {
+  margin-bottom: 60px;
 }

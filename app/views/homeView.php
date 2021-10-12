@@ -119,8 +119,61 @@
             </div>
         </div>
     </div>
+    <img class="section-3-end" <?php srcIMG("section-3-end.png") ?>>
     <div class="container section4">
-
+        <h1 class="section4-header">
+            Looking for a supplier?
+        </h1>
+        <div class="supplier-logo">
+            <div class="supplier">
+                <img class="supplier-icon" <?php srcIMG("supplier-icon/ring.png") ?>>
+                <p class="supplier-name">Jewellery</p>
+            </div>
+            <div class="supplier">
+                <img class="supplier-icon" <?php srcIMG("supplier-icon/balloon.png") ?>>
+                <p class="supplier-name">Baloon</p>
+            </div>
+            <div class="supplier">
+                <img class="supplier-icon" <?php srcIMG("supplier-icon/cake.png") ?>>
+                <p class="supplier-name">Bakeries</p>
+            </div>
+            <div class="supplier">
+                <img class="supplier-icon" <?php srcIMG("supplier-icon/flower.png") ?>>
+                <p class="supplier-name">Florist</p>
+            </div>
+            <div class="supplier">
+                <img class="supplier-icon" <?php srcIMG("supplier-icon/caterers.png") ?>>
+                <p class="supplier-name">Caterers</p>
+            </div>
+            <div class="supplier">
+                <img class="supplier-icon" <?php srcIMG("supplier-icon/invites.png") ?>>
+                <p class="supplier-name">Invites</p>
+            </div>
+            <div class="supplier">
+                <img class="supplier-icon" <?php srcIMG("supplier-icon/camera.png") ?>>
+                <p class="supplier-name">Photography</p>
+            </div>
+            <div class="supplier">
+                <img class="supplier-icon" <?php srcIMG("supplier-icon/drinks.png") ?>>
+                <p class="supplier-name">Liquor Store</p>
+            </div>
+            <div class="supplier">
+                <img class="supplier-icon" <?php srcIMG("supplier-icon/tailor.png") ?>>
+                <p class="supplier-name">Tailor</p>
+            </div>
+            <div class="supplier">
+                <img class="supplier-icon" <?php srcIMG("supplier-icon/dancer.png") ?>>
+                <p class="supplier-name">Dancer</p>
+            </div>
+            <div class="supplier">
+                <img class="supplier-icon" <?php srcIMG("supplier-icon/lights.png") ?>>
+                <p class="supplier-name">Lights</p>
+            </div>
+            <div class="supplier">
+                <img class="supplier-icon" <?php srcIMG("supplier-icon/guitar.png") ?>>
+                <p class="supplier-name">Bands</p>
+            </div>
+        </div>
     </div>
 
 </body>
