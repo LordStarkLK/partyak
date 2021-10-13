@@ -11,20 +11,33 @@
 </head>
 
 <body>
-   <header>
-    <?php linkPhp("customerNavigation") ?>
-
+    <header>
+        <?php linkPhp("customerNavigation") ?>
     </header>
 
 
     <div class="container">
-    <div class="cusBox">
-        <div class="cusop1">
-            <a href="<?php echo BASEURL . '/customerOnYourOwnPlan'; ?>">On Your Own Planning</a>
+    <div class="container">
+        <div class="container-asOwn">
+            <div class="glass-asOwn">
+                <!-- <img class="imgBlobLeft" src="../../public/images/rightblob.png" alt="blob left" > -->
+                <img class="owni" <?php srcIMG("vendor.png") ?> alt="pick vendor image">
+            </div>
+            <div class="button-asOwn">
+                <button type="button" class="buttonOwn" name="Own" > <a href ="<?php echo BASEURL . '/customerOnYourOwnPlan'; ?>"> On Your Own Planning</a></button>
+                
+                <!-- <input type="submit" value="Register" class="button"> -->
+            </div>
         </div>
+        <div class="container-asEp">
+            <div class="glass-asEp">
+                <!-- <img class="imgBlobRight" src="../../public/images/leftblob.png" alt="blob right" > -->
 
-        <div class="cusop2">
-            <a href="#">Through Event Planner Planning</a>
+                <img class="thni" <?php srcIMG("riding.png") ?> alt="pick customer image">
+            </div>
+            <div class="button-asEp" >
+                <button type="button" class="buttonEp" name="Ep"> <a href ="<?php echo BASEURL . '/customerThroughEpPlan'; ?>"> Thorugh Event Planner Planning</a></button>
+            </div>
         </div>
     </div>
 
@@ -32,7 +45,7 @@
     <div class="cusContent">
         <div class="cusDetail">
             <p1>Hello......,<br><br>
-We give two ways to plan your event and manage it very easily<br>
+We give two ways to plan your event and manage it very easily<br><br>
 These are the two ways we provide you.<br>
      1. On your own planning<br>
      2. Through evenet planner palnning<br><br>

@@ -174,85 +174,26 @@ form.cuse::after {
   flex-wrap: wrap;
 }
 
-.cusraw1{
-  position:relative;
-  display: flex;
-  flex-direction: raw;
-  order:0;
-  /* padding:2%; */
+td{
+  position:relative; 
+  padding:30px;
+  justify-content: center;
 }
 
-.cusraw2{
-  position:relative;
-  display: flex;
-  flex-direction: raw;
-  order:1;
-  /* padding:2%; */
-}
-
-.cusGallery1{
-  position:relative;
-  display:flex;
-  flex-direction: column;
-  order:0;
-}
-
-.cusGallery2{
-  position:relative;
-  display:flex;
-  flex-direction: column;
-  order:1;
-}
-
-.cusGallery3{
-  display:flex;
-  position:relative;
-  flex-direction: column;
-  order:2;
-}
-
-
-.cusGallery4{
-  position:relative;
-  display:flex;
-  flex-direction: column;
-  order:0;
-}
-
-.cusGallery5{
-  position:relative;
-  display:flex;
-  flex-direction: column;
-  order:1;
-}
-
-.cusGallery6{
-  position:relative;
-  display:flex;
-  flex-direction: column;
-  order:2;
-}
-
-
-.cusGallery1, .cusGallery2, .cusGallery3,.cusGallery4,.cusGallery5,.cusGallery6{
-  position:relative;
-  padding:2%;
-  padding-left:4%; 
-}
-
-.cusGallery1 img, .cusGallery2 img, .cusGallery3 img, .cusGallery4 img, .cusGallery5 img,.cusGallery6 img{
+td img{
   position:relative;
   border-radius: 10px;
   width:300px;
   height:200px;
 }
 
-.cusDes1, .cusDes2, .cusDes3, .cusDes4, .cusDes5, .cusDes6{
+td p{
   font-size: 14px;
   line-height: 18px;
   text-align: center;
   color: rgba(255, 255, 255, 0.9);
 }
+
 
 /* .sidebar{
    background-image:url(image/left.png);

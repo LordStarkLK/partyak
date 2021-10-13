@@ -2,8 +2,9 @@
 
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     background-color: #202020;
-    padding: 1%;
+    padding-left: 20%;
   }
   
   .foot-up {
@@ -31,8 +32,8 @@
     display: flex;
     flex-direction: column;
     order: 1;
-    padding: 5%;
-    width: 350px;
+    padding: 2%;
+    width: 270px;
   }
   
   .support label {
@@ -53,7 +54,7 @@
     font-family: Arial;
     font-style: normal;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 17px;
     line-height: 24px;
     color: rgba(255, 255, 255, 0.93);
   }
@@ -62,8 +63,8 @@
     display: flex;
     flex-direction: column;
     order: 2;
-    padding: 5%;
-    width: 350px;
+    padding: 2%;
+    width: 270px;
   }
   
   .quick label {
@@ -80,7 +81,7 @@
     font-family: Arial;
     font-style: normal;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 17px;
     line-height: 24px;
     color: rgba(255, 255, 255, 0.93);
   }
@@ -93,8 +94,9 @@
     display: flex;
     flex-direction: column;
     order: 3;
-    padding: 5%;
-    width: 350px;
+    flex-wrap: wrap;
+    padding: 2%;
+    width: 270px;
   }
   
   .contact label {
@@ -110,7 +112,7 @@
     font-family: Arial;
     font-style: normal;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 17px;
     line-height: 24px;
     color: rgba(255, 255, 255, 0.93);
   }
@@ -119,8 +121,50 @@
     list-style-type: none;
   }
   
-  .foot-up {
+
+  .foot-down {
     display: flex;
-    flex-direction: raw;
+    flex-direction: row;
     order: 1;
+    margin-top:0%;
+    padding-top:0%;
+    padding-left: 5%;
+    padding-bottom: 2%;
   }/*# sourceMappingURL=customerHome.css.map */
+
+
+  .contact .fb{
+    display: flex;
+    flex-direction: column;
+    order:0;
+    width:12%;
+    margin:3%;
+  }
+
+  .contact .insta{
+    display: flex;
+    flex-direction: column;
+    order:1;
+    width:12%;
+    margin:3%;
+    margin-right: 3%;
+  }
+
+  .contact .gmail{
+    display: flex;
+    flex-direction: column;
+    order:2;
+    width:12%;
+    margin:3%;
+  }
+
+  .condown{
+    display: flex;
+    flex-direction: row;
+    order:0;
+    flex-wrap: wrap;
+  }
+
+  .vi, .mas, .pay{
+    padding-left: 3%;
+  }
