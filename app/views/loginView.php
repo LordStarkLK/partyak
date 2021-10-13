@@ -44,7 +44,7 @@
 
                         <button name="submit" class="btn">Login</button>
                         </form>
-                        <p class="account"><a href="#"> Forgot Password</a></p>
+                        <p class="account"><a href="<?php echo BASEURL . '/forgetPassword'; ?>"> Forgot Password</a></p>
                         <p class="account">Not a member? <a href="<?php echo BASEURL . '/home/signup'; ?>"> Register</a></p>
                     </div>
 
