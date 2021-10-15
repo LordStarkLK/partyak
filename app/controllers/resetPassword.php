@@ -7,7 +7,7 @@ class ResetPassword extends FrameworkPartyak{
     }
 
     public function index(){
-        $this->view("resetPasswordView");
+        $this->view("otpView");
     }
 
 

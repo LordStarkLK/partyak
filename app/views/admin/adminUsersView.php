@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
- 
+    <?php linkCSS("admin/sidebar"); ?>
     <?php linkCSS("admin/adminUsers"); ?>
     <?php linkCSS("css/all"); ?>
 
@@ -15,6 +15,7 @@
    </head>
 <body>
 <div class="container">
+
   <?php linkPHP("adminSidebar");?>
   <section class="home-section">
     

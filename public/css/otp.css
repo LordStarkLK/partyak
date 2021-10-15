@@ -10,17 +10,22 @@
 html {
   scroll-behavior: smooth;
 }
+
+body{
+  font-family: 'Raleway';
+    background: url("../img/loginbackground.png");
+    background-size: cover;
+}
 body,
 button,
 input textarea {
-  font-family: "Poppins", sans-serif;
-  background-color: #fff;
   position: relative;
   height: 85vh;
   width: 100%;
 }
 a {
   text-decoration: none;
+  color: red;
 }
 ul {
   list-style: none;
@@ -76,11 +81,13 @@ nav {
   margin-top: 4rem;
 }
 .bgWhite {
-  padding: 2rem;
+    background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.65) 18.52%, rgba(15, 15, 15, 0.59) 98.52%);
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    backdrop-filter: blur(120px);
+    border-radius: 43px;
+    padding: 2rem;
   border-radius: 15px;
-  background: white;
-  box-shadow: 0px 3px 6px 0px #cacaca;
-  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,7 +100,7 @@ nav {
   align-items: center;
 }
 .title h3 {
-  color: #34495e;
+  color: white;
   font-weight: 600;
   font-size: 1.5rem;
 }
@@ -102,7 +109,7 @@ nav {
   padding-bottom: 1rem;
   font-weight: 400;
   font-size: 1rem;
-  color: #2c3e50;
+  color: white;
 }
 .time{
   color:#e74c3c;
@@ -112,7 +119,7 @@ nav {
 }
 .customBtn {
   width: 100px;
-  background: #1ebb7f;
+  background-color: #000000;
   border: none;
   outline: none;
   height: 40px;
@@ -126,32 +133,33 @@ nav {
   justify-content:center;
   margin-top: 2rem;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.7s;
   font-size: 1rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 .customBtn:hover {
-  background-color: #fff;
-  border: 2px solid #1ebb7f;
-  color: #1ebb7f;
+  background-color: #464646;
 }
 form{
   margin-bottom:2rem;
 }
 form input {
+  background: rgba(255, 255, 255, 0.71);
   display: inline-block;
   width: 50px;
   height: 50px;
   text-align: center;
   border-width: 0;
-  background-color: #f6f6f6;
-  border-radius:5px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+ 
+  border-radius:20px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
 }
+
+
 .msg .text{
-  color:#2c3e50;
+  color:white;
   font-size:0.8rem;
   padding-bottom:0.5rem;
 }
