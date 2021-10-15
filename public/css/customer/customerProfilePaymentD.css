@@ -25,6 +25,7 @@ body{
     backdrop-filter: blur(120px);
 /* Note: backdrop-filter has minimal browser support */
    border-radius: 30px;
+   z-index: 0;
 }
 
 .custopic{
