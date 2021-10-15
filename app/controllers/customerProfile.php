@@ -1,10 +1,9 @@
 <?php
 
 
-class CustomerMyEvent extends FrameworkPartyak{
+class CustomerProfile extends FrameworkPartyak{
     public function __construct(){
         $this->helper("linker");
-        $this->user = $this->model('customerMyEventModel');
     }
     
     public function index(){
@@ -13,12 +12,7 @@ class CustomerMyEvent extends FrameworkPartyak{
         //     $this->redirect("login");
         // }
         // $this->preventBack("customer");
-
-        $id=$_SESSION['userId'];
-
-
-        $data['eventDetail'] = $this->user->getEventDetails($id);
-        $this->view("customer/customerMyEventView", $data);
+        $this->view("customer/customerProfileView");
     }
 
 }

@@ -15,8 +15,8 @@ class CustomerOnYourOwnPlanModel extends Database
         $userId = $result["user_id"];
 
         //Insert data to child tables of user - on_your_own_planning table
-        $query = "INSERT INTO on_your_own_planning(user_id, event_type, event_name, start_date, end_date,location,noOfGuest) 
-        VALUES ('$userId', '$eventType', '$eventname', '$startdate' , '$enddate', '$city' , '$noofguest')";
+        $query = "INSERT INTO on_your_own_planning(user_id, event_type, event_name, start_date, end_date,location,noOfGuest,plan_type) 
+        VALUES ('$userId', '$eventType', '$eventname', '$startdate' , '$enddate', '$city' , '$noofguest', 'OnYourOwn')";
         mysqli_query($GLOBALS['db'], $query);
     }
 

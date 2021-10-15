@@ -7,8 +7,7 @@
             <div class="nav-items">
                 <ul class="nav-links">
                     <li><a href="<?php echo BASEURL . '/spAnalytics'; ?>">Business</a></li>
-                    <li><a href="http://">Contact Us</a></li>
-                    <li><a href="http://">How it works</a></li>   
+                    <li><a href="<?php echo BASEURL . '/howItWork'; ?>">How it works</a></li>   
                 </ul>
             </div>
 
