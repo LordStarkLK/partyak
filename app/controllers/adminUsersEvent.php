@@ -5,6 +5,7 @@ class AdminUsersEvent extends FrameworkPartyak{
     public function __construct(){
         $this->helper("linker");
         $this->user = $this->model('adminUserEventModel');
+        $this->preventBack("admin");
     }
     
     public function index(){

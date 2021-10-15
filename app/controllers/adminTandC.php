@@ -4,6 +4,7 @@ class AdminTandC extends FrameworkPartyak{
     public function __construct(){
         $this->helper("linker");
         $this->user= $this->model('adminTandCModel');
+        $this->preventBack("admin");
     }
     
     public function index(){

@@ -5,6 +5,7 @@ class AdminUsersService extends FrameworkPartyak{
     public function __construct(){
         $this->helper("linker");
         $this->user = $this->model('adminUserServiceModel');
+        $this->preventBack("admin");
     }
     
     public function index(){
