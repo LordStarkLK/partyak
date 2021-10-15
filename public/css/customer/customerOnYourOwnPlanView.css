@@ -19,6 +19,7 @@ body {
 .container{
     padding: 3%; 
     display: flex;
+    z-index: 0;
 }
 
 .container{
