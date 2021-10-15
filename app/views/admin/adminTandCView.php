@@ -56,7 +56,7 @@
 
                     </div>
                     <div>
-                        <p id="content">ikman is a service provided by Saltside Technologies AB
+                        <p id="content">Partyak is a service provided by Saltside Technologies AB
                             (subject to your compliance with the Terms and Conditions set forth below).
                             Please read these Terms and Conditions before using this platform.</p>
                     </div>
