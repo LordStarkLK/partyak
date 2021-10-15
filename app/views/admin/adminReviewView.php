@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-
+    <?php linkCSS("admin/sidebar"); ?>
     <?php linkCSS("admin/adminReview"); ?>
     <?php linkCSS("css/all"); ?>
 

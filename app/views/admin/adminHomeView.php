@@ -3,8 +3,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
- 
-    <?php linkCSS("adminHomeView"); ?>
+    <?php linkCSS("admin/sidebar"); ?>
+    <?php linkCSS("admin/adminHome"); ?>
     
    
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
