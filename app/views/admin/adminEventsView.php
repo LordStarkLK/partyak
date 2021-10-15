@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
- 
+    <?php linkCSS("admin/sidebar"); ?>
     <?php linkCSS("admin/adminEvents"); ?>
     <?php linkCSS("css/all"); ?>
    

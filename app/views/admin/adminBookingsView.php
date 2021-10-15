@@ -11,8 +11,9 @@
       integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
       crossorigin="anonymous"
     />
-
+    <?php linkCSS("admin/sidebar"); ?>
     <?php linkCSS("admin/adminEvents"); ?>
+
     <?php linkCSS("css/all"); ?>
 
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>

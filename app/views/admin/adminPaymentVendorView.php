@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-
+    <?php linkCSS("admin/sidebar"); ?>
     <?php linkCSS("admin/adminPayment"); ?>
     <?php linkCSS("css/all"); ?>
 
@@ -20,7 +20,7 @@
 
             <div class="sidebar-button">
                 <i class='bx bx-menu sidebarBtn' id="iconMenu"></i>
-                <span class="dashboard">USERS</span>
+                <span class="dashboard">PAYMENT</span>
             </div>
 
             <div class="home-content">
