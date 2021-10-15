@@ -18,7 +18,7 @@
     
       <div class="sidebar-button">
         <i class='bx bx-menu sidebarBtn' id="iconMenu"></i>
-        <span class="dashboard">USERS</span>
+        <span class="dashboard">MARKETING</span>
       </div>
    
     <div class="home-content">
