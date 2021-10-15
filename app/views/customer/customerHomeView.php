@@ -14,31 +14,65 @@
     <header>
     <?php linkPhp("customerNavigation") ?>
     </header>
-    <div class="container">
-            <div class="left">
-                <div class="test">
-                    <label>Life is an event.<br>Make it memorable.</label><br><br>
-                    <div class="button">
-                         <a href="<?php echo BASEURL . '/customerSearchVendor'; ?>"> Search Vendor</a>
-                    </div>
-                 </div>
-                 <!--<div class="scroll">
-                    <input type="button" value="Scroll">
-                 </div>-->
+    <div class="container section1">
+        <div class="left column">
+            <div class="content-left">
+                <h1 class="quote">
+                    Life is an event.<br>
+                    Make it memorable.
+                </h1>
+                <button class="search-vendor">Search Vendors</button>
             </div>
-            <div class="right">
-                <div class="glass">
-                    <div class="box">
-                        <lable><br>cake bakery<br><br></lable>
-                        <img <?php srcIMG("caek.png") ?> alt="Cake Vector">
-                    </div>
-                    <lable>
-                        <br>We are a bake-house offering<br> services for custom bake orders<br> including cakes etc.We accpet all<br> the kinds of events including<br> weddings, birthday parties and<br> cooperate events. Send a request<br> for reservations.<br><br>
-                    </lable>
-                    <img <?php srcIMG("Group 6.png") ?> alt="Request Vector">
-                </div>  
-            </div>   
+
+        </div>
+        <div class="right column">
+            <img class="home-blob" <?php srcIMG("home-blob.png") ?> alt="home blob">
+            <div class="glass glass-phone">
+                <div class="hamburger-menu">
+                    <img class="hamburger-png" <?php srcIMG("hamburger-menu.png") ?>>
+                </div>
+                <div class="glass inner-glass">
+                    <h2 class="cake-bakery-name">cake bakery</h2>
+                    <img class="cake-icon" <?php srcIMG("caek.png") ?> alt="cake icon">
+                    <img class="stars-img" <?php srcIMG("stars.png") ?> alt="stars icon">
+                </div>
+                <div class="descripton">
+                    <p class="seller-description">We are a bake-house offering services for custom bake orders including cakes etc.
+                        We accpet all the kinds of events including weddings, birthday parties and cooperate events. Send a request for reservations.
+                    </p>
+                </div>
+                <img class="request-icon" <?php srcIMG("request.png") ?> alt="request icon">
+            </div>
+
+        </div>
     </div>
+    <div class="container section2">
+        <div class="ads-logo"><img class="ads-logo-img" <?php srcIMG("kingbury-ad-logo.png") ?> alt="logo"></div>
+        <div class="ad-details">
+            <img class="ad-details-img" <?php srcIMG("ad-details.png") ?>>
+        </div>
+        <div class="ad-imgs"><img class="ad-imgs-cards" <?php srcIMG("visacards.png") ?>></div>
+    </div>
+    <div class="container section3">
+        <div class="column best-seller-text">
+            <h2 class="best-seller-h2">Best<br>Seller</h2>
+        </div>
+        <div class="column best-seller-icons">
+            <table class="best-seller-table">
+                <tr>
+                    <th>Company</th>
+                    <th>Contact</th>
+                    <th>Country</th>
+                </tr>
+                <tr>
+                    <th>Company</th>
+                    <th>Contact</th>
+                    <th>Country</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
     <?php linkPhp("footer") ?>
 </body>
 </html>

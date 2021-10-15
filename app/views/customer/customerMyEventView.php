@@ -38,92 +38,37 @@
           <th>More Actions</th>
         </tr>
       </div>
-        <tr>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          
-        </tr>
-        <tr>
-          <td>            </td>
-          <td>            </td>
-          <td>            </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-        </tr>
-        <tr>
-          <td>            </td>
-          <td>            </td>
-          <td>            </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-         
-        </tr>
-        <tr>
-          <td>            </td>
-          <td>            </td>
-          <td>            </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-        </tr>
-        <tr>
-          <td>            </td>
-          <td>            </td>
-          <td>            </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-        </tr>
-        <tr>
-          <td>           </td>
-          <td>           </td>
-          <td>           </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-        </tr>
-        <tr>
-          <td>           </td>
-          <td>           </td>
-          <td>           </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-          <td>          </td>
-        </tr>
+
+          <?php
+            $i = 1;
+            while($row=mysqli_fetch_assoc($data['eventDetail']) ){
+                echo"
+                <tr>
+                  <td>$i</td>
+                  <td>$row[event_name]</td>
+                  <td>$row[event_type]</td>
+                  <td>$row[location]</td>
+                  <td>$row[start_date] to $row[end_date]</td>
+                  <td>$row[noOfGuest]</td>
+                  <td>$row[plan_type]</td>
+                  <td>Upcoming</td>
+                  <td><button class=\"go-event\">Go</button></td>
+        
+                  
+                  <td>  
+                  <div class=\"btn-group\">
+                      <button class=\"edit-event\">Edit</button>
+                      <button class=\"cancel-event\">Cancel</button>
+                      
+                    </div>
+
+                  
+                  </td>
+                </tr>   
+                ";
+            $i++;
+          }?>
+       
       </table>
      
    </div>
