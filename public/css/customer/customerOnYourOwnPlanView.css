@@ -98,11 +98,14 @@ body {
   border: 1px solid #18ab29;
   display: inline-block; 
   cursor: pointer;
+  background-color: #18ab29 ;
+}
+
+.buttonS a{
   color: #ffffff;
   font-size: 19px;
   line-height: 23px;
-  background-color: #18ab29 ;
-
+  text-decoration: none;
 }
 
 .sideDe{
