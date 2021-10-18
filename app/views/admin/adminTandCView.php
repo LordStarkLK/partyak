@@ -176,7 +176,7 @@
 
 
 
-                <button class="addnew" id="myBtn" style="vertical-align:middle" onclick="addnew()"><span>Add new Setion
+                <button class="addnew" id="myBtn" style="vertical-align:middle" onclick="addnew()"><span>Add new Section
                     </span></button>
 
                     <div id="myModal" class="modal">
