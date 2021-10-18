@@ -659,7 +659,7 @@ padding:2%;
 }
 
 
-.saveb {
+.saveb  {
 position:relative;
 padding:10px 50px;
 border-radius: 28px;
@@ -672,6 +672,26 @@ font-size: 19px;
 line-height: 23px;
 background-color: #9593ff;
 }
+
+
+.savebb  {
+  position:relative;
+  padding:10px 50px;
+  border-radius: 28px;
+  border: 1px solid #18ab29;
+  display: inline-block; 
+  cursor: pointer;
+  background-color: #9593ff;
+  
+  }
+
+  .savebb a{
+    font-size: 19px;
+    line-height: 23px;
+    text-decoration: none;
+    color: #ffffff;
+
+  }
 
 
 .bac {

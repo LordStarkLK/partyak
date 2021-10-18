@@ -83,7 +83,7 @@ body{
   white-space: nowrap;
 }
 
-.buttonS{
+.buttonS{ 
   position:relative;
   margin-top: 15%;
   text-align: center;
@@ -92,10 +92,16 @@ body{
   border: 1px solid #18ab29;
   display: inline-block; 
   cursor: pointer;
-  color: #ffffff;
+  
   font-size: 19px;
   line-height: 23px;
   background-color: #18ab29 ;
+  
+}
+
+.buttonS a{
+  text-decoration: none;
+  color: #ffffff;
 
 }
 

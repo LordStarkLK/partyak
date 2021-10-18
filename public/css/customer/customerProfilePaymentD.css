@@ -28,6 +28,13 @@ body{
    z-index: 0;
 }
 
+.container{
+    background-image: url("../../../public/img/searchVenR.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
 .custopic{
     position:relative;
     display: flex;
