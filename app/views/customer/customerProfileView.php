@@ -39,7 +39,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="<?php echo BASEURL . '/customerChat'; ?>">
             <i class="fas fa-comments" ></i>
             <span class="links_name">Chat</span>
           </a>
@@ -149,7 +149,7 @@
         </div>
 
         <div class="eprofile_details">
-            <form action="#" class="epersonal_info" method="POST">
+            <form action="<?php echo BASEURL . '/customerProfile/index'; ?>" class="epersonal_info" method="POST">
                 <a>Edit Personal Information</a><br><br>
                  
                 <div class="erow">
@@ -157,7 +157,7 @@
                         <label for="fname">First Name</label>
                     </div>
                     <div class="ecol_data">
-                        <input id="fname" name="f_name" placeholder="<?php echo "$name[f_name]"; ?>" >
+                        <input id="fname" name="f_name" value="<?php echo "$name[f_name]"; ?>" >
                     </div>
                 </div>
 
@@ -166,7 +166,7 @@
                         <label for="lname">Last Name</label>
                     </div>
                     <div class="ecol_data">
-                        <input id="lname" name="l_name" placeholder="<?php echo "$name[l_name]"; ?>" > 
+                        <input id="lname" name="l_name" value="<?php echo "$name[l_name]"; ?>" > 
                     </div>
                 </div>
 
@@ -175,7 +175,7 @@
                         <label for="email">Email</label>
                     </div>
                     <div class="ecol_data">
-                        <input id="email" name="email" placeholder="<?php echo "$email[email]"; ?>" > 
+                        <input id="email" name="email" value="<?php echo "$email[email]"; ?>" > 
                     </div>
                 </div>
 
@@ -184,7 +184,7 @@
                         <label for="nic">NIC number</label>
                     </div>
                     <div class="ecol_data">
-                        <input id="nic" name="nic" placeholder="<?php echo "$name[nic]"; ?>" > 
+                        <input id="nic" name="nic" value="<?php echo "$name[nic]"; ?>" > 
                     </div>
                 </div>
 
@@ -193,7 +193,7 @@
                         <label for="egender">Gender</label>
                     </div>
                     <div class="ecol_data">
-                        <input id="gender" name="gender" placeholder="<?php echo "$name[gender]"; ?>" > 
+                        <input id="gender" name="gender" value="<?php echo "$name[gender]"; ?>" > 
                     </div>
                 </div>
 
@@ -202,7 +202,7 @@
                         <label for="eaddress">Address</label>
                     </div>
                     <div class="ecol_data">
-                        <input id="address" name="address" placeholder="<?php echo "$name[address]"; ?>" >
+                        <input id="address" name="address" value="<?php echo "$name[address]"; ?>" > 
                     </div>
                 </div> 
                 

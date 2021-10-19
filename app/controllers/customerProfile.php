@@ -16,6 +16,24 @@ class CustomerProfile extends FrameworkPartyak{
 
         $id=$_SESSION['userId'];
 
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+            //Get data from the form submission
+            $fname = $_POST["f_name"];
+            $lname = $_POST["l_name"];
+            $email = $_POST["email"];
+            $nic = $_POST["nic"];
+            $gender = $_POST["gender"];
+            $address = $_POST["address"];
+
+        
+            $this->user->updateProfile($fname, $lname, $nic, $gender, $address, $id);
+           
+            $this->user->updateEmail( $email, $id);
+
+        }
+
         $data['profile'] = $this->user->getProfile($id);
         $data['cus_email'] = $this->user->getCustomerEmail($id);
         $this->view("customer/customerProfileView",$data);

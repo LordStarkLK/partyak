@@ -32,7 +32,7 @@ body {
 }
 
 
-.content{
+ .content{
     position: relative;
     display: flex;
     /* margin-top: 1%; */
@@ -54,7 +54,7 @@ body {
   flex-direction: column;
   order:0;
   opacity: 100%;
-}
+} 
 
 .cusname{
   position: relative;
@@ -63,7 +63,7 @@ body {
   flex-direction: row;
   order:0;
   padding:5%;
-}
+} 
 
 .cusname p{
   opacity: 0.9;
@@ -74,7 +74,7 @@ body {
   background-color: transparent;
   color: #F5F5F5; 
 
-}
+} 
 
 
 .cusSearch{
@@ -121,7 +121,7 @@ form.cuse .cusbtn {
 
 form.cuse .cusbtn:hover {
   background: #0b7dda;
-}
+} 
 
 /* Clear floats */
 form.cuse::after {
@@ -177,8 +177,6 @@ form.cuse::after {
 
 }
 
-
-
 .chatside{
   position: relative;
   display: flex;
@@ -231,7 +229,7 @@ form.cuse::after {
   color: #F5F5F5; 
 }
 
-.user{
+/* .user{
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -239,7 +237,7 @@ form.cuse::after {
   margin-top: 5%;
   color: #F5F5F5;
 
-}
+} */
 
 .chats{
   position: relative;
@@ -305,4 +303,4 @@ form.cuse::after {
   float: left;
   color: #999;
 }
-
+ 
