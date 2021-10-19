@@ -23,8 +23,8 @@
 
                 <h5>Enter the OTP code sent to your email to change your account password.</h5>
             </div>
-
-            <form action="<?php echo BASEURL . "/forgetPassword/otpCheck"; ?>" method="post">
+<!-- \*onpaste="paste()"*\ -->
+            <form action="<?php echo BASEURL . "/forgetPassword/otpCheck"; ?>" method="POST">
                 <div class="otp_no">
                     <input id="input1" name="input1" class="otp" type="text" oninput='digitValidate(this)' onkeyup='tabChange(1)' maxlength=1>
                     <input id="input2" name="input2" class="otp" type="text" oninput='digitValidate(this)' onkeyup='tabChange(2)' maxlength=1>
@@ -51,7 +51,7 @@
 
             <div class="msg">
                 <p class="text">Entered Email incorrectly?
-                    <a href="<?php echo BASEURL . "/forgetPassword/enterEmail" ?>">Go Back</a>
+                    <a href="<?php echo BASEURL . "/forgetPassword" ?>">Go Back</a>
                 </p>
             </div>
 
