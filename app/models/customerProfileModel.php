@@ -16,4 +16,18 @@ class CustomerProfileModel extends database
          return $user;
      }
 
+
+     public function updateProfile($fname, $lname, $nic, $gender, $address, $id){
+        $query = "UPDATE customer  SET f_name='$fname', l_name='$lname', nic='$nic', gender= '$gender', address='$address' WHERE user_id='$id' LIMIT 1";
+        mysqli_query($GLOBALS['db'], $query);
+     }
+
+     
+     public function updateEmail($email, $id){
+        $query = "UPDATE user  SET email='$email' WHERE user_id='$id' LIMIT 1";
+        mysqli_query($GLOBALS['db'], $query);
+     }
+
+
+
 } 

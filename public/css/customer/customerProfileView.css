@@ -183,12 +183,11 @@ nav .sidebar-button i{
 .profile_details .personal_info{
     width: 100%;
     height: 450px;
-    padding: 20px;
+    /* padding: 20px; */
 }
 .profile_details .bank_info{
     width: 100%;
     height: 400px;
-    padding: 20px;
 }
 .row{
     height: calc(100% / 7);
@@ -308,6 +307,7 @@ font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
   margin-right: 0%;
   width: 100%;
+  color: #F5F5F5; 
 }
 
 .epersonal_info a{

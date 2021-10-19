@@ -33,7 +33,7 @@
                 <div class="chatlist">
 
                     <div class="profi">
-                        <img <?php srcIMG("galadari.circle.png") ?> alt="Chance Flowers">
+                        <img class="proimg" <?php srcIMG("galadari.circle.png") ?> alt="Chance Flowers">
                     </div>
 
                     <div class="remsg">
@@ -50,7 +50,7 @@
                    <tr>
                        <th>
                             <div class="sendlogo">
-                                <img <?php srcIMG("galadari.circle.png") ?> alt="Chance Flowers"><p>Galadari Hotel, Colombo</p>
+                                <img class="sendimg" <?php srcIMG("galadari.circle.png") ?> alt="Chance Flowers"><p>Galadari Hotel, Colombo</p>
                             </div>
                        </th>
 

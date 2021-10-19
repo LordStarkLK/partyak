@@ -55,21 +55,122 @@
     </div>
     <div class="container section3">
         <div class="column best-seller-text">
-            <h2 class="best-seller-h2">Best<br>Seller</h2>
+            <h2 class="best-seller-h2">Best<br>Sellers</h2>
         </div>
         <div class="column best-seller-icons">
-            <table class="best-seller-table">
-                <tr>
-                    <th>Company</th>
-                    <th>Contact</th>
-                    <th>Country</th>
-                </tr>
-                <tr>
-                    <th>Company</th>
-                    <th>Contact</th>
-                    <th>Country</th>
-                </tr>
-            </table>
+            <div class="vendor-span icon">
+                <img class="best-seller vendor-icons" <?php srcIMG("logo-icons/galadari.circle.png") ?>>
+                <img class="best-seller vendor-stars" <?php srcIMG("stars.png") ?>>
+                <p class="seller-name">
+                    GALADARI Hotel,<br>Colombo
+                </p>
+            </div>
+            <div class="vendor-span icon">
+                <img class="best-seller vendor-icons" <?php srcIMG("logo-icons/marians.circle.png") ?>>
+                <img class="best-seller vendor-stars" <?php srcIMG("stars.png") ?>>
+                <p class="seller-name">
+                    MARIANS Band,<br>Negombo
+                </p>
+            </div>
+            <div class="vendor-span icon">
+                <img class="best-seller vendor-icons" <?php srcIMG("logo-icons/mv.circle.png") ?>>
+                <img class="best-seller vendor-stars" <?php srcIMG("stars.png") ?>>
+                <p class="seller-name">
+                    MOUNT LAVINIA Hotel,<br>Mount Lavinia
+                </p>
+            </div>
+            <div class="vendor-span icon">
+                <img class="best-seller vendor-icons" <?php srcIMG("logo-icons/abba.circle.png") ?>>
+                <img class="best-seller vendor-stars" <?php srcIMG("stars.png") ?>>
+                <p class="seller-name">
+                    ABBA International,<br>Panadura
+                </p>
+            </div>
+            <br>
+            <div class="vendor-span icon">
+                <img class="best-seller vendor-icons" <?php srcIMG("logo-icons/cake.circle.png") ?>>
+                <img class="best-seller vendor-stars" <?php srcIMG("stars.png") ?>>
+                <p class="seller-name">
+                    WASANA Bakers,<br>Horana
+                </p>
+            </div>
+            <div class="vendor-span icon">
+                <img class="best-seller vendor-icons" <?php srcIMG("logo-icons/flower.circle.png") ?>>
+                <img class="best-seller vendor-stars" <?php srcIMG("stars.png") ?>>
+                <p class="seller-name">
+                    MAL Samayan,<br>Galle
+                </p>
+            </div>
+            <div class="vendor-span icon">
+                <img class="best-seller vendor-icons" <?php srcIMG("logo-icons/bar.circle.png") ?>>
+                <img class="best-seller vendor-stars" <?php srcIMG("stars.png") ?>>
+                <p class="seller-name">
+                    ONESHOT,<br>Mount Lavinia
+                </p>
+            </div>
+            <div class="vendor-span icon">
+                <img class="best-seller vendor-icons" <?php srcIMG("logo-icons/dance.circle.png") ?>>
+                <img class="best-seller vendor-stars" <?php srcIMG("stars.png") ?>>
+                <p class="seller-name">
+                    PUNSARA ROCKS,<br>Panadura
+                </p>
+            </div>
+        </div>
+    </div>
+    <img class="section-3-end" <?php srcIMG("section-3-end.png") ?>>
+    <div class="container section4">
+        <h1 class="section4-header">
+            Looking for a supplier?
+        </h1>
+        <div class="supplier-logo">
+            <div class="supplier">
+                <img class="supplier-icon" <?php srcIMG("supplier-icon/ring.png") ?>>
+                <p class="supplier-name">Jewellery</p>
+            </div>
+            <div class="supplier">
+                <img class="supplier-icon" <?php srcIMG("supplier-icon/balloon.png") ?>>
+                <p class="supplier-name">Baloon</p>
+            </div>
+            <div class="supplier">
+                <img class="supplier-icon" <?php srcIMG("supplier-icon/cake.png") ?>>
+                <p class="supplier-name">Bakeries</p>
+            </div>
+            <div class="supplier">
+                <img class="supplier-icon" <?php srcIMG("supplier-icon/flower.png") ?>>
+                <p class="supplier-name">Florist</p>
+            </div>
+            <div class="supplier">
+                <img class="supplier-icon" <?php srcIMG("supplier-icon/caterers.png") ?>>
+                <p class="supplier-name">Caterers</p>
+            </div>
+            <div class="supplier">
+                <img class="supplier-icon" <?php srcIMG("supplier-icon/invites.png") ?>>
+                <p class="supplier-name">Invites</p>
+            </div>
+            <div class="supplier">
+                <img class="supplier-icon" <?php srcIMG("supplier-icon/camera.png") ?>>
+                <p class="supplier-name">Photography</p>
+            </div>
+            <div class="supplier">
+                <img class="supplier-icon" <?php srcIMG("supplier-icon/drinks.png") ?>>
+                <p class="supplier-name">Liquor Store</p>
+            </div>
+            <div class="supplier">
+                <img class="supplier-icon" <?php srcIMG("supplier-icon/tailor.png") ?>>
+                <p class="supplier-name">Tailor</p>
+            </div>
+            <div class="supplier">
+                <img class="supplier-icon" <?php srcIMG("supplier-icon/dancer.png") ?>>
+                <p class="supplier-name">Dancer</p>
+            </div>
+            <div class="supplier">
+                <img class="supplier-icon" <?php srcIMG("supplier-icon/lights.png") ?>>
+                <p class="supplier-name">Lights</p>
+            </div>
+            <div class="supplier">
+                <img class="supplier-icon" <?php srcIMG("supplier-icon/guitar.png") ?>>
+                <p class="supplier-name">Bands</p>
+            </div>
         </div>
     </div>
 
