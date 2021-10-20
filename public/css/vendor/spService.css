@@ -186,7 +186,7 @@ nav .sidebar-button i{
 }
 .new-service ,.new-package {
   height: 50px;
-  width: 10px;
+  width: 50px;
   margin-left: 20px;
   border-radius: 50%;
   border-width: 3px;
@@ -200,6 +200,7 @@ nav .sidebar-button i{
 .new-service:hover , .new-package:hover{
   color: white;
   background-color: #000000;
+  cursor: pointer;
 }
 .delete-service , .edit-package , .delete-package{
   justify-content: center;
