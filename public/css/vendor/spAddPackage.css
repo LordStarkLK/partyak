@@ -1,0 +1,101 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.addPackage_container {
+  display: flex;
+  display: none;
+  position: fixed;
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal-content {
+  padding: 20px 20px 50px 20px;
+  margin: auto;
+  background-color: #000000;
+  border: 3px solid rgb(173, 173, 173);
+  width: 1000px;
+}
+.package-details{
+  width: 90%;
+  padding: 25px;
+  color: white;
+}
+.package-details h2{
+  text-align: center;
+  font-size: 30px;
+}
+.p_row{
+  display: flex;
+  padding: 15px;
+  width: 100%;
+}
+.p_colName{
+  float: left;
+  width: 30%;
+}
+.p_colName label{
+  font-size: 22px;
+}
+.p_colData{
+  float: right;
+  width: 70%;
+}
+.package-details a{
+  margin-left: 20px;
+  font-size: 18px;
+}
+.package-details input , textarea{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  color: rgb(236, 236, 236);
+  background-color: rgba(255, 251, 251, 0.336);
+  border: 2px solid;
+  height: 30px;
+  outline: none;
+  width: 100%;
+  padding: 0 5px 5px 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.package-details textarea{
+  height: 150px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.package-submit-btn{
+  float: right;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.package-submit-btn button{
+  width: 250px;
+  height: 40px;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.package-submit-btn button:hover{
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(255, 1, 1);
+  text-decoration: none;
+  cursor: pointer;
+}
