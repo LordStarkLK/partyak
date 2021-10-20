@@ -1,11 +1,13 @@
 body {
-    background: #202020;
-    background-image: url("../../public/img/confetti.png");
-    background-position: center;
-    background-repeat: repeat;
-    background-size: cover;
-  }
-  
+  margin: 0;
+  background-color: #202020;
+  background-image: url("../../public/img/home-confetti.png");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  background-size: 100%;
+}
+
   h1 {
     color: white;
     text-align: center;
@@ -69,7 +71,8 @@ body {
   .buttonVendor {
     background-color: #ff9393;
   }
-  img {
+
+  .veni, .cuni {
     width: 90%;
     position: relative;
     top: 50%;

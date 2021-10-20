@@ -5,11 +5,17 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
 body{
     background-color:#202020; 
     background-image: url("../../../public/img/confetti.png");
     background-repeat: cover;
 }
+
+.container{
+  z-index: 0;
+}
+
 
 .container p{
   margin-top:2%;

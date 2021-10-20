@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-
+    <?php linkCSS("admin/sidebar"); ?>
     <?php linkCSS("admin/adminTandC"); ?>
     <?php linkCSS("css/all"); ?>
 
@@ -56,7 +56,7 @@
 
                     </div>
                     <div>
-                        <p id="content">ikman is a service provided by Saltside Technologies AB
+                        <p id="content">Partyak is a service provided by Saltside Technologies AB
                             (subject to your compliance with the Terms and Conditions set forth below).
                             Please read these Terms and Conditions before using this platform.</p>
                     </div>
@@ -176,7 +176,7 @@
 
 
 
-                <button class="addnew" id="myBtn" style="vertical-align:middle" onclick="addnew()"><span>Add new Setion
+                <button class="addnew" id="myBtn" style="vertical-align:middle" onclick="addnew()"><span>Add new Section
                     </span></button>
 
                     <div id="myModal" class="modal">

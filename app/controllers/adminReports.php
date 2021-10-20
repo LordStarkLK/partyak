@@ -3,6 +3,7 @@
 class AdminReports extends FrameworkPartyak{
     public function __construct(){
         $this->helper("linker");
+        $this->preventBack("admin");
     }
 
     public function index(){

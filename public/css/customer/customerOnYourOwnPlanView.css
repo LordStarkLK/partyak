@@ -5,14 +5,21 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-body{
-    background-color:#202020; 
-    background-image:url("../../../public/img/confetti.png"); 
-    background-repeat: round;
+
+body {
+  margin: 0;
+  background-color: #202020;
+  background-image: url("../../../public/img/home-confetti.png");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  background-size: 100%;
 }
+
 .container{
     padding: 3%; 
     display: flex;
+    z-index: 0;
 }
 
 .container{
@@ -91,11 +98,14 @@ body{
   border: 1px solid #18ab29;
   display: inline-block; 
   cursor: pointer;
+  background-color: #18ab29 ;
+}
+
+.buttonS a{
   color: #ffffff;
   font-size: 19px;
   line-height: 23px;
-  background-color: #18ab29 ;
-
+  text-decoration: none;
 }
 
 .sideDe{
