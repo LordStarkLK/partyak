@@ -52,7 +52,7 @@
                   <td>$row[noOfGuest]</td>
                   <td>$row[plan_type]</td>
                   <td>Upcoming</td>
-                  <td><button class=\"go-event\">Go</button></td>
+                  <td><button class=\"go-event\"><a href =\"<?php echo BASEURL . '/customerThroughEpPlan'; ?>\">Go</a></button></td>
         
                   
                   <td>  
