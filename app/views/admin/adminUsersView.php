@@ -105,7 +105,7 @@
     
     <td>  
     <div class=\"btn-group\">
-        <button>View Profile</button>
+        <button onclick=\"window.location=' " . BASEURL . "/adminUserProfile'\">View Profile</button>
 
         <button onclick=\"window.location=' " . BASEURL . "/adminUsers/deleteUser/$row[user_id]'\">Delete User</button>
         
