@@ -16,6 +16,11 @@ class CustomerProfile extends FrameworkPartyak{
 
         $id=$_SESSION['userId'];
 
+        $errors = array();
+        $errors["f_name"] = "";
+        $errors["l_name"] = "";
+        $errors["email"] = "";
+
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -27,10 +32,27 @@ class CustomerProfile extends FrameworkPartyak{
             $gender = $_POST["gender"];
             $address = $_POST["address"];
 
-        
-            $this->user->updateProfile($fname, $lname, $nic, $gender, $address, $id);
+            //Empty check
+            if (empty($fname)) $errors["f_name"] = "First name is required";
+            if (empty($lname)) $errors["l_name"] = "Last name is required";
+            if (empty($email)) $errors["email"] = "Email is required";
+
+            /* Count number of validation failures */
+            $numberOfErrors = 0;
+            foreach ($errors as $key => $value) {
+
+                if ($value != "") {
+                    $numberOfErrors++;
+                }
+            }
+
+            if ($numberOfErrors == 0) {
+                //Insert data
+                $this->user->updateProfile($fname, $lname, $nic, $gender, $address, $id);
            
-            $this->user->updateEmail( $email, $id);
+                $this->user->updateEmail( $email, $id);
+            }
+
 
         }
 
