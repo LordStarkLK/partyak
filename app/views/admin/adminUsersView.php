@@ -106,7 +106,8 @@
     <td>  
     <div class=\"btn-group\">
         <button>View Profile</button>
-        <button>Delete User</button>
+
+        <button onclick=\"window.location=' " . BASEURL . "/adminUsers/deleteUser/$row[user_id]'\">Delete User</button>
         
       </div>
 
@@ -117,6 +118,7 @@
     $i++;
 }?>
 
+<!-- deleteUser/$row[user_id] -->
 <!-- && $row2=mysqli_fetch_assoc($data['customer_email']) -->
  <!-- <td>$row2[email']</td> -->
 

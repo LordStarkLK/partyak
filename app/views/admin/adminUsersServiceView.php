@@ -114,10 +114,12 @@
   <td>$row2[email]</td>
   <td>Not Defined</td>
   <td>
-    <div class=\"btn-group\">
-      <button>View Profile</button>
-      <button>Delete User</button>
-      </div>
+  <div class=\"btn-group\">
+  <button>View Profile</button>
+
+  <button onclick=\"window.location=' " . BASEURL . "/adminUsersService/deleteUser/$row[user_id]'\">Delete User</button>
+  
+</div>
 
   </td>
   </tr>
