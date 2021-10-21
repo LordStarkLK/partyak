@@ -9,6 +9,8 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <?php $name=$data['profile'];?>
+     <?php $email=$data['cus_email'];?>
    </head>
 <body>
 <header>
@@ -37,7 +39,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="<?php echo BASEURL . '/customerChat'; ?>">
             <i class="fas fa-comments" ></i>
             <span class="links_name">Chat</span>
           </a>
@@ -67,7 +69,7 @@
       </div>
     </nav>
 
-    <div class="home-content">
+    <div class="home-content" id="original">
         <div class="profile_pic">
             <div class="image">
             <img <?php srcIMG("avatar.png") ?> alt="Avatar">
@@ -75,56 +77,149 @@
             </div>
         </div>
         <div class="profile_details">
+        <div class="edit" id="editt"><a href="#">Edit</a></div>
             <div class="personal_info">
                 <a>Personal Information</a><br><br>
-                <div class="edit"><a href="#">Edit</a></div>
                 <div class="row">
                     <div class="col_name">
-                        <label for="fname">First Name</label>
+                        <label for="fname">Name</label>
                     </div>
                     <div class="col_data">
-                        <p>Lara</p>
+                        <p><?php echo "$name[f_name]"; ?> </p>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col_name">
                         <label for="lname">Last Name</label>
                     </div>
                     <div class="col_data">
-                        <p>Fernando</p>
+                        <p><?php echo "$name[l_name]"; ?></p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col_name">
-                        <label for="gender">Gender</label>
-                    </div>
-                    <div class="col_data">
-                        <p>Female</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col_name">
-                        <label for="nic">NIC number</label>
-                    </div>
-                    <div class="col_data">
-                        <p>985496210V</p>
-                    </div>
-                </div>
+
                 <div class="row">
                     <div class="col_name">
                         <label for="email">Email</label>
                     </div>
                     <div class="col_data">
-                        <p>lara@gmail.com</p>
+                        <p><?php echo "$email[email]"; ?></p>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col_name">
+                        <label for="nic">NIC number</label>
+                    </div>
+                    <div class="col_data">
+                        <p><?php echo "$name[nic]"; ?></p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col_name">
+                        <label for="gender">Gender</label>
+                    </div>
+                    <div class="col_data">
+                        <p><?php echo "$name[gender]"; ?></p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col_name">
+                        <label for="gender">Address</label>
+                    </div>
+                    <div class="col_data">
+                        <p><?php echo "$name[address]"; ?></p>
+                    </div>
+                </div>  
+               
             </div>
         </div>
+    
+    </div>
+
+
+    <div class="ehome-content" id="edit">
+        <div class="eprofile_pic">
+            <div class="eimage">
+            <img <?php srcIMG("avatar.png") ?> alt="Avatar">
+            <!-- <img src="/public/img/avatar.png" alt="Avatar"> -->
+            </div>
+        </div>
+
+        <div class="eprofile_details">
+            <form action="<?php echo BASEURL . '/customerProfile/index'; ?>" class="epersonal_info" method="POST">
+                <a>Edit Personal Information</a><br><br>
+                 
+                <div class="erow">
+                    <div class="ecol_name">
+                        <label for="fname">First Name</label>
+                    </div>
+                    <div class="ecol_data">
+                        <input id="fname" name="f_name" value="<?php echo "$name[f_name]"; ?>" >
+                    </div>
+                </div>
+
+                <div class="erow">
+                    <div class="ecol_name">
+                        <label for="lname">Last Name</label>
+                    </div>
+                    <div class="ecol_data">
+                        <input id="lname" name="l_name" value="<?php echo "$name[l_name]"; ?>" > 
+                    </div>
+                </div>
+
+                <div class="erow">
+                    <div class="ecol_name">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="ecol_data">
+                        <input id="email" name="email" value="<?php echo "$email[email]"; ?>" > 
+                    </div>
+                </div>
+
+                <div class="erow">
+                    <div class="ecol_name">
+                        <label for="nic">NIC number</label>
+                    </div>
+                    <div class="ecol_data">
+                        <input id="nic" name="nic" value="<?php echo "$name[nic]"; ?>" > 
+                    </div>
+                </div>
+
+                <div class="erow">
+                    <div class="ecol_name">
+                        <label for="egender">Gender</label>
+                    </div>
+                    <div class="ecol_data">
+                        <input id="gender" name="gender" value="<?php echo "$name[gender]"; ?>" > 
+                    </div>
+                </div>
+
+                <div class="erow">
+                    <div class="ecol_name">
+                        <label for="eaddress">Address</label>
+                    </div>
+                    <div class="ecol_data">
+                        <input id="address" name="address" value="<?php echo "$name[address]"; ?>" > 
+                       
+                    </div>
+                </div> 
+                
+                <div class="save">
+                    <button type="submit" class="saveb" value="Submit">Save</button>
+                </div> 
+               
+            </form>
+        </div>
+        
     
     </div>
 </section>
 </div>
 <?php linkJS("vendor/spProfile"); ?>
+<?php linkJS("customer/customerProfile"); ?> 
 <?php linkPhp("footer") ?>
 </body>
 </html>

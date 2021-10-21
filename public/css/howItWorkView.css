@@ -6,14 +6,25 @@
   font-family: 'Poppins', sans-serif;
 }
 body{
-    background-color:#202020; 
-    background-image:url("../../public/img/confetti.png"); 
-    background-repeat: round;
+    margin: 0;
+    background-color: #202020;
+    background-image: url("../../public/img/home-confetti.png");
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    background-size: 100%;
 }
 .container{
     z-index: 0;
     padding: 3%; 
     display: flex;
+}
+
+.container{
+  background-image: url("../../public/img/searchVenR.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .content{

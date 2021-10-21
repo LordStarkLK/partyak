@@ -106,7 +106,7 @@
         </div>
         <div class="submission_area">
           <div class="title"><a>Upload Your File</a></div>
-          <<div class="sub_title"><a>(File should be JPG or PNG)</a></div>
+          <div class="sub_title"><a>(File should be JPG or PNG)</a></div>
           <div class="submit_file">
             <i class="fa fa-upload fa-4x" aria-hidden="true"></i>
             <br><a>Drag & Drop</a>

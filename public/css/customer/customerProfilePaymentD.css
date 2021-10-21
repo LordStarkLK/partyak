@@ -7,9 +7,13 @@
 }
 
 body{
-    background-color:#202020; 
-    background-image:url(image/confetti.png);  
-    background-repeat: round;
+    margin: 0;
+    background-color: #202020;
+    background-image: url("../../../public/img/home-confetti.png");
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    background-size: 100%;
 }
 
 
@@ -27,6 +31,13 @@ body{
    border-radius: 30px;
    z-index: 0;
 }
+
+/* .container{
+    background-image: url("../../../public/img/searchVenR.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  } */
 
 .custopic{
     position:relative;

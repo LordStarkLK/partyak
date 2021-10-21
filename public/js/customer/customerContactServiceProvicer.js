@@ -39,6 +39,7 @@
     sound.style.display="none";
     dress.style.display="none";
     conent.style.display="none";
+
   }
 
   vBtn.onclick = function(){

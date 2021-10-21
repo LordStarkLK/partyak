@@ -630,7 +630,7 @@
         </div>
 
         <div class="save">
-          <button type="Submit" class="saveb"  value="Submit">Submit</button>
+          <button type="Submit" class="savebb"  value="Submit"><a href ="<?php echo BASEURL . '/customerContactEventPlanner'; ?>">Select Event Planner</a></button>
         </div>
 
 
