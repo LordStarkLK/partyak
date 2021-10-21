@@ -1,6 +1,6 @@
 <?php
 
-class AdminUsers extends FrameworkPartyak{
+class AdminUserProfile extends FrameworkPartyak{
     
     public function __construct(){
         $this->helper("linker");
@@ -14,7 +14,7 @@ class AdminUsers extends FrameworkPartyak{
         $data['customer_email'] = $this->user->getCustomerEmail();
         // echo "$data[customers]";
         // $this->preventBack("admin");
-        $this->view("admin/adminUsersView",$data);
+        $this->view("admin/UserProfileView",$data);
     }
 
     public function deleteUser($user_id){

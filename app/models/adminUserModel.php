@@ -17,5 +17,12 @@ class AdminUserModel extends database
         }
     }
 
+    public function deleteUser($user_id){
+        $query = "DELETE FROM user WHERE user_id = '$user_id'";
+
+        $result = mysqli_query($GLOBALS["db"], $query);
+        return $result;
+    }
+
 
 }
