@@ -5,7 +5,6 @@
   padding: 0;
 }
 
-
 .nav-bar {
   z-index: 2;
   background-color: #202020;
@@ -62,6 +61,7 @@ button {
   background-color: rgba(0, 0, 0, 0);
   padding: 0;
   padding-right: 10px;
+  margin-left: 15px;
 }
 .signup-button:hover {
   background-color: #026faa;
@@ -69,6 +69,7 @@ button {
 .signup-button {
   background-color: #39a2db;
   transition: all 0.5s ease 0s;
+  margin-right: 5px;
 }
 
 @media screen and (max-width: 1200px) {
