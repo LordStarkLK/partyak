@@ -39,11 +39,16 @@ ul li,
 a,
 button {
   color: #e8f0f2;
-  font-size: 25px;
   font-family: "Actor", sans-serif;
 }
 a:link {
   text-decoration: none;
+}
+.nav-items a {
+  font-size: 18px !important;
+}
+.nav-btn .btn-sign {
+  font-size: 21px;
 }
 button {
   background-color: darkcyan;
@@ -51,7 +56,7 @@ button {
   border: none;
   cursor: pointer;
   font-family: Arial;
-  font-size: 25px;
+  /* font-size: 18px; */
   line-height: 23px;
   color: #e8f0f2;
   padding: 6px 35px;

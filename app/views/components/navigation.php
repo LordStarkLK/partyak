@@ -10,8 +10,8 @@
         </ul>
     </div>
     <div class="nav-btn">
-        <button class="signup-button" type="button"><a href="<?php echo BASEURL . '/home/signup'; ?>">Sign up</a></button>
-        <button class="login-button" type="button"><a href="<?php echo BASEURL . '/login'; ?>">Login</a></button>
+        <button class="signup-button btn-sign" type="button"><a href="<?php echo BASEURL . '/home/signup'; ?>">Sign up</a></button>
+        <button class="login-button btn-sign" type="button"><a href="<?php echo BASEURL . '/login'; ?>">Login</a></button>
     </div>
     <!-- <button class="login-button"type="button">Log in</button> -->
 </div>
