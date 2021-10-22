@@ -45,7 +45,7 @@ a:link {
   text-decoration: none;
 }
 .nav-items a {
-  font-size: 18px !important;
+  font-size: 21px !important;
 }
 .nav-btn .btn-sign {
   font-size: 21px;
@@ -76,7 +76,34 @@ button {
   transition: all 0.5s ease 0s;
   margin-right: 5px;
 }
-
+/*vendor navigation css*/
+.nav-buttons-vendor button {
+  background-color: darkcyan;
+  border-radius: 28px;
+  border: none;
+  cursor: pointer;
+  font-family: Arial;
+  font-size: 25px;
+  line-height: 23px;
+  color: #e8f0f2;
+  padding: 6px 35px;
+  text-decoration: none;
+  font-size: 21px;
+}
+.nav-bar-links-vendor {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+}
+.nav-item-vendor a {
+  color: #e8f0f2;
+  font-size: 27px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
 @media screen and (max-width: 1200px) {
   button {
     font-size: 20px;
