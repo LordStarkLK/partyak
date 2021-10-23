@@ -61,7 +61,7 @@
         <li>
           <a href="#">
             <i class="fas fa-building" ></i>
-            <span class="links_name" id="salon">Saloon</span>
+            <span class="links_name" id="salon">Salon</span>
           </a>
         </li>
         <li>
@@ -116,15 +116,15 @@
       <div class="cusraw1">
         <table>
           <tr>
-            <td> <a  href="#"> <img <?php srcIMG("chanceFlowers.png") ?> alt="Chance Flowers"><br><p>2nd Chance Flowers <br> Colombo, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("degrees.png") ?> alt="Chance Flowers"> <br><p>8 Degrees Hotel <br> Colombo, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("bakeriya.jpg") ?> alt="Chance Flowers"> <br><p>APE BAKERIYA <br>Galle, Sri Lanka</p></td>  
+            <td> <a  href="#"> <img <?php srcIMG("chanceFlowers.png") ?> alt="Chance Flowers"></a><br><p>2nd Chance Flowers <br> Colombo, Sri Lanka</p></td>
+            <td> <a  href="<?php echo BASEURL . '/venuesANDhalls'; ?>"><img <?php srcIMG("hotel/hotel1.jpg") ?> alt="Chance Flowers"></a><br><p>Mount Lavinia Hotel <br> Colombo, Sri Lanka</p></td>
+            <td> <a  href="#"> <img <?php srcIMG("bakeriya.jpg") ?> alt="Chance Flowers"></a> <br><p>APE BAKERIYA <br>Galle, Sri Lanka</p></td>  
           </tr>
 
           <tr>
-            <td> <a  href="#"> <img <?php srcIMG("ashane.jpg") ?> alt="Chance Flowers"><br><p>Ashane Gunarathne <br>Malabe, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("dark.jpg") ?> alt="Chance Flowers"> <br><p>Dark Shine <br> Mathara, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("dukes.png") ?> alt="Chance Flowers"> <br><p>Dukes Court 1 <br>Katunayaka,Sri Lanka</p></td>  
+            <td> <a  href="#"> <img <?php srcIMG("ashane.jpg") ?> alt="Chance Flowers"></a> <br><p>Ashane Gunarathne <br>Malabe, Sri Lanka</p></td>
+            <td> <a  href="#"> <img <?php srcIMG("dark.jpg") ?> alt="Chance Flowers"> </a> <br><p>Dark Shine <br> Mathara, Sri Lanka</p></td>
+            <td> <a  href="#"> <img <?php srcIMG("dukes.png") ?> alt="Chance Flowers"> </a> <br><p>Dukes Court 1 <br>Katunayaka,Sri Lanka</p></td>  
           </tr>
           
         </table>
@@ -184,15 +184,15 @@
       <div class="ecusraw1">
         <table>
           <tr>
-            <td> <a  href="#"> <img <?php srcIMG("brought.jpg") ?> alt="Chance Flowers"><br><p>Broghts Event Production <br> Colombo, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("shero.jpg") ?> alt="Chance Flowers"> <br><p>Event By Shero <br>Colombo, Sri Lanaka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("eventers.jpg") ?> alt="Chance Flowers"> <br><p>Wedding Planner <br>Katunayaka,Sri Lanka</p></td>  
+            <td> <a  href="#"> <img <?php srcIMG("brought.jpg") ?> alt="Chance Flowers"></a> <br><p>Broghts Event Production <br> Colombo, Sri Lanka</p></td>
+            <td> <a  href="#"> <img <?php srcIMG("shero.jpg") ?> alt="Chance Flowers"> </a> <br><p>Event By Shero <br>Colombo, Sri Lanaka</p></td>
+            <td> <a  href="#"> <img <?php srcIMG("eventers.jpg") ?> alt="Chance Flowers"></a>  <br><p>Wedding Planner <br>Katunayaka,Sri Lanka</p></td>  
           </tr>
 
           <tr>
-            <td> <a  href="#"> <img <?php srcIMG("eventShy.png") ?> alt="Chance Flowers"><br><p>IEM<br>Kandy,Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("IEM.png") ?> alt="Chance Flowers"> <br><p>EventShy<br>Colombo, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("dream.png") ?> alt="Chance Flowers"> <br><p>Dream Planners<br>Kaluthara, Sri Lanka</p></td>  
+            <td> <a  href="#"> <img <?php srcIMG("eventShy.png") ?> alt="Chance Flowers"></a> <br><p>IEM<br>Kandy,Sri Lanka</p></td>
+            <td> <a  href="#"> <img <?php srcIMG("IEM.png") ?> alt="Chance Flowers"></a>  <br><p>EventShy<br>Colombo, Sri Lanka</p></td>
+            <td> <a  href="#"> <img <?php srcIMG("dream.png") ?> alt="Chance Flowers"></a>  <br><p>Dream Planners<br>Kaluthara, Sri Lanka</p></td>  
           </tr>
 
         </table>
@@ -247,36 +247,39 @@
       <div class="seat">
             <select name="Seating" placeholder="Seating Arrangement">
                 <option value="null">Seating Arrangement</option>
-                <option value="round">Round</option>
-                <option value="box">Box</option>
+                <option value="banquet">Banquet</option>
+                <option value="board">Board</option>
+                <option value="classroom">Classroom</option>
+                <option value="informal">Informal</option>
+                <option value="ushape">U shape</option>
               </select>
               <!-- <div class="error"><?php echo $errors["seatingA"] ?></div> --> 
       </div>
 
-        <p1>Venue Type</p1>
+      <p1>Venue Type</p1>
 
-        <div class="input-box1" >
-         
-          <div class="indoort">
-            <input placeholder="Indoor Venue" name="indoor">
-          </div>
-          
-          <div class="indoortick">
-            <input type="checkbox" placeholder="Agree" name="agree">
-            <!-- <div class="error"><?php echo $errors["indoor"] ?></div> -->
-          </div>
-
-          <div class="outdoort">
-            <input placeholder="Outdoor Venue" name="outdoor">
-          </div>
-          
-          <div class="outdoortick">
-            <input type="checkbox" placeholder="Agree" name="agree">
-            <!-- <div class="error"><?php echo $errors["outdoor"] ?></div> -->
-          </div>
-          
-  
+      <div class="input-box1" >
+      
+        <div class="indoort">
+          <input placeholder="Indoor Venue" name="indoor">
         </div>
+        
+        <div class="indoortick">
+          <input type="checkbox" placeholder="Agree" name="agree">
+          <!-- <div class="error"><?php echo $errors["indoor"] ?></div> -->
+        </div>
+
+        <div class="outdoort">
+          <input placeholder="Outdoor Venue" name="outdoor">
+        </div>
+        
+        <div class="outdoortick">
+          <input type="checkbox" placeholder="Agree" name="agree">
+          <!-- <div class="error"><?php echo $errors["outdoor"] ?></div> -->
+        </div>
+        
+
+      </div>
 
         <p2>Addtional Features</p2>
 
@@ -326,9 +329,9 @@
       <div class="vcusraw1">
         <table>
           <tr>
-            <td> <a  href="#"> <img <?php srcIMG("degrees.png") ?> alt="Chance Flowers"> <br><p>8 Degrees Hotel <br> Galle, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("modernbanquet.jpg") ?> alt="Chance Flowers"><br><p>Modern Banquet Hotel <br> Colombo, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("dukes.png") ?> alt="Chance Flowers"> <br><p>Dukes Court 1 <br>Katunayaka,Sri Lanka</p></td>  
+            <td> <a  href="<?php echo BASEURL . '/venuesANDhalls'; ?>"><img <?php srcIMG("hotel/hotel1.jpg") ?> alt="Chance Flowers"></a><br><p>Mount Lavinia Hotel <br> Colombo, Sri Lanka</p></td>
+            <td> <a  href="#"> <img <?php srcIMG("modernbanquet.jpg") ?> alt="Chance Flowers"></a><br><p>Modern Banquet Hotel <br> Colombo, Sri Lanka</p></td>
+            <td> <a  href="#"> <img <?php srcIMG("dukes.png") ?> alt="Chance Flowers"> </a><br><p>Dukes Court 1 <br>Katunayaka,Sri Lanka</p></td>  
           </tr>
         </table>
       </div>
@@ -390,9 +393,9 @@
       <div class="ccusraw1">
         <table>
           <tr>
-            <td> <a  href="#"> <img <?php srcIMG("cate.png") ?> alt="Chance Flowers"><br><p>Dushan Catering <br> Colombo, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("jayamalpng.png") ?> alt="Chance Flowers"> <br><p>Jayamal Caterers <br> Galle, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("papscate.jpg") ?> alt="Chance Flowers"> <br><p>Paps Catering <br>Kandy,Sri Lanka</p></td>  
+            <td> <a  href="#"> <img <?php srcIMG("cate.png") ?> alt="Chance Flowers"></a><br><p>Dushan Catering <br> Colombo, Sri Lanka</p></td>
+            <td> <a  href="#"> <img <?php srcIMG("jayamalpng.png") ?> alt="Chance Flowers"></a><br><p>Jayamal Caterers <br> Galle, Sri Lanka</p></td>
+            <td> <a  href="#"> <img <?php srcIMG("papscate.jpg") ?> alt="Chance Flowers"></a><br><p>Paps Catering <br>Kandy,Sri Lanka</p></td>  
           </tr>
         </table>
       </div>
@@ -454,9 +457,9 @@
       <div class="pcusraw1">
         <table>
           <tr>
-            <td> <a  href="#"> <img <?php srcIMG("pob.jpg") ?> alt="Chance Flowers"><br><p>OB Sudio <br> Galle, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("pOminro.jpg") ?> alt="Chance Flowers"> <br><p>Ominro <br> Gampaha, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("pDarkeye.jpg") ?> alt="Chance Flowers"> <br><p>DARKEYE <br>Kaluthara,Sri Lanka</p></td>  
+            <td> <a  href="#"> <img <?php srcIMG("pob.jpg") ?> alt="Chance Flowers"></a><br><p>OB Sudio <br> Galle, Sri Lanka</p></td>
+            <td> <a  href="#"> <img <?php srcIMG("pOminro.jpg") ?> alt="Chance Flowers"></a><br><p>Ominro <br> Gampaha, Sri Lanka</p></td>
+            <td> <a  href="#"> <img <?php srcIMG("pDarkeye.jpg") ?> alt="Chance Flowers"> </a><br><p>DARKEYE <br>Kaluthara,Sri Lanka</p></td>  
           </tr>
         </table>
       </div>
@@ -552,9 +555,9 @@
       <div class="mcusraw1">
         <table>
           <tr>
-            <td> <a  href="#"> <img <?php srcIMG("ashane.jpg") ?> alt="Chance Flowers"><br><p>Ashane Gunarathne <br>Colombo, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("Wavemusic.jpg") ?> alt="Chance Flowers"> <br><p>Waves<br> Mathara, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("DjAzthu.jpg") ?> alt="Chance Flowers"> <br><p>DJ Azthu <br>Kegalle,Sri Lanka</p></td>  
+            <td> <a  href="#"> <img <?php srcIMG("ashane.jpg") ?> alt="Chance Flowers"></a><br><p>Ashane Gunarathne <br>Colombo, Sri Lanka</p></td>
+            <td> <a  href="#"> <img <?php srcIMG("Wavemusic.jpg") ?> alt="Chance Flowers"> </a><br><p>Waves<br> Mathara, Sri Lanka</p></td>
+            <td> <a  href="#"> <img <?php srcIMG("DjAzthu.jpg") ?> alt="Chance Flowers"></a><br><p>DJ Azthu <br>Kegalle,Sri Lanka</p></td>  
           </tr>
         </table>
       </div>
@@ -664,9 +667,9 @@
       <div class="dcusraw1">
         <table>
           <tr>
-            <td> <a  href="#"> <img <?php srcIMG("sasha.jpg") ?> alt="Chance Flowers"><br><p>Sasha Group <br> Kandy, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("dark.jpg") ?> alt="Chance Flowers"> <br><p>Dark Shine <br> Mathara, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("Tharanga.jpg") ?> alt="Chance Flowers"> <br><p>Tharanga Dancers<br>Colombo,Sri Lanka</p></td>  
+            <td> <a  href="#"> <img <?php srcIMG("sasha.jpg") ?> alt="Chance Flowers"></a><br><p>Sasha Group <br> Kandy, Sri Lanka</p></td>
+            <td> <a  href="#"> <img <?php srcIMG("dark.jpg") ?> alt="Chance Flowers"></a> <br><p>Dark Shine <br> Mathara, Sri Lanka</p></td>
+            <td> <a  href="#"> <img <?php srcIMG("Tharanga.jpg") ?> alt="Chance Flowers"></a> <br><p>Tharanga Dancers<br>Colombo,Sri Lanka</p></td>  
           </tr>
         </table>
       </div>
@@ -721,9 +724,9 @@
         <div class="input-box53">
           <select name="gender" placeholder="Gender">
           <option value="null">Salon Type</option>
-          <option value="male">Male Salon</option>
-          <option value="female">Female Salon</option>
-          <option value="female">Both type Salon</option>
+          <option value="male">Salon for males</option>
+          <option value="female">Salon for females</option>
+          <option value="female">Salon for both types</option>
           </select>
           <!-- <div class="error"><?php echo $errors["gender"] ?></div> -->
         </div>
@@ -749,9 +752,9 @@
       <div class="scusraw1">
         <table>
           <tr>
-            <td> <a  href="#"> <img <?php srcIMG("sicssors.png") ?> alt="Chance Flowers"><br><p>Scissor Salon <br> Colombo, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("sjaal.png") ?> alt="Chance Flowers"> <br><p>Jaal Salon <br> Anuradhapura, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("Smosh.jpg") ?> alt="Chance Flowers"> <br><p>Smosh <br>Galle,Sri Lanka</p></td>  
+            <td> <a  href="#"> <img <?php srcIMG("sicssors.png") ?> alt="Chance Flowers"></a><br><p>Scissor Salon <br> Colombo, Sri Lanka</p></td>
+            <td> <a  href="#"> <img <?php srcIMG("sjaal.png") ?> alt="Chance Flowers"></a><br><p>Jaal Salon <br> Anuradhapura, Sri Lanka</p></td>
+            <td> <a  href="#"> <img <?php srcIMG("Smosh.jpg") ?> alt="Chance Flowers"> </a><br><p>Smosh <br>Galle,Sri Lanka</p></td>  
           </tr>
         </table>
       </div>
@@ -850,9 +853,9 @@
       <div class="cacusraw1">
         <table>
           <tr>
-            <td> <a  href="#"> <img <?php srcIMG("bakeriya.jpg") ?> alt="Chance Flowers"><br><p>APE BAKERIYA <br>Galle, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("cakelicious.jpg") ?> alt="Chance Flowers"> <br><p>Calelicious <br> Jaffna, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("rash.jpg") ?> alt="Chance Flowers"> <br><p>Rush bakers <br>Colombo,Sri Lanka</p></td>  
+            <td> <a  href="#"> <img <?php srcIMG("bakeriya.jpg") ?> alt="Chance Flowers"></a><br><p>APE BAKERIYA <br>Galle, Sri Lanka</p></td>
+            <td> <a  href="#"> <img <?php srcIMG("cakelicious.jpg") ?> alt="Chance Flowers"></a> <br><p>Calelicious <br> Jaffna, Sri Lanka</p></td>
+            <td> <a  href="#"> <img <?php srcIMG("rash.jpg") ?> alt="Chance Flowers"></a><br><p>Rush bakers <br>Colombo,Sri Lanka</p></td>  
           </tr>
         </table>
       </div>
@@ -938,9 +941,9 @@
       <div class="decusraw1">
         <table>
           <tr>
-            <td> <a  href="#"> <img <?php srcIMG("chanceFlowers.png") ?> alt="Chance Flowers"><br><p>2nd Chance Flowers <br> Colombo, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("setiback.png") ?> alt="Chance Flowers"> <br><p>Evntro<br> Nuwara Eliya, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("designer.jpg") ?> alt="Chance Flowers"> <br><p>Event Decos <br>Hambanthota,Sri Lanka</p></td>  
+            <td> <a  href="#"> <img <?php srcIMG("chanceFlowers.png") ?> alt="Chance Flowers"></a><br><p>2nd Chance Flowers <br> Colombo, Sri Lanka</p></td>
+            <td> <a  href="#"> <img <?php srcIMG("setiback.png") ?> alt="Chance Flowers"></a> <br><p>Evntro<br> Nuwara Eliya, Sri Lanka</p></td>
+            <td> <a  href="#"> <img <?php srcIMG("designer.jpg") ?> alt="Chance Flowers"> </a><br><p>Event Decos <br>Hambanthota,Sri Lanka</p></td>  
           </tr>
         </table>
       </div>
@@ -1051,9 +1054,9 @@
       <div class="lcusraw1">
         <table>
           <tr>
-            <td> <a  href="#"> <img <?php srcIMG("light.png") ?> alt="Chance Flowers"><br><p>SNV Events<br>Nuwara Eliya, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("light&sounf.jpg") ?> alt="Chance Flowers"> <br><p>JBA <br> Colombo, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("s&l.png") ?> alt="Chance Flowers"> <br><p>S & L <br>Hambanthota,Sri Lanka</p></td>  
+            <td> <a  href="#"> <img <?php srcIMG("light.png") ?> alt="Chance Flowers"></a><br><p>SNV Events<br>Nuwara Eliya, Sri Lanka</p></td>
+            <td> <a  href="#"> <img <?php srcIMG("light&sounf.jpg") ?> alt="Chance Flowers"> </a><br><p>JBA <br> Colombo, Sri Lanka</p></td>
+            <td> <a  href="#"> <img <?php srcIMG("s&l.png") ?> alt="Chance Flowers"> </a><br><p>S & L <br>Hambanthota,Sri Lanka</p></td>  
           </tr>
         </table>
       </div>
@@ -1140,9 +1143,9 @@
       <div class="dscusraw1">
         <table>
           <tr>
-            <td> <a  href="#"> <img <?php srcIMG("Rayman.png") ?> alt="Chance Flowers"><br><p>Rayman <br> Colombo, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("H&h.jpg") ?> alt="Chance Flowers"> <br><p>H & h Suppliers <br> Ampara, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("nb.png") ?> alt="Chance Flowers"> <br><p>NB Suppliers <br>Mathara,Sri Lanka</p></td>  
+            <td> <a  href="#"> <img <?php srcIMG("Rayman.png") ?> alt="Chance Flowers"></a><br><p>Rayman <br> Colombo, Sri Lanka</p></td>
+            <td> <a  href="#"> <img <?php srcIMG("H&h.jpg") ?> alt="Chance Flowers"></a> <br><p>H & h Suppliers <br> Ampara, Sri Lanka</p></td>
+            <td> <a  href="#"> <img <?php srcIMG("nb.png") ?> alt="Chance Flowers"></a> <br><p>NB Suppliers <br>Mathara,Sri Lanka</p></td>  
           </tr>
         </table>
       </div>
