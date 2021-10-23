@@ -33,6 +33,14 @@ body {
 }
 
 
+.content{
+    background-image: url("../../../public/img/searchVenR.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+
 
 .custopic{
     position:relative;
@@ -107,6 +115,7 @@ td{
     /* padding-top: 0.5%;
     padding-bottom: 0.5%; */
     color: #FFFFFF;
+    
 }
   
 tr:nth-child(even) {
@@ -129,6 +138,12 @@ tr:nth-child(odd) {
     border-color: black;
     border-width: 1px;
     border-radius: 10px;
+   
+}
+
+.go-event a{
+    text-decoration: none;
+    color:#202020;
 }
 
 .edit-event:hover {

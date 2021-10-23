@@ -43,8 +43,10 @@
 
     <div class="cus"></div>
     <div class="cusContent">
+    <p40>More Details<p40><i class="fas fa-caret-down"></i>
         <div class="cusDetail">
-            <p1>Hello......,<br><br>
+           
+    <p1>Hello......,<br><br>
 We give two ways to plan your event and manage it very easily<br><br>
 These are the two ways we provide you.<br>
      1. On your own planning<br>
@@ -52,21 +54,22 @@ These are the two ways we provide you.<br>
 On your own planning<br></p1>
    <p2>When you use this option you can plan & manage your event on your own.<br><br>    
 
-   These are the steps you havent follow.<br>
-         1. Fill the quik access form for service types   which you want abd  give your event                     
-              details  & submit.<br>           
-         2. After that maintain the given Event Shedule Board & you can add service through
+   These are the steps you have to follow.<br>
+         1. Give the basic event details and after thet fill the quik access form for service types  which you want add  give your event                     
+            & submit.<br>           
+         2. After that system give you to Event Schedule Board & you have to maintain the given Event Shedule Board & you can add service through
               this bord.<br><br></p2>
 
 <p3>Through event planner planning.<br></p3> 
      <p4>When you use this option you can plan & manage your event with  planner.<br><br>
 
      These ara the steps you have to follow.<br>
-          1. Fill the qiuck access for service types which and give your event details & save.<br>  
+          1.  Give the basic event details and after thet fill the quik access form for service types  which you want add  give your event                     
+            & submit.<br>  
           2. After that select event planner  & request.<br> 
           3. Then they accept your request  & they add you to Event Shedule  Board with his 
               service  recommendation.<br>           
-          4. Theb nanage  your event very meaningfully with event  planner.<br><br></p4>
+          4. Then you can manage  your event very meaningfully with event  planner.<br><br></p4>
 
 <p5>Follow those ways  & make you event very delightful.<br></p5>
         </div>

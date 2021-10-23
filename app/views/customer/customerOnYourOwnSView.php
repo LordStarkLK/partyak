@@ -92,8 +92,11 @@
       <div class="seat">
             <select name="Seating" placeholder="Seating Arrangement">
                 <option value="null">Seating Arrangement</option>
-                <option value="round">Round</option>
-                <option value="box">Box</option>
+                <option value="banquet">Banquet</option>
+                <option value="board">Board</option>
+                <option value="classroom">Classroom</option>
+                <option value="informal">Informal</option>
+                <option value="ushape">U shape</option>
               </select>
               <!-- <div class="error"><?php echo $errors["seatingA"] ?></div> --> 
       </div>
