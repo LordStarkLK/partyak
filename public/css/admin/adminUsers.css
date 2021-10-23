@@ -274,7 +274,7 @@ ul.breadcrumb {
     color: black; /* White text */
     padding: 10px 24px; /* Some padding */
     cursor: pointer; /* Pointer/hand icon */
-    width: auto; /* Set a width if needed */
+    width: 90%; /* Set a width if needed */
     display: block; /* Make the buttons appear below each other */
   }
   

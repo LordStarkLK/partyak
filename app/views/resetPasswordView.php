@@ -19,7 +19,7 @@
 
     
     <div class="form-container">
-    <form method="post" action="<?php echo BASEURL.'/forgetPassword/changePassword';?>" class="login" id="submit" onsubmit="validateAll()">
+    <form method="POST" action="<?php echo BASEURL.'/forgetPassword/changePassword';?>" class="login" id="submit" onsubmit="validateAll()">
         <div class="container">
             <div class="header">Reset Passsword</span> </div>
             <div class="fieldset">

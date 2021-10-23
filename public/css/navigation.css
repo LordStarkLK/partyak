@@ -5,7 +5,6 @@
   padding: 0;
 }
 
-
 .nav-bar {
   z-index: 2;
   background-color: #202020;
@@ -40,13 +39,45 @@ ul li,
 a,
 button {
   color: #e8f0f2;
-  font-size: 25px;
   font-family: "Actor", sans-serif;
 }
 a:link {
   text-decoration: none;
 }
+.nav-items a {
+  font-size: 21px !important;
+}
+.nav-btn .btn-sign {
+  font-size: 21px;
+}
 button {
+  background-color: darkcyan;
+  border-radius: 28px;
+  border: none;
+  cursor: pointer;
+  font-family: Arial;
+  /* font-size: 18px; */
+  line-height: 23px;
+  color: #e8f0f2;
+  padding: 6px 35px;
+  text-decoration: none;
+}
+.login-button {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0;
+  padding-right: 10px;
+  margin-left: 15px;
+}
+.signup-button:hover {
+  background-color: #026faa;
+}
+.signup-button {
+  background-color: #39a2db;
+  transition: all 0.5s ease 0s;
+  margin-right: 5px;
+}
+/*vendor navigation css*/
+.nav-buttons-vendor button {
   background-color: darkcyan;
   border-radius: 28px;
   border: none;
@@ -57,20 +88,22 @@ button {
   color: #e8f0f2;
   padding: 6px 35px;
   text-decoration: none;
+  font-size: 21px;
 }
-.login-button {
-  background-color: rgba(0, 0, 0, 0);
-  padding: 0;
-  padding-right: 10px;
+.nav-bar-links-vendor {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
 }
-.signup-button:hover {
-  background-color: #026faa;
+.nav-item-vendor a {
+  color: #e8f0f2;
+  font-size: 27px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
-.signup-button {
-  background-color: #39a2db;
-  transition: all 0.5s ease 0s;
-}
-
 @media screen and (max-width: 1200px) {
   button {
     font-size: 20px;
