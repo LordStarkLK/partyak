@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <?php linkCSS("footer") ?>
     <?php linkCSS("vendor/venuesANDhalls"); ?>
     <?php linkCSS("vendor/serviceCalendar"); ?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -364,14 +365,60 @@
                 <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
                 <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
                 <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
-                <div class="toReview">
+                <div class="toReview" >
                     <button>Review</button>
                 </div>
             </div>
 
+
+            <div class="reviewbody" >
+                    <div class="post">
+                        <div class="text">Thanks for rating us!</div>
+                        <div class="edit">EDIT</div>
+                    </div>
+                    <div class="star-widget">
+                        <input type="radio" name="rate" id="rate-5">
+                        <label for="rate-5" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-4">
+                        <label for="rate-4" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-3">
+                        <label for="rate-3" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-2">
+                        <label for="rate-2" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-1">
+                        <label for="rate-1" class="fas fa-star"></label>
+                        <form action="#">
+                        <header></header>
+                        <div class="textarea">
+                            <textarea cols="30" placeholder="Describe your experience.."></textarea>
+                        </div>
+                        <div class="btn">
+                            <button type="submit">Post</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+
         </div>
     </div>
+    <script>
+      const btn = document.querySelector("button");
+      const post = document.querySelector(".post");
+      const widget = document.querySelector(".star-widget");
+      const editBtn = document.querySelector(".edit");
+      btn.onclick = ()=>{
+        widget.style.display = "none";
+        post.style.display = "block";
+        editBtn.onclick = ()=>{
+          widget.style.display = "block";
+          post.style.display = "none";
+        }
+        return false;
+      }
+    </script>
     <?php linkJS("vendor/serviceCalendar"); ?>
     <?php linkJS("vendor/venuesANDhalls"); ?>
+    <?php linkJS("vendor/vendorReview"); ?>
+    <?php linkPhp("footer") ?>
 </body>
 </html>
