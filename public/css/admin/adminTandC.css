@@ -214,6 +214,7 @@ border-radius: 13px;
 }
 
 
+
 .title-container,.content-container{
   
   display: flex;
@@ -223,6 +224,10 @@ border-radius: 13px;
 
 #content{
   width: 90%;
+}
+
+.content{
+  color: white;
 }
 
 .addnew-button{
