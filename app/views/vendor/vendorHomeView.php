@@ -9,7 +9,7 @@
     <title>Home</title>
 
     <?php linkCSS("home"); ?>
-    <?php linkCSS("vendorNavigation"); ?>
+    <?php linkCSS("Navigation"); ?>
 </head>
 
 
@@ -17,8 +17,8 @@
     <header>
         <?php linkPhp("vendorNavigation") ?>
     </header>
-    
-    
+
+
 
     <div class="container">
 
