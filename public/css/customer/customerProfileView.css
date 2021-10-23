@@ -25,6 +25,15 @@ body {
 }
 
 
+.container{
+  background-image: url("../../../public/img/searchVenR.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
 
 .sidebar{
     display: flex;

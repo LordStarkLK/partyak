@@ -93,7 +93,13 @@
             </div>
     
             <div class="nav-noti">
-                <a href="#"><i class="fa fa-bell"></i></a> 
+                <div class="no">
+                <button class="nobtn"><i class="fa fa-bell"></i></button>
+                <div class="no-content">
+                    <p>You have do advance payment for booking Mount Lavania Hotel.</p>
+                    <a href="#">Do Payment</a>
+                </div>
+            </div> 
             </div>
 
         </div>
@@ -104,8 +110,8 @@
             <div class="user">
                 <button class="userbtn"><i class="fa fa-user"></i></button>
                 <div class="user-content">
-                <a href="<?php echo BASEURL . '/customerProfile'; ?>">Profile</a>
-                <a href="<?php echo BASEURL . '/logout'; ?>">Logout</a>
+                    <a href="<?php echo BASEURL . '/customerProfile'; ?>">Profile</a>
+                    <a href="<?php echo BASEURL . '/logout'; ?>">Logout</a>
                 </div>
             </div> 
         </div>
@@ -115,7 +121,7 @@
 </div>
 
 
-<script>
+<!-- <script>
     function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
@@ -124,7 +130,7 @@
         x.className = "topnav";
     }
     }
-</script>
+</script> -->
 
 </body>
 </html>
