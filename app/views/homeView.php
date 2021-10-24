@@ -9,6 +9,7 @@
 
     <?php linkCSS("home-new"); ?>
     <?php linkCSS("navigation"); ?>
+    <?php linkCSS("footer"); ?>
 </head>
 
 
@@ -175,7 +176,7 @@
             </div>
         </div>
     </div>
-
+    <?php linkPhp("footer") ?>
 </body>
 
 </html>

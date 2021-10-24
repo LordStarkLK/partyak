@@ -87,24 +87,8 @@
                             <td>10 June 2022</td>
                             <td>
                                 <div class="btn-group">
-                                    <div class="dropdown">
-                                        <?php
-                                               $id_name = 'myDropdown';
-        
-                                               $x = 1;
-                                               $id_name .= $x;
-                                              echo"
-                                              <button onclick=\"myFunction($x)\" class=\"dropbtn\">Change Status <i class=\"fas fa-caret-down\"></i></button>
-                                              <div id=$id_name class=\"dropdown-content\">
-                                                <a href=\"#home\">See in Vendors Bookings</a>
-                                                <a href=\"#about\">Delete Booking</a>
-                                                
-                                              </div>
-                                              "; 
-                                            
-                                            ?>
-                                    </div>
-                                    <button>Delete</button>
+                                    <button onclick="window.location='<?php echo BASEURL . '/adminVendorBookings'; ?>'">See in Vendor Bookings</button>
+                                    <button >Delete</button>
 
                                 </div>
                             </td>
@@ -116,25 +100,9 @@
                             <td>Saloon</td>
                             <td>18 December 2021</td>
                             <td>
-                                <div class="btn-group">
-                                    <div class="dropdown">
-                                        <?php
-                                               $id_name = 'myDropdown';
-        
-                                               $x = 2;
-                                               $id_name .= $x;
-                                              echo"
-                                              <button onclick=\"myFunction($x)\" class=\"dropbtn\">Change Status <i class=\"fas fa-caret-down\"></i></button>
-                                              <div id=$id_name class=\"dropdown-content\">
-                                                <a href=\"#home\">See in Vendors Bookings</a>
-                                                <a href=\"#about\">Delete Booking</a>
-                                                
-                                              </div>
-                                              "; 
-                                            
-                                            ?>
-                                    </div>
-                                    <button>Delete</button>
+                            <div class="btn-group">
+                                    <button onclick="window.location='<?php echo BASEURL . '/adminVendorBookings'; ?>'">See in Vendor Bookings</button>
+                                    <button >Delete</button>
 
                                 </div>
                             </td>
@@ -147,25 +115,9 @@
                             <td>Catering</td>
                             <td>19 January 2021</td>
                             <td>
-                                <div class="btn-group">
-                                    <div class="dropdown">
-                                        <?php
-                                               $id_name = 'myDropdown';
-        
-                                               $x = 3;
-                                               $id_name .= $x;
-                                              echo"
-                                              <button onclick=\"myFunction($x)\" class=\"dropbtn\">Change Status <i class=\"fas fa-caret-down\"></i></button>
-                                              <div id=$id_name class=\"dropdown-content\">
-                                                <a href=\"#home\">See in Vendors Bookings</a>
-                                                <a href=\"#about\">Delete Booking</a>
-                                                
-                                              </div>
-                                              "; 
-                                            
-                                            ?>
-                                    </div>
-                                    <button>Delete</button>
+                            <div class="btn-group">
+                                    <button onclick="window.location='<?php echo BASEURL . '/adminVendorBookings'; ?>'">See in Vendor Bookings</button>
+                                    <button >Delete</button>
 
                                 </div>
                             </td>

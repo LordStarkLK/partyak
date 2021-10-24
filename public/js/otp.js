@@ -38,3 +38,12 @@ function checkSecond(sec) {
     return sec;
 }
 
+
+// function paste(){
+//     // let ele = document.querySelectorAll('input');
+//     // console.log(ele);
+
+//     document.getElementById("otp").innerHTML = (e.clipboardData || window.clipboardData).getData('text');
+
+// }
+

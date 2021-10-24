@@ -73,7 +73,7 @@
               
               <div class="sdate">
                 <input type="date" placeholder="Event End Date" name="enddate">
-                <div class="error"><?php echo $errors["enddate"] ?></div> 
+                <!-- <div class="error"><?php echo $errors["enddate"] ?></div>  -->
               </div>
 
             </div>

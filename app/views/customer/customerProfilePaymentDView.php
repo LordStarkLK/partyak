@@ -17,12 +17,15 @@
   <header>
     <?php linkPhp("customerNavigation") ?>
   </header>
-  
-  <div class="container">
-        <div class="custopic">
-            <p>My  Payment  Details</p>
-        </div>
 
+
+  <div class="content">
+
+  <div class="container">
+    <div class="custopic">
+      <p>My Payment Details</p>
+      <a href="<?php echo BASEURL . '/customerProfile'; ?>">Back to profile</a>
+    </div>
 
     <div class="cusevent">
     <table>
@@ -74,7 +77,10 @@
      
    </div>
 
-   <?php linkPhp("footer") ?>
-    
+
+  </div>
+
+  <?php linkPhp("footer") ?>
+
 </body>
 </html>

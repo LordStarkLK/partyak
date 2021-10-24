@@ -20,7 +20,7 @@
 
     
     <div class="form-container">
-        <form method="post" action="<?php echo BASEURL.'/forgetPassword';?>" class="login" id="sendForm">
+        <form method="POST" action="<?php echo BASEURL.'/forgetPassword';?>" class="login" id="sendForm">
             <div class="container">
                 <div class="header">Reset Your Password</span></div>
                 <div class="fieldset">

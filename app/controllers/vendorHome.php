@@ -1,13 +1,15 @@
 <?php
 
-class VendorHome extends FrameworkPartyak{
-    public function __construct(){
+class VendorHome extends FrameworkPartyak
+{
+    public function __construct()
+    {
         $this->helper("linker");
     }
-    
-    public function index(){
-        $this->preventBack("vendor");
-        $this->view("vendor/vendorHomeView");
-    }
 
+    public function index()
+    {
+        $this->preventBack("vendor");
+        $this->view("homeView");
+    }
 }
