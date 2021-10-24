@@ -24,23 +24,14 @@
             </div>
 
             <div class="home-content">
-                <div class="overview-boxes">
-                    <div class="box" id="box-marketing">
-                        <span class="links_name"><img class="customer-image" <?php srcIMG("reports.webP") ?> width="40"
-                                height="40">
-                            <div class="box-topic">Reports</div>
-                        </span>
-
-                    </div>
-
-                </div>
+                
 
 
 
 
 
 
-            </div>
+            
 
             <ul class="breadcrumb">
                 <li><a href="#">Reports</a></li>

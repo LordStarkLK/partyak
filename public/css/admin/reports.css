@@ -67,31 +67,28 @@ nav .sidebar-button i{
   padding: 20px 50px 20px 50px;
   border-radius: 43px;
 }
+
+.overview-boxes{
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
 .overview-boxes .box{
+  margin-right: 30px;
   width: 209px;
   height: 104px;
-  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   width: calc(100% / 3 - 15px);
-  background: rgb(0, 0, 0);
+  background: linear-gradient(114.1deg, #84D2F8 18.52%, #FFBBC9 98.52%);
   padding: 7px;
   border-radius: 12px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
 
-.overview-boxes .box:hover{
-  color: black;
-  background: linear-gradient(114.1deg, #84D2F8 18.52%, #FFBBC9 98.52%);
-backdrop-filter: blur(120px);
 
-/* Note: backdrop-filter has minimal browser support */
-border-radius: 13px;
-  
- 
-  
-}
 .overview-boxes .box-topic{
   font-size: 20px;
   font-weight: 500;
@@ -368,6 +365,85 @@ ul.breadcrumb {
   justify-content: center;
 }
 
+
+/* average ratings start */
+.average-ratings{
+  color: white;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+}
+
+.row{
+  margin-top: 10px;
+}
+.side div{
+  margin-right: 10px;
+}
+
+/* .side .div{
+  margin-right: 30px;
+} */
+.fa {
+  font-size: 25px;
+}
+
+.checked {
+  color: orange;
+}
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top:10px;
+}
+
+.middle {
+  margin-top:10px;
+  float: left;
+  width: 70%;
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 60%; height: 18px; background-color: #04AA6D;}
+.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+
+}
+
+/* average ratings end */
 
 @media (max-width: 1240px) {
   .sidebar{

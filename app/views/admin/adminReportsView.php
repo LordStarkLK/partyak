@@ -52,7 +52,7 @@
                     </div>
 
                     <div class="column">
-                        <div class="card">
+                        <div class="card" onclick = "window.location='<?php echo BASEURL . '/adminReports/highRating'; ?>'">
                             <h3>Report 2</h3>
                             <p>Vendors with the highest rating</p>
                            
