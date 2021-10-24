@@ -56,7 +56,7 @@
 
                     </div>
                     <div>
-                        <p id="content">Partyak is a service provided by Saltside Technologies AB
+                        <p id="content" class="content">Partyak is an event management system which will provide opportunities for customers, service providers as well event planners to get their needs realized.
                             (subject to your compliance with the Terms and Conditions set forth below).
                             Please read these Terms and Conditions before using this platform.</p>
                     </div>
@@ -79,7 +79,7 @@
                             </span></button>
 
                         </div>
-                        <div class=\"content-container\">
+                        <div class=\"content-container content\">
                         <p id=\"content\">
                         $row[content]
 

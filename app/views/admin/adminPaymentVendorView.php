@@ -154,20 +154,20 @@
 
                         <tr>
                             <td>02</td>
-                            <td>Jk Photography</td>
+                            <td>Sunrise Catering</td>
                             <td>Monthly Payment</td>
                             <td>Sep 10 2021</td>
                             <td>Paid</td>
 
-                            <td>Rs. 25000</td>
+                            <td>Rs. 10000</td>
                         </tr>
 
                         <tr>
                             <td>03</td>
-                            <td>Jk Photography</td>
-                            <td>Monthly Payment</td>
-                            <td>Sep 10 2021</td>
-                            <td>Paid</td>
+                            <td>R DJs</td>
+                            <td>Requested Payment</td>
+                            <td>Oct 20 2021</td>
+                            <td>Pending</td>
 
                             <td>Rs. 25000</td>
                         </tr>
