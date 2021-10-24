@@ -20,9 +20,12 @@
     <?php linkPhp("customerNavigation") ?>
   </header>
 
+  <div class="content">
+
   <div class="container">
     <div class="custopic">
       <p>My Payment Details</p>
+      <a href="<?php echo BASEURL . '/customerProfile'; ?>">Back to profile</a>
     </div>
 
 
@@ -73,6 +76,8 @@
 
       </table>
     </div>
+
+  </div>
 
   </div>
 
