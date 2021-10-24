@@ -70,5 +70,7 @@ class SpService extends FrameworkPartyak
             $data['packages'] = $this->ServiceModel->getPackageDetails($id);
             // echo "Hi";
             $this->view("vendor/spServiceView" , $data);
+
     }
 }
+
