@@ -15,9 +15,6 @@
         <?php linkPhp("customerNavigation") ?>
 
     </header>
-
-    <div class="content">
-    
     <div class="container">
         <div class="custopic">
             <p>My Events</p>
@@ -55,7 +52,7 @@
                   <td>$row[noOfGuest]</td>
                   <td>$row[plan_type]</td>
                   <td>Upcoming</td>
-                  <td><button class=\"go-event\"><a href =\" ".BASEURL ."/customerEventSB\">Go</a></button></td>
+                  <td><button class=\"go-event\"><a href =\"<?php echo BASEURL . '/customerThroughEpPlan'; ?>\">Go</a></button></td>
         
                   
                   <td>  
@@ -73,8 +70,6 @@
           }?>
        
       </table>
-     
-   </div>
      
    </div>
 

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
    
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php linkCSS("customer/customerEventSBview"); ?>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <?php linkCSS("customer/customerEventSBview"); ?>
     <?php linkCSS("customerNavigation"); ?>
     <?php linkCSS("footer");?>
    </head>
@@ -31,7 +31,7 @@
             </div>
             <div class="cusbody">
                 <div class="custodo">
-                    <!-- <div class="cusdotopic">
+                    <div class="cusdotopic">
                         <table>
                             <tr>
                                 <th>TO Do</th>
@@ -40,29 +40,12 @@
                             </tr>
 
                        </table>
-                    </div> -->
-
-                    <div class="wrapper">
-                        <header>TO DO</header>
-                        <div class="footer">
-                            <span><span class="pendingTasks"></span> pending tasks <button>Clear All</button></span>
-                            
-                        </div>
-                        <div class="inputField">
-                        <input type="text" placeholder="Add new task">
-                        <button><i class="fas fa-plus"></i></button>
-                        </div>
-                        <ul class="todoList">
-                            
-                        <!-- data are comes from local storage -->
-                        </ul>
-                       
                     </div>
 
                 </div>
 
                 <div class="cusin">
-                    <!-- <div class="cusdotopic">
+                    <div class="cusdotopic">
                         <table>
                             <tr>
                                 <th>INPROGRESS</th>
@@ -70,28 +53,12 @@
                                 <th> <i class="fas fa-ellipsis-h"></i></th>
                             </tr>
                         </table>
-                    </div> -->
-
-                    <div class="wrapper">
-                        <header>INPROGRESS</header>
-                        <div class="footer">
-                            <span><span class="pendingTasks"></span> pending tasks <button>Clear All</button></span>
-                            
-                        </div>
-                        <div class="inputField">
-                        <input type="text" placeholder="Add new task">
-                        <button><i class="fas fa-plus"></i></button>
-                        </div>
-                        <ul class="todoList">
-                        <!-- data are comes from local storage -->
-                        </ul>
                     </div>
-
                    
                 </div>
 
                 <div class="cusdone">
-                    <!-- <div class="cusdotopic">
+                    <div class="cusdotopic">
                         <table>
                             <tr>
                                 <th>COMPLETED</th>
@@ -99,20 +66,6 @@
                                 <th> <i class="fas fa-ellipsis-h"></i></th>
                             </tr>
                         </table>
-                    </div> -->
-                    <div class="wrapper">
-                        <header>COMPLETED</header>
-                        <div class="footer">
-                            <span><span class="pendingTasks"></span> pending tasks <button>Clear All</button></span>
-                            
-                        </div>
-                        <div class="inputField">
-                        <input type="text" placeholder="Add new task">
-                        <button><i class="fas fa-plus"></i></button>
-                        </div>
-                        <ul class="todoList">
-                        <!-- data are comes from local storage -->
-                        </ul>
                     </div>
                    
                 </div>
@@ -125,6 +78,7 @@
 
 
 </body>
-<?php linkJS("customer/customerEventSB"); ?>
+<?php linkJS("customer/customerSearchVendor"); ?>
+<?php linkJS("customer/customerContactServiceProvicer"); ?>
 <?php linkPhp("footer") ?>
 </html>

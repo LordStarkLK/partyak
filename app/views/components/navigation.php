@@ -1,6 +1,7 @@
 <div class="nav-bar">
     <div class="logo">
-        <img class="logo-image" <?php srcIMG("navbarlogo.png") ?> alt="">
+        <a href="<?php echo BASEURL . '/home'; ?>"> <img class="logo-image" <?php srcIMG("navbarlogo.png") ?> alt=""></a>
+
     </div>
     <div class="nav-items">
         <ul class="nav-links">

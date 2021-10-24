@@ -22,7 +22,7 @@
     <div class="sidebar">
         <button type="button" class="buttonS" name="Own" > <a href ="<?php echo BASEURL . '/customerOnYourOwnS'; ?>"> Add Service Details</a></button> 
         <div class="sideDe">
-          <p>After giving event details you can add service details which are required for your event by clicking here.</p>
+          <p>You can add service details which are required for your event by clicking here.</p>
         </div> 
 
         <br><br><img <?php srcIMG("servicepees.png") ?> alt="Chance Flowers"> 
@@ -37,8 +37,8 @@
                 <option value="null">Event Type</option>
                 <option value="Wedding">Wedding</option>
                 <option value="Party/Festival">Party/Festival</option>
-                <option value="Corparate Event">Corporate Event</option>
-                <option value="Personalize Event">Personalize Event</option>
+                <option value="Corparate Event">Corporate event</option>
+                <option value="Other">Other</option>
             </select>
             <div class="error"><?php echo $errors["eventType"] ?></div> 
           </div>

@@ -181,28 +181,28 @@ button:hover {
     display: flex;
     flex-direction: raw;
     order:1;
+    height: 80%;
     width: calc(100% - 260px);
     transition: all 0.5s ease;
     border-radius: 30px; 
     background-color: rgb(0, 0, 0);
     background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
     backdrop-filter: blur(120px);
-    padding:1%;
-    margin-top: 2%;
+    padding:4%;
+    margin-top: 6%;
     /* backdrop-filter: blur(120px);
     -webkit-backdrop-filter: blur(120px);
     background-color:linear-gradient(114.1deg, rgba(40, 40, 40, 0.91) 18.52%, rgba(15, 15, 15, 0.73) 98.52%), linear-gradient(106.04deg, rgba(255, 255, 255, 0.12) 10.95%, rgba(255, 255, 255, 0.1) 98.32%); */
     /* Note: backdrop-filter has minimal browser support */
   }
 
-  .cusContent p40{
+  .cusContent p{
     position: relative;
     font-weight: bold;
     font-size: 20px;
     line-height: 28px;
     color: rgba(255, 255, 255, 0.8);
     margin-top: 0%;
-    text-align: center;
 
   }
 
@@ -215,7 +215,6 @@ button:hover {
     backdrop-filter: blur(120px);
     display:flex;
     flex-wrap: wrap;
-    margin-top: 5%;
   }
 
   .cusDetail p1,p3,p5{
@@ -223,7 +222,6 @@ button:hover {
     font-weight: bold;
     font-size: 20px;
     line-height: 28px;
-    text-align: justify;text-align: justify;
     color: rgba(255, 255, 255, 0.8);
   }
 
@@ -232,7 +230,6 @@ button:hover {
     font-size: 17px;
     line-height: 28px;
     color: rgba(255, 255, 255, 0.8);
-    text-align: justify;
   }
 
 
