@@ -44,7 +44,7 @@
             <div class="container-reports">
                 <div class="row">
                     <div class="column">
-                        <div class="card">
+                        <div class="card" onclick = "window.location='<?php echo BASEURL . '/adminReports/mostPopular'; ?>'">
                             <h3>Report 1</h3>
                             <p>Most popular vendor of each category.</p>
                             
@@ -77,13 +77,7 @@
                             
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="card">
-                            <h3>Card 5</h3>
-                            <p>Some text</p>
-                            <p>Some text</p>
-                        </div>
-                    </div>
+                    
 
 
 
