@@ -12,7 +12,11 @@
                 echo '<li><a href="#">Contact Us</a></li>';
             } else {
                 if ($_SESSION["type"] == "vendor") {
-                    echo '<li><a href="#">Business</a></li>';
+
+                    echo "<li><a href='";
+                    echo BASEURL . '/spAnalytics';
+                    echo "'>Business</a></li>";
+
                 } elseif ($_SESSION["type"] == "customer") {
                     echo '<li><a href="#">Browse</a></li>';
                 }
@@ -23,10 +27,12 @@
     </div>
     <?php
     if (!isset($_SESSION["type"])) {
-        echo "<div class='nav-btn'>";
+        echo "<div class='nav-btn'>"; 
+
         echo "<button class='signup-button btn-sign' type='button'><a href='";
         echo BASEURL . '/home/signup';
         echo "'>Sign up</a></button>";
+
         echo "<button class='login-button btn-sign' type='button'><a href='";
         echo BASEURL . '/login';
         echo " '>Login</a></button>
