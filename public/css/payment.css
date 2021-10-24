@@ -10,59 +10,116 @@ body {
   background-position: 50% 50%;
   background-size: cover;
 }
-.btn,
-.button,
-input {
-  border-radius: 35px;
-}
-
-.btn:hover,
-button:hover {
-  transition: 0.5s ease;
-}
-form input {
-  outline: none;
-  margin-bottom: 15px;
-  font-stretch: 16px;
-  color: rgb(0, 0, 0);
-  text-align: left;
-  padding: 14px 20px;
-  width: 100%;
-  display: inline-block;
-  box-sizing: border-box;
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  background: #ffffff;
-  box-shadow: inset 2px 2px 1px rgba(0, 0, 0, 0.25);
-  border-radius: 22px;
-  transition: 0.3s ease;
-}
-
-form input:focus {
-  background: #ffffff;
-  border: 1px solid #000000;
-}
-
-form .button {
-  position: relative;
+.payment-form-container {
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 187px;
-  height: 43px;
-  text-align: center;
-  padding: 2.5% !important;
-  background: #5ece67;
-  border-radius: 20px;
+  width: 57%;
+  height: 64%;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(49px) saturate(200%);
+  background-color: rgba(68, 68, 68, 0.44);
+  border-radius: 36px;
+  border: 2px solid rgba(255, 255, 255, 0.125);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.card-icon {
+  width: 329px;
+  height: 196px;
+
+  background: linear-gradient(90deg, #00c271 0%, #006289 100%);
+  backdrop-filter: blur(250 px);
+  backdrop-filter: blur(250px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 22px;
+  transform: rotate(25.35deg);
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.visa-icon {
+  width: 54px;
+  height: 17px;
+  margin-top: 16px;
+  display: block;
+  float: right;
+  margin-right: 22px;
+}
+.visa-card-number {
+  display: block;
+  margin-top: 18%;
+  margin-left: 5%;
+  font-family: AlergiaNormal;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 29px;
+  font-weight: 300;
   color: #ffffff;
 }
-
-form .button:hover {
-  background-color: #464646;
+.visa-strip {
+  position: relative;
+  left: 16 px;
+  top: 49 px;
 }
-.payment-form {
-  width: 40%;
+.left-info,
+.right-info {
+  display: inline-block;
+}
+.right-info {
+  text-align: right;
+}
+.card-text {
+  margin: 0;
+  font-family: AlergiaNormal;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 25px;
+  /* identical to box height */
+
+  color: #ffffff;
+}
+.small-text {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.62);
+}
+.button {
+  padding: 10px 10px;
+  border-radius: 15px;
+  border: none;
+  font-family: AlergiaNormal;
+  font-style: normal;
+  font-weight: normal;
+  color: rgb(41, 41, 41);
+  width: 44%;
+  background-color: #8bc34a;
+}
+.input {
+  padding: 10px 10px;
+  border-radius: 10px;
+  border: none;
+  margin: 5px 0;
+  font-family: Actor;
+  font-style: normal;
+  font-weight: normal;
+  color: #202020;
+}
+.full-width {
+  width: 100%;
+}
+.background-blob {
   position: absolute;
-  top: 57%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  height: 400px;
+  top: 21%;
+  left: 36%;
+}
+.pay-text {
+  display: block;
 }
