@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: #202020;
+  background-image: url("../../public/img/home-confetti.png");
+  background-position: 50% 50%;
+  background-size: cover;
+}
+h1 {
+  text-align: center;
+  font-family: "Alatsi", sans-serif;
+  font-style: normal;
+  font-weight: bolder;
+  color: aliceblue;
+  position: relative;
+  font-size: xxx-large;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container {
+  width: 600px;
+  height: 218px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: -25px 0 0 -25px;
+  backdrop-filter: blur(23px) saturate(200%);
+  -webkit-backdrop-filter: blur(23px) saturate(200%);
+  background-color: rgba(73, 73, 73, 0.54);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}

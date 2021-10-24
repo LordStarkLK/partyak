@@ -1,6 +1,6 @@
 <?php
 
-class SpProfile extends FrameworkPartyak
+class Payment extends FrameworkPartyak
 {
     public function __construct()
     {
@@ -10,6 +10,6 @@ class SpProfile extends FrameworkPartyak
     public function index()
     {
         // echo "Hi";
-        $this->view("vendor/spProfileView");
+        $this->view("paymentView");
     }
 }

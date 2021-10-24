@@ -12,6 +12,4 @@ class SpAnalytics extends FrameworkPartyak
         // echo "Hi";
         $this->view("vendor/spanalyticsView");
     }
-
-   
 }

@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <?php linkCSS("vendor/spProfile"); ?>
+  <?php linkCSS("eventPlanner/epProfile"); ?>
   <?php linkCSS("navigation"); ?>
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -13,45 +13,45 @@
 
 <body>
   <header>
-    <?php linkPhp("navigation") ?>
+    <?php linkPhp("vendorNavigation") ?>
   </header>
   <div class="container">
     <div class="sidebar">
 
       <ul class="sidenav-links">
         <li>
-          <a href="<?php echo BASEURL . '/spAnalytics'; ?>">
+          <a href="<?php echo BASEURL . '/epAnalytics'; ?>">
             <i class="fa fa-pie-chart" aria-hidden="true"></i>
             <span class="links_name">Analytics</span>
           </a>
         </li>
         <li>
-          <a href="<?php echo BASEURL . '/spProfile'; ?>">
+          <a href="<?php echo BASEURL . '/epProfile'; ?>">
             <i class="fa fa-user-circle-o" aria-hidden="true"></i>
             <span class="links_name">Profile</span>
           </a>
         </li>
         <li>
-          <a href="<?php echo BASEURL . '/spService'; ?>">
+          <a href="<?php echo BASEURL . '/epService'; ?>">
             <i class="fa fa-server" aria-hidden="true"></i>
             <span class="links_name">Services</span>
           </a>
         </li>
         <li>
-          <a href="<?php echo BASEURL . '/spBooking'; ?>">
+          <a href="<?php echo BASEURL . '/epBooking'; ?>">
             <i class="fa fa-list" aria-hidden="true"></i>
             <span class="links_name">Booking</span>
           </a>
         </li>
         <li>
-          <a href="<?php echo BASEURL . '/spMarketing'; ?>">
+          <a href="<?php echo BASEURL . '/epMarketing'; ?>">
             <i class="fa fa-sticky-note" aria-hidden="true"></i>
             <span class="links_name">Marketing</span>
           </a>
         </li>
 
         <li>
-          <a href="<?php echo BASEURL . '/spWallet'; ?>">
+          <a href="<?php echo BASEURL . '/epWallet'; ?>">
             <i class="fa fa-usd" aria-hidden="true"></i>
             <span class="links_name">Wallet</span>
           </a>
@@ -69,9 +69,15 @@
           </a>
         </li>
         <li>
-          <a href="<?php echo BASEURL . '/spReview '; ?>">
+          <a href="<?php echo BASEURL . '/epReview '; ?>">
             <i class="fa fa-star" aria-hidden="true"></i>
             <span class="links_name">Review</span>
+          </a>
+        </li>
+        <li>
+          <a href="<?php echo BASEURL . '/epnote '; ?>">
+            <i class='bx bx-notepad' aria-hidden="true"></i>
+            <span class="links_name">Note</span>
           </a>
         </li>
       </ul>
@@ -88,7 +94,7 @@
       <div class="home-content">
         <div class="profile_pic">
           <div class="image">
-            <img <?php srcIMG("avatar.png") ?> alt="Avatar">
+            <img <?php srcIMG("avatar-dave.png") ?> alt="Avatar">
             <!-- <img src="/public/img/avatar.png" alt="Avatar"> -->
           </div>
 
@@ -96,13 +102,13 @@
             <div class="facebook">
               <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
               <div class="socialLink">
-                <a href="fblink">https://www.facebook.com/lara.fernando</a>
+                <a href="fblink">https://www.facebook.com/Dave-chapple</a>
               </div>
             </div>
             <div class="linkedin">
               <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
               <div class="socialLink">
-                <a href="linkedinlink">https://www.linkedin.com/in/lara-fernando</a>
+                <a href="linkedinlink">https://www.linkedin.com/in/Dave-chapple</a>
               </div>
             </div>
           </div>
@@ -116,7 +122,7 @@
                 <label for="fname">First Name</label>
               </div>
               <div class="col_data">
-                <p>Lara</p>
+                <p>Dave</p>
               </div>
             </div>
             <div class="row">
@@ -124,7 +130,7 @@
                 <label for="lname">Last Name</label>
               </div>
               <div class="col_data">
-                <p>Fernando</p>
+                <p>Chappelle</p>
               </div>
             </div>
             <div class="row">
@@ -132,7 +138,7 @@
                 <label for="uname">User Name</label>
               </div>
               <div class="col_data">
-                <p>Lara98</p>
+                <p>Dave123</p>
               </div>
             </div>
             <div class="row">
@@ -140,7 +146,7 @@
                 <label for="gender">Gender</label>
               </div>
               <div class="col_data">
-                <p>Female</p>
+                <p>male</p>
               </div>
             </div>
             <div class="row">
@@ -148,7 +154,7 @@
                 <label for="nic">NIC number</label>
               </div>
               <div class="col_data">
-                <p>985496210V</p>
+                <p>981000525V</p>
               </div>
             </div>
             <div class="row">
@@ -156,7 +162,7 @@
                 <label for="email">Email</label>
               </div>
               <div class="col_data">
-                <p>lara@gmail.com</p>
+                <p>dave@gmail.com</p>
               </div>
             </div>
           </div>
@@ -176,7 +182,7 @@
                 <label for="accholdername">Acc: Holder Name</label>
               </div>
               <div class="col_data">
-                <p>Lara Fernando</p>
+                <p>Dave Chappelle</p>
               </div>
             </div>
             <div class="row">
