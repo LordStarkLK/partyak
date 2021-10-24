@@ -126,14 +126,6 @@
                 </div>
                 <div class="row">
                     <div class="col_name">
-                        <label for="uname">User Name</label>
-                    </div>
-                    <div class="col_data">
-                        <p>Lara98</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col_name">
                         <label for="gender">Gender</label>
                     </div>
                     <div class="col_data">
