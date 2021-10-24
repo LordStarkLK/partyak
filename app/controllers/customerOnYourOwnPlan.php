@@ -24,7 +24,7 @@ class CustomerOnYourOwnPlan extends FrameworkPartyak{
         $errors["eventType"] = "";
         $errors["eventname"] = "";
         $errors["startdate"] = "";
-        $errors["enddate"] = "";
+        //$errors["enddate"] = "";
         $errors["city"] = "";
         $errors["noofguest"] = "";
 
@@ -40,10 +40,10 @@ class CustomerOnYourOwnPlan extends FrameworkPartyak{
 
 
             //Empty check
-            if ($eventType == "null") $errors["EventType"] = "Event type is required";
+            if ($eventType == "null") $errors["eventType"] = "Event type is required";
             if (empty($eventname)) $errors["eventname"] = "Event name is required";
             if (empty($startdate)) $errors["startdate"] = "Event start Date is required";
-            if (empty($enddate)) $errors["enddate"] = "Event end Date is required";
+            //if (empty($enddate)) $errors["enddate"] = "Event end Date is required";
             if ($city == "null") $errors["city"] ="Location is required";
             if (empty($noofguest)) $errors["noofguest"] = "No of guest is required";
     

@@ -31,11 +31,12 @@
       <div class="user-details">
         <div class="name">
           <div class="input-box1">
-            <input type="text" placeholder="First Name" name="fname">
+            <input type="text" placeholder="First Name" name="fname" id="fname"
+                            onfocusout="validateFname()">
             <div class="error"><?php echo $errors["fname"] ?></div>
           </div>
           <div class="input-box2">
-            <input type="text" placeholder="Last Name" name="lname">
+            <input type="text" placeholder="Last Name" name="lname" id="lname" onfocusout="validateLname()">
             <div class="error"><?php echo $errors["lname"] ?></div>
           </div>
         </div>
@@ -46,7 +47,8 @@
         </div> -->
 
         <div class="input-box3">
-          <input type="text" placeholder="Address" name="address">
+          <input type="text" placeholder="Address" name="address"
+          id="address" onfocusout="validateAddress()">
           <div class="error"><?php echo $errors["address"] ?></div>
         </div>
 
@@ -55,17 +57,19 @@
 
 
         <div class="input-box5">
-          <input type="email" placeholder="Email" name="email">
+          <input type="email" placeholder="Email" name="email" id="email" onfocusout="validateEmail()">
           <div class="error"><?php echo $errors["email"] ?></div>
         </div>
 
         <div class="input-box6">
-          <input type="password" placeholder="Password" name="password">
+          <input type="password" placeholder="Password" name="password" id="password"
+                        onfocusout="validatePassword()">
           <div class="error"><?php echo $errors["password"] ?></div>
         </div>
 
         <div class="input-box7">
-          <input type="password" placeholder="Confirm password" name="confirmPassword">
+          <input type="password" placeholder="Confirm password" name="confirmPassword" id="confpassword"
+                        onfocusout="validateConfPassword()">
           <div class="error"><?php echo $errors["confirmPassword"] ?></div>
         </div>
 
@@ -91,7 +95,9 @@
     </form>
   </div>
   </div>
+
   <?php linkPhp("footer") ?>
+  <?php linkJS("registerCustomer"); ?>
 </body>
 
 </html>

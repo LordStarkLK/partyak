@@ -152,14 +152,26 @@
   display:flex;
   flex-direction: column;
   order:0;
-  padding:2%;
+  padding:0%;
   width: 157px;
   height: 39px;
-  background: #00D261;
+  background-color: #ddd;
+  color:black;
+  transition: 0.3s;
   border-radius: 23.5px;
 }
 
+.button:hover{
+  background: #00D261;
+
+}
+
+.button:hover input{
+  color: white;
+}
+
 .button input{
+  margin-top: 5%;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -167,7 +179,7 @@
   background-color: transparent;
   border-color: transparent;
   /* identical to box height */
-  color: #FFFFFF;
+  color: black;
  }
 
  .text{

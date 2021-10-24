@@ -12,6 +12,4 @@ class SpProfile extends FrameworkPartyak
         // echo "Hi";
         $this->view("vendor/spProfileView");
     }
-
-   
 }

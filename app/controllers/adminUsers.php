@@ -17,4 +17,9 @@ class AdminUsers extends FrameworkPartyak{
         $this->view("admin/adminUsersView",$data);
     }
 
+    public function deleteUser($user_id){
+        $this->user->deleteUser($user_id);
+        $this->redirect("adminUsers");
+    }
+
 }
