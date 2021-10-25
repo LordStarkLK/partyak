@@ -46,7 +46,7 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="<?php echo BASEURL . '/adminChat'; ?>">
                 <i class='bx bx-message'></i>
                 <span class="links_name side-links">Chat</span>
             </a>
