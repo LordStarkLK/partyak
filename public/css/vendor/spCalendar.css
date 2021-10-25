@@ -9,11 +9,10 @@ body{
   background-color: #202020;
   background-image: url("../../../public/img/home-confetti.png");
     background-repeat: round;
-    
 }
 .container{
   padding: 1% 10% 1% 10%;
-  background-image: url("../../../public/img/blob 1.png");
+  background-image: url("../../../public/img/blob 3.png");
 }
 .sidebar{
   border-radius: 23px 0px 0px 23px;
@@ -102,157 +101,181 @@ nav .sidebar-button i{
 }
 .home-section .home-content{
   border-radius: 43px;
+  /* display: flex; */
   position: relative;
   padding: 60px 30px 30px 30px;
+  background: linear-gradient(114.1deg, #282828 18.52%, rgba(15, 15, 15, 0.8) 98.52%);
+backdrop-filter: blur(120px);
 }
-.home-content .overall-details{
-    width: 100%;
-    text-align: center;
-    
-}
-.overall-details a{
-  font-size: 24px;
-  font-weight: 400;
-  color: white;
-  font-family: 'Poppins', sans-serif;
-}
-.overall-stars{
-  width: 100%;
-  height: 50px;
-}
-.overall-rating a{
-  font-family: Alatsi;
-  font-weight: bold;
-  font-size: 100px;
-}
-.overall-stars{
-  font-size: 35px;
-  color: rgba(225, 238, 38, 0.94);
-}
-.home-content .overall-chart{
-    width: 90%;
-    height: 300px;
-    margin-left: 40px;
-    background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.64) 18.52%, rgba(15, 15, 15, 0.8) 98.52%);
-    backdrop-filter: blur(120px);
-    border-radius: 43px;
-    padding: 15px;
-    
-}
-.overall-chart .ratingBox{
-  width: 100%;
-  height: calc(100% / 5);
-  margin: 2px;
-  padding: 10px;
-  display: flex;
-}
-.overall-chart .name{
-  width: 200px;
-  font-size: 18px;
-  font-weight: bold;
-  color: white;
-  font-family: 'Poppins', sans-serif;
-}
-.overall-chart .rating-bar{
-  width: 100%;
-  height: 100%;
-  padding-top: 6px;
-}
-.ratingBox .rating-bar .box1{
-  height: 70%;
-  width: 80%;
-  background: rgba(247, 180, 23, 0.94);
-}
-.ratingBox .rating-bar .box2{
-  height: 70%;
-  width: 90%;
-  background: rgba(247, 180, 23, 0.94);
-}
-.ratingBox .rating-bar .box3{
-  height: 70%;
-  width: 60%;
-  background: rgba(247, 180, 23, 0.94);
-}
-.ratingBox .rating-bar .box4{
-  height: 70%;
-  width: 50%;
-  background: rgba(247, 180, 23, 0.94);
-}
-.ratingBox .rating-bar .box5{
-  height: 70%;
-  width: 10%;
-  background: rgba(247, 180, 23, 0.94);
-}
-.home-content .review-content{
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 30px;
+.home-content a{
+    font-size: 28px;
+    font-weight: bold;
     color: white;
 }
-.review-content .user-review{
-  width: calc(100% / 3);
-  height: 400px;
-  margin: 10px;
-  padding: 20px;
-  background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.36) 18.52%, rgba(15, 15, 15, 0.12) 98.52%);
-  backdrop-filter: blur(120px);
-  border-radius: 43px;
-}
-.reviewer-details , .reviewer-rating{
-  width: 100%;
-  padding: 5px;
-}
-.reviewer-details{
-  display: flex;
-}
-.reviewer-details .reviewer-pic img{
-    background-color: darkmagenta;
-    border-radius: 50%;
-    border-style: solid;
-    border-color: black;
-    width: 80px;
-    height: 80px;
-}
-.reviewer-details .reviewer-name{
-    width: 120px;
-    margin-left: 15px;
+.content{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    /* background-color: yellow; */
 }
-.reviewer-name a{
-  font-size: 25px;
+
+.calendar-container{
+    min-height: 500px;
+    padding: 20px;
+    width: 60%;
+    margin: 10px;
+    border-radius: 25px;
+    background-color: #8E8E8E;
+}
+.year{
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    width: 100%;
+    background-color: #DADADA;
+    border-radius: 25px 25px 0 0;
+}
+.calendarNotes{
+    width: 40%;
+    /* min-height: 400px; */
+    padding: 10px;
+    /* background-color: royalblue; */
+    background: linear-gradient(114.1deg, rgba(255, 218, 220, 0.12) 18.52%, rgba(255, 235, 236, 0.07) 98.52%);
+    backdrop-filter: blur(120px);
+    border-radius: 15px;
+    text-align: center;
+    justify-content: center;
+    /* display: flex; */
+    align-items: center;
+    
+}
+.calendarNotes a {
+  font-size: 30px;
   font-weight: bold;
-  font-family: 'Poppins', sans-serif;
+  color: white;
+  /* align-items: center; */
 }
-.reviewer-rating{
+.selectday{
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    color: rgb(179, 179, 179);
+}
+.schedule{
+  min-height: 350px;
+}
+.notes{
+    margin-top: 10px;
+    padding: 10px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: rgba(233, 233, 233, 0.171);
+    text-align: left;
+}
+.notes .service_type {
+  color: #FFDD55;
+  font-size: 22px;
+}
+.notes .service_name{
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  /* align-items: center; */
+}
+.addnote .nbtn{
+    height: 50px;
+    width: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    color: black;
+    /* padding: 20px; */
+    background-color: rgb(146, 6, 111);
+}
+.addnote .nbtn:hover{
+  cursor: pointer;
+  background-color: black;
+  color: wheat;
+}
+/* calendar */
+.calendar {
+  margin: auto;
+  width: 100%;
+  background-color: #DADADA;
+  border-radius: 25px;
+}
+
+.month {
+  width: 100%;
+  height: 60px;
+  color: #ff82c7;
+  background-color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 25px 25px 0 0;
   text-align: center;
 }
-.reviewer-rating .star-rating{
-  width: 100%;
-  height: 50%;
-  color: rgba(225, 238, 38, 0.94);
+.month i {
+  font-size: 40px;
+  cursor: pointer;
 }
-.reviewer-rating .ratingPoints{
-  width: 100%;
-  height: 50%;
+.month h1 {
+  font-size: 30px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  /* letter-spacing: 0.2rem; */
 }
-.ratingPoints a{
-  font-size: 24px;
-  font-weight: bold;
-  font-family: 'Poppins', sans-serif;
-}
-.reviewer-comment{
+.weekdays {
+  color: #7a0244;
   width: 100%;
-  height: 50%;
+  height: 50px;
   padding: 5px;
-  /* color: rgb(212, 212, 212); */
+  display: flex;
+  align-items: center;
 }
-.reviewer-comment a{
-  font-size: 18px;
-  font-weight: 600;
-  font-family: 'Poppins', sans-serif;
+.weekdays div {
+  font-size: 20px;
+  font-weight: bold;
+  width: calc(100% / 7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.days {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 20px;
+  height: 360px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+.days div {
+  width: calc(100% / 7);
+  height: calc(100% / 6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.days div:hover:not(.today) {
+  background-color: rgb(177, 14, 95);
+  color: white;
+  border: 3px solid rgb(0, 0, 0);
+  cursor: pointer;
+  border-radius: 15px;
+}
+.prev-date,
+.next-date {
+  opacity: 0.5;
+}
+.today {
+  color: white;
+  border-radius: 15px;
+  background-color: #000000;
 }
 
 

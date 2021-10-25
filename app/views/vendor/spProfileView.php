@@ -57,13 +57,13 @@
           </a>
         </li>
         <li>
-          <a href="#">
+        <a href="<?php echo BASEURL . '/spChat'; ?>">
             <i class="fa fa-envelope" aria-hidden="true"></i>
             <span class="links_name">Chat</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="<?php echo BASEURL . '/spCalendar'; ?>">
             <i class="fa fa-calendar" aria-hidden="true"></i>
             <span class="links_name">Calendar</span>
           </a>
@@ -125,14 +125,6 @@
               </div>
               <div class="col_data">
                 <p>Fernando</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col_name">
-                <label for="uname">User Name</label>
-              </div>
-              <div class="col_data">
-                <p>Lara98</p>
               </div>
             </div>
             <div class="row">
