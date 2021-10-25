@@ -33,3 +33,27 @@ let sidebar = document.querySelector(".sidebar");
       var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
       chart.draw(data, options);
     }    
+
+    //sales summary chart
+var xValues = ["Jan","Feb","Mar","Apr","May","Jun","July","Aug","Sep","Oct","Nov","Dec"];
+var yValues = [3000,10000,5000,18000,40000,60000,50000,55000,80000,65000];
+
+new Chart("myChart", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{
+      fill: false,
+      lineTension: 0,
+      backgroundColor: "white",
+      borderColor: "blue",
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    scales: {
+      yAxes: [{ticks: {min: 1000, max:100000}}],
+    }
+  }
+});
