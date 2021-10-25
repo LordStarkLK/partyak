@@ -6,6 +6,7 @@
   <meta charset="UTF-8">
   <?php linkCSS("vendor/spBooking");  ?>
   <?php linkCSS("navigation"); ?>
+  <?php linkCSS("footer");?>
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -218,6 +219,7 @@
     </section>
   </div>
   <?php linkJS("vendor/spBooking"); ?>
+  <?php linkPhp("footer") ?>
 </body>
 
 </html>

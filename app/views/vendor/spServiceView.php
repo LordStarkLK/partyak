@@ -11,6 +11,7 @@
     <?php linkCSS("navigation"); ?>
     <?php linkCSS("vendor/spAddPackage"); ?>
    
+    <?php linkCSS("footer");?>
     <?php linkCSS("vendor/addService"); ?>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -589,6 +590,7 @@
   <?php linkJS("vendor/spService"); ?>
   <?php linkJS("vendor/spAddPackage"); ?>
   <?php linkJS("vendor/addService"); ?>
+  <?php linkPhp("footer") ?>
 </body>
 
 </html>
