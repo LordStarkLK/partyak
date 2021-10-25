@@ -45,7 +45,7 @@
                     <input class="input" type="hidden" name="order_id" value="ItemNo12345">
                     <input class="input" type="hidden" name="items" value="Wedding Hall"><br>
                     <input class="input" type="hidden" name="currency" value="LKR">
-                    <input class="input" type="hidden" name="amount" value="1000">
+                    <input class="input" type="number" name="amount" placeholder="Enter the Amount in Rs.">
 
                     <input class="input full-width" type="text" name="first_name" placeholder="First Name">
                     <input class="input full-width" type="text" name="last_name" placeholder="Second Name"><br>

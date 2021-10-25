@@ -6,10 +6,13 @@
   font-family: 'Poppins', sans-serif;
 }
 body{
-    background-image: radial-gradient( rgb(211, 111, 250), rgb(125, 255, 255), rgb(250, 237, 116), rgb(241, 106, 201));
-}
+  background-color: #202020;
+  background-image: url("../../../public/img/home-confetti.png");
+    background-repeat: round;}
 .container{
   padding: 1% 10% 1% 10%;
+  background-image: url("../../../public/img/blob 2.png");
+  background-repeat: round;
 }
 .sidebar{
   border-radius: 23px 0px 0px 23px;
@@ -151,7 +154,7 @@ width: 100%;
 .bookings-requests{
     margin: 10px;
     width: 100%;
-    min-height: 400px;
+    min-height: 300px;
     padding: 15px;
 }
 .bookings-requests a{
@@ -161,7 +164,7 @@ width: 100%;
 }
 .bookings-requestTable{
     width: 100%;
-    min-height: 400px;
+    min-height: 300px;
     padding: 10px;
     border-radius: 16px;
     box-shadow: 0 0 5px 10px rgba(0,0,0,0.1);

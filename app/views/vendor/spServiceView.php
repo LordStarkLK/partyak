@@ -8,7 +8,7 @@
   <!-- <link rel="stylesheet" href="spService.css">
     <link rel="stylesheet" href="package.css"> -->
     <?php linkCSS("vendor/spService");  ?>
-    <?php linkCSS("vendorNavigation"); ?>
+    <?php linkCSS("navigation"); ?>
     <?php linkCSS("vendor/spAddPackage"); ?>
    
     <?php linkCSS("vendor/addService"); ?>
@@ -62,13 +62,13 @@
           </a>
         </li>
         <li>
-          <a href="#">
+        <a href="<?php echo BASEURL . '/spChat'; ?>">
             <i class="fa fa-envelope" aria-hidden="true"></i>
             <span class="links_name">Chat</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="<?php echo BASEURL . '/spCalendar'; ?>">
             <i class="fa fa-calendar" aria-hidden="true"></i>
             <span class="links_name">Calendar</span>
           </a>
