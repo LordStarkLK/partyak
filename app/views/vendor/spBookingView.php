@@ -85,6 +85,58 @@
         </div>
       </nav>
       <div class="home-content">
+      <div class="bookings-requests">
+          <a>Booking Requests</a>
+          <div class="bookings-requestTable">
+            <table class="table-content">
+              <thead>
+                <tr>
+                  <th>Customer Name</th>
+                  <th>Event Type</th>
+                  <th>Guest Count</th>
+                  <th>Event Date</th>
+                  <th>Pacakge</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Kamal</th>
+                  <th>Wedding</th>
+                  <th>300</th>
+                  <th>2020-10-10</th>
+                  <th>Summer Package</th>
+                  <th class="btn-row">
+                    <button class="accept-booking">Accept</button>
+                    <button class="reject-booking">Reject</button>
+                  </th>
+                </tr>
+                <tr>
+                  <th>Kamal</th>
+                  <th>Wedding</th>
+                  <th>300</th>
+                  <th>2020-10-10</th>
+                  <th>Summer Package</th>
+                  <th class="btn-row">
+                    <button class="accept-booking">Accept</button>
+                    <button class="reject-booking">Reject</button>
+                  </th>
+                </tr>
+                <tr>
+                  <th>Kamal</th>
+                  <th>Wedding</th>
+                  <th>300</th>
+                  <th>2020-10-10</th>
+                  <th>Summer Package</th>
+                  <th class="btn-row">
+                    <button class="accept-booking">Accept</button>
+                    <button class="reject-booking">Reject</button>
+                  </th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
         <div class="search-bookings">
           <input type="text" placeholder="Search" name="search">
           <button type="submit"><i class="fa fa-search"></i></button>
@@ -161,58 +213,7 @@
           </table>
         </div>
 
-        <div class="bookings-requests">
-          <a>Booking Requests</a>
-          <div class="bookings-requestTable">
-            <table class="table-content">
-              <thead>
-                <tr>
-                  <th>Customer Name</th>
-                  <th>Event Type</th>
-                  <th>Guest Count</th>
-                  <th>Event Date</th>
-                  <th>Pacakge</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>Kamal</th>
-                  <th>Wedding</th>
-                  <th>300</th>
-                  <th>2020-10-10</th>
-                  <th>Summer Package</th>
-                  <th class="btn-row">
-                    <button class="accept-booking">Accept</button>
-                    <button class="reject-booking">Reject</button>
-                  </th>
-                </tr>
-                <tr>
-                  <th>Kamal</th>
-                  <th>Wedding</th>
-                  <th>300</th>
-                  <th>2020-10-10</th>
-                  <th>Summer Package</th>
-                  <th class="btn-row">
-                    <button class="accept-booking">Accept</button>
-                    <button class="reject-booking">Reject</button>
-                  </th>
-                </tr>
-                <tr>
-                  <th>Kamal</th>
-                  <th>Wedding</th>
-                  <th>300</th>
-                  <th>2020-10-10</th>
-                  <th>Summer Package</th>
-                  <th class="btn-row">
-                    <button class="accept-booking">Accept</button>
-                    <button class="reject-booking">Reject</button>
-                  </th>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+        
       </div>
     </section>
   </div>
