@@ -408,7 +408,7 @@ form.cuse::after {
 
 .metadata {
   display: inline-block;
-  float: right;
+  /* float: right; */
   padding: 0 0 0 7px;
   position: relative;
   bottom: -4px;
