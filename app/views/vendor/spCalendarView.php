@@ -125,7 +125,7 @@
                     </div>
                 </div>
                 <div class="addnote">
-                  <button>Add Note</button>
+                  <button class="nbtn">Add Note</button>
               </div>
             </div>
         </div>
