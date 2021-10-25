@@ -57,7 +57,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+        <a href="<?php echo BASEURL . '/spChat'; ?>">
             <i class="fa fa-envelope" aria-hidden="true"></i>
             <span class="links_name">Chat</span>
           </a>
