@@ -6,12 +6,13 @@
   font-family: 'Poppins', sans-serif;
 }
 body{
-    background-color: rgb(241, 188, 188);
-    /* background-image: url(venBack.png);
-    background-repeat: round; */
+  background-color: #202020;
+  background-image: url("../../../public/img/home-confetti.png");
+    background-repeat: round;
 }
 .container{
   padding: 5% 10% 1% 10%;
+  background-image: url("../../../public/img/blob 1.png");
 }
 .sidebar{
   border-radius: 23px 0px 0px 23px;
