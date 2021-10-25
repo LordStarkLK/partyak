@@ -9,6 +9,7 @@ body{
   background-image: radial-gradient( rgb(211, 111, 250), rgb(125, 255, 255), rgb(250, 237, 116), rgb(241, 106, 201));
 }
 .container{
+  /* z-index: 1; */
   padding: 1% 10% 1% 10%;
 }
 .sidebar{
