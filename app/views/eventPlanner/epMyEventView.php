@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <?php linkCSS("eventPlanner/epNote"); ?>
+    <?php linkCSS("eventPlanner/epMyEvent"); ?>
     <?php linkCSS("navigation"); ?>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -94,57 +94,21 @@
             <nav>
                 <div class="sidebar-button">
                     <i class='bx bx-menu sidebarBtn'></i>
-                    <span class="dashboard">Note</span>
+                    <span class="dashboard">My Event</span>
                 </div>
             </nav>
-            <table class="table-content">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Customer Name</th>
-                        <th>Order ID</th>
-                        <th>Note</th>
-                        <th>View</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>1</th>
-                        <th>Kamal</th>
-                        <th>6372</th>
-                        <th>123 Photography,oneshot bar,punsara....</th>
-                        <th class="view-note">View note</th>
-                    </tr>
-                    <tr>
-                        <th>2</th>
-                        <th>Namal</th>
-                        <th>9375</th>
-                        <th>123 Photography,oneshot bar,punsara....</th>
-                        <th class="view-note">View note</th>
-                    </tr>
-                    <tr>
-                        <th>3</th>
-                        <th>Amal</th>
-                        <th>8452</th>
-                        <th>123 Photography,oneshot bar,punsara....</th>
-                        <th class="view-note">View note</th>
-                    </tr>
-                    <tr>
-                        <th>4</th>
-                        <th>Kamal</th>
-                        <th>7345</th>
-                        <th>123 Photography,oneshot bar,punsara....</th>
-                        <th class="view-note">View note</th>
-                    </tr>
-                    <tr>
-                        <th>5</th>
-                        <th>Kamal</th>
-                        <th>7453</th>
-                        <th>123 Photography,oneshot bar,punsara....</th>
-                        <th class="view-note">View note</th>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="glass-card-section">
+                <div class="glass card">
+                    <h1 class="card-date">24/10</h1>
+                    <span class="card-description">
+                        <p class="description-title">Office Party</p>
+                        <p class="description-place">Galadari Hotel</p>
+                    </span>
+                    <span class="card-button">
+                        <button class="card-btn">View</button>
+                    </span>
+                </div>
+            </div>
             <div class="add-note-div">
                 <h3 class="add-note">Add a note</h3>
                 <img class="add-btn" <?php srcIMG("addButton.png") ?>>

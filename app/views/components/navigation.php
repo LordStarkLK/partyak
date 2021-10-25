@@ -12,7 +12,11 @@
                 echo '<li><a href="#">Contact Us</a></li>';
             } else {
                 if ($_SESSION["type"] == "vendor") {
-                    echo '<li><a href="#">Business</a></li>';
+
+                    echo "<li><a href='";
+                    echo BASEURL . '/spAnalytics';
+                    echo "'>Business</a></li>";
+
                 } elseif ($_SESSION["type"] == "customer") {
                     echo '<li><a href="#">Browse</a></li>';
                 }
@@ -23,29 +27,30 @@
     </div>
     <?php
     if (!isset($_SESSION["type"])) {
-        echo "<div class='nav-btn'>";
+        echo "<div class='nav-btn'>"; 
+
         echo "<button class='signup-button btn-sign' type='button'><a href='";
         echo BASEURL . '/home/signup';
         echo "'>Sign up</a></button>";
+
         echo "<button class='login-button btn-sign' type='button'><a href='";
         echo BASEURL . '/login';
         echo " '>Login</a></button>
         </div>";
     } else {
-        echo "
-            <div class='nav-bar-links-vendor'>
-            <div class='nav-item-vendor'>
-                <a href='#'><i class='fa fa-comments'></i></a>
-                <a href='#'><i class='fa fa-bell'></i></a>
-                <a href='#'><i class='fa fa-user'></i></a>
+        echo '
+            <div class="nav-bar-links-vendor">
+            <div class="nav-item-vendor">
+                <a href="#"><i class="fa fa-comments"></i></a>
+                <a href="#"><i class="fa fa-bell"></i></a>
+                <a href="#"><i class="fa fa-user"></i></a>
             </div>
-            <div class='nav-buttons-vendor'>
-                <button class='login-button' type='button'><a href='";
+            <div class="nav-buttons-vendor">
+                <button class="login-button" type="button"><a href="';
         echo BASEURL . '/logout';
-        echo "'>Log out</a></button>
-                <!-- <button class='signup-button'type='button'>Sign up</button> -->
+        echo '">Log out</a></button>
             </div>
-        </div>";
+        </div>';
     }
     ?>
 

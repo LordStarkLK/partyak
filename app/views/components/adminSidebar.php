@@ -51,12 +51,12 @@
                 <span class="links_name side-links">Chat</span>
             </a>
         </li>
-        <li>
+        <!-- <li>
             <a href="#">
                 <i class='bx bx-calendar'></i>
                 <span class="links_name side-links">Calendar</span>
             </a>
-        </li>
+        </li> -->
         <li>
             <a href="<?php echo BASEURL . '/adminReview'; ?>">
                 <i class='bx bxs-star'></i>

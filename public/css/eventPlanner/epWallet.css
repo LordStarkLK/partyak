@@ -7,12 +7,11 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  background-image: radial-gradient(
-    rgb(211, 111, 250),
-    rgb(125, 255, 255),
-    rgb(250, 237, 116),
-    rgb(241, 106, 201)
-  );
+  margin: 0;
+  background-color: #202020;
+  background-image: url("../../img/home-confetti.png");
+  background-position: 50% 50%;
+  background-size: contain;
 }
 .container {
   padding: 1% 10% 1% 10%;
@@ -21,7 +20,7 @@ body {
   border-radius: 23px 0px 0px 23px;
   margin-top: 5%;
   position: fixed;
-  height: 515px;
+  height: 558px;
   width: 220px;
   background-color: rgb(0, 0, 0);
   background: linear-gradient(

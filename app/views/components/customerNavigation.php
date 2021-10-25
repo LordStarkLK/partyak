@@ -68,7 +68,7 @@
     <div class="nav-bar" id="myTopnav">
 
         <div class="logo">
-            <a href="<?php echo BASEURL . '/home'; ?>"><img class="logo-img" <?php srcIMG("navbarlogo.png") ?> alt=""> </i></a>
+            <a href="<?php echo BASEURL . '/customerHome'; ?>"><img class="logo-img" <?php srcIMG("navbarlogo.png") ?> alt=""> </i></a>
 
         </div>
 
