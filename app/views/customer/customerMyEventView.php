@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="customer.Planevent.Myevent.css">
-    <title>Document</title>
+    <title>My Event</title>
     <?php linkCSS("customer/customerMyEventView"); ?>
     <?php linkCSS("customerNavigation"); ?>
     <?php linkCSS("footer");?>
@@ -15,6 +15,7 @@
         <?php linkPhp("customerNavigation") ?>
 
     </header>
+    <div class="content">
     <div class="container">
         <div class="custopic">
             <p>My Events</p>
@@ -42,6 +43,22 @@
           <?php
             $i = 1;
             while($row=mysqli_fetch_assoc($data['eventDetail']) ){
+                $date = date('Y-m-d');
+
+
+                if($date < $row['start_date']){
+                  $status = 'Upcomming';
+                
+                }
+                
+                if(($date > $row['end_date']) ){
+                  $status = 'Complete';
+                }
+
+                if(($date > $row['start_date']) && ($date <= $row['end_date'])){
+                  $status = 'Ongoing';
+                }
+               
                 echo"
                 <tr>
                   <td>$i</td>
@@ -51,8 +68,8 @@
                   <td>$row[start_date] to $row[end_date]</td>
                   <td>$row[noOfGuest]</td>
                   <td>$row[plan_type]</td>
-                  <td>Upcoming</td>
-                  <td><button class=\"go-event\"><a href =\"<?php echo BASEURL . '/customerThroughEpPlan'; ?>\">Go</a></button></td>
+                  <td>$status</td>
+                  <td><button class=\"go-event\"><a href =\" ".BASEURL ."/customerEventSB\">Go</a></button></td>
         
                   
                   <td>  
@@ -71,6 +88,8 @@
        
       </table>
      
+   </div>
+
    </div>
 
    <?php linkPhp("footer") ?>
