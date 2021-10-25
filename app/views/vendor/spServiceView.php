@@ -8,7 +8,7 @@
   <!-- <link rel="stylesheet" href="spService.css">
     <link rel="stylesheet" href="package.css"> -->
     <?php linkCSS("vendor/spService");  ?>
-    <?php linkCSS("vendorNavigation"); ?>
+    <?php linkCSS("navigation"); ?>
     <?php linkCSS("vendor/spAddPackage"); ?>
    
     <?php linkCSS("vendor/addService"); ?>
