@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
- 
+    <title>On Your Own Planning Service Details</title>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <?php linkCSS("customer/customerOnYourOwnSView"); ?>
@@ -20,62 +20,62 @@
     
       <ul class="sidenav-links">
           <li>
-            <a href="#">
+            <a href="#"  id="ve">
               <i class="fas fa-hotel" ></i>
               <span class="links_name" > Venues & Halls</span>
             </a>
           </li>
         <li>
-          <a href="#">
+          <a href="#"  id="ca">
             <i class="fas fa-utensils" ></i>
             <span class="links_name" >Catering Service</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" id="ph">
             <i class="fas fa-camera" ></i>
             <span class="links_name" >Photographers</span>
           </a>
         </li>
         
         <li>
-          <a href="#">
+          <a href="#" id="mu">
             <i class="fas fa-guitar" ></i>
             <span class="links_name" >Musical Service</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" id= "da">
             <i class="fas fa-child" ></i>
             <span class="links_name" >Dancing Groups</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" id="sa">
             <i class="fas fa-building" ></i>
             <span class="links_name" >Saloon</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" id="cak">
             <i class="fas fa-birthday-cake" ></i>
             <span class="links_name" >Cake & Sweet</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" id="dec">
             <i class="fas fa-holly-berry" ></i>
             <span class="links_name" >Decorations</span>
           </a>
         </li>
         <li>
-            <a href="#">
+            <a href="#" id="so">
                 <i class="fas fa-microphone" ></i>
               <span class="links_name" >Sounds & Lightings</span>
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="#" id="dr">
                 <i class="fas fa-female" ></i>
               <span class="links_name" >Dress Suppliers</span>
             </a>
@@ -92,8 +92,11 @@
       <div class="seat">
             <select name="Seating" placeholder="Seating Arrangement">
                 <option value="null">Seating Arrangement</option>
-                <option value="round">Round</option>
-                <option value="box">Box</option>
+                <option value="banquet">Banquet</option>
+                <option value="board">Board</option>
+                <option value="classroom">Classroom</option>
+                <option value="informal">Informal</option>
+                <option value="ushape">U shape</option>
               </select>
               <!-- <div class="error"><?php echo $errors["seatingA"] ?></div> --> 
       </div>
@@ -161,6 +164,8 @@
       <div class="save">
           <button type="button" class="saveb" id="venue" value="Submit">Next <i class="fas fa-forward"></i></button>
       </div> 
+
+     
 
       </div>
     </form>
@@ -395,7 +400,8 @@
           <select name="Salon Type" placeholder="Gender">
           <option value="null">Salon Type</option>
           <option value="male">Salon for males</option>
-          <option value="female">Salon for female</option>
+          <option value="female">Salon for females</option>
+          <option value="female">Salon for both types</option>
           </select>
           <!-- <div class="error"><?php echo $errors["gender"] ?></div> -->
         </div>
