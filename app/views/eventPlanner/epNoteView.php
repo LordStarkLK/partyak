@@ -104,50 +104,28 @@
                         <th>Customer Name</th>
                         <th>Order ID</th>
                         <th>Note</th>
-                        <th>View</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th>1</th>
-                        <th>Kamal</th>
-                        <th>6372</th>
-                        <th>123 Photography,oneshot bar,punsara....</th>
-                        <th class="view-note">View note</th>
-                    </tr>
-                    <tr>
-                        <th>2</th>
-                        <th>Namal</th>
-                        <th>9375</th>
-                        <th>123 Photography,oneshot bar,punsara....</th>
-                        <th class="view-note">View note</th>
-                    </tr>
-                    <tr>
-                        <th>3</th>
-                        <th>Amal</th>
-                        <th>8452</th>
-                        <th>123 Photography,oneshot bar,punsara....</th>
-                        <th class="view-note">View note</th>
-                    </tr>
-                    <tr>
-                        <th>4</th>
-                        <th>Kamal</th>
-                        <th>7345</th>
-                        <th>123 Photography,oneshot bar,punsara....</th>
-                        <th class="view-note">View note</th>
-                    </tr>
-                    <tr>
-                        <th>5</th>
-                        <th>Kamal</th>
-                        <th>7453</th>
-                        <th>123 Photography,oneshot bar,punsara....</th>
-                        <th class="view-note">View note</th>
-                    </tr>
+                    <?php
+                    $i = 1;
+                    while ($row = mysqli_fetch_assoc($data['note'])) {
+                        echo "
+                <tr>
+                  <td>$row[note_id]</td>
+                  <td>$row[customer_name]</td>
+                  <td>$row[order_id]</td>
+                  <td>$row[note]</td>
+                </tr>   
+                ";
+                        $i++;
+                    } ?>
                 </tbody>
             </table>
             <div class="add-note-div">
                 <h3 class="add-note">Add a note</h3>
-                <img class="add-btn" <?php srcIMG("addButton.png") ?>>
+                <a href="<?php echo BASEURL . '/epNoteAdd'; ?>"><img class="add-btn" <?php srcIMG("addButton.png") ?>></a>
+
             </div>
         </section>
     </div>

@@ -307,6 +307,7 @@ nav .sidebar-button i {
 }
 .add-note-div {
   top: 50% !important;
+  margin-top: 20px;
   position: relative;
   display: flex;
   flex-direction: row;
