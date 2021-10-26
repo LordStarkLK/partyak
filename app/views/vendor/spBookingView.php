@@ -102,10 +102,10 @@
               </thead>
               <tbody>
                 <tr>
-                  <th>Kamal</th>
+                  <th>Kamal Perera</th>
                   <th>Wedding</th>
                   <th>300</th>
-                  <th>2020-10-10</th>
+                  <th>2020-10-29</th>
                   <th>Summer Package</th>
                   <th class="btn-row">
                     <button class="accept-booking">Accept</button>
@@ -113,21 +113,21 @@
                   </th>
                 </tr>
                 <tr>
-                  <th>Kamal</th>
-                  <th>Wedding</th>
-                  <th>300</th>
-                  <th>2020-10-10</th>
-                  <th>Summer Package</th>
+                  <th>Nimal Gamage</th>
+                  <th>Party</th>
+                  <th>100</th>
+                  <th>2020-10-30</th>
+                  <th>Gold Package</th>
                   <th class="btn-row">
                     <button class="accept-booking">Accept</button>
                     <button class="reject-booking">Reject</button>
                   </th>
                 </tr>
                 <tr>
-                  <th>Kamal</th>
+                  <th>Nayana Kumari</th>
                   <th>Wedding</th>
                   <th>300</th>
-                  <th>2020-10-10</th>
+                  <th>2020-11-10</th>
                   <th>Summer Package</th>
                   <th class="btn-row">
                     <button class="accept-booking">Accept</button>
@@ -165,7 +165,7 @@
                 <th>Kamal</th>
                 <th>k@gmail.com</th>
                 <th>Venues & Halls</th>
-                <th>2020-10-10</th>
+                <th>2020-11-10</th>
                 <th>120000</th>
                 <th>45000</th>
                 <th>In progress</th>
@@ -175,7 +175,7 @@
                 <th>Namal</th>
                 <th>n@gmail.com</th>
                 <th>Venues & Halls</th>
-                <th>2020-10-11</th>
+                <th>2020-12-11</th>
                 <th>120000</th>
                 <th>35000</th>
                 <th>In progress</th>
@@ -184,9 +184,9 @@
                 <th>3</th>
                 <th>Amal</th>
                 <th>a@gmail.com</th>
-                <th>Venues & Halls</th>
-                <th>2020-10-15</th>
-                <th>120000</th>
+                <th>Caterings</th>
+                <th>2020-11-15</th>
+                <th>50000</th>
                 <th>20000</th>
                 <th>In progress</th>
               </tr>
@@ -197,18 +197,18 @@
                 <th>Venues & Halls</th>
                 <th>2020-10-10</th>
                 <th>120000</th>
-                <th>20000</th>
-                <th>In progress</th>
+                <th>120000</th>
+                <th>Completed</th>
               </tr>
               <tr>
                 <th>5</th>
-                <th>Kamal</th>
+                <th>Kasun</th>
                 <th>k@gmail.com</th>
-                <th>Venues & Halls</th>
-                <th>2020-10-25</th>
+                <th>Caterings</th>
+                <th>2020-10-01</th>
                 <th>120000</th>
-                <th>20000</th>
-                <th>In progress</th>
+                <th>120000</th>
+                <th>Completed</th>
               </tr>
             </tbody>
           </table>

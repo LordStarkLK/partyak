@@ -117,8 +117,8 @@
                 <th><button class="delete-service">Delete</button></th>
               </tr>
               <tr>
-                <th>Venues & Halls</th>
-                <th><a href="#">Nilwala Caterings</a><br>Galle Rd, Matara</th>
+                <th>Caterings</th>
+                <th><a href="#">Crystal Caterings</a><br>Galle Rd, Matara</th>
                 <th>Pending</th>
                 <th><button class="delete-service">Delete</button></th>
               </tr>
@@ -129,8 +129,8 @@
                 <th><button class="delete-service">Delete</button></th>
               </tr>
               <tr>
-                <th>Venues & Halls</th>
-                <th><a href="#">Nilwala Caterings</a><br>Galle Rd, Matara</th>
+                <th>Caterings</th>
+                <th><a href="#">Foodie Caterings</a><br>Nugegoda</th>
                 <th>Pending</th>
                 <th><button class="delete-service">Delete</button></th>
               </tr>

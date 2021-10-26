@@ -145,11 +145,11 @@
                 <th>3</th>
                 <th>Nimal</th>
                 <th>nimal@gmail.com</th>
-                <th>Catering</th>
+                <th>V & H</th>
                 <th>2021-10-01</th>
                 <th>40000</th>
                 <th>20000</th>
-                <th>In progress</th>
+                <th>Completed</th>
               </tr>
               <tr>
                 <th>4</th>
@@ -165,13 +165,13 @@
                 <th>5</th>
                 <th>Sunil</th>
                 <th>sunil@gmail.com</th>
-                <th>Catering</th>
+                <th>V & H</th>
                 <th>2021-08-29</th>
                 <th>40000</th>
                 <th>40000</th>
                 <th>Completed</th>
               </tr>
-              <tr>
+              <!-- <tr>
                 <th>6</th>
                 <th>Nayana</th>
                 <th>nay@gmail.com</th>
@@ -200,7 +200,7 @@
                 <th>40000</th>
                 <th>10000</th>
                 <th>Cancelled</th>
-              </tr>
+              </tr> -->
 
 
 
