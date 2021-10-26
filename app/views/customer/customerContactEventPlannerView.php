@@ -34,7 +34,7 @@
         </div>
   
         <div class="cusGallery2">
-          <a  href="#">
+          <a  href="<?php echo BASEURL . '/eventPlanner'; ?>">
           <img <?php srcIMG("shero.jpg") ?> alt="Chance Flowers">
           </a>
           <div class="cusDes2">Event By Shero <br>Colombo, Sri Lanaka</div>
