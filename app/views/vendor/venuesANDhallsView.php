@@ -270,7 +270,7 @@
                     </div>
                     <div class="details">
                         Reserve the date by paying the reservation fee online on Partyak.
-                        Step payments leading to a final payment on the event day.
+                        The payment have to be done one day prior to the event date.
                     </div>
                 </div>
                 <div class="details_row">
