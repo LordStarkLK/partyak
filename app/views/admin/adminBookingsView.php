@@ -82,8 +82,8 @@
                         </tr>
                         <tr>
                             <td>Paulo Costa</td>
-                            <td>Mad Vibes DJ</td>
-                            <td>DJ</td>
+                            <td>Halo hotels</td>
+                            <td>Venues and halls</td>
                             <td>10 June 2022</td>
                             <td>
                                 <div class="btn-group">

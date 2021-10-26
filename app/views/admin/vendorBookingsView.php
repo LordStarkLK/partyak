@@ -32,6 +32,7 @@
             </div>
 
             <div class="home-content">
+                <h1 style="color:white">Halo Hotels</h1>
                 <div class="search-bookings">
                     <input type="text" placeholder="Search" name="search">
                     <button type="submit"><i class="fa fa-search"></i></button>
