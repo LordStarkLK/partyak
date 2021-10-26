@@ -38,13 +38,13 @@
                         <div class="facebook">
                             <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
                             <div class="socialLink">
-                                <a href="fblink">https://www.facebook.com/lara.fernando</a>
+                                <a href="fblink">https://www.facebook.com/dilsithmi.abeywickrama</a>
                             </div>
                         </div>
                         <div class="linkedin">
                             <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
                             <div class="socialLink">
-                                <a href="linkedinlink">https://www.linkedin.com/in/lara-fernando</a>
+                                <a href="linkedinlink">https://www.linkedin.com/in/dilsithmi.abeywickrama</a>
                             </div>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                                 <label for="fname">First Name</label>
                             </div>
                             <div class="col_data">
-                                <p>Lara</p>
+                                <p>Hiruni</p>
                             </div>
                         </div>
                         <div class="row">
@@ -66,17 +66,17 @@
                                 <label for="lname">Last Name</label>
                             </div>
                             <div class="col_data">
-                                <p>Fernando</p>
+                                <p>Danapala</p>
                             </div>
                         </div>
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col_name">
                                 <label for="uname">User Name</label>
                             </div>
                             <div class="col_data">
                                 <p>Lara98</p>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="row">
                             <div class="col_name">
                                 <label for="gender">Gender</label>
@@ -98,11 +98,11 @@
                                 <label for="email">Email</label>
                             </div>
                             <div class="col_data">
-                                <p>lara@gmail.com</p>
+                                <p>dilsithmiabeywickrama@gmail.com</p>
                             </div>
                         </div>
                     </div>
-                    <div class="bank_info">
+                    <!-- <div class="bank_info">
                         <a>Bank Account Information</a>
                         <div class="edit"><a href="#">Edit</a></div>
                         <div class="row">
@@ -118,7 +118,7 @@
                                 <label for="accholdername">Acc: Holder Name</label>
                             </div>
                             <div class="col_data">
-                                <p>Lara Fernando</p>
+                                <p>Hiruni Danapala</p>
                             </div>
                         </div>
                         <div class="row">
@@ -145,7 +145,7 @@
                                 <p>1221</p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
             </div>

@@ -107,7 +107,7 @@
                             <td>Best service you can trust!</td>
                             <td><img class="customer-image" <?php srcIMG("light&sounf.jpg") ?> width="60" height="60">
                             </td>
-                            <td><i class="fas fa-circle"></i> Online</td>
+                            <td><i class="fas fa-circle" style="color: #ffa600"></i> Pending</td>
                             <td>
                                 <div class="btn-group">
                                     <div class="dropdown">
@@ -145,7 +145,7 @@
                                         <?php
         $id_name = 'myDropdown';
         
-         $x = 2;
+         $x = 3;
          $id_name .= $x;
         echo"
         <button onclick=\"myFunction($x)\" class=\"dropbtn\">Change status <i class=\"fas fa-caret-down\"></i></button>
@@ -176,7 +176,7 @@
                                         <?php
         $id_name = 'myDropdown';
         
-         $x = 2;
+         $x = 4;
          $id_name .= $x;
         echo"
         <button onclick=\"myFunction($x)\" class=\"dropbtn\">Change status <i class=\"fas fa-caret-down\"></i></button>
