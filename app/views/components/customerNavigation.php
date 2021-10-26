@@ -98,8 +98,8 @@
                     <div class="no">
                         <button class="nobtn"><i class="fa fa-bell"></i></button>
                         <div class="no-content">
-                            <p>You have do advance payment for booking Mount Lavania Hotel.</p>
-                            <a href="#">Do Payment</a>
+                            <p>You have do 100,000 LKR reservation payment for reserve Mount Lavania Hotel.</p>
+                            <a href="<?php echo BASEURL . '/payment'; ?>">Do Payment</a>
                         </div>
                     </div>
                     

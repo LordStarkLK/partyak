@@ -178,7 +178,7 @@
         <div class="back" id="backc">
             <button type="button" class="bac" value="Submit"><i class="fas fa-backward"></i> Previous</button>
         </div>
-        <br><p0>Meal Type</p0>
+        <br><p0>Meal Types & Addtional Features</p0>
         <div class="input-box15">
           <div class="breakt">
             <input  placeholder="Breakfast" name="breakfast">
@@ -259,6 +259,10 @@
         </div>
         <div class="input-box25">
           <input type="text" placeholder="Estimated Budget Range" name="budget">
+          <!-- <div class="error"><?php echo $errors["budget"] ?></div> -->
+        </div>
+        <div class="input-box26">
+          <input type="text" placeholder="Photo shoot details" name="budget">
           <!-- <div class="error"><?php echo $errors["budget"] ?></div> -->
         </div>
 
