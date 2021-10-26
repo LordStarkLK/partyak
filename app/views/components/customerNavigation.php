@@ -68,7 +68,7 @@
     <div class="nav-bar" id="myTopnav">
 
         <div class="logo">
-            <a href="<?php echo BASEURL . '/home'; ?>"><img class="logo-img" <?php srcIMG("navbarlogo.png") ?> alt=""> </i></a>
+            <a href="<?php echo BASEURL . '/customerHome'; ?>"><img class="logo-img" <?php srcIMG("navbarlogo.png") ?> alt=""> </i></a>
 
         </div>
 
@@ -94,7 +94,15 @@
                 </div>
 
                 <div class="nav-noti">
-                    <a href="#"><i class="fa fa-bell"></i></a>
+                   
+                    <div class="no">
+                        <button class="nobtn"><i class="fa fa-bell"></i></button>
+                        <div class="no-content">
+                            <p>You have do advance payment for booking Mount Lavania Hotel.</p>
+                            <a href="#">Do Payment</a>
+                        </div>
+                    </div>
+                    
                 </div>
 
             </div>

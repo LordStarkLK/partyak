@@ -80,6 +80,12 @@
             <span class="links_name">Note</span>
           </a>
         </li>
+        <li>
+          <a href="<?php echo BASEURL . '/epmyevent '; ?>">
+            <i class='bx bx-history' aria-hidden="true"></i>
+            <span class="links_name">My Event</span>
+          </a>
+        </li>
       </ul>
     </div>
     <section class="home-section">

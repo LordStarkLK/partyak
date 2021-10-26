@@ -5,6 +5,7 @@ class CustomerMyEvent extends FrameworkPartyak{
     public function __construct(){
         $this->helper("linker");
         $this->user = $this->model('customerMyEventModel');
+        $this->preventBack("customer");
     }
     
     public function index(){

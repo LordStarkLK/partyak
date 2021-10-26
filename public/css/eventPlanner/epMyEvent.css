@@ -53,7 +53,7 @@ body {
   border-radius: 23px 0px 0px 23px;
   margin-top: 5%;
   position: fixed;
-  height: 515px;
+  height: 558px;
   width: 220px;
   background-color: rgb(0, 0, 0);
   background: linear-gradient(
@@ -63,6 +63,59 @@ body {
   );
   backdrop-filter: blur(120px);
   transition: all 0.5s ease;
+}
+.glass {
+  backdrop-filter: blur(23px) saturate(200%);
+  -webkit-backdrop-filter: blur(23px) saturate(200%);
+  background-color: rgba(73, 73, 73, 0.3);
+  border-radius: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+.card {
+  display: flex;
+  width: 750px;
+  height: 142px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  top: 100px;
+  left: 129px;
+  position: relative;
+}
+.card-date {
+  font-family: "Atlasi", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 57px;
+  line-height: 73px;
+
+  color: #ffffff;
+}
+
+.card-button .card-btn {
+  padding: 7px 32px !important;
+  border-radius: 18px !important;
+  background-color: #616161;
+  color: #d8ff3b;
+  font-size: 16px;
+}
+.description-title {
+  font-family: "Atlasi", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 36px;
+  color: rgba(255, 255, 255, 0.71);
+}
+.description-place {
+  font-family: "Atlasi", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 43px;
+  line-height: 55px;
+  /* identical to box height */
+
+  color: #ffffff;
 }
 .sidebar.active {
   width: 20%;
@@ -306,7 +359,7 @@ nav .sidebar-button i {
   left: 40%;
 }
 .add-note-div {
-  top: 33%;
+  top: 66%;
   position: relative;
   display: flex;
   flex-direction: row;

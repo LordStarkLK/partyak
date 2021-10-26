@@ -7,6 +7,8 @@ class CustomerOnYourOwnPlan extends FrameworkPartyak{
 
          //include this to call CRUD functions from the controller files
          $this->OnYourOwnModel = $this->model("CustomerOnYourOwnPlanModel");
+
+         $this->preventBack("customer");
     }
     
     public function index(){
