@@ -1,16 +1,20 @@
 <?php
 
-class EpNote extends FrameworkPartyak
+class epNote extends FrameworkPartyak
 {
     public function __construct()
     {
         $this->helper("linker");
-        $this->preventBack("vendor");
-    }
 
+        $this->preventBack("vendor");
+
+        $this->note = $this->model('EventPlannerNoteModel');
+
+    }
     public function index()
     {
-        // echo "Hi";
-        $this->view("eventPlanner/epnoteview");
+
+        $data['note'] = $this->note->getNotes();
+        $this->view("eventPlanner/epNoteView", $data);
     }
 }

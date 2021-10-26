@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
- 
+    <title>Contact Event planner</title>
     <?php linkCSS("customer/customerContactEventPlannerView"); ?>
     <?php linkCSS("customerNavigation"); ?>
     <?php linkCSS("footer");?>

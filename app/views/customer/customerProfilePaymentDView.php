@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
- 
+    <title>Payment Details</title>
     <?php linkCSS("customer/customerProfilePaymentD"); ?>
     <?php linkCSS("customerNavigation"); ?>
     <?php linkCSS("footer");?>

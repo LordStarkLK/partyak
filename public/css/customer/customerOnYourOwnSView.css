@@ -61,6 +61,7 @@ body{
 }
 .sidebar .sidenav-links li a.active{
   background: #626a79;
+  border-radius: 19px 0px 0px 19px;
 }
 .sidebar .sidenav-links li a:hover{
    background: linear-gradient(114.1deg, rgba(129, 129, 129, 0.08) 18.52%, rgba(49, 49, 49, 0.51) 98.52%);
@@ -161,7 +162,7 @@ body{
   display: flex;
   flex-direction: column;
   order:1;
-  width: calc(100% - 350px);
+  width: calc(100% - 260px);
   left: 260px;
   transition: all 0.5s ease;
   border-radius: 30px; 
@@ -353,7 +354,7 @@ body{
   display: flex;
   flex-direction: column;
   order:1;
-  width: calc(100% - 350px);
+  width: calc(100% - 260px);
   left: 260px;
   transition: all 0.5s ease;
   border-radius: 30px; 
@@ -382,7 +383,7 @@ position: relative;
 display: flex;
 flex-direction: column;
 order:1;
-width: calc(100% - 350px);
+width: calc(100% - 260px);
 left: 260px;
 transition: all 0.5s ease;
 border-radius: 30px; 
@@ -412,7 +413,7 @@ position: relative;
 display: flex;
 flex-direction: column;
 order:1;
-width: calc(100% - 350px);
+width: calc(100% - 260px);
 left: 260px;
 transition: all 0.5s ease;
 border-radius: 30px; 
@@ -440,7 +441,7 @@ position: relative;
 display: flex;
 flex-direction: column;
 order:1;
-width: calc(100% - 350px);
+width: calc(100% - 260px);
 left: 260px;
 transition: all 0.5s ease;
 border-radius: 30px; 
@@ -490,7 +491,7 @@ position: relative;
 display: flex;
 flex-direction: column;
 order:1;
-width: calc(100% - 350px);
+width: calc(100% - 260px);
 left: 260px;
 transition: all 0.5s ease;
 border-radius: 30px; 
@@ -546,7 +547,7 @@ position: relative;
 display: flex;
 flex-direction: column;
 order:1;
-width: calc(100% - 350px);
+width: calc(100% - 260px);
 left: 260px;
 transition: all 0.5s ease;
 border-radius: 30px; 
@@ -575,7 +576,7 @@ position: relative;
 display: flex;
 flex-direction: column;
 order:1;
-width: calc(100% - 350px);
+width: calc(100% - 260px);
 left: 260px;
 transition: all 0.5s ease;
 border-radius: 30px; 
@@ -603,7 +604,7 @@ position: relative;
 display: flex;
 flex-direction: column;
 order:1;
-width: calc(100% - 350px);
+width: calc(100% - 260px);
 left: 260px;
 transition: all 0.5s ease;
 border-radius: 30px; 
@@ -635,7 +636,7 @@ position: relative;
 display: flex;
 flex-direction: column;
 order:1;
-width: calc(100% - 350px);
+width: calc(100% - 260px);
 left: 260px;
 transition: all 0.5s ease;
 border-radius: 30px; 
@@ -687,3 +688,19 @@ background-color: #9593ff;
   line-height: 23px;
   background-color:#9593ff;
 }
+
+
+
+.saveb a{
+  position:relative;
+  padding:10px 50px;
+  border-radius: 28px;
+  border: 1px solid #18ab29;
+  display: inline-block; 
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 19px;
+  line-height: 23px;
+  background-color: #9593ff;
+  }

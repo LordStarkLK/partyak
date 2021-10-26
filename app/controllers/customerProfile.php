@@ -5,6 +5,8 @@ class CustomerProfile extends FrameworkPartyak{
     public function __construct(){
         $this->helper("linker");
         $this->user = $this->model('customerProfileModel');
+
+        $this->preventBack("customer");
     }
     
     public function index(){
@@ -59,6 +61,15 @@ class CustomerProfile extends FrameworkPartyak{
         $data['profile'] = $this->user->getProfile($id);
         $data['cus_email'] = $this->user->getCustomerEmail($id);
         $this->view("customer/customerProfileView",$data);
+    }
+
+    public function resetPassword(){
+        $errors["password1"] = "";
+        $errors["password2"] = "";
+
+        $data["errors"] = $errors;
+
+        $this->view("resetPasswordView", $data);
     }
 
 }
