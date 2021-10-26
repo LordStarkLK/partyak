@@ -207,7 +207,7 @@
                     </div>
                     <div class="details">
                         Reserve the date by paying the reservation fee online on Partyak. 
-                        The payment have to be done one day prior to the event date.
+                        The full payment have to be done one day prior to the event date.
                     </div>
                 </div>
                 <div class="details_row">
@@ -250,7 +250,8 @@
             </div>
             <div class="service_location">
                 <label for="location">Location</label>
-                <div class="location"></div>
+                <div class="location">
+                </div>
             </div>
             <div class="user_reviews">
                 <label>Review</label>
