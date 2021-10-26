@@ -319,3 +319,17 @@ nav .sidebar-button i {
 .add-note {
   margin-right: 10px;
 }
+.bottom-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  position: relative;
+  bottom: -40%;
+}
+.event-board-link button {
+  background-color: #39a2db;
+  padding: 12px 25px;
+  font-size: initial;
+}

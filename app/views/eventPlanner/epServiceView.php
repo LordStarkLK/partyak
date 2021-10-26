@@ -98,12 +98,6 @@
       </nav>
       <div class="home-content">
         <div class="name-container">
-          <div class="service">
-            <button id="s_btn" class="serviceBtn">Our Services</button>
-          </div>
-          <div class="package">
-            <button id="p_btn" class="packageBtn">Our Packages</button>
-          </div>
         </div>
         <div id="service" class="services-box">
           <table class="table-content">
@@ -196,7 +190,6 @@
       </div>
     </section>
   </div>
-  <?php linkJS("vendor/spService"); ?>
 </body>
 
 </html>
