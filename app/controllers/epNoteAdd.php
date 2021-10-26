@@ -18,20 +18,20 @@ class EpNoteAdd extends FrameworkPartyak
         // $id = $_SESSION['userId'];
 
         $errors = array();
-        $errors["order_id"] = "";
+        $errors["event_name"] = "";
         $errors["cutom_name"] = "";
         $errors["note"] = "";
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             //Get data from the form submission
-            $orderId = $_POST["order_id"];
+            $event_name = $_POST["event_name"];
             $customName = $_POST["cutom_name"];
             $note = $_POST["note"];
 
 
             //Empty check
-            if (empty($orderId)) $errors["order_id"] = "Order ID is required";
+            if (empty($event_name)) $errors["event_name"] = "Order ID is required";
             if (empty($customName)) $errors["cutom_name"] = "Customer Name is required";
             if (empty($note)) $errors["note"] = "Note is required";
 
@@ -49,7 +49,7 @@ class EpNoteAdd extends FrameworkPartyak
 
             if ($numberOfErrors == 0) {
                 //Insert data
-                $this->epAddNote->addEpNote($orderId, $customName, $note);
+                $this->epAddNote->addEpNote($event_name, $customName, $note);
             }
         }
 
