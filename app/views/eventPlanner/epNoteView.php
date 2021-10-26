@@ -122,10 +122,14 @@
                     } ?>
                 </tbody>
             </table>
-            <div class="add-note-div">
-                <h3 class="add-note">Add a note</h3>
-                <a href="<?php echo BASEURL . '/epNoteAdd'; ?>"><img class="add-btn" <?php srcIMG("addButton.png") ?>></a>
-
+            <div class="bottom-section">
+                <div class="event-board-link">
+                    <a href="<?php echo BASEURL . '/epNoteAdd'; ?>"><button>Event Schedule Board</button></a>
+                </div>
+                <div class="add-note-div">
+                    <h3 class="add-note">Add a note</h3>
+                    <a href="<?php echo BASEURL . '/epNoteAdd'; ?>"><img class="add-btn" <?php srcIMG("addButton.png") ?>></a>
+                </div>
             </div>
         </section>
     </div>
