@@ -88,13 +88,13 @@ input.invalid , textarea.invalid{
   display: table;
   clear: both;
 }
-.tab .content_title .row .col_name {
+ .col_name {
   float: left;
   width: 30%;
   margin-top: 6px;
 }
-.tab .content_title .row .col_input {
-  float: left;
+ .col_input {
+  float: right;
   width: 70%;
   margin-top: 6px;
   font-size: 18px;
@@ -159,11 +159,11 @@ border-radius: 10px;
 font-size: 17px;
 font-weight: bold;
 margin: 10px;
-background-color: rgb(190, 253, 255);
+background-color: rgb(0, 0, 0);
 }
 .form_container button:hover{
 cursor: pointer;
-background-color: rgb(90, 173, 206);
+background-color: rgb(44, 115, 143);
 }
 /* Firefox */
 .tab .content_title .row .col_input input[type=number] {
@@ -187,9 +187,10 @@ float: right;
 font-size: 35px;
 font-weight: bolder;
 }
-.form_container .close-button{
+.form_container .close-button span{
   width: 35px;
   margin: 20px;
+  float: right;
   background-color: #888888a8;
   text-align: center;
   border-radius: 10px;
