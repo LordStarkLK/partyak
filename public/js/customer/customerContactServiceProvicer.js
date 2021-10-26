@@ -11,6 +11,17 @@
   var sound =  document.getElementById("popup-9");
   var dress =  document.getElementById("popup-10");
   var conent = document.getElementById("con");
+  var e = document.getElementById("epl");
+  var vn = document.getElementById("venu");
+  var cat = document.getElementById("cat");
+  var pho = document.getElementById("phot");
+  var muc = document.getElementById("musi");
+  var dac = document.getElementById("danc");
+  var sal = document.getElementById("salo");
+  var cak = document.getElementById("caku");
+  var dec = document.getElementById("decor");
+  var sou= document.getElementById("soun");
+  var dre = document.getElementById("dres");
 
   var eBtn = document.getElementById("ep");
   var vBtn = document.getElementById("venue");
@@ -39,6 +50,17 @@
     sound.style.display="none";
     dress.style.display="none";
     conent.style.display="none";
+    e.className = "active";
+    vn.className = "no";
+    cat.className = "no";
+    pho.className ="no";
+    muc.className ="no";
+    dac.className ="no";
+    sal.className ="no";
+    cak.className ="no";
+    dec.className ="no";
+    sou.className ="no";
+    dre.className ="no";
 
   }
 
@@ -55,6 +77,18 @@
     dress.style.display="none";
     conent.style.display="none";
     eventp.style.display="none";
+    e.className = "no";
+    vn.className = "active";
+    cat.className = "no";
+    pho.className ="no";
+    muc.className ="no";
+    dac.className ="no";
+    sal.className ="no";
+    cak.className ="no";
+    dec.className ="no";
+    sou.className ="no";
+    dre.className ="no";
+    
   }
 
   cBtn.onclick = function(){
@@ -70,6 +104,17 @@
     dress.style.display="none";
     conent.style.display="none";
     eventp.style.display="none";
+    e.className = "no";
+    vn.className = "no";
+    cat.className = "active";
+    pho.className ="no";
+    muc.className ="no";
+    dac.className ="no";
+    sal.className ="no";
+    cak.className ="no";
+    dec.className ="no";
+    sou.className ="no";
+    dre.className ="no";
   }
    
   pBtn.onclick = function(){
@@ -84,6 +129,17 @@
     dress.style.display="none";
     conent.style.display="none";
     eventp.style.display="none";
+    e.className = "no";
+    vn.className = "no";
+    cat.className = "no";
+    pho.className ="active";
+    muc.className ="no";
+    dac.className ="no";
+    sal.className ="no";
+    cak.className ="no";
+    dec.className ="no";
+    sou.className ="no";
+    dre.className ="no";
   }
 
   mBtn.onclick = function(){
@@ -98,6 +154,17 @@
     dress.style.display="none";
     conent.style.display="none";
     eventp.style.display="none";
+    e.className = "no";
+    vn.className = "no";
+    cat.className = "no";
+    pho.className ="no";
+    muc.className ="active";
+    dac.className ="no";
+    sal.className ="no";
+    cak.className ="no";
+    dec.className ="no";
+    sou.className ="no";
+    dre.className ="no";
   }
 
   dBtn.onclick = function(){
@@ -113,6 +180,17 @@
     dress.style.display="none";
     conent.style.display="none";
     eventp.style.display="none";
+    e.className = "no";
+    vn.className = "no";
+    cat.className = "no";
+    pho.className ="no";
+    muc.className ="no";
+    dac.className ="active";
+    sal.className ="no";
+    cak.className ="no";
+    dec.className ="no";
+    sou.className ="no";
+    dre.className ="no";
   }
 
   sBtn.onclick = function(){
@@ -128,6 +206,17 @@
     dress.style.display="none";
     conent.style.display="none";
     eventp.style.display="none";
+    e.className = "no";
+    vn.className = "no";
+    cat.className = "no";
+    pho.className ="no";
+    muc.className ="no";
+    dac.className ="no";
+    sal.className ="active";
+    cak.className ="no";
+    dec.className ="no";
+    sou.className ="no";
+    dre.className ="no";
   }
 
   caBtn.onclick = function(){
@@ -143,6 +232,17 @@
     dress.style.display="none";
     conent.style.display="none";
     eventp.style.display="none";
+    e.className = "no";
+    vn.className = "no";
+    cat.className = "no";
+    pho.className ="no";
+    muc.className ="no";
+    dac.className ="no";
+    sal.className ="no";
+    cak.className ="active";
+    dec.className ="no";
+    sou.className ="no";
+    dre.className ="no";
   }
 
   deBtn.onclick = function(){
@@ -158,6 +258,17 @@
     dress.style.display="none";
     conent.style.display="none";
     eventp.style.display="none";
+    e.className = "no";
+    vn.className = "no";
+    cat.className = "no";
+    pho.className ="no";
+    muc.className ="no";
+    dac.className ="no";
+    sal.className ="no";
+    cak.className ="no";
+    dec.className ="active";
+    sou.className ="no";
+    dre.className ="no";
   }
 
   slBtn.onclick = function(){
@@ -173,6 +284,17 @@
     dress.style.display="none";
     conent.style.display="none";
     eventp.style.display="none";
+    e.className = "no";
+    vn.className = "no";
+    cat.className = "no";
+    pho.className ="no";
+    muc.className ="no";
+    dac.className ="no";
+    sal.className ="no";
+    cak.className ="no";
+    dec.className ="no";
+    sou.className ="active";
+    dre.className ="no";
   }
 
   dsBtn.onclick = function(){
@@ -188,6 +310,17 @@
     dress.style.display="block";
     conent.style.display="none";
     eventp.style.display="none";
+    e.className = "no";
+    vn.className = "no";
+    cat.className = "no";
+    pho.className ="no";
+    muc.className ="no";
+    dac.className ="no";
+    sal.className ="no";
+    cak.className ="no";
+    dec.className ="no";
+    sou.className ="no";
+    dre.className ="active";
   }
 
   backBtn.onclick = function(){
