@@ -189,6 +189,7 @@
                                         <option value="Wedding">Wedding</option>
                                         <option value="Wedding">Party/Festival</option>
                                         <option value="Wedding">Cooperative event</option>
+                                        <option value="Personal">Personalize event</option>
                                     </select>
                                 </div>
                             </div>
@@ -269,7 +270,7 @@
                     </div>
                     <div class="details">
                         Reserve the date by paying the reservation fee online on Partyak.
-                        Step payments leading to a final payment on the event day.
+                        The payment have to be done one day prior to the event date.
                     </div>
                 </div>
                 <div class="details_row">

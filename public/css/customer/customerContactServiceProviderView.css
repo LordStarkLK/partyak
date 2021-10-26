@@ -68,6 +68,7 @@ body {
 }
 .sidebar .sidenav-links li a.active{
   background-color: #626a79;
+  border-radius: 19px 0px 0px 19px;
 }
 .sidebar .sidenav-links li a:hover{
    background: linear-gradient(114.1deg, rgba(129, 129, 129, 0.08) 18.52%, rgba(49, 49, 49, 0.51) 98.52%);
