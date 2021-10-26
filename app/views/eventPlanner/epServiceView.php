@@ -97,6 +97,7 @@
         </div>
       </nav>
       <div class="home-content">
+
         <!-- <div class="name-container">
           <div class="service">
             <button id="s_btn" class="serviceBtn">Our Services</button>
@@ -105,6 +106,7 @@
             <button id="p_btn" class="packageBtn">Our Packages</button>
           </div>
         </div> -->
+
         <div id="service" class="services-box">
           <table class="table-content">
             <thead>
@@ -197,7 +199,9 @@
       </div>
     </section>
   </div>
+
   <!-- <?php linkJS("vendor/spService"); ?> -->
+
 </body>
 
 </html>
