@@ -102,7 +102,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Customer Name</th>
-                        <th>Order ID</th>
+                        <th>Event Name</th>
                         <th>Note</th>
                     </tr>
                 </thead>
@@ -114,7 +114,7 @@
                 <tr>
                   <td>$row[note_id]</td>
                   <td>$row[customer_name]</td>
-                  <td>$row[order_id]</td>
+                  <td>$row[event_name]</td>
                   <td>$row[note]</td>
                 </tr>   
                 ";
