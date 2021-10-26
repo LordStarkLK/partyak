@@ -31,14 +31,14 @@
 
     <div class="container">
         <div class="image_container">
-            <img class="mySlides" src="nekatha.jpg" >
+            <img class="mySlides" <?php srcIMG("eventplanner/nekatha.jpg") ?> >
             <a href="https://youtu.be/pKtQ913aqP8"><i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i></a>   
         </div>
         <div class="content">
             <div class="basic_details">
                 <div class="left_side">
                     <div class="service_type">
-                        <img src="eventplanner.png" alt="Avatar" class="stype_img">
+                        <img <?php srcIMG("eventplanner/eventplanner.png") ?> alt="Avatar" class="stype_img">
                         <a>Event Planner</a>
                     </div>
                     <div class="service_name">Nekatha Event Planners</div>
@@ -53,7 +53,7 @@
                         <a>Supported Events</a>
                         <div class="sub_row">
                             <div class="column">
-                                <img src="/feature img/wedding-couple.png" alt="Avatar" class="feature_img">
+                                <img <?php srcIMG("feature img/wedding-couple.png") ?> alt="Avatar" class="feature_img">
                                 <a>Weddings</a>
                             </div>
                         </div>
@@ -63,43 +63,43 @@
                         <a>Service Areas</a>
                         <div class="sub_row">
                             <div class="column">
-                                <img src="sri lanka.png" alt="Avatar" class="feature_img">
+                                <img <?php srcIMG("eventplanner/sri lanka.png") ?> alt="Avatar" class="feature_img">
                                 <a>Western province</a>
                             </div>
                         </div>
                         <div class="sub_row">
                             <div class="column">
-                                <img src="sri lanka.png" alt="Avatar" class="feature_img">
+                                <img <?php srcIMG("eventplanner/sri lanka.png") ?> alt="Avatar" class="feature_img">
                                 <a>Southern province</a>
                             </div>
                         </div>
                         <div class="sub_row">
                             <div class="column">
-                                <img src="sri lanka.png" alt="Avatar" class="feature_img">
+                                <img <?php srcIMG("eventplanner/sri lanka.png") ?> alt="Avatar" class="feature_img">
                                 <a>North Western province</a>
                             </div>
                         </div>
                         <div class="sub_row">
                             <div class="column">
-                                <img src="sri lanka.png" alt="Avatar" class="feature_img">
+                                <img <?php srcIMG("eventplanner/sri lanka.png") ?> alt="Avatar" class="feature_img">
                                 <a>Sabaragamuwa province</a>
                             </div>
                         </div>
                         <div class="sub_row">
                             <div class="column">
-                                <img src="sri lanka.png" alt="Avatar" class="feature_img">
+                                <img <?php srcIMG("eventplanner/sri lanka.png") ?> alt="Avatar" class="feature_img">
                                 <a>Central province</a>
                             </div>
                         </div>
                         <div class="sub_row">
                             <div class="column">
-                                <img src="sri lanka.png" alt="Avatar" class="feature_img">
+                                <img <?php srcIMG("eventplanner/sri lanka.png") ?> alt="Avatar" class="feature_img">
                                 <a>Uva province</a>
                             </div>
                         </div>
                         <div class="sub_row">
                             <div class="column">
-                                <img src="sri lanka.png" alt="Avatar" class="feature_img">
+                                <img <?php srcIMG("eventplanner/sri lanka.png") ?> alt="Avatar" class="feature_img">
                                 <a>North Central province</a>
                             </div>
                         </div>
@@ -256,7 +256,7 @@
                 <label>Review</label>
                 <div class="review">
                     <div class="reviewer">
-                        <img src="avatar3.png" alt="Avatar" class="profilePic">
+                        <img <?php srcIMG("avatar3.png") ?> alt="Avatar" class="profilePic">
                         <div class="name">
                             John
                             <br>Colombo
@@ -277,7 +277,7 @@
                 </div>
                 <div class="review">
                     <div class="reviewer">
-                        <img src="avatar1.png" alt="Avatar" class="profilePic">
+                        <img <?php srcIMG("avatar1.png") ?> alt="Avatar" class="profilePic">
                         <div class="name">
                             Rocky
                             <br>Kandy
