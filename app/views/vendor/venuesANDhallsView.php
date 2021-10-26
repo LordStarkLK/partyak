@@ -189,6 +189,7 @@
                                         <option value="Wedding">Wedding</option>
                                         <option value="Wedding">Party/Festival</option>
                                         <option value="Wedding">Cooperative event</option>
+                                        <option value="Personal">Personalize event</option>
                                     </select>
                                 </div>
                             </div>
