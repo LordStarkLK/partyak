@@ -113,7 +113,7 @@
       <div class="payment">
         <a>Need early payments,</a>
         <div class="request-payment">
-          <button class="button">Request Payment</button>
+          <button id="request-button" class="button">Request Payment</button>
         </div>
       </div>
       <div class="transaction-boxes">
@@ -140,7 +140,7 @@
               <th>19-09-2021</th>
               <th>30000</th>
             </tr>
-            <tr>
+            <!-- <tr>
               <th>2</th>
               <th>Deposit</th>
               <th>Monthly payment</th>
@@ -148,9 +148,9 @@
               <th>BOC</th>
               <th>19-08-2021</th>
               <th>30000</th>
-            </tr>
+            </tr> -->
             <tr>
-              <th>3</th>
+              <th>2</th>
               <th>Deposit</th>
               <th>Request payment</th>
               <th>1234</th>
@@ -159,7 +159,7 @@
               <th>30000</th>
             </tr>
             <tr>
-              <th>4</th>
+              <th>3</th>
               <th>Withdraw</th>
               <th>Marketing</th>
               <th>1234</th>
@@ -168,7 +168,7 @@
               <th>2000</th>
             </tr>
             <tr>
-              <th>5</th>
+              <th>4</th>
               <th>Deposit</th>
               <th>Monthly payment</th>
               <th>1234</th>
@@ -181,6 +181,38 @@
       </div>
     </section>
   </div>
+<!-- The Modal -->
+<div id="myModal" class="request-modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    
+    <span class="close">&times;</span>
+    <form>
+      <div class="request-details">
+        <h2>Early Payment Request</h2>
+        <p>
+            Service provider name : Lara Fernando <br>
+            Date : 27/10/2021 <br>
+            Amount(LKR) :
+        </p>
+        
+        <input id="request-amount" type="text" placeholder="Enter the amount" required>
+      </div>
+      <div class="request-submit-btn">
+        <!-- <input id="request-submit" type="submit"> -->
+        <button id="request-submit" type="submit">Submit</button>
+      </div>
+    <!-- <div id="request-submit" class="request-submit-btn">
+      <input type="submit" value="Submit" >
+    </div> -->
+    </form>
+    
+    
+  </div>
+
+</div>
+
   <?php linkJS("vendor/spWallet"); ?>
   <?php linkPhp("footer") ?>
 
