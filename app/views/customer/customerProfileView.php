@@ -3,6 +3,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
+    <title>Profile</title>
     <?php linkCSS("customer/customerProfileView"); ?>
     <?php linkCSS("customerNavigation"); ?>
     <?php linkCSS("footer");?>
@@ -52,7 +53,8 @@
           </a>
         </li>
         <li>
-          <a href="#">
+
+          <a href="<?php echo BASEURL . '/customerProfile/resetPassword'; ?>">
             <i class="fas fa-unlock" ></i>
             <span class="links_name">Change Password</span>
           </a>

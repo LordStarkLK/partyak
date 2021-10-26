@@ -16,18 +16,17 @@
                     echo "<li><a href='";
                     echo BASEURL . '/spAnalytics';
                     echo "'>Business</a></li>";
-
                 } elseif ($_SESSION["type"] == "customer") {
                     echo '<li><a href="#">Browse</a></li>';
                 }
             }
             ?>
-            <li><a href="#">How it works</a></li>
+            <li><a href="<?php echo BASEURL . '/epAnalytics'; ?>">How it works</a></li>
         </ul>
     </div>
     <?php
     if (!isset($_SESSION["type"])) {
-        echo "<div class='nav-btn'>"; 
+        echo "<div class='nav-btn'>";
 
         echo "<button class='signup-button btn-sign' type='button'><a href='";
         echo BASEURL . '/home/signup';

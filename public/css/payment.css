@@ -23,9 +23,14 @@ body {
   border-radius: 36px;
   border: 1px solid rgba(255, 255, 255, 0.125);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  overflow: hidden;
+}
+.payment-form {
+  position: relative;
+  left: 14%;
 }
 .card-icon {
   width: 329px;
@@ -112,7 +117,7 @@ body {
   color: #202020;
 }
 .full-width {
-  width: 100%;
+  width: 80%;
 }
 .background-blob {
   position: absolute;
@@ -123,4 +128,20 @@ body {
 }
 .pay-text {
   display: block;
+}
+.second-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.first-section {
+  color: aliceblue;
+  font-family: Actor;
+  font-style: normal;
+  font-weight: normal;
+  font-size: medium;
+}
+span {
+  display: inline-block;
 }

@@ -100,7 +100,7 @@
       <div class="home-content">
         <div class="profile_pic">
           <div class="image">
-            <img <?php srcIMG("avatar-dave.png") ?> alt="Avatar">
+            <img <?php srcIMG("avatar-dave.jpg") ?> alt="Avatar">
             <!-- <img src="/public/img/avatar.png" alt="Avatar"> -->
           </div>
 
