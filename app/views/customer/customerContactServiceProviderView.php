@@ -185,7 +185,7 @@
         <table>
           <tr>
             <td> <a  href="#"> <img <?php srcIMG("brought.jpg") ?> alt="Chance Flowers"></a><br><p>Broghts Event Production <br> Colombo, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("shero.jpg") ?> alt="Chance Flowers"> </a><br><p>Event By Shero <br>Colombo, Sri Lanaka</p></td>
+            <td> <a href="<?php echo BASEURL . '/eventPlanner'; ?>" ><img <?php srcIMG("nekatha.jpg") ?> alt="Chance Flowers"> </a><br><p>Nekatha <br>Colombo, Sri Lanaka</p></td>
             <td> <a  href="#"> <img <?php srcIMG("eventers.jpg") ?> alt="Chance Flowers"> </a><br><p>Wedding Planner <br>Katunayaka,Sri Lanka</p></td>  
           </tr>
 
