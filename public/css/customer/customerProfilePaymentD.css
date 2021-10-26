@@ -167,6 +167,11 @@ tr:hover{
     border-radius: 10px;
 }
 
+.go-payment a{
+    text-decoration: none;
+    color:#202020;
+}
+
 .go-payment:hover {
     background-color:#18ab29;
     cursor: pointer;
