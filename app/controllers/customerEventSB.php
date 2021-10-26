@@ -4,6 +4,7 @@
 class CustomerEventSB extends FrameworkPartyak{
     public function __construct(){
         $this->helper("linker");
+        $this->preventBack("customer");
     }
     
     public function index(){

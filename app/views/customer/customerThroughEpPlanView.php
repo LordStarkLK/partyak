@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
- 
+    <title>Through Event Planner Planning</title>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php linkCSS("customer/customerThroughEpPlan"); ?>
@@ -34,8 +34,8 @@
                 <option value="null">Event Type</option>
                 <option value="Wedding">Wedding</option>
                 <option value="Party/Festival">Party/Festival</option>
-                <option value="Corparate Event">Corporate event</option>
-                <option value="Other">Other</option>
+                <option value="Corparate Event">Corporate Event</option>
+                <option value="Personalize Event">Personalize Event</option>
             </select>
             <!-- <div class="error"><?php echo $errors["eventType"] ?></div>  -->
           </div>

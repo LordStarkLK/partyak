@@ -162,36 +162,36 @@ body {
 }
 
 
-
 .venueContent{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    order:1;
-    width: calc(100% - 260px);
-    left: 260px;
-    transition: all 0.5s ease;
-    border-radius: 30px; 
-    background-color: rgb(0, 0, 0);
-    background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
-    backdrop-filter: blur(120px);
-    padding:2%;
-    display: none; 
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  order:1;
+  width: calc(100% - 260px);
+  left: 260px;
+  transition: all 0.5s ease;
+  border-radius: 30px; 
+  background-color: rgb(0, 0, 0);
+  background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
+  backdrop-filter: blur(120px);
+  padding:2%;
+  display: none;
 }
 
 /* .venueContent.active{
-    opacity: 1;
+  opacity: 1;
 
 } */
 
-.venueq, .eventq{
-    display:flex;
-    flex-direction: column;
-    order:0;
-    padding:1%;
+.venueq{
+  display:flex;
+  flex-direction: column;
+  order:0;
+  padding:2%;
 }
 
-.venueq p1, .venueq p2, .musicq p3, .danceq p,.cakeq p4, .decoq p5, .soundq p6, .soundq p7, .dressq p8{
+
+.venueq p1, .venueq p2, .musicq p3, .danceq p,.cakeq p4, .decoq p5, .soundq p6, .soundq p7, .dressq p8,.cateringq p0, .cateringq p10, .salonq p17{
   height: 44px;
   padding:3%;
   opacity: 0.9;
@@ -204,8 +204,28 @@ body {
   
 }
 
+.cusContent p11{
+  height: 44px;
+  padding:3%;
+  opacity: 0.9;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  font-size: 22px;
+  line-height: 24px;
+  background-color: transparent;
+  color: #F5F5F5; 
 
-.indoort, .setit, .dancet,.mbandt, .solot, .kandyt, .sabat, .wedt, .sweet, .backt ,.soundt, .int, .malet{
+}
+
+
+
+.cateringq p0{
+  padding-top:0%;
+}
+
+
+.indoort, .setit, .dancet,.mbandt, .solot, .kandyt, .sabat, .wedt, .sweet, .backt ,.soundt, .int, .malet, .breakt, .dinnert, .buffet, .start,.hairt{
   display:flex;
   flex-direction: column;
   order:0;
@@ -215,7 +235,7 @@ body {
 }
 
 
-.indoortick, .dancetick, .setitick, .mbandtick, .solotick, .kandytick, .sabatick, .wedtick, .sweetick, .backtick , .soundtick,.intick, .maletick{
+.indoortick, .dancetick, .setitick, .mbandtick, .solotick, .kandytick, .sabatick, .wedtick, .sweetick, .backtick , .soundtick,.intick, .maletick, .breaktick, .dinnertick, .buffetick, .end, .hairtick{
   display:flex;
   flex-direction: column;
   order:1;
@@ -225,7 +245,7 @@ body {
 }
 
 
-.outdoort,  .poruwat, .djst,.lawt, .west, .partyt, .floralt, .light, .out, .femalet{
+.outdoort,  .poruwat, .djst,.lawt, .west, .partyt, .floralt, .light, .out, .femalet, .luncht, .teat, .nos, .makeupt{
   display:flex;
   flex-direction: column;
   order:2;
@@ -234,7 +254,7 @@ body {
   padding-top:0.5%;
 }
 
-.outdoortick,.poruwatick, .djstick, .lawtick, .westick, .partytick, .floraltick, .lightick, .outick, .femaletick{
+.outdoortick,.poruwatick, .djstick, .lawtick, .westick, .partytick, .floraltick, .lightick, .outick, .femaletick, .lunchtick, .teatick, .makeuptick{
   display:flex;
   flex-direction: column;
   order:3;
@@ -251,7 +271,7 @@ body {
   
 }
 
-.indoort input, .outdoort input,.dancet input, .setit input , .poruwat input, .mbandt input, .djst input, .solot input, .kandyt input, .lawt input, .west input, .wedt input, .partyt input,.sweet input, .backt input, .floralt input, .soundt input, .light input, .int input, .out input, .malet input, .femalet input{
+.indoort input, .outdoort input,.dancet input, .setit input , .poruwat input, .mbandt input, .djst input, .solot input, .kandyt input, .lawt input, .west input, .wedt input, .partyt input,.sweet input, .backt input, .floralt input, .soundt input, .light input, .int input, .out input, .malet input, .femalet input, .breakt input, .luncht input, .dinnert input, .teat input, .buffet input, .nos input, .start input, .end input, .hairt input, .makeupt input{
     height: 44px;
     padding:2%;
     opacity: 0.9;
@@ -293,46 +313,39 @@ body {
    background-color: rgb(235, 232, 226);
   }
 
-.back{
-  display:flex;
-  flex-direction:row;
-  order:0;
-  padding-left: 3%;
-}
 
-.input-box1,.input-box33 , .input-box43, .input-box64,.input-box74, .input-box84, .input-box94{
+
+.input-box1,.input-box15,.input-box33 , .input-box43, .input-box64,.input-box74, .input-box84, .input-box94, .input-box03, .input-box55{
     display:flex;
     flex-direction:row;
-    order:1;
+    order:0;
 }
 
-.input-box6, .input-box34,.input-box44, .input-box65 ,.input-box85{
+.input-box6,.input-box16, .input-box34,.input-box44, .input-box65 ,.input-box85{
   display:flex;
   flex-direction:row;
+  order:1;
+
+}
+
+
+.input-box5, .input-box17{
+  display:flex;
+  flex-direction: row;
   order:2;
+  
+  }
 
-}
-
-.input-box5{
-  display:flex;
-  flex-direction: row;
-  order:3;
-
-}
-
-
-.save{
-  display:flex;
-  flex-direction: row;
-  order:4;
-  padding-left:82%;
-}
-
-
-
+  .save{
+    display:flex;
+    flex-direction: row;
+    order:3;
+    padding-left:82%;
+  }
+  
  
 
-.indoortick input, .outdoortick input,.dancetick input, .setitick input, .poruwatick input, .mbandtick input, .djstick input, .solotick input, .kandytick input, .lawtick input, .sabatick input, .westick input,.wedtick input, .partytick input, .sweetick input, .backtick input, .floraltick input, .soundtick input, .lightick input, .intick input, .outick input, .maletick input, .femaletick input{
+.indoortick input, .outdoortick input,.dancetick input, .setitick input, .poruwatick input, .mbandtick input, .djstick input, .solotick input, .kandytick input, .lawtick input, .sabatick input, .westick input,.wedtick input, .partytick input, .sweetick input, .backtick input, .floraltick input, .soundtick input, .lightick input, .intick input, .outick input, .maletick input, .femaletick input, .breaktick input, .lunchtick input, .dinnertick input, .teatick input, .buffetick input, .hairtick input, .makeuptick input{
   width: 38px;
   height: 38px;
   border-color: transparent; 
@@ -342,36 +355,7 @@ body {
 
 
 
-  .cateringContent{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    order:1;
-    width: calc(100% - 260px);
-    left: 260px;
-    transition: all 0.5s ease;
-    border-radius: 30px; 
-    background-color: rgb(0, 0, 0);
-    background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
-    backdrop-filter: blur(120px);
-    padding:2%;
-    display:none;
-}
-
-/* .cateringContent.active{
-    opacity: 1;
-
-} */
-
-.cateringq{
-    display:flex;
-    flex-direction: column;
-    order:0;
-    padding:1%;
-}
-
-
-.photoContent{
+.cateringContent{
   position: relative;
   display: flex;
   flex-direction: column;
@@ -392,69 +376,98 @@ body {
 
 } */
 
-.photoq{
+.cateringq{
   display:flex;
   flex-direction: column;
   order:0;
-  padding:1%;
+  padding:2%;
+}
+
+
+.photoContent{
+position: relative;
+display: flex;
+flex-direction: column;
+order:1;
+width: calc(100% - 260px);
+left: 260px;
+transition: all 0.5s ease;
+border-radius: 30px; 
+background-color: rgb(0, 0, 0);
+background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
+backdrop-filter: blur(120px);
+padding:3%;
+display:none;
+}
+
+/* .cateringContent.active{
+opacity: 1;
+
+} */
+
+.photoq{
+display:flex;
+flex-direction: column;
+order:0;
+padding:2%;
 }
 
 
 
 .musicContent{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  order:1;
-  width: calc(100% - 260px);
-  left: 260px;
-  transition: all 0.5s ease;
-  border-radius: 30px; 
-  background-color: rgb(0, 0, 0);
-  background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
-  backdrop-filter: blur(120px);
-  padding:2%;
-  display:none;
+position: relative;
+display: flex;
+flex-direction: column;
+order:1;
+width: calc(100% - 260px);
+left: 260px;
+transition: all 0.5s ease;
+border-radius: 30px; 
+background-color: rgb(0, 0, 0);
+background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
+backdrop-filter: blur(120px);
+padding:2%;
+display:none;
 }
 
 /* .cateringContent.active{
-  opacity: 1;
+opacity: 1;
 
 } */
 
 .musicq{
-  display:flex;
-  flex-direction: column;
-  order:0;
-  padding:1%;
+display:flex;
+flex-direction: column;
+order:0;
+padding:2%;
 }
 
 .danceContent{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  order:1;
-  width: calc(100% - 260px);
-  left: 260px;
-  transition: all 0.5s ease;
-  border-radius: 30px; 
-  background-color: rgb(0, 0, 0);
-  background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
-  backdrop-filter: blur(120px);
-  padding:2%;
-  display:none;
+position: relative;
+display: flex;
+flex-direction: column;
+order:1;
+width: calc(100% - 260px);
+left: 260px;
+transition: all 0.5s ease;
+border-radius: 30px; 
+background-color: rgb(0, 0, 0);
+background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
+backdrop-filter: blur(120px);
+padding:2%;
+display:none;
 }
 
 /* .cateringContent.active{
-  opacity: 1;
+opacity: 1;
 
 } */
 
 .danceq{
-  display:flex;
-  flex-direction: column;
-  order:0;
-  padding:1%;
+display:flex;
+flex-direction: column;
+order:0;
+padding:2%;
 }
 
 .input-box41,.input-box42{
@@ -480,34 +493,34 @@ color: #F5F5F5;
 } 
 
 .salonContent{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  order:1;
-  width: calc(100% - 260px);
-  left: 260px;
-  transition: all 0.5s ease;
-  border-radius: 30px; 
-  background-color: rgb(0, 0, 0);
-  background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
-  backdrop-filter: blur(120px);
-  padding:2%;
-  display:none;
+position: relative;
+display: flex;
+flex-direction: column;
+order:1;
+width: calc(100% - 260px);
+left: 260px;
+transition: all 0.5s ease;
+border-radius: 30px; 
+background-color: rgb(0, 0, 0);
+background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
+backdrop-filter: blur(120px);
+padding:3%;
+display:none;
 }
 
 /* .cateringContent.active{
-  opacity: 1;
+opacity: 1;
 
 } */
 
 .salonq{
-  display:flex;
-  flex-direction: column;
-  order:0;
-  padding:1%;
+display:flex;
+flex-direction: column;
+order:0;
+padding:2%;
 }
 
-.input-box51,.input-box52,.input-box53, .input-box54, .input-box55, .input-box56{
+.input-box51,.input-box52,.input-box53, .input-box54, .input-box56{
 display:flex;
 flex-direction: column;
 order:0;
@@ -515,7 +528,7 @@ padding:3%;
 }
 
 .input-box52, .input-box54{
-  padding-left: 3%;
+padding-left: 3%;
 }
 
 
@@ -536,88 +549,88 @@ color: #F5F5F5;
 
 
 .cakeContent{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  order:1;
-  width: calc(100% - 260px);
-  left: 260px;
-  transition: all 0.5s ease;
-  border-radius: 30px; 
-  background-color: rgb(0, 0, 0);
-  background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
-  backdrop-filter: blur(120px);
-  padding:2%;
-  display:none;
+position: relative;
+display: flex;
+flex-direction: column;
+order:1;
+width: calc(100% - 260px);
+left: 260px;
+transition: all 0.5s ease;
+border-radius: 30px; 
+background-color: rgb(0, 0, 0);
+background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
+backdrop-filter: blur(120px);
+padding:2%;
+display:none;
 }
 
 /* .cateringContent.active{
-  opacity: 1;
+opacity: 1;
 
 } */
 
 .cakeq{
-  display:flex;
-  flex-direction: column;
-  order:0;
-  padding:1%;
+display:flex;
+flex-direction: column;
+order:0;
+padding:2%;
 }
 
 
 .decoContent{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  order:1;
-  width: calc(100% - 260px);
-  left: 260px;
-  transition: all 0.5s ease;
-  border-radius: 30px; 
-  background-color: rgb(0, 0, 0);
-  background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
-  backdrop-filter: blur(120px);
-  padding:2%;
-  display:none;
+position: relative;
+display: flex;
+flex-direction: column;
+order:1;
+width: calc(100% - 260px);
+left: 260px;
+transition: all 0.5s ease;
+border-radius: 30px; 
+background-color: rgb(0, 0, 0);
+background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
+backdrop-filter: blur(120px);
+padding:2%;
+display:none;
 }
 
 /* .cateringContent.active{
-  opacity: 1;
+opacity: 1;
 
 } */
 
 .decoq{
-  display:flex;
-  flex-direction: column;
-  order:0;
-  padding:1%;
+display:flex;
+flex-direction: column;
+order:0;
+padding:2%;
 }
 
 .soundContent{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  order:1;
-  width: calc(100% - 260px);
-  left: 260px;
-  transition: all 0.5s ease;
-  border-radius: 30px; 
-  background-color: rgb(0, 0, 0);
-  background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
-  backdrop-filter: blur(120px);
-  padding:2%;
-  display:none;
+position: relative;
+display: flex;
+flex-direction: column;
+order:1;
+width: calc(100% - 260px);
+left: 260px;
+transition: all 0.5s ease;
+border-radius: 30px; 
+background-color: rgb(0, 0, 0);
+background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
+backdrop-filter: blur(120px);
+padding:2%;
+display:none;
 }
 
 /* .cateringContent.active{
-  opacity: 1;
+opacity: 1;
 
 } */
 
 .soundq{
-  display:flex;
-  flex-direction: column;
-  order:0;
-  padding:1%;
+display:flex;
+flex-direction: column;
+order:0;
+padding:2%;
 }
 
 
@@ -625,31 +638,31 @@ color: #F5F5F5;
 
 
 .dressContent{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  order:1;
-  width: calc(100% - 260px);
-  left: 260px;
-  transition: all 0.5s ease;
-  border-radius: 30px; 
-  background-color: rgb(0, 0, 0);
-  background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
-  backdrop-filter: blur(120px);
-  padding:2%;
-  display:none;
+position: relative;
+display: flex;
+flex-direction: column;
+order:1;
+width: calc(100% - 260px);
+left: 260px;
+transition: all 0.5s ease;
+border-radius: 30px; 
+background-color: rgb(0, 0, 0);
+background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
+backdrop-filter: blur(120px);
+padding:2%;
+display:none;
 }
 
 /* .cateringContent.active{
-  opacity: 1;
+opacity: 1;
 
 } */
 
 .dressq{
-  display:flex;
-  flex-direction: column;
-  order:0;
-  padding:1%;
+display:flex;
+flex-direction: column;
+order:0;
+padding:2%;
 }
 
 
@@ -658,7 +671,7 @@ color: #F5F5F5;
   position:relative;
   padding:10px 50px;
   border-radius: 28px;
-  border: 1px solid #18ab29;
+  border: 1px solid #FFFFFF;;
   display: inline-block; 
   cursor: pointer;
   color: #ffffff;
