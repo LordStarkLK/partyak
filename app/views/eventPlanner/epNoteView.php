@@ -124,7 +124,7 @@
             </table>
             <div class="bottom-section">
                 <div class="event-board-link">
-                    <a href="<?php echo BASEURL . '/epNoteAdd'; ?>"><button>Event Schedule Board</button></a>
+                    <a href="<?php echo BASEURL . '/#'; ?>"><button>Event Schedule Board</button></a>
                 </div>
                 <div class="add-note-div">
                     <h3 class="add-note">Add a note</h3>
