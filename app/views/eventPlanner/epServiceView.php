@@ -97,20 +97,41 @@
         </div>
       </nav>
       <div class="home-content">
-        <div class="name-container">
-        </div>
+
+        <!-- <div class="name-container">
+          <div class="service">
+            <button id="s_btn" class="serviceBtn">Our Services</button>
+          </div>
+          <div class="package">
+            <button id="p_btn" class="packageBtn">Our Packages</button>
+          </div>
+        </div> -->
+
         <div id="service" class="services-box">
           <table class="table-content">
             <thead>
               <tr>
                 <th>Service Name</th>
-                <th>Service Information</th>
+                <th>Location</th>
                 <th>Current Status</th>
-                <th>Action</th>
+                
               </tr>
             </thead>
             <tbody>
               <tr>
+                <!-- <th>Venues & Halls</th> -->
+                <th><a href="#">Nekatha Wedding Planners</a></th>
+                <th>Galle Rd, Hikkaduwa</th>
+                <th>Accepted</th>
+                
+              </tr>
+              <!-- <tr>
+                <th>Venues & Halls</th>
+                <th><a href="#">Nilwala Caterings</a><br>Galle Rd, Matara</th>
+                <th>Pending</th>
+                <th><button class="delete-service">Delete</button></th>
+              </tr>
+              <tr>
                 <th>Venues & Halls</th>
                 <th><a href="#">Hikka Trans by Cinomon</a><br>Galle Rd, Hikkaduwa</th>
                 <th>Pending</th>
@@ -121,28 +142,16 @@
                 <th><a href="#">Nilwala Caterings</a><br>Galle Rd, Matara</th>
                 <th>Pending</th>
                 <th><button class="delete-service">Delete</button></th>
-              </tr>
-              <tr>
-                <th>Venues & Halls</th>
-                <th><a href="#">Hikka Trans by Cinomon</a><br>Galle Rd, Hikkaduwa</th>
-                <th>Pending</th>
-                <th><button class="delete-service">Delete</button></th>
-              </tr>
-              <tr>
-                <th>Venues & Halls</th>
-                <th><a href="#">Nilwala Caterings</a><br>Galle Rd, Matara</th>
-                <th>Pending</th>
-                <th><button class="delete-service">Delete</button></th>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
           <div class="add-service">
-            <a>Add New Service </a>
+            <a>Update Service </a>
             <button class="new-service"><i class="fa fa-plus" aria-hidden="true"></i></button>
           </div>
         </div>
 
-        <div id="package" class="packages-box">
+        <!-- <div id="package" class="packages-box">
           <table class="table-content">
             <thead>
               <tr>
@@ -186,10 +195,13 @@
             <a>Add New Package </a>
             <button class="new-package"><i class="fa fa-plus" aria-hidden="true"></i></button>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
   </div>
+
+  <!-- <?php linkJS("vendor/spService"); ?> -->
+
 </body>
 
 </html>

@@ -124,7 +124,7 @@ nav .sidebar-button i {
   backdrop-filter: blur(120px);
   border-radius: 43px;
 }
-.home-content .packages-box {
+/* .home-content .packages-box {
   display: none;
   justify-content: center;
   padding: 36px 43px 3px 43px;
@@ -135,7 +135,7 @@ nav .sidebar-button i {
   );
   backdrop-filter: blur(120px);
   border-radius: 43px;
-}
+} */
 .table-content {
   border-collapse: collapse;
   min-height: 340px;
@@ -165,13 +165,13 @@ nav .sidebar-button i {
 .table-content tbody tr:nth-of-type(even) {
   background-color: #81a7c0;
 }
-.name-container {
+/* .name-container {
   display: flex;
   top: 60px;
   margin: 20px 20px 0 20px;
   width: 100%;
-}
-.service {
+} */
+/* .service {
   justify-content: right;
   display: flex;
   width: 50%;
@@ -179,8 +179,8 @@ nav .sidebar-button i {
 .package {
   display: flex;
   width: 50%;
-}
-.name-container button {
+} */
+/* .name-container button {
   width: 250px;
   height: 50px;
   font-size: 23px;
@@ -196,7 +196,7 @@ nav .sidebar-button i {
 }
 .name-container button:hover {
   cursor: pointer;
-}
+} */
 .add-service,
 .add-package {
   height: 50px;
