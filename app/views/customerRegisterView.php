@@ -46,11 +46,11 @@
           <div class="error"><?php echo $errors["username"] ?></div>
         </div> -->
 
-        <div class="input-box3">
+        <!-- <div class="input-box3">
           <input type="text" placeholder="Address" name="address"
           id="address" onfocusout="validateAddress()">
           <div class="error"><?php echo $errors["address"] ?></div>
-        </div>
+        </div> -->
 
 
         

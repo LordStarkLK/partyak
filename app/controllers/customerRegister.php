@@ -18,7 +18,7 @@
             $errors["fname"] = "";
             $errors["lname"] = "";
             // $errors["username"] = "";
-            $errors["address"] = "";
+            // $errors["address"] = "";
             $errors["email"] = "";
             $errors["password"] = "";
             $errors["confirmPassword"] = "";
@@ -29,7 +29,7 @@
                 $fname = $_POST["fname"];
                 $lname = $_POST["lname"];
                 // $username = $_POST["username"];
-                $address = $_POST["address"];
+                // $address = $_POST["address"];
                 $email = $_POST["email"];
                 $password = $_POST["password"];
                 $confirmPassword = $_POST["confirmPassword"];
@@ -43,7 +43,7 @@
                 if(empty($fname)) $errors["fname"] = "First name is required";
                 if(empty($lname)) $errors["lname"] = "Last name is required";
                 // if(empty($username)) $errors["username"] = "username is required";
-                if(empty($address)) $errors["address"] = "Address is required";
+                // if(empty($address)) $errors["address"] = "Address is required";
                 if(empty($fname)) $errors["email"] = "Email is required";
                 if(empty($password)) $errors["password"] = "Password is required";
                 if(empty($confirmPassword)) $errors["confirmPassword"] = "Confirmed password is required";
@@ -81,7 +81,7 @@
                     $password = password_hash($password, PASSWORD_DEFAULT);
 
                     // Inserting data
-                    $this->registerModel->addCustomer($fname,$lname,$address,$email,$password);
+                    $this->registerModel->addCustomer($fname,$lname,$email,$password);
 
 
                 }

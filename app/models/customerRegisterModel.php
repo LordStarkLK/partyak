@@ -18,7 +18,7 @@ class   CustomerRegisterModel extends Database{
         return mysqli_fetch_assoc($result);
     }
 
-    public function addCustomer($fname,$lname,$address,$email,$password){
+    public function addCustomer($fname,$lname,$email,$password){
 
         // Insert user data
         $query = "INSERT INTO user(email,password,user_type) VALUES ('$email','$password','customer')";
@@ -29,8 +29,8 @@ class   CustomerRegisterModel extends Database{
         $userId = $result["user_id"];
 
         // Inserting data into the customer table
-        $query = "INSERT INTO customer(user_id,f_name,l_name,address)
-        VALUES('$userId','$fname','$lname','$address')";
+        $query = "INSERT INTO customer(user_id,f_name,l_name)
+        VALUES('$userId','$fname','$lname')";
         mysqli_query($GLOBALS['db'],$query);
 
 
