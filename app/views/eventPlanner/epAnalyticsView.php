@@ -101,7 +101,7 @@
           <div class="recent-sales box">
             <div class="title">Sales Summery</div>
             <div class="sales-details">
-
+              <canvas id="myChart" style="width:100%; min-width:500px; height:500px"></canvas>
             </div>
           </div>
           <div class="chart">
@@ -223,7 +223,6 @@
 
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <?php linkJS("vendor/spAnalytics"); ?>
-
 
 
 
