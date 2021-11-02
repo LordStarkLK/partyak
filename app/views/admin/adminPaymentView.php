@@ -91,23 +91,23 @@
                         </tr>
 
                         <tr>
-                            <td>John Doe</td>
-                            <td>Jk Photography</td>
-                            <td>Platinum package + addtional album</td>
-                            <td>Sep 10 2021</td>
+                            <td>Joe Rogan</td>
+                            <td>Sunrise Catering</td>
+                            <td>Standard package + additional soft drinks</td>
+                            <td>Sep 20 2021</td>
                             <td>Advance paid</td>
-                            <td>Rs. 5000</td>
-                            <td>Rs. 25000</td>
+                            <td>Rs. 3000</td>
+                            <td>Rs. 60000</td>
                         </tr>
 
                         <tr>
-                            <td>John Doe</td>
-                            <td>Jk Photography</td>
-                            <td>Platinum package + addtional album</td>
-                            <td>Sep 10 2021</td>
+                            <td>Brad Hogg</td>
+                            <td>Pan Venues</td>
+                            <td>Platinum package</td>
+                            <td>Sep 30 2021</td>
                             <td>Advance paid</td>
-                            <td>Rs. 5000</td>
-                            <td>Rs. 25000</td>
+                            <td>Rs. 10000</td>
+                            <td>Rs. 60000</td>
                         </tr>
             
 
