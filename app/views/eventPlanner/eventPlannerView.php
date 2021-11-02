@@ -31,14 +31,14 @@
 
     <div class="container">
         <div class="image_container">
-            <img class="mySlides" src="nekatha.jpg" >
+            <img class="mySlides" <?php srcIMG("nekatha.jpg") ?> >
             <a href="https://youtu.be/pKtQ913aqP8"><i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i></a>   
         </div>
         <div class="content">
             <div class="basic_details">
                 <div class="left_side">
                     <div class="service_type">
-                        <img src="eventplanner.png" alt="Avatar" class="stype_img">
+                        <img <?php srcIMG("eventplanner.png") ?> alt="Avatar" class="stype_img">
                         <a>Event Planner</a>
                     </div>
                     <div class="service_name">Nekatha Event Planners</div>
@@ -53,7 +53,7 @@
                         <a>Supported Events</a>
                         <div class="sub_row">
                             <div class="column">
-                                <img src="/feature img/wedding-couple.png" alt="Avatar" class="feature_img">
+                                <img <?php srcIMG("feature img/wedding-couple.png") ?> alt="Avatar" class="feature_img">
                                 <a>Weddings</a>
                             </div>
                         </div>
@@ -63,43 +63,43 @@
                         <a>Service Areas</a>
                         <div class="sub_row">
                             <div class="column">
-                                <img src="sri lanka.png" alt="Avatar" class="feature_img">
+                                <img <?php srcIMG("sri lanka.png") ?> alt="Avatar" class="feature_img">
                                 <a>Western province</a>
                             </div>
                         </div>
                         <div class="sub_row">
                             <div class="column">
-                                <img src="sri lanka.png" alt="Avatar" class="feature_img">
+                                <img <?php srcIMG("sri lanka.png") ?> alt="Avatar" class="feature_img">
                                 <a>Southern province</a>
                             </div>
                         </div>
                         <div class="sub_row">
                             <div class="column">
-                                <img src="sri lanka.png" alt="Avatar" class="feature_img">
+                                <img <?php srcIMG("sri lanka.png") ?> alt="Avatar" class="feature_img">
                                 <a>North Western province</a>
                             </div>
                         </div>
                         <div class="sub_row">
                             <div class="column">
-                                <img src="sri lanka.png" alt="Avatar" class="feature_img">
+                                <img <?php srcIMG("sri lanka.png") ?> alt="Avatar" class="feature_img">
                                 <a>Sabaragamuwa province</a>
                             </div>
                         </div>
                         <div class="sub_row">
                             <div class="column">
-                                <img src="sri lanka.png" alt="Avatar" class="feature_img">
+                                <img <?php srcIMG("sri lanka.png") ?> alt="Avatar" class="feature_img">
                                 <a>Central province</a>
                             </div>
                         </div>
                         <div class="sub_row">
                             <div class="column">
-                                <img src="sri lanka.png" alt="Avatar" class="feature_img">
+                                <img <?php srcIMG("sri lanka.png") ?> alt="Avatar" class="feature_img">
                                 <a>Uva province</a>
                             </div>
                         </div>
                         <div class="sub_row">
                             <div class="column">
-                                <img src="sri lanka.png" alt="Avatar" class="feature_img">
+                                <img <?php srcIMG("sri lanka.png") ?> alt="Avatar" class="feature_img">
                                 <a>North Central province</a>
                             </div>
                         </div>
@@ -125,9 +125,9 @@
                                       <div class="col_input">
                                         <select id="eType" name="eventType">
                                             <option value="Wedding">Wedding</option>
-                                            <option value="Wedding">Party/Festival</option>
-                                            <option value="Wedding">Cooperative event</option>
-                                            <option value="Wedding">Personalize event</option>
+                                            <option value="Party/Festival">Party/Festival</option>
+                                            <option value="Cooparate">Cooperative event</option>
+                                            <option value="Personal">Personalize event</option>
                                         </select>
                                       </div>
                                 </div>
@@ -207,7 +207,7 @@
                     </div>
                     <div class="details">
                         Reserve the date by paying the reservation fee online on Partyak. 
-                        Step payments leading to a final payment on the event day.
+                        The full payment have to be done one day prior to the event date.
                     </div>
                 </div>
                 <div class="details_row">
@@ -250,13 +250,14 @@
             </div>
             <div class="service_location">
                 <label for="location">Location</label>
-                <div class="location"></div>
+                <div class="location">
+                </div>
             </div>
             <div class="user_reviews">
                 <label>Review</label>
                 <div class="review">
                     <div class="reviewer">
-                        <img src="avatar3.png" alt="Avatar" class="profilePic">
+                        <img <?php srcIMG("avatar3.png") ?> alt="Avatar" class="profilePic">
                         <div class="name">
                             John
                             <br>Colombo
@@ -277,7 +278,7 @@
                 </div>
                 <div class="review">
                     <div class="reviewer">
-                        <img src="avatar1.png" alt="Avatar" class="profilePic">
+                        <img <?php srcIMG("avatar1.png") ?> alt="Avatar" class="profilePic">
                         <div class="name">
                             Rocky
                             <br>Kandy
@@ -307,10 +308,56 @@
                 </div>
             </div>
 
+            <div class="reviewbody" >
+                    <div class="post">
+                        <div class="text">Thanks for rating us!</div>
+                        <div class="edit">EDIT</div>
+                    </div>
+                    <div class="star-widget">
+                        <input type="radio" name="rate" id="rate-5">
+                        <label for="rate-5" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-4">
+                        <label for="rate-4" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-3">
+                        <label for="rate-3" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-2">
+                        <label for="rate-2" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-1">
+                        <label for="rate-1" class="fas fa-star"></label>
+                        <form action="#">
+                        <header></header>
+                        <div class="textarea">
+                            <textarea cols="30" placeholder="Describe your experience.."></textarea>
+                        </div>
+                        <div class="btn">
+                            <button type="submit">Post</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+
         </div>
     </div>
-    <?php linkJS("vendor/serviceCalendar"); ?>
 
+
+    <script>
+      const btn = document.querySelector("button");
+      const post = document.querySelector(".post");
+      const widget = document.querySelector(".star-widget");
+      const editBtn = document.querySelector(".edit");
+      btn.onclick = ()=>{
+        widget.style.display = "none";
+        post.style.display = "block";
+        editBtn.onclick = ()=>{
+          widget.style.display = "block";
+          post.style.display = "none";
+        }
+        return false;
+      }
+    </script>
+
+    <?php linkJS("vendor/serviceCalendar"); ?>
+    <?php linkPhp("footer") ?>
     
 </body>
 </html>

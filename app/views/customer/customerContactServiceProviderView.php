@@ -22,68 +22,68 @@
     
       <ul class="sidenav-links">
           <li>
-            <a href="#">
+            <a href="#" id="epl">
                 <i class="fas fa-user-tie" ></i>
               <span class="links_name" id="ep">Event Planners</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="#" id="venu">
               <i class="fas fa-hotel" ></i>
               <span class="links_name" id="venue"> Venues & Halls</span>
             </a>
           </li>
         <li>
-          <a href="#">
+          <a href="#" id="cat">
             <i class="fas fa-utensils" ></i>
             <span class="links_name" id="catering">Catering Service</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" id="phot">
             <i class="fas fa-camera" ></i>
             <span class="links_name" id="photo">Photographers</span>
           </a>
         </li>
         
         <li>
-          <a href="#">
+          <a href="#" id="musi">
             <i class="fas fa-guitar" ></i>
             <span class="links_name" id="music">Musical Service</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" id="danc">
             <i class="fas fa-child" ></i>
             <span class="links_name" id="dance">Dancing Groups</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" id="salo">
             <i class="fas fa-building" ></i>
             <span class="links_name" id="salon">Salon</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" id="caku">
             <i class="fas fa-birthday-cake" ></i>
             <span class="links_name" id="cake">Cake & Sweet</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" id="decor">
             <i class="fas fa-holly-berry" ></i>
             <span class="links_name" id="deco">Decorations</span>
           </a>
         </li>
         <li>
-            <a href="#">
+            <a href="#" id="soun">
                 <i class="fas fa-microphone" ></i>
               <span class="links_name" id="sound">Sounds & Lightings</span>
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="#" id="dres">
                 <i class="fas fa-female" ></i>
               <span class="links_name" id="dress">Dress Suppliers</span>
             </a>
@@ -185,7 +185,7 @@
         <table>
           <tr>
             <td> <a  href="#"> <img <?php srcIMG("brought.jpg") ?> alt="Chance Flowers"></a><br><p>Broghts Event Production <br> Colombo, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("shero.jpg") ?> alt="Chance Flowers"> </a><br><p>Event By Shero <br>Colombo, Sri Lanaka</p></td>
+            <td> <a href="<?php echo BASEURL . '/eventPlanner'; ?>" ><img <?php srcIMG("nekatha.jpg") ?> alt="Chance Flowers"> </a><br><p>Nekatha <br>Colombo, Sri Lanaka</p></td>
             <td> <a  href="#"> <img <?php srcIMG("eventers.jpg") ?> alt="Chance Flowers"> </a><br><p>Wedding Planner <br>Katunayaka,Sri Lanka</p></td>  
           </tr>
 

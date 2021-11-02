@@ -48,7 +48,7 @@
           <td>Full Payment</td>
           <td>8000.00</td>
           <td>30000.00</td>  
-          <td> <button class="go-payment">Go</button></td>     
+          <td> <button class="go-payment">  <a href="<?php echo BASEURL . '/payment'; ?>">Go</a></button></td>     
         </tr>
         
         <tr>
@@ -58,7 +58,7 @@
           <td>Advanced Paid</td>
           <td>50000.00</td>
           <td>300000.00</td>  
-          <td> <button class="go-payment">Go</button></td>     
+          <td> <button class="go-payment"><a href="<?php echo BASEURL . '/payment'; ?>">Go</a></button></td>     
         </tr>
 
         <tr>
@@ -68,7 +68,7 @@
           <td>Advanced Paid</td>
           <td>5000.00</td>
           <td>25000.00</td>  
-          <td> <button class="go-payment">Go</button></td>     
+          <td> <button class="go-payment"><a href="<?php echo BASEURL . '/payment'; ?>">Go</a></button></td>     
         </tr>
  
         

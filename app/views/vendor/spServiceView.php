@@ -11,6 +11,7 @@
     <?php linkCSS("navigation"); ?>
     <?php linkCSS("vendor/spAddPackage"); ?>
    
+    <?php linkCSS("footer");?>
     <?php linkCSS("vendor/addService"); ?>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -116,8 +117,8 @@
                 <th><button class="delete-service">Delete</button></th>
               </tr>
               <tr>
-                <th>Venues & Halls</th>
-                <th><a href="#">Nilwala Caterings</a><br>Galle Rd, Matara</th>
+                <th>Caterings</th>
+                <th><a href="#">Crystal Caterings</a><br>Galle Rd, Matara</th>
                 <th>Pending</th>
                 <th><button class="delete-service">Delete</button></th>
               </tr>
@@ -128,8 +129,8 @@
                 <th><button class="delete-service">Delete</button></th>
               </tr>
               <tr>
-                <th>Venues & Halls</th>
-                <th><a href="#">Nilwala Caterings</a><br>Galle Rd, Matara</th>
+                <th>Caterings</th>
+                <th><a href="#">Foodie Caterings</a><br>Nugegoda</th>
                 <th>Pending</th>
                 <th><button class="delete-service">Delete</button></th>
               </tr>
@@ -290,6 +291,7 @@
     </div>
   </div>
 </div>
+
 <!-- add new service popup -->
 <div id="addservicePopup" class="addservice_container">
 <!-- The Modal -->
@@ -335,7 +337,7 @@
                         <option value="saloon">Saloon</option>
                         <option value="usa">Sounds and lightings</option>
                         <option value="vANDs">Venues and Halls</option>
-                      </select>
+                    </select>
                 </div>
             </div>
             <div class="row">
@@ -436,7 +438,11 @@
               <label for="policy">Cancellation Policy</label>
             </div>
             <div class="col_input">
-              <textarea id="policy" name="cancellationpolicy" placeholder="Booking cancellation policy here" style="height:100px"></textarea>
+                <select id="policy" name="policy">
+                  <option value="cate">3 days before reserve date</option>
+                  <option value="cakes">1 week before reserve date</option>
+                  <option value="dancing">2 weeks before reserve date</option>    
+                </select>
             </div>
           </div>
         <div class="row">
@@ -589,6 +595,7 @@
   <?php linkJS("vendor/spService"); ?>
   <?php linkJS("vendor/spAddPackage"); ?>
   <?php linkJS("vendor/addService"); ?>
+  <?php linkPhp("footer") ?>
 </body>
 
 </html>

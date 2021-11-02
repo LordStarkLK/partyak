@@ -102,7 +102,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Customer Name</th>
-                        <th>Order ID</th>
+                        <th>Event Name</th>
                         <th>Note</th>
                     </tr>
                 </thead>
@@ -114,7 +114,7 @@
                 <tr>
                   <td>$row[note_id]</td>
                   <td>$row[customer_name]</td>
-                  <td>$row[order_id]</td>
+                  <td>$row[event_name]</td>
                   <td>$row[note]</td>
                 </tr>   
                 ";
@@ -122,10 +122,14 @@
                     } ?>
                 </tbody>
             </table>
-            <div class="add-note-div">
-                <h3 class="add-note">Add a note</h3>
-                <a href="<?php echo BASEURL . '/epNoteAdd'; ?>"><img class="add-btn" <?php srcIMG("addButton.png") ?>></a>
-
+            <div class="bottom-section">
+                <div class="event-board-link">
+                    <a href="<?php echo BASEURL . '/#'; ?>"><button>Event Schedule Board</button></a>
+                </div>
+                <div class="add-note-div">
+                    <h3 class="add-note">Add a note</h3>
+                    <a href="<?php echo BASEURL . '/epNoteAdd'; ?>"><img class="add-btn" <?php srcIMG("addButton.png") ?>></a>
+                </div>
             </div>
         </section>
     </div>
