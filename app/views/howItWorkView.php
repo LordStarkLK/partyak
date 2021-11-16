@@ -50,6 +50,23 @@
                     <img  class="how" <?php srcIMG("how.png") ?> alt="Chance Flowers">
 
 
+                    <p7>More details for Vendors</p7><br><br>
+                    <p8>Vendor Service</p8><br>
+                    <p9>After the vendor service verification process done by the system admin your service will be published in the system.</p9><br><br>
+
+                    <p8>Marketing content</p8><br>
+                    <p9>When you uploading marketing content first of all admin should accept it & then the vendor should do the payment for marketing content. After the payemnt the marketing content will be published</p9><br><br>
+
+                    <p8>Vendor Payment</p8><br>
+                    <p9>The system will be pay your payment per monthly. Venodr can request vendor payment when your wallet total ballance checked and other wise the system retrict you to do request payment.</p9><br><br>
+
+                    <p8>Intruction for event planner for contributing customer event planning</p8><br>
+                    <p9>After customer requesting, event planner can accept the requesting and recommand services for event and maintain event schedule board with customer</p9><br><br><br>
+                    
+                    <p7>More details for customer</p7><br><br>
+                    <p8>Customer payment</p8><br>
+                    <p9>When the customer book the vendor service the customer should do the revation payment and after that the service will reserve for customer. The reservation payament consiste of vendor advanced payment and & system service charge (3% of reservation price of service) Customer should pay the full payment the prior the event day.</p9><br><br>
+                    
                     <br><br><br><p5>Join With Us & Enjoy Your Day.</p5>
 
                 
