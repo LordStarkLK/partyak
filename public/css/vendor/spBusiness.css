@@ -1,0 +1,200 @@
+/* Googlefont Poppins CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #202020;
+    background-image: url("../../../public/img/home-confetti.png");
+    background-repeat: round;
+}
+.container{
+    padding: 1% 5% 1% 5%;
+    /* background-image: url("../../../public/img/blob 2.png");
+  background-repeat: round; */
+    /* background: linear-gradient(114.1deg, rgba(40,40,40,0.36) 18.52%, rgba(15, 15, 15, 0.12) 98.52%);
+  backdrop-filter: blur(120px); */
+    /* background-color: rgb(175, 149, 115); */
+}
+.content{
+    padding: 5px;
+    /* background-color: azure; */
+    width: 100%;
+    height: 100%;
+    
+}
+.services-container{
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(32, 32, 32, 0.829);
+    /* background-color: rgb(218, 170, 153); */
+    box-shadow: 10px 10px 15px 10px rgba(0, 0, 0, 0.349);
+}
+.service-box{
+    width: 275px;
+    height: 350px;
+    background-color: cadetblue;
+    margin: 5px;
+    padding: 20px;
+    border-radius: 5px;
+}
+.service_type{
+    width: 100%;
+    display: flex;
+    /* background-color: blanchedalmond; */
+}
+.service_type a{
+    font-size: 20px;
+    padding: 3px 0 0 10px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+.stype_img{
+    height: 35px;
+    width: 35px;
+    border: 2px #000000 solid;
+    border-radius: 50%;
+    /* color: white; */
+    background-color: rgb(255, 255, 255);
+}
+.service_name{
+    width: 100%;
+    padding-top: 10px;
+    /* height: 60px; */
+    
+    text-align: center;
+    /* color: #BEB9B9; */
+    /* background-color: rgb(147, 189, 226); */
+}
+.service_name a{
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+}
+.service_name a:hover{
+    cursor: pointer;
+}
+.location_name{
+    width: 100%;
+    /* height: 50px; */
+    font-size: 23px;
+    font-weight: 500;
+    text-align: center;
+    /* color: #BEB9B9; */
+    /* background-color: rgb(36, 103, 161); */
+}
+.ser-details{
+    min-height: 150px;
+}
+.curr_status{
+    /* width: 20%; */
+    height: 45px;
+    margin-top: 15px;
+    /* padding: 7px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    text-align: center;
+    background-color: #616161;
+}
+.curr_status a{
+    font-size: 23px;
+    margin-left: 15px;
+    font-weight: 600;
+    color: rgb(37, 228, 53);
+}
+.action{
+    height: 55px;
+    background-color: #000000;
+    
+    border-radius: 15px;
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.action a{
+    font-size: 23px;
+    font-weight: 800;
+    color: rgb(204, 44, 44);
+}
+.action:hover{
+    cursor: pointer;
+}
+
+
+.addingService{
+    width: 100%;
+    height: 80px;
+    padding-top: 20px;
+    /* background-color: brown; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.addingService button{
+    width: 500px;
+    height: 60px;
+    /* padding: 10px; */
+    background-color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+}
+.addingService button:hover{
+    cursor: pointer;
+    background-color: rgb(107, 156, 189);
+    color: black;
+}
+.common-func{
+    width: 100%;
+    /* height: 150px; */
+    /* padding-top: 20px; */
+    /* background-color: darkorange; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.common-func a{
+    text-decoration: none;
+}
+.common-func .funcBox{
+    width: 300px;
+    height: 70px;
+    margin: 30px;
+    /* background-color: rgba(28, 131, 150, 0.822); */
+    /* background-color: rgb(137, 235, 238); */
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+}
+.funcBox.box1{
+    background-color: rgb(154, 18, 207);
+}
+.funcBox.box2{
+    background-color: rgb(80, 194, 45);
+}
+.funcBox.box3{
+    background-color: rgb(185, 16, 120);
+}
+.common-func .funcBox:hover{
+    
+    color: rgb(0, 0, 0);
+}
