@@ -14,8 +14,9 @@
                 if ($_SESSION["type"] == "vendor") {
 
                     echo "<li><a href='";
-                    echo BASEURL . '/spAnalytics';
+                    echo BASEURL . '/spBusiness';
                     echo "'>Business</a></li>";
+                    echo '<li><a href="#">Be a customer</a></li>';
                 } elseif ($_SESSION["type"] == "customer") {
                     echo '<li><a href="#">Browse</a></li>';
                 }

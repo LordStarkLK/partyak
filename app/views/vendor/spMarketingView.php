@@ -106,6 +106,7 @@
               <i class="fa fa-pause-circle-o fa-lg" aria-hidden="true" style="color: rgb(75, 224, 88);"></i>
             </div>
           </div>
+          <a href="<?php echo BASEURL . '/payment'; ?>"><button>Pay now</button></a>
         </div>
         <div class="submission_area">
           <div class="title"><a>Upload Your File</a></div>
