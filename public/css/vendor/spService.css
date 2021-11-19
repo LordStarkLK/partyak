@@ -112,7 +112,7 @@ nav .sidebar-button i{
   border-radius: 43px;
 }
 .home-content .packages-box{
-  display: none;
+  /* display: flex; */
   justify-content: center;
   padding: 36px 43px 3px 43px;
   background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.64) 18.52%, rgba(15, 15, 15, 0.8) 98.52%);
