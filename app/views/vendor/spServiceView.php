@@ -25,43 +25,43 @@
     <div class="sidebar">
 
       <ul class="sidenav-links">
-        <li>
+        <!-- <li>
           <a href="<?php echo BASEURL . '/spAnalytics'; ?>">
             <i class="fa fa-pie-chart" aria-hidden="true"></i>
             <span class="links_name">Analytics</span>
           </a>
-        </li>
-        <li>
+        </li> -->
+        <!-- <li>
           <a href="<?php echo BASEURL . '/spProfile'; ?>">
             <i class="fa fa-user-circle-o" aria-hidden="true"></i>
             <span class="links_name">Profile</span>
           </a>
-        </li>
+        </li> -->
         <li>
           <a href="<?php echo BASEURL . '/spService'; ?>">
             <i class="fa fa-server" aria-hidden="true"></i>
-            <span class="links_name">Services</span>
+            <span class="links_name">Packages</span>
           </a>
         </li>
         <li>
           <a href="<?php echo BASEURL . '/spBooking'; ?>">
             <i class="fa fa-list" aria-hidden="true"></i>
-            <span class="links_name">Booking</span>
+            <span class="links_name">Bookings</span>
           </a>
         </li>
-        <li>
+        <!-- <li>
           <a href="<?php echo BASEURL . '/spMarketing'; ?>">
             <i class="fa fa-sticky-note" aria-hidden="true"></i>
             <span class="links_name">Marketing</span>
           </a>
-        </li>
+        </li> -->
 
-        <li>
+        <!-- <li>
           <a href="<?php echo BASEURL . '/spWallet'; ?>">
             <i class="fa fa-usd" aria-hidden="true"></i>
             <span class="links_name">Wallet</span>
           </a>
-        </li>
+        </li> -->
         <li>
         <a href="<?php echo BASEURL . '/spChat'; ?>">
             <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -87,19 +87,19 @@
       <nav>
         <div class="sidebar-button">
           <i class='bx bx-menu sidebarBtn'></i>
-          <span class="dashboard">SERVICES</span>
+          <span class="dashboard">PACKAGES</span>
         </div>
       </nav>
       <div class="home-content">
-        <div class="name-container">
+        <!-- <div class="name-container">
           <div class="service">
             <button id="s_btn" class="serviceBtn">Our Services</button>
           </div>
           <div class="package">
             <button id="p_btn" class="packageBtn">Our Packages</button>
           </div>
-        </div>
-        <div id="service" class="services-box">
+        </div> -->
+        <!-- <div id="service" class="services-box">
           <table class="table-content">
             <thead>
               <tr>
@@ -140,7 +140,7 @@
             <a>Add New Service </a>
             <button id="addservice_button" class="new-service"><i class='fa fa-plus-circle' ></i></button> 
           </div>
-        </div>
+        </div> -->
 
         <div id="package" class="packages-box">
           <table class="table-content">
