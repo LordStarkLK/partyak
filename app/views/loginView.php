@@ -48,10 +48,10 @@
                         <p class="account">Not a member? <a href="<?php echo BASEURL . '/home/signup'; ?>"> Register</a></p>
                     </div>
 
-                    <div class="sociallogin">
+                    <!-- <div class="sociallogin">
                         <a href="#" class="google">
                             <i class="fa fa-google fa-fw"></i> CONTINUE WITH GOOGLE</a>
-                    </div>   
+                    </div>    -->
                 </div>
             </div>
         </div>
