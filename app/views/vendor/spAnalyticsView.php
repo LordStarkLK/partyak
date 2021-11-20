@@ -9,6 +9,7 @@
   <?php linkCSS("footer");?>
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -18,7 +19,7 @@
     <?php linkPhp("navigation") ?>
   </header>
   <div class="container">
-    <div class="sidebar">
+    <!-- <div class="sidebar">
 
       <ul class="sidenav-links">
         <li>
@@ -77,12 +78,13 @@
           </a>
         </li>
       </ul>
-    </div>
+    </div> -->
 
     <section class="home-section">
       <nav>
         <div class="sidebar-button">
-          <i class='bx bx-menu sidebarBtn'></i>
+          <!-- <i class='bx bx-menu sidebarBtn'></i> -->
+          <i class="fa fa-pie-chart" aria-hidden="true"></i>
           <span class="dashboard">ANALYTICS</span>
         </div>
       </nav>

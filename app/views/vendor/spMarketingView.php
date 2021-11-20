@@ -17,7 +17,7 @@
     <?php linkPhp("navigation") ?>
   </header>
   <div class="container">
-    <div class="sidebar">
+    <!-- <div class="sidebar">
 
       <ul class="sidenav-links">
         <li>
@@ -76,12 +76,13 @@
           </a>
         </li>
       </ul>
-    </div>
+    </div> -->
 
     <section class="home-section">
       <nav>
         <div class="sidebar-button">
-          <i class='bx bx-menu sidebarBtn'></i>
+          <!-- <i class='bx bx-menu sidebarBtn'></i> -->
+          <i class="fa fa-sticky-note" aria-hidden="true"></i>
           <span class="dashboard">MARKETING</span>
         </div>
       </nav>

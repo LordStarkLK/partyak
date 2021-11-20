@@ -17,7 +17,7 @@
     <?php linkPhp("Navigation") ?>
   </header>
   <div class="container">
-    <div class="sidebar">
+    <!-- <div class="sidebar">
 
       <ul class="sidenav-links">
         <li>
@@ -76,11 +76,12 @@
           </a>
         </li>
       </ul>
-    </div>
+    </div> -->
     <section class="home-section">
       <nav>
         <div class="sidebar-button">
-          <i class='bx bx-menu sidebarBtn'></i>
+          <!-- <i class='bx bx-menu sidebarBtn'></i> -->
+          <i class="fa fa-usd fa-2x" aria-hidden="true"></i>
           <span class="dashboard">Wallet</span>
         </div>
       </nav>
