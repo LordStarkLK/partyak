@@ -143,6 +143,9 @@
         </div> -->
 
         <div id="package" class="packages-box">
+          <div class="ser-name">
+            <a href="<?php echo BASEURL . '/venuesANDhalls'; ?>">Mount Lavinia Hotel</a>
+          </div>
           <table class="table-content">
             <thead>
               <tr>
