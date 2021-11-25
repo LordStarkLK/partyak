@@ -75,7 +75,6 @@
         <div class="nav-items">
             <div class="nav-links">
                 <a href="<?php echo BASEURL . '/customerContactServiceProvider'; ?>">Browse</i></a>
-                <a href="<?php echo BASEURL . '/howItWork'; ?>" class="active">How it work</a>
                 <div class="dropdown">
                     <button class="dropbtn">Plan Event
                         <i class="fa fa-caret-down"></i>
@@ -85,6 +84,8 @@
                         <a href="<?php echo BASEURL . '/customerMyEvent'; ?>">My Event</a>
                     </div>
                 </div>
+                <a href="<?php echo BASEURL . '/howItWork'; ?>" class="active">How it work</a>
+                <a href="<?php echo BASEURL . '/customerBecomeVendor'; ?>">Become a vendor</a>
 
             </div>
 
@@ -98,7 +99,7 @@
                     <div class="no">
                         <button class="nobtn"><i class="fa fa-bell"></i></button>
                         <div class="no-content">
-                            <p>You have do 100,000 LKR reservation payment for reserve Mount Lavania Hotel.</p>
+                            <p>You have do reservation payment for reserve Mount Lavania Hotel.</p>
                             <a href="<?php echo BASEURL . '/payment'; ?>">Do Payment</a>
                         </div>
                     </div>

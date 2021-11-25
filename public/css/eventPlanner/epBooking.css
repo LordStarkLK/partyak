@@ -159,7 +159,7 @@ nav .sidebar-button i {
 .bookings-table {
   margin: 10px;
   width: 100%;
-  min-height: 400px;
+  min-height: 300px;
   padding: 10px;
   border-radius: 16px;
   box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.1);
@@ -177,7 +177,7 @@ nav .sidebar-button i {
 }
 .bookings-requestTable {
   width: 100%;
-  min-height: 400px;
+  min-height: 300px;
   padding: 10px;
   border-radius: 16px;
   box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.1);

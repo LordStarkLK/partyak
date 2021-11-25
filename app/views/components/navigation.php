@@ -14,8 +14,9 @@
                 if ($_SESSION["type"] == "vendor") {
 
                     echo "<li><a href='";
-                    echo BASEURL . '/spAnalytics';
+                    echo BASEURL . '/spBusiness';
                     echo "'>Business</a></li>";
+                    echo '<li><a href="#">Be a customer</a></li>';
                 } elseif ($_SESSION["type"] == "customer") {
                     echo '<li><a href="#">Browse</a></li>';
                 }
@@ -29,7 +30,7 @@
         echo "<div class='nav-btn'>";
 
         echo "<button class='signup-button btn-sign' type='button'><a href='";
-        echo BASEURL . '/home/signup';
+        echo BASEURL . '/customerRegister';
         echo "'>Sign up</a></button>";
 
         echo "<button class='login-button btn-sign' type='button'><a href='";

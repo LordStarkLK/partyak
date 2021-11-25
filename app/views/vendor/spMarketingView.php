@@ -17,7 +17,7 @@
     <?php linkPhp("navigation") ?>
   </header>
   <div class="container">
-    <div class="sidebar">
+    <!-- <div class="sidebar">
 
       <ul class="sidenav-links">
         <li>
@@ -76,12 +76,13 @@
           </a>
         </li>
       </ul>
-    </div>
+    </div> -->
 
     <section class="home-section">
       <nav>
         <div class="sidebar-button">
-          <i class='bx bx-menu sidebarBtn'></i>
+          <!-- <i class='bx bx-menu sidebarBtn'></i> -->
+          <i class="fa fa-sticky-note" aria-hidden="true"></i>
           <span class="dashboard">MARKETING</span>
         </div>
       </nav>
@@ -106,6 +107,7 @@
               <i class="fa fa-pause-circle-o fa-lg" aria-hidden="true" style="color: rgb(75, 224, 88);"></i>
             </div>
           </div>
+          <a href="<?php echo BASEURL . '/payment'; ?>"><button>Pay now</button></a>
         </div>
         <div class="submission_area">
           <div class="title"><a>Upload Your File</a></div>

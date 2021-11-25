@@ -13,6 +13,9 @@ body{
 .container{
     padding: 1% 10% 1% 10%;
     background-image: url("../../../public/img/blob 1.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .sidebar{
   border-radius: 23px 0px 0px 23px;
@@ -67,7 +70,7 @@ body{
   position: relative;
   height: 70%;
   width: calc(100% - 220px);
-  left: 220px;
+  /* left: 220px; */
   padding-bottom: 10px;
   transition: all 0.5s ease;
   border-radius: 43px;
