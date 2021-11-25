@@ -54,9 +54,6 @@ body{
   padding-top: 0;
 }
 
-
-
-
 #iconMenu{
   font-size: 45px;
   color: #66b0ff;
@@ -67,22 +64,37 @@ body{
   color:#fff;
 }
 
-/* chat css start */
 
-.sidebar-chat{
-  
-  width: 15%;
+
+ .content{
+    position: relative;
+    display: flex;
+    /* margin-top: 1%; */
+    opacity: 100%;
+    width: 100%;
+    height: 550px;
+    transition: all 0.5s ease;
+    border-radius: 30px; 
+    background-color: rgb(0, 0, 0);
+    /* background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%); */
+    backdrop-filter: blur(120px);
+    padding:2%;
+}
+
+
+.chatsidebar{
   position: relative;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   order:0;
   opacity: 100%;
-  margin-right: 10%;
-
+  width: 380px;
 } 
-
-.cusname{
+.receiver{
+  display: flex;
+}
+.receivername{
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -91,66 +103,50 @@ body{
   padding:5%;
 } 
 
-.cusname p{
+.receivername p{
   opacity: 0.9;
   font-style: normal;
-  font-weight:normal;
-  font-size: 19px;
-  line-height: 24px;
+  font-weight:600;
+  font-size: 22px;
+  line-height: 20px;
   background-color: transparent;
   color: #F5F5F5; 
 
 } 
-
-
-.cusSearch{
-  position: relative;
+.senderSearch{
+    display: flex;
+    width: 100%;
+    height: 30px;
+}
+form{
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  order:1;
-  padding-bottom:5%;
+  padding-bottom: 15px;
+}
+.senderSearch input{
+    height: 30px;
+    width: 80%;
+    /* background-color:yellow ; */
+    border-radius: 26px 0px 0px 26px; 
+    border: 1px solid grey;
 }
 
-form.cuse{
-  width: 250px;
-  height: 38px;
-  background: rgba(255, 253, 253, 0.8);
-  border-radius: 26px;
+.senderSearch .searchbtn{
+    height: 30px;
+    width: 20%;
+    border-radius: 0px 26px 26px 0px;
+    border: 1px solid grey;
+    border-left: none; 
+
 }
 
-form.cuse input[type=text] {
-  border-radius: 26px 0px 0px 26px; 
-  height: 38px;
-  padding: 10px;
-  font-size: 20px;
-  border: 1px solid grey;
-  float: left;
-  width: 80%;
-  background-color: transparent;
-}
-
-/* Style the submit button */
-form.cuse .cusbtn {
-  height: 38px;
-  border-radius: 0px 26px 26px 0px;
-  float: left;
-  width: 20%;
-  padding: 5px;
-  background:#092c41;
-  color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none; /* Prevent double borders */
-  cursor: pointer;
-}
-
-form.cuse .cusbtn:hover {
-  background: #0b7dda;
+.senderSearch .searchbtn:hover {
+    cursor: pointer;
+    background: #0b7dda;
 } 
 
 /* Clear floats */
-form.cuse::after {
+.senderSearch::after {
   content: "";
   clear: both;
   display: table;
@@ -163,10 +159,11 @@ form.cuse::after {
   flex-direction: row;
   order:2;
   margin-top: 10%;
+  height: 50px;
   background-color: rgb(0, 0, 0);
   background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
   backdrop-filter: blur(120px);
-  border-radius: 26px 0px 0px 26px;
+  border-radius: 18px;
 }
 
 .profi{
@@ -175,10 +172,15 @@ form.cuse::after {
   flex-wrap: wrap;
   flex-direction:column;
   order:0;
-  width: 30px;
-  height:30px;
+  /* width: 20px;
+  height:20px; */
   padding:3%;
 
+}
+.proimg{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .remsg{
@@ -187,9 +189,8 @@ form.cuse::after {
   flex-wrap: wrap;
   flex-direction:column;
   order:1;
-  padding:5%;
-  padding-left:30%;
-  margin-top: 10%;
+  padding:5px;
+  /* margin-top: 10px; */
 }
 
 .remsg p{
@@ -197,10 +198,15 @@ form.cuse::after {
   font-style: normal;
   font-weight:normal;
   font-size: 15px;
-  line-height: 24px;
+  /* line-height: 24px; */
   background-color: transparent;
   color: #F5F5F5; 
 
+}
+.remsg a{
+  font-weight: 600;
+  font-size: 19px;
+  color: #14a3b6;
 }
 
 .chatside{
@@ -208,13 +214,16 @@ form.cuse::after {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  order:0;
+  order:1;
   margin-left: 5%;
   opacity: 100%;
   width: 100%;
   transition: all 0.5s ease;
   border-radius: 30px; 
-  background-color: rgb(0, 0, 0);
+  /* background-color: rgb(0, 0, 0); */
+/* background-color: rgb(255, 191, 71); */
+/* padding: 10px; */
+
   background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
   backdrop-filter: blur(120px);
 }
@@ -255,26 +264,85 @@ form.cuse::after {
   color: #F5F5F5; 
 }
 
-.chatt {
-  border-left: solid #9f9595;
-  height: 100%;
-  width:100%;
-  margin-top: 1%;
-  padding-left:0%;
-  padding-right:5%;
+.chats{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2%;
+  padding:2%;
+  
+ 
+}    
+
+.chatscreen{
+  opacity: 100%;
+  width: 100%;
+  transition: all 0.5s ease;
+  border-radius: 30px; 
+  background-color:rgb(127, 154, 155);
   margin-bottom: 5%;
+  padding:2%;
+
+}
+
+
+.contain {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  margin-top:20%;
+  border-radius: 30px;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.contain p{
+  font-style: normal;
+  font-weight: normal;
+  text-align: justify;
+  font-size: 15px;
+  line-height: 24px;
+  background-color: transparent;
+  color:black; 
+}
+
+.contain::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.time-left {
+  float: left;
+  color: #999;
+}
+ 
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 .chat-container {
   width:100%;
-  padding:0%;
+  padding:10px;
+  margin-left: 20px;
 }
 
 /* User Bar */
 
 .user-bar {
   height: 55px;
-  background: #092c41;
+  background-color: rgb(28, 145, 145);
   color: #fff;
   padding: 0 8px;
   font-size: 24px;
@@ -348,18 +416,13 @@ form.cuse::after {
 /* Conversation */
 
 .conversation {
-  height:100%;
+  width: 100%;
   position: relative;
   background-color: rgb(127, 154, 155);
   z-index: 0;
+  border-radius: 0 0 10px 10px;
 }
 
-/* .conversation ::-webkit-scrollbar {
-  transition: all .5s;
-  width: 5px;
-  height: 1px;
-  z-index: 10;
-} */
 
 .conversation ::-webkit-scrollbar-track {
   background: transparent;
@@ -370,11 +433,12 @@ form.cuse::after {
 }
 
 .conversation .conversation-container {
-  height: calc(100% - 68px);
+  /* height: calc(100% - 68px); */
   box-shadow: inset 0 10px 10px -10px #000000;
   overflow-x: hidden;
   padding: 0 16px;
   margin-bottom: 5px;
+  /* background-color: violet; */
 }
 
 .conversation .conversation-container:after {
@@ -393,7 +457,7 @@ form.cuse::after {
   padding: 8px;
   position: relative;
   margin: 8px 0;
-  max-width: 85%;
+  max-width: 400px;
   word-wrap: break-word;
   z-index: -1;
 }
@@ -480,7 +544,7 @@ form.cuse::after {
 }
 
 .message.sent {
-  margin-top:20%;
+  margin-bottom:35%;
   background: rgb(151, 225, 228);
   border-radius: 5px 0px 5px 5px;
   float: right;
@@ -515,13 +579,12 @@ form.cuse::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: white;
+  background: rgb(255, 255, 255);
   border-radius: 5px 0 0 5px;
   flex: 0 0 auto;
   margin-left: 8px;
   width: 48px;
 }
-
 .conversation-compose .input-msg {
   border: 0;
   flex: 1 1 auto;
@@ -578,8 +641,8 @@ form.cuse::after {
   border-radius: 50%;
   color: #fff;
   position: relative;
-  width: 48px;
-  height: 48px;
+  width: 35px;
+  height: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -589,8 +652,6 @@ form.cuse::after {
   font-size: 24px;
   margin-left: 0px;
 }
-
-/* chat css end */
 
 
 @media (max-width: 1240px) {
