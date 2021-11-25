@@ -20,7 +20,7 @@
     <div class="sidebar">
 
       <ul class="sidenav-links">
-        <li>
+        <!-- <li>
           <a href="<?php echo BASEURL . '/spAnalytics'; ?>">
             <i class="fa fa-pie-chart" aria-hidden="true"></i>
             <span class="links_name">Analytics</span>
@@ -31,20 +31,20 @@
             <i class="fa fa-user-circle-o" aria-hidden="true"></i>
             <span class="links_name">Profile</span>
           </a>
-        </li>
+        </li> -->
         <li>
           <a href="<?php echo BASEURL . '/spService'; ?>">
             <i class="fa fa-server" aria-hidden="true"></i>
-            <span class="links_name">Services</span>
+            <span class="links_name">Packages</span>
           </a>
         </li>
         <li>
           <a href="<?php echo BASEURL . '/spBooking'; ?>">
             <i class="fa fa-list" aria-hidden="true"></i>
-            <span class="links_name">Booking</span>
+            <span class="links_name">Bookings</span>
           </a>
         </li>
-        <li>
+        <!-- <li>
           <a href="<?php echo BASEURL . '/spMarketing'; ?>">
             <i class="fa fa-sticky-note" aria-hidden="true"></i>
             <span class="links_name">Marketing</span>
@@ -56,7 +56,7 @@
             <i class="fa fa-usd" aria-hidden="true"></i>
             <span class="links_name">Wallet</span>
           </a>
-        </li>
+        </li> -->
         <li>
         <a href="<?php echo BASEURL . '/spChat'; ?>">
             <i class="fa fa-envelope" aria-hidden="true"></i>

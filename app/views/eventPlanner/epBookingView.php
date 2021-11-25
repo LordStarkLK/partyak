@@ -97,6 +97,59 @@
         </div>
       </nav>
       <div class="home-content">
+      <div class="bookings-requests">
+          <a>Booking Requests</a>
+          <div class="bookings-requestTable">
+            <table class="table-content">
+              <thead>
+                <tr>
+                  <th>Customer Name</th>
+                  <th>Event Type</th>
+                  <th>Guest Count</th>
+                  <th>Event Date</th>
+                  <!-- <th>Pacakge</th> -->
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Kamal</th>
+                  <th>Wedding</th>
+                  <th>300</th>
+                  <th>2020-10-10</th>
+                  <!-- <th>Summer Package</th> -->
+                  <th class="btn-row">
+                    <button class="accept-booking">Accept</button>
+                    <button class="reject-booking">Reject</button>
+                  </th>
+                </tr>
+                <tr>
+                  <th>Sunil</th>
+                  <th>Wedding</th>
+                  <th>300</th>
+                  <th>2020-10-10</th>
+                  <!-- <th>Summer Package</th> -->
+                  <th class="btn-row">
+                    <button class="accept-booking">Accept</button>
+                    <button class="reject-booking">Reject</button>
+                  </th>
+                </tr>
+                <tr>
+                  <th>Nimal</th>
+                  <th>Party</th>
+                  <th>300</th>
+                  <th>2020-10-10</th>
+                  <!-- <th>Summer Package</th> -->
+                  <th class="btn-row">
+                    <button class="accept-booking">Accept</button>
+                    <button class="reject-booking">Reject</button>
+                  </th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
         <div class="search-bookings">
           <input type="text" placeholder="Search" name="search">
           <button type="submit"><i class="fa fa-search"></i></button>
@@ -111,8 +164,8 @@
                 <th>ID</th>
                 <th>Customer Name</th>
                 <th>Customer Email</th>
-                <th>Service</th>
-                <th>Recerved Date</th>
+                <!-- <th>Service</th> -->
+                <th>Event Date</th>
                 <th>Total Amount (LKR)</th>
                 <th>Paid Amount (LKR)</th>
                 <th>Status</th>
@@ -123,7 +176,7 @@
                 <th>1</th>
                 <th>Kamal</th>
                 <th>k@gmail.com</th>
-                <th>Venues & Halls</th>
+                <!-- <th>Venues & Halls</th> -->
                 <th>2020-10-10</th>
                 <th>120000</th>
                 <th>45000</th>
@@ -133,7 +186,7 @@
                 <th>2</th>
                 <th>Namal</th>
                 <th>n@gmail.com</th>
-                <th>Venues & Halls</th>
+                <!-- <th>Venues & Halls</th> -->
                 <th>2020-10-11</th>
                 <th>120000</th>
                 <th>35000</th>
@@ -143,7 +196,7 @@
                 <th>3</th>
                 <th>Amal</th>
                 <th>a@gmail.com</th>
-                <th>Venues & Halls</th>
+                <!-- <th>Venues & Halls</th> -->
                 <th>2020-10-15</th>
                 <th>120000</th>
                 <th>20000</th>
@@ -153,7 +206,7 @@
                 <th>4</th>
                 <th>Kamal</th>
                 <th>k@gmail.com</th>
-                <th>Venues & Halls</th>
+                <!-- <th>Venues & Halls</th> -->
                 <th>2020-10-10</th>
                 <th>120000</th>
                 <th>20000</th>
@@ -163,7 +216,7 @@
                 <th>5</th>
                 <th>Kamal</th>
                 <th>k@gmail.com</th>
-                <th>Venues & Halls</th>
+                <!-- <th>Venues & Halls</th> -->
                 <th>2020-10-25</th>
                 <th>120000</th>
                 <th>20000</th>
@@ -173,58 +226,7 @@
           </table>
         </div>
 
-        <div class="bookings-requests">
-          <a>Booking Requests</a>
-          <div class="bookings-requestTable">
-            <table class="table-content">
-              <thead>
-                <tr>
-                  <th>Customer Name</th>
-                  <th>Event Type</th>
-                  <th>Guest Count</th>
-                  <th>Event Date</th>
-                  <th>Pacakge</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>Kamal</th>
-                  <th>Wedding</th>
-                  <th>300</th>
-                  <th>2020-10-10</th>
-                  <th>Summer Package</th>
-                  <th class="btn-row">
-                    <button class="accept-booking">Accept</button>
-                    <button class="reject-booking">Reject</button>
-                  </th>
-                </tr>
-                <tr>
-                  <th>Kamal</th>
-                  <th>Wedding</th>
-                  <th>300</th>
-                  <th>2020-10-10</th>
-                  <th>Summer Package</th>
-                  <th class="btn-row">
-                    <button class="accept-booking">Accept</button>
-                    <button class="reject-booking">Reject</button>
-                  </th>
-                </tr>
-                <tr>
-                  <th>Kamal</th>
-                  <th>Wedding</th>
-                  <th>300</th>
-                  <th>2020-10-10</th>
-                  <th>Summer Package</th>
-                  <th class="btn-row">
-                    <button class="accept-booking">Accept</button>
-                    <button class="reject-booking">Reject</button>
-                  </th>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+        
       </div>
     </section>
   </div>
