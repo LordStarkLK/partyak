@@ -67,7 +67,7 @@
               </div>
 
               <div class="arrow">
-                <i class="fas fa-forward"></i>
+                <p>to</p>
               </div>
 
               
