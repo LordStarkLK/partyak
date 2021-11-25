@@ -75,7 +75,7 @@ body{
   color: rgba(255, 255, 255, 0.8);
 }
 
-.howcontent p34,p38{
+.howcontent p34,p38, p8{
   position: relative;
   opacity: 85%;
   font-size: 26px;
@@ -103,7 +103,7 @@ body{
 }
 
 
-.howcontent p3,p4, p5{
+.howcontent p3,p4, p5, p7{
   position: relative;
   opacity: 85%;
   font-weight: bold;
@@ -128,7 +128,7 @@ body{
   color: rgba(255, 255, 255, 0.8);
 }
 
-.howcontent p35{
+.howcontent p35, p9{
   position: relative;
   opacity: 85%;
   font-size: 22px;

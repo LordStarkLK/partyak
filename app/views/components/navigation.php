@@ -30,7 +30,7 @@
         echo "<div class='nav-btn'>";
 
         echo "<button class='signup-button btn-sign' type='button'><a href='";
-        echo BASEURL . '/home/signup';
+        echo BASEURL . '/customerRegister';
         echo "'>Sign up</a></button>";
 
         echo "<button class='login-button btn-sign' type='button'><a href='";
