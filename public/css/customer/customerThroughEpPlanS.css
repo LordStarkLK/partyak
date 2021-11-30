@@ -82,15 +82,6 @@ body{
   white-space: nowrap;
 }
 
-/* .side{ 
-  background-image:url("../../../public/img/searchVenR.png"); 
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-top:5%;
-}*/
-
-
 .cusContent{
     position: relative;
     display: flex;
@@ -193,7 +184,7 @@ body{
 }
 
 
-.venueq p1, .venueq p2, .musicq p3, .danceq p,.cakeq p4, .decoq p5, .soundq p6, .soundq p7, .dressq p8,.cateringq p0, .cateringq p10, .salonq p17 , .arrow p{
+.venueq p1, .venueq p2, .venueq p3,.cateringq p3,.photoq p3,.musicq p3,.musicq p4, .danceq p,.danceq p3,.salonq p3,.cakeq p3,.cakeq p4,.decoq p3, .decoq p5,.soundq p3, .soundq p6, .soundq p7,.dressq p3, .dressq p8,.cateringq p0, .cateringq p10, .salonq p17 , .arrow p{
   height: 44px;
   padding:3%;
   opacity: 0.9;
@@ -205,6 +196,7 @@ body{
   color: #F5F5F5; 
   
 }
+
 
 .cusContent p11{
   height: 44px;
@@ -237,7 +229,7 @@ body{
 }
 
 
-.indoortick, .dancetick, .setitick, .mbandtick, .solotick, .kandytick, .sabatick, .wedtick, .sweetick, .backtick , .soundtick,.intick, .maletick, .breaktick, .dinnertick, .buffetick, .end, .hairtick{
+.indoortick, .dancetick, .setitick,.mbandtick, .solotick, .kandytick, .sabatick, .wedtick, .sweetick, .backtick , .soundtick,.intick, .maletick, .breaktick, .dinnertick, .buffetick, .end, .hairtick{
   display:flex;
   flex-direction: column;
   order:1;
@@ -264,6 +256,15 @@ body{
   padding-left:5%;
   padding-top:0.5%;
 }
+
+.handletick{
+  display:flex;
+  flex-direction: column;
+  padding:3%;
+  padding-left:5%;
+  padding-top:2.3%;
+}
+
 
 .input-box2,.input-box3,.seat, .input-box4,.input-box9{
     display:flex;
@@ -330,13 +331,21 @@ body{
 
 }
 
-
 .input-box5, .input-box17{
   display:flex;
   flex-direction: row;
   order:2;
   
-  }
+}
+
+.input-box07{
+  display:flex;
+  flex-direction: row;
+  order:3;
+    
+}
+  
+
 
   .save{
     display:flex;
@@ -347,7 +356,7 @@ body{
   
  
 
-.indoortick input, .outdoortick input,.dancetick input, .setitick input, .poruwatick input, .mbandtick input, .djstick input, .solotick input, .kandytick input, .lawtick input, .sabatick input, .westick input,.wedtick input, .partytick input, .sweetick input, .backtick input, .floraltick input, .soundtick input, .lightick input, .intick input, .outick input, .maletick input, .femaletick input, .breaktick input, .lunchtick input, .dinnertick input, .teatick input, .buffetick input, .hairtick input, .makeuptick input{
+.indoortick input, .outdoortick input,.dancetick input,.handletick input, .setitick input, .poruwatick input, .mbandtick input, .djstick input, .solotick input, .kandytick input, .lawtick input, .sabatick input, .westick input,.wedtick input, .partytick input, .sweetick input, .backtick input, .floraltick input, .soundtick input, .lightick input, .intick input, .outick input, .maletick input, .femaletick input, .breaktick input, .lunchtick input, .dinnertick input, .teatick input, .buffetick input, .hairtick input, .makeuptick input{
   width: 38px;
   height: 38px;
   border-color: transparent; 
