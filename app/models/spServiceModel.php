@@ -2,7 +2,7 @@
 
 class SpServiceModel extends Database
 {
-
+    
     public function addPackageDetail($serviceName, $packageName, $packageDescription, $packageValidFrom, $packageValidTo, $id, $packageUnitprice, $packageFixedprice)
     {
 
