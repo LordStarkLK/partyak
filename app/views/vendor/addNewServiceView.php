@@ -516,188 +516,181 @@
       <div id="no_features" class="no_features">
         <a>No features available</a>
       </div>          
+    </div>
 
-
-
-
-
+    <!-- <div class="tab"> -->
+      <div class="content_title"><a><u>Image and caption:</u></a></div>
+        <div class="row">
+          <div class="col_name">
+            <label for="caption">Caption</label>
+          </div>
+          <div class="col_input">
+            <input type="text" id="caption" name="caption" placeholder="Add your service caption">
           </div>
         </div>
-        <!-- end of service separate info -->
-        <!-- <div class="tab">
-          <div class="content_title"><a><u>Image and caption:</u></a></div>
-
-          <div class="row">
-            <div class="col_name">
-              <label for="caption">Caption</label>
-            </div>
-            <div class="col_input">
-              <input type="text" id="caption" name="caption" placeholder="Add your service caption">
-            </div>
+        <hr/>
+        <div class="row">
+          <div class="col_name">
+            <label for="simage">Image</label>
           </div>
-            <hr/>
-          <div class="row">
-            <div class="col_name">
-              <label for="simage">Image</label>
-            </div>
-            <div class="col_input">
-              <input type="file" id="simage" name="serviceimage"><br><br>
-            </div>
+          <div class="col_input">
+             <input type="file" id="simage" name="serviceimage"><br><br>
           </div>
-            <hr/>
-          <div class="row">
-            <div class="col_name">
+        </div>
+        <hr/>
+        <div class="row">
+          <div class="col_name">
               <label for="sdoc">Document</label>
-            </div>
-            <div class="col_input">
-              <input type="file" id="sdoc" name="servicedoc"><br><br>
-            </div>
           </div>
-            <hr/>
-        </div> -->
-        
-        <div style="overflow:auto;">
-          <div class="formBtn" style="float:right;">
-            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+          <div class="col_input">
+            <input type="file" id="sdoc" name="servicedoc"><br><br>
           </div>
         </div>
+        <hr/>
+      </div>
+    <!-- </div> -->
+
+        <!-- end of service separate info -->
+        
+    <div style="overflow:auto;">
+        <div class="formBtn" >
+            <button type="button" id="nextBtn" onclick="nextPrev(1)" style="float:right;">Next</button>
+            <button type="button" id="submitBtn" style="float:right; display:none;">Submit</button>
+            <button type="button" id="prevBtn" onclick="nextPrev(-1)" style="float:right;">Previous</button>
+            
+        </div>
+    </div>
         
         <!-- Circles which indicates the steps of the form: -->
-      <div style="text-align:center;margin-top:40px;">
-        <span class="step"></span>
-        <span class="step"></span>
-        <span class="step"></span>
-        <span class="step"></span>
-      </div>
-      
-
- 
-
-
-        
+    <div style="text-align:center;margin-top:40px;">
+      <span class="step"></span>
+      <span class="step"></span>
+      <span class="step"></span>
+      <!-- <span class="step"></span> -->
+    </div>
+     
     </form>
   </div>
 </div>
 
 <script>
 
-// var venueF = document.getElementById("venue_features");
-//   var cateF = document.getElementById("catering_features");
-//   var musicF = document.getElementById("musical_features");
-//   var danceF = document.getElementById("dancing_features");
-//   var saloonF = document.getElementById("saloon_features");
-//   var cakesF = document.getElementById("cakes_features");
-//   var decoF = document.getElementById("deco_features");
-//   var dressF = document.getElementById("dress_features");
-//   var noF = document.getElementById("no_features");
+var venueF = document.getElementById("venue_features");
+  var cateF = document.getElementById("catering_features");
+  var musicF = document.getElementById("musical_features");
+  var danceF = document.getElementById("dancing_features");
+  var saloonF = document.getElementById("saloon_features");
+  var cakesF = document.getElementById("cakes_features");
+  var decoF = document.getElementById("deco_features");
+  var dressF = document.getElementById("dress_features");
+  var noF = document.getElementById("no_features");
         
-//   function populate(serType) {
+  function populate(serType) {
             
-//     var serType = document.getElementById("serviceType");
-//     if(serType.value=="cate"){
-//       venueF.style.display = "none";
-//       cateF.style.display = "block";
-//       musicF.style.display = "none";
-//       danceF.style.display = "none";
-//       saloonF.style.display = "none";
-//       cakesF.style.display = "none";
-//       decoF.style.display = "none";
-//       dressF.style.display = "none";
-//       noF.style.display = "none";
+    var serType = document.getElementById("serviceType");
+    if(serType.value=="cate"){
+      venueF.style.display = "none";
+      cateF.style.display = "block";
+      musicF.style.display = "none";
+      danceF.style.display = "none";
+      saloonF.style.display = "none";
+      cakesF.style.display = "none";
+      decoF.style.display = "none";
+      dressF.style.display = "none";
+      noF.style.display = "none";
 
-//     }
-//     else if(serType.value=="cakes"){
-//       venueF.style.display = "none";
-//       cateF.style.display = "none";
-//       musicF.style.display = "none";
-//       danceF.style.display = "none";
-//       saloonF.style.display = "none";
-//       cakesF.style.display = "block";
-//       decoF.style.display = "none";
-//       dressF.style.display = "none";
-//       noF.style.display = "none";
-//     }
-//     else if(serType.value=="dancing"){
-//       venueF.style.display = "none";
-//       cateF.style.display = "none";
-//       musicF.style.display = "none";
-//       danceF.style.display = "block";
-//       saloonF.style.display = "none";
-//       cakesF.style.display = "none";
-//       decoF.style.display = "none";
-//       dressF.style.display = "none";
-//       noF.style.display = "none";
-//     }
-//     else if(serType.value=="deco"){
-//       venueF.style.display = "none";
-//       cateF.style.display = "none";
-//       musicF.style.display = "none";
-//       danceF.style.display = "none";
-//       saloonF.style.display = "none";
-//       cakesF.style.display = "none";
-//       decoF.style.display = "block";
-//       dressF.style.display = "none";
-//       noF.style.display = "none";
-//     }
-//     else if(serType.value=="dresses"){
-//       venueF.style.display = "none";
-//       cateF.style.display = "none";
-//       musicF.style.display = "none";
-//       danceF.style.display = "none";
-//       saloonF.style.display = "none";
-//       cakesF.style.display = "none";
-//       decoF.style.display = "none";
-//       dressF.style.display = "block";
-//       noF.style.display = "none";
-//     }
-//     else if(serType.value=="musical"){
-//       venueF.style.display = "none";
-//       cateF.style.display = "none";
-//       musicF.style.display = "block";
-//       danceF.style.display = "none";
-//       saloonF.style.display = "none";
-//       cakesF.style.display = "none";
-//       decoF.style.display = "none";
-//       dressF.style.display = "none";
-//       noF.style.display = "none";
-//     }
-//     else if(serType.value=="saloon"){
-//       venueF.style.display = "none";
-//       cateF.style.display = "none";
-//       musicF.style.display = "none";
-//       danceF.style.display = "none";
-//       saloonF.style.display = "block";
-//       cakesF.style.display = "none";
-//       decoF.style.display = "none";
-//       dressF.style.display = "none";
-//       noF.style.display = "none";
-//     }
-//     else if(serType.value=="vANDh"){
-//       venueF.style.display = "block";
-//       cateF.style.display = "none";
-//       musicF.style.display = "none";
-//       danceF.style.display = "none";
-//       saloonF.style.display = "none";
-//       cakesF.style.display = "none";
-//       decoF.style.display = "none";
-//       dressF.style.display = "none";
-//       noF.style.display = "none";
-//     }
-//     else{
-//       venueF.style.display = "none";
-//       cateF.style.display = "none";
-//       musicF.style.display = "none";
-//       danceF.style.display = "none";
-//       saloonF.style.display = "none";
-//       cakesF.style.display = "none";
-//       decoF.style.display = "none";
-//       dressF.style.display = "none";
-//       noF.style.display = "block";
-//     }
+    }
+    else if(serType.value=="cakes"){
+      venueF.style.display = "none";
+      cateF.style.display = "none";
+      musicF.style.display = "none";
+      danceF.style.display = "none";
+      saloonF.style.display = "none";
+      cakesF.style.display = "block";
+      decoF.style.display = "none";
+      dressF.style.display = "none";
+      noF.style.display = "none";
+    }
+    else if(serType.value=="dancing"){
+      venueF.style.display = "none";
+      cateF.style.display = "none";
+      musicF.style.display = "none";
+      danceF.style.display = "block";
+      saloonF.style.display = "none";
+      cakesF.style.display = "none";
+      decoF.style.display = "none";
+      dressF.style.display = "none";
+      noF.style.display = "none";
+    }
+    else if(serType.value=="deco"){
+      venueF.style.display = "none";
+      cateF.style.display = "none";
+      musicF.style.display = "none";
+      danceF.style.display = "none";
+      saloonF.style.display = "none";
+      cakesF.style.display = "none";
+      decoF.style.display = "block";
+      dressF.style.display = "none";
+      noF.style.display = "none";
+    }
+    else if(serType.value=="dresses"){
+      venueF.style.display = "none";
+      cateF.style.display = "none";
+      musicF.style.display = "none";
+      danceF.style.display = "none";
+      saloonF.style.display = "none";
+      cakesF.style.display = "none";
+      decoF.style.display = "none";
+      dressF.style.display = "block";
+      noF.style.display = "none";
+    }
+    else if(serType.value=="musical"){
+      venueF.style.display = "none";
+      cateF.style.display = "none";
+      musicF.style.display = "block";
+      danceF.style.display = "none";
+      saloonF.style.display = "none";
+      cakesF.style.display = "none";
+      decoF.style.display = "none";
+      dressF.style.display = "none";
+      noF.style.display = "none";
+    }
+    else if(serType.value=="saloon"){
+      venueF.style.display = "none";
+      cateF.style.display = "none";
+      musicF.style.display = "none";
+      danceF.style.display = "none";
+      saloonF.style.display = "block";
+      cakesF.style.display = "none";
+      decoF.style.display = "none";
+      dressF.style.display = "none";
+      noF.style.display = "none";
+    }
+    else if(serType.value=="vANDh"){
+      venueF.style.display = "block";
+      cateF.style.display = "none";
+      musicF.style.display = "none";
+      danceF.style.display = "none";
+      saloonF.style.display = "none";
+      cakesF.style.display = "none";
+      decoF.style.display = "none";
+      dressF.style.display = "none";
+      noF.style.display = "none";
+    }
+    else{
+      venueF.style.display = "none";
+      cateF.style.display = "none";
+      musicF.style.display = "none";
+      danceF.style.display = "none";
+      saloonF.style.display = "none";
+      cakesF.style.display = "none";
+      decoF.style.display = "none";
+      dressF.style.display = "none";
+      noF.style.display = "block";
+    }
 
 
-//   }
+  }
 
   </script>
 
