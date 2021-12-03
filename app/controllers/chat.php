@@ -2,11 +2,30 @@
 class Chat extends FrameworkPartyak{
     public function __construct(){
         $this->helper("linker");
-        $this->model = $this->model("chatModel");
+        $this->user = $this->model("chatModel");
+        
     }
 
     public function index(){
-        // $data['sender'] = $sender;
+        $id=$_SESSION['userId'];
+        $data['myName'] = $this->user->getName($id);
+
+
+
+        $this->view("chatView",$data);
+    }
+
+    public function search(){
+        
+        
+        $id=$_SESSION['userId'];
+        
+        $searchTerm = $_POST['searchTerm'];
+        $chatList = $this->user->searchChatList($id,$searchTerm);
+
+        echo $chatList;
+
+        
     }
 }
 
