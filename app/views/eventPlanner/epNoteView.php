@@ -97,31 +97,56 @@
                     <span class="dashboard">Note</span>
                 </div>
             </nav>
-            <table class="table-content">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Customer Name</th>
-                        <th>Event Name</th>
-                        <th>Note</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
+
+            <div class="note-area">
+                <div class="note-cont">
+                    <span class="note-head">
+                        <h6>Cus. Id : 002</h6>
+                        <h6>Cus. Name : Jane</h6>
+                        <h6>Event : Wedding</h6>
+                        <h6>Date : 2021/12/25</h6>
+                    </span>
+                    <div class="note-body">
+                        <div class="note-strip">
+                            <h4>Venues & Halls - Soils Mathara</h4>
+                            <i class='bx bx-trash' aria-hidden="true"></i>
+                        </div>
+                        <div class="note-strip">
+                            <h4>Caterings - Nilwala Caterings</h4>
+                            <i class='bx bx-trash' aria-hidden="true"></i>
+                        </div>
+                        <div class="note-strip">
+                            <h4>Decorations - Lassana Flora</h4>
+                            <i class='bx bx-trash' aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="note-cont">
+                    <span class="note-head">
+                        <h6>Cus. Id : 003</h6>
+                        <h6>Cus. Name : Justin</h6>
+                        <h6>Event : Birthday</h6>
+                        <h6>Date : 2021/01/22</h6>
+                    </span>
+                    <div class="note-body">
+                        <div class="note-strip">
+                            <h4>Decoration - Hada Wada Mathara</h4>
+                            <i class='bx bx-trash' aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <?php
                     $i = 1;
                     while ($row = mysqli_fetch_assoc($data['note'])) {
-                        echo "
-                <tr>
-                  <td>$row[note_id]</td>
-                  <td>$row[customer_name]</td>
-                  <td>$row[event_name]</td>
-                  <td>$row[note]</td>
-                </tr>   
-                ";
+                        echo "";
                         $i++;
-                    } ?>
-                </tbody>
-            </table>
+                    } ?> -->
+
+
             <div class="bottom-section">
                 <div class="event-board-link">
                     <a href="<?php echo BASEURL . '/#'; ?>"><button>Event Schedule Board</button></a>

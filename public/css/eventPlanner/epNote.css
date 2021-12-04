@@ -326,10 +326,39 @@ nav .sidebar-button i {
   align-content: center;
   align-items: center;
   position: relative;
-  bottom: -40%;
+  bottom: -75%;
 }
 .event-board-link button {
   background-color: #39a2db;
   padding: 12px 25px;
   font-size: initial;
+}
+.note-cont {
+  margin: 0 0 10px 0;
+}
+.note-area {
+  width: 75%;
+  height: auto;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 5px;
+}
+.note-head {
+  background-color: #ffebcc;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 8px 8px 0px 0px;
+  color: #4f091d;
+}
+.note-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px 5px 10px;
+  color: black;
+}
+.note-body {
+  background-color: #fbffe2;
 }
