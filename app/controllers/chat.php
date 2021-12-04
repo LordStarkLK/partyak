@@ -15,16 +15,12 @@ class Chat extends FrameworkPartyak{
         $this->view("chatView",$data);
     }
 
-    public function search(){
-        
-        
+    public function search($searchTerm){
         $id=$_SESSION['userId'];
         
-        $searchTerm = $_POST['searchTerm'];
         $chatList = $this->user->searchChatList($id,$searchTerm);
 
         echo $chatList;
-
         
     }
 }

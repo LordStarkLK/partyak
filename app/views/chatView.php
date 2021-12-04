@@ -140,7 +140,10 @@
     
     </div>
 
+    <?php linkJS("lib/jquery-3.6.0.min"); ?>
+
     <?php linkJS("adminHomeView"); ?>
+
     <?php linkJS("chatUserList"); ?>
 
 
