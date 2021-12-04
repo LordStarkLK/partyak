@@ -93,15 +93,15 @@
 
   </tr>
  
-<?php while($row=mysqli_fetch_assoc($data['customers']) ){
+<?php while($row=mysqli_fetch_assoc($data['customer']) ){
     $i = 1;
-    $row2=mysqli_fetch_assoc($data['customer_email']);
+    // $row2=mysqli_fetch_assoc($data['customer_email']);
     echo"
     <tr>
     <td>$row[user_id]</td>
     <td>$row[f_name] $row[l_name]</td>
     
-    <td>$row2[email]</td>
+    <td>$row[email]</td>
     
     <td>  
     <div class=\"btn-group\">
