@@ -1,11 +1,9 @@
 <?php
 
-
 class CustomerProfile extends FrameworkPartyak{
     public function __construct(){
         $this->helper("linker");
         $this->user = $this->model('customerProfileModel');
-
         $this->preventBack("customer");
     }
     
@@ -60,6 +58,7 @@ class CustomerProfile extends FrameworkPartyak{
 
         $data['profile'] = $this->user->getProfile($id);
         $data['cus_email'] = $this->user->getCustomerEmail($id);
+        $data['profileimage'] = $this->user->checkOlderDP($id);
         $this->view("customer/customerProfileView",$data);
     }
 
@@ -72,4 +71,44 @@ class CustomerProfile extends FrameworkPartyak{
         $this->view("resetPasswordView", $data);
     }
 
+    public function handleThePicture()
+    {
+        $id=$_SESSION['userId']; 
+        $row = $this->user->checkOlderDP($id);
+
+        //check whether there is an older profile picture
+        if ($row['profilePicture']) {
+            //delete the older profile picture from the system folder
+            unlink("../public/img/userImages/" . $row['profilePicture'] . "");
+        }
+
+        if (isset($_POST['saveButton'])) {
+
+            //retrieving user entered data from the form
+            if (!empty($_FILES["imageUpload"]["name"])) //the user have uploaded a new image
+            {
+                //Process the new image that is uploaded by the user
+                $target_dir = "../public/img/userImages/";
+                $target_file = $target_dir . basename($_FILES["imageUpload"]["name"]);
+                $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+                $filename = $_FILES["imageUpload"]["name"];
+
+                move_uploaded_file($_FILES["imageUpload"]["tmp_name"], $target_file);
+
+                $timestamp = time();
+                $image = $id . $timestamp . "." . $imageFileType; //generating an unique name to the image file
+                rename("../public/img/userImages/$filename", "../public/img/userImages/$image"); //adding the generated name to the file
+
+                //Update the database with the new picture and delete the older profile picture from database
+                $this->user->updateNewDP($image, $id);
+            } else {
+                //set the default one as the DP
+                $this->user->deleteDP($id);
+            }
+        }
+        $this->redirect('customerProfile');
+    }
+
 }
+
+?>
