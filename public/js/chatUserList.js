@@ -14,6 +14,39 @@ $(document).ready(function(){
       }
   })
   });
+
+  setInterval(()=>{
+    if(!$(".search input").val()){
+      console.log("Hi");
+
+      $.ajax({
+        type: "GET",
+  
+        url: "http://localhost/partyak/chat/userList/",
+        dataType: "html",
+        success: function (response) {
+            $(".users-list").html(response);
+        }
+    })
+    }
+    
+
+  },500);
+  //   searchValue = searchValue.replace(/ /g,"_");
+
+  //   $.ajax({
+  //     type: "GET",
+
+  //     url: "http://localhost/partyak/chat/search/" + searchValue,
+  //     dataType: "html",
+  //     success: function (response) {
+  //         $(".users-list").html(response);
+  //     }
+  // })
+  
+  
+
+
 });
   
 

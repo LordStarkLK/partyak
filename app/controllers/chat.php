@@ -23,6 +23,10 @@ class Chat extends FrameworkPartyak{
         echo $chatList;
         
     }
+
+    public function userList(){
+        $chatList = $this->user->chatList();
+    }
 }
 
 
