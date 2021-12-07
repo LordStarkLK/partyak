@@ -25,7 +25,7 @@
                     echo $details['profilePicture'];
                     } 
                     else {
-                        echo "pp_default.jpg";
+                        echo "pp_default.png";
                     } ?>" alt="">
         <div class="details">
           <span><?php echo $details['f_name']. " ". $details['l_name'] ?></span>

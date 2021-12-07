@@ -51,6 +51,9 @@
             }
 
             $output = "";
+            if(mysqli_num_rows($query)== 0){
+                $output .= "No users available to chat";
+            }
             if(mysqli_num_rows($query) > 0){
                 while($row = mysqli_fetch_assoc($query)){
                     if(isset($row)){
@@ -66,16 +69,19 @@
                         strlen($result > 28) ? $msg = substr($result,0,28) . '...' : $msg = $result;
 
                         if(isset($row2['reciever_id'])){
-                            ($id == $row2['reciever_id']) ? $you = "You: " : $you = "";
+                            ($id == $row2['sender_id']) ? $you = "You: " : $you = "";
     
                         }else{
                             $you = "";
                         }
                         ($id == $row['user_id']) ? $hid_me = "hide" : $hid_me = "";
+                        if(!($row['profilePicture'])){
+                            $row['profilePicture'] = "pp_default.png";
+                        }
     
                         $output .= '<a href="http://localhost/partyak/chat/index/'.$row['user_id'].'">
                         <div class="content">
-                        <img src="" alt="">
+                        <img src="http://localhost/partyak/public/img/userImages/'.($row['profilePicture']).'" alt="">
                         <div class="details">
                             <span>'. $row['f_name']. " " . $row['l_name'] .'</span>
                             <p>'. $you . $msg .'</p>
@@ -86,6 +92,19 @@
 
                         
                     }else{
+                        if(!($row['profilePicture'])){
+                            $row['profilePicture'] = "pp_default.png";
+                        }
+                        $output .= '<a href="http://localhost/partyak/chat/index/'.$row['user_id'].'">
+                        <div class="content">
+                        <img src="http://localhost/partyak/public/img/userImages/'.($row['profilePicture']).'" alt="">
+                        <div class="details">
+                            <span>'. $row['f_name']. " " . $row['l_name'] .'</span>
+                            <p style="color:blue;">No messages are available.</p>
+                        </div>
+                        </div>
+                        
+                    </a>';
                         
                     }
                     unset($row);
@@ -119,7 +138,7 @@
                         }
 
                         if(isset($row2['reciever_id'])){
-                            if($id == $row2['reciever_id']){
+                            if($id == $row2['sender_id']){
                                 $you = "You: ";
                             }else{
                                 $you = "";
@@ -127,11 +146,14 @@
                         }else{
                             $you = "";
                         }
+                        if(!($row['profilePicture'])){
+                            $row['profilePicture'] = "pp_default.png";
+                        }
                         // ($id == $row2['reciever_id'])
     
                         $output .= '<a href="http://localhost/partyak/chat/index/'.$row['user_id'].'">
                         <div class="content">
-                        <img src="" alt="">
+                        <img src="http://localhost/partyak/public/img/userImages/'.($row['profilePicture']).'" alt="">
                         <div class="details">
                             <span>'. $row['f_name']. " " . $row['l_name'] .'</span>
                             <p>'. $you . $msg .'</p>

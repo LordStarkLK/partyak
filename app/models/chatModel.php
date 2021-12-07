@@ -46,7 +46,7 @@
             // $user2 = mysqli_real_escape_string($GLOBALS['db'],$_POST['incoming_id']);
 
             $output = "";
-            $sql = "SELECT * FROM message LEFT JOIN user ON user.user_id = message.reciever_id WHERE (reciever_id = {$user1} AND sender_id = {$user2}) OR (reciever_id = {$user2} AND sender_id = {$user1}) ORDER BY message_id";
+            $sql = "SELECT * FROM message LEFT JOIN user ON user.user_id = message.sender_id WHERE (reciever_id = {$user1} AND sender_id = {$user2}) OR (reciever_id = {$user2} AND sender_id = {$user1}) ORDER BY message_id";
             $query = mysqli_query($GLOBALS['db'],$sql);
             if(mysqli_num_rows($query)>0){
                 while($row = mysqli_fetch_assoc($query)){
@@ -57,8 +57,11 @@
                                 </div>
                                 </div>';
                     }else{
+                        if(!($row['profilePicture'])){
+                            $row['profilePicture'] = "pp_default.png";
+                        }
                         $output .= '<div class="chat incoming">
-                                <img src="" alt="">
+                                <img src="http://localhost/partyak/public/img/userImages/'.($row['profilePicture']).'" alt="">
                                 <div class="details">
                                     <p>'. $row['message'] .'</p>
                                 </div>
