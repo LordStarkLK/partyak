@@ -31,121 +31,64 @@
             return $user;
         }
 
-        public function searchChatList($id,$searchTerm){
-            $searchTerm = mysqli_real_escape_string($GLOBALS['db'], $searchTerm);
-
-            $list = explode("_",$searchTerm);
-
-            foreach($list as $searchTerm)
-            {
-                $searchTerm = "%" . $searchTerm . "%";
-            
-                $query = "SELECT *  FROM user WHERE user_id <> '$id' AND (f_name LIKE '$searchTerm' OR l_name LIKE '$searchTerm' )";
-    
-                $query = mysqli_query($GLOBALS['db'],$query);
-
-                if(mysqli_num_rows($query) > 0)
-                {
-                    break;
-                }
-            }
-
-            $output = "";
-            if(mysqli_num_rows($query) > 0){
-                while($row = mysqli_fetch_assoc($query)){
-                    $sql2 = "SELECT * FROM message WHERE reciever_id='{$row['user_id']}' OR sender_id='{$row['user_id']}' ORDER BY message_id DESC LIMIT 1";
-
-                    $sql2 = mysqli_query($GLOBALS['db'],$sql2);
-
-                    if(mysqli_num_rows($sql2) == 1)
-                    {
-                        $row2 = mysqli_fetch_assoc($sql2);
-                        $result = $row2['message'];
-
-                        strlen($result > 28) ? $msg = substr($result,0,28) . '...' : $msg = $result;
-                    }else{
-                        $result="No message available";
-                    }
-
-                    if(isset($row2['reciever_id'])){
-                        ($id == $row2['reciever_id']) ? $you = "You: " : $you = "";
-
-                    }else{
-                        $you = "";
-                    }
-                    ($id == $row['user_id']) ? $hid_me = "hide" : $hid_me = "";
-
-                    $output .= '<div class="profi">
-                    <img class="proimg"' . srcIMG("avatar3.png") .  'alt="Avatar">
-                </div>
-
-                <div class="remsg">
-                    <a>'. $row['f_name']. " " . $row['l_name'] .'</a>
-                    <p>'. $you . $msg . '</p>
-                </div>
-                    ';
-                }
-            }else{
-                $output .= '<p>No user found related to your search term</p>';
-            }
-            echo $output;
+        public function getUserDetails($id){
+            $query = "SELECT * FROM user WHERE user_id = '$id' LIMIT 1";
+            $result = mysqli_query($GLOBALS['db'],$query);
+            $user = mysqli_fetch_assoc($result);
+            return $user;
         }
 
-        public function chatList(){
-            $id = $_SESSION['userId'];
-            $query = "SELECT * FROM user WHERE user_id <> '$id'";
-            $query = mysqli_query($GLOBALS['db'],$query);
+        public function getChat($user2){
+            // $user1 = 12;
+            // $user2 = 6;
+            
+            $user1 = $_SESSION['userId'];
+            // $user2 = mysqli_real_escape_string($GLOBALS['db'],$_POST['incoming_id']);
+
             $output = "";
+            $sql = "SELECT * FROM message LEFT JOIN user ON user.user_id = message.reciever_id WHERE (reciever_id = {$user1} AND sender_id = {$user2}) OR (reciever_id = {$user2} AND sender_id = {$user1}) ORDER BY message_id";
+            $query = mysqli_query($GLOBALS['db'],$sql);
             if(mysqli_num_rows($query)>0){
                 while($row = mysqli_fetch_assoc($query)){
-                    $sql2 = "SELECT * FROM message WHERE reciever_id='{$row['user_id']}' OR sender_id='{$row['user_id']}' ORDER BY message_id DESC LIMIT 1";
-                    $sql2 = mysqli_query($GLOBALS['db'],$sql2);
+                    if($row['sender_id'] == $user1){
+                        $output .= '<div class="chat outgoing">
+                                <div class="details">
+                                    <p>'. $row['message'] .'</p>
+                                </div>
+                                </div>';
+                    }else{
+                        $output .= '<div class="chat incoming">
+                                <img src="" alt="">
+                                <div class="details">
+                                    <p>'. $row['message'] .'</p>
+                                </div>
+                                </div>';
+                    }
+                }
+            }else{
+                $output .= '<div class="text">No messages are available. Once you send message they will appear here.</div>'; 
+            }return $output;
+        }
 
-                    
-                    
-                    if(mysqli_num_rows($sql2)>0){
-                        $row2 = mysqli_fetch_assoc($sql2);
-                        $result = $row2['message'];
-                        if(strlen($result>28)){
-                            $msg = substr($result,0,28) . '...';
-                        }else{
-                            $msg = $result;
-                        }
+        public function send($user,$message){
 
-                        if(isset($row2['reciever_id'])){
-                            if($id == $row2['reciever_id']){
-                                $you = "You: ";
-                            }else{
-                                $you = "";
-                            }
-                        }else{
-                            $you = "";
-                        }
-                        // ($id == $row2['reciever_id'])
-    
-                        $output .= '<div class="profi">
-                        <img class="proimg" src=". ."  alt="Avatar">
+            $sender = $_SESSION['userId'];
 
-                       
+            if(!empty($message)){
+                $query = "INSERT INTO message (sender_id, reciever_id,message) 
+                VALUES ('$sender', '$user', '$message')";
+
+                mysqli_query($GLOBALS['db'], $query);
+            }
+        }
+
         
-                    </div>
-    
-                    <div class="remsg">
-                        <a>'. $row['f_name']. " " . $row['l_name'] .'</a>
-                        <p>'. $you . $msg . '</p>
-                    </div>
-                        ';
-                    }
-                }
-                }
-                echo $output;
-                    }
 
                     
                    
 
 
-                }
+    }
             
 
 
