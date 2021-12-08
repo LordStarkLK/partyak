@@ -29,5 +29,4 @@ class SpServiceModel extends Database
     }
 
 
-
 }
