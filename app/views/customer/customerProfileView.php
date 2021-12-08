@@ -12,6 +12,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <?php $name=$data['profile'];?>
      <?php $email=$data['cus_email'];?>
+     <?php $profi=$data['profileimage'];?>
    </head>
 <body>
 <header>
@@ -74,7 +75,14 @@
     <div class="home-content" id="original">
         <div class="profile_pic">
             <div class="image">
-            <img <?php srcIMG("avatar.png") ?> alt="Avatar">
+                <img src="<?php echo BASEURL; ?>/public/img/userImages/<?php if ($profi['profilePicture']) {
+                    echo $profi['profilePicture'];
+                    } 
+                    else {
+                        echo "pp_default.jpg";
+                    } ?>" >
+            <!-- <img <?php echo "$profi[profilePicture]"; ?>> -->
+            <!-- <img <?php srcIMG("avatar.png") ?> alt="Avatar"> -->
             <!-- <img src="/public/img/avatar.png" alt="Avatar"> -->
             </div>
         </div>
@@ -129,7 +137,7 @@
 
                 <div class="row">
                     <div class="col_name">
-                        <label for="gender">Address</label>
+                        <label for="address">Address</label>
                     </div>
                     <div class="col_data">
                         <p><?php echo "$name[address]"; ?></p>
@@ -143,12 +151,23 @@
 
 
     <div class="ehome-content" id="edit">
-        <div class="eprofile_pic">
+        <form action="<?php echo BASEURL . '/customerProfile/handleThePicture'; ?>"  class="eprofile_pic" method="post" enctype="multipart/form-data" > 
             <div class="eimage">
-            <img <?php srcIMG("avatar.png") ?> alt="Avatar">
-            <!-- <img src="/public/img/avatar.png" alt="Avatar"> -->
+                    <input type="file" name='imageUpload' id="imageUpload" class="filedd">
+                    <!-- <button type="file" class="savebb"><a href="#"><i class="fas fa-camera" ></i>Edit</a></button> -->
+                    
+                    <img src="<?php echo BASEURL; ?>/public/img/userImages/<?php if ($profi['profilePicture']) {
+                    echo $profi['profilePicture'];
+                    }  ?>" >
+                    <!-- <div class="cam" id="cami">
+                        <button type="button" class="savebb"><a href="#"><i class="fas fa-camera" ></i>Edit</a></button>
+                    </div> -->
+                    
+                    
             </div>
-        </div>
+                <input type="submit" class="savebtn" value="Upload the Image" name="saveButton">
+        </form>
+        
 
         <div class="eprofile_details">
             <form action="<?php echo BASEURL . '/customerProfile/index'; ?>" class="epersonal_info" method="POST">

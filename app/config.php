@@ -9,6 +9,6 @@ define("BASEURL", "http://localhost/partyak");
 
 // define("HOST","localhost");
 // define("USER","root");
-// define("DATABASE","partyak_db");
-// define("password","");
+// define("DATABASE","u117929562_partyak");
+// define("PASSWORD","");
 
