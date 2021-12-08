@@ -1,23 +1,17 @@
 <?php
-
-
-class AdminChat extends FrameworkPartyak{
+class ChatUser extends FrameworkPartyak{
     public function __construct(){
         $this->helper("linker");
-        $this->user = $this->model("adminChatModel");
+        $this->user = $this->model("chatUserModel");
         
-        // $this->preventBack("admin");
     }
-    
+
     public function index(){
         $id=$_SESSION['userId'];
         $data['myDetails'] = $this->user->getDetails($id);
-        // echo $_SESSION['type'];
-        // if(!isset($_SESSION['userId']) && !isset($_SESSION['type']) || $_SESSION['type'] != "customer"){
-        //     $this->redirect("login");
-        // }
-        // $this->preventBack("customer");
-        $this->view("admin/adminChatView",$data);
+       
+
+        $this->view("chatUserView",$data);
     }
 
     public function search(){
@@ -33,5 +27,7 @@ class AdminChat extends FrameworkPartyak{
         $chatList = $this->user->chatList();
         echo $chatList;
     }
-
 }
+
+
+?>
