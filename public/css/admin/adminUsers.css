@@ -60,13 +60,19 @@ nav .sidebar-button i{
 }
 .home-content .overview-boxes{
    
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 20px 50px 20px 50px;
-  border-radius: 43px;
-  cursor: pointer;
+display: flex;
+   
+align-items: center;
+   
+justify-content: space-evenly;
+   
+flex-wrap: wrap;
+   
+padding: 20px 50px 20px 50px;
+   
+border-radius: 43px;
+   
+cursor: pointer;
 }
 .overview-boxes .box{
   width: 209px;
