@@ -57,7 +57,7 @@
             if(mysqli_num_rows($query) > 0){
                 while($row = mysqli_fetch_assoc($query)){
                     if(isset($row)){
-                        $sql2 = "SELECT * FROM message WHERE reciever_id='{$row['user_id']}' OR sender_id='{$row['user_id']}' ORDER BY message_id DESC LIMIT 1";
+                        $sql2 = "SELECT * FROM message WHERE (reciever_id='{$row['user_id']}' AND sender_id = '$id') OR (sender_id='{$row['user_id']}' AND reciever_id= '$id') ORDER BY message_id DESC LIMIT 1";
 
                     $sql2 = mysqli_query($GLOBALS['db'],$sql2);
 
@@ -123,7 +123,7 @@
             $output = "";
             if(mysqli_num_rows($query)>0){
                 while($row = mysqli_fetch_assoc($query)){
-                    $sql2 = "SELECT * FROM message WHERE reciever_id='{$row['user_id']}' OR sender_id='{$row['user_id']}' ORDER BY message_id DESC LIMIT 1";
+                    $sql2 = "SELECT * FROM message WHERE (reciever_id='{$row['user_id']}' AND sender_id = '$id') OR (sender_id='{$row['user_id']}' AND reciever_id = '$id') ORDER BY message_id DESC LIMIT 1";
                     $sql2 = mysqli_query($GLOBALS['db'],$sql2);
 
                     
