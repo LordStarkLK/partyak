@@ -120,6 +120,9 @@
                             <i class='bx bx-trash' aria-hidden="true"></i>
                         </div>
                     </div>
+                    <div class="note-foot">
+                        <i class='bx bx-plus' aria-hidden="true"></i>
+                    </div>
                 </div>
 
 
@@ -135,6 +138,9 @@
                             <h4>Decoration - Hada Wada Mathara</h4>
                             <i class='bx bx-trash' aria-hidden="true"></i>
                         </div>
+                    </div>
+                    <div class="note-foot">
+                        <i class='bx bx-plus' aria-hidden="true"></i>
                     </div>
                 </div>
             </div>
