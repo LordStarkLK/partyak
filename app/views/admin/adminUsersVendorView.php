@@ -36,13 +36,13 @@
         <div class="box" id="box-service">
         <span class="links_name" onclick="window.location='<?php echo BASEURL . '/adminUsersService'; ?>'">
         <img class="service-image" <?php srcIMG("service.png") ?> width="40" height="40">
-            <div class="box-topic">Service Providers</div>
+            <div class="box-topic">Vendors</div>
     </span>
             
           
           <!-- <i clss='bx bxs-user-rectangle cart two' ></i> -->
         </div>
-        <div class="box" id="box-event">
+        <!-- <div class="box" id="box-event">
         <span class="links_name" onclick="window.location='<?php echo BASEURL . '/adminUsersEvent'; ?>'">
         <img class="event-image" <?php srcIMG("event.png") ?> width="40" height="40">   
             <div class="box-topic">Event Planners</div>
@@ -50,18 +50,18 @@
             
           
           
-        </div>
+        </div> -->
         </div>
 
       <div>
       <ul class="breadcrumb">
         <li><a href="#">Users</a></li>
-        <li><a href="#">Service Providers</a></li>
+        <li><a href="#">Vendors</a></li>
         </ul>
 
         <div class="search-container">
           <form action="/action_page.php">
-          <input type="text" placeholder="Search Users.." name="search">
+          <input type="text" placeholder="Search Vendors.." name="search">
          
           <button type="submit"><i class="fa fa-search"></i></button>
           <!-- <i class="fas fa-search"></i> -->
@@ -83,10 +83,10 @@
         
         <table>
   <tr>
-    <th>Service Provider ID</th>
-    <th>Service Name</th>
+    <th>User ID</th>
+    <th>Vendor Name</th>
     <th>Email</th>
-    <th>Service Type</th>
+    <th>Services</th>
     <th>More Actions</th>
 
   </tr>
@@ -104,20 +104,20 @@
     </td>
   </tr> -->
 
-<?php while($row=mysqli_fetch_assoc($data['service'])){
+<?php while($row=mysqli_fetch_assoc($data['vendor'])){
   $i = 1;
-  $row2 = mysqli_fetch_assoc($data['service_email']);
+  // $row2 = mysqli_fetch_assoc($data['service_email']);
   echo"
   <tr>
   <td>$row[user_id]</td>
   <td>$row[f_name] $row[l_name]</td>
-  <td>$row2[email]</td>
+  <td>$row[email]</td>
   <td>Not Defined</td>
   <td>
   <div class=\"btn-group\">
   <button onclick=\"window.location=' " . BASEURL . "/adminUserProfile'\">View Profile</button>
 
-  <button onclick=\"window.location=' " . BASEURL . "/adminUsersService/deleteUser/$row[user_id]'\">Delete User</button>
+  <button onclick=\"window.location=' " . BASEURL . "/adminUsersVendor/deleteUser/$row[user_id]'\">Delete User</button>
   
 </div>
 

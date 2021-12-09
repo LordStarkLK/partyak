@@ -5,7 +5,7 @@ class SpChat extends FrameworkPartyak
     public function __construct()
     {
         $this->helper("linker");
-        $this->preventBack("vendor");
+        // $this->preventBack("vendor");
     }
 
     public function index()
