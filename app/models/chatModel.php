@@ -76,12 +76,14 @@
         public function send($user,$message){
 
             $sender = $_SESSION['userId'];
+            
 
             if(!empty($message)){
                 $query = "INSERT INTO message (sender_id, reciever_id,message) 
                 VALUES ('$sender', '$user', '$message')";
 
                 mysqli_query($GLOBALS['db'], $query);
+                
             }
         }
 

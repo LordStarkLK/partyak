@@ -1,13 +1,13 @@
 $(document).ready(function(){
     
-    $(".input-field").keydown(function(event){
-        var keycode = (event.keyCode ? event.keyCode : event.which);
+    // $(".input-field").keydown(function(event){
+    //     var keycode = (event.keyCode ? event.keyCode : event.which);
 
-        if(keycode == '13'){
-            sendMessage();
-        }
+    //     if(keycode == '13'){
+    //         sendMessage();
+    //     }
 
-    });
+    // });
 
     $(".send-btn").click(function(){
         sendMessage();
@@ -15,14 +15,30 @@ $(document).ready(function(){
 
     function sendMessage()
     {
-        let message = $(".input-field").val();
+        // let message = $(".input-field").val();
+        var formData = $(".typing-area").serialize();
+        // console.log(formData);
         $(".input-field").val("");
-        let user = $(".incoming_id").val();
+        // let user = $(".incoming_id").val();
         
-        $.ajax({
-            type: "GET",
-            url:"http://localhost/partyak/chat/sendMessage/" + user +'/'+ message
-        })
+
+        
+        // message = message.replace(/\s/g, '~');
+        $.post(
+            "http://localhost/partyak/chat/sendMessage/",
+            formData,
+            function (data,status){
+                console.log(data);
+                console.log(status);
+            }
+        )
+        
+        
+        // $.ajax({
+        //     type: "GET",
+        //     url:"http://localhost/partyak/chat/sendMessage/" + user +'/'+ message,
+        //     })
+      
     }
 });
 

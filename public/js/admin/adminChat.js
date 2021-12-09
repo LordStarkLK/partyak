@@ -15,14 +15,24 @@ $(document).ready(function(){
 
     function sendMessage()
     {
-        let message = $(".input-field").val();
+        // let message = $(".input-field").val();
+        var formData = $(".typing-area").serialize();
         $(".input-field").val("");
-        let user = $(".incoming_id").val();
-        
-        $.ajax({
-            type: "GET",
-            url:"http://localhost/partyak/adminChatmsg/sendMessage/" + user +'/'+ message
-        })
+        // let user = $(".incoming_id").val();
+        // message = message.replace(/\s/g, '~');
+        $.post(
+            "http://localhost/partyak/adminChatmsg/sendMessage/",
+            formData,
+            function (data,status){
+                console.log(data);
+                console.log(status);
+            }
+        )
+
+        // $.ajax({
+        //     type: "GET",
+        //     url:"http://localhost/partyak/adminChatmsg/sendMessage/" + user +'/'+ message
+        // })
     }
 });
 

@@ -24,13 +24,14 @@ class Chat extends FrameworkPartyak{
         echo $chatList;
     }
 
-    public function sendMessage($user,$message){
+    public function sendMessage(){
         
-        // echo "message";
+        // $message = str_replace('~', ' ', $message);
+        // echo $message;
         // echo $user . " " . $message;
-        // $user = mysqli_real_escape_string($GLOBALS['db'],$_POST['incoming_id']);
-        // $message = mysqli_real_escape_string($GLOBALS['db'],$_POST['message']);
-        
+        $user = mysqli_real_escape_string($GLOBALS['db'],$_POST['incoming_id']);
+        $message = mysqli_real_escape_string($GLOBALS['db'],$_POST['message']);
+        // echo $message;
 
         $this->user->send($user,$message);
     }
