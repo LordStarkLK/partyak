@@ -105,6 +105,24 @@
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
 
+// function showTab(n) {
+//   // This function will display the specified tab of the form ...
+//   var x = document.getElementsByClassName("tab");
+//   x[n].style.display = "block";
+//   // ... and fix the Previous/Next buttons:
+//   if (n == 0) {
+//     document.getElementById("prevBtn").style.display = "none";
+//   } else {
+//     document.getElementById("prevBtn").style.display = "inline";
+//   }
+//   if (n == (x.length - 1)) {
+//     document.getElementById("nextBtn").innerHTML = "Submit";
+//   } else {
+//     document.getElementById("nextBtn").innerHTML = "Next";
+//   }-
+//   // ... and run a function that displays the correct step indicator:
+//   fixStepIndicator(n)
+// }
 function showTab(n) {
   // This function will display the specified tab of the form ...
   var x = document.getElementsByClassName("tab");
@@ -113,16 +131,19 @@ function showTab(n) {
   if (n == 0) {
     document.getElementById("prevBtn").style.display = "none";
   } else {
-    document.getElementById("prevBtn").style.display = "inline";
+    document.getElementById("prevBtn").style.display = "block";
   }
   if (n == (x.length - 1)) {
-    document.getElementById("nextBtn").innerHTML = "Submit";
+    document.getElementById("submitBtn").style.display = "block";
+    document.getElementById("nextBtn").style.display = "none";
   } else {
-    document.getElementById("nextBtn").innerHTML = "Next";
-  }-
+    document.getElementById("nextBtn").style.display = "block";
+    document.getElementById("submitBtn").style.display = "none";
+  }
   // ... and run a function that displays the correct step indicator:
   fixStepIndicator(n)
 }
+
 
 function nextPrev(n) {
   // This function will figure out which tab to display
@@ -174,3 +195,10 @@ function fixStepIndicator(n) {
   //... and adds the "active" class to the current step:
   x[n].className += " active";
 }
+
+// var modal = document.getElementById("myContainer");
+// var submitBtn = document.getElementById("submitBtn");
+// submitBtn.onclick=function(){
+//     modal.style.display = "none";
+//   }
+  

@@ -1,4 +1,4 @@
-
+<!-- <?php $errors = $data['errors'] ?> -->
 <!DOCTYPE html>
 
 <html lang="en" dir="ltr">
@@ -23,16 +23,17 @@
   </header>
 
     <!-- add new service popup -->
-<div  class="addservice_container">
+<div id="myContainer" class="addservice_container">
 <!-- The Modal -->
   <div class="form_container">
     <!-- <div class="close-button"><span class="service_close">&times;</span></div> -->
     
-    <form id="regForm" action="">
+    <form id="regForm" action="<?php echo BASEURL . '/addNewService/index'; ?>" method="POST">
 
         <h1>Service Registration Form</h1>
         
         <!-- One "tab" for each step in the form: -->
+<!-- tab1 -->
         <div class="tab">
           <div class="content_title"><a><u>Service Details:</u></a></div>
             <div class="row">
@@ -41,6 +42,8 @@
               </div>
               <div class="col_input">
                 <input type="text" id="sname" name="servicename" placeholder="Your service name">
+                
+              <!-- below thre div should delete -->
               </div>
             </div>
             <hr/>
@@ -50,6 +53,7 @@
                 </div>
                 <div class="col_input">
                   <textarea id="sdescription" name="servicedescription" placeholder="Description Here (visible for customers)" style="height:200px"></textarea>
+                  <!-- <div class="error"><?php echo $errors["servicedescription"] ?></div> -->
                 </div>
             </div>
             <hr/>
@@ -71,6 +75,7 @@
                   <option value="usa">Sounds and lightings</option>
                   <option value="vANDh">Venues and Halls</option>
                 </select>
+                <!-- <div class="error"><?php echo $errors["serviceType"] ?></div> -->
                 </div>
             </div>
             <hr/>
@@ -79,13 +84,14 @@
                     <label for="etype">Event Types</label>
                 </div>
                 <div class="col_input">
-                    <input type="checkbox" id="et1" name="et1" value="wedd" class="box">
+                    <input type="checkbox" id="et1" name="eventType[]" value="wedd" class="box">
                     <label for="etype1"> Weddings</label><br>
-                    <input type="checkbox" id="et2" name="et2" value="party" class="box">
+                    <input type="checkbox" id="et2" name="eventType[]" value="party" class="box">
                     <label for="etype2"> Parties/Festivals</label><br>
-                    <input type="checkbox" id="et3" name="et3" value="coopE" class="box">
+                    <input type="checkbox" id="et3" name="eventType[]" value="coopE" class="box">
                     <label for="etype3"> Cooperate Events</label><br>
                 </div>
+                
             </div>
             <hr/>
             <div class="row">
@@ -93,23 +99,23 @@
                     <label for="sname">Service Privided Areas</label>
                 </div>
                 <div class="col_input">
-                    <input type="checkbox" id="province1" name="province1" value="wedd" class="box">
+                    <input type="checkbox" id="province1" name="province[]" value="wedd" class="box">
                     <label for="p1"> Southern Province</label><br>
-                    <input type="checkbox" id="province2" name="province2" value="wedd" class="box">
+                    <input type="checkbox" id="province2" name="province[]" value="wedd" class="box">
                     <label for="p2"> Western Province</label><br>
-                    <input type="checkbox" id="province3" name="province3" value="wedd" class="box">
+                    <input type="checkbox" id="province3" name="province[]" value="wedd" class="box">
                     <label for="p3"> Sabaragamuwa Province</label><br>
-                    <input type="checkbox" id="province1" name="province1" value="wedd" class="box">
+                    <input type="checkbox" id="province1" name="province[]" value="wedd" class="box">
                     <label for="p1"> Uva Province</label><br>
-                    <input type="checkbox" id="province1" name="province1" value="wedd" class="box">
+                    <input type="checkbox" id="province1" name="province[]" value="wedd" class="box">
                     <label for="p1"> Central Province</label><br>
-                    <input type="checkbox" id="province1" name="province1" value="wedd" class="box">
+                    <input type="checkbox" id="province1" name="province[]" value="wedd" class="box">
                     <label for="p1"> Eastern Province</label><br>
-                    <input type="checkbox" id="province1" name="province1" value="wedd" class="box">
+                    <input type="checkbox" id="province1" name="province[]" value="wedd" class="box">
                     <label for="p1"> North western Province</label><br>
-                    <input type="checkbox" id="province1" name="province1" value="wedd" class="box">
+                    <input type="checkbox" id="province1" name="province[]" value="wedd" class="box">
                     <label for="p1"> North Central Province</label><br>
-                    <input type="checkbox" id="province1" name="province1" value="wedd" class="box">
+                    <input type="checkbox" id="province1" name="province[]" value="wedd" class="box">
                     <label for="p1"> Nouthern Province</label><br>
                 </div>
             </div>
@@ -120,18 +126,21 @@
                 </div>
                 <div class="col_input">
                     <div class="url_name">Facebook</div>
-                    <input type="url" id="furl" name="furl" placeholder="Facebook url here">
+                    <input type="text" id="furl" name="furl" placeholder="Facebook url here">
                     <div class="url_name">Instagram</div>
-                    <input type="url" id="iurl" name="iurl" placeholder="Instagram url here">
+                    <input type="text" id="iurl" name="iurl" placeholder="Instagram url here">
                     <div class="url_name">LinkedIn</div>
-                    <input type="url" id="lurl" name="lurl" placeholder="LinkedIn url here">
+                    <input type="text" id="lurl" name="lurl" placeholder="LinkedIn url here">
                 </div>
             </div>
             <hr/>
           <!-- <p><input placeholder="First name..." oninput="this.className = ''"></p>
           <p><input placeholder="Last name..." oninput="this.className = ''"></p> -->
-        </div>
-        
+          <!-- below tab should delete -->
+          
+ <!-- tab2      -->
+          </div>
+ 
         <div class="tab">
           <div class="content_title"><a><u>Booking Setting Details:</u></a></div>
 
@@ -151,7 +160,7 @@
             <div class="col_input">
                 <input type="number" id="intialDis" name="initialDiscount" placeholder min="0">
                 <a> % discount for first </a>
-                <input type="number" id="intialDis" name="initialDiscount" placeholder min="0">
+                <input type="number" id="intialDis" name="initialCount" placeholder min="0">
                 <a> bookings</a>
             </div>
           </div>
@@ -170,7 +179,10 @@
               <label for="simultaneous">Simultaneous Booking</label>
             </div>
             <div class="col_input">
-              <input type="text" id="simultaneous" name="simultaneous_booking" placeholder="Your service name">
+              <select id="simultaneous" name="simultaneous">
+                  <option value="accept">Accept</option>
+                  <option value="notAccept">Not Accept</option>
+                </select>
             </div>
           </div>
             <hr/>
@@ -220,11 +232,11 @@
                 <label for="vtype">Venue Type</label>
               </div>
               <div class="col_input">
-                <input type="radio" id="vt1" name="vt1" value="indoor" class="box">
+                <input type="radio" id="vt1" name="venuetype" value="indoor" class="box">
                 <label for="vtype1"> Indoor</label><br>
-                <input type="radio" id="vt2" name="vt2" value="outdoor" class="box">
+                <input type="radio" id="vt2" name="venuetype" value="outdoor" class="box">
                 <label for="vtype2"> Outdoor</label><br>
-                 <input type="radio" id="vt3" name="vt3" value="both" class="box">
+                 <input type="radio" id="vt3" name="venuetype" value="both" class="box">
                 <label for="vtype3"> Both</label><br>
               </div>
             </div>
@@ -243,17 +255,17 @@
                 <label for="seating">Seating Arrangment</label>
               </div>
               <div class="col_input">
-                <input type="checkbox" id="sa1" name="sa1" value="banquet" class="box">
+                <input type="checkbox" id="sa1" name="seating[]" value="banquet" class="box">
                 <label for="sa1"> Banquet</label><br>
-                <input type="checkbox" id="sa2" name="sa2" value="board" class="box">
+                <input type="checkbox" id="sa2" name="seating[]" value="board" class="box">
                 <label for="sa2"> Board</label><br>
-                <input type="checkbox" id="sa3" name="sa3" value="classroom" class="box">
+                <input type="checkbox" id="sa3" name="seating[]" value="classroom" class="box">
                 <label for="sa3"> Classroom</label><br>
-                <input type="checkbox" id="sa4" name="sa4" value="informal" class="box">
+                <input type="checkbox" id="sa4" name="seating[]" value="informal" class="box">
                 <label for="sa4"> Informal</label><br>
-                <input type="checkbox" id="sa5" name="sa5" value="oval" class="box">
+                <input type="checkbox" id="sa5" name="seating[]" value="oval" class="box">
                 <label for="sa5"> Oval</label><br>
-                <input type="checkbox" id="sa6" name="sa6" value="ushape" class="box">
+                <input type="checkbox" id="sa6" name="seating[]" value="ushape" class="box">
                 <label for="sa6"> U shape</label><br>
               </div>
             </div>
@@ -263,21 +275,21 @@
                 <label for="sname">Additional Features</label>
               </div>
               <div class="col_input">
-                <input type="checkbox" id="af1" name="af1" value="wifi" class="box">
+                <input type="checkbox" id="af1" name="addfeature[]" value="wifi" class="box">
                 <label for="feature1"> Wi fi</label><br>
-                <input type="checkbox" id="af2" name="af2" value="parking" class="box">
+                <input type="checkbox" id="af2" name="addfeature[]" value="parking" class="box">
                 <label for="feature2"> Car Parking</label><br>
-                <input type="checkbox" id="af3" name="af3" value="reception" class="box">
+                <input type="checkbox" id="af3" name="addfeature[]" value="reception" class="box">
                 <label for="feature3"> Reception area</label><br>
-                <input type="checkbox" id="af4" name="af4" value="setiback" class="box">
+                <input type="checkbox" id="af4" name="addfeature[]" value="setiback" class="box">
                 <label for="feature4"> Seti back</label><br>
-                <input type="checkbox" id="af5" name="af5" value="garden" class="box">
+                <input type="checkbox" id="af5" name="addfeature[]" value="garden" class="box">
                 <label for="feature5"> Garden</label><br>
-                <input type="checkbox" id="af6" name="af6" value="smokingarea" class="box">
+                <input type="checkbox" id="af6" name="addfeature[]" value="smokingarea" class="box">
                 <label for="feature6"> Smoking area</label><br>
-                <input type="checkbox" id="af7" name="af7" value="dancingfloor" class="box">
+                <input type="checkbox" id="af7" name="addfeature[]" value="dancingfloor" class="box">
                 <label for="feature7"> Dancing floor</label><br>
-                <input type="checkbox" id="af8" name="af8" value="poruwa" class="box">
+                <input type="checkbox" id="af8" name="addfeature[]" value="poruwa" class="box">
                 <label for="feature8"> Poruwa</label><br>
               </div>
             </div>
@@ -291,13 +303,13 @@
                 <label for="mealtype">Meals provided</label>
               </div>
               <div class="col_input">
-                <input type="checkbox" id="mt1" name="mt1" value="breakfast" class="box"> 
+                <input type="checkbox" id="mt1" name="mealType[]" value="breakfast" class="box"> 
                 <label for="mtype1"> Breakfast</label><br>
-                <input type="checkbox" id="mt2" name="mt2" value="lunch" class="box"> 
+                <input type="checkbox" id="mt2" name="mealType[]" value="lunch" class="box"> 
                 <label for="mtype2"> Lunch</label><br>
-                <input type="checkbox" id="mt3" name="mt3" value="dinner" class="box"> 
+                <input type="checkbox" id="mt3" name="mealType[]" value="dinner" class="box"> 
                 <label for="mtype3"> Dinner</label><br>
-                <input type="checkbox" id="mt3" name="mt3" value="beverages" class="box"> 
+                <input type="checkbox" id="mt3" name="mealType[]" value="beverages" class="box"> 
                 <label for="mtype3"> Beverages</label><br>
               </div>
             </div>
@@ -321,13 +333,13 @@
                 <label for="musicaltype">Music provider type</label>
               </div>
               <div class="col_input">
-                <input type="checkbox" id="musict1" name="musict1" value="insru" class="box">
+                <input type="checkbox" id="musict1" name="musictype" value="insru" class="box">
                 <label for="musictype1"> Insrumentalists</label><br>
-                <input type="checkbox" id="musict2" name="musict2" value="solo" class="box">
+                <input type="checkbox" id="musict2" name="musictype" value="solo" class="box">
                 <label for="musictype2"> Solo singer</label><br>
-                <input type="checkbox" id="musict1" name="musict1" value="band" class="box">
+                <input type="checkbox" id="musict1" name="musictype" value="band" class="box">
                 <label for="musictype1"> Band</label><br>
-                <input type="checkbox" id="musict1" name="musict1" value="dj" class="box">
+                <input type="checkbox" id="musict1" name="musictype" value="dj" class="box">
                 <label for="musictype1"> DJ</label><br>
                 
               </div>
@@ -336,22 +348,22 @@
             
           </div>
 
-<!-- this is foe dancing -->
+<!-- this is for dancing -->
           <div id="dancing_features" class="dancing">
             <div class="row">
               <div class="col_name">
                 <label for="dancetype">Dancing categories</label>
               </div>
               <div class="col_input">
-                <input type="checkbox" id="dancet1" name="dancet1" value="kandy" class="box">
+                <input type="checkbox" id="dancet1" name="danceType[]" value="kandy" class="box">
                 <label for="dancetype1"> Kandyan dance</label><br>
-                <input type="checkbox" id="dancet2" name="dancet2" value="sabara" class="box">
+                <input type="checkbox" id="dancet2" name="danceType[]" value="sabara" class="box">
                 <label for="dancetype2"> Sabaragamuwa dance</label><br>
-                <input type="checkbox" id="dancet3" name="dancet3" value="low" class="box">
+                <input type="checkbox" id="dancet3" name="danceType[]" value="low" class="box">
                 <label for="dancetype3"> Low country dance</label><br>
-                <input type="checkbox" id="dancet4" name="dancet4" value="wes" class="box">
+                <input type="checkbox" id="dancet4" name="danceType[]" value="wes" class="box">
                 <label for="dancetype4"> Western dance</label><br>
-                <input type="checkbox" id="dancet5" name="dancet5" value="free" class="box">
+                <input type="checkbox" id="dancet5" name="danceType[]" value="free" class="box">
                 <label for="dancetype5"> Free style</label><br>
                 
                 
@@ -368,11 +380,11 @@
                 <label for="saloontype">Saloon type</label>
               </div>
               <div class="col_input">
-                <input type="checkbox" id="saloont1" name="saloont1" value="male" class="box">
+                <input type="checkbox" id="saloont1" name="saloontype" value="male" class="box">
                 <label for="saloontype1"> Male</label><br>
-                <input type="checkbox" id="saloont2" name="saloont2" value="female" class="box">
+                <input type="checkbox" id="saloont2" name="saloontype" value="female" class="box">
                 <label for="saloontype2"> Female</label><br>
-                <input type="checkbox" id="saloont3" name="saloont3" value="both" class="box">
+                <input type="checkbox" id="saloont3" name="saloontype" value="both" class="box">
                 <label for="saloontype3"> Both</label><br>
               </div>
             </div>
@@ -382,11 +394,11 @@
                 <label for="supptype">Suppling service</label>
               </div>
               <div class="col_input">
-                <input type="checkbox" id="suppt1" name="suppt1" value="hair" class="box">
+                <input type="checkbox" id="suppt1" name="supptype[]" value="hair" class="box">
                 <label for="supptype1"> Hair cut & hair styles</label><br>
-                <input type="checkbox" id="suppt2" name="suppt2" value="makeup" class="box">
+                <input type="checkbox" id="suppt2" name="supptype[]" value="makeup" class="box">
                 <label for="supptype2"> Make up</label><br>
-                <input type="checkbox" id="suppt3" name="suppt3" value="dressing" class="box">
+                <input type="checkbox" id="suppt3" name="supptype[]" value="dressing" class="box">
                 <label for="supptype3"> Dressing</label><br>
               </div>
             </div>
@@ -400,13 +412,13 @@
                 <label for="caketype">Cake type</label>
               </div>
               <div class="col_input">
-                <input type="checkbox" id="caket1" name="caket1" value="weddingcake" class="box">
+                <input type="checkbox" id="caket1" name="caketype[]" value="weddingcake" class="box">
                 <label for="caketype1"> Wedding cakes</label><br>
-                <input type="checkbox" id="caket2" name="caket2" value="cakestruc" class="box">
+                <input type="checkbox" id="caket2" name="caketype[]" value="cakestruc" class="box">
                 <label for="caketype2"> Wedding cake structure</label><br>
-                <input type="checkbox" id="caket3" name="caket3" value="birthday" class="box">
+                <input type="checkbox" id="caket3" name="caketype[]" value="birthday" class="box">
                 <label for="caketype3"> Birthday cakes</label><br>
-                <input type="checkbox" id="caket4" name="caket4" value="partycake" class="box">
+                <input type="checkbox" id="caket4" name="caketype[]" value="partycake" class="box">
                 <label for="caketype4"> Party cakes</label><br>
                 
               </div>
@@ -417,13 +429,13 @@
                 <label for="sweettype">Sweet type</label>
               </div>
               <div class="col_input">
-                <input type="checkbox" id="sweett1" name="sweett1" value="cookies" class="box">
+                <input type="checkbox" id="sweett1" name="sweettype[]" value="cookies" class="box">
                 <label for="sweettype1"> Cookies</label><br>
-                <input type="checkbox" id="sweett2" name="sweett2" value="cupcakes" class="box">
+                <input type="checkbox" id="sweett2" name="sweettype[]" value="cupcakes" class="box">
                 <label for="sweettype2"> Cupcakes</label><br>
-                <input type="checkbox" id="sweett3" name="sweett3" value="brownies" class="box">
+                <input type="checkbox" id="sweett3" name="sweettype[]" value="brownies" class="box">
                 <label for="sweettype3"> Brownies</label><br>
-                <input type="checkbox" id="sweett4" name="sweett4" value="candy" class="box">
+                <input type="checkbox" id="sweett4" name="sweettype[]" value="candy" class="box">
                 <label for="sweettype4"> Candies</label><br>
               </div>
             </div>
@@ -438,17 +450,17 @@
                 <label for="decotype">Supplying items</label>
               </div>
               <div class="col_input">
-                <input type="checkbox" id="decot1" name="decot1" value="caketable" class="box">
+                <input type="checkbox" id="decot1" name="decotype[]" value="caketable" class="box">
                 <label for="decotype1"> Cake table</label><br>
-                <input type="checkbox" id="decot2" name="decot2" value="cocktailtable" class="box">
+                <input type="checkbox" id="decot2" name="decotype[]" value="cocktailtable" class="box">
                 <label for="decotype2"> Coketail table</label><br>
-                <input type="checkbox" id="decot3" name="decot3" value="caketable" class="box">
+                <input type="checkbox" id="decot3" name="decotype[]" value="caketable" class="box">
                 <label for="decotype3"> Dance floor</label><br>
-                <input type="checkbox" id="decot4" name="decot4" value="poruwa" class="box">
+                <input type="checkbox" id="decot4" name="decotype[]" value="poruwa" class="box">
                 <label for="decotype4"> Poruwa</label><br>
-                <input type="checkbox" id="decot4" name="decot4" value="setiback" class="box">
+                <input type="checkbox" id="decot4" name="decotype[]" value="setiback" class="box">
                 <label for="decotype4"> Setiback</label><br>
-                <input type="checkbox" id="decot4" name="decot4" value="lights" class="box">
+                <input type="checkbox" id="decot4" name="decotype[]" value="lights" class="box">
                 <label for="decotype4"> Lights</label><br>
                 
               </div>
@@ -459,15 +471,15 @@
                 <label for="flowtype">Flower decoratios</label>
               </div>
               <div class="col_input">
-                <input type="checkbox" id="flowt1" name="flowt1" value="poruw&seti" class="box">
+                <input type="checkbox" id="flowt1" name="flowtype[]" value="poruw&seti" class="box">
                 <label for="flowtype1"> Poruwa & Setiback design</label><br>
-                <input type="checkbox" id="flowt2" name="flowt2" value="tabledeco" class="box">
+                <input type="checkbox" id="flowt2" name="flowtype[]" value="tabledeco" class="box">
                 <label for="flowtype2"> Table decor</label><br>
-                <input type="checkbox" id="flowt3" name="flowt3" value="oilLamp" class="box">
+                <input type="checkbox" id="flowt3" name="flowtype[]" value="oilLamp" class="box">
                 <label for="flowtype3"> Oil lamp decor</label><br>
-                <input type="checkbox" id="flowt4" name="flowt4" value="entrance" class="box">
+                <input type="checkbox" id="flowt4" name="flowtype[]" value="entrance" class="box">
                 <label for="flowtype4"> Entrance/Pathway decor</label><br>
-                <input type="checkbox" id="flowt5" name="flowt5" value="headtable" class="box">
+                <input type="checkbox" id="flowt5" name="flowtype[]" value="headtable" class="box">
                 <label for="flowtype5"> Head table & champagne table decor</label><br>
                 
               </div>
@@ -482,11 +494,11 @@
                 <label for="sectiontype">Available sections</label>
               </div>
               <div class="col_input">
-                <input type="checkbox" id="sectiont1" name="sectiont1" value="womensec" class="box">
+                <input type="checkbox" id="sectiont1" name="sectiontype[]" value="womensec" class="box">
                 <label for="sectiontype1"> Women section</label><br>
-                <input type="checkbox" id="sectiont2" name="sectiont2" value="mensec" class="box">
+                <input type="checkbox" id="sectiont2" name="sectiontype[]" value="mensec" class="box">
                 <label for="sectiontype2"> Men section</label><br>
-                <input type="checkbox" id="sectiont3" name="sectiont3" value="childsec" class="box">
+                <input type="checkbox" id="sectiont3" name="sectiontype[]" value="childsec" class="box">
                 <label for="sectiontype3"> Children section</label><br>
               </div>
             </div>
@@ -496,17 +508,17 @@
                 <label for="dresscat">Dress Categories</label>
               </div>
               <div class="col_input">
-                <input type="checkbox" id="dresscat1" name="dresscat1" value="bridal" class="box">
+                <input type="checkbox" id="dresscat1" name="dresscat[]" value="bridal" class="box">
                 <label for="dresscattype1"> Bridal dresses</label><br>
-                <input type="checkbox" id="dresscat2" name="dresscat2" value="bridesmaid" class="box">
+                <input type="checkbox" id="dresscat2" name="dresscat[]" value="bridesmaid" class="box">
                 <label for="dresscattype2"> Bridesmaid & flower girl dresses</label><br>
-                <input type="checkbox" id="dresscat3" name="dresscatt3" value="wedguest" class="box">
+                <input type="checkbox" id="dresscat3" name="dresscat[]" value="wedguest" class="box">
                 <label for="dresscattype3"> Wedding guest dresses</label><br>
-                <input type="checkbox" id="dresscat4" name="dresscat4" value="partydress" class="box">
+                <input type="checkbox" id="dresscat4" name="dresscat[]" value="partydress" class="box">
                 <label for="dresscattype4"> Party dresses</label><br>
-                <input type="checkbox" id="dresscat5" name="dresscat5" value="groom" class="box">
+                <input type="checkbox" id="dresscat5" name="dresscat[]" value="groom" class="box">
                 <label for="dresscattype5"> Groom costumes</label><br>
-                <input type="checkbox" id="dresscat6" name="dressct6" value="fullkit" class="box">
+                <input type="checkbox" id="dresscat6" name="dresscat[]" value="fullkit" class="box">
                 <label for="dresscattype6"> Men fullkit</label><br>
               </div>
             </div>
@@ -518,6 +530,9 @@
       </div>          
     </div>
 
+
+
+<!-- tab3 -->
     <!-- <div class="tab"> -->
       <div class="content_title"><a><u>Image and caption:</u></a></div>
         <div class="row">
@@ -534,7 +549,7 @@
             <label for="simage">Image</label>
           </div>
           <div class="col_input">
-             <input type="file" id="simage" name="serviceimage"><br><br>
+             <input type="text" id="simage" name="serviceimage"><br><br>
           </div>
         </div>
         <hr/>
@@ -543,32 +558,35 @@
               <label for="sdoc">Document</label>
           </div>
           <div class="col_input">
-            <input type="file" id="sdoc" name="servicedoc"><br><br>
+            <input type="text" id="sdoc" name="servicedoc"><br><br>
           </div>
         </div>
         <hr/>
-      </div>
-    <!-- </div> -->
+      <!-- </div> -->
+    </div>
 
-        <!-- end of service separate info -->
-        
-    <div style="overflow:auto;">
-        <div class="formBtn" >
-            <button type="button" id="nextBtn" onclick="nextPrev(1)" style="float:right;">Next</button>
-            <button type="button" id="submitBtn" style="float:right; display:none;">Submit</button>
-            <button type="button" id="prevBtn" onclick="nextPrev(-1)" style="float:right;">Previous</button>
+      
+            <div style="overflow:auto;">
+              <div class="formBtn" >
+                <button type="button" id="nextBtn" onclick="nextPrev(1)" style="float:right; display:none;">Next</button>
+                <button id="submitBtn" type="submit" name="submit" style="float:right; display:none;">Submit</button>
+                <button type="button" id="prevBtn" onclick="nextPrev(-1)" style="float:right; display:none;">Previous</button>
+            
+              </div>
+            </div>
+
+          <div style="text-align:center;margin-top:40px;">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
             
         </div>
-    </div>
-        
-        <!-- Circles which indicates the steps of the form: -->
-    <div style="text-align:center;margin-top:40px;">
-      <span class="step"></span>
-      <span class="step"></span>
-      <span class="step"></span>
-      <!-- <span class="step"></span> -->
-    </div>
-     
+
+
+
+
+
+
     </form>
   </div>
 </div>

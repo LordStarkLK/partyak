@@ -144,7 +144,7 @@ input[type=text], input[type=url]{
   display: inline-block;
 }
 
-.tab .content_title .row .col_input input[type=submit] {
+/* .tab .content_title .row .col_input input[type=submit] {
   background-color: #4CAF50;
   color: white;
   padding: 12px 20px;
@@ -152,11 +152,11 @@ input[type=text], input[type=url]{
   border-radius: 4px;
   cursor: pointer;
   float: right;
-}
+} */
 
-.tab .content_title .row .col_input input[type=submit]:hover {
+/* .tab .content_title .row .col_input input[type=submit]:hover {
   background-color: #45a049;
-}
+} */
 .tab .content_title .row .col_input input[type=url]{
   width: 90%;
   padding: 8px;
@@ -279,6 +279,12 @@ cursor: pointer;
   align-items: center;
   justify-content: center;
 }
+
+/* button[type=submit]{
+  float:right; 
+  display:none;
+  color: brown;
+} */
 
 input.box{
   transform: scale(2);
