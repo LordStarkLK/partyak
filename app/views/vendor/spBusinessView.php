@@ -88,7 +88,7 @@
                 
             </div>
             <div class="addingService">
-               <button>ADD NEW SERVICE</button>
+               <a href="<?php echo BASEURL . '/addNewService'; ?>"><button>ADD NEW SERVICE</button></a>
             </div>
             <div class="common-func">
                 <a href="<?php echo BASEURL . '/spAnalytics'; ?>">
