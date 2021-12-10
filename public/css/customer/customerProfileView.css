@@ -329,7 +329,7 @@ font-family: 'Poppins', sans-serif;
   padding-left:80%;
 }
 
-.saveb {
+.saveb , .savebb{
   position:relative;
   padding:10px 50px;
   border-radius: 28px;
@@ -343,6 +343,50 @@ font-family: 'Poppins', sans-serif;
   background-color: #9593ff;
   }
 
+
+  /* .filedd {
+    display: none;
+    display:block;
+  } */
+  
+  .custom-file-upload {
+
+    border: 1px solid #007bff;
+    display: inline-block;
+    padding: 7px 12px;
+    cursor: pointer;
+    color: #007bff;
+    font-weight: normal;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  .custom-file-upload:hover {
+    transition: ease-in-out 0.3s;
+    background-color: #007bff;
+    color: white;
+  }
+  .savebtn {
+    color: white;
+    margin: 0;
+    padding: 8px 12px;
+    margin-top: 10%;
+    margin-left: 27%;
+    border-radius: 28px;
+    border: 1px solid #18ab29;
+    display: inline-block; 
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 19px;
+    line-height: 23px;
+    background-color: #9593ff;
+  }
+  .savebtn:hover {
+    color: #007bff;
+    background-color: rgb(255, 255, 255);
+    font-weight: 500;
+    border: 1px solid #007bff;
+  }
 
 
 

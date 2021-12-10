@@ -10,8 +10,8 @@ class AdminUsers extends FrameworkPartyak{
     
     public function index(){
         
-        $data['customers'] = $this->user->getCustomers();
-        $data['customer_email'] = $this->user->getCustomerEmail();
+        // $data['customers'] = $this->user->getCustomers();
+        $data['customer'] = $this->user->getCustomerDetails();
         // echo "$data[customers]";
         // $this->preventBack("admin");
         $this->view("admin/adminUsersView",$data);

@@ -57,11 +57,11 @@
           <div class="top-sales box">
                 <div class="daily-details">
                     <a class = "name">Daily</a><br>
-                    <a class ="amount">2 506</a>
+                    <a class ="amount">2 500</a>
                 </div>
                 <div class="monthly-details">
                     <a class = "name">Monthly</a><br>
-                    <a class ="amount">98 765</a>
+                    <a class ="amount">20 000</a>
                 </div> 
           </div>
         </div>

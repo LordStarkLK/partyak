@@ -15,6 +15,6 @@ class Home extends FrameworkPartyak
 
     public function signup()
     {
-        $this->view("selectUserTypeView");
+        $this->view("customerRegisterView");
     }
 }

@@ -31,7 +31,7 @@ window.onclick = function(event) {
 // chart js start
 
 var xValues = ["3rd Quater 2020", "4th Quater 2020", "1st Quater 2021", "2nd Quater 2021", "3rd Quater 2021"];
-var yValues = [55000, 49000, 44000, 24000, 30000];
+var yValues = [55000, 49000, 44000, 24000, 60000];
 var barColors = ["#e6817a", "#e44e43","#a0160c","#630c06","#300b08"];
 
 new Chart("myChart", {

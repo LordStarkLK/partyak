@@ -161,6 +161,19 @@
           </div>
           
         </div>
+
+
+        
+        <div class="input-box07">
+         
+        <p3>Please put a tick when this service is needed to be handle by event planner</p3>
+          
+          <div class="handletick">
+            <input type="checkbox" placeholder="Agree" name="agree">
+            <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
+          </div>
+
+        </div>
       
       <div class="save">
           <button type="button" class="saveb" id="venue" value="Submit">Next <i class="fas fa-forward"></i></button>
@@ -240,6 +253,18 @@
           
         </div>
 
+
+        <div class="input-box07">
+         
+        <p3>Please put a tick when this service is needed to be handle by event planner</p3>
+          
+          <div class="handletick">
+            <input type="checkbox" placeholder="Agree" name="agree">
+            <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
+          </div>
+
+        </div>
+
         <div class="save">
           <button type="button" class="saveb" id="catering" value="Save">Next <i class="fas fa-forward"></i></button>
         </div>
@@ -266,7 +291,17 @@
           <!-- <div class="error"><?php echo $errors["budget"] ?></div> -->
         </div>
 
-        
+        <div class="input-box07">
+         
+        <p3>Please put a tick when this service is needed to be handle by event planner</p3>
+          
+          <div class="handletick">
+            <input type="checkbox" placeholder="Agree" name="agree">
+            <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
+          </div>
+
+        </div>
+
         <div class="save">
           <button type="button" class="saveb" id="photo" value="Save">Next <i class="fas fa-forward"></i></button>
         </div>
@@ -316,6 +351,18 @@
             <!-- <div class="error"><?php echo $errors["solo"] ?></div> -->
           </div>
          
+        </div>
+
+
+        <div class="input-box07">
+         
+        <p4>Please put a tick when this service is needed to be handle by event planner</p4>
+          
+          <div class="handletick">
+            <input type="checkbox" placeholder="Agree" name="agree">
+            <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
+          </div>
+
         </div>
 
         <div class="save">
@@ -380,6 +427,17 @@
         </div>
 
 
+        <div class="input-box07">
+         
+        <p3>Please put a tick when this service is needed to be handle by event planner</p3>
+          
+          <div class="handletick">
+            <input type="checkbox" placeholder="Agree" name="agree">
+            <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
+          </div>
+
+        </div>
+
         <div class="save">
           <button type="button" class="saveb"  id="dance" value="Submit">Next <i class="fas fa-forward"></i></button>
         </div>
@@ -439,6 +497,16 @@
         </div>
 
 
+        <div class="input-box07">
+         
+        <p3>Please put a tick when this service is needed to be handle by event planner</p3>
+          
+          <div class="handletick">
+            <input type="checkbox" placeholder="Agree" name="agree">
+            <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
+          </div>
+
+        </div>
         
         <div class="save">
           <button type="button" class="saveb"  id="salon" value="Save">Next <i class="fas fa-forward"></i></button>
@@ -493,6 +561,18 @@
       
         </div>
 
+
+        <div class="input-box07">
+         
+        <p3>Please put a tick when this service is needed to be handle by event planner</p3>
+          
+          <div class="handletick">
+            <input type="checkbox" placeholder="Agree" name="agree">
+            <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
+          </div>
+
+        </div>
+
         <div class="save">
           <button type="button" class="saveb" id="cake" value="Submit">Next <i class="fas fa-forward"></i></button>
         </div>
@@ -531,6 +611,17 @@
             <!-- <div class="error"><?php echo $errors["floral"] ?></div> -->
           </div>
     
+        </div>
+
+        <div class="input-box07">
+         
+        <p3>Please put a tick when this service is needed to be handle by event planner</p3>
+          
+          <div class="handletick">
+            <input type="checkbox" placeholder="Agree" name="agree">
+            <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
+          </div>
+
         </div>
 
         <div class="save">
@@ -598,6 +689,17 @@
     
         </div>
 
+        <div class="input-box07">
+         
+        <p3>Please put a tick when this service is needed to be handle by event planner</p3>
+          
+          <div class="handletick">
+            <input type="checkbox" placeholder="Agree" name="agree">
+            <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
+          </div>
+
+        </div>
+
         <div class="save">
           <button type="button" class="saveb"  id="sound" value="Submit">Next <i class="fas fa-forward"></i></button>
         </div>
@@ -637,6 +739,17 @@
           </div>
     
         </div>
+
+        <div class="input-box07">
+         
+        <p3>Please put a tick when this service is needed to be handle by event planner</p3>
+          
+          <div class="handletick">
+            <input type="checkbox" placeholder="Agree" name="agree">
+            <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
+          </div>
+
+        </div> 
 
         <div class="save">
           <button type="Submit" class="savebb"  value="Submit"><a href ="<?php echo BASEURL . '/customerContactEventPlanner'; ?>">Select Event Planner</a></button>

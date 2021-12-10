@@ -71,7 +71,7 @@
                             <th>Vendor </th>
                             <th>Vendor type</th>
                             <th>Reviewed By</th>
-                            <th>Rating()         </th>
+                            <th>Rating</th>
                             <th>Review</th>
 
                         </tr>

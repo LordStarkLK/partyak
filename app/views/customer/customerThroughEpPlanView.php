@@ -1,3 +1,6 @@
+<?php $errors = $data['errors'] ?>
+
+
 <!DOCTYPE html>
 
 <html lang="en" dir="ltr">
@@ -27,7 +30,7 @@
   </div>
 
   <div class="cusContent" id="con"> 
-    <form action="#" class="form-area" method="POST">
+  <form action="<?php echo BASEURL . '/customerThroughEpPlan/index'; ?>" class="form-area" method="POST">
           <p11>Event Details</p11>
           <div class="input-box01">
             <select name="eventType" placeholder="Event Type">
@@ -37,12 +40,12 @@
                 <option value="Corparate Event">Corporate Event</option>
                 <option value="Personalize Event">Personalize Event</option>
             </select>
-            <!-- <div class="error"><?php echo $errors["eventType"] ?></div>  -->
+            <div class="error"><?php echo $errors["eventType"] ?></div>
           </div>
               
           <div class="input-box02">
               <input type="text" placeholder="Event Name" name="eventname">
-              <!-- <div class="error"><?php echo $errors["eventname"] ?></div>  -->
+              <div class="error"><?php echo $errors["eventname"] ?></div> 
           </div>
 
           <div class="input-box03">
@@ -60,11 +63,11 @@
             <div class="dates">
                <div class="bdate">
                 <input type="date" placeholder="Event Start Date" name="startdate" >
-                <!-- <div class="error"><?php echo $errors["startdate"] ?></div>  -->
+                <div class="error"><?php echo $errors["startdate"] ?></div> 
               </div>
 
               <div class="arrow">
-                <i class="fas fa-forward"></i>
+                <p>to</p>
               </div>
 
               
@@ -106,12 +109,12 @@
               <option value="Mannar">Mannar</option>
               <option value="Mullathivu">Mullathivu</option>
           </select>
-          <!-- <div class="error"><?php echo $errors["city"] ?></div>  -->
+          <div class="error"><?php echo $errors["city"] ?></div> 
           </div>
 
           <div class="input-box05">
               <input type="text" placeholder="no of Guests" name="noofguest">
-              <!-- <div class="error"><?php echo $errors["noofguest"] ?></div>  -->
+              <div class="error"><?php echo $errors["noofguest"] ?></div> 
           </div>
 
           <div class="save">

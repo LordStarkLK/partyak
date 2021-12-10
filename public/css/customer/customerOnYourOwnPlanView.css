@@ -236,7 +236,7 @@ body {
 }
 
 
-.venueq p1, .venueq p2, .musicq p3, .danceq p,.cakeq p4, .decoq p5, .soundq p6, .soundq p7, .dressq p8,.cateringq p0, .cateringq p10, .salonq p1{
+.venueq p1, .venueq p2, .musicq p3, .danceq p,.cakeq p4, .decoq p5, .soundq p6, .soundq p7, .dressq p8,.cateringq p0, .cateringq p10, .salonq p1, .arrow p{
   height: 44px;
   padding:3%;
   opacity: 0.9;
