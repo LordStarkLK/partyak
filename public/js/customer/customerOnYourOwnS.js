@@ -9,16 +9,16 @@
   var deco =  document.getElementById("popup-8");
   var sound =  document.getElementById("popup-9");
   var dress =  document.getElementById("popup-10");
-  var vn = document.getElementById("ve");
-  var cat = document.getElementById("ca");
-  var pho = document.getElementById("ph");
-  var muc = document.getElementById("mu");
-  var dac = document.getElementById("da");
-  var sal = document.getElementById("sa");
-  var cak = document.getElementById("cak");
-  var dec = document.getElementById("dec");
-  var sou= document.getElementById("so");
-  var dre = document.getElementById("dr");
+  // var vn = document.getElementById("ve");
+  // var cat = document.getElementById("ca");
+  // var pho = document.getElementById("ph");
+  // var muc = document.getElementById("mu");
+  // var dac = document.getElementById("da");
+  // var sal = document.getElementById("sa");
+  // var cak = document.getElementById("cak");
+  // var dec = document.getElementById("dec");
+  // var sou= document.getElementById("so");
+  // var dre = document.getElementById("dr");
 
 
 
@@ -43,7 +43,7 @@
   var drbBtn =  document.getElementById("backdr");
 
 
-  vn.className = "active";
+  // vn.className = "active";
 
   vBtn.onclick = function(){
     ven.style.display="none";
@@ -56,16 +56,16 @@
     deco.style.display="none";
     sound.style.display="none";
     dress.style.display="none";
-    vn.className = "no";
-    cat.className = "active";
-    pho.className ="no";
-    muc.className ="no";
-    dac.className ="no";
-    sal.className ="no";
-    cak.className ="no";
-    dec.className ="no";
-    sou.className ="no";
-    dre.className ="no";
+    // vn.className = "no";
+    // cat.className = "active";
+    // pho.className ="no";
+    // muc.className ="no";
+    // dac.className ="no";
+    // sal.className ="no";
+    // cak.className ="no";
+    // dec.className ="no";
+    // sou.className ="no";
+    // dre.className ="no";
   }
 
   cBtn.onclick = function(){
@@ -79,16 +79,16 @@
     deco.style.display="none";
     sound.style.display="none";
     dress.style.display="none";
-    vn.className = "no";
-    cat.className = "no";
-    pho.className = "active";
-    muc.className ="no";
-    dac.className ="no";
-    sal.className ="no";
-    cak.className ="no";
-    dec.className ="no";
-    sou.className ="no";
-    dre.className ="no";
+    // vn.className = "no";
+    // cat.className = "no";
+    // pho.className = "active";
+    // muc.className ="no";
+    // dac.className ="no";
+    // sal.className ="no";
+    // cak.className ="no";
+    // dec.className ="no";
+    // sou.className ="no";
+    // dre.className ="no";
     
   }
    
@@ -102,16 +102,16 @@
     cake.style.display="none";
     sound.style.display="none";
     dress.style.display="none";
-    vn.className = "no";
-    cat.className = "no";
-    pho.className = "no";
-    muc.className ="active";
-    dac.className ="no";
-    sal.className ="no";
-    cak.className ="no";
-    dec.className ="no";
-    sou.className ="no";
-    dre.className ="no";
+    // vn.className = "no";
+    // cat.className = "no";
+    // pho.className = "no";
+    // muc.className ="active";
+    // dac.className ="no";
+    // sal.className ="no";
+    // cak.className ="no";
+    // dec.className ="no";
+    // sou.className ="no";
+    // dre.className ="no";
     
   }
 
@@ -125,16 +125,16 @@
     cake.style.display="none";
     sound.style.display="none";
     dress.style.display="none";
-    vn.className = "no";
-    cat.className = "no";
-    pho.className = "no";
-    muc.className ="no";
-    dac.className ="active";
-    sal.className ="no";
-    cak.className ="no";
-    dec.className ="no";
-    sou.className ="no";
-    dre.className ="no";
+    // vn.className = "no";
+    // cat.className = "no";
+    // pho.className = "no";
+    // muc.className ="no";
+    // dac.className ="active";
+    // sal.className ="no";
+    // cak.className ="no";
+    // dec.className ="no";
+    // sou.className ="no";
+    // dre.className ="no";
     
   }
 
@@ -149,16 +149,16 @@
     deco.style.display="none";
     sound.style.display="none";
     dress.style.display="none";
-    vn.className = "no";
-    cat.className = "no";
-    pho.className = "no";
-    muc.className ="no";
-    dac.className ="no";
-    sal.className ="active";
-    cak.className ="no";
-    dec.className ="no";
-    sou.className ="no";
-    dre.className ="no";
+    // vn.className = "no";
+    // cat.className = "no";
+    // pho.className = "no";
+    // muc.className ="no";
+    // dac.className ="no";
+    // sal.className ="active";
+    // cak.className ="no";
+    // dec.className ="no";
+    // sou.className ="no";
+    // dre.className ="no";
    
   }
 
@@ -173,16 +173,16 @@
     deco.style.display="none";
     sound.style.display="none";
     dress.style.display="none";
-    vn.className = "no";
-    cat.className = "no";
-    pho.className = "no";
-    muc.className ="no";
-    dac.className ="no";
-    sal.className ="no";
-    cak.className ="active";
-    dec.className ="no";
-    sou.className ="no";
-    dre.className ="no";
+    // vn.className = "no";
+    // cat.className = "no";
+    // pho.className = "no";
+    // muc.className ="no";
+    // dac.className ="no";
+    // sal.className ="no";
+    // cak.className ="active";
+    // dec.className ="no";
+    // sou.className ="no";
+    // dre.className ="no";
    
   }
   
@@ -198,16 +198,16 @@
     deco.style.display="block";
     sound.style.display="none";
     dress.style.display="none";
-    vn.className = "no";
-    cat.className = "no";
-    pho.className = "no";
-    muc.className ="no";
-    dac.className ="no";
-    sal.className ="no";
-    cak.className ="no";
-    dec.className ="active";
-    sou.className ="no";
-    dre.className ="no";
+    // vn.className = "no";
+    // cat.className = "no";
+    // pho.className = "no";
+    // muc.className ="no";
+    // dac.className ="no";
+    // sal.className ="no";
+    // cak.className ="no";
+    // dec.className ="active";
+    // sou.className ="no";
+    // dre.className ="no";
   
   }
 
@@ -222,16 +222,16 @@
     deco.style.display="none";
     sound.style.display="block";
     dress.style.display="none";
-    vn.className = "no";
-    cat.className = "no";
-    pho.className = "no";
-    muc.className ="no";
-    dac.className ="no";
-    sal.className ="no";
-    cak.className ="no";
-    dec.className ="no";
-    sou.className ="active";
-    dre.className ="no";
+    // vn.className = "no";
+    // cat.className = "no";
+    // pho.className = "no";
+    // muc.className ="no";
+    // dac.className ="no";
+    // sal.className ="no";
+    // cak.className ="no";
+    // dec.className ="no";
+    // sou.className ="active";
+    // dre.className ="no";
    
   }
 
@@ -246,16 +246,16 @@
     deco.style.display="none";
     sound.style.display="none";
     dress.style.display="block";
-    vn.className = "no";
-    cat.className = "no";
-    pho.className = "no";
-    muc.className ="no";
-    dac.className ="no";
-    sal.className ="no";
-    cak.className ="no";
-    dec.className ="no";
-    sou.className ="no";
-    dre.className ="active";
+    // vn.className = "no";
+    // cat.className = "no";
+    // pho.className = "no";
+    // muc.className ="no";
+    // dac.className ="no";
+    // sal.className ="no";
+    // cak.className ="no";
+    // dec.className ="no";
+    // sou.className ="no";
+    // dre.className ="active";
    
   }
 
@@ -286,16 +286,16 @@ cbBtn.onclick = function(){
     deco.style.display="none";
     sound.style.display="none";
     dress.style.display="none";
-    vn.className = "active";
-    cat.className = "no";
-    pho.className = "no";
-    muc.className ="no";
-    dac.className ="no";
-    sal.className ="no";
-    cak.className ="no";
-    dec.className ="no";
-    sou.className ="no";
-    dre.className ="no";
+    // vn.className = "active";
+    // cat.className = "no";
+    // pho.className = "no";
+    // muc.className ="no";
+    // dac.className ="no";
+    // sal.className ="no";
+    // cak.className ="no";
+    // dec.className ="no";
+    // sou.className ="no";
+    // dre.className ="no";
    
   }
 
@@ -311,16 +311,16 @@ pbBtn.onclick = function(){
     deco.style.display="none";
     sound.style.display="none";
     dress.style.display="none";
-    vn.className = "no";
-    cat.className = "active";
-    pho.className = "no";
-    muc.className ="no";
-    dac.className ="no";
-    sal.className ="no";
-    cak.className ="no";
-    dec.className ="no";
-    sou.className ="no";
-    dre.className ="no";
+    // vn.className = "no";
+    // cat.className = "active";
+    // pho.className = "no";
+    // muc.className ="no";
+    // dac.className ="no";
+    // sal.className ="no";
+    // cak.className ="no";
+    // dec.className ="no";
+    // sou.className ="no";
+    // dre.className ="no";
 }
 
 
@@ -336,16 +336,16 @@ mbBtn.onclick = function(){
     deco.style.display="none";
     sound.style.display="none";
     dress.style.display="none";
-    vn.className = "no";
-    cat.className = "no";
-    pho.className = "active";
-    muc.className ="no";
-    dac.className ="no";
-    sal.className ="no";
-    cak.className ="no";
-    dec.className ="no";
-    sou.className ="no";
-    dre.className ="no";
+    // vn.className = "no";
+    // cat.className = "no";
+    // pho.className = "active";
+    // muc.className ="no";
+    // dac.className ="no";
+    // sal.className ="no";
+    // cak.className ="no";
+    // dec.className ="no";
+    // sou.className ="no";
+    // dre.className ="no";
 }
 
 
@@ -360,16 +360,16 @@ dbBtn.onclick = function(){
     deco.style.display="none";
     sound.style.display="none";
     dress.style.display="none";
-    vn.className = "no";
-    cat.className = "no";
-    pho.className = "no";
-    muc.className ="active";
-    dac.className ="no";
-    sal.className ="no";
-    cak.className ="no";
-    dec.className ="no";
-    sou.className ="no";
-    dre.className ="no";
+    // vn.className = "no";
+    // cat.className = "no";
+    // pho.className = "no";
+    // muc.className ="active";
+    // dac.className ="no";
+    // sal.className ="no";
+    // cak.className ="no";
+    // dec.className ="no";
+    // sou.className ="no";
+    // dre.className ="no";
 }
 
 
@@ -384,16 +384,16 @@ sbBtn.onclick = function(){
     deco.style.display="none";
     sound.style.display="none";
     dress.style.display="none";
-    vn.className = "no";
-    cat.className = "no";
-    pho.className = "no";
-    muc.className ="no";
-    dac.className ="active";
-    sal.className ="no";
-    cak.className ="no";
-    dec.className ="no";
-    sou.className ="no";
-    dre.className ="no";
+    // vn.className = "no";
+    // cat.className = "no";
+    // pho.className = "no";
+    // muc.className ="no";
+    // dac.className ="active";
+    // sal.className ="no";
+    // cak.className ="no";
+    // dec.className ="no";
+    // sou.className ="no";
+    // dre.className ="no";
 }
 
 
@@ -408,16 +408,16 @@ cabBtn.onclick = function(){
     deco.style.display="none";
     sound.style.display="none";
     dress.style.display="none";
-    vn.className = "no";
-    cat.className = "no";
-    pho.className = "no";
-    muc.className ="no";
-    dac.className ="no";
-    sal.className ="active";
-    cak.className ="no";
-    dec.className ="no";
-    sou.className ="no";
-    dre.className ="no";
+    // vn.className = "no";
+    // cat.className = "no";
+    // pho.className = "no";
+    // muc.className ="no";
+    // dac.className ="no";
+    // sal.className ="active";
+    // cak.className ="no";
+    // dec.className ="no";
+    // sou.className ="no";
+    // dre.className ="no";
 }
 
 
@@ -432,16 +432,16 @@ debBtn.onclick = function(){
     deco.style.display="none";
     sound.style.display="none";
     dress.style.display="none";
-    vn.className = "no";
-    cat.className = "no";
-    pho.className = "no";
-    muc.className ="no";
-    dac.className ="no";
-    sal.className ="no";
-    cak.className ="active";
-    dec.className ="no";
-    sou.className ="no";
-    dre.className ="no";
+    // vn.className = "no";
+    // cat.className = "no";
+    // pho.className = "no";
+    // muc.className ="no";
+    // dac.className ="no";
+    // sal.className ="no";
+    // cak.className ="active";
+    // dec.className ="no";
+    // sou.className ="no";
+    // dre.className ="no";
 }
 
 
@@ -456,17 +456,17 @@ slbBtn.onclick = function(){
     deco.style.display="block";
     sound.style.display="none";
     dress.style.display="none";
-    vn.className = "no";
-    cat.className = "no";
-    pho.className = "no";
-    muc.className ="no";
-    dac.className ="no";
-    sal.className ="no";
-    cak.className ="no";
-    dec.className ="active";
-    sou.className ="no";
-    dre.className ="no";
-}
+//     vn.className = "no";
+//     cat.className = "no";
+//     pho.className = "no";
+//     muc.className ="no";
+//     dac.className ="no";
+//     sal.className ="no";
+//     cak.className ="no";
+//     dec.className ="active";
+//     sou.className ="no";
+//     dre.className ="no";
+ }
 
 
 drbBtn.onclick = function(){
@@ -480,14 +480,14 @@ drbBtn.onclick = function(){
     deco.style.display="none";
     sound.style.display="block";
     dress.style.display="none";
-    vn.className = "no";
-    cat.className = "no";
-    pho.className = "no";
-    muc.className ="no";
-    dac.className ="no";
-    sal.className ="no";
-    cak.className ="no";
-    dec.className ="no";
-    sou.className ="active";
-    dre.className ="no";
+    // vn.className = "no";
+    // cat.className = "no";
+    // pho.className = "no";
+    // muc.className ="no";
+    // dac.className ="no";
+    // sal.className ="no";
+    // cak.className ="no";
+    // dec.className ="no";
+    // sou.className ="active";
+    // dre.className ="no";
 }

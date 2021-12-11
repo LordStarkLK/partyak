@@ -11,6 +11,7 @@
      <?php linkCSS("customer/customerContactServiceProviderView"); ?>
     <?php linkCSS("customerNavigation"); ?>
     <?php linkCSS("footer");?>
+    <?php $serviceI=$data['service_detail'];?>
    </head>
 <body>
     <header>
@@ -114,7 +115,44 @@
     
     <div class="cusDetail">
       <div class="cusraw1">
+
         <table>
+
+        <?php
+            $i=1;
+           
+           
+            
+             
+                echo"<tr>";
+                $j=1;
+                      
+                        while($row=mysqli_fetch_assoc($data['service_detail'])  ){
+                          if(!($row['service_image'])){
+                            $row['service_image'] = "default.png";
+                          }
+                          echo "<td>";
+                          echo "<img src='http://localhost/partyak/public/img/serviceImages\".($row[service_image]).'";
+                          echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
+                          echo "</td>";
+                          $j++;
+                          if($j>=3){
+                            echo "</tr>";
+                            $j = 1;
+                          }
+                          
+                        }
+                        
+                      
+                        
+                      
+               
+              
+            
+          ?>
+
+          
+
           <tr>
             <td> <a  href="#"> <img <?php srcIMG("chanceFlowers.png") ?> alt="Chance Flowers"></a><br><p>2nd Chance Flowers <br> Colombo, Sri Lanka</p></td>
             <td> <a  href="<?php echo BASEURL . '/venuesANDhalls'; ?>"><img <?php srcIMG("hotel/hotel1.jpg") ?> alt="Chance Flowers"></a><br><p>Mount Lavinia Hotel <br> Colombo, Sri Lanka</p></td>
