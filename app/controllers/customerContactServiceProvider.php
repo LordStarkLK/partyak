@@ -4,7 +4,9 @@
 class CustomerContactServiceProvider extends FrameworkPartyak{
     public function __construct(){
         $this->helper("linker");
+        $this->serviceDetails = $this->model('customerContactServiceProviderModel');
         $this->preventBack("customer");
+        
     }
     
     public function index(){
@@ -13,7 +15,10 @@ class CustomerContactServiceProvider extends FrameworkPartyak{
         //     $this->redirect("login");
         // }
         // $this->preventBack("customer");
-        $this->view("customer/customerContactServiceProviderView");
+
+
+        $data['service_detail'] = $this->serviceDetails->getServiceDetails();
+        $this->view("customer/customerContactServiceProviderView",$data);
     }
 
 }
