@@ -27,8 +27,8 @@ class AddNewServiceModel extends Database
         $userId = $result["user_id"];
 
         
-         $query = "INSERT INTO other_service(user_id, service_name, description, service_location, service_type, event_type,  fb_url, instagram_url, linkedin_url, advance_price, initial_discount, initial_count, preparation_time, simultaneous_booking, cancellation_policy, payment_terms_and_conditions, additional_information, 
-         venue_type, standing_capasity, seating_arrangement, venue_features,
+         $query = "INSERT INTO other_service(user_id, service_name, description, service_location, service_type, event_type, service_areas, fb_url, instagram_url, linkedin_url, advance_price, initial_discount, initial_count, preparation_time, simultaneous_booking, cancellation_policy, payment_terms_and_conditions, additional_information, 
+         venue_type, standing_capacity, seating_arrangement, venue_features,
          meal_time, no_of_attendants, 
          music_provider_type,
          dancing_type_name,
