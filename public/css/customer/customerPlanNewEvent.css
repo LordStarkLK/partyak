@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color:#202020; 
+    background-image: url("../../../public/img/confetti.png");
+    background-repeat: round;
+}
+
+.container{
+    padding: 1%; 
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 0;
+}
+
+.container {
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.container-asOwn,
+.container-asEp {
+  margin-top:0%;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+.container-asOwn {
+  background-image: url("../../../public/img/rightblob.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.container-asEp {
+  background-image: url("../../../public/img/leftblob.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.button-asEp,
+.button-asOwn {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonOwn a, .buttonEp a {
+  position: relative;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #2f6627;
+  
+}  
+
+.buttonOwn {
+  background-color: #9593ff;
+  border-radius: 28px;
+  border: 1px solid #18ab29;
+  cursor: pointer;
+  box-shadow: inset 3px 3px 0px rgba(0, 0, 0, 0.3);
+  width: 310px;
+  height: 60px;
+  padding:2%;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+.buttonEp {
+  background-color: #ff9393;
+  border-radius: 28px;
+  border: 1px solid #18ab29;
+  cursor: pointer;
+  box-shadow: inset 3px 3px 0px rgba(0, 0, 0, 0.3);
+  width: 310px;
+  height: 60px;
+  padding:2%;
+}
+
+.glass-asEp,.glass-asOwn {
+    display: block;
+    width: 350px;
+    height: 400px;
+    margin: 20px;
+    margin-bottom: 10%;
+    backdrop-filter: blur(23px) saturate(200%);
+    -webkit-backdrop-filter: blur(23px) saturate(200%);
+    background-color: rgba(73, 73, 73, 0.54);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  }
+
+  .owni, .thni{
+    width: 90%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+/* .cusplan{
+    display: flex;
+    flex-direction:row;
+    order:0;
+    padding:3%;
+} 
+
+.cusBox{
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 30px;
+    margin-top: 3%;
+    position: relative;
+    width: 476px;
+    height: 213px;
+    background-color: rgb(0, 0, 0);
+    background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
+    backdrop-filter: blur(120px); 
+    transition: all 0.5s ease;
+    padding: 2%;
+  }  
+
+
+
+.cusop1{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    order:0;
+  }
+
+.cusop2{
+    position: relative;
+    display:flex;
+    flex-direction:column;
+    order:1;
+} */
+
+/*.cusBox .cusop1 a, .cusBox .cusop2 a {
+  position: relative;
+  width: 424px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 53px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+
+} */
+
+/* .cusBox .cusop1 a:hover{
+  background: linear-gradient(114.1deg, rgba(129, 129, 129, 0.08) 18.52%, rgba(49, 49, 49, 0.51) 98.52%);
+  backdrop-filter: blur(120px);
+   
+  border-radius: 20px;
+  width: 430px;
+  height: 6px;
+}
+
+.cusBox .cusop2 a:hover{
+  background: linear-gradient(114.1deg, rgba(129, 129, 129, 0.08) 18.52%, rgba(49, 49, 49, 0.51) 98.52%);
+  backdrop-filter: blur(120px);
+   
+  border-radius: 20px;
+  width: 429px;
+  height: 66px;
+} */
+
+
+.cusContent{
+    position: relative;
+    display: flex;
+    flex-direction: raw;
+    order:1;
+    width: calc(100% - 260px);
+    transition: all 0.5s ease;
+    border-radius: 30px; 
+    background-color: rgb(0, 0, 0);
+    background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
+    backdrop-filter: blur(120px);
+    padding:1%;
+    margin-top: 2%;
+    /* backdrop-filter: blur(120px);
+    -webkit-backdrop-filter: blur(120px);
+    background-color:linear-gradient(114.1deg, rgba(40, 40, 40, 0.91) 18.52%, rgba(15, 15, 15, 0.73) 98.52%), linear-gradient(106.04deg, rgba(255, 255, 255, 0.12) 10.95%, rgba(255, 255, 255, 0.1) 98.32%); */
+    /* Note: backdrop-filter has minimal browser support */
+  }
+
+  .cusContent p40{
+    position: relative;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 0%;
+    text-align: center;
+  }
+
+  .cusDetail{
+    position:relative;
+    padding:3%;
+    border-radius: 30px; 
+    background-color: rgb(0, 0, 0);
+    background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
+    backdrop-filter: blur(120px);
+    display:flex;
+    flex-wrap: wrap;
+    margin-top: 5%;
+  }
+
+  .cusDetail p1,p3,p5{
+    position: relative;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: justify;
+  }
+
+  .cusDetail p2,p4{
+    position: relative;
+    font-size: 17px;
+    line-height: 28px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: justify;
+  }
+
+
+

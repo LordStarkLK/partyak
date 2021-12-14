@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
- 
+    <?php linkCSS("admin/sidebar"); ?>
     <?php linkCSS("admin/adminUsers"); ?>
     <?php linkCSS("css/all"); ?>
 
@@ -15,6 +15,7 @@
    </head>
 <body>
 <div class="container">
+
   <?php linkPHP("adminSidebar");?>
   <section class="home-section">
     
@@ -26,7 +27,7 @@
     <div class="home-content">
     <div class="overview-boxes">
         <div class="box" id="box-customer">
-            <span class="links_name" onclick="window.location='<?php echo BASEURL . '/adminUsers'; ?>'"><img class="customer-image" <?php srcIMG("consumer.png") ?> width="40" height="40">
+            <span class="links_name" onclick="window.location='<?php echo BASEURL . '/adminUsers'; ?>'"><img class="customer-image box-img" <?php srcIMG("consumer.png") ?> width="40" height="40">
             <div class="box-topic">Customers</div></span>
             <!-- <a href="<?php echo BASEURL . 'adminUsers'; ?>"></a>
             <img class="customer-image" <?php srcIMG("consumer.png") ?> width="40" height="40">
@@ -36,23 +37,23 @@
           <!-- <i class='bx bxs-user cart'></i> -->
         </div>
         <div class="box" id="box-service">
-        <span class="links_name" onclick="window.location='<?php echo BASEURL . '/adminUsersService'; ?>'">
-        <img class="service-image" <?php srcIMG("service.png") ?> width="40" height="40">
-            <div class="box-topic">Service Providers</div>
+        <span class="links_name" onclick="window.location='<?php echo BASEURL . '/adminUsersVendor'; ?>'">
+        <img class="service-image box-img" <?php srcIMG("service.png") ?> width="40" height="40">
+            <div class="box-topic">Vendors</div>
     </span>
             
           
           <!-- <i clss='bx bxs-user-rectangle cart two' ></i> -->
         </div>
-        <div class="box" id="box-event">
+        <!-- <div class="box" id="box-event">
         <span class="links_name" onclick="window.location='<?php echo BASEURL . '/adminUsersEvent'; ?>'">
-        <img class="event-image" <?php srcIMG("event.png") ?> width="40" height="40">   
+        <img class="event-image box-img" <?php srcIMG("event.png") ?> width="40" height="40">   
             <div class="box-topic">Event Planners</div>
     </span>
             
           
           
-        </div>
+        </div> -->
         </div>
 
       <div>
@@ -92,32 +93,32 @@
 
   </tr>
  
-<?php while($row=mysqli_fetch_assoc($data['customers']) ){
-    $row2=mysqli_fetch_assoc($data['customer_email']);
+<?php while($row=mysqli_fetch_assoc($data['customer']) ){
+    $i = 1;
+    // $row2=mysqli_fetch_assoc($data['customer_email']);
     echo"
     <tr>
     <td>$row[user_id]</td>
-    <td>$row[f_name]</td>
+    <td>$row[f_name] $row[l_name]</td>
     
-    <td>$row2[email]</td>
+    <td>$row[email]</td>
     
     <td>  
-    <div class=\"dropdown\">
-    <button onclick=\"myFunction()\" class=\"dropbtn\"><i class=\"fas fa-cog\"></i><i class=\"fas fa-caret-down\"></i></button>
-    <div id=\"myDropdown\" class=\"dropdown-content\">
-      <a>Delete User</a>
-      <a >View Profile</a>
-      
-    </div>
-  </div>
+    <div class=\"btn-group\">
+        <button onclick=\"window.location=' " . BASEURL . "/adminUserProfile'\">View Profile</button>
+
+        <button onclick=\"window.location=' " . BASEURL . "/adminUsers/deleteUser/$row[user_id]'\">Delete User</button>
+        
+      </div>
 
     
     </td>
 </tr>   
     ";
-
+    $i++;
 }?>
 
+<!-- deleteUser/$row[user_id] -->
 <!-- && $row2=mysqli_fetch_assoc($data['customer_email']) -->
  <!-- <td>$row2[email']</td> -->
 

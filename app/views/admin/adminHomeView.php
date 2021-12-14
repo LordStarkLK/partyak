@@ -3,8 +3,9 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
- 
-    <?php linkCSS("adminHomeView"); ?>
+    <?php linkCSS("admin/sidebar"); ?>
+    <?php linkCSS("admin/adminHome"); ?>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     
    
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -48,6 +49,7 @@
       <div class="sales-boxes">
         <div class="recent-sales box">
           <div class="title">Sales Summery</div>
+          <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
           <div class="sales-details">
             
           </div>
@@ -55,11 +57,11 @@
           <div class="top-sales box">
                 <div class="daily-details">
                     <a class = "name">Daily</a><br>
-                    <a class ="amount">2 506</a>
+                    <a class ="amount">2 500</a>
                 </div>
                 <div class="monthly-details">
                     <a class = "name">Monthly</a><br>
-                    <a class ="amount">98 765</a>
+                    <a class ="amount">20 000</a>
                 </div> 
           </div>
         </div>

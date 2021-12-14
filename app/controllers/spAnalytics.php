@@ -5,6 +5,7 @@ class SpAnalytics extends FrameworkPartyak
     public function __construct()
     {
         $this->helper("linker");
+        $this->preventBack("vendor");
     }
 
     public function index()
@@ -12,6 +13,4 @@ class SpAnalytics extends FrameworkPartyak
         // echo "Hi";
         $this->view("vendor/spanalyticsView");
     }
-
-   
 }

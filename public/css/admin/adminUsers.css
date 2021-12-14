@@ -6,70 +6,17 @@
   font-family: 'Poppins', sans-serif;
 }
 body{
-    background-color: rgb(0, 0, 0);
-    background-image: url(venBack.png);
+  background-color: #202020;
+  background-image: url("../../../public/img/home-confetti.png");
     background-repeat: round;
 }
 .container{
-    padding: 40px;
+  background-image: url("../../../public/img/blob 2.png");
+  padding: 40px;
+  background-repeat: round;
 }
 
-.sidebar{
-  border-radius: 23px 0px 0px 23px;
-  margin-top: 3%;
-  position: fixed;
-  height: 75%;
-  width: 200px;
-  background-color: rgb(95, 89, 89);
-  background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
-  backdrop-filter: blur(120px);
-  transition: all 0.5s ease;
-}
-.sidebar.active{
-  width: 20%;
-}
 
-.sidebar .nav-links{
-  margin-top: 0;
-}
-.sidebar .nav-links li{
-  position: relative;
-  list-style: none;
-  height: 50px;
-}
-.sidebar .nav-links li a{
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  transition: all 0.4s ease;
-  
-}
-.sidebar .nav-links li a.active{
-  background: #081D45;
-}
-.sidebar .nav-links li a:hover{
-  background: #0f5368;
-  border-radius: 15px;
-}
-.sidebar .nav-links li i{
-  min-width: 60px;
-  text-align: center;
-  font-size: 18px;
-  color: #fff;
-}
-.sidebar .nav-links li a .side-links{
-  color: rgb(245, 245, 245);
-  font-size: 18px;
-  font-weight: 500;
-  white-space: nowrap;
-}
-.sidebar .nav-links .log_out{
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
 .home-section{
   position: relative;
   height: 85%;
@@ -113,12 +60,19 @@ nav .sidebar-button i{
 }
 .home-content .overview-boxes{
    
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 20px 50px 20px 50px;
-  border-radius: 43px;
+display: flex;
+   
+align-items: center;
+   
+justify-content: space-evenly;
+   
+flex-wrap: wrap;
+   
+padding: 20px 50px 20px 50px;
+   
+border-radius: 43px;
+   
+cursor: pointer;
 }
 .overview-boxes .box{
   width: 209px;
@@ -135,9 +89,12 @@ nav .sidebar-button i{
 }
 
 .overview-boxes .box:hover{
-  background: linear-gradient(114.1deg, rgba(231, 89, 216, 0.65) 18.52%, rgba(0, 0, 0, 0.5925) 95.19%, rgba(22, 7, 21, 0.59125) 96.86%, rgba(15, 15, 15, 0.59) 98.52%);
-  backdrop-filter: blur(120px);
-  cursor: pointer;
+  color: black;
+  background: linear-gradient(114.1deg, #84D2F8 18.52%, #FFBBC9 98.52%);
+backdrop-filter: blur(120px);
+
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 13px;
   
  
   
@@ -180,7 +137,7 @@ nav .sidebar-button i{
 .home-content .sales-boxes{
     margin: 50px 60px 0 60px;
     /* border-radius: 30px; */
-  background-color: #068ab3;
+  background-color: #50717b;
   display: flex;
   justify-content: center;
 }
@@ -248,6 +205,7 @@ ul.breadcrumb {
     
   }
   ul.breadcrumb li {
+    
     display: inline;
     font-size: 18px;
   }
@@ -257,6 +215,7 @@ ul.breadcrumb {
     content: "/\00a0";
   }
   ul.breadcrumb li a {
+    cursor: context-menu;
     color: #FFFFFF;
     text-decoration: none;
   }
@@ -300,6 +259,7 @@ ul.breadcrumb {
   }
 
   table {
+    color: white;
     border-collapse: collapse;
     width: 100%;
   }
@@ -316,42 +276,30 @@ ul.breadcrumb {
     color: white;
   }
 
-  .dropbtn {
-    background-color: #3498DB;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+  /* Button group start */
+  .btn-group button {
+    background-color: #8ecccc;
+    border: 1px solid black; /* Green border */
+    color: black; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 90%; /* Set a width if needed */
+    display: block; /* Make the buttons appear below each other */
   }
   
-  .dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
+  .btn-group button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
   }
   
-  .dropdown {
-    position: relative;
-    display: inline-block;
+  /* Add a background color on hover */
+  .btn-group button:hover {
+    color:white;
+    background-color: #212121;
   }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown a:hover {background-color: #ddd;}
+
+/* button group end */
+
+ 
 
   .show {display: block;}
 
@@ -364,6 +312,7 @@ ul.breadcrumb {
 
 @media (max-width: 1240px) {
   .sidebar{
+    
     width: 60px;
   }
   .sidebar.active{

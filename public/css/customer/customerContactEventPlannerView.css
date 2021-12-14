@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color:#202020; 
+    background-image: url("../../../public/img/confetti.png");
+    background-repeat: cover;
+}
+
+.container{
+  z-index: 0;
+}
+
+
+.container p{
+  margin-top:2%;
+  position: relative;
+  display:flex;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  padding-left:40%;
+}
+
+
+.cusContent{
+  position: relative;
+  display: flex;
+  margin-top: 1%; 
+  width: 100%;
+  transition: all 0.5s ease;
+  border-radius: 30px; 
+  background-color: rgb(0, 0, 0);
+  background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
+  backdrop-filter: blur(120px);
+  padding:2%;
+  /* backdrop-filter: blur(120px);
+  -webkit-backdrop-filter: blur(120px);
+  background-color:linear-gradient(114.1deg, rgba(40, 40, 40, 0.91) 18.52%, rgba(15, 15, 15, 0.73) 98.52%), linear-gradient(106.04deg, rgba(255, 255, 255, 0.12) 10.95%, rgba(255, 255, 255, 0.1) 98.32%); */
+  /* Note: backdrop-filter has minimal browser support */
+} 
+
+
+.cusDetail{
+  position:relative;
+  padding:2%;
+  width:100%;
+  border-radius: 30px; 
+  background-color: rgb(0, 0, 0);
+  background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
+  backdrop-filter: blur(120px);
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.cusraw1{
+  position:relative;
+  display: flex;
+  flex-direction: raw;
+  order:0;
+  /* padding:2%; */
+}
+
+.cusraw2{
+  position:relative;
+  display: flex;
+  flex-direction: raw;
+  order:1;
+  /* padding:2%; */
+}
+
+.cusGallery1{
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  order:0;
+}
+
+.cusGallery2{
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  order:1;
+}
+
+.cusGallery3{
+  display:flex;
+  position:relative;
+  flex-direction: column;
+  order:2;
+}
+
+
+.cusGallery4{
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  order:3;
+}
+
+.cusGallery5{
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  order:0;
+}
+
+.cusGallery6{
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  order:1;
+}
+
+.cusGallery7{
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  order:2;
+}
+
+.cusGallery8{
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  order:3;
+}
+
+
+.cusGallery1, .cusGallery2, .cusGallery3,.cusGallery4,.cusGallery5,.cusGallery6 ,.cusGallery7 ,.cusGallery8{
+  position:relative;
+  padding:2%;
+}
+
+.cusGallery1 img, .cusGallery2 img, .cusGallery3 img, .cusGallery4 img, .cusGallery5 img,.cusGallery6 img ,.cusGallery7 img ,.cusGallery8 img{
+  position:relative;
+  border-radius: 10px;
+  width:300px;
+  height:200px;
+}
+
+.cusDes1, .cusDes2, .cusDes3, .cusDes4, .cusDes5, .cusDes6{
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* .cusContent{
+   background-image:url(../../public/img/left.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+} */

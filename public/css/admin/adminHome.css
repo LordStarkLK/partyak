@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  
+}
+body{
+  background-color: #202020;
+  background-image: url("../../../public/img/home-confetti.png");
+    background-repeat: round;
+}
+.container{
+    background-image: url("../../../public/img/blob 1.png");
+    padding: 40px;
+}
+
+
+.home-section{
+  position: relative;
+  height: 85%;
+  width: calc(100% - 240px);
+  left: 240px;
+  transition: all 0.5s ease;
+  border-radius: 43px;
+  /* background-image: url("../../../public/img/searchVenR.png"); */
+  background: linear-gradient(114.1deg, rgba(40,40,40,0.36) 18.52%, rgba(15, 15, 15, 0.12) 98.52%);
+  backdrop-filter: blur(120px);
+}
+.sidebar.active ~ .home-section{
+  width: calc(100% - 60px);
+  left: 60px;
+}
+.home-section nav{
+  display: flex;
+  height: 60px;
+  position: fixed;
+  width: 500px;
+  z-index: 100;
+  padding: 0 20px;
+  transition: all 0.5s ease;
+  border-radius: 43px 0 0 0;
+  color: white;
+}
+
+.home-section nav .sidebar-button{
+  
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+nav .sidebar-button i{
+  font-size: 40px;
+  margin-right: 10px;
+}
+.home-section .home-content{
+  position: relative;
+  padding-top: 60px;
+}
+.home-content .overview-boxes{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px 50px 20px 50px;
+  border-radius: 43px;
+  cursor: context-menu;
+}
+.overview-boxes .box{
+    color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% / 3 - 15px);
+  background: rgb(0, 0, 0);
+  padding: 7px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.overview-boxes .box:hover{
+    color: black;
+    background: linear-gradient(114.1deg, #84D2F8 18.52%, #FFBBC9 98.52%);
+  backdrop-filter: blur(120px);
+  
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 13px;
+    
+   
+    
+  }
+.overview-boxes .box-topic{
+  font-size: 20px;
+  font-weight: 500;
+}
+.home-content .box .number{
+  display: inline-block;
+  font-size: 35px;
+  margin-top: -6px;
+  font-weight: 500;
+}
+.home-content .box .cart{
+  display: inline-block;
+  font-size: 32px;
+  height: 50px;
+  width: 50px;
+  background: #cce5ff;
+  line-height: 50px;
+  text-align: center;
+  color: #66b0ff;
+  border-radius: 12px;
+  margin: -15px 0 0 6px;
+}
+.home-content .box .cart.two{
+   color: #2BD47D;
+   background: #C0F2D8;
+ }
+.home-content .box .cart.three{
+   color: #ffac5e;
+   background: #ffe8a9;
+ }
+
+.home-content .total-order{
+  font-size: 20px;
+  font-weight: 500;
+}
+.home-content .sales-boxes{
+    margin: 0 40px 0 40px;
+    border-radius: 30px;
+    background-color: #068ab3;
+    display: flex;
+    justify-content: center;
+}
+
+.home-content .sales-boxes .recent-sales{
+  width: 65%;
+  height: 350px;
+  padding: 20px 30px;
+  margin: 0 0px 0 0px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.home-content .sales-boxes .sales-details{
+    width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sales-boxes .box .title{
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.home-content .sales-boxes .top-sales{
+    width: 35%;
+    height: 350px;
+    padding: 20px 30px;
+    margin: 0 20px 0 20px;
+    border-radius: 12px;
+    line-height: 1.5cm;
+  }
+  .monthly-details , .daily-details{
+    margin-top: 10px;
+    width: 100%;
+    height: 40%;
+    border-radius: 40px;
+    background-color: rgb(194, 226, 255);
+    text-align: center;
+    padding: 10px;
+}
+.monthly-details , .daily-details , .name{
+    font-size: 25px;
+    font-weight: bold;
+    color: #042a72;
+}
+.monthly-details , .daily-details , .amount{
+    font-size: 25px;
+    font-weight: bold;
+    color: #000000;
+}
+
+#iconMenu{
+  font-size: 45px;
+  color: #66b0ff;
+}
+
+.dashboard{
+  font-size: 50px;
+  color:#fff;
+}
+
+@media (max-width: 1240px) {
+  .sidebar{
+    width: 60px;
+  }
+  .sidebar.active{
+    width: 220px;
+  }
+  .home-section{
+    width: calc(100% - 60px);
+    left: 60px;
+  }
+  .sidebar.active ~ .home-section{
+    overflow: hidden;
+    left: 220px;
+  }
+  .home-section nav{
+    width: 300px;
+  }
+  
+}
+@media (max-width: 1150px) {
+  .home-content .sales-boxes{
+    flex-direction: column;
+  }
+  .home-content .sales-boxes .box{
+    width: 100%;
+    /* overflow-x: scroll; */
+    margin-bottom: 30px;
+  }
+  .home-content .sales-boxes {
+    margin: 0;
+    padding: 10px;
+    /* margin-bottom: 15px; */
+  }
+  .home-content .sales-boxes .top-sales{
+    margin: 0;
+    margin-bottom: 15px;
+  }
+  .home-content .sales-boxes .recent-sales{
+    margin: 0;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 1000px) {
+  .overview-boxes .box{
+    width: calc(100% / 2 - 15px);
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 700px) {
+  nav .sidebar-button .dashboard
+   i{
+    display: flex;
+  }
+  
+  .home-content .sales-boxes .sales-details{
+    width: 560px;
+    margin-bottom: 15px;
+    
+  }
+}
+@media (max-width: 550px) {
+  .overview-boxes .box{
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+}
+
+

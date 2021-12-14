@@ -18,20 +18,20 @@ class   CustomerRegisterModel extends Database{
         return mysqli_fetch_assoc($result);
     }
 
-    public function addCustomer($fname,$lname,$address,$email,$password){
+    public function addCustomer($fname,$lname,$email,$password){
 
         // Insert user data
-        $query = "INSERT INTO user(email,password,user_type) VALUES ('$email','$password','customer')";
+        $query = "INSERT INTO user(email,password,user_type,f_name,l_name) VALUES ('$email','$password','customer','$fname','$lname')";
         mysqli_query($GLOBALS['db'],$query);
 
         // Select the user id of that user
-        $result = mysqli_fetch_assoc(mysqli_query($GLOBALS['db'], "SELECT user_id FROM user WHERE email='$email' LIMIT 1"));
-        $userId = $result["user_id"];
+        // $result = mysqli_fetch_assoc(mysqli_query($GLOBALS['db'], "SELECT user_id FROM user WHERE email='$email' LIMIT 1"));
+        // $userId = $result["user_id"];
 
-        // Inserting data into the customer table
-        $query = "INSERT INTO customer(user_id,f_name,l_name,address)
-        VALUES('$userId','$fname','$lname','$address')";
-        mysqli_query($GLOBALS['db'],$query);
+        // // Inserting data into the customer table
+        // $query = "INSERT INTO customer(user_id,f_name,l_name)
+        // VALUES('$userId','$fname','$lname')";
+        // mysqli_query($GLOBALS['db'],$query);
 
 
 

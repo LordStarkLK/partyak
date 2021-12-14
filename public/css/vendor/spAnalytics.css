@@ -6,10 +6,17 @@
   font-family: 'Poppins', sans-serif;
 }
 body{
-    background-image: radial-gradient( rgb(211, 111, 250), rgb(125, 255, 255), rgb(250, 237, 116), rgb(241, 106, 201));
+  background-color: #202020;
+  background-image: url("../../../public/img/home-confetti.png");
+  background-repeat: round;
 }
 .container{
   padding: 1% 10% 1% 10%;
+  background-image: url("../../../public/img/blob 2.png");
+  background-repeat: round;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .sidebar{
   border-radius: 23px 0px 0px 23px;
@@ -65,7 +72,7 @@ body{
   padding: 0 20px 0 20px;
   height: 70%;
   width: calc(100% - 220px);
-  left: 220px;
+  /* left: 220px; */
   transition: all 0.5s ease;
   border-radius: 43px;
   background: linear-gradient(114.1deg, rgba(40,40,40,0.36) 18.52%, rgba(15, 15, 15, 0.12) 98.52%);
@@ -110,16 +117,17 @@ nav .sidebar-button i{
 }
 .home-content .sales-boxes .recent-sales{
   width: 65%;
-  height: 350px;
-  padding: 20px 30px;
-  margin: 0 20px 0 20px;
+  height: 400px;
+  /* padding: 20px 30px; */
+  /* padding-bottom: 20px; */
+  /* margin: 0 0 0 20px; */
   border-radius: 12px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 .home-content .sales-boxes .sales-details{
     width: 70%;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
 }
 .sales-boxes .box .title{
@@ -134,7 +142,7 @@ nav .sidebar-button i{
   line-height: 1.5cm;
 }
 .chart .chart-details{
-  padding: 10px 0 0 30px;
+  padding: 10px 0 0 20px;
   font-size: 20px;
   font-weight: 600;
   line-height: 1cm;

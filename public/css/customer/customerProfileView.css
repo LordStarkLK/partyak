@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #202020;
+  background-image: url("../../../public/img/home-confetti.png");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  background-size: 100%;
+}
+
+.container{
+  padding: 1%; 
+  padding-left:4%;
+  padding-right: 4%;
+  display: flex;
+  z-index: 0;
+}
+
+
+.container{
+  background-image: url("../../../public/img/searchVenR.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    order:0;
+    border-radius: 30px 0px 0px 30px;
+    margin-top: 4%;
+    position: fixed;
+    height:41%;
+    width: 300px;
+    background-color: rgb(0, 0, 0);
+    background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
+    backdrop-filter: blur(120px); 
+    transition: all 0.5s ease;
+    
+  }
+  
+  .sidebar.active{
+    width: 20%;
+  }
+  
+  .sidebar .sidenav-links{
+    margin-top: 10px;
+  }
+  .sidebar .sidenav-links li{
+    position: relative;
+    list-style: none;
+    height: 45px;
+  }
+  .sidebar .sidenav-links li a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    
+  }
+  .sidebar .sidenav-links li a.active{
+    background: #626a79;
+  }
+  .sidebar .sidenav-links li a:hover{
+     background: linear-gradient(114.1deg, rgba(129, 129, 129, 0.08) 18.52%, rgba(49, 49, 49, 0.51) 98.52%);
+     backdrop-filter: blur(120px);
+       /* Note: backdrop-filter has minimal browser support */
+     border-radius: 19px 0px 0px 19px;
+  }
+  .sidebar .sidenav-links li i{
+    min-width: 60px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+  }
+  .sidebar .sidenav-links li a .links_name{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  
+
+
+.home-section{
+  position: relative;
+  padding: 0 20px 0 20px;
+  height: 70%;
+  margin-top: 1.5%;
+  width: calc(100% - 260px);
+  left: 260px;
+  transition: all 0.5s ease;
+  border-radius: 43px;
+  background: linear-gradient(114.1deg, rgba(40,40,40,0.36) 18.52%, rgba(15, 15, 15, 0.12) 98.52%);
+  backdrop-filter: blur(120px);
+}
+.sidebar.active ~ .home-section{
+  width: calc(100% - 60px);
+  left: 60px;
+}
+nav{
+  display: flex;
+  height: 60px;
+  position: fixed;
+  width: calc(100% - 400px);
+  z-index: 100;
+  padding: 0 20px;
+  transition: all 0.5s ease;
+  border-radius: 43px 0 0 0;
+  color: white;
+}
+nav .sidebar-button{
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+nav .sidebar-button i{
+  font-size: 40px;
+  margin-right: 10px;
+}
+.home-section .home-content{
+  border-radius: 43px;
+  display: flex;
+  position: relative;
+  padding: 60px 30px 30px 30px;
+  background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.64) 18.52%, rgba(15, 15, 15, 0.8) 98.52%);
+  backdrop-filter: blur(120px);
+}
+.profile_pic{
+    width: 40%;
+    height: 500px;
+    border-radius: 20px;
+}
+.profile_pic .image img{
+    width: 250px;
+    height: 250px;
+    margin: 20px 0 0 50px;
+    border-radius: 50%;
+    border: solid;
+    background-color: lightcoral;
+    vertical-align: middle;
+}
+.fa-facebook , .fa-linkedin{
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  padding: 7px;
+  text-align: center;
+  color: rgb(128, 223, 240);
+  background-color: black;
+}
+.profile_pic .url{
+    width: 100%;
+    height: 150px;
+    margin-top: 10px;
+    text-align: center;
+}
+.facebook, .linkedin{
+  margin-top: 30px;
+  width: 100%;
+  justify-content: center;
+}
+.socialLink a{
+    font-family: 'Poppins', sans-serif;
+  display: flex;
+  padding-left: 15px;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(128, 223, 240);
+}
+
+.profile_details{
+    width: 60%;
+    font-size: 20px;
+    color:white;
+}
+.profile_details .personal_info{
+    width: 100%;
+    height: 450px;
+    /* padding: 20px; */
+}
+.profile_details .bank_info{
+    width: 100%;
+    height: 400px;
+}
+.row{
+    height: calc(100% / 7);
+    display: flex;
+}
+.col_name {
+    float: left;
+    width: 35%;
+    margin-top: 6px;
+    font-weight: 600;
+}
+  
+.col_data {
+  color: rgb(160, 148, 148);
+  font-weight: bold;
+    float: right;
+    width: 65%;
+    margin-top: 6px;
+}
+.personal_info a{
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.edit{
+  float: right;
+  margin-top:0%;
+}
+.edit a{
+font-family: 'Poppins', sans-serif;
+  color: azure;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+
+.home-section .ehome-content{
+  border-radius: 43px;
+  display:flex;
+  position: relative;
+  padding: 60px 30px 30px 30px;
+  background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.64) 18.52%, rgba(15, 15, 15, 0.8) 98.52%);
+  backdrop-filter: blur(120px);
+  display: none;
+}
+.eprofile_pic{
+    width: 40%;
+    height: 500px;
+    border-radius: 20px;
+}
+
+
+.eprofile_pic .eimage img{
+    width: 250px;
+    height: 250px;
+    margin: 20px 0 0 50px;
+    border-radius: 50%;
+    border: solid;
+    background-color: lightcoral;
+    vertical-align: middle;
+}
+
+
+.eprofile_details{
+    display:flex;
+    flex-direction: column;
+    order:1;
+    flex-wrap:wrap;
+    width: 60%;
+    font-size: 20px;
+    color:white;
+    margin-left:5%;
+}
+.eprofile_details .epersonal_info{
+    width: 100%;
+    margin-top: 0%;
+    /* padding: 20px; */
+}
+.eprofile_details {
+    width: 100%;
+    padding: 20px;
+}
+.erow{
+    height: calc(100% / 7);
+    display: flex;
+    flex-wrap: wrap;
+}
+.ecol_name {
+    float:left;
+    width: 35%;
+    margin-top: 6px;
+    font-weight: 600;
+    padding:1.3%;
+}
+  
+.ecol_data {
+    float:right;
+    color: rgb(160, 148, 148);
+    font-weight: bold;
+    width: 65%;
+    margin-bottom: 10%;
+    
+}
+
+.ecol_data input, .ecol_data p{
+  padding:2%;
+  margin-left:0%;
+  opacity: 0.9;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 24px;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+  margin-right: 0%;
+  width: 100%;
+  color: #F5F5F5; 
+}
+
+.epersonal_info a{
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+.save{
+  display: flex;
+  padding-left:80%;
+}
+
+.saveb , .savebb{
+  position:relative;
+  padding:10px 50px;
+  border-radius: 28px;
+  border: 1px solid #18ab29;
+  display: inline-block; 
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 19px;
+  line-height: 23px;
+  background-color: #9593ff;
+  }
+
+
+  /* .filedd {
+    display: none;
+    display:block;
+  } */
+  
+  .custom-file-upload {
+
+    border: 1px solid #007bff;
+    display: inline-block;
+    padding: 7px 12px;
+    cursor: pointer;
+    color: #007bff;
+    font-weight: normal;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  .custom-file-upload:hover {
+    transition: ease-in-out 0.3s;
+    background-color: #007bff;
+    color: white;
+  }
+  .savebtn {
+    color: white;
+    margin: 0;
+    padding: 8px 12px;
+    margin-top: 10%;
+    margin-left: 27%;
+    border-radius: 28px;
+    border: 1px solid #18ab29;
+    display: inline-block; 
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 19px;
+    line-height: 23px;
+    background-color: #9593ff;
+  }
+  .savebtn:hover {
+    color: #007bff;
+    background-color: rgb(255, 255, 255);
+    font-weight: 500;
+    border: 1px solid #007bff;
+  }
+
+
+
+@media (max-width: 1240px) {
+  .sidebar{
+    width: 60px;
+  }
+  .sidebar.active{
+    width: 220px;
+  }
+  .home-section{
+    width: calc(100% - 60px);
+    left: 60px;
+  }
+  .sidebar.active ~ .home-section{
+    overflow: hidden;
+    left: 220px;
+  }
+  .home-section nav{
+    width: 300px;
+  }
+  
+}
+@media (max-width: 1150px) {
+  .home-content .sales-boxes{
+    flex-direction: column;
+  }
+  .home-content .sales-boxes .box{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .home-content .sales-boxes {
+    margin: 0;
+    padding: 10px;
+  }
+  .home-content .sales-boxes .recent-sales{
+    margin: 0;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 700px) {
+  nav .sidebar-button .dashboard
+   i{
+    display: flex;
+  }
+  .home-content .sales-boxes .sales-details{
+    width: 560px;
+    margin-bottom: 15px;
+  }
+}

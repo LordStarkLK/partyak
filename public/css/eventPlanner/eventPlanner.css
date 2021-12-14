@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.container{
+    background-color: rgb(0, 0, 0);
+    padding: 1% 3% 1% 3%;
+}
+.image_container{
+    position: relative;
+}
+.image_container img{
+    display: block;
+}
+.mySlides {
+    width: 100%;
+    display:none;
+    height: 500px;
+    border-radius: 26px;
+    border: 3px solid rgba(0, 0, 0, 0.55);
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px 10px rgba(161, 161, 161, 0.267);
+}
+.fa-youtube-play{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 30px;
+    border-radius: 7px;
+    margin: 10px;
+    text-align: center;
+    color: red;
+    background-color: black;
+  }
+
+.content{
+    padding: 10px;
+    background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.82) 18.52%, rgba(15, 15, 15, 0.54) 98.52%);
+    backdrop-filter: blur(291px);
+    border-radius: 43px;
+}
+.basic_details{
+    padding: 10px 0 10px 0;
+    display: flex;
+    min-height: 900px;
+}
+.right_side{
+    width: 40%;
+    min-height: 900px;
+    padding: 10px;
+}
+.left_side{
+    color: rgb(238, 238, 238);
+    width: 60%;
+    min-height: 900px;
+    padding: 10px;
+}
+.service_type{
+    width: 100%;
+    display: flex;
+}
+.service_type a{
+    font-size: 23px;
+    padding: 3px 0 0 10px;
+    font-weight: 500;
+    color: rgb(233, 39, 136);
+}
+.stype_img{
+    height: 35px;
+    width: 35px;
+    border: 2px #000000 solid;
+    border-radius: 50%;
+    background-color: rgb(233, 39, 136);
+}
+.service_name{
+    width: 100%;
+    height: 60px;
+    font-size: 46px;
+    font-weight: bold;
+}
+.location_name{
+    width: 100%;
+    height: 50px;
+    font-size: 34px;
+    font-weight: 500;
+}
+.left_side p{
+    padding: 15px;
+    font-size: 20px;
+    text-align: justify;
+}
+.left_row{
+    width: 100%;
+    padding: 5px;
+}
+.left_row a{
+    font-size: 20px;
+    font-weight: 550;
+}
+.sub_row{
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    display: flex;
+}
+.type1 .column{
+    width: calc(100% / 3);
+    display: flex;
+}
+.type2 .column{
+    width: calc(100% / 2);
+    display: flex;
+}
+.sub_row .column a{
+    font-size: 18px;
+    padding: 5px 0 0 10px;
+}
+.feature_img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid;
+    border-color: darkred;
+    background-color: rgb(233, 39, 136);
+}
+.request_container{
+    width: 100%;
+    padding: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.65) 18.52%, rgba(15, 15, 15, 0.59) 98.52%);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    box-sizing: border-box;
+    backdrop-filter: blur(120px);
+    border-radius: 43px;
+}
+.reserve_price{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    font-size: 60px;
+}
+.price{
+    padding-right: 20px;
+    text-align: right;
+    width: 70%;
+}
+.lkr{
+    width: 20%;
+}
+.col_name {
+    font-weight: 500;
+    float: left;
+    width: 45%;
+    margin-top: 6px;
+}
+.col_input {
+    float: right;
+    width: 55%;
+    margin-top: 6px;
+}
+.col_input input , .col_input select{
+    font-size: 16px;
+    font-weight: 500;
+    width: 200px;
+}
+.row{
+    height: 70px;
+}
+.reserve_details{
+    margin-left: 30px;
+    font-size: 20px;
+}
+.notice{
+    font-size: 16px;
+    font-weight: 400;
+}
+.request button , .message button{
+    width: 90%;
+    height: 40px;
+    margin: 10px;
+    background-color: rgb(233, 39, 136);
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.request button:hover , .message button:hover{
+    cursor: pointer;
+    color: white;
+    background-color: rgb(177, 14, 95);
+}
+.calendar_container{
+    padding: 10px 10px 20px 10px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+    background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.65) 18.52%, rgba(15, 15, 15, 0.59) 98.52%);
+    backdrop-filter: blur(120px);
+    border-radius: 20px;
+}
+.calendar_container .name{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.addtional_details{
+    padding: 10px 0 10px 0;
+}
+.details_row{
+    padding-left: 20px;
+    min-height: 150px;
+}
+.details_row .title{
+    height: 40px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #FF7777;
+}
+.details_row .details{
+    padding: 15px;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: justify;
+    color: white;
+}
+.allpackages{
+    width: 100%;
+    padding: 30px 60px 30px 60px;
+    background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.65) 18.52%, rgba(15, 15, 15, 0.59) 98.52%);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    box-sizing: border-box;
+    backdrop-filter: blur(120px);
+    border-radius: 43px;
+}
+.allpackages .package{
+    width: 100%;
+    min-height: 400;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 30px;
+    background-color: rgba(219,112,147,255);
+    border: 20px rgb(0, 0, 0) solid;
+    display: flex;
+}
+.allpackages label , .service_location label , .user_reviews label{
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+}
+.package .package_content{
+    float: left;
+    width: 80%;
+}
+.package_content label{
+    font-size: 32px;
+    color:rgb(158, 17, 106);
+}
+
+.package .package_price{
+    float: right;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(240,145,248,255);
+    border: solid;
+    margin: 30px 0 0 30px;
+}
+.package_price .p_price{
+    font-size: 30px;
+    font-weight: bold; 
+}
+.package_summary{
+    margin: 20px 0 20px 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+.validation{
+    margin-left: 250px;
+    font-size: 23px;
+    font-weight: bold;
+}
+.service_location{
+    width: 100%;
+    padding: 30px;
+    margin: 20px 0 20px 0;
+    border-radius: 35px;
+    background-color: rgba(211, 211, 211, 0.13);
+}
+.location{
+    width: 100%;
+    height: 400px;
+    background-image: url("../../img/map.png");
+}
+.user_reviews{
+    width: 100%;
+    padding: 20px 80px 20px 30px;
+}
+.review{
+    display: flex;
+    width: 80%;
+    min-height: 200px;
+    padding: 20px;
+    margin: 10px 0 0 100px;
+    border-radius: 25px;
+    background-color: rgba(165, 165, 165, 0.671);
+}
+.reviewer{
+    width: 20%;
+    float: left;
+}
+.reviewer .profilePic{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 45px;
+    border: solid;
+    background-color: lightpink;
+}
+.reviewer .name{
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+.comment{
+    width: 80%;
+    float: right;
+    border-radius: 25px;
+    padding: 20px;
+    background-color: rgb(235, 188, 211);
+}
+.comment p{
+    padding-top: 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.ratingPoints{
+    padding-left: 15px;
+}
+.comment a{
+    font-size: 18px;
+    font-weight: bold;
+}
+.social{
+    width: 60%;
+    height: 100px;
+    padding: 15px;
+}
+.fa-facebook , .fa-linkedin , .fa-instagram {
+    width: 40px;
+    height: 40px;
+    border-radius: 7px;
+    padding: 7px;
+    margin: 10px;
+    text-align: center;
+    color: cornflowerblue;
+    background-color: black;
+  }
+  .fa-facebook:hover , .fa-linkedin:hover , .fa-instagram:hover , .fa-youtube-play:hover{
+      cursor: pointer;
+  } 
+  .toReview{
+      float: right;
+      margin-top: 10px;
+  }
+  .toReview button{
+    width: 200px;
+    height: 40px;
+    border-radius: 7px;
+    border: 3px #000000 solid;
+    color: white;
+    background-color: rgb(192, 0, 96);
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .toReview button:hover{
+      cursor: pointer;
+      color: black;
+      background-color: hotpink;
+  }
+
+
+
+
+  .reviewbody{
+    position: relative;
+    width: 400px;
+    margin-left: 37.5%;
+    background: #111;
+    padding: 20px 30px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .reviewbody .post{
+    display: none;
+  }
+  .reviewbody .text{
+    font-size: 25px;
+    color: #666;
+    font-weight: 500;
+  }
+  .reviewbody .edit{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 16px;
+    color: #666;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .reviewbody .edit:hover{
+    text-decoration: underline;
+  }
+  .reviewbody .star-widget input{
+    display: none;
+  }
+
+  .star-widget label{
+    font-size: 40px;
+    color: #444;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+  }
+  input:not(:checked) ~ label:hover,
+  input:not(:checked) ~ label:hover ~ label{
+    color: #fd4;
+  }
+  input:checked ~ label{
+    color: #fd4;
+  }
+  input#rate-5:checked ~ label{
+    color: #fe7;
+    text-shadow: 0 0 20px #952;
+  }
+  #rate-1:checked ~ form header:before{
+    content: "I just hate it ";
+  }
+  #rate-2:checked ~ form header:before{
+    content: "I don't like it ";
+  }
+  #rate-3:checked ~ form header:before{
+    content: "It is awesome ";
+  }
+  #rate-4:checked ~ form header:before{
+    content: "I just like it ";
+  }
+  #rate-5:checked ~ form header:before{
+    content: "I just love it ";
+  }
+  .container form{
+    display: none;
+  }
+  input:checked ~ form{
+    display: block;
+  }
+  form header{
+    width: 100%;
+    font-size: 25px;
+    color: #fe7;
+    font-weight: 500;
+    margin: 5px 0 20px 0;
+    text-align: center;
+    transition: all 0.2s ease;
+  }
+  form .textarea{
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+  }
+  form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #eee;
+    border: 1px solid #333;
+    background: #222;
+    padding: 10px;
+    font-size: 17px;
+    resize: none;
+  }
+  .textarea textarea:focus{
+    border-color: #444;
+  }
+  form .btn{
+    height: 45px;
+    width: 100%;
+    margin: 15px 0;
+  }
+  form .btn button{
+    height: 100%;
+    width: 100%;
+    border: 1px solid #444;
+    outline: none;
+    background: #222;
+    color: #999;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  form .btn button:hover{
+    background: #1b1b1b;
+  }

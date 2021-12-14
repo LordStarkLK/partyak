@@ -3,6 +3,8 @@
 
 <head>
     <?php linkCSS("selectUSerTypeView"); ?>
+    <?php linkCSS("navigation"); ?>
+    <?php linkCSS("footer");?>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,12 +17,15 @@
 </head>
 
 <body>
+    <header>
+    <?php linkPhp("navigation") ?>
+    </header>
     <div class="container">
         <div class="container-asVendor">
             <h1>as a<br> vendor</h1>
             <div class="glass-asVendor">
                 <!-- <img class="imgBlobLeft" src="../../public/images/rightblob.png" alt="blob left" > -->
-                <img <?php srcIMG("vendor.png") ?> alt="pick vendor image">
+                <img class="veni" <?php srcIMG("vendor.png") ?> alt="pick vendor image">
             </div>
             <div class="button-asVendor">
                 <button type="button" class="buttonVendor" name="vendor" onclick="window.location.href='<?php echo BASEURL . '/vendorRegister/index'; ?>';"><a> Register </a> </button>
@@ -33,13 +38,14 @@
             <div class="glass-asCustomer">
                 <!-- <img class="imgBlobRight" src="../../public/images/leftblob.png" alt="blob right" > -->
 
-                <img <?php srcIMG("customer.png") ?> alt="pick customer image">
+                <img class="cuni" <?php srcIMG("customer.png") ?> alt="pick customer image">
             </div>
             <div class="button-asCustomer" >
                 <button type="button" class="buttonCustomer" name="customer" onclick="window.location.href='<?php echo BASEURL . '/customerRegister/index'; ?>';"><a>Register</a></button>
             </div>
         </div>
     </div>
+    <?php linkPhp("footer") ?>
 </body>
 
 </html>

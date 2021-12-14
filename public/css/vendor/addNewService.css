@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background-color: #202020;
+  background-image: url("../../../public/img/home-confetti.png");
+  background-repeat: round;
+}
+/* Style the form */
+#regForm {
+  background-color: #b6b3b3d0;
+  margin: auto;
+  padding: 40px;
+  width: 100%;
+  min-width: 300px;
+  border-radius: 30px;
+  color: rgb(0, 0, 0);
+  
+}
+h1{
+  text-align: center;
+}
+.addservice_container{
+  padding: 2% 15% 2% 15%;
+  background-image: url("../../../public/img/blob 2.png");
+  background-repeat: round;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.addservice_container .form_container{
+  /* display: none; */
+  /* margin: 20px 250px 40px 250px; */
+  padding: 40px;
+  background-color: rgb(0, 0, 0);
+  font-size: 20px;
+  border-radius: 30px;
+
+
+  }
+/* Style the input fields */
+/* input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+} */
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid , textarea.invalid{
+  background-color: #fccfcf;
+}
+
+/* Hide all steps by default: */
+.form_container .tab {
+  display: none;
+}
+.tab .content_title{
+  font-size: 27px;
+  font-weight: 900;
+  color: black;
+}
+.content_title a{
+  color: black;
+}
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb88;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #000000;
+}
+
+.row{
+  padding: 20px 0 20px 0;
+}
+/* additional */
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+ .col_name {
+   color: black;
+   font-weight: bold;
+  float: left;
+  width: 30%;
+  margin-top: 6px;
+}
+ .col_input {
+   color: black;
+  float: right;
+  width: 70%;
+  margin-top: 6px;
+  font-size: 17px;
+  font-weight: 600;
+}
+.col_input a{
+  color: black;
+}
+.tab .content_title .row .col_input input[type=text], select, textarea{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  color: white;
+  background-color: black;
+}
+input[type=text], input[type=url], input[type=number]{
+  background-color: black;
+  color: white;
+  /* width: 100%; */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+input[type=text], input[type=url]{
+  width: 100%;
+}
+
+.tab .content_title .row .col_name label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+/* .tab .content_title .row .col_input input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+} */
+
+/* .tab .content_title .row .col_input input[type=submit]:hover {
+  background-color: #45a049;
+} */
+.tab .content_title .row .col_input input[type=url]{
+  width: 90%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+.tab .content_title .row .col_input input[type=file]{
+  margin: 15px;
+}
+/* select{
+  font-size: 18px;
+} */
+.tab .content_title .row .col_input .url_name{
+  width: 150px;
+  margin: 10px 10px 10px 0;
+  /* height: 60px; */
+  /* background-color: aquamarine; */
+}
+/* Chrome, Safari, Edge, Opera */
+/* input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+} */
+
+.form_container .formBtn button{
+width: 150px;
+height: 40px;
+border-radius: 10px;
+/* padding: 10px; */
+font-size: 17px;
+font-weight: bold;
+margin-top: 20px;
+background-color: rgb(0, 0, 0);
+}
+.form_container .formBtn button:hover{
+cursor: pointer;
+background-color: rgb(255, 255, 255);
+color: black;
+}
+/* Firefox */
+.tab .content_title .row .col_input input[type=number] {
+/* appearance: textfield; */
+appearance: text;
+}
+
+/* The Close Button */
+/* span{
+width: 30px;
+height: 30px;
+border-radius: 10px;
+} */
+.form_container .service_close {
+
+/* height: 30px;
+padding: 5px; */
+color: #aaaaaae5;
+
+float: right;
+font-size: 35px;
+font-weight: bolder;
+}
+.form_container .close-button span{
+  width: 35px;
+  margin: 20px;
+  float: right;
+  background-color: #888888a8;
+  text-align: center;
+  border-radius: 10px;
+}
+.form_container .service_close:hover,
+.form_container .service_close:focus {
+color: rgb(255, 1, 1);
+/* background-color: #00000096; */
+text-decoration: none;
+cursor: pointer;
+}
+
+.venues{
+  display: none;
+  /* background-color: aqua; */
+}
+.catering{
+  display: none;
+  /* background-color: cadetblue; */
+}
+.musical{
+  display: none;
+  /* background-color: darkorange; */
+}
+.dancing{
+  display: none;
+  /* background-color: fuchsia; */
+}
+.saloon{
+  display: none;
+  /* background-color: greenyellow; */
+}
+.cakes{
+  display: none;
+  /* background-color: ivory; */
+}
+.decoration{
+  display: none;
+  /* background-color: palevioletred; */
+}
+.dressSupp{
+  display: none;
+  /* background-color: rgb(206, 70, 88); */
+}
+.no_features{
+  width: 500px;
+  height: 200px;
+  background-color: rgb(190, 190, 190);
+  color: #636363;
+  font-size: 23px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* button[type=submit]{
+  float:right; 
+  display:none;
+  color: brown;
+} */
+
+input.box{
+  transform: scale(2);
+  margin: 10px;
+}
