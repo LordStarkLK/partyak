@@ -305,6 +305,18 @@ ul.breadcrumb {
   color: green;
 }
 
+.pending{
+  color: darkgoldenrod;
+}
+
+.online{
+  color: green;
+}
+
+.offline{
+  color:red;
+}
+
 /* Drop down button select status start */
 
 

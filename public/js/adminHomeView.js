@@ -11,6 +11,19 @@ sidebarBtn.onclick = function() {
 function myFunction(num) {
 
   document.getElementById("myDropdown"+num).classList.toggle("show");
+  var clicked = document.getElementById("myDropdown"+num);
+  var dropdowns = document.getElementsByClassName("dropdown-content");
+  
+    for(var i =0;i<dropdowns.length;i++){
+      if(clicked != dropdowns.item(i)){
+        
+        dropdowns.item(i).classList.remove("show");
+      }
+      
+    
+  }
+  
+
 }
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
