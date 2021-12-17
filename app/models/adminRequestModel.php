@@ -4,9 +4,10 @@ class AdminRequestModel extends database {
     public function getRequests(){
         $query = "SELECT * from other_service WHERE status = 'pending' ORDER BY service_id";
         $result = mysqli_query($GLOBALS['db'],$query);
-        if(mysqli_num_rows($result)>0){
-            return $result;
-        }
+        return $result;
+        // if(mysqli_num_rows($result)>0){
+        //     return $result;
+        // }
     }
 
     public function getUserId(){
