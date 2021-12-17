@@ -70,9 +70,9 @@
                 </div>
                 <div class="col_input">
                 <select id="serviceType" name="serviceType" onchange="populate('serviceType')">
-                  <option value="">-select type-</option>
+                  <!-- <option value="">-select type-</option> -->
                   <option value="catering">Catering</option>
-                  <option value="cakes">Cake and sweets</option>
+                  <option value="cakes">Cakes and sweets</option>
                   <option value="dancing">Dancing groups</option>
                   <option value="decoration">Decoration</option>
                   <option value="dresses">Dresses</option>
