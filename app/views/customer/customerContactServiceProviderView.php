@@ -128,27 +128,23 @@
                 $j=1;
                       
                         while($row=mysqli_fetch_assoc($data['service_detail'])  ){
-                          if(!($row['service_image'])){
-                            $row['service_image'] = "default.png";
-                          }
                           echo "<td>";
-                          echo "<img src='http://localhost/partyak/public/img/serviceImages\".($row[service_image]).'";
+                          if($row['service_image']){
+                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                          }else{
+                            $row['service_image']="default.png";
+                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                          }
                           echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
-                          echo "</td>";
+                          echo "</td>"; 
+                         
                           $j++;
-                          if($j>=3){
+                          if($j>3){
                             echo "</tr>";
                             $j = 1;
                           }
                           
                         }
-                        
-                      
-                        
-                      
-               
-              
-            
           ?>
 
           
