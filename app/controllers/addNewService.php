@@ -47,41 +47,39 @@ class AddNewService extends FrameworkPartyak
             // additional features
             $caption = $_POST['caption'];
             $video = $_POST['vurl'];
-            // if(empty($caption)){ $caption="NULL"; }
-            // if(empty( $video)){  $video="NULL"; }
-            // $caption = $_POST['caption'];
-            // $caption = $_POST['caption'];     
+                
 
-            $imgName = $_FILES['file']['name'];
-            $imgTmpName = $_FILES['file']['tmp_name'];
-            $imgError = $_FILES['file']['error'];
+            // $file = $_FILES['file'];
+            // $imgName = $_FILES['file']['name'];
+            // $imgTmpName = $_FILES['file']['tmp_name'];
+            // $imgError = $_FILES['file']['error'];
     
-            $imgExt = explode('.' , $imgName);
-            //getting the img type 
-            $imgActualExt = strtolower(end($imgExt)); 
+            // $imgExt = explode('.' , $imgName);
+            // //getting the img type 
+            // $imgActualExt = strtolower(end($imgExt)); 
     
-            $allowed = array('jpg' , 'jpeg' , 'png' );
+            // $allowed = array('jpg' , 'jpeg' , 'png' );
     
-            //check the img type
-            if(in_array($imgActualExt, $allowed)){
-                //ckeck errors
-                if($imgError === 0){
-                        //set a unique name
-                        $imgNameNew = uniqid('', true).".".$imgName ;
-                        //upload to the folder
-                        $imgDestination = '../public/img/serviceImg/'.$imgNameNew;
-                        move_uploaded_file($imgTmpName, $imgDestination);
-                        $this->MarketingModel->uploadMarketingContent($id, $imgNameNew);
+            // //check the img type
+            // if(in_array($imgActualExt, $allowed)){
+            //     //ckeck errors
+            //     if($imgError === 0){
+            //             //set a unique name
+            //             $imgNameNew = uniqid('', true).".".$imgName ;
+            //             //upload to the folder
+            //             $imgDestination = '../public/img/serviceImg/'.$imgNameNew;
+            //             move_uploaded_file($imgTmpName, $imgDestination);
+            //             // $this->MarketingModel->uploadMarketingContent($id, $imgNameNew);
             
-                }
-                else{
-                    echo "Error in uploading the file!";
-                }
+            //     }
+            //     else{
+            //         echo "Error in uploading the file!";
+            //     }
     
-            }
-            else{
-                echo "You cannot upload files of this type";
-            }
+            // }
+            // else{
+            //     echo "You cannot upload files of this type";
+            // }
 
 
 

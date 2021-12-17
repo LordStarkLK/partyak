@@ -70,7 +70,7 @@
                 </div>
                 <div class="col_input">
                 <select id="serviceType" name="serviceType" onchange="populate('serviceType')">
-                  <!-- <option value="">-select type-</option> -->
+                  <option value="">-select type-</option>
                   <option value="catering">Catering</option>
                   <option value="cakes">Cakes and sweets</option>
                   <option value="dancing">Dancing groups</option>
@@ -559,14 +559,14 @@
           </div>
         </div>
         <hr/>
-        <div class="row">
+        <!-- <div class="row">
           <div class="col_name">
             <label for="simage">Image (jpg,png or jpeg)</label>
           </div>
           <div class="col_input">
-             <input type="file" id="simage" name="serviceimage"><br><br>
+             <input type="file" id="simage" name="file"><br><br>
           </div>
-        </div>
+        </div> -->
         <hr/>
         <div class="row">
           <div class="col_name">
