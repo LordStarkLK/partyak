@@ -201,4 +201,11 @@ function fixStepIndicator(n) {
 // submitBtn.onclick=function(){
 //     modal.style.display = "none";
 //   }
-  
+
+
+// function onlyone(checkbox){
+//   var checkboxes = document.getElementById('venuetype')
+//   checkboxes.forEach((item) => {
+//     if( item !== checkbox ) item.checked = false
+//   })
+// }
