@@ -115,7 +115,7 @@
   <td>Not Defined</td>
   <td>
   <div class=\"btn-group\">
-  <button onclick=\"window.location=' " . BASEURL . "/adminUserProfile'\">View Profile</button>
+  <button onclick=\"window.location=' " . BASEURL . "/adminUserProfile/index/$row[user_id]'\">View Profile</button>
 
   <button onclick=\"window.location=' " . BASEURL . "/adminUsersVendor/deleteUser/$row[user_id]'\">Delete User</button>
   

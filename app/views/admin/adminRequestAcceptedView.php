@@ -52,8 +52,8 @@
                 </div>
 
                 <div class="pill-nav">
-                    <a class="active" href="">pending</a>
-                    <a href="<?php echo BASEURL . '/adminRequest/accepted' ?>">Accepted</a>    
+                    <a href="<?php echo BASEURL . '/adminRequest/' ?>">pending</a>
+                    <a class="active" >Accepted</a>    
                     <a href="<?php echo BASEURL . '/adminRequest/rejected' ?>">Rejected</a>
 
 
@@ -113,7 +113,7 @@
                                     <td>$row[service_name]</td>
                                     <td>$row2[f_name] $row2[l_name]</td>
                                     <td>$row[service_type]</td>
-                                    <td class=$status_name> <i class=\"fas fa-circle pendot\"></i> $row[status]</td>
+                                    <td class=$status_name> <i class=\"fas fa-circle accdot\"></i> $row[status]</td>
                                     <td>  
                                         <div class=\"btn-group\">
                                         <div class=\"dropdown\">
