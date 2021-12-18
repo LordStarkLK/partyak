@@ -42,8 +42,6 @@
               </div>
               <div class="col_input">
                 <input type="text" id="sname" name="servicename" placeholder="Your service name">
-                
-              <!-- below thre div should delete -->
               </div>
             </div>
             <hr/>
@@ -58,24 +56,34 @@
             </div>
             <hr/>
             <div class="row">
+              <div class="col_name">
+                <label for="sname">Location</label>
+              </div>
+              <div class="col_input">
+                <input type="text" id="location" name="location" placeholder="Your service location">
+              </div>
+            </div>
+            <hr/>
+             <div class="row">
                 <div class="col_name">
                     <label for="sname">Service Type</label>
                 </div>
                 <div class="col_input">
                 <select id="serviceType" name="serviceType" onchange="populate('serviceType')">
                   <option value="">-select type-</option>
-                  <option value="cate">Catering</option>
-                  <option value="cakes">Cake and sweets</option>
+                  <option value="catering">Catering</option>
+                  <option value="cakes">Cakes and sweets</option>
                   <option value="dancing">Dancing groups</option>
-                  <option value="deco">Decoration</option>
+                  <option value="decoration">Decoration</option>
                   <option value="dresses">Dresses</option>
                   <option value="musical">Musical</option>
-                  <option value="photo">Photography</option>
+                  <option value="photography">Photography</option>
                   <option value="saloon">Saloon</option>
-                  <option value="usa">Sounds and lightings</option>
-                  <option value="vANDh">Venues and Halls</option>
+                  <option value="sounds_lightings">Sounds and lightings</option>
+                  <option value="venues_halls">Venues and Halls</option>
+                  <option value="eventPlanner">Event Planner</option>
                 </select>
-                <!-- <div class="error"><?php echo $errors["serviceType"] ?></div> -->
+                
                 </div>
             </div>
             <hr/>
@@ -84,11 +92,11 @@
                     <label for="etype">Event Types</label>
                 </div>
                 <div class="col_input">
-                    <input type="checkbox" id="et1" name="eventType[]" value="wedd" class="box">
+                    <input type="checkbox" id="et1" name="eventType[]" value="wedding" class="box">
                     <label for="etype1"> Weddings</label><br>
                     <input type="checkbox" id="et2" name="eventType[]" value="party" class="box">
                     <label for="etype2"> Parties/Festivals</label><br>
-                    <input type="checkbox" id="et3" name="eventType[]" value="coopE" class="box">
+                    <input type="checkbox" id="et3" name="eventType[]" value="cooperative" class="box">
                     <label for="etype3"> Cooperate Events</label><br>
                 </div>
                 
@@ -99,23 +107,23 @@
                     <label for="sname">Service Privided Areas</label>
                 </div>
                 <div class="col_input">
-                    <input type="checkbox" id="province1" name="province[]" value="wedd" class="box">
+                    <input type="checkbox" id="province1" name="province[]" value="Southern" class="box">
                     <label for="p1"> Southern Province</label><br>
-                    <input type="checkbox" id="province2" name="province[]" value="wedd" class="box">
+                    <input type="checkbox" id="province2" name="province[]" value="Western" class="box">
                     <label for="p2"> Western Province</label><br>
-                    <input type="checkbox" id="province3" name="province[]" value="wedd" class="box">
+                    <input type="checkbox" id="province3" name="province[]" value="Sabaragamuwa" class="box">
                     <label for="p3"> Sabaragamuwa Province</label><br>
-                    <input type="checkbox" id="province1" name="province[]" value="wedd" class="box">
+                    <input type="checkbox" id="province1" name="province[]" value="Uva" class="box">
                     <label for="p1"> Uva Province</label><br>
-                    <input type="checkbox" id="province1" name="province[]" value="wedd" class="box">
+                    <input type="checkbox" id="province1" name="province[]" value="Central" class="box">
                     <label for="p1"> Central Province</label><br>
-                    <input type="checkbox" id="province1" name="province[]" value="wedd" class="box">
+                    <input type="checkbox" id="province1" name="province[]" value="Eastern" class="box">
                     <label for="p1"> Eastern Province</label><br>
-                    <input type="checkbox" id="province1" name="province[]" value="wedd" class="box">
+                    <input type="checkbox" id="province1" name="province[]" value="North western" class="box">
                     <label for="p1"> North western Province</label><br>
-                    <input type="checkbox" id="province1" name="province[]" value="wedd" class="box">
+                    <input type="checkbox" id="province1" name="province[]" value="North Central" class="box">
                     <label for="p1"> North Central Province</label><br>
-                    <input type="checkbox" id="province1" name="province[]" value="wedd" class="box">
+                    <input type="checkbox" id="province1" name="province[]" value="Nouthern" class="box">
                     <label for="p1"> Nouthern Province</label><br>
                 </div>
             </div>
@@ -158,9 +166,9 @@
                 <label for="intialDis">Initial Discount</label>
             </div>
             <div class="col_input">
-                <input type="number" id="intialDis" name="initialDiscount" placeholder min="0">
+                <input type="text" id="intialDis" name="initialDiscount" placeholder min="0">
                 <a> % discount for first </a>
-                <input type="number" id="intialDis" name="initialCount" placeholder min="0">
+                <input type="text" id="intialDis" name="bookingCount" placeholder min="0">
                 <a> bookings</a>
             </div>
           </div>
@@ -182,7 +190,7 @@
               <select id="simultaneous" name="simultaneous">
                   <option value="accept">Accept</option>
                   <option value="notAccept">Not Accept</option>
-                </select>
+              </select>
             </div>
           </div>
             <hr/>
@@ -192,9 +200,9 @@
             </div>
             <div class="col_input">
                 <select id="policy" name="policy">
-                  <option value="cate">3 days before reserve date</option>
-                  <option value="cakes">1 week before reserve date</option>
-                  <option value="dancing">2 weeks before reserve date</option>    
+                  <option value="3 days">3 days before reserve date</option>
+                  <option value="1 week">1 week before reserve date</option>
+                  <option value="2 weeks">2 weeks before reserve date</option>    
                 </select>
             </div>
           </div>
@@ -232,11 +240,11 @@
                 <label for="vtype">Venue Type</label>
               </div>
               <div class="col_input">
-                <input type="radio" id="vt1" name="venuetype" value="indoor" class="box">
+                <input type="radio" id="vt1" name="venuetype" value="indoor" class="box" >
                 <label for="vtype1"> Indoor</label><br>
-                <input type="radio" id="vt2" name="venuetype" value="outdoor" class="box">
+                <input type="radio" id="vt2" name="venuetype" value="outdoor" class="box" >
                 <label for="vtype2"> Outdoor</label><br>
-                 <input type="radio" id="vt3" name="venuetype" value="both" class="box">
+                 <input type="radio" id="vt3" name="venuetype" value="both" class="box" >
                 <label for="vtype3"> Both</label><br>
               </div>
             </div>
@@ -252,7 +260,7 @@
             <hr/>
             <div class="row">
               <div class="col_name">
-                <label for="seating">Seating Arrangment</label>
+                <label for="seatinglabel">Seating Arrangment</label>
               </div>
               <div class="col_input">
                 <input type="checkbox" id="sa1" name="seating[]" value="banquet" class="box">
@@ -333,16 +341,23 @@
                 <label for="musicaltype">Music provider type</label>
               </div>
               <div class="col_input">
-                <input type="checkbox" id="musict1" name="musictype" value="insru" class="box">
+                <input  type="radio" id="musict1" name="musictype" value="insrumentalists" class="box">
                 <label for="musictype1"> Insrumentalists</label><br>
-                <input type="checkbox" id="musict2" name="musictype" value="solo" class="box">
+                <input type="radio" id="musict2" name="musictype" value="solo" class="box">
                 <label for="musictype2"> Solo singer</label><br>
-                <input type="checkbox" id="musict1" name="musictype" value="band" class="box">
+                <input type="radio" id="musict1" name="musictype" value="band" class="box">
                 <label for="musictype1"> Band</label><br>
-                <input type="checkbox" id="musict1" name="musictype" value="dj" class="box">
+                <input type="radio" id="musict1" name="musictype" value="dj" class="box">
                 <label for="musictype1"> DJ</label><br>
-                
+
+                <!-- <select id="music" name="musictype">
+                  <option value="insrumentalists">Insrumentalists</option>
+                  <option value="solo">Solo singer</option>
+                  <option value="band">Band</option>  
+                  <option value="dj">DJ</option>   
+                </select> -->
               </div>
+              
             </div>
             <hr/>
             
@@ -380,11 +395,11 @@
                 <label for="saloontype">Saloon type</label>
               </div>
               <div class="col_input">
-                <input type="checkbox" id="saloont1" name="saloontype" value="male" class="box">
+                <input type="radio" id="saloont1" name="saloontype" value="male" class="box">
                 <label for="saloontype1"> Male</label><br>
-                <input type="checkbox" id="saloont2" name="saloontype" value="female" class="box">
+                <input type="radio" id="saloont2" name="saloontype" value="female" class="box">
                 <label for="saloontype2"> Female</label><br>
-                <input type="checkbox" id="saloont3" name="saloontype" value="both" class="box">
+                <input type="radio" id="saloont3" name="saloontype" value="both" class="box">
                 <label for="saloontype3"> Both</label><br>
               </div>
             </div>
@@ -544,23 +559,25 @@
           </div>
         </div>
         <hr/>
-        <div class="row">
+        <!-- <div class="row">
           <div class="col_name">
-            <label for="simage">Image</label>
+            <label for="simage">Image (jpg,png or jpeg)</label>
           </div>
           <div class="col_input">
-             <input type="text" id="simage" name="serviceimage"><br><br>
+             <input type="file" id="simage" name="file"><br><br>
           </div>
-        </div>
+        </div> -->
         <hr/>
         <div class="row">
           <div class="col_name">
-              <label for="sdoc">Document</label>
+            <label for="video">Video URL</label>
           </div>
           <div class="col_input">
-            <input type="text" id="sdoc" name="servicedoc"><br><br>
+             <input type="text" id="vurl" name="vurl">
           </div>
         </div>
+        <hr/>
+        
         <hr/>
       <!-- </div> -->
     </div>
@@ -593,7 +610,7 @@
 
 <script>
 
-var venueF = document.getElementById("venue_features");
+  var venueF = document.getElementById("venue_features");
   var cateF = document.getElementById("catering_features");
   var musicF = document.getElementById("musical_features");
   var danceF = document.getElementById("dancing_features");
@@ -606,7 +623,7 @@ var venueF = document.getElementById("venue_features");
   function populate(serType) {
             
     var serType = document.getElementById("serviceType");
-    if(serType.value=="cate"){
+    if(serType.value=="catering"){
       venueF.style.display = "none";
       cateF.style.display = "block";
       musicF.style.display = "none";
@@ -640,7 +657,7 @@ var venueF = document.getElementById("venue_features");
       dressF.style.display = "none";
       noF.style.display = "none";
     }
-    else if(serType.value=="deco"){
+    else if(serType.value=="decoration"){
       venueF.style.display = "none";
       cateF.style.display = "none";
       musicF.style.display = "none";
@@ -684,7 +701,7 @@ var venueF = document.getElementById("venue_features");
       dressF.style.display = "none";
       noF.style.display = "none";
     }
-    else if(serType.value=="vANDh"){
+    else if(serType.value=="venues_halls"){
       venueF.style.display = "block";
       cateF.style.display = "none";
       musicF.style.display = "none";
