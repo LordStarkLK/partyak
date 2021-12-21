@@ -8,18 +8,23 @@ class AdminUserProfile extends FrameworkPartyak{
         $this->preventBack("admin");
     }
     
-    public function index(){
+    public function index($id){
         
-        $data['customers'] = $this->user->getCustomers();
-        $data['customer_email'] = $this->user->getCustomerEmail();
+
+        $data['user'] = $this->user->getUserProfile($id);
+        if($data['user']['user_type'] == 'vendor'){
+            
+            $data['vendor'] = $this->user->vendorDetails($id);
+
+        }
+        
+
+        // $data['customer_email'] = $this->user->getCustomerEmail();
         // echo "$data[customers]";
         // $this->preventBack("admin");
         $this->view("admin/UserProfileView",$data);
     }
 
-    public function deleteUser($user_id){
-        $this->user->deleteUser($user_id);
-        $this->redirect("adminUsers");
-    }
+    
 
 }

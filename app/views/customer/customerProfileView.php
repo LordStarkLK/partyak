@@ -79,7 +79,7 @@
                     echo $profi['profilePicture'];
                     } 
                     else {
-                        echo "pp_default.jpg";
+                        echo "pp_default.png";
                     } ?>" >
             <!-- <img <?php echo "$profi[profilePicture]"; ?>> -->
             <!-- <img <?php srcIMG("avatar.png") ?> alt="Avatar"> -->

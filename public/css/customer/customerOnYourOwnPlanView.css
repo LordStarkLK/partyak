@@ -31,6 +31,7 @@ body {
 
 .sidebar{
   display: flex;
+  /* display:none; */
   flex-direction: column;
   order:0;
   padding-left: 1%;
