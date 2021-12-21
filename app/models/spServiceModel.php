@@ -23,7 +23,7 @@ class SpServiceModel extends Database
     public function getPackageDetails( $id){
         $query = "SELECT service_name, package_name, valid_from, valid_to FROM package where user_id='$id' ";
         $result = mysqli_query($GLOBALS['db'],$query);
-        if(mysqli_num_rows($result) > 0){
+        if(mysqli_num_rows($result) >= 0){
             return $result;
         }
     }
