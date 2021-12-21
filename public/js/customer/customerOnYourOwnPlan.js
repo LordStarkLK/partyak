@@ -10,6 +10,7 @@
   var sound =  document.getElementById("popup-9");
   var dress =  document.getElementById("popup-10");
   var conent = document.getElementById("con");
+  var sidebar = document.getElementById("sidee");
 
 
   var vBtn = document.getElementById("venue");
@@ -22,6 +23,7 @@
   var deBtn =  document.getElementById("deco");
   var slBtn =  document.getElementById("sound");
   var dsBtn =  document.getElementById("dress");
+  var sideBtn =  document.getElementById("submitid");
 
   vBtn.onclick = function(){
     ven.style.display="block";
@@ -170,3 +172,9 @@
     conent.style.display="none";
    
   }
+
+  sideBtn.onclick = function(){
+    sidebar.style.display="block";
+  }
+
+
