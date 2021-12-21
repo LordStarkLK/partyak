@@ -326,7 +326,7 @@ nav .sidebar-button i {
   align-content: center;
   align-items: center;
   position: relative;
-  bottom: -75%;
+  bottom: -85%;
 }
 .event-board-link button {
   background-color: #39a2db;
@@ -340,7 +340,7 @@ nav .sidebar-button i {
   width: 75%;
   height: auto;
   position: fixed;
-  top: 30%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin-top: 5px;
@@ -370,4 +370,34 @@ nav .sidebar-button i {
   align-items: center;
   justify-content: space-around;
   font-size: 23px;
+}
+.delete-note-text {
+  font-size: 16px;
+  color: rgb(255, 81, 81);
+  background-color: rgba(0, 0, 0, 0);
+  padding: 6px 25px;
+}
+.add-note-body {
+  font-size: 16px;
+  color: rgb(20, 20, 20);
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0;
+}
+.note-body-form {
+  display: flex;
+  align-items: flex-start;
+  align-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.note-body-input {
+  border-radius: 8px;
+  border: none;
+  width: 289px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.bx-plus:before {
+  font-size: 21px;
 }

@@ -99,58 +99,44 @@
             </nav>
 
             <div class="note-area">
-                <div class="note-cont">
-                    <span class="note-head">
-                        <h6>Cus. Id : 002</h6>
-                        <h6>Cus. Name : Jane</h6>
-                        <h6>Event : Wedding</h6>
-                        <h6>Date : 2021/12/25</h6>
-                    </span>
-                    <div class="note-body">
-                        <div class="note-strip">
-                            <h4>Venues & Halls - Soils Mathara</h4>
-                            <i class='bx bx-trash' aria-hidden="true"></i>
+                <?php
+                while ($row = mysqli_fetch_assoc($data['note'])) { ?>
+                    <div class="note-cont">
+                        <span class="note-head">
+                            <h6>Cus. Id : <?php echo $row['customer_id']; ?></h6>
+                            <h6>Cus. Name : <?php echo $row['customer_name']; ?></h6>
+                            <h6>Event : <?php echo $row['event_name']; ?></h6>
+                            <h6>Date : <?php echo $row['event_date']; ?></h6>
+                        </span>
+                        <div class="note-body">
+                            <?php
+                            while ($rowBody = mysqli_fetch_assoc($data['noteBody'])) {
+                                if ($rowBody['note_id'] == $row['note_id']) {   ?>
+                                    <div class="note-strip">
+                                        <h4><?php echo $rowBody['vendor_name']; ?></h4>
+                                        <form action="<?php echo BASEURL . '/epnote/deleteNoteBody'; ?>" method="POST">
+                                            <input type="hidden" id="vendorNoteId" name="vendorNoteId" value="<?php echo $rowBody['vendor_note_id'] ?>">
+                                            <button type="submit" class="delete-note-text"><i class='bx bx-trash' aria-hidden="true"></i></button>
+                                        </form>
+                                    </div> <?php }
+                                    } ?>
                         </div>
-                        <div class="note-strip">
-                            <h4>Caterings - Nilwala Caterings</h4>
-                            <i class='bx bx-trash' aria-hidden="true"></i>
-                        </div>
-                        <div class="note-strip">
-                            <h4>Decorations - Lassana Flora</h4>
-                            <i class='bx bx-trash' aria-hidden="true"></i>
-                        </div>
-                    </div>
-                    <div class="note-foot">
-                        <i class='bx bx-plus' aria-hidden="true"></i>
-                    </div>
-                </div>
-
-
-                <div class="note-cont">
-                    <span class="note-head">
-                        <h6>Cus. Id : 003</h6>
-                        <h6>Cus. Name : Justin</h6>
-                        <h6>Event : Birthday</h6>
-                        <h6>Date : 2021/01/22</h6>
-                    </span>
-                    <div class="note-body">
-                        <div class="note-strip">
-                            <h4>Decoration - Hada Wada Mathara</h4>
-                            <i class='bx bx-trash' aria-hidden="true"></i>
+                        <div class="note-foot">
+                            <form class="note-body-form" action="<?php echo BASEURL . '/epnote/insertNoteBody'; ?>" method="POST">
+                                <input class="note-body-input" type="text" name="noteBody" id="noteBody">
+                                <input type="hidden" id="noteId" name="noteId" value="<?php echo $row['note_id'] ?>">
+                                <button type="submit" class="add-note-body"><i class='bx bx-plus' aria-hidden="true"></i></button>
+                            </form>
+                            <form action="<?php echo BASEURL . '/epnote/deleteNote'; ?>" method="POST">
+                                <input type="hidden" id="noteId" name="noteId" value="<?php echo $row['note_id'] ?>">
+                                <button type="submit" class="delete-note-text">Delete note</button>
+                            </form>
                         </div>
                     </div>
-                    <div class="note-foot">
-                        <i class='bx bx-plus' aria-hidden="true"></i>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
 
-            <!-- <?php
-                    $i = 1;
-                    while ($row = mysqli_fetch_assoc($data['note'])) {
-                        echo "";
-                        $i++;
-                    } ?> -->
+
 
 
             <div class="bottom-section">
