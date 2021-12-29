@@ -9,6 +9,7 @@
      <?php linkCSS("customer/customerEventSBview"); ?>
     <?php linkCSS("customerNavigation"); ?>
     <?php linkCSS("footer");?>
+    <?php $eventname=$data['event'];?>
    </head>
 <body>
     <header>
@@ -21,9 +22,9 @@
                 <table>
                     <tr>
                         <th><i class="fas fa-user-plus"></i></th>
-                        <th>Eventshow</th>
+                        <?php echo "<th> $eventname[event_name] </th>"; ?>
                         <th>Event Details</th>
-                        <th>Recomndations of event planner</th>
+                        <th><a href="<?php echo BASEURL . '/customerEventSBRecep'; ?>">Recomndations of event planner</a></th>
                         <th><i class="fa fa-comments"></i></th>
                         <th>Boards</th>
                     </tr>
