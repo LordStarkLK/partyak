@@ -110,8 +110,18 @@
                         </span>
                         <div class="note-body">
                             <?php
+                            if (isset($counter)) {
+                                if ($counter == mysqli_num_rows($data['noteBody'])) {
+                                    mysqli_data_seek($data['noteBody'], 0);
+                                }
+                            }
+
+                            $counter = 0;
                             while ($rowBody = mysqli_fetch_assoc($data['noteBody'])) {
-                                if ($rowBody['note_id'] == $row['note_id']) {   ?>
+
+
+                                $counter++;
+                                if ($row['note_id'] == $rowBody['note_id']) {   ?>
                                     <div class="note-strip">
                                         <h4><?php echo $rowBody['vendor_name']; ?></h4>
                                         <form action="<?php echo BASEURL . '/epnote/deleteNoteBody'; ?>" method="POST">
