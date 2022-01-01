@@ -19,9 +19,10 @@
     <div class="container glass center">
         <a href="<?php echo BASEURL . '/epNote'; ?>"><button class="btn back">Back</button></a>
         <form action="<?php echo BASEURL . '/epNoteAdd/index'; ?>" class="form-area" method="POST">
+            <input class="small-input" type="text" name="customer_id" placeholder="Customer Id">
+            <input class="small-input" type="text" name="customer_name" placeholder="Customer Name">
             <input class="small-input" type="text" name="event_name" placeholder="Event Name">
-            <input class="small-input" type="text" name="cutom_name" placeholder="Customer Name"><br>
-            <input class="note" type="text" name="note" placeholder="Note"><br>
+            <input class="small-input" type="date" name="event_date" placeholder="Date">
             <button type="submit" class="btn" value="Submit">Add</button>
         </form>
     </div>

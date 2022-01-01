@@ -326,10 +326,78 @@ nav .sidebar-button i {
   align-content: center;
   align-items: center;
   position: relative;
-  bottom: -40%;
+  bottom: -85%;
 }
 .event-board-link button {
   background-color: #39a2db;
   padding: 12px 25px;
   font-size: initial;
+}
+.note-cont {
+  margin: 0 0 10px 0;
+}
+.note-area {
+  width: 75%;
+  height: auto;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 5px;
+}
+.note-head {
+  background-color: #ffebcc;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 8px 8px 0px 0px;
+  color: #4f091d;
+  font-size: 20px;
+}
+.note-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px 5px 10px;
+  color: black;
+}
+.note-body {
+  background-color: #fbffe2;
+}
+.note-foot {
+  background-color: #ffebcc;
+  display: flex;
+  border-radius: 0 0 5px 5px;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 23px;
+}
+.delete-note-text {
+  font-size: 16px;
+  color: rgb(255, 81, 81);
+  background-color: rgba(0, 0, 0, 0);
+  padding: 6px 25px;
+}
+.add-note-body {
+  font-size: 16px;
+  color: rgb(20, 20, 20);
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0;
+}
+.note-body-form {
+  display: flex;
+  align-items: flex-start;
+  align-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.note-body-input {
+  border-radius: 8px;
+  border: none;
+  width: 289px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.bx-plus:before {
+  font-size: 21px;
 }
