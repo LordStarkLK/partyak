@@ -17,6 +17,16 @@
         <?php linkPhp("vendorNavigation") ?>
     </header>
     <div class="container glass center">
+        <div class="status-message">
+            <h5>
+                <?php
+                if ($_SESSION["addNoteStatus"] == "Success") {
+                    echo "Note Successfully Added";
+                };
+                $_SESSION["addNoteStatus"] = "Failed"
+                ?>
+            </h5>
+        </div>
         <a href="<?php echo BASEURL . '/epNote'; ?>"><button class="btn back">Back</button></a>
         <form action="<?php echo BASEURL . '/epNoteAdd/index'; ?>" class="form-area" method="POST">
             <input class="small-input" type="text" name="customer_id" placeholder="Customer Id">

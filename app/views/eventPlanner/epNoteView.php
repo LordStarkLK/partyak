@@ -98,6 +98,17 @@
                 </div>
             </nav>
 
+            <div class="status-message">
+                <h5>
+                    <?php
+                    if ($_SESSION["addNoteBodyStatus"] == "Success") {
+                        echo "Vendor Successfully Added";
+                    };
+                    $_SESSION["addNoteBodyStatus"] = "Failed";
+                    ?>
+                </h5>
+            </div>
+
             <div class="note-area">
                 <?php
                 while ($row = mysqli_fetch_assoc($data['note'])) { ?>

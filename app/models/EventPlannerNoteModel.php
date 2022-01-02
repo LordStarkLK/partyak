@@ -20,6 +20,7 @@ class EventPlannerNoteModel extends database
             $insertNoteBodyQuery = "INSERT INTO `event_planner_note_body` (`note_id`, `vendor_name`) VALUES ('$noteId', '$noteIdVendor');";
 
             mysqli_query($GLOBALS['db'], $insertNoteBodyQuery);
+            $_SESSION["addNoteBodyStatus"] = "Success";
         }
     }
     public function getNoteBody()
