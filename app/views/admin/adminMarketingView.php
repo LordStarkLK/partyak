@@ -97,8 +97,10 @@
                                             <div class=\"dropdown\">
                                             <button onclick=\"myFunction($x)\" class=\"dropbtn\">Change Status <i class=\"fas fa-caret-down\"></i></button>
                                         <div id=$id_name class=\"dropdown-content\">
-                                        <a class=\"accept-btn $row[content_id]\">Make online</a>
-                                        <a class=\"reject-btn $row[content_id]\">Make Offline</a>
+                                        <a class=\"accept-btn $row[content_id]\">Accept</a>
+                                        <a class=\"reject-btn $row[content_id]\">Reject</a>
+                                        <a class=\"online-btn $row[content_id]\">Make online</a>
+                                        <a class=\"offline-btn $row[content_id]\">Make Offline</a>
                                         
                                         </div>
                                         </div>

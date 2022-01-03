@@ -317,6 +317,14 @@ ul.breadcrumb {
   color:red;
 }
 
+.Accepted{
+  color: rgb(44, 44, 235);
+}
+
+.Rejected{
+  color:red;
+}
+
 /* Drop down button select status start */
 
 

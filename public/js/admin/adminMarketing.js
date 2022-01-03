@@ -1,6 +1,6 @@
 $(document).ready(function(){
     
-    $(".accept-btn").click(function(){
+    $(".online-btn").click(function(){
         console.log($(this).attr('class').split(' ')[1]);
         var content_id = $(this).attr('class').split(' ')[1];
         
@@ -17,7 +17,7 @@ $(document).ready(function(){
         
     })
 
-    $(".reject-btn").click(function(){
+    $(".offline-btn").click(function(){
         console.log($(this).attr('class').split(' ')[1]);
         var content_id = $(this).attr('class').split(' ')[1];
         
@@ -34,4 +34,42 @@ $(document).ready(function(){
         })
         
     })
+
+    $(".accept-btn").click(function(){
+        console.log($(this).attr('class').split(' ')[1]);
+        var content_id = $(this).attr('class').split(' ')[1];
+        
+
+
+        $.ajax({
+            type: "GET",
+            url: "http://localhost/partyak/adminMarketing/accept/"+content_id,
+            dataType: "html",
+            success: function(response){
+                $(".status"+content_id).html(response);
+            }
+        })
+        
+    })
+
+    $(".reject-btn").click(function(){
+        console.log($(this).attr('class').split(' ')[1]);
+        var content_id = $(this).attr('class').split(' ')[1];
+        
+
+
+        $.ajax({
+            type: "GET",
+            url: "http://localhost/partyak/adminMarketing/reject/"+content_id,
+            dataType: "html",
+            success: function(response){
+                $(".status"+content_id).html(response);
+            }
+        })
+        
+    })
+
+
+
+
 });
