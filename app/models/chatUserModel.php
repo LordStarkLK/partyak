@@ -167,7 +167,7 @@
                     }
                 }
                 }
-                echo $output;
+                return $output;
                     }
 
                     
