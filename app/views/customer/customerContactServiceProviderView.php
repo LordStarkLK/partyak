@@ -11,6 +11,18 @@
      <?php linkCSS("customer/customerContactServiceProviderView"); ?>
     <?php linkCSS("customerNavigation"); ?>
     <?php linkCSS("footer");?>
+    <!-- <?php $serviceI=$data['service_detail'];?>
+    <?php $serviceI=$data['ep_detail'];?>
+    <?php $venueI=$data['venue_detail'];?>
+    <?php $serviceI=$data['cate_detail'];?>
+    <?php $serviceI=$data['photo_detail'];?>
+    <?php $serviceI=$data['music_detail'];?>
+    <?php $serviceI=$data['dance_detail'];?>
+    <?php $serviceI=$data['salon_detail'];?>
+    <?php $serviceI=$data['cake_detail'];?>
+    <?php $serviceI=$data['deco_detail'];?>
+    <?php $serviceI=$data['sound_detail'];?>
+    <?php $serviceI=$data['dress_detail'];?> -->
    </head>
 <body>
     <header>
@@ -114,7 +126,40 @@
     
     <div class="cusDetail">
       <div class="cusraw1">
+
         <table>
+
+        <?php
+            $i=1;
+           
+           
+            
+             
+                echo"<tr>";
+                $j=1;
+                      
+                        while($row=mysqli_fetch_assoc($data['service_detail'])  ){
+                          echo "<td>";
+                          if($row['service_image']){
+                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                          }else{
+                            $row['service_image']="default.png";
+                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                          }
+                          echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
+                          echo "</td>"; 
+                         
+                          $j++;
+                          if($j>3){
+                            echo "</tr>";
+                            $j = 1;
+                          }
+                          
+                        }
+          ?>
+
+          
+
           <tr>
             <td> <a  href="#"> <img <?php srcIMG("chanceFlowers.png") ?> alt="Chance Flowers"></a><br><p>2nd Chance Flowers <br> Colombo, Sri Lanka</p></td>
             <td> <a  href="<?php echo BASEURL . '/venuesANDhalls'; ?>"><img <?php srcIMG("hotel/hotel1.jpg") ?> alt="Chance Flowers"></a><br><p>Mount Lavinia Hotel <br> Colombo, Sri Lanka</p></td>
@@ -183,6 +228,36 @@
     <div class="ecusDetail">
       <div class="ecusraw1">
         <table>
+            <?php
+                    $i=1;
+                  
+                  
+                    
+                    
+                        echo"<tr>";
+                        $j=1;
+                              
+                                while($row=mysqli_fetch_assoc($data['ep_detail'])  ){
+                                  echo "<td>";
+                                  if($row['service_image']){
+                                    echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                  }else{
+                                    $row['service_image']="default.png";
+                                    echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                  }
+                                  echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
+                                  echo "</td>"; 
+                                
+                                  $j++;
+                                  if($j>3){
+                                    echo "</tr>";
+                                    $j = 1;
+                                  }
+                                  
+                                }
+            ?>
+
+
           <tr>
             <td> <a  href="#"> <img <?php srcIMG("brought.jpg") ?> alt="Chance Flowers"></a><br><p>Broghts Event Production <br> Colombo, Sri Lanka</p></td>
             <td> <a href="<?php echo BASEURL . '/eventPlanner'; ?>" ><img <?php srcIMG("nekatha.jpg") ?> alt="Chance Flowers"> </a><br><p>Nekatha <br>Colombo, Sri Lanaka</p></td>
@@ -328,11 +403,40 @@
     <div class="vcusDetail">
       <div class="vcusraw1">
         <table>
-          <tr>
+            <?php
+                $i=1;
+              
+              
+                
+                
+                    echo"<tr>";
+                    $j=1;
+                          
+                            while($row=mysqli_fetch_assoc($data['venue_detail'])  ){
+                              echo "<td>";
+                              if($row['service_image']){
+                                echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                              }else{
+                                $row['service_image']="default.png";
+                                echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                              }
+                              echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
+                              echo "</td>"; 
+                            
+                              $j++;
+                              if($j>3){
+                                echo "</tr>";
+                                $j = 1;
+                              }
+                              
+                            }
+            ?>
+
+          <!-- <tr>
             <td> <a href="<?php echo BASEURL . '/venuesANDhalls'; ?>"><img <?php srcIMG("hotel/hotel1.jpg") ?> alt="Chance Flowers"></a><br><p>Mount Lavinia Hotel <br> Colombo, Sri Lanka</p></td>
             <td> <a  href="#"> <img <?php srcIMG("modernbanquet.jpg") ?> alt="Chance Flowers"></a><br><p>Modern Banquet Hotel <br> Colombo, Sri Lanka</p></td>
             <td> <a  href="#"> <img <?php srcIMG("dukes.png") ?> alt="Chance Flowers"> </a><br><p>Dukes Court 1 <br>Katunayaka,Sri Lanka</p></td>  
-          </tr>
+          </tr> -->
         </table>
       </div>
   
@@ -392,6 +496,35 @@
     <div class="ccusDetail">
       <div class="ccusraw1">
         <table>
+
+            <?php
+                        $i=1;
+                      
+                      
+                        
+                        
+                            echo"<tr>";
+                            $j=1;
+                                  
+                                    while($row=mysqli_fetch_assoc($data['cate_detail'])  ){
+                                      echo "<td>";
+                                      if($row['service_image']){
+                                        echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                      }else{
+                                        $row['service_image']="default.png";
+                                        echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                      }
+                                      echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
+                                      echo "</td>"; 
+                                    
+                                      $j++;
+                                      if($j>3){
+                                        echo "</tr>";
+                                        $j = 1;
+                                      }
+                                      
+                                    }
+            ?>
           <tr>
             <td> <a  href="#"> <img <?php srcIMG("cate.png") ?> alt="Chance Flowers"></a><br><p>Dushan Catering <br> Colombo, Sri Lanka</p></td>
             <td> <a  href="#"> <img <?php srcIMG("jayamalpng.png") ?> alt="Chance Flowers"></a> <br><p>Jayamal Caterers <br> Galle, Sri Lanka</p></td>
@@ -456,6 +589,37 @@
     <div class="pcusDetail">
       <div class="pcusraw1">
         <table>
+
+          <?php
+                      $i=1;
+                    
+                    
+                      
+                      
+                          echo"<tr>";
+                          $j=1;
+                                
+                                  while($row=mysqli_fetch_assoc($data['photo_detail'])  ){
+                                    echo "<td>";
+                                    if($row['service_image']){
+                                      echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                    }else{
+                                      $row['service_image']="default.png";
+                                      echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                    }
+                                    echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
+                                    echo "</td>"; 
+                                  
+                                    $j++;
+                                    if($j>3){
+                                      echo "</tr>";
+                                      $j = 1;
+                                    }
+                                    
+                                  }
+          ?>
+
+
           <tr>
             <td> <a  href="#"> <img <?php srcIMG("pob.jpg") ?> alt="Chance Flowers"></a><br><p>OB Sudio <br> Galle, Sri Lanka</p></td>
             <td> <a  href="#"> <img <?php srcIMG("pOminro.jpg") ?> alt="Chance Flowers"></a> <br><p>Ominro <br> Gampaha, Sri Lanka</p></td>
@@ -554,6 +718,35 @@
     <div class="mcusDetail">
       <div class="mcusraw1">
         <table>
+
+            <?php
+                        $i=1;
+                      
+                      
+                        
+                        
+                            echo"<tr>";
+                            $j=1;
+                                  
+                                    while($row=mysqli_fetch_assoc($data['music_detail'])  ){
+                                      echo "<td>";
+                                      if($row['service_image']){
+                                        echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                      }else{
+                                        $row['service_image']="default.png";
+                                        echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                      }
+                                      echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
+                                      echo "</td>"; 
+                                    
+                                      $j++;
+                                      if($j>3){
+                                        echo "</tr>";
+                                        $j = 1;
+                                      }
+                                      
+                                    }
+            ?>
           <tr>
             <td> <a  href="#"> <img <?php srcIMG("ashane.jpg") ?> alt="Chance Flowers"></a><br><p>Ashane Gunarathne <br>Colombo, Sri Lanka</p></td>
             <td> <a  href="#"> <img <?php srcIMG("Wavemusic.jpg") ?> alt="Chance Flowers"> </a><br><p>Waves<br> Mathara, Sri Lanka</p></td>
@@ -666,6 +859,34 @@
     <div class="dcusDetail">
       <div class="dcusraw1">
         <table>
+            <?php
+                        $i=1;
+                      
+                      
+                        
+                        
+                            echo"<tr>";
+                            $j=1;
+                                  
+                                    while($row=mysqli_fetch_assoc($data['dance_detail'])  ){
+                                      echo "<td>";
+                                      if($row['service_image']){
+                                        echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                      }else{
+                                        $row['service_image']="default.png";
+                                        echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                      }
+                                      echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
+                                      echo "</td>"; 
+                                    
+                                      $j++;
+                                      if($j>3){
+                                        echo "</tr>";
+                                        $j = 1;
+                                      }
+                                      
+                                    }
+            ?>
           <tr>
             <td> <a  href="#"> <img <?php srcIMG("sasha.jpg") ?> alt="Chance Flowers"></a><br><p>Sasha Group <br> Kandy, Sri Lanka</p></td>
             <td> <a  href="#"> <img <?php srcIMG("dark.jpg") ?> alt="Chance Flowers"> </a><br><p>Dark Shine <br> Mathara, Sri Lanka</p></td>
@@ -751,6 +972,34 @@
     <div class="scusDetail">
       <div class="scusraw1">
         <table>
+            <?php
+                            $i=1;
+                          
+                          
+                            
+                            
+                                echo"<tr>";
+                                $j=1;
+                                      
+                                        while($row=mysqli_fetch_assoc($data['salon_detail'])  ){
+                                          echo "<td>";
+                                          if($row['service_image']){
+                                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                          }else{
+                                            $row['service_image']="default.png";
+                                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                          }
+                                          echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
+                                          echo "</td>"; 
+                                        
+                                          $j++;
+                                          if($j>3){
+                                            echo "</tr>";
+                                            $j = 1;
+                                          }
+                                          
+                                        }
+            ?>
           <tr>
             <td> <a  href="#"> <img <?php srcIMG("sicssors.png") ?> alt="Chance Flowers"></a><br><p>Scissor Salon <br> Colombo, Sri Lanka</p></td>
             <td> <a  href="#"> <img <?php srcIMG("sjaal.png") ?> alt="Chance Flowers"></a><br><p>Jaal Salon <br> Anuradhapura, Sri Lanka</p></td>
@@ -852,6 +1101,35 @@
     <div class="cacusDetail">
       <div class="cacusraw1">
         <table>
+
+            <?php
+                            $i=1;
+                          
+                          
+                            
+                            
+                                echo"<tr>";
+                                $j=1;
+                                      
+                                        while($row=mysqli_fetch_assoc($data['cake_detail'])  ){
+                                          echo "<td>";
+                                          if($row['service_image']){
+                                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                          }else{
+                                            $row['service_image']="default.png";
+                                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                          }
+                                          echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
+                                          echo "</td>"; 
+                                        
+                                          $j++;
+                                          if($j>3){
+                                            echo "</tr>";
+                                            $j = 1;
+                                          }
+                                          
+                                        }
+            ?>
           <tr>
             <td> <a  href="#"> <img <?php srcIMG("bakeriya.jpg") ?> alt="Chance Flowers"></a><br><p>APE BAKERIYA <br>Galle, Sri Lanka</p></td>
             <td> <a  href="#"> <img <?php srcIMG("cakelicious.jpg") ?> alt="Chance Flowers"> </a><br><p>Calelicious <br> Jaffna, Sri Lanka</p></td>
@@ -940,6 +1218,34 @@
     <div class="decusDetail">
       <div class="decusraw1">
         <table>
+            <?php
+                            $i=1;
+                          
+                          
+                            
+                            
+                                echo"<tr>";
+                                $j=1;
+                                      
+                                        while($row=mysqli_fetch_assoc($data['deco_detail'])  ){
+                                          echo "<td>";
+                                          if($row['service_image']){
+                                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                          }else{
+                                            $row['service_image']="default.png";
+                                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                          }
+                                          echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
+                                          echo "</td>"; 
+                                        
+                                          $j++;
+                                          if($j>3){
+                                            echo "</tr>";
+                                            $j = 1;
+                                          }
+                                          
+                                        }
+            ?>
           <tr>
             <td> <a  href="#"> <img <?php srcIMG("chanceFlowers.png") ?> alt="Chance Flowers"></a><br><p>2nd Chance Flowers <br> Colombo, Sri Lanka</p></td>
             <td> <a  href="#"> <img <?php srcIMG("setiback.png") ?> alt="Chance Flowers"> </a><br><p>Evntro<br> Nuwara Eliya, Sri Lanka</p></td>
@@ -1053,6 +1359,34 @@
     <div class="lcusDetail">
       <div class="lcusraw1">
         <table>
+            <?php
+                            $i=1;
+                          
+                          
+                            
+                            
+                                echo"<tr>";
+                                $j=1;
+                                      
+                                        while($row=mysqli_fetch_assoc($data['sound_detail'])  ){
+                                          echo "<td>";
+                                          if($row['service_image']){
+                                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                          }else{
+                                            $row['service_image']="default.png";
+                                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                          }
+                                          echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
+                                          echo "</td>"; 
+                                        
+                                          $j++;
+                                          if($j>3){
+                                            echo "</tr>";
+                                            $j = 1;
+                                          }
+                                          
+                                        }
+             ?>
           <tr>
             <td> <a  href="#"> <img <?php srcIMG("light.png") ?> alt="Chance Flowers"></a><br><p>SNV Events<br>Nuwara Eliya, Sri Lanka</p></td>
             <td> <a  href="#"> <img <?php srcIMG("light&sounf.jpg") ?> alt="Chance Flowers"></a> <br><p>JBA <br> Colombo, Sri Lanka</p></td>
@@ -1142,6 +1476,34 @@
     <div class="dscusDetail">
       <div class="dscusraw1">
         <table>
+            <?php
+                            $i=1;
+                          
+                          
+                            
+                            
+                                echo"<tr>";
+                                $j=1;
+                                      
+                                        while($row=mysqli_fetch_assoc($data['dress_detail'])  ){
+                                          echo "<td>";
+                                          if($row['service_image']){
+                                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                          }else{
+                                            $row['service_image']="default.png";
+                                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                          }
+                                          echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
+                                          echo "</td>"; 
+                                        
+                                          $j++;
+                                          if($j>3){
+                                            echo "</tr>";
+                                            $j = 1;
+                                          }
+                                          
+                                        }
+            ?>
           <tr>
             <td> <a  href="#"> <img <?php srcIMG("Rayman.png") ?> alt="Chance Flowers"></a><br><p>Rayman <br> Colombo, Sri Lanka</p></td>
             <td> <a  href="#"> <img <?php srcIMG("H&h.jpg") ?> alt="Chance Flowers"> </a><br><p>H & h Suppliers <br> Ampara, Sri Lanka</p></td>

@@ -84,15 +84,20 @@
     </div>
   </div>
 
-  <div class="venueContent" id=popup-1>
-  <form action="#" class="form-area" method="POST">
 
-      <div class="venueq">
+
+<form action="<?php echo BASEURL . '/customerThroughEpPlanS/index'; ?>" class="form-area" method="POST">
+  <div class="venueContent" id=popup-1>
+
+    <div class="venueq">
+
+    <div class="back" id="backc">
+            <button  class="bac" value="Submit"> <i class="fas fa-hotel" ></i>  Venues & Halls</button>
+    </div>
 
       <div class="seat">
             <select name="Seating" placeholder="Seating Arrangement">
-                <option value="null">Seating Arrangement</option>
-                <option value="null">Seating Arrangement</option>
+                <option value="no">Seating Arrangement</option>
                 <option value="banquet">Banquet</option>
                 <option value="board">Board</option>
                 <option value="classroom">Classroom</option>
@@ -111,7 +116,7 @@
           </div>
           
           <div class="indoortick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox"  value="yes" name="indoorAgree">
             <!-- <div class="error"><?php echo $errors["indoor"] ?></div> -->
           </div>
 
@@ -120,7 +125,7 @@
           </div>
           
           <div class="outdoortick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="yes" name="outdoorAgree">
             <!-- <div class="error"><?php echo $errors["outdoor"] ?></div> -->
           </div>
           
@@ -135,7 +140,7 @@
           </div>
           
           <div class="dancetick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="yes" name="danceAgree">
             <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
           </div>
 
@@ -147,7 +152,7 @@
           </div>
 
           <div class="setitick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="yes" name="setiAgree">
             <!-- <div class="error"><?php echo $errors["seti"] ?></div> -->
           </div>
 
@@ -156,40 +161,34 @@
           </div>
 
           <div class="poruwatick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="yes" name="poruwaAgree">
             <!-- <div class="error"><?php echo $errors["poruwa"] ?></div> -->
           </div>
           
         </div>
 
-
-        
         <div class="input-box07">
          
-        <p3>Please put a tick when this service is needed to be handle by event planner</p3>
-          
-          <div class="handletick">
-            <input type="checkbox" placeholder="Agree" name="agree">
-            <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
-          </div>
-
-        </div>
+         <p3>Please put a tick when this service is needed to be handle by event planner</p3>
+           
+           <div class="handletick">
+             <input type="checkbox" placeholder="Agree" value="yes" name="venueAgree">
+             <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
+           </div>
+ 
+        </div> 
       
-      <div class="save">
-          <button type="button" class="saveb" id="venue" value="Submit">Next <i class="fas fa-forward"></i></button>
-      </div> 
+      <!-- <div class="save">
+          <button type="submit" class="saveb" id="venue" value="Submit">Submit<i class="fas fa-forward"></i></button>
+      </div>  -->
 
-      </div>
-    </form>
 
-  </div>
+    </div>
 
-  <div class="cateringContent" id=popup-2>
-    <form action="#" class="form-area" method="POST">
 
-      <div class="cateringq">
+    <div class="cateringq">
         <div class="back" id="backc">
-            <button type="button" class="bac" value="Submit"><i class="fas fa-backward"></i> Previous</button>
+            <button  class="bac" value="Submit"><i class="fas fa-utensils" ></i>  Catering Service</button>
         </div>
         <br><p0>Meal Types & Addtional Features</p0>
         <div class="input-box15">
@@ -198,7 +197,7 @@
           </div>
 
           <div class="breaktick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="yes" name="breakfAgree">
             <!-- <div class="error"><?php echo $errors["breakfast"] ?></div> -->
           </div>
 
@@ -207,7 +206,7 @@
           </div>
 
           <div class="lunchtick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="yes" name="lunchAgree">
             <!-- <div class="error"><?php echo $errors["lunch"] ?></div> -->
           </div>
 
@@ -221,7 +220,7 @@
           </div>
 
           <div class="dinnertick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="yes" name="dinnerAgree">
             <!-- <div class="error"><?php echo $errors["dinner"] ?></div> -->
           </div>
 
@@ -230,7 +229,7 @@
           </div>
 
           <div class="teatick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="yes" name="teaAgree">
             <!-- <div class="error"><?php echo $errors["tea"] ?></div> -->
           </div>
           
@@ -242,7 +241,7 @@
           </div>
           
           <div class="buffetick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="yes" name="buffeAgree">
             <!-- <div class="error"><?php echo $errors["buffe"] ?></div> -->
           </div>
 
@@ -253,72 +252,59 @@
           
         </div>
 
-
         <div class="input-box07">
          
-        <p3>Please put a tick when this service is needed to be handle by event planner</p3>
-          
-          <div class="handletick">
-            <input type="checkbox" placeholder="Agree" name="agree">
-            <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
-          </div>
+         <p3>Please put a tick when this service is needed to be handle by event planner</p3>
+           
+           <div class="handletick">
+             <input type="checkbox" placeholder="Agree" value="yes" name="cateringAgree">
+             <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
+           </div>
+ 
+        </div> 
 
-        </div>
-
-        <div class="save">
-          <button type="button" class="saveb" id="catering" value="Save">Next <i class="fas fa-forward"></i></button>
-        </div>
+        <!-- <div class="save">
+          <button type="submit" class="saveb" id="catering" value="Save">Next <i class="fas fa-forward"></i></button>
+        </div> -->
        
 
       </div>
-    </form>
-
-  </div>
-
-  <div class="photoContent" id=popup-3>
-    <form action="#" class="form-area" method="POST">
 
       <div class="photoq">
         <div class="back" id="backp">
-            <button type="button" class="bac" value="Submit"><i class="fas fa-backward"></i> Previous</button>
+            <button type="button" class="bac" value="Submit"><i class="fas fa-camera" ></i>  Photographers</button>
         </div>
         <div class="input-box25">
           <input type="text" placeholder="Estimated Budget Range" name="budget">
           <!-- <div class="error"><?php echo $errors["budget"] ?></div> -->
         </div>
         <div class="input-box26">
-          <input type="text" placeholder="Photo shoot details" name="budget">
+          <input type="text" placeholder="Photo shoot details" name="photoDetails">
           <!-- <div class="error"><?php echo $errors["budget"] ?></div> -->
         </div>
 
         <div class="input-box07">
          
-        <p3>Please put a tick when this service is needed to be handle by event planner</p3>
-          
-          <div class="handletick">
-            <input type="checkbox" placeholder="Agree" name="agree">
-            <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
-          </div>
+         <p3>Please put a tick when this service is needed to be handle by event planner</p3>
+           
+           <div class="handletick">
+             <input type="checkbox" placeholder="Agree" value="yes" name="photoAgree">
+             <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
+           </div>
+ 
+        </div> 
 
-        </div>
-
-        <div class="save">
+        
+        <!-- <div class="save">
           <button type="button" class="saveb" id="photo" value="Save">Next <i class="fas fa-forward"></i></button>
-        </div>
-       
+        </div> -->
 
       </div>
-    </form>
 
-  </div>
-
-  
-  <div class="musicContent" id=popup-4>
-    <form action="#" class="form-area" method="POST">
 
       <div class="musicq">
         <div class="back" id="backm">
-          <button type="button" class="bac" value="Submit"><i class="fas fa-backward"></i> Previous</button>
+          <button type="button" class="bac" value="Submit"><i class="fas fa-guitar" ></i>  Musical Service</button>
         </div>
       <p3>Require Services</p3>
         <div class="input-box33">
@@ -327,7 +313,7 @@
           </div>
           
           <div class="mbandtick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="yes" name="mbandAgree">
             <!-- <div class="error"><?php echo $errors["mband"] ?></div> -->
           </div>
 
@@ -336,7 +322,7 @@
           </div>
           
           <div class="djstick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="yes" name="djAgree">
             <!-- <div class="error"><?php echo $errors["djs"] ?></div> -->
           </div>
         </div>
@@ -347,41 +333,33 @@
           </div>
           
           <div class="solotick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="yes" name="soloAgree">
             <!-- <div class="error"><?php echo $errors["solo"] ?></div> -->
           </div>
          
         </div>
 
-
         <div class="input-box07">
          
-        <p4>Please put a tick when this service is needed to be handle by event planner</p4>
-          
-          <div class="handletick">
-            <input type="checkbox" placeholder="Agree" name="agree">
-            <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
-          </div>
-
-        </div>
-
-        <div class="save">
-          <button type="button" class="saveb"id="music" value="Submit">Next <i class="fas fa-forward"></i></button>
+         <p3>Please put a tick when this service is needed to be handle by event planner</p3>
+           
+           <div class="handletick">
+             <input type="checkbox" placeholder="Agree" value="yes" name="musicAgree">
+             <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
+           </div>
+ 
         </div> 
+
+        <!-- <div class="save">
+          <button type="button" class="saveb"id="music" value="Submit">Next <i class="fas fa-forward"></i></button>
+        </div>  -->
         
 
       </div>
-    </form>
-
-  </div>
-
- 
-  <div class="danceContent" id=popup-5>
-    <form action="#" class="form-area" method="POST">
 
       <div class="danceq">
         <div class="back" id="backd">
-          <button type="button" class="bac" value="Submit"><i class="fas fa-backward"></i> Previous</button>
+          <button type="button" class="bac" value="Submit"><i class="fas fa-child" ></i>  Dancing Groups</button>
         </div>
       <p>Require Dancing Type</p>
       <div class="input-box43">
@@ -390,7 +368,7 @@
           </div>
           
           <div class="kandytick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="yes" name="kandyAgree">
             <!-- <div class="error"><?php echo $errors["kandy"] ?></div> -->
           </div>
 
@@ -399,7 +377,7 @@
           </div>
           
           <div class="lawtick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="yes" name="lawAgree">
             <!-- <div class="error"><?php echo $errors["law"] ?></div> -->
           </div>
 
@@ -411,7 +389,7 @@
           </div>
           
           <div class="sabatick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="yes" name="sabaAgree">
             <!-- <div class="error"><?php echo $errors["saba"] ?></div> -->
           </div>
 
@@ -420,45 +398,38 @@
           </div>
           
           <div class="westick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="yes" name="wesAgree">
             <!-- <div class="error"><?php echo $errors["wes"] ?></div> -->
           </div>
           
         </div>
 
-
         <div class="input-box07">
          
-        <p3>Please put a tick when this service is needed to be handle by event planner</p3>
-          
-          <div class="handletick">
-            <input type="checkbox" placeholder="Agree" name="agree">
-            <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
-          </div>
+         <p3>Please put a tick when this service is needed to be handle by event planner</p3>
+           
+           <div class="handletick">
+             <input type="checkbox" placeholder="Agree" value="yes" name="dancesAgree">
+             <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
+           </div>
+ 
+        </div> 
 
-        </div>
 
-        <div class="save">
+        <!-- <div class="save">
           <button type="button" class="saveb"  id="dance" value="Submit">Next <i class="fas fa-forward"></i></button>
-        </div>
+        </div> -->
        
 
       </div>
-    </form>
-
-  </div>
-
-
-  <div class="salonContent" id=popup-6>
-    <form action="#" class="form-area" method="POST">
 
       <div class="salonq">
         <div class="back" id="backs">
-          <button type="button" class="bac" value="Submit"><i class="fas fa-backward"></i> Previous</button>
+          <button type="button" class="bac" value="Submit"><i class="fas fa-building" ></i>  Saloon</button>
         </div>
     
         <div class="input-box53">
-          <select name="Salon Type" placeholder="Gender">
+          <select name="SalonType" placeholder="Gender">
           <option value="null">Salon Type</option>
           <option value="male">Salon for males</option>
           <option value="female">Salon for females</option>
@@ -475,7 +446,7 @@
           </div>
           
           <div class="hairtick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="yes" name="hairAgree ">
             <!-- <div class="error"><?php echo $errors["hair"] ?></div> -->
           </div>
 
@@ -484,7 +455,7 @@
           </div>
           
           <div class="makeuptick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="yes" name="makeupAgree">
             <!-- <div class="error"><?php echo $errors["makeup"] ?></div> -->
           </div>
           
@@ -492,40 +463,34 @@
 
         
         <div class="input-box56">
-          <input type="text" placeholder="No of Dressers" name="dresses">
+          <input type="text" placeholder="No of Dressers" name="dressers">
           <!-- <div class="error"><?php echo $errors["dressers"] ?></div> -->
         </div>
 
-
         <div class="input-box07">
          
-        <p3>Please put a tick when this service is needed to be handle by event planner</p3>
-          
-          <div class="handletick">
-            <input type="checkbox" placeholder="Agree" name="agree">
-            <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
-          </div>
+         <p3>Please put a tick when this service is needed to be handle by event planner</p3>
+           
+           <div class="handletick">
+             <input type="checkbox" placeholder="Agree" value="yes" name="salonAgree">
+             <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
+           </div>
+ 
+        </div> 
 
-        </div>
-        
+
+        <!--         
         <div class="save">
           <button type="button" class="saveb"  id="salon" value="Save">Next <i class="fas fa-forward"></i></button>
-        </div>
+        </div> -->
        
 
       </div>
-    </form>
 
-  </div>
-
-
-  
-  <div class="cakeContent" id=popup-7>
-    <form action="#" class="form-area" method="POST">
 
       <div class="cakeq">
         <div class="back" id="backca">
-          <button type="button" class="bac" value="Submit"><i class="fas fa-backward"></i> Previous</button>
+          <button type="button" class="bac" value="Submit"><i class="fas fa-birthday-cake" ></i> Cake & Sweet</button>
         </div>
       <p4>Cake Type</p4> 
       <div class="input-box64">
@@ -534,7 +499,7 @@
           </div>
           
           <div class="wedtick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="yes" name="wedAgree">
             <!-- <div class="error"><?php echo $errors["wed"] ?></div> -->
           </div>
 
@@ -543,7 +508,7 @@
           </div>
           
           <div class="partytick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="yes" name="partyAgree">
             <!-- <div class="error"><?php echo $errors["party"] ?></div> -->
           </div>
       
@@ -555,40 +520,32 @@
           </div>
           
           <div class="sweetick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="yes" name="sweetAgree">
             <!-- <div class="error"><?php echo $errors["sweets"] ?></div> -->
           </div>
       
         </div>
 
-
         <div class="input-box07">
          
-        <p3>Please put a tick when this service is needed to be handle by event planner</p3>
-          
-          <div class="handletick">
-            <input type="checkbox" placeholder="Agree" name="agree">
-            <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
-          </div>
+         <p3>Please put a tick when this service is needed to be handle by event planner</p3>
+           
+           <div class="handletick">
+             <input type="checkbox" placeholder="Agree" value="yes" name="cakeAgree">
+             <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
+           </div>
+ 
+        </div> 
 
-        </div>
-
-        <div class="save">
+        <!-- <div class="save">
           <button type="button" class="saveb" id="cake" value="Submit">Next <i class="fas fa-forward"></i></button>
-        </div>
+        </div> -->
 
       </div>
-    </form>
-
-  </div>
-
-
-  <div class="decoContent" id=popup-8>
-    <form action="#" class="form-area" method="POST">
 
       <div class="decoq">
         <div class="back" id="backde">
-          <button type="button" class="bac" value="Submit"><i class="fas fa-backward"></i> Previous</button>
+          <button type="button" class="bac" value="Submit"><i class="fas fa-holly-berry" ></i>  Decorations</button>
         </div>
         <p5>Features</p5>
         
@@ -598,7 +555,7 @@
           </div>
           
           <div class="backtick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="yes" name="sbackAgree">
             <!-- <div class="error"><?php echo $errors["back"] ?></div> -->
           </div>
 
@@ -607,7 +564,7 @@
           </div>
           
           <div class="floraltick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="yes" name="floralAgree">
             <!-- <div class="error"><?php echo $errors["floral"] ?></div> -->
           </div>
     
@@ -615,32 +572,25 @@
 
         <div class="input-box07">
          
-        <p3>Please put a tick when this service is needed to be handle by event planner</p3>
-          
-          <div class="handletick">
-            <input type="checkbox" placeholder="Agree" name="agree">
-            <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
-          </div>
+         <p3>Please put a tick when this service is needed to be handle by event planner</p3>
+           
+           <div class="handletick">
+             <input type="checkbox" placeholder="Agree" value="yes" name="decoAgree">
+             <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
+           </div>
+ 
+        </div> 
 
-        </div>
-
-        <div class="save">
+        <!-- <div class="save">
           <button type="button" class="saveb" id="deco" value="Submit">Next <i class="fas fa-forward"></i></button>
-        </div>
+        </div> -->
 
       </div>
-    </form>
 
-  </div>
-
-
-  
-  <div class="soundContent" id=popup-9>
-    <form action="#" class="form-area" method="POST">
 
       <div class="soundq">
         <div class="back" id="backsl">
-          <button type="button" class="bac" value="Submit"><i class="fas fa-backward"></i> Previous</button>
+          <button type="button" class="bac" value="Submit"><i class="fas fa-microphone" ></i>  Sounds & Lightings</button>
         </div>
 
        <p6>Require Service</p6>
@@ -651,7 +601,7 @@
           </div>
           
           <div class="soundtick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="yes" name="soundAgree">
             <!-- <div class="error"><?php echo $errors["sound"] ?></div> -->
           </div>
 
@@ -660,7 +610,7 @@
           </div>
           
           <div class="lightick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="yes" name="lightAgree">
             <!-- <div class="error"><?php echo $errors["light"] ?></div> -->
           </div>
     
@@ -674,7 +624,7 @@
           </div>
           
           <div class="intick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="yes" name="indooreAgree">
             <!-- <div class="error"><?php echo $errors["in"] ?></div> -->
           </div>
 
@@ -683,40 +633,34 @@
           </div>
           
           <div class="outick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="yes" name="outdooreAgree">
             <!-- <div class="error"><?php echo $errors["out"] ?></div> -->
           </div>
     
         </div>
 
+
         <div class="input-box07">
          
-        <p3>Please put a tick when this service is needed to be handle by event planner</p3>
-          
-          <div class="handletick">
-            <input type="checkbox" placeholder="Agree" name="agree">
-            <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
-          </div>
+         <p3>Please put a tick when this service is needed to be handle by event planner</p3>
+           
+           <div class="handletick">
+             <input type="checkbox" placeholder="Agree" value="yes" name="soundsAgree">
+             <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
+           </div>
+ 
+        </div> 
 
-        </div>
-
-        <div class="save">
+        <!-- <div class="save">
           <button type="button" class="saveb"  id="sound" value="Submit">Next <i class="fas fa-forward"></i></button>
-        </div>
+        </div> -->
 
       </div>
-    </form>
 
-  </div>
-
-
-  
-  <div class="dressContent" id=popup-10>
-    <form action="#" class="form-area" method="POST">
 
       <div class="dressq">
         <div class="back" id="backdr">
-          <button type="button" class="bac" value="Submit"><i class="fas fa-backward"></i> Previous</button>
+          <button type="button" class="bac" value="Submit"><i class="fas fa-female" ></i> Dress Suppliers</button>
         </div>
         <p8>Dress Type</p8>
         <div class="input-box94">
@@ -725,7 +669,7 @@
           </div>
           
           <div class="maletick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="yes" name="maleAgree">
             <!-- <div class="error"><?php echo $errors["male"] ?></div> -->
           </div>
 
@@ -734,7 +678,7 @@
           </div>
           
           <div class="femaletick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="yes" name="femaleAgree">
             <!-- <div class="error"><?php echo $errors["female"] ?></div> -->
           </div>
     
@@ -742,18 +686,27 @@
 
         <div class="input-box07">
          
-        <p3>Please put a tick when this service is needed to be handle by event planner</p3>
-          
-          <div class="handletick">
-            <input type="checkbox" placeholder="Agree" name="agree">
-            <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
-          </div>
-
+         <p3>Please put a tick when this service is needed to be handle by event planner</p3>
+           
+           <div class="handletick">
+             <input type="checkbox" placeholder="Agree" value="yes" name="dressAgree">
+             <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
+           </div>
+ 
         </div> 
+      </div>
 
-        <div class="save">
-          <button type="Submit" class="savebb"  value="Submit"><a href ="<?php echo BASEURL . '/customerContactEventPlanner'; ?>">Select Event Planner</a></button>
-        </div>
+
+      
+      <div class="save">
+          <button type="Submit" class="savebb"  value="Submit">Select Event Planner</a></button>
+      </div>
+ 
+  </div>
+
+
+
+</form>
 
 
       </div>
@@ -766,6 +719,7 @@
 <?php linkJS("customer/customerOnYourOwnS"); ?>
 <?php linkPhp("footer") ?>
 </html>
+
 
 
 

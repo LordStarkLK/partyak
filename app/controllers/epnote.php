@@ -1,6 +1,6 @@
 <?php
 
-class epNote extends FrameworkPartyak
+class EpNote extends FrameworkPartyak
 {
     public function __construct()
     {
@@ -39,4 +39,6 @@ class epNote extends FrameworkPartyak
             $this->index();
         }
     }
+
 }
+

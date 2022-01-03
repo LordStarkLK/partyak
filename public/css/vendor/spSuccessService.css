@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background-color: #2d5f6be8;
+  /* background-image: url("../../../public/img/home-confetti.png");
+  background-repeat: round; */
+}
+.delContainer{
+    padding-top: 100px;
+    /* padding: 100px 0 100px 0; */
+    /* background-color: rgba(111, 126, 121, 0.596); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.delContainer .delContent{
+    width: 650px;
+    height: 400px;
+    /* background-color: rgb(250, 250, 250); */
+    padding: 20px;
+}
+.delContent .container-top{
+    width: 100%;
+    height: 100px;
+    /* height: 25%; */
+    /* min-height: 10px; */
+    /* background-color: rgb(139, 201, 160); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* .container-top .delete-icon{
+    width: 100%;
+    height: 200px;
+    background-color: chocolate;
+} */
+.delContent .container-bottom{
+    width: 100%;
+    min-height: 75%;
+    /* background-color: rgb(96, 95, 160); */
+    border-radius: 20px;
+    padding: 65px 20px 10px 20px;
+    box-shadow: 0 0 5px 10px rgba(0,0,0,0.1);
+}
+/* test */
+ .del-icon{
+    margin-top: 100px;
+    background-color: rgb(215, 247, 244);
+    border-radius: 50%;
+    border-style: solid;
+    border-color: rgba(5, 211, 156, 0.979);
+    color: rgba(5, 211, 156, 0.979);
+    /* rgba(46,226,177,255) */
+    /* rgba(242,244,250,255) */
+
+
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title, .description{
+    width: 100%;
+    text-align: center;
+    line-height: 28px;
+    
+    padding-bottom: 25px;
+}
+
+.title a{
+    font-size: 23px;
+    font-weight: 800;
+    color: black;
+}
+
+.description a{
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.801);
+}
+.action{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.action .deleteBtn{
+    /* width: 120px; */
+    /* height: 35px; */
+    padding: 3px 7px 3px 7px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: rgba(5, 211, 156, 0.979);
+    
+    /* margin-top: 20px; */
+}
+.action .deleteBtn i{
+    padding-left: 5px;
+}
+
+.deleteBtn:hover{
+    cursor: pointer;
+    /* background-color: rgba(0, 255, 76, 0.767); */
+    /* color: whitesmoke; */
+}

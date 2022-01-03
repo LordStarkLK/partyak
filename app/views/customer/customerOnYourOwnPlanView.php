@@ -19,8 +19,8 @@
     </header>
 <div class="container">
   <div class="side">
-    <div class="sidebar">
-        <button type="button" class="buttonS" name="Own" > <a href ="<?php echo BASEURL . '/customerOnYourOwnS'; ?>"> Add Service Details</a></button> 
+    <div class="sidebar" id="sidee">
+        <button type="button" class="buttonS" name="Own" > <a href ="<?php echo BASEURL . '/customerOnYourOwnPlan/service_preference'; ?>"> Add Service Details</a></button> 
         <div class="sideDe">
           <p>After giving event details you can add service details which are required for your event by clicking here.</p>
         </div> 
@@ -118,11 +118,12 @@
           </div>
 
           <div class="save">
-            <button type="submit" class="saveb" value="Submit">Submit</button>
+            <button type="submit" class="saveb" id="submitid"  value="Submit">Submit</button>
           </div> 
 
     </form>
   </div> 
+  
 </div>
 
 </body>

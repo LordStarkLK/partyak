@@ -35,4 +35,6 @@ class EventPlannerNoteModel extends database
         $delNoteBodyQuery = "DELETE FROM `event_planner_note_body` WHERE vendor_note_id = $vendor_note_id;";
         mysqli_query($GLOBALS['db'], $delNoteBodyQuery);
     }
+
 }
+
