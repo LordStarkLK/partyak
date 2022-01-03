@@ -47,14 +47,14 @@
                 </div>
 
                 <div class="pill-nav">
-                    <a class="active" href="">Customers</a>
-                    <a href="<?php echo BASEURL . '/adminPaymentMarketing' ?>">Marketing</a>
+                    <a href="<?php echo BASEURL .'/adminPayment'; ?>">Customers</a>
+                    <a class="active">Marketing</a>
 
                 </div>
 
                 <ul class="breadcrumb">
                     <li><a href="#">payments</a></li>
-                    <li><a href="#">Customers</a></li>
+                    <li><a href="#">Marketing</a></li>
                 </ul>
 
 

@@ -35,7 +35,7 @@
 
                 <i class='bx bx-coin-stack'></i>
                 <span class="links_name side-links"
-                    onclick="window.location'<?php echo BASEURL . '/adminPayment'; ?>'">Payments</span>
+                    onclick="window.location'<?php echo BASEURL . '/adminPayment'; ?>'">Payments & ...</span>
             </a>
         </li>
         <li>
@@ -75,7 +75,7 @@
             <a href="<?php echo BASEURL . '/adminTandC'; ?>">
                 <i class='bx bx-edit'></i>
                 <span class="links_name side-links"
-                    onclick="window.location='<?php echo BASEURL . '/adminTandC'; ?>'">T and C</span>
+                    onclick="window.location='<?php echo BASEURL . '/adminTandC'; ?>'">Terms & ...</span>
             </a>
         </li>
         <li class="log_out">
