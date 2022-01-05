@@ -98,45 +98,54 @@
 
                         <?php
                         $x = 1;
-                         while($row=mysqli_fetch_assoc($data['services'])){
-                            $id_name = 'myDropdown';
-                            $class_name = 'accept';
-                            $status_name = 'status';
-                            $row2 = mysqli_fetch_assoc($data['userId']);
-        
-                            $class_name .= $x;
-                            $id_name .= $x; 
-                            $status_name .= $row['service_id'];
-                            echo"
-                                <tr>
-                                    <td>$row[service_id]</td>
-                                    <td>$row[service_name]</td>
-                                    <td>$row2[f_name] $row2[l_name]</td>
-                                    <td>$row[service_type]</td>
-                                    <td class=$status_name> <i class=\"fas fa-circle rejdot\"></i> $row[status]</td>
-                                    <td>  
-                                        <div class=\"btn-group\">
-                                        <div class=\"dropdown\">
-                                        <button onclick=\"myFunction($x)\" class=\"dropbtn\">Change Status <i class=\"fas fa-caret-down\"></i></button>
-                                        <div id=$id_name class=\"dropdown-content\">
-                                        <a class=\"accept-btn $row[service_id]\">Accept</a>
-                                        <a class=\"reject-btn $row[service_id]\">Reject</a>
-                                        
-                                        </div>
-                                        </div>
-                                        <button>View Service page</button>
-                                        </div>
-
+                        if($data['services']){
+                            while($row=mysqli_fetch_assoc($data['services'])){
+                                $id_name = 'myDropdown';
+                                $class_name = 'accept';
+                                $status_name = 'status';
+                                $row2 = mysqli_fetch_assoc($data['userId']);
+            
+                                $class_name .= $x;
+                                $id_name .= $x; 
+                                $status_name .= $row['service_id'];
+                                echo"
+                                    <tr>
+                                        <td>$row[service_id]</td>
+                                        <td>$row[service_name]</td>
+                                        <td>$row2[f_name] $row2[l_name]</td>
+                                        <td>$row[service_type]</td>
+                                        <td class=$status_name> <i class=\"fas fa-circle rejdot\"></i> $row[status]</td>
+                                        <td>  
+                                            <div class=\"btn-group\">
+                                            <div class=\"dropdown\">
+                                            <button onclick=\"myFunction($x)\" class=\"dropbtn\">Change Status <i class=\"fas fa-caret-down\"></i></button>
+                                            <div id=$id_name class=\"dropdown-content\">
+                                            <a class=\"accept-btn $row[service_id]\">Accept</a>
+                                            <a class=\"reject-btn $row[service_id]\">Reject</a>
+                                            
+                                            </div>
+                                            </div>
+                                            <button>View Service page</button>
+                                            </div>
     
-                                    </td>
-
-                                </tr>
-
-
-
+        
+                                        </td>
+    
+                                    </tr>
+    
+    
+    
+                                ";
+                                $x++;
+                            }
+                        }else{
+                            echo
+                            "</tr>
+                            <td>No Rejected Requests available...</td>
+                            </tr>
                             ";
-                            $x++;
                         }
+                         
                         ?>
                         <!-- <tr>
                             <td>01</td>

@@ -22,7 +22,12 @@ class   CustomerRegisterModel extends Database{
 
         // Insert user data
         $query = "INSERT INTO user(email,password,user_type,f_name,l_name) VALUES ('$email','$password','customer','$fname','$lname')";
-        mysqli_query($GLOBALS['db'],$query);
+        $result = mysqli_query($GLOBALS['db'],$query);
+        if($result){
+            $query2 = "SELECT * FROM user ORDER BY user_id DESC LIMIT 1";
+            $result2 = mysqli_query($GLOBALS['db'],$query2);
+            return mysqli_fetch_assoc($result2);
+        }
 
         // Select the user id of that user
         // $result = mysqli_fetch_assoc(mysqli_query($GLOBALS['db'], "SELECT user_id FROM user WHERE email='$email' LIMIT 1"));
