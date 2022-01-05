@@ -85,10 +85,12 @@
                     
                     $this->setSession("userId",$user["user_id"]);
                     $this->setSession("type", $user["user_type"]);
-                    $data["status"] = "new";
+                    // $data["status"] = "new";
+                    // $status = "new";
                 
                 // After a succesful login directing to dashboard
-                    $this->view("customer/customerHomeView",$data);
+                    $this->redirect("customerHome/newReg");
+                    // $this->view("customer/customerHomeView",$data);
                     return 1;
 
 
