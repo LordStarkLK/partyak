@@ -81,7 +81,15 @@
                     $password = password_hash($password, PASSWORD_DEFAULT);
 
                     // Inserting data
-                    $this->registerModel->addCustomer($fname,$lname,$email,$password);
+                    $user = $this->registerModel->addCustomer($fname,$lname,$email,$password);
+                    
+                    $this->setSession("userId",$user["user_id"]);
+                    $this->setSession("type", $user["user_type"]);
+                    $data["status"] = "new";
+                
+                // After a succesful login directing to dashboard
+                    $this->view("customer/customerHomeView",$data);
+                    return 1;
 
 
                 }

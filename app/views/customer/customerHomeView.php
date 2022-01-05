@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +8,35 @@
     <?php linkCSS("customerHomeView"); ?>
     <?php linkCSS("customerNavigation"); ?>
     <?php linkCSS("footer");?>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Home</title>
 </head>
+
 <body>
     <header>
-    <?php linkPhp("customerNavigation") ?>
+        <?php linkPhp("customerNavigation") ?>
+        <?php if(isset($data["status"])){
+        echo "
+        <div class=\"successful\">
+        <div class=\"success-items\">
+            <div class=\"success-content\">
+                Your Account has been Created Successfully
+            </div>
+            <div class=\"success-icon\">
+                <span class=\"close\">&times;</span>
+            </div>
+        </div>
+
+    </div>
+        ";
+        }?>
     </header>
+    
+    
     <div class="container section1">
+    
         <div class="left column">
             <div class="content-left">
                 <h1 class="quote">
@@ -37,8 +59,10 @@
                     <img class="stars-img" <?php srcIMG("stars.png") ?> alt="stars icon">
                 </div>
                 <div class="descripton">
-                    <p class="seller-description">We are a bake-house offering services for custom bake orders including cakes etc.
-                        We accpet all the kinds of events including weddings, birthday parties and cooperate events. Send a request for reservations.
+                    <p class="seller-description">We are a bake-house offering services for custom bake orders including
+                        cakes etc.
+                        We accpet all the kinds of events including weddings, birthday parties and cooperate events.
+                        Send a request for reservations.
                     </p>
                 </div>
                 <img class="request-icon" <?php srcIMG("request.png") ?> alt="request icon">
@@ -173,7 +197,8 @@
             </div>
         </div>
     </div>
-
+    <?php linkJS("home");?>
     <?php linkPhp("footer") ?>
 </body>
+
 </html>

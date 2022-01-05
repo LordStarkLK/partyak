@@ -13,6 +13,8 @@ class CustomerHome extends FrameworkPartyak{
         //     $this->redirect("login");
         // }
         // $this->preventBack("customer");
+        
+        
         $this->view("customer/customerHomeView");
     }
 

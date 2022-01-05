@@ -2,11 +2,13 @@
 
 class Dashboard extends FrameworkPartyak{
     public function __construct(){
-
+        
+        
     }
     
     public function index()
     {
+        
         // echo "HI";
         if(isset($_SESSION["userId"]) && isset($_SESSION["type"])){
             $type = $_SESSION["type"];
