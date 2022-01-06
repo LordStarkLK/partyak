@@ -104,7 +104,7 @@
                     echo "      
                         <div class=\"ser-details\">
                         
-                            <div class=\"service_name\"><a href=\"".BASEURL . "/spPackage/index/$row[service_id]\">$row[service_name]</a></div>
+                            <div class=\"service_name\"><a href=\" ".BASEURL ."/spPackage/index/$row[service_id]\">$row[service_name]</a></div>
                             <div class=\"location_name\">$row[service_location]</div>
                         </div>";
                     

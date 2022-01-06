@@ -3,11 +3,11 @@
 class SpServiceModel extends Database
 {
     
-    public function getServiceInfo($id)
+    public function getServiceInfo($service_id)
     {
         // $query ="SELECT status, service_name, service_type, service_location FROM other_service WHERE user_id='$id' ";
-        $result = mysqli_fetch_assoc(mysqli_query($GLOBALS['db'], "SELECT service_id FROM other_service WHERE user_id='$id' AND service_name='Mount Lavinia Hotel' LIMIT 1"));
-        $serviceId = $result["service_id"];
+        // $result = mysqli_fetch_assoc(mysqli_query($GLOBALS['db'], "SELECT service_id FROM other_service WHERE service_id='$service_id' LIMIT 1"));
+        // $serviceId = $result["service_id"];
 
         $query = "SELECT service_id, service_name, description, service_location, service_type, event_type, service_areas, fb_url, instagram_url, linkedin_url, advance_price, initial_discount, initial_count, preparation_time, simultaneous_booking, cancellation_policy, payment_terms_and_conditions, additional_information, 
          venue_type, standing_capacity, seating_arrangement, venue_features,
@@ -18,7 +18,7 @@ class SpServiceModel extends Database
          cake_type, sweet_type,
          decoration_type, floral_arrangement,
          dress_sections, dress_type,
-         caption, video_urL FROM other_service WHERE service_id='$serviceId' ";
+         caption, video_url FROM other_service WHERE service_id='$service_id' ";
         
 
 

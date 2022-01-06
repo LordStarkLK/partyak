@@ -12,7 +12,7 @@
     <?php linkCSS("navigation"); ?>
     <?php linkCSS("customerNavigation"); ?>
     <?php linkCSS("footer"); ?>
-    <title>v&h</title>
+    <title>service</title>
 </head>
 
 <body>
@@ -36,7 +36,7 @@
 
             echo " 
             <div class=\"image_container\">
-                <img class=\"mySlides\" src=\"public\img\hotel/hotel1.jpg\" >
+                <img class=\"mySlides\" src=\"public/img/hotel/hotel1.jpg\" >
                 <img class=\"mySlides\" src=\"public\img\hotel/hotel2.jpg\" >
                 <img class=\"mySlides\" src=\"public\img\hotel/hotel3.jpg\" >
                 <img class=\"mySlides\" src=\"public\img\hotel/hotel4.jpg\" >
