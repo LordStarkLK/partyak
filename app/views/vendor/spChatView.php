@@ -13,100 +13,6 @@
 </head>
 
 <body>
-<<<<<<< Updated upstream
-<header>
-    <?php linkPhp("navigation") ?>
-  </header>
-
-<div class="container">
-<div class="sidebar">
-
-<ul class="sidenav-links">
-  <!-- <li>
-    <a href="<?php echo BASEURL . '/spAnalytics'; ?>">
-      <i class="fa fa-pie-chart" aria-hidden="true"></i>
-      <span class="links_name">Analytics</span>
-    </a>
-  </li>
-  <li>
-    <a href="<?php echo BASEURL . '/spProfile'; ?>">
-      <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-      <span class="links_name">Profile</span>
-    </a>
-  </li> -->
-  <li>
-    <a href="<?php echo BASEURL . '/spService'; ?>">
-      <i class="fa fa-server" aria-hidden="true"></i>
-      <span class="links_name">Packages</span>
-    </a>
-  </li>
-  <li>
-    <a href="<?php echo BASEURL . '/spBooking'; ?>">
-      <i class="fa fa-list" aria-hidden="true"></i>
-      <span class="links_name">Bookings</span>
-    </a>
-  </li>
-  <!-- <li>
-    <a href="<?php echo BASEURL . '/spMarketing'; ?>">
-      <i class="fa fa-sticky-note" aria-hidden="true"></i>
-      <span class="links_name">Marketing</span>
-    </a>
-  </li>
-
-  <li>
-    <a href="<?php echo BASEURL . '/spWallet'; ?>">
-      <i class="fa fa-usd" aria-hidden="true"></i>
-      <span class="links_name">Wallet</span>
-    </a>
-  </li> -->
-  <li>
-    <a href="<?php echo BASEURL . '/spChat'; ?>">
-      <i class="fa fa-envelope" aria-hidden="true"></i>
-      <span class="links_name">Chat</span>
-    </a>
-  </li>
-  <li>
-    <a href="<?php echo BASEURL . '/spCalendar'; ?>">
-      <i class="fa fa-calendar" aria-hidden="true"></i>
-      <span class="links_name">Calendar</span>
-    </a>
-  </li>
-  <li>
-    <a href="<?php echo BASEURL . '/spReview '; ?>">
-      <i class="fa fa-star" aria-hidden="true"></i>
-      <span class="links_name">Review</span>
-    </a>
-  </li>
-</ul>
-</div>
-  
-<section class="home-section">
-    <nav>
-      <div class="sidebar-button">
-        <i class='bx bx-menu sidebarBtn'></i>
-        <span class="dashboard">Chat</span>
-      </div>
-    </nav>
-
-    <div class="home-content">
-        <div class="content">
-            <div class="chatsidebar">
-              <div class="receiver">
-                <div class="receiverimg">
-                <img class="proimg" <?php srcIMG("avatar.png") ?> alt="Avatar">
-                </div>
-                <div class="receivername">
-                  <p>Lara Fernando</p>
-                </div>
-              </div>
-                
-               
-                <div class="senderSearch">
-                    <form class="cuse" action="#" method="POST">
-                        <input type="text" name="search">
-                        <button class="searchbtn" type="submit"><i class="fa fa-search"></i></button>
-                    </form>
-=======
     <header>
         <?php linkPhp("navigation") ?>
     </header>
@@ -178,7 +84,6 @@
                 <div class="sidebar-button">
                     <i class='bx bx-menu sidebarBtn'></i>
                     <span class="dashboard">Chat</span>
->>>>>>> Stashed changes
                 </div>
             </nav>
 
