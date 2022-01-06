@@ -16,6 +16,67 @@
 
              return $result;
         }
+
+        public function onlineStatus($content_id){
+            $query = "UPDATE marketing_content SET upload_status = 'online' WHERE content_id = '$content_id'";
+            $result = mysqli_query($GLOBALS['db'],$query);
+            // should be the html to change the table row column to onlineed status
+            $output = 'pending';
+            if($result>0){
+                $output = ' <i class="fas fa-circle online"></i> online';
+            }
+    
+            return $output;
+    
+            
+        }
+    
+    
+        public function offlineStatus($content_id){
+            $query = "UPDATE marketing_content SET upload_status = 'offline' WHERE content_id = '$content_id'";
+            $result = mysqli_query($GLOBALS['db'],$query);
+            // should be the html to change the table row column to onlineed status
+            $output = 'pending';
+            if($result>0){
+                $output = ' <i class="fas fa-circle offline"></i> offline';
+            }
+    
+            return $output;
+    
+            
+        }
+
+        public function acceptStatus($content_id){
+            $query = "UPDATE marketing_content SET upload_status = 'Accepted' WHERE content_id = '$content_id'";
+            $result = mysqli_query($GLOBALS['db'],$query);
+            // should be the html to change the table row column to onlineed status
+            $output = 'pending';
+            if($result>0){
+                $output = ' <i class="fas fa-circle Accepted"></i> Accepted';
+            }
+    
+            return $output;
+    
+            
+        }
+
+        public function rejectStatus($content_id){
+            $query = "UPDATE marketing_content SET upload_status = 'Rejected' WHERE content_id = '$content_id'";
+            $result = mysqli_query($GLOBALS['db'],$query);
+            // should be the html to change the table row column to onlineed status
+            $output = 'pending';
+            if($result>0){
+                $output = ' <i class="fas fa-circle Rejected"></i> Rejected';
+            }
+    
+            return $output;
+    
+            
+        }
+
+        
+    
+        
     }
 
 

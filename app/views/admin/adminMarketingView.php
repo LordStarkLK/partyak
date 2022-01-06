@@ -79,6 +79,8 @@
                                 while($row = mysqli_fetch_assoc($data['marketing'])){
                                     $row2 = mysqli_fetch_assoc($data['user']);
                                     $id_name = 'myDropdown';
+                                    $status_name = 'status';
+                                    $status_name .= $row['content_id'];
 
                                     $id_name .= $x;
                                     
@@ -86,16 +88,19 @@
                                     echo "
                                     <td>$row[content_id]</td>
                                     <td>$row2[f_name] $row2[l_name]</td>
-                                    <td><img class=\"customer-image\" src=\"http://localhost/partyak/public/img/marketingContent/$row[content]\"  width=\"60\" height=\"60\">
+                                    <td><a target=\"_blank\" href=\"http://localhost/partyak/public/img/marketingContent/$row[content]\"><img class=\"customer-image\" src=\"http://localhost/partyak/public/img/marketingContent/$row[content]\"  width=\"60\" height=\"60\">
+                                    </a>
                                     </td>
-                                    <td><i class=\"fas fa-circle $row[upload_status]\"></i> $row[upload_status]</td>
+                                    <td class=$status_name><i class=\"fas fa-circle $row[upload_status]\"></i> $row[upload_status]</td>
                                     <td>
                                         <div class=\"btn-group\">
                                             <div class=\"dropdown\">
                                             <button onclick=\"myFunction($x)\" class=\"dropbtn\">Change Status <i class=\"fas fa-caret-down\"></i></button>
                                         <div id=$id_name class=\"dropdown-content\">
-                                        <a class=\"accept-btn \">online</a>
-                                        <a class=\"reject-btn \">Offline</a>
+                                        <a class=\"accept-btn $row[content_id]\">Accept</a>
+                                        <a class=\"reject-btn $row[content_id]\">Reject</a>
+                                        <a class=\"online-btn $row[content_id]\">Make online</a>
+                                        <a class=\"offline-btn $row[content_id]\">Make Offline</a>
                                         
                                         </div>
                                         </div>
@@ -243,7 +248,8 @@
 
         </section>
     </div>
-
+    <?php linkJS("lib/jquery-3.6.0.min"); ?>
+    <?php linkJS("admin/adminMarketing"); ?>                                
     <?php linkJS("adminHomeView"); ?>
 
 

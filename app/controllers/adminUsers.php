@@ -22,4 +22,12 @@ class AdminUsers extends FrameworkPartyak{
         $this->redirect("adminUsers");
     }
 
+    public function search(){
+        $searchTerm = mysqli_real_escape_string($GLOBALS['db'], $_POST['searchTerm']);
+
+        // echo $searchTerm;
+        $userList = $this->user->search($searchTerm);
+        echo $userList;
+    }
+
 }

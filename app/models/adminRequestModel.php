@@ -32,6 +32,8 @@ class AdminRequestModel extends database {
         $result = mysqli_query($GLOBALS['db'],$query);
         if(mysqli_num_rows($result)>0){
             return $result;
+        }else{
+            return $result;
         }
         
     }

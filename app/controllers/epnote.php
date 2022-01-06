@@ -39,4 +39,6 @@ class EpNote extends FrameworkPartyak
             $this->index();
         }
     }
+
 }
+
