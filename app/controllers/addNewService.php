@@ -26,8 +26,8 @@ class AddNewService extends FrameworkPartyak
             $servDesc = $_POST['servicedescription'];
             $location = $_POST['location'];
             $serviceType = $_POST['serviceType'];
-            $eventType = implode(" , " , $_POST['eventType']);
-            $province = implode(" , " , $_POST['province']);
+            $eventType = implode("," , $_POST['eventType']);
+            $province = implode("," , $_POST['province']);
             $facebook = $_POST['furl'];
             $instagram = $_POST['iurl'];
             $linkedin = $_POST['lurl'];
@@ -87,8 +87,8 @@ class AddNewService extends FrameworkPartyak
             if($serviceType == "venues_halls"){
                 $venueType = isset($_POST["venuetype"]) ? $_POST["venuetype"] : 'Null';
                 $standingCapacity = isset($_POST["standingcapacity"]) ? $_POST["standingcapacity"] : 'Null';
-                $addFeature = implode(' , ' , $_POST['addfeature']);
-                $seatingArr = implode(' , ' ,  $_POST['seating']);
+                $addFeature = implode(',' , $_POST['addfeature']);
+                $seatingArr = implode(',' ,  $_POST['seating']);
                 $meals = isset($_POST["mealType"]) ? $_POST["mealType"] : 'Null';
                 $attendantsNo = isset($_POST["attendants"]) ? $_POST["attendants"] : 'Null';
                 $musicType = isset($_POST["musictype"]) ? $_POST["musictype"] : 'Null';
@@ -267,7 +267,7 @@ class AddNewService extends FrameworkPartyak
             
 
             
-            $this->AddNewServiceModel->addServiceDetails($id, $servName, $servDesc, $location, $serviceType, $eventType, $province, $facebook, $instagram, $linkedin, $rePrice, $iniDiscount, $count, $prepaTime, $simultaneousBooking, $cancellationPolicy, $tandc, $addiInfo, 
+            $result=$this->AddNewServiceModel->addServiceDetails($id, $servName, $servDesc, $location, $serviceType, $eventType, $province, $facebook, $instagram, $linkedin, $rePrice, $iniDiscount, $count, $prepaTime, $simultaneousBooking, $cancellationPolicy, $tandc, $addiInfo, 
             $venueType, $standingCapacity, $seatingArr, $addFeature, 
             $meals, $attendantsNo, 
             $musicType,
@@ -278,14 +278,35 @@ class AddNewService extends FrameworkPartyak
             $sectionType, $dressCategory ,
             $caption, $video );
 
+       
+            
+            if($result){
+                $this->redirect("addNewService/successful");
+                // $this->view("vendor/spSuccessServiceView");
+            }
+            else{
+                $this->redirect("addNewService/unsuccessful");
+                // $this->view("vendor/spDeleteServiceView");
+            }     
+            
+
         }
+
+
 
         // $data["errors"] = $errors;
         // echo "Hi";
         // $this->view("vendor/addNewServiceView" , $data);
         $this->view("vendor/addNewServiceView");
-
         
+    }
+
+    public function successful(){
+        $this->view("vendor/spSuccessServiceView");
+    }
+
+    public function unsuccessful(){
+        $this->view("vendor/spConErrorView");
     }
 }
 
