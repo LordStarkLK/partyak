@@ -88,6 +88,83 @@ class AdminRequestModel extends database {
         
     }
 
+    public function search($searchTerm){
+        $searchTerm = mysqli_real_escape_string($GLOBALS['db'], $searchTerm);
+        $list = explode("_",$searchTerm);
+
+        foreach($list as $searchTerm){
+            $searchTerm = "%" . $searchTerm . "%";
+            $query = "SELECT other_service.*,user.f_name,user.l_name FROM user,other_service WHERE user.user_id = other_service.user_id AND (other_service.service_name LIKE '$searchTerm') ORDER BY other_service.service_id DESC";
+            // $query = "SELECT other_service.*,user.f_name,user.l_name  FROM user.user_id = other_service.user_id AND (other_service.service_name LIKE '$searchTerm') ORDER BY booking.booking_id DESC";
+            $query = mysqli_query($GLOBALS['db'],$query);
+            if(mysqli_num_rows($query) > 0)
+                {
+                    break;
+                }
+
+        }
+        $output = "";
+        if(mysqli_num_rows($query)== 0){
+            $output .= "No services have been booked as the search term";
+        }
+        if(mysqli_num_rows($query)>0){
+            $output .='<table>
+            <tr>
+            <th>Service Id</th>
+            <th>Service Name </th>
+            <th>Vendor Name</th>
+            <th>Service Type</th>
+            <th>Status</th>
+            <th>More Options</th>
+
+            </tr>';
+            $x = 1;
+                         while($row=mysqli_fetch_assoc($query)){
+                            $id_name = 'myDropdown';
+                            $class_name = 'accept';
+                            $status_name = 'status';
+                            
+        
+                            $class_name .= $x;
+                            $id_name .= $x; 
+                            $status_name .= $row['service_id'];
+                            $output .='
+                                <tr>
+                                    <td>'.$row['service_id'].'</td>
+                                    <td>'.$row['service_name'].'</td>
+                                    <td>'.$row['f_name'].' '.$row['l_name'].'</td>
+                                    <td>'.$row['service_type'].'</td>
+                                    <td> <i class="fas fa-circle '.$row['status'].'"></i> '.$row['status'].'</td>
+                                    <td>  
+                                        <div class="btn-group">
+                                        <div class="dropdown">
+                                        <button onclick="myFunction('.$x.')" class="dropbtn">Change Status <i class="fas fa-caret-down"></i></button>
+                                        <div id="'.$id_name.'" class="dropdown-content">
+                                        <a class="accept-btn '.$row['service_id'].'">Accept</a>
+                                        <a class="reject-btn '.$row['service_id'].'">Reject</a>
+                                        
+                                        </div>
+                                        </div>
+                                        <button>View Service page</button>
+                                        </div>
+
+    
+                                    </td>
+
+                                </tr>
+
+
+
+                            ';
+                            $x++;
+                        
+            }
+        }
+
+        return $output;
+    }
+
+
 //     public function getServiceDetails(){
 //         $query = "SELECT "
 //     }
