@@ -92,11 +92,18 @@
       </nav>
       <div class="home-content">
         <div id="package" class="packages-box">
-          <div class="ser-name">
-            <a href="<?php echo BASEURL . '/venuesANDhalls'; ?>">Mount Lavinia Hotel</a>
+          
+            
+
+              <?php while ($row = mysqli_fetch_assoc($data['packages'])) {
+                $i = 1;
+                // $row2=mysqli_fetch_assoc($data['customer_email']);
+                echo "
+                <div class=\"ser-name\">
+            <a href=\" ".BASEURL ."/spService/index/$row[service_id]\">$row[service_name]</a>
           </div>
-          <table class="table-content">
-            <thead>
+          <table class=\"table-content\">
+                <thead>
               <tr>
                 <th>Package Name</th>
                 <th>Service Name</th>
@@ -105,11 +112,6 @@
               </tr>
             </thead>
             <tbody>
-
-              <?php while ($row = mysqli_fetch_assoc($data['packages'])) {
-                $i = 1;
-                // $row2=mysqli_fetch_assoc($data['customer_email']);
-                echo "
               <tr>
               <th>$row[package_name]</th>
                 <th>$row[service_name]</th>
