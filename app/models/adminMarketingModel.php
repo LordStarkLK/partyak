@@ -45,6 +45,36 @@
     
             
         }
+
+        public function acceptStatus($content_id){
+            $query = "UPDATE marketing_content SET upload_status = 'Accepted' WHERE content_id = '$content_id'";
+            $result = mysqli_query($GLOBALS['db'],$query);
+            // should be the html to change the table row column to onlineed status
+            $output = 'pending';
+            if($result>0){
+                $output = ' <i class="fas fa-circle Accepted"></i> Accepted';
+            }
+    
+            return $output;
+    
+            
+        }
+
+        public function rejectStatus($content_id){
+            $query = "UPDATE marketing_content SET upload_status = 'Rejected' WHERE content_id = '$content_id'";
+            $result = mysqli_query($GLOBALS['db'],$query);
+            // should be the html to change the table row column to onlineed status
+            $output = 'pending';
+            if($result>0){
+                $output = ' <i class="fas fa-circle Rejected"></i> Rejected';
+            }
+    
+            return $output;
+    
+            
+        }
+
+        
     
         
     }

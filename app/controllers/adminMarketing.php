@@ -32,4 +32,16 @@ class AdminMarketing extends FrameworkPartyak
         echo $output;
     }
 
+    public function accept($content_id){
+        $output = $this->marketingModel->acceptStatus($content_id);
+        echo $output;
+    }
+
+    public function reject($content_id){
+        $output = $this->marketingModel->rejectStatus($content_id);
+        echo $output;
+    }
+
+
+
 }

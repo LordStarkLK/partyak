@@ -49,15 +49,10 @@
 
                     </ul>
 
-                    <div class="search-container">
-                        <form action="/action_page.php">
-                            <input type="text" placeholder="Search by customer.." name="search">
-
-                            <button type="submit"><i class="fa fa-search"></i></button>
-                            <!-- <i class="fas fa-search"></i> -->
-
-
-                        </form>
+                    <div class="search">
+                        <span class="text">   View users...</span>
+                        <input type="text" name="search" placeholder="Enter service name to search...">
+                        <button><i class="fas fa-search"></i></button>
                     </div>
 
 
@@ -159,6 +154,8 @@
         </section>
     </div>
 
+    <?php linkJS("lib/jquery-3.6.0.min"); ?>
+    <?php linkJS("admin/bookings");?>
     <?php linkJS("adminHomeView"); ?>
 
 
