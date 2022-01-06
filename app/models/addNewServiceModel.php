@@ -50,17 +50,23 @@ class AddNewServiceModel extends Database
         '$caption', '$video')";
 
 
-    //     $query = "INSERT INTO other_service(user_id, service_name, description, service_location, event_type,  fb_url, instagram_url, linkedin_url, advance_price, initial_discount, initial_count,preparation_time, simultaneous_booking, cancellation_policy, payment_terms_and_conditions,additional_information, caption, video_url) 
-    //    VALUES ('$id', '$servName', '$servDesc', '$location', '$eventType' , '$facebook', '$instagram', '$linkedin', '$rePrice', '$iniDiscount', '$count', '$prepaTime','$simultaneousBooking', '$cancellationPolicy', '$tandc', '$addiInfo', '$caption', '$video')";
-// mysqli_query($GLOBALS['db'], $query);
+    
 
-           if(mysqli_query($GLOBALS['db'], $query)){
-               echo "file uploaded success!";
-           }
-           else{
-               echo "uploading fail";
-            
-           }
+        //    if(mysqli_query($GLOBALS['db'], $query)){
+        //        echo "file uploaded success!";
+        //    }
+        //    else{
+        //        echo "uploading fail";
+        //    }
+
+
+        if(mysqli_query($GLOBALS['db'], $query)){
+            return true;
+        }
+        else{
+         return false;
+         
+        }
         
     }
 }

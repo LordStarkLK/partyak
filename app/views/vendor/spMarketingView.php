@@ -142,7 +142,7 @@
           ?>
           
           <div class="paymentBtn">
-          <a href="<?php echo BASEURL . '/payment'; ?>"><button>Pay now</button></a>
+            <a href="<?php echo BASEURL . '/payment'; ?>"><button>Pay now</button></a>
           </div>
           
         </div>
