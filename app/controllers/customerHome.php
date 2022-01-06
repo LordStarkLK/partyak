@@ -16,7 +16,7 @@ class CustomerHome extends FrameworkPartyak{
         //     $this->redirect("login");
         // }
         // $this->preventBack("customer");
-<<<<<<< Updated upstream
+
         
         
         
@@ -34,7 +34,7 @@ class CustomerHome extends FrameworkPartyak{
         
         $this->view("customer/customerHomeView",$data);
     }
-=======
+    public function checkVendor(){
         $id=$_SESSION['userId']; 
         $data['vendorch']=$this->AddFirstServiceModel->checkVendorDet($id);
 
@@ -47,6 +47,6 @@ class CustomerHome extends FrameworkPartyak{
     //     $this->view("components/customerNavigation",$data);
 
     // }
->>>>>>> Stashed changes
+
 
 }
