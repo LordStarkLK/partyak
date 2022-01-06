@@ -22,4 +22,9 @@ class CustomerMyEvent extends FrameworkPartyak{
         $this->view("customer/customerMyEventView", $data);
     }
 
+    public function deleteEvent($planning_id){
+        $this->user->deleteEvent($planning_id);
+        $this->redirect("customerMyEvent");
+    }
+
 }

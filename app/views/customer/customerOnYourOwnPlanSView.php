@@ -85,7 +85,7 @@
     </div>
   </div>
 
-<form action="<?php echo BASEURL . '/customerOnYourOwnPlan/service_preference'; ?>" class="form-area" method="POST">
+<form action="<?php echo BASEURL . '/customerOnYourOwnPlanS'; ?>" class="form-area" method="POST">
   <div class="venueContent" id=popup-1>
 
     <div class="venueq">

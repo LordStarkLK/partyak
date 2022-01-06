@@ -5,6 +5,9 @@ class CustomerHome extends FrameworkPartyak{
     public function __construct(){
         $this->helper("linker");
         $this->preventBack("customer");
+
+        $this->AddFirstServiceModel = $this->model("CustomerBecomeVendorModel");
+
     }
     
     public function index(){
@@ -13,6 +16,7 @@ class CustomerHome extends FrameworkPartyak{
         //     $this->redirect("login");
         // }
         // $this->preventBack("customer");
+<<<<<<< Updated upstream
         
         
         
@@ -30,5 +34,19 @@ class CustomerHome extends FrameworkPartyak{
         
         $this->view("customer/customerHomeView",$data);
     }
+=======
+        $id=$_SESSION['userId']; 
+        $data['vendorch']=$this->AddFirstServiceModel->checkVendorDet($id);
+
+        $this->view("customer/customerHomeView",$data);
+    }
+
+    // public function checkVendor(){
+    //     $id=$_SESSION['userId']; 
+    //     $data['vendorch']=$this->AddFirstServiceModel->checkVendorDet($id);
+    //     $this->view("components/customerNavigation",$data);
+
+    // }
+>>>>>>> Stashed changes
 
 }

@@ -89,6 +89,12 @@ class FrameworkPartyak
         }
     }
 
+    public function preventBack2(){
+        if(!isset($_SESSION['userId']) && !isset($_SESSION['type']) || $_SESSION['type'] != "vendor" && $_SESSION['type'] != "customer"){
+            $this->redirect("login");
+        }
+    }
+
 
 
 }

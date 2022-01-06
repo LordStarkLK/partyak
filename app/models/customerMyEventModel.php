@@ -9,4 +9,11 @@ class CustomerMyEventModel extends database
         }
     }
 
+    public function deleteEvent($planning_id){
+        $query = "DELETE FROM event WHERE planning_id = '$planning_id'";
+
+        $result = mysqli_query($GLOBALS["db"], $query);
+        return $result;
+    }
+
 }

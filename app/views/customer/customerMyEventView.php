@@ -75,7 +75,7 @@
                   <td>  
                   <div class=\"btn-group\">
                       <button class=\"edit-event\">Edit</button>
-                      <button class=\"cancel-event\">Cancel</button>
+                      <button class=\"cancel-event\"><a href =\" ".BASEURL ."/customerMyEvent/deleteEvent/$row[planning_id]\">Cancel</a></button>
                       
                     </div>
 

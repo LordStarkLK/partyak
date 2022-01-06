@@ -154,6 +154,16 @@ tr:nth-child(odd) {
     color:#202020;
 }
 
+.edit-event a{
+    text-decoration: none;
+    color:#202020;
+}
+
+.cancel-event a{
+    text-decoration: none;
+    color:#202020;
+}
+
 
 .cancel-event:hover {
     background-color:brown;

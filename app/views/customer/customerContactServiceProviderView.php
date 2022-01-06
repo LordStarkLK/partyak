@@ -103,6 +103,7 @@
       </ul>
     </div>
   </div>
+
 <!-- 
   <div class="cusContent" id="con"> 
       <p><h2>Hello  Friends,</h2><br> <h3>Let’s start finding service providers.<br><br></h3></p>
@@ -230,10 +231,7 @@
         <table>
             <?php
                     $i=1;
-                  
-                  
-                    
-                    
+
                         echo"<tr>";
                         $j=1;
                               
@@ -256,7 +254,6 @@
                                   
                                 }
             ?>
-
 
           <tr>
             <td> <a  href="#"> <img <?php srcIMG("brought.jpg") ?> alt="Chance Flowers"></a><br><p>Broghts Event Production <br> Colombo, Sri Lanka</p></td>
@@ -391,10 +388,9 @@
           
         </div>
 
-
        <div class="save" id="venueSu">
           <!-- <input type="hidden" value="venue" name="type"> -->
-          <button type="submit" class="saveb" value="submit"  >Search</button>
+          <button type="submit" class="saveb" value="submit" name="submit">Search</button>
        </div>
 
       </div>
@@ -406,10 +402,7 @@
         <table>
             <?php
                 $i=1;
-              
-              
-                
-                
+
                     echo"<tr>";
                     $j=1;
                           
