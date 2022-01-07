@@ -20,7 +20,7 @@
 <ul class="sidenav-links">
   
   <li>
-    <a href="<?php echo BASEURL . '/spPackage'; ?>">
+    <a href="<?php echo BASEURL . '/spPackage/index/$row[service_id]'; ?>">
       <i class="fa fa-server" aria-hidden="true"></i>
       <span class="links_name">Packages</span>
     </a>
