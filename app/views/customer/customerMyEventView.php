@@ -69,7 +69,7 @@
                   <td>$row[noOfGuest]</td>
                   <td>$row[plan_type]</td>
                   <td>$status</td>
-                  <td><button class=\"go-event\"><a href =\" ".BASEURL ."/customerEventSB\">Go</a></button></td>
+                  <td><button class=\"go-event\"><a href =\" ".BASEURL ."/customerEventSB/index/$row[planning_id]\">Go</a></button></td>
         
                   
                   <td>  

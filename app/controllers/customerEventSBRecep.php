@@ -1,22 +1,20 @@
 <?php
 
 
-class CustomerEventSB extends FrameworkPartyak{
+class CustomerEventSBRecep extends FrameworkPartyak{
     public function __construct(){
         $this->helper("linker");
+
         $this->preventBack("customer");
-        $this->user = $this->model('customerEventSBModel');
     }
     
-    public function index($planning_id){
+    public function index(){
         // echo $_SESSION['type'];
         // if(!isset($_SESSION['userId']) && !isset($_SESSION['type']) || $_SESSION['type'] != "customer"){
         //     $this->redirect("login");
         // }
         // $this->preventBack("customer");
-
-        $data['event']= $this->user->getEventDetails($planning_id);
-        $this->view("customer/customerEventSBView",$data);
+        $this->view("customer/customerEventSBRecepView");
     }
 
 }

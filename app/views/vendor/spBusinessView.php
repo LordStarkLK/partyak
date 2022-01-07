@@ -103,11 +103,12 @@
                     }
                     echo "      
                         <div class=\"ser-details\">
-                            <div class=\"service_name\"><a href=\"<?php echo BASEURL . '/spService'; ?>\">$row[service_name]</a></div>
+                        
+                            <div class=\"service_name\"><a href=\" ".BASEURL ."/spPackage/index/$row[service_id]\">$row[service_name]</a></div>
                             <div class=\"location_name\">$row[service_location]</div>
                         </div>";
                     
-                    if($row['status'] == "accept"){
+                    if($row['status'] == "accepted"){
                         echo "
                         <div class=\"curr_status accept\">
                             <i class=\"fa fa-check-circle-o fa-2x\" aria-hidden=\"true\" ></i>

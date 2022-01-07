@@ -213,7 +213,7 @@ nav .sidebar-button i{
   width: 90%;
   background-color: black;
   height: 50px;
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
   display: flex;
   justify-content: center;

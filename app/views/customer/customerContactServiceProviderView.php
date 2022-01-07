@@ -117,8 +117,8 @@
    <div class="cusContent" id="con">
 
     <div class="cusSearch">
-      <form class="cuse" action="#" method="POST">
-        <input type="text" name="search">
+      <form class="cuse" action="<?php echo BASEURL . '/customerContactServiceProvider/index'; ?>" method="POST">
+        <input type="text" name="searchV">
         <button class="cusbtn" type="submit"><i class="fa fa-search"></i>Search</button>
       </form>
     </div>
@@ -160,7 +160,7 @@
 
           
 
-          <tr>
+          <!-- <tr>
             <td> <a  href="#"> <img <?php srcIMG("chanceFlowers.png") ?> alt="Chance Flowers"></a><br><p>2nd Chance Flowers <br> Colombo, Sri Lanka</p></td>
             <td> <a  href="<?php echo BASEURL . '/venuesANDhalls'; ?>"><img <?php srcIMG("hotel/hotel1.jpg") ?> alt="Chance Flowers"></a><br><p>Mount Lavinia Hotel <br> Colombo, Sri Lanka</p></td>
             <td> <a  href="#"> <img <?php srcIMG("bakeriya.jpg") ?> alt="Chance Flowers"></a> <br><p>APE BAKERIYA <br>Galle, Sri Lanka</p></td>   
@@ -170,7 +170,7 @@
             <td> <a  href="#"> <img <?php srcIMG("ashane.jpg") ?> alt="Chance Flowers"></a><br><p>Ashane Gunarathne <br>Malabe, Sri Lanka</p></td>
             <td> <a  href="#"> <img <?php srcIMG("dark.jpg") ?> alt="Chance Flowers"> </a><br><p>Dark Shine <br> Mathara, Sri Lanka</p></td>
             <td> <a  href="#"> <img <?php srcIMG("dukes.png") ?> alt="Chance Flowers"> </a><br><p>Dukes Court 1 <br>Katunayaka,Sri Lanka</p></td>  
-          </tr>
+          </tr> -->
           
         </table>
       </div>
@@ -180,7 +180,7 @@
   </div>
 
   <div class="epContent" id=popup-0>
-    <form action="#" class="form-area" method="POST">
+    <form action="<?php echo BASEURL . '/customerContactServiceProvider/index'; ?>" class="form-area" method="POST">
       <div class="eventq">
       <div class="back" id="backb">
           <button type="submit" class="bac" value="Submit"><i class="fas fa-arrow-left"></i></button>
@@ -279,7 +279,7 @@
 
   <div class="venueContent" id=popup-1>
      
-    <form action="#" class="form-area" method="POST">
+    <form action="<?php echo BASEURL . '/customerContactServiceProvider/index'; ?>" class="form-area" method="POST">
 
       <div class="venueq">
 
@@ -340,7 +340,7 @@
           </div>
           
           <div class="indoortick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="indoor" name="indoorAgree">
             <!-- <div class="error"><?php echo $errors["indoor"] ?></div> -->
           </div>
 
@@ -349,7 +349,7 @@
           </div>
           
           <div class="outdoortick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="outdoor" name="outdoorAgree">
             <!-- <div class="error"><?php echo $errors["outdoor"] ?></div> -->
           </div>
           
@@ -364,7 +364,7 @@
           </div>
           
           <div class="dancetick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="dancingfloor" name="danceAgree">
             <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
           </div>
 
@@ -376,7 +376,7 @@
           </div>
 
           <div class="setitick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="setiback" name="setiAgree">
             <!-- <div class="error"><?php echo $errors["seti"] ?></div> -->
           </div>
 
@@ -385,15 +385,16 @@
           </div>
 
           <div class="poruwatick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="poruwa" name="poruwaAgree">
             <!-- <div class="error"><?php echo $errors["poruwa"] ?></div> -->
           </div>
           
         </div>
 
 
-       <div class="save">
-          <button type="submit" class="saveb" value="Submit">Search</button>
+       <div class="save" id="venueSu">
+          <!-- <input type="hidden" value="venue" name="type"> -->
+          <button type="submit" class="saveb" value="submit"  >Search</button>
        </div>
 
       </div>
@@ -445,7 +446,7 @@
   </div>
 
   <div class="cateringContent" id=popup-2>
-    <form action="#" class="form-area" method="POST">
+    <form action="<?php echo BASEURL . '/customerContactServiceProvider/index'; ?>" class="form-area" method="POST">
 
       <div class="cateringq">
 
@@ -538,7 +539,7 @@
   </div>
 
   <div class="photoContent" id=popup-3>
-    <form action="#" class="form-area" method="POST">
+    <form action="<?php echo BASEURL . '/customerContactServiceProvider/index'; ?>" class="form-area" method="POST">
 
   
       <div class="photoq">
@@ -634,7 +635,7 @@
 
   
   <div class="musicContent" id=popup-4>
-    <form action="#" class="form-area" method="POST">
+    <form action="<?php echo BASEURL . '/customerContactServiceProvider/index'; ?>" class="form-area" method="POST">
 
       <div class="musicq">
 
@@ -682,7 +683,7 @@
           </div>
           
           <div class="mbandtick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree"  value="band" name="mbandAgree">
             <!-- <div class="error"><?php echo $errors["mband"] ?></div> -->
           </div>
 
@@ -691,7 +692,7 @@
           </div>
           
           <div class="djstick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="dj" name="djAgree">
             <!-- <div class="error"><?php echo $errors["djs"] ?></div> -->
           </div>
         </div>
@@ -702,7 +703,7 @@
           </div>
           
           <div class="solotick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="solo" name="soloAgree">
             <!-- <div class="error"><?php echo $errors["solo"] ?></div> -->
           </div>
          
@@ -761,7 +762,7 @@
 
  
   <div class="danceContent" id=popup-5>
-    <form action="#" class="form-area" method="POST">
+    <form action="<?php echo BASEURL . '/customerContactServiceProvider/index'; ?>" class="form-area" method="POST">
 
       <div class="danceq">
 
@@ -811,7 +812,7 @@
           </div>
           
           <div class="kandytick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="kandy" name="kandyAgree">
             <!-- <div class="error"><?php echo $errors["kandy"] ?></div> -->
           </div>
 
@@ -820,7 +821,7 @@
           </div>
           
           <div class="lawtick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree"  value="low" name="lawAgree">
             <!-- <div class="error"><?php echo $errors["law"] ?></div> -->
           </div>
 
@@ -832,7 +833,7 @@
           </div>
           
           <div class="sabatick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="sabara" name="sabaAgree">
             <!-- <div class="error"><?php echo $errors["saba"] ?></div> -->
           </div>
 
@@ -841,7 +842,7 @@
           </div>
           
           <div class="westick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="wes" name="wesAgree">
             <!-- <div class="error"><?php echo $errors["wes"] ?></div> -->
           </div>
           
@@ -901,7 +902,7 @@
 
 
   <div class="salonContent" id=popup-6>
-    <form action="#" class="form-area" method="POST">
+    <form action="<?php echo BASEURL . '/customerContactServiceProvider/index'; ?>" class="form-area" method="POST">
 
       <div class="salonq">
         <div class="back" id="backb">
@@ -1015,7 +1016,7 @@
 
   
   <div class="cakeContent" id=popup-7>
-    <form action="#" class="form-area" method="POST">
+    <form action="<?php echo BASEURL . '/customerContactServiceProvider/index'; ?>" class="form-area" method="POST">
 
       <div class="cakeq">
         <div class="back" id="backb">
@@ -1064,7 +1065,7 @@
           </div>
           
           <div class="wedtick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="weddingcake" name="wedAgree">
             <!-- <div class="error"><?php echo $errors["wed"] ?></div> -->
           </div>
 
@@ -1073,7 +1074,7 @@
           </div>
           
           <div class="partytick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="partycake" name="partyAgree">
             <!-- <div class="error"><?php echo $errors["party"] ?></div> -->
           </div>
       
@@ -1085,7 +1086,7 @@
           </div>
           
           <div class="sweetick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="cookies" name="sweetAgree">
             <!-- <div class="error"><?php echo $errors["sweets"] ?></div> -->
           </div>
       
@@ -1104,10 +1105,7 @@
 
             <?php
                             $i=1;
-                          
-                          
-                            
-                            
+
                                 echo"<tr>";
                                 $j=1;
                                       
@@ -1144,7 +1142,7 @@
 
 
   <div class="decoContent" id=popup-8>
-    <form action="#" class="form-area" method="POST">
+    <form action="<?php echo BASEURL . '/customerContactServiceProvider/index'; ?>" class="form-area" method="POST">
 
       <div class="decoq">
         <div class="back" id="backb">
@@ -1193,7 +1191,7 @@
           </div>
           
           <div class="backtick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="setiback" name="sbackAgree">
             <!-- <div class="error"><?php echo $errors["back"] ?></div> -->
           </div>
 
@@ -1202,7 +1200,7 @@
           </div>
           
           <div class="floraltick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="poruw&seti" name="floralAgree">
             <!-- <div class="error"><?php echo $errors["floral"] ?></div> -->
           </div>
     
@@ -1261,7 +1259,7 @@
 
   
   <div class="soundContent" id=popup-9>
-    <form action="#" class="form-area" method="POST">
+    <form action="<?php echo BASEURL . '/customerContactServiceProvider/index'; ?>" class="form-area" method="POST">
 
       <div class="soundq">
 
@@ -1311,7 +1309,7 @@
           </div>
           
           <div class="soundtick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="mensec" name="maleAgree">
             <!-- <div class="error"><?php echo $errors["sound"] ?></div> -->
           </div>
 
@@ -1320,7 +1318,7 @@
           </div>
           
           <div class="lightick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="womensec" name="femaleAgree">
             <!-- <div class="error"><?php echo $errors["light"] ?></div> -->
           </div>
     
@@ -1402,7 +1400,7 @@
 
   
   <div class="dressContent" id=popup-10>
-    <form action="#" class="form-area" method="POST">
+    <form action="<?php echo BASEURL . '/customerContactServiceProvider/index'; ?>" class="form-area" method="POST">
 
       <div class="dressq">
         <div class="back" id="backb">
