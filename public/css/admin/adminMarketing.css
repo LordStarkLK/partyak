@@ -305,6 +305,26 @@ ul.breadcrumb {
   color: green;
 }
 
+.pending{
+  color: darkgoldenrod;
+}
+
+.online{
+  color: green;
+}
+
+.offline{
+  color:red;
+}
+
+.Accepted{
+  color: rgb(44, 44, 235);
+}
+
+.Rejected{
+  color:red;
+}
+
 /* Drop down button select status start */
 
 
@@ -315,6 +335,7 @@ ul.breadcrumb {
 
 
 .dropdown-content {
+  cursor: pointer;
   display: none;
   position: absolute;
   background-color: #8ecccc;

@@ -49,15 +49,10 @@
 
                     </ul>
 
-                    <div class="search-container">
-                        <form action="/action_page.php">
-                            <input type="text" placeholder="Search by customer.." name="search">
-
-                            <button type="submit"><i class="fa fa-search"></i></button>
-                            <!-- <i class="fas fa-search"></i> -->
-
-
-                        </form>
+                    <div class="search">
+                        <span class="text">   View users...</span>
+                        <input type="text" name="search" placeholder="Enter service name to search...">
+                        <button><i class="fas fa-search"></i></button>
                     </div>
 
 
@@ -73,14 +68,41 @@
 
                     <table>
                         <tr>
-                            <th>Customer Name</th>
-                            <th>Vendor Name</th>
-                            <th>Type</th>
-                            <th>Booking Date</th>
-                            <th>More Options</th>
+                            <th>Bookings Id</th>
+                            <th>Customer</th>
+                            <th>Service</th>
+                            <th>Package</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                            <th>More actions</th>
 
                         </tr>
                         <tr>
+                            <?php while($row = mysqli_fetch_assoc($data['booking'])){
+                                $row2 = mysqli_fetch_assoc($data['customer']);
+                                $row3 = mysqli_fetch_assoc($data['service']);
+                                $row4 = mysqli_fetch_assoc($data['package']);
+                                echo"
+                                <td>$row[booking_id]</td>
+                                <td>$row2[f_name] $row2[l_name]</td>
+                                <td>$row3[service_name]</td>
+                                <td>$row4[package_name]</td>
+                                <td>$row[status]</td>
+                                <td>$row[event_date]</td>
+                                <td>
+                                <div class=\"btn-group\">
+                                    <button onclick=\"window.location='<?php echo BASEURL . '/adminVendorBookings'; ?>'\">See in Vendor Bookings</button>
+                                    <button >Delete</button>
+
+                                </div>
+                            </td>
+                            </tr>
+
+                                ";
+                            } ?>
+                        
+
+                        <!-- <tr>
                             <td>Paulo Costa</td>
                             <td>Halo hotels</td>
                             <td>Venues and halls</td>
@@ -122,7 +144,7 @@
                                 </div>
                             </td>
 
-                        </tr>
+                        </tr> -->
 
 
                     </table>
@@ -132,6 +154,8 @@
         </section>
     </div>
 
+    <?php linkJS("lib/jquery-3.6.0.min"); ?>
+    <?php linkJS("admin/bookings");?>
     <?php linkJS("adminHomeView"); ?>
 
 

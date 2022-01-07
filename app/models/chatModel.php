@@ -72,7 +72,7 @@
                 $output .= '<div class="text">No messages are available. Once you send message they will appear here.</div>'; 
             }return $output;
         }
-
+        
         public function send($user,$message){
 
             $sender = $_SESSION['userId'];

@@ -32,13 +32,16 @@ body{
     padding: 25px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     background-color: rgba(32, 32, 32, 0.829);
     /* background-color: rgb(218, 170, 153); */
     box-shadow: 10px 10px 15px 10px rgba(0, 0, 0, 0.349);
+    overflow-x: scroll;
+
 }
+
 .service-box{
-    width: 275px;
+    min-width: 275px;
     height: 350px;
     background-color: cadetblue;
     margin: 5px;
@@ -110,6 +113,15 @@ body{
     font-size: 23px;
     margin-left: 15px;
     font-weight: 600;
+    /* color: rgb(37, 228, 53); */
+}
+.curr_status.pending{
+    color: rgb(209, 228, 37);
+}
+.curr_status.reject{
+    color: rgb(228, 37, 37);
+}
+.curr_status.accept{
     color: rgb(37, 228, 53);
 }
 .action{

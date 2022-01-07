@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #000000e8;
+    background-image: url("../../../public/img/home-confetti.png");
+    background-repeat: round;
+}
+.delContainer{
+    padding: 1% 10% 5% 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.delContainer .delContent{
+    width: 650px;
+    height: 400px;
+    padding: 20px;
+}
+.delContent .container-top{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.delContent .container-bottom{
+    width: 100%;
+    min-height: 75%;
+    border-radius: 20px;
+    padding: 65px 20px 10px 20px;
+    box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.658);
+}
+/* test */
+ .del-icon{
+    margin-top: 100px;
+    background-color: rgba(254,245,242,1);
+    border-radius: 50%;
+    border-style: solid;
+    border-color: rgb(253, 98, 98);
+    color: rgb(253, 98, 98);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title, .description{
+    width: 100%;
+    text-align: center;
+    line-height: 28px;
+    padding-bottom: 25px;
+}
+
+.title a{
+    font-size: 23px;
+    font-weight: 800;
+    color: rgb(253, 98, 98);
+}
+
+.description a{
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.801);
+}
+.action{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.action .deleteBtn{
+    padding: 4px 15px 4px 15px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: rgb(253, 98, 98);
+    color: black;
+}
+.action .deleteBtn i{
+    padding-left: 5px;
+}
+
+.deleteBtn:hover{
+    cursor: pointer;
+}

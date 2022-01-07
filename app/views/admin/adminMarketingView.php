@@ -65,15 +65,60 @@
 
                     <table>
                         <tr>
+                            <th>content_id</th>
                             <th>Vendor Name</th>
-                            <th>Title </th>
+                            <!-- <th>Title </th> -->
                             <th>Content</th>
                             <th>Status</th>
                             <th>More actions</th>
 
                         </tr>
                         <tr>
-                            <td>JK photography</td>
+                            <?php
+                                $x = 1;
+                                while($row = mysqli_fetch_assoc($data['marketing'])){
+                                    $row2 = mysqli_fetch_assoc($data['user']);
+                                    $id_name = 'myDropdown';
+                                    $status_name = 'status';
+                                    $status_name .= $row['content_id'];
+
+                                    $id_name .= $x;
+                                    
+
+                                    echo "
+                                    <td>$row[content_id]</td>
+                                    <td>$row2[f_name] $row2[l_name]</td>
+                                    <td><a target=\"_blank\" href=\"http://localhost/partyak/public/img/marketingContent/$row[content]\"><img class=\"customer-image\" src=\"http://localhost/partyak/public/img/marketingContent/$row[content]\"  width=\"60\" height=\"60\">
+                                    </a>
+                                    </td>
+                                    <td class=$status_name><i class=\"fas fa-circle $row[upload_status]\"></i> $row[upload_status]</td>
+                                    <td>
+                                        <div class=\"btn-group\">
+                                            <div class=\"dropdown\">
+                                            <button onclick=\"myFunction($x)\" class=\"dropbtn\">Change Status <i class=\"fas fa-caret-down\"></i></button>
+                                        <div id=$id_name class=\"dropdown-content\">
+                                        <a class=\"accept-btn $row[content_id]\">Accept</a>
+                                        <a class=\"reject-btn $row[content_id]\">Reject</a>
+                                        <a class=\"online-btn $row[content_id]\">Make online</a>
+                                        <a class=\"offline-btn $row[content_id]\">Make Offline</a>
+                                        
+                                        </div>
+                                        </div>
+                                        <button>Delete Content</button>
+                                        </div>
+
+    
+                                    </td>
+                                    </tr>
+                                    
+                                    
+                                    
+                                    ";
+                                    $x++;
+                                }
+
+                            ?>
+                            <!-- <td>JK photography</td>
                             <td>photography is an art</td>
                             <td><img class="customer-image" <?php srcIMG("marketingad.jpg") ?> width="60" height="60">
                             </td>
@@ -194,7 +239,7 @@
 
                                 </div>
                             </td>
-                        </tr>
+                        </tr> -->
 
 
                     </table>
@@ -203,7 +248,8 @@
 
         </section>
     </div>
-
+    <?php linkJS("lib/jquery-3.6.0.min"); ?>
+    <?php linkJS("admin/adminMarketing"); ?>                                
     <?php linkJS("adminHomeView"); ?>
 
 

@@ -16,11 +16,11 @@ class SpMarketing extends FrameworkPartyak
         $id=$_SESSION['userId'];
 
         if (isset($_POST['submit'])) {
-            $file = $_FILES['file'];
+            // $file = $_FILES['file'];
                 // print_r($file);
             $fileName = $_FILES['file']['name'];
             $fileTmpName = $_FILES['file']['tmp_name'];
-            $fileSize = $_FILES['file']['size'];
+            // $fileSize = $_FILES['file']['size'];
             $fileError = $_FILES['file']['error'];
             $fileType = $_FILES['file']['type'];
     
@@ -35,7 +35,7 @@ class SpMarketing extends FrameworkPartyak
                 //ckeck errors
                 if($fileError === 0){
                     //check the file size
-                    if ($fileSize < 1000000){
+                    // if ($fileSize < 1000000){
                         //set a unique name
                         $fileNameNew = uniqid('', true).".".$fileName ;
                         //upload to the folder
@@ -55,10 +55,10 @@ class SpMarketing extends FrameworkPartyak
                         //     echo "Uploading fail!";
                         // }
                         
-                    }
-                    else{
-                        echo "Your file is too big!";
-                    }
+                    // }
+                    // else{
+                    //     echo "Your file is too big!";
+                    // }
                 }
                 else{
                     echo "Error in uploading the file!";

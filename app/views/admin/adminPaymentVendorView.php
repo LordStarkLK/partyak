@@ -20,12 +20,12 @@
 
             <div class="sidebar-button">
                 <i class='bx bx-menu sidebarBtn' id="iconMenu"></i>
-                <span class="dashboard">PAYMENT</span>
+                <span class="dashboard">PAYMENTS & SETTLEMENTS</span>
             </div>
 
             <div class="home-content">
                 <div class="overview-boxes">
-                    <div class="box" id="box-marketing">
+                    <div class="box" id="box-marketing" onclick="window.location='<?php echo BASEURL . '/adminPayment'; ?>'">
                         <span class="links_name"><img class="customer-image" <?php srcIMG("payment.png") ?> width="40"
                                 height="40">
                             <div class="box-topic">Payment</div>
@@ -33,12 +33,22 @@
 
                     </div>
 
+                    <div class="box" id="box-marketing" >
+                        <span class="links_name"><img class="customer-image" <?php srcIMG("settlement.png") ?>
+                                width="40" height="40" >
+                            <div class="box-topic">Settlements</div>
+                        </span>
+
+
+                    </div>
+
+
                 </div>
 
                 <div class="horizontal-container">
 
                     <ul class="breadcrumb">
-                        <li><a>Payment</a></li>
+                        <li><a>Settlements</a></li>
 
                     </ul>
 
@@ -104,11 +114,7 @@
 
 
                 </div>
-                <div class="pill-nav">
-                    <a href="<?php echo BASEURL . '/adminPayment' ?>">Customer</a>
-                    <a class="active" href="">vendor</a>
-
-                </div>
+                
 
                 <div class="search-container">
                     <form action="/action_page.php">

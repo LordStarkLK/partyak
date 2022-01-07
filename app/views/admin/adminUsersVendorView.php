@@ -1,48 +1,52 @@
 <!DOCTYPE html>
 
 <html lang="en" dir="ltr">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <?php linkCSS("admin/sidebar"); ?>
     <?php linkCSS("admin/adminUsers"); ?>
     <?php linkCSS("css/all"); ?>
-   
+
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
 <body>
-<div class="container">
-  <?php linkPHP("adminSidebar");?>
-  <section class="home-section">
-    
-      <div class="sidebar-button">
-        <i class='bx bx-menu sidebarBtn' id="iconMenu"></i>
-        <span class="dashboard">USERS</span>
-      </div>
-   
-    <div class="home-content">
-    <div class="overview-boxes">
-        <div class="box" id="box-customer">
-            <span class="links_name" onclick="window.location='<?php echo BASEURL . '/adminUsers'; ?>'"><img class="customer-image" <?php srcIMG("consumer.png") ?> width="40" height="40">
-            <div class="box-topic">Customers</div></span>
-            <!-- <a href="<?php echo BASEURL . 'adminUsers'; ?>"></a>
+    <div class="container">
+        <?php linkPHP("adminSidebar");?>
+        <section class="home-section">
+
+            <div class="sidebar-button">
+                <i class='bx bx-menu sidebarBtn' id="iconMenu"></i>
+                <span class="dashboard">USERS</span>
+            </div>
+
+            <div class="home-content">
+                <div class="overview-boxes">
+                    <div class="box" id="box-customer">
+                        <span class="links_name" onclick="window.location='<?php echo BASEURL . '/adminUsers'; ?>'"><img
+                                class="customer-image" <?php srcIMG("consumer.png") ?> width="40" height="40">
+                            <div class="box-topic">Customers</div>
+                        </span>
+                        <!-- <a href="<?php echo BASEURL . 'adminUsers'; ?>"></a>
             <img class="customer-image" <?php srcIMG("consumer.png") ?> width="40" height="40">
             <div class="box-topic">Customers</div> -->
-          
-          
-          <!-- <i class='bx bxs-user cart'></i> -->
-        </div>
-        <div class="box" id="box-service">
-        <span class="links_name" onclick="window.location='<?php echo BASEURL . '/adminUsersService'; ?>'">
-        <img class="service-image" <?php srcIMG("service.png") ?> width="40" height="40">
-            <div class="box-topic">Vendors</div>
-    </span>
-            
-          
-          <!-- <i clss='bx bxs-user-rectangle cart two' ></i> -->
-        </div>
-        <!-- <div class="box" id="box-event">
+
+
+                        <!-- <i class='bx bxs-user cart'></i> -->
+                    </div>
+                    <div class="box" id="box-service">
+                        <span class="links_name">
+                            <img class="service-image" <?php srcIMG("service.png") ?> width="40" height="40">
+                            <div class="box-topic">Vendors</div>
+                        </span>
+
+
+                        <!-- <i clss='bx bxs-user-rectangle cart two' ></i> -->
+                    </div>
+                    <!-- <div class="box" id="box-event">
         <span class="links_name" onclick="window.location='<?php echo BASEURL . '/adminUsersEvent'; ?>'">
         <img class="event-image" <?php srcIMG("event.png") ?> width="40" height="40">   
             <div class="box-topic">Event Planners</div>
@@ -51,46 +55,45 @@
           
           
         </div> -->
-        </div>
+                </div>
 
-      <div>
-      <ul class="breadcrumb">
-        <li><a href="#">Users</a></li>
-        <li><a href="#">Vendors</a></li>
-        </ul>
+                <div>
+                    <ul class="breadcrumb">
+                        <li><a href="#">Users</a></li>
+                        <li><a href="#">Vendors</a></li>
+                    </ul>
 
-        <div class="search-container">
-          <form action="/action_page.php">
-          <input type="text" placeholder="Search Vendors.." name="search">
-         
-          <button type="submit"><i class="fa fa-search"></i></button>
-          <!-- <i class="fas fa-search"></i> -->
-         
-          
-    </form>
-  </div>
-        
-        
-      </div>
+                    <div class="search">
+                        <span class="text"> View users...</span>
+                        <input type="text" name="search" placeholder="Enter name to search...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
 
 
+                    </form>
+                </div>
 
-      <ul class="breadcrumb">
-  
-</ul>
 
-      <div class="sales-boxes">
-        
-        <table>
-  <tr>
-    <th>User ID</th>
-    <th>Vendor Name</th>
-    <th>Email</th>
-    <th>Services</th>
-    <th>More Actions</th>
+            </div>
 
-  </tr>
-  <!-- <tr>
+
+
+            <ul class="breadcrumb">
+
+            </ul>
+
+            <div class="sales-boxes">
+
+                <table>
+                    <tr>
+                        <th>User ID</th>
+                        <th>Vendor Name</th>
+                        <th>Email</th>
+                        <th>Services</th>
+                        <th>More Actions</th>
+
+                    </tr>
+                    <!-- <tr>
     <td>01</td>
     <td>Griffin</td>
     <td>griffin@gmail.com</td>
@@ -104,7 +107,7 @@
     </td>
   </tr> -->
 
-<?php while($row=mysqli_fetch_assoc($data['vendor'])){
+                    <?php while($row=mysqli_fetch_assoc($data['vendor'])){
   $i = 1;
   // $row2 = mysqli_fetch_assoc($data['service_email']);
   echo"
@@ -115,7 +118,7 @@
   <td>Not Defined</td>
   <td>
   <div class=\"btn-group\">
-  <button onclick=\"window.location=' " . BASEURL . "/adminUserProfile'\">View Profile</button>
+  <button onclick=\"window.location=' " . BASEURL . "/adminUserProfile/index/$row[user_id]'\">View Profile</button>
 
   <button onclick=\"window.location=' " . BASEURL . "/adminUsersVendor/deleteUser/$row[user_id]'\">Delete User</button>
   
@@ -125,19 +128,22 @@
   </tr>
   ";
   $i++;
-} ?> 
+} ?>
 
-</table>
-          
-        
-        
-  </section>
-</div>
-
-<?php linkJS("adminHomeView"); ?>
+                </table>
 
 
-  
+
+        </section>
+    </div>
+
+    <?php linkJS("lib/jquery-3.6.0.min"); ?>
+    <?php linkJS("adminHomeView"); ?>
+    <?php linkJS("admin/userVendor"); ?>
+
+
+
 
 </body>
+
 </html>

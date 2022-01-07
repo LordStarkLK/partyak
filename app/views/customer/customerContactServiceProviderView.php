@@ -11,7 +11,18 @@
      <?php linkCSS("customer/customerContactServiceProviderView"); ?>
     <?php linkCSS("customerNavigation"); ?>
     <?php linkCSS("footer");?>
-    <?php $serviceI=$data['service_detail'];?>
+    <!-- <?php $serviceI=$data['service_detail'];?>
+    <?php $serviceI=$data['ep_detail'];?>
+    <?php $venueI=$data['venue_detail'];?>
+    <?php $serviceI=$data['cate_detail'];?>
+    <?php $serviceI=$data['photo_detail'];?>
+    <?php $serviceI=$data['music_detail'];?>
+    <?php $serviceI=$data['dance_detail'];?>
+    <?php $serviceI=$data['salon_detail'];?>
+    <?php $serviceI=$data['cake_detail'];?>
+    <?php $serviceI=$data['deco_detail'];?>
+    <?php $serviceI=$data['sound_detail'];?>
+    <?php $serviceI=$data['dress_detail'];?> -->
    </head>
 <body>
     <header>
@@ -106,8 +117,8 @@
    <div class="cusContent" id="con">
 
     <div class="cusSearch">
-      <form class="cuse" action="#" method="POST">
-        <input type="text" name="search">
+      <form class="cuse" action="<?php echo BASEURL . '/customerContactServiceProvider/index'; ?>" method="POST">
+        <input type="text" name="searchV">
         <button class="cusbtn" type="submit"><i class="fa fa-search"></i>Search</button>
       </form>
     </div>
@@ -128,32 +139,28 @@
                 $j=1;
                       
                         while($row=mysqli_fetch_assoc($data['service_detail'])  ){
-                          if(!($row['service_image'])){
-                            $row['service_image'] = "default.png";
-                          }
                           echo "<td>";
-                          echo "<img src='http://localhost/partyak/public/img/serviceImages\".($row[service_image]).'";
+                          if($row['service_image']){
+                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                          }else{
+                            $row['service_image']="default.png";
+                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                          }
                           echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
-                          echo "</td>";
+                          echo "</td>"; 
+                         
                           $j++;
-                          if($j>=3){
+                          if($j>3){
                             echo "</tr>";
                             $j = 1;
                           }
                           
                         }
-                        
-                      
-                        
-                      
-               
-              
-            
           ?>
 
           
 
-          <tr>
+          <!-- <tr>
             <td> <a  href="#"> <img <?php srcIMG("chanceFlowers.png") ?> alt="Chance Flowers"></a><br><p>2nd Chance Flowers <br> Colombo, Sri Lanka</p></td>
             <td> <a  href="<?php echo BASEURL . '/venuesANDhalls'; ?>"><img <?php srcIMG("hotel/hotel1.jpg") ?> alt="Chance Flowers"></a><br><p>Mount Lavinia Hotel <br> Colombo, Sri Lanka</p></td>
             <td> <a  href="#"> <img <?php srcIMG("bakeriya.jpg") ?> alt="Chance Flowers"></a> <br><p>APE BAKERIYA <br>Galle, Sri Lanka</p></td>   
@@ -163,7 +170,7 @@
             <td> <a  href="#"> <img <?php srcIMG("ashane.jpg") ?> alt="Chance Flowers"></a><br><p>Ashane Gunarathne <br>Malabe, Sri Lanka</p></td>
             <td> <a  href="#"> <img <?php srcIMG("dark.jpg") ?> alt="Chance Flowers"> </a><br><p>Dark Shine <br> Mathara, Sri Lanka</p></td>
             <td> <a  href="#"> <img <?php srcIMG("dukes.png") ?> alt="Chance Flowers"> </a><br><p>Dukes Court 1 <br>Katunayaka,Sri Lanka</p></td>  
-          </tr>
+          </tr> -->
           
         </table>
       </div>
@@ -173,7 +180,7 @@
   </div>
 
   <div class="epContent" id=popup-0>
-    <form action="#" class="form-area" method="POST">
+    <form action="<?php echo BASEURL . '/customerContactServiceProvider/index'; ?>" class="form-area" method="POST">
       <div class="eventq">
       <div class="back" id="backb">
           <button type="submit" class="bac" value="Submit"><i class="fas fa-arrow-left"></i></button>
@@ -221,6 +228,36 @@
     <div class="ecusDetail">
       <div class="ecusraw1">
         <table>
+            <?php
+                    $i=1;
+                  
+                  
+                    
+                    
+                        echo"<tr>";
+                        $j=1;
+                              
+                                while($row=mysqli_fetch_assoc($data['ep_detail'])  ){
+                                  echo "<td>";
+                                  if($row['service_image']){
+                                    echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                  }else{
+                                    $row['service_image']="default.png";
+                                    echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                  }
+                                  echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
+                                  echo "</td>"; 
+                                
+                                  $j++;
+                                  if($j>3){
+                                    echo "</tr>";
+                                    $j = 1;
+                                  }
+                                  
+                                }
+            ?>
+
+
           <tr>
             <td> <a  href="#"> <img <?php srcIMG("brought.jpg") ?> alt="Chance Flowers"></a><br><p>Broghts Event Production <br> Colombo, Sri Lanka</p></td>
             <td> <a href="<?php echo BASEURL . '/eventPlanner'; ?>" ><img <?php srcIMG("nekatha.jpg") ?> alt="Chance Flowers"> </a><br><p>Nekatha <br>Colombo, Sri Lanaka</p></td>
@@ -242,7 +279,7 @@
 
   <div class="venueContent" id=popup-1>
      
-    <form action="#" class="form-area" method="POST">
+    <form action="<?php echo BASEURL . '/customerContactServiceProvider/index'; ?>" class="form-area" method="POST">
 
       <div class="venueq">
 
@@ -303,7 +340,7 @@
           </div>
           
           <div class="indoortick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="indoor" name="indoorAgree">
             <!-- <div class="error"><?php echo $errors["indoor"] ?></div> -->
           </div>
 
@@ -312,7 +349,7 @@
           </div>
           
           <div class="outdoortick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="outdoor" name="outdoorAgree">
             <!-- <div class="error"><?php echo $errors["outdoor"] ?></div> -->
           </div>
           
@@ -327,7 +364,7 @@
           </div>
           
           <div class="dancetick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="dancingfloor" name="danceAgree">
             <!-- <div class="error"><?php echo $errors["dancing"] ?></div> -->
           </div>
 
@@ -339,7 +376,7 @@
           </div>
 
           <div class="setitick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="setiback" name="setiAgree">
             <!-- <div class="error"><?php echo $errors["seti"] ?></div> -->
           </div>
 
@@ -348,15 +385,16 @@
           </div>
 
           <div class="poruwatick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="poruwa" name="poruwaAgree">
             <!-- <div class="error"><?php echo $errors["poruwa"] ?></div> -->
           </div>
           
         </div>
 
 
-       <div class="save">
-          <button type="submit" class="saveb" value="Submit">Search</button>
+       <div class="save" id="venueSu">
+          <!-- <input type="hidden" value="venue" name="type"> -->
+          <button type="submit" class="saveb" value="submit"  >Search</button>
        </div>
 
       </div>
@@ -366,11 +404,40 @@
     <div class="vcusDetail">
       <div class="vcusraw1">
         <table>
-          <tr>
+            <?php
+                $i=1;
+              
+              
+                
+                
+                    echo"<tr>";
+                    $j=1;
+                          
+                            while($row=mysqli_fetch_assoc($data['venue_detail'])  ){
+                              echo "<td>";
+                              if($row['service_image']){
+                                echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                              }else{
+                                $row['service_image']="default.png";
+                                echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                              }
+                              echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
+                              echo "</td>"; 
+                            
+                              $j++;
+                              if($j>3){
+                                echo "</tr>";
+                                $j = 1;
+                              }
+                              
+                            }
+            ?>
+
+          <!-- <tr>
             <td> <a href="<?php echo BASEURL . '/venuesANDhalls'; ?>"><img <?php srcIMG("hotel/hotel1.jpg") ?> alt="Chance Flowers"></a><br><p>Mount Lavinia Hotel <br> Colombo, Sri Lanka</p></td>
             <td> <a  href="#"> <img <?php srcIMG("modernbanquet.jpg") ?> alt="Chance Flowers"></a><br><p>Modern Banquet Hotel <br> Colombo, Sri Lanka</p></td>
             <td> <a  href="#"> <img <?php srcIMG("dukes.png") ?> alt="Chance Flowers"> </a><br><p>Dukes Court 1 <br>Katunayaka,Sri Lanka</p></td>  
-          </tr>
+          </tr> -->
         </table>
       </div>
   
@@ -379,7 +446,7 @@
   </div>
 
   <div class="cateringContent" id=popup-2>
-    <form action="#" class="form-area" method="POST">
+    <form action="<?php echo BASEURL . '/customerContactServiceProvider/index'; ?>" class="form-area" method="POST">
 
       <div class="cateringq">
 
@@ -430,6 +497,35 @@
     <div class="ccusDetail">
       <div class="ccusraw1">
         <table>
+
+            <?php
+                        $i=1;
+                      
+                      
+                        
+                        
+                            echo"<tr>";
+                            $j=1;
+                                  
+                                    while($row=mysqli_fetch_assoc($data['cate_detail'])  ){
+                                      echo "<td>";
+                                      if($row['service_image']){
+                                        echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                      }else{
+                                        $row['service_image']="default.png";
+                                        echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                      }
+                                      echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
+                                      echo "</td>"; 
+                                    
+                                      $j++;
+                                      if($j>3){
+                                        echo "</tr>";
+                                        $j = 1;
+                                      }
+                                      
+                                    }
+            ?>
           <tr>
             <td> <a  href="#"> <img <?php srcIMG("cate.png") ?> alt="Chance Flowers"></a><br><p>Dushan Catering <br> Colombo, Sri Lanka</p></td>
             <td> <a  href="#"> <img <?php srcIMG("jayamalpng.png") ?> alt="Chance Flowers"></a> <br><p>Jayamal Caterers <br> Galle, Sri Lanka</p></td>
@@ -443,7 +539,7 @@
   </div>
 
   <div class="photoContent" id=popup-3>
-    <form action="#" class="form-area" method="POST">
+    <form action="<?php echo BASEURL . '/customerContactServiceProvider/index'; ?>" class="form-area" method="POST">
 
   
       <div class="photoq">
@@ -494,6 +590,37 @@
     <div class="pcusDetail">
       <div class="pcusraw1">
         <table>
+
+          <?php
+                      $i=1;
+                    
+                    
+                      
+                      
+                          echo"<tr>";
+                          $j=1;
+                                
+                                  while($row=mysqli_fetch_assoc($data['photo_detail'])  ){
+                                    echo "<td>";
+                                    if($row['service_image']){
+                                      echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                    }else{
+                                      $row['service_image']="default.png";
+                                      echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                    }
+                                    echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
+                                    echo "</td>"; 
+                                  
+                                    $j++;
+                                    if($j>3){
+                                      echo "</tr>";
+                                      $j = 1;
+                                    }
+                                    
+                                  }
+          ?>
+
+
           <tr>
             <td> <a  href="#"> <img <?php srcIMG("pob.jpg") ?> alt="Chance Flowers"></a><br><p>OB Sudio <br> Galle, Sri Lanka</p></td>
             <td> <a  href="#"> <img <?php srcIMG("pOminro.jpg") ?> alt="Chance Flowers"></a> <br><p>Ominro <br> Gampaha, Sri Lanka</p></td>
@@ -508,7 +635,7 @@
 
   
   <div class="musicContent" id=popup-4>
-    <form action="#" class="form-area" method="POST">
+    <form action="<?php echo BASEURL . '/customerContactServiceProvider/index'; ?>" class="form-area" method="POST">
 
       <div class="musicq">
 
@@ -556,7 +683,7 @@
           </div>
           
           <div class="mbandtick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree"  value="band" name="mbandAgree">
             <!-- <div class="error"><?php echo $errors["mband"] ?></div> -->
           </div>
 
@@ -565,7 +692,7 @@
           </div>
           
           <div class="djstick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="dj" name="djAgree">
             <!-- <div class="error"><?php echo $errors["djs"] ?></div> -->
           </div>
         </div>
@@ -576,7 +703,7 @@
           </div>
           
           <div class="solotick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="solo" name="soloAgree">
             <!-- <div class="error"><?php echo $errors["solo"] ?></div> -->
           </div>
          
@@ -592,6 +719,35 @@
     <div class="mcusDetail">
       <div class="mcusraw1">
         <table>
+
+            <?php
+                        $i=1;
+                      
+                      
+                        
+                        
+                            echo"<tr>";
+                            $j=1;
+                                  
+                                    while($row=mysqli_fetch_assoc($data['music_detail'])  ){
+                                      echo "<td>";
+                                      if($row['service_image']){
+                                        echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                      }else{
+                                        $row['service_image']="default.png";
+                                        echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                      }
+                                      echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
+                                      echo "</td>"; 
+                                    
+                                      $j++;
+                                      if($j>3){
+                                        echo "</tr>";
+                                        $j = 1;
+                                      }
+                                      
+                                    }
+            ?>
           <tr>
             <td> <a  href="#"> <img <?php srcIMG("ashane.jpg") ?> alt="Chance Flowers"></a><br><p>Ashane Gunarathne <br>Colombo, Sri Lanka</p></td>
             <td> <a  href="#"> <img <?php srcIMG("Wavemusic.jpg") ?> alt="Chance Flowers"> </a><br><p>Waves<br> Mathara, Sri Lanka</p></td>
@@ -606,7 +762,7 @@
 
  
   <div class="danceContent" id=popup-5>
-    <form action="#" class="form-area" method="POST">
+    <form action="<?php echo BASEURL . '/customerContactServiceProvider/index'; ?>" class="form-area" method="POST">
 
       <div class="danceq">
 
@@ -656,7 +812,7 @@
           </div>
           
           <div class="kandytick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="kandy" name="kandyAgree">
             <!-- <div class="error"><?php echo $errors["kandy"] ?></div> -->
           </div>
 
@@ -665,7 +821,7 @@
           </div>
           
           <div class="lawtick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree"  value="low" name="lawAgree">
             <!-- <div class="error"><?php echo $errors["law"] ?></div> -->
           </div>
 
@@ -677,7 +833,7 @@
           </div>
           
           <div class="sabatick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="sabara" name="sabaAgree">
             <!-- <div class="error"><?php echo $errors["saba"] ?></div> -->
           </div>
 
@@ -686,7 +842,7 @@
           </div>
           
           <div class="westick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="wes" name="wesAgree">
             <!-- <div class="error"><?php echo $errors["wes"] ?></div> -->
           </div>
           
@@ -704,6 +860,34 @@
     <div class="dcusDetail">
       <div class="dcusraw1">
         <table>
+            <?php
+                        $i=1;
+                      
+                      
+                        
+                        
+                            echo"<tr>";
+                            $j=1;
+                                  
+                                    while($row=mysqli_fetch_assoc($data['dance_detail'])  ){
+                                      echo "<td>";
+                                      if($row['service_image']){
+                                        echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                      }else{
+                                        $row['service_image']="default.png";
+                                        echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                      }
+                                      echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
+                                      echo "</td>"; 
+                                    
+                                      $j++;
+                                      if($j>3){
+                                        echo "</tr>";
+                                        $j = 1;
+                                      }
+                                      
+                                    }
+            ?>
           <tr>
             <td> <a  href="#"> <img <?php srcIMG("sasha.jpg") ?> alt="Chance Flowers"></a><br><p>Sasha Group <br> Kandy, Sri Lanka</p></td>
             <td> <a  href="#"> <img <?php srcIMG("dark.jpg") ?> alt="Chance Flowers"> </a><br><p>Dark Shine <br> Mathara, Sri Lanka</p></td>
@@ -718,7 +902,7 @@
 
 
   <div class="salonContent" id=popup-6>
-    <form action="#" class="form-area" method="POST">
+    <form action="<?php echo BASEURL . '/customerContactServiceProvider/index'; ?>" class="form-area" method="POST">
 
       <div class="salonq">
         <div class="back" id="backb">
@@ -789,6 +973,34 @@
     <div class="scusDetail">
       <div class="scusraw1">
         <table>
+            <?php
+                            $i=1;
+                          
+                          
+                            
+                            
+                                echo"<tr>";
+                                $j=1;
+                                      
+                                        while($row=mysqli_fetch_assoc($data['salon_detail'])  ){
+                                          echo "<td>";
+                                          if($row['service_image']){
+                                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                          }else{
+                                            $row['service_image']="default.png";
+                                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                          }
+                                          echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
+                                          echo "</td>"; 
+                                        
+                                          $j++;
+                                          if($j>3){
+                                            echo "</tr>";
+                                            $j = 1;
+                                          }
+                                          
+                                        }
+            ?>
           <tr>
             <td> <a  href="#"> <img <?php srcIMG("sicssors.png") ?> alt="Chance Flowers"></a><br><p>Scissor Salon <br> Colombo, Sri Lanka</p></td>
             <td> <a  href="#"> <img <?php srcIMG("sjaal.png") ?> alt="Chance Flowers"></a><br><p>Jaal Salon <br> Anuradhapura, Sri Lanka</p></td>
@@ -804,7 +1016,7 @@
 
   
   <div class="cakeContent" id=popup-7>
-    <form action="#" class="form-area" method="POST">
+    <form action="<?php echo BASEURL . '/customerContactServiceProvider/index'; ?>" class="form-area" method="POST">
 
       <div class="cakeq">
         <div class="back" id="backb">
@@ -853,7 +1065,7 @@
           </div>
           
           <div class="wedtick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="weddingcake" name="wedAgree">
             <!-- <div class="error"><?php echo $errors["wed"] ?></div> -->
           </div>
 
@@ -862,7 +1074,7 @@
           </div>
           
           <div class="partytick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="partycake" name="partyAgree">
             <!-- <div class="error"><?php echo $errors["party"] ?></div> -->
           </div>
       
@@ -874,7 +1086,7 @@
           </div>
           
           <div class="sweetick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="cookies" name="sweetAgree">
             <!-- <div class="error"><?php echo $errors["sweets"] ?></div> -->
           </div>
       
@@ -890,6 +1102,32 @@
     <div class="cacusDetail">
       <div class="cacusraw1">
         <table>
+
+            <?php
+                            $i=1;
+
+                                echo"<tr>";
+                                $j=1;
+                                      
+                                        while($row=mysqli_fetch_assoc($data['cake_detail'])  ){
+                                          echo "<td>";
+                                          if($row['service_image']){
+                                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                          }else{
+                                            $row['service_image']="default.png";
+                                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                          }
+                                          echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
+                                          echo "</td>"; 
+                                        
+                                          $j++;
+                                          if($j>3){
+                                            echo "</tr>";
+                                            $j = 1;
+                                          }
+                                          
+                                        }
+            ?>
           <tr>
             <td> <a  href="#"> <img <?php srcIMG("bakeriya.jpg") ?> alt="Chance Flowers"></a><br><p>APE BAKERIYA <br>Galle, Sri Lanka</p></td>
             <td> <a  href="#"> <img <?php srcIMG("cakelicious.jpg") ?> alt="Chance Flowers"> </a><br><p>Calelicious <br> Jaffna, Sri Lanka</p></td>
@@ -904,7 +1142,7 @@
 
 
   <div class="decoContent" id=popup-8>
-    <form action="#" class="form-area" method="POST">
+    <form action="<?php echo BASEURL . '/customerContactServiceProvider/index'; ?>" class="form-area" method="POST">
 
       <div class="decoq">
         <div class="back" id="backb">
@@ -953,7 +1191,7 @@
           </div>
           
           <div class="backtick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="setiback" name="sbackAgree">
             <!-- <div class="error"><?php echo $errors["back"] ?></div> -->
           </div>
 
@@ -962,7 +1200,7 @@
           </div>
           
           <div class="floraltick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="poruw&seti" name="floralAgree">
             <!-- <div class="error"><?php echo $errors["floral"] ?></div> -->
           </div>
     
@@ -978,6 +1216,34 @@
     <div class="decusDetail">
       <div class="decusraw1">
         <table>
+            <?php
+                            $i=1;
+                          
+                          
+                            
+                            
+                                echo"<tr>";
+                                $j=1;
+                                      
+                                        while($row=mysqli_fetch_assoc($data['deco_detail'])  ){
+                                          echo "<td>";
+                                          if($row['service_image']){
+                                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                          }else{
+                                            $row['service_image']="default.png";
+                                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                          }
+                                          echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
+                                          echo "</td>"; 
+                                        
+                                          $j++;
+                                          if($j>3){
+                                            echo "</tr>";
+                                            $j = 1;
+                                          }
+                                          
+                                        }
+            ?>
           <tr>
             <td> <a  href="#"> <img <?php srcIMG("chanceFlowers.png") ?> alt="Chance Flowers"></a><br><p>2nd Chance Flowers <br> Colombo, Sri Lanka</p></td>
             <td> <a  href="#"> <img <?php srcIMG("setiback.png") ?> alt="Chance Flowers"> </a><br><p>Evntro<br> Nuwara Eliya, Sri Lanka</p></td>
@@ -993,7 +1259,7 @@
 
   
   <div class="soundContent" id=popup-9>
-    <form action="#" class="form-area" method="POST">
+    <form action="<?php echo BASEURL . '/customerContactServiceProvider/index'; ?>" class="form-area" method="POST">
 
       <div class="soundq">
 
@@ -1043,7 +1309,7 @@
           </div>
           
           <div class="soundtick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="mensec" name="maleAgree">
             <!-- <div class="error"><?php echo $errors["sound"] ?></div> -->
           </div>
 
@@ -1052,7 +1318,7 @@
           </div>
           
           <div class="lightick">
-            <input type="checkbox" placeholder="Agree" name="agree">
+            <input type="checkbox" placeholder="Agree" value="womensec" name="femaleAgree">
             <!-- <div class="error"><?php echo $errors["light"] ?></div> -->
           </div>
     
@@ -1091,6 +1357,34 @@
     <div class="lcusDetail">
       <div class="lcusraw1">
         <table>
+            <?php
+                            $i=1;
+                          
+                          
+                            
+                            
+                                echo"<tr>";
+                                $j=1;
+                                      
+                                        while($row=mysqli_fetch_assoc($data['sound_detail'])  ){
+                                          echo "<td>";
+                                          if($row['service_image']){
+                                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                          }else{
+                                            $row['service_image']="default.png";
+                                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                          }
+                                          echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
+                                          echo "</td>"; 
+                                        
+                                          $j++;
+                                          if($j>3){
+                                            echo "</tr>";
+                                            $j = 1;
+                                          }
+                                          
+                                        }
+             ?>
           <tr>
             <td> <a  href="#"> <img <?php srcIMG("light.png") ?> alt="Chance Flowers"></a><br><p>SNV Events<br>Nuwara Eliya, Sri Lanka</p></td>
             <td> <a  href="#"> <img <?php srcIMG("light&sounf.jpg") ?> alt="Chance Flowers"></a> <br><p>JBA <br> Colombo, Sri Lanka</p></td>
@@ -1106,7 +1400,7 @@
 
   
   <div class="dressContent" id=popup-10>
-    <form action="#" class="form-area" method="POST">
+    <form action="<?php echo BASEURL . '/customerContactServiceProvider/index'; ?>" class="form-area" method="POST">
 
       <div class="dressq">
         <div class="back" id="backb">
@@ -1180,6 +1474,34 @@
     <div class="dscusDetail">
       <div class="dscusraw1">
         <table>
+            <?php
+                            $i=1;
+                          
+                          
+                            
+                            
+                                echo"<tr>";
+                                $j=1;
+                                      
+                                        while($row=mysqli_fetch_assoc($data['dress_detail'])  ){
+                                          echo "<td>";
+                                          if($row['service_image']){
+                                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                          }else{
+                                            $row['service_image']="default.png";
+                                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                          }
+                                          echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
+                                          echo "</td>"; 
+                                        
+                                          $j++;
+                                          if($j>3){
+                                            echo "</tr>";
+                                            $j = 1;
+                                          }
+                                          
+                                        }
+            ?>
           <tr>
             <td> <a  href="#"> <img <?php srcIMG("Rayman.png") ?> alt="Chance Flowers"></a><br><p>Rayman <br> Colombo, Sri Lanka</p></td>
             <td> <a  href="#"> <img <?php srcIMG("H&h.jpg") ?> alt="Chance Flowers"> </a><br><p>H & h Suppliers <br> Ampara, Sri Lanka</p></td>

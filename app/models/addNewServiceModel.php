@@ -3,30 +3,70 @@
 class AddNewServiceModel extends Database
 {
     
-    public function addServiceDetails($id, $servName, $servDesc,  $facebook, $instagram, $linkedin, $rePrice, $prepaTime, $tandc, $addiInfo, $caption, $video)
+    public function addServiceDetails($id, $servName, $servDesc, $location, $serviceType, $eventType, $province, $facebook, $instagram, $linkedin, $rePrice, $iniDiscount, $count, $prepaTime, $simultaneousBooking, $cancellationPolicy, $tandc, $addiInfo, 
+    $venueType, $standingCapacity, $seatingArr, $addFeature, 
+    $meals, $attendantsNo, 
+    $musicType,
+    $danceType,
+    $saloonType, $suppType,
+    $cakeType, $sweetType,
+    $decoType, $flowType,
+    $sectionType, $dressCategory ,
+    
+    $caption, $video )
+    
+    
+    // public function addServiceDetails($id, $servName, $servDesc, $location, $eventType, $facebook, $instagram, $linkedin, $rePrice, $iniDiscount, $count, $prepaTime,$simultaneousBooking, $cancellationPolicy, $tandc, $addiInfo, $caption, $video )
+    
     {
         
-        //Insert user data
-        // $query = "INSERT INTO user(email, password, user_type) VALUES ('$email', '$password', 'vendor')";
-        // mysqli_query($GLOBALS['db'], $query);
+        
 
         //Select user id of that user
         $result = mysqli_fetch_assoc(mysqli_query($GLOBALS['db'], "SELECT user_id FROM user WHERE user_id='$id' LIMIT 1"));
         $userId = $result["user_id"];
 
-        //Insert data to child tables of user - on_your_own_planning table
-        // $query = "INSERT INTO other_service(user_id, service_name, description, payment_terms_and_conditions, additional_information, cancellation_policy, advance_price, preparation_time, initial_discount, simultanious_booking, caption,  music_provider_type) 
-        // VALUES ('$userId', '$servicename', '$servicedescription', '$payment_tANDc' , '$additionalInfo', '$policy' , '$reservationprice', '$preparationtime', '$initialDiscount', '$simultaneous', '$caption', '$musictype' )";
-        // mysqli_query($GLOBALS['db'], $query);
-        // $query = "INSERT into students(id,name,age) VALUES('$userId','$studentName', '$studentAge') ";
-         $query = "INSERT INTO other_service(user_id, service_name, description, fb_url, instagram_url, linkedin_url, advance_price, preparation_time, payment_terms_and_conditions, additional_information, caption, video_url) 
-        VALUES ('$id', '$servName', '$servDesc',  '$facebook', '$instagram', '$linkedin', '$rePrice', '$prepaTime', '$tandc', '$addiInfo', '$caption', '$video')";
-           if(mysqli_query($GLOBALS['db'], $query)){
-               echo "file uploaded success!";
-           }
-           else{
-               echo "uploading fail";
-           }
+        
+         $query = "INSERT INTO other_service(user_id, service_name, description, service_location, service_type, event_type, service_areas, fb_url, instagram_url, linkedin_url, advance_price, initial_discount, initial_count, preparation_time, simultaneous_booking, cancellation_policy, payment_terms_and_conditions, additional_information, 
+         venue_type, standing_capacity, seating_arrangement, venue_features,
+         meal_time, no_of_attendants, 
+         music_provider_type,
+         dancing_type_name,
+         saloon_type, supplying_services,
+         cake_type, sweet_type,
+         decoration_type, floral_arrangement,
+         dress_sections, dress_type,
+         
+         caption, video_url) 
+        VALUES ('$id', '$servName', '$servDesc', '$location', '$serviceType', '$eventType', '$province', '$facebook', '$instagram', '$linkedin', '$rePrice', '$iniDiscount', '$count', '$prepaTime', '$simultaneousBooking', '$cancellationPolicy', '$tandc', '$addiInfo', 
+        '$venueType', '$standingCapacity', '$seatingArr', '$addFeature', 
+        '$meals', '$attendantsNo', 
+        '$musicType',
+        '$danceType',
+        '$saloonType', '$suppType',
+        '$cakeType', '$sweetType',
+        '$decoType', '$flowType',
+        '$sectionType', '$dressCategory' ,
+        '$caption', '$video')";
+
+
+    
+
+        //    if(mysqli_query($GLOBALS['db'], $query)){
+        //        echo "file uploaded success!";
+        //    }
+        //    else{
+        //        echo "uploading fail";
+        //    }
+
+
+        if(mysqli_query($GLOBALS['db'], $query)){
+            return true;
+        }
+        else{
+         return false;
+         
+        }
         
     }
 }
