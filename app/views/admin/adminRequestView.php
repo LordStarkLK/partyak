@@ -29,7 +29,7 @@
 
             <div class="sidebar-button">
                 <i class='bx bx-menu sidebarBtn' id="iconMenu"></i>
-                <span class="dashboard">REQUESTS</span>
+                <span class="dashboard">SERVICES</span>
             </div>
 
             <div class="home-content">
@@ -37,7 +37,7 @@
                     <div class="box" id="box-marketing">
                         <span class="links_name"><img class="customer-image" <?php srcIMG("adminrequest.png") ?> width="50"
                                 height="50">
-                            <div class="box-topic">Requests</div>
+                            <div class="box-topic">services</div>
                         </span>
 
                     </div>
@@ -46,13 +46,13 @@
 
                 <div>
                     <ul class="breadcrumb">
-                        <li><a>Requests</a></li>
+                        <li><a>services</a></li>
 
                     </ul>
                 </div>
 
                 <div class="pill-nav">
-                    <a class="active" href="">pending</a>
+                    <a class="active" href="">Requests</a>
                     <a href="<?php echo BASEURL . '/adminRequest/accepted' ?>">Accepted</a>    
                     <a href="<?php echo BASEURL . '/adminRequest/rejected' ?>">Rejected</a>
 
@@ -61,16 +61,11 @@
 
 
 
-                <div class="search-container">
-                    <form action="/action_page.php">
-                        <input type="text" placeholder="Search vendor.." name="search">
-
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                        <!-- <i class="fas fa-search"></i> -->
-
-
-                    </form>
-                </div>
+                <div class="search">
+                        <span class="text">   View users...</span>
+                        <input type="text" name="search" placeholder="Enter service name to search...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
 
 
 

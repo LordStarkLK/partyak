@@ -11,13 +11,13 @@ class SpService extends FrameworkPartyak
         $this->ServiceModel = $this->model("SpServiceModel");
     }
 
-    public function index()
+    public function index($service_id)
     {
 
         $id=$_SESSION['userId'];
         // $serName = 'Avendra';
 
-        $data['service'] = $this->ServiceModel->getServiceInfo($id);
+        $data['service'] = $this->ServiceModel->getServiceInfo($service_id);
 
 
 
