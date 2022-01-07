@@ -37,10 +37,10 @@
             echo " 
             <div class=\"image_container\">
                 <img class=\"mySlides\" src=\"public/img/hotel/hotel1.jpg\" >
-                <img class=\"mySlides\" src=\"public\img\hotel/hotel2.jpg\" >
-                <img class=\"mySlides\" src=\"public\img\hotel/hotel3.jpg\" >
-                <img class=\"mySlides\" src=\"public\img\hotel/hotel4.jpg\" >
-                <img class=\"mySlides\" src=\"public\img\hotel/hotel5.png\" >
+                <img class=\"mySlides\" src=\"public/img/hotel/hotel2.jpg\" >
+                <img class=\"mySlides\" src=\"public/img/hotel/hotel3.jpg\" >
+                <img class=\"mySlides\" src=\"public/img/hotel/hotel4.jpg\" >
+                <img class=\"mySlides\" src=\"public/img/hotel/hotel5.png\" >
                 <a href=\"https://youtu.be/G9Sf5IUsHfI\"><i class=\"fa fa-youtube-play fa-2x\" aria-hidden=\"true\"></i></a>
             </div>
             <div class=\"content\">
@@ -375,6 +375,20 @@ elseif($row['service_type']=="eventPlanner"){
         ";
 
         echo "
+            <div class=\"row\">
+                <div class=\"col_name\">
+                    <label>Pick your package</label>
+                </div>
+                <div class=\"col_input\">
+                    <select id=\"pType\" name=\"packageType\">
+                        <option value=\"summer\">Summer</option>
+                        <option value=\"Wedding\">Golden</option>
+                    </select>
+                </div>
+            </div>
+        ";
+
+        echo "
         </div>
             <div class=\"request\">
                 <button>Request Service</button>
@@ -489,49 +503,42 @@ elseif($row['service_type']=="eventPlanner"){
         
 
         } ?>
-   
-                
-            <div class="allpackages">
-                <label for="package">Packages</label>
-                <div class="package">
-                    <div class="package_content">
-                        <label>Summer</label>
-                        <div class="package_summary">
-                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                            The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                            as opposed to using 'Content here, content here',
-                            making it look like readable English.
-                        </div>
-                        <a class="validation">Valid Until : 31st December</a>
+
+    <div class="allpackages">
+            <label for="package">Packages</label>
+
+    <?php while ($row = mysqli_fetch_assoc($data['package_data'])){
+        $i=1;
+        
+        echo "
+            <div class=\"package\">
+                <div class=\"package_content\">
+                    <label>$row[package_name]</label>
+                    <div class=\"package_summary\">
+                        $row[description]
                     </div>
-                    <div class="package_price">
-                        LKR
-                        <br><a class="p_price">2500</a>
-                        <br>per unit
-                    </div>
+                    <a class=\"validation\"> Valid from : $row[valid_from] &emsp; Valid Until : $row[valid_to]</a>
                 </div>
-                <div class="package">
-                    <div class="package_content">
-                        <label>Big deal</label>
-                        <div class="package_summary">
-                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
-                            The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                            as opposed to using 'Content here, content here',
-                            making it look like readable English.
-                        </div>
-                        <a class="validation">Valid Until : 1st February</a>
-                    </div>
-                    <div class="package_price">
-                        LKR
-                        <br><a class="p_price">1750</a>
-                        <br>per unit
-                    </div>
+                <div class=\"package_price\">
+                    LKR
+                    <br><a class=\"p_price\">$row[per_unit_price]</a>
+                    <br>per unit
                 </div>
             </div>
+        ";
+        
+    }
+    ?>
+    </div>
+              
+
             <div class="service_location">
                 <label for="location">Location</label>
                 <div class="location"></div>
             </div>
+
+
+
             <div class="user_reviews">
                 <label>Review</label>
                 <div class="review">
