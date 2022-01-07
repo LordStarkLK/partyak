@@ -39,6 +39,15 @@ class AdminRequest extends FrameworkPartyak{
 
     }
 
+    public function search(){
+        $searchTerm = mysqli_real_escape_string($GLOBALS['db'], $_POST['searchTerm']);
+
+        // echo $searchTerm;
+        $userList = $this->requestModel->search($searchTerm);
+        echo $userList;
+    }
+
+
 }
 
 
