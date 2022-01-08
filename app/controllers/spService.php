@@ -5,7 +5,7 @@ class SpService extends FrameworkPartyak
     public function __construct()
     {
         $this->helper("linker");
-        $this->preventBack("vendor");
+        $this->preventBack2();
 
         //include this to call CRUD functions from the controller files
         $this->ServiceModel = $this->model("SpServiceModel");
