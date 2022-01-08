@@ -35,6 +35,35 @@
   var slBtn =  document.getElementById("sound");
   var dsBtn =  document.getElementById("dress");
   var backBtn =  document.getElementById("backb");
+  var VSBtn =  document.getElementById("venueSu");
+
+
+  VSBtn.onclick = function(){
+    cate.style.display="none";
+    photo.style.display="none";
+    ven.style.display="block";
+    music.style.display="none";
+    dance.style.display="none";
+    salon.style.display="none";
+    cake.style.display="none";
+    deco.style.display="none";
+    sound.style.display="none";
+    dress.style.display="none";
+    conent.style.display="none";
+    eventp.style.display="none";
+    e.className = "no";
+    vn.className = "active";
+    cat.className = "no";
+    pho.className ="no";
+    muc.className ="no";
+    dac.className ="no";
+    sal.className ="no";
+    cak.className ="no";
+    dec.className ="no";
+    sou.className ="no";
+    dre.className ="no";
+  }
+
   
 
   eBtn.onclick = function(){
@@ -65,9 +94,9 @@
   }
 
   vBtn.onclick = function(){
-    ven.style.display="block";
     cate.style.display="none";
     photo.style.display="none";
+    ven.style.display="block";
     music.style.display="none";
     dance.style.display="none";
     salon.style.display="none";

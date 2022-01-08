@@ -97,31 +97,60 @@
                     <span class="dashboard">Note</span>
                 </div>
             </nav>
-            <table class="table-content">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Customer Name</th>
-                        <th>Event Name</th>
-                        <th>Note</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-                    $i = 1;
-                    while ($row = mysqli_fetch_assoc($data['note'])) {
-                        echo "
-                <tr>
-                  <td>$row[note_id]</td>
-                  <td>$row[customer_name]</td>
-                  <td>$row[event_name]</td>
-                  <td>$row[note]</td>
-                </tr>   
-                ";
-                        $i++;
-                    } ?>
-                </tbody>
-            </table>
+
+            <div class="note-area">
+                <?php
+                while ($row = mysqli_fetch_assoc($data['note'])) { ?>
+                    <div class="note-cont">
+                        <span class="note-head">
+                            <h6>Cus. Id : <?php echo $row['customer_id']; ?></h6>
+                            <h6>Cus. Name : <?php echo $row['customer_name']; ?></h6>
+                            <h6>Event : <?php echo $row['event_name']; ?></h6>
+                            <h6>Date : <?php echo $row['event_date']; ?></h6>
+                        </span>
+                        <div class="note-body">
+                            <?php
+
+                            if (isset($counter)) {
+                                if ($counter == mysqli_num_rows($data['noteBody'])) {
+                                    mysqli_data_seek($data['noteBody'], 0);
+                                }
+                            }
+
+                            $counter = 0;
+                            while ($rowBody = mysqli_fetch_assoc($data['noteBody'])) {
+
+
+                                $counter++;
+
+                                if ($row['note_id'] == $rowBody['note_id']) {   ?>
+                                    <div class="note-strip">
+                                        <h4><?php echo $rowBody['vendor_name']; ?></h4>
+                                        <form action="<?php echo BASEURL . '/epnote/deleteNoteBody'; ?>" method="POST">
+                                            <input type="hidden" id="vendorNoteId" name="vendorNoteId" value="<?php echo $rowBody['vendor_note_id'] ?>">
+                                            <button type="submit" class="delete-note-text"><i class='bx bx-trash' aria-hidden="true"></i></button>
+                                        </form>
+                                    </div> <?php }
+                                    } ?>
+                        </div>
+                        <div class="note-foot">
+                            <form class="note-body-form" action="<?php echo BASEURL . '/epnote/insertNoteBody'; ?>" method="POST">
+                                <input class="note-body-input" type="text" name="noteBody" id="noteBody">
+                                <input type="hidden" id="noteId" name="noteId" value="<?php echo $row['note_id'] ?>">
+                                <button type="submit" class="add-note-body"><i class='bx bx-plus' aria-hidden="true"></i></button>
+                            </form>
+                            <form action="<?php echo BASEURL . '/epnote/deleteNote'; ?>" method="POST">
+                                <input type="hidden" id="noteId" name="noteId" value="<?php echo $row['note_id'] ?>">
+                                <button type="submit" class="delete-note-text">Delete note</button>
+                            </form>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+
+
+
+
             <div class="bottom-section">
                 <div class="event-board-link">
                     <a href="<?php echo BASEURL . '/#'; ?>"><button>Event Schedule Board</button></a>

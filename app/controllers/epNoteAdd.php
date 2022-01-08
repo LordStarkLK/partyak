@@ -18,24 +18,24 @@ class EpNoteAdd extends FrameworkPartyak
         // $id = $_SESSION['userId'];
 
         $errors = array();
+        $errors["customer_id"] = "";
+        $errors["customer_name"] = "";
         $errors["event_name"] = "";
-        $errors["cutom_name"] = "";
-        $errors["note"] = "";
+        $errors["event_date"] = "";
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             //Get data from the form submission
-            $event_name = $_POST["event_name"];
-            $customName = $_POST["cutom_name"];
-            $note = $_POST["note"];
-
+            $customId = $_POST["customer_id"];
+            $customName = $_POST["customer_name"];
+            $eventName = $_POST["event_name"];
+            $eventDate = $_POST["event_date"];
 
             //Empty check
-            if (empty($event_name)) $errors["event_name"] = "Order ID is required";
-            if (empty($customName)) $errors["cutom_name"] = "Customer Name is required";
-            if (empty($note)) $errors["note"] = "Note is required";
-
-
+            if (empty($customId)) $errors["customer_id"] = "Order ID is required";
+            if (empty($customName)) $errors["customer_name"] = "Customer Name is required";
+            if (empty($eventName)) $errors["event_name"] = "Customer Name is required";
+            if (empty($eventDate)) $errors["event_date"] = "Customer Name is required";
 
 
             /* Count number of validation failures */
@@ -49,7 +49,8 @@ class EpNoteAdd extends FrameworkPartyak
 
             if ($numberOfErrors == 0) {
                 //Insert data
-                $this->epAddNote->addEpNote($event_name, $customName, $note);
+                $this->epAddNote->addEpNote($customId,  $customName, $eventName, $eventDate);
+                $this->view("eventPlanner/epNoteAddview");
             }
         }
 

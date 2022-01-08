@@ -19,4 +19,29 @@ class AdminMarketing extends FrameworkPartyak
 
         $this->view("admin/adminMarketingView",$data);
     }
+
+    public function online($content_id){
+        // echo $content_id;
+        $output = $this->marketingModel->onlineStatus($content_id);
+
+        echo $output;
+    }
+
+    public function offline($content_id){
+        $output = $this->marketingModel->offlineStatus($content_id);
+        echo $output;
+    }
+
+    public function accept($content_id){
+        $output = $this->marketingModel->acceptStatus($content_id);
+        echo $output;
+    }
+
+    public function reject($content_id){
+        $output = $this->marketingModel->rejectStatus($content_id);
+        echo $output;
+    }
+
+
+
 }
