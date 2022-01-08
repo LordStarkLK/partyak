@@ -27,6 +27,13 @@ class SpServiceModel extends Database
             return $result;
         }
     }
+    public function getPackageInfo($service_id){
+        $query = "SELECT package_id,package_name, description, valid_from, valid_to, per_unit_price FROM package WHERE service_id='$service_id' ";
+        $result = mysqli_query($GLOBALS['db'],$query);
+        if(mysqli_num_rows($result) > 0){
+            return $result;
+        }
+    }
     
 
 }

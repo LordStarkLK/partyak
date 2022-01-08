@@ -29,7 +29,7 @@
                 <!-- <div class="ser-name"><a>Mount Lavinia Hotel</a><br><a>Colombo, Sri Lanka</a></div> -->
                 <div class="description"><a>Failed to add service. Please try again in a few minutes.</a></div>
                 <div class="action">
-                    <button class="deleteBtn">Continue<i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                    <button class="deleteBtn"><a href="<?php echo BASEURL . '/spBusiness'; ?>">Continue<a><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
                 </div>
             </div>
         </div>

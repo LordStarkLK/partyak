@@ -28,7 +28,7 @@
                 
                 <div class="description"><a>You have successfully added a new service  and verification will be informed within few days.</a></div>
                 <div class="action">
-                    <button class="continueBtn">Continue<i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                    <button class="continueBtn"><a href="<?php echo BASEURL . '/spBusiness'; ?>">Continue<a><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
                 </div>
             </div>
         </div>
