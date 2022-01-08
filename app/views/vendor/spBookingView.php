@@ -10,6 +10,7 @@
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <?php $service_id = $data['service_id'];?>
 </head>
 
 <body>
@@ -18,36 +19,35 @@
   </header>
   <div class="container">
     <div class="sidebar">
-
       <ul class="sidenav-links">
         
         <li>
-          <a href="<?php echo BASEURL . '/spPackage/index/$row[service_id]'; ?>">
+          <a href="<?php echo BASEURL . '/spPackage/index/'.$service_id.''?>">
             <i class="fa fa-server" aria-hidden="true"></i>
             <span class="links_name">Packages</span>
           </a>
         </li>
         <li>
-          <a href="<?php echo BASEURL . '/spBooking'; ?>">
+          <a href="<?php echo BASEURL . '/spBooking/index/'.$service_id.''; ?>">
             <i class="fa fa-list" aria-hidden="true"></i>
             <span class="links_name">Bookings</span>
           </a>
         </li>
         
         <li>
-        <a href="<?php echo BASEURL . '/spChat'; ?>">
+        <a href="<?php echo BASEURL . '/spChat/index/'.$service_id.''; ?>">
             <i class="fa fa-envelope" aria-hidden="true"></i>
             <span class="links_name">Chat</span>
           </a>
         </li>
         <li>
-          <a href="<?php echo BASEURL . '/spCalendar'; ?>">
+          <a href="<?php echo BASEURL . '/spCalendar/index/'.$service_id.''; ?>">
             <i class="fa fa-calendar" aria-hidden="true"></i>
             <span class="links_name">Calendar</span>
           </a>
         </li>
         <li>
-          <a href="<?php echo BASEURL . '/spReview '; ?>">
+          <a href="<?php echo BASEURL . '/spReview/index/'.$service_id.''; ?>">
             <i class="fa fa-star" aria-hidden="true"></i>
             <span class="links_name">Review</span>
           </a>
@@ -78,7 +78,28 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <?php while ($row = mysqli_fetch_assoc($data['request_data'])) {
+                  $i = 1;
+                      
+                  echo "
+                      <tr>
+                        <th>$row[customer_id]</th>
+                        <th>$row[event_type]</th> 
+                        <th>250</th> 
+                        <th>$row[event_date]</th>
+                        <th>$row[package_id]</th> 
+                        <th class=\"btn-row\">
+                          <button class=\"accept-booking\">Accept</button>
+                          <button class=\"reject-booking\">Reject</button>
+                        </th> 
+                      </tr>
+                  ";
+                      
+                } ?>
+
+
+
+                <!-- <tr>
                   <th>Kamal Perera</th>
                   <th>Wedding</th>
                   <th>300</th>
@@ -88,29 +109,8 @@
                     <button class="accept-booking">Accept</button>
                     <button class="reject-booking">Reject</button>
                   </th>
-                </tr>
-                <tr>
-                  <th>Nimal Gamage</th>
-                  <th>Party</th>
-                  <th>100</th>
-                  <th>2020-10-30</th>
-                  <th>Gold Package</th>
-                  <th class="btn-row">
-                    <button class="accept-booking">Accept</button>
-                    <button class="reject-booking">Reject</button>
-                  </th>
-                </tr>
-                <tr>
-                  <th>Nayana Kumari</th>
-                  <th>Wedding</th>
-                  <th>300</th>
-                  <th>2020-11-10</th>
-                  <th>Summer Package</th>
-                  <th class="btn-row">
-                    <button class="accept-booking">Accept</button>
-                    <button class="reject-booking">Reject</button>
-                  </th>
-                </tr>
+                </tr> -->
+                
               </tbody>
             </table>
           </div>
