@@ -6,12 +6,15 @@ class SpCalendar extends FrameworkPartyak
     {
         $this->helper("linker");
         $this->preventBack("vendor");
+
     }
 
-    public function index()
+    public function index($service_id)
     {
+        $data['service_id'] = $service_id;
+
         // echo "Hi";
-        $this->view("vendor/spCalendarView");
+        $this->view("vendor/spCalendarView",$data);
     }
 
    
