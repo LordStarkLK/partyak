@@ -13,23 +13,22 @@ class SpService extends FrameworkPartyak
 
     public function index($service_id)
     {
-
-        $id = $_SESSION['userId'];
         // $serName = 'Avendra';
 
         $data['service'] = $this->ServiceModel->getServiceInfo($service_id);
+        // $data['package_data'] = $this->ServiceModel->getPackageInfo($service_id);
 
-        $errors = array();
-        $errors["ratedStars"] = "";
-        $errors["review"] = "";
+        // $errors = array();
+        // $errors["ratedStars"] = "";
+        // $errors["review"] = "";
 
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        // if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-            $customId = $_POST["review"];
-            $customName = $_POST["user_id"];
-            $eventName = $_POST["ratedIndex"];
-            $eventDate = $_POST["event_date"];
-        }
+        //     $customId = $_POST["review"];
+        //     $customName = $_POST["user_id"];
+        //     $eventName = $_POST["ratedIndex"];
+        //     $eventDate = $_POST["event_date"];
+        // }
 
 
         // echo "Hi";
