@@ -13,17 +13,6 @@ class FrameworkPartyak
         }
     }
 
-    public function controller($viewName, $data = [])
-    {
-        $url = "../app/controllers/" . $viewName . ".php";
-
-        if (file_exists($url)) {
-            require_once($url);
-        } else {
-            echo "<div style='margin: 0;padding: 10px;background-color: silver;'> $viewName.php file not found </div>";
-        }
-    }
-
     public function model($modelName, $data = [])
     {
         $url = "../app/models/" . $modelName . ".php";
@@ -76,10 +65,6 @@ class FrameworkPartyak
     }
 
     public function redirect($path){
-        header("location:" . BASEURL . "/" . $path);
-    }
-
-    public function redirect1($path){
         header("location:" . BASEURL . "/" . $path);
     }
 

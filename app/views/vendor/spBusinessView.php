@@ -112,14 +112,14 @@
                         echo "
                         <div class=\"curr_status accept\">
                             <i class=\"fa fa-check-circle-o fa-2x\" aria-hidden=\"true\" ></i>
-                            <a>Accept</a>
+                            <a>Accepted</a>
                         </div>";
                     }  
-                    elseif($row['status'] == "reject"){
+                    elseif($row['status'] == "rejected"){
                         echo "
                         <div class=\"curr_status reject\">
                             <i class=\"fa fa-times-circle-o fa-2x\" aria-hidden=\"true\" ></i>
-                            <a>Reject</a>
+                            <a>Rejected</a>
                         </div>";
                     }
                     elseif($row['status'] == "pending"){
