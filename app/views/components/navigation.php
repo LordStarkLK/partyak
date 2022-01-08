@@ -43,7 +43,9 @@
             <div class="nav-item-vendor">
                 <a href="#"><i class="fa fa-comments"></i></a>
                 <a href="#"><i class="fa fa-bell"></i></a>
-                <a href="#"><i class="fa fa-user"></i></a>
+                <a href ="';
+                echo BASEURL .'/customerProfile';
+                echo'"<i class="fa fa-user"></i></a>
             </div>
             <div class="nav-buttons-vendor">
                 <button class="login-button" type="button"><a href="';
