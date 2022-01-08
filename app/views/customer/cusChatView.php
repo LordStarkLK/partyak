@@ -75,48 +75,48 @@
 
             <header>
                 <div class="home-content">
-                    
 
-                        <div class="wrapper">
-                            <section class="chat-area">
-                                <header>
 
-                                    <a href="<?php echo BASEURL . '/customerChat'; ?>" class="back-icon"><i
-                                            class="fas fa-arrow-left"></i></a>
-                                    <img src="<?php echo BASEURL; ?>/public/img/userImages/<?php if ($details['profilePicture']) {
+                    <div class="wrapper">
+                        <section class="chat-area">
+                            <header>
+
+                                <a href="<?php echo BASEURL . '/customerChat'; ?>" class="back-icon"><i
+                                        class="fas fa-arrow-left"></i></a>
+                                <img src="<?php echo BASEURL; ?>/public/img/userImages/<?php if ($details['profilePicture']) {
                     echo $details['profilePicture'];
                     } 
                     else {
                         echo "pp_default.png";
                     } ?>" alt="">
-                                    <div class="details">
-                                        <span><?php echo $details['f_name']. " ". $details['l_name'] ?></span>
-                                        <p></p>
-                                    </div>
-                                </header>
-                                <div class="chat-box">
-
+                                <div class="details">
+                                    <span><?php echo $details['f_name']. " ". $details['l_name'] ?></span>
+                                    <p></p>
                                 </div>
-                                <form action="#" class="typing-area">
-                                    <input type="text" class="incoming_id" name="incoming_id"
-                                        value="<?php echo $details['user_id']; ?>" hidden>
-                                    <input type="text" name="message" class="input-field"
-                                        placeholder="Type a message here..." autocomplete="off">
-                                    <button class="send-btn"><i class="fab fa-telegram-plane "></i></button>
-                                </form>
-                            </section>
-                        </div>
+                            </header>
+                            <div class="chat-box">
 
-                       
-
+                            </div>
+                            <form action="#" class="typing-area">
+                                <input type="text" class="incoming_id" name="incoming_id"
+                                    value="<?php echo $details['user_id']; ?>" hidden>
+                                <input type="text" name="message" class="input-field"
+                                    placeholder="Type a message here..." autocomplete="off">
+                                <button class="send-btn"><i class="fab fa-telegram-plane "></i></button>
+                            </form>
+                        </section>
                     </div>
-                
+
+
+
+                </div>
+
 
     </div>
     </section>
     </div>
     <?php linkJS("lib/jquery-3.6.0.min"); ?>
-    <?php linkJS("chat"); ?>
+    <?php linkJS("customer/chat"); ?>
     <?php linkJS("vendor/spProfile"); ?>
     <?php linkJS("customer/customerProfile"); ?>
     <?php linkPhp("footer") ?>
