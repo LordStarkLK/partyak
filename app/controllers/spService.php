@@ -9,7 +9,6 @@ class SpService extends FrameworkPartyak
 
         //include this to call CRUD functions from the controller files
         $this->ServiceModel = $this->model("SpServiceModel");
-        
     }
 
     public function index($service_id)
@@ -32,7 +31,6 @@ class SpService extends FrameworkPartyak
             $eventName = $_POST["ratedIndex"];
             $eventDate = $_POST["event_date"];
         }
->>>>>>> 6f60ca3 (review-system resolving conflicts)
 
 
         // echo "Hi";
