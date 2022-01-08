@@ -17,12 +17,7 @@ class SpService extends FrameworkPartyak
         $id = $_SESSION['userId'];
         // $serName = 'Avendra';
 
-<<<<<<< Updated upstream
         $data['service'] = $this->ServiceModel->getServiceInfo($service_id);
-=======
-
-        $data['service'] = $this->ServiceModel->getServiceInfo($id);
->>>>>>> Stashed changes
 
         $errors = array();
         $errors["ratedStars"] = "";
