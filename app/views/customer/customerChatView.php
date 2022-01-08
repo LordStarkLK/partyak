@@ -74,8 +74,8 @@
             </nav>
 
             <header>
-            <div class="home-content">
-                
+                <div class="home-content">
+
 
                     <div class="wrapper">
                         <section class="users">
@@ -102,16 +102,16 @@
                             <div class="users-list">
 
                             </div>
-                        
-                   
-                                </section>
+
+
+                        </section>
                     </div>
 
-                   
 
 
-                
-            </div>
+
+
+                </div>
         </section>
     </div>
     <?php linkJS("customer/chatUserList"); ?>
