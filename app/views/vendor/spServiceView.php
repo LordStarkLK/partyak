@@ -328,10 +328,9 @@ elseif($row['service_type']=="eventPlanner"){
             
         </div> 
     ";
-}
-//until now
-
-        echo "
+}?>
+    <?php
+        echo "        
         <div class=\"right_side\">
             <div class=\"request_container\">
                 Reserve For
@@ -379,9 +378,7 @@ elseif($row['service_type']=="eventPlanner"){
                 </div>
                 <div class=\"col_input\">
                     <select id=\"pType\" name=\"packageType\">
-        ";
-    
-        
+        "; 
         
         echo "
             
@@ -407,7 +404,10 @@ elseif($row['service_type']=="eventPlanner"){
                 <button>Send Message</button>
             </div>
         </div>
-        ";
+       
+        ";?>
+    
+        <?php
         //this calender should be changed
         echo " 
         <div class=\"calendar_container\">
