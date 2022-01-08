@@ -32,6 +32,7 @@
     </header>
     <div class="container">
         <?php while ($row = mysqli_fetch_assoc($data['service'])){
+            $row2 = mysqli_fetch_assoc($data['package_data']);
             $i=1;
 
             echo " 
@@ -372,22 +373,28 @@ elseif($row['service_type']=="eventPlanner"){
                         <input type=\"date\" id=\"sname\" name=\"reservedate\" placeholder>
                     </div>
                 </div>
-        ";
-
-        echo "
-            <div class=\"row\">
+                <div class=\"row\">
                 <div class=\"col_name\">
                     <label>Pick your package</label>
                 </div>
                 <div class=\"col_input\">
                     <select id=\"pType\" name=\"packageType\">
-                        <option value=\"summer\">Summer</option>
-                        <option value=\"Wedding\">Golden</option>
+        ";
+    
+        
+        
+        echo "
+            
+                        <option value=\"package\">$row2[package_name]</option>
+                        
                     </select>
                 </div>
             </div>
         ";
+  
 
+        
+    
         echo "
         </div>
             <div class=\"request\">
@@ -502,32 +509,28 @@ elseif($row['service_type']=="eventPlanner"){
 
         
 
-        } ?>
-
-    <div class="allpackages">
-            <label for="package">Packages</label>
-
-    <?php while ($row = mysqli_fetch_assoc($data['package_data'])){
-        $i=1;
+       
         
         echo "
+        <div class=\"allpackages\">
+            <label for=\"package\">Packages</label>
             <div class=\"package\">
                 <div class=\"package_content\">
-                    <label>$row[package_name]</label>
+                    <label>$row2[package_name]</label>
                     <div class=\"package_summary\">
-                        $row[description]
+                        $row2[description]
                     </div>
-                    <a class=\"validation\"> Valid from : $row[valid_from] &emsp; Valid Until : $row[valid_to]</a>
+                    <a class=\"validation\"> Valid from : $row2[valid_from] &emsp; Valid Until : $row2[valid_to]</a>
                 </div>
                 <div class=\"package_price\">
                     LKR
-                    <br><a class=\"p_price\">$row[per_unit_price]</a>
+                    <br><a class=\"p_price\">$row2[per_unit_price]</a>
                     <br>per unit
                 </div>
             </div>
         ";
         
-    }
+        }
     ?>
     </div>
               
