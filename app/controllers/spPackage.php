@@ -69,6 +69,7 @@ class SpPackage extends FrameworkPartyak
 
             $data["errors"] = $errors;
             $data['packages'] = $this->PackageModel->getPackageDetails($service_id);
+            $data['serName'] = $this->PackageModel->getReleventServiceName($service_id);
             // echo "Hi";
             $this->view("vendor/spPackageView" , $data);
 

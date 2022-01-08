@@ -9,6 +9,7 @@ class SpService extends FrameworkPartyak
 
         //include this to call CRUD functions from the controller files
         $this->ServiceModel = $this->model("SpServiceModel");
+        
     }
 
     public function index($service_id)
@@ -18,7 +19,7 @@ class SpService extends FrameworkPartyak
         // $serName = 'Avendra';
 
         $data['service'] = $this->ServiceModel->getServiceInfo($service_id);
-
+        $data['package_data'] = $this->ServiceModel->getPackageInfo($service_id);
 
 
         

@@ -61,16 +61,11 @@
 
 
 
-                <div class="search-container">
-                    <form action="/action_page.php">
-                        <input type="text" placeholder="Search vendor.." name="search">
-
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                        <!-- <i class="fas fa-search"></i> -->
-
-
-                    </form>
-                </div>
+                <div class="search">
+                        <span class="text">   View users...</span>
+                        <input type="text" name="search" placeholder="Enter service name to search...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
 
 
 
