@@ -125,10 +125,23 @@ tr:nth-child(odd) {
 }
 
 
-.edit-event , .cancel-event, .go-event{
-    width: 60%;
-    margin: 2px;
-    padding: 2%;
+.edit-event , .cancel-event{
+    width: 100%;
+    margin: 2%;
+    padding: 3%;
+    color:#202020;
+    background-color: rgb(198, 255, 255);
+    font-size: 16px;
+    font-weight: bold;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+.go-event{
+    width:50%;
+    margin: 2%;
+    padding: 3%;
     color:#202020;
     background-color: rgb(198, 255, 255);
     font-size: 16px;

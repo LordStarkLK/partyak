@@ -51,7 +51,7 @@
                 
                 }
                 
-                if(($date > $row['end_date']) ){
+                if(($date > $row['end_date']) && ($date > $row['start_date'])){
                   $status = 'Complete';
                 }
 
@@ -69,20 +69,25 @@
                   <td>$row[noOfGuest]</td>
                   <td>$row[plan_type]</td>
                   <td>$status</td>
-                  <td><button class=\"go-event\"><a href =\" ".BASEURL ."/customerEventSB/index/$row[planning_id]\">Go</a></button></td>
-        
-                  
+                  <td><button class=\"go-event\"><a href =\" ".BASEURL ."/customerEventSB/index/$row[planning_id]\">Go</a></button></td>";
+                if($status == "Complete"){
+                  echo "<td><button class=\"cancel-event\"><a href =\" ".BASEURL ."/customerMyEvent/deleteEvent/$row[planning_id]\">Remove</button></td>";
+                }else{
+                  echo "
                   <td>  
-                  <div class=\"btn-group\">
-                      <button class=\"edit-event\">Edit</button>
-                      <button class=\"cancel-event\"><a href =\" ".BASEURL ."/customerMyEvent/deleteEvent/$row[planning_id]\">Cancel</a></button>
-                      
+                    <div class=\"btn-group\">
+                        <button class=\"edit-event\"><a href =\" ".BASEURL ."/customerOnYourOwnPlan/editEvent/$row[planning_id]\">Edit</a></button>
+                        <button class=\"cancel-event\"><a href =\" ".BASEURL ."/customerMyEvent/deleteEvent/$row[planning_id]\">Cancel</a></button>
+                        
                     </div>
 
                   
-                  </td>
-                </tr>   
-                ";
+                  </td>";
+
+                } 
+                  
+                echo"</tr>";   
+                
             $i++;
           }?>
        

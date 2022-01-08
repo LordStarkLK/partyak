@@ -11,9 +11,12 @@ class CustomerMyEventModel extends database
 
     public function deleteEvent($planning_id){
         $query = "DELETE FROM event WHERE planning_id = '$planning_id'";
-
         $result = mysqli_query($GLOBALS["db"], $query);
         return $result;
+
+        $query = "DELETE * FROM service_preferences WHERE planning_id = '$planning_id'";
+        $service = mysqli_query($GLOBALS["db"], $query);
+        return $service;
     }
 
 }
