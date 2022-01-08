@@ -36,4 +36,50 @@ class SpService extends FrameworkPartyak
         // echo "Hi";
         $this->view("vendor/spServiceView", $data);
     }
+
+    public function bookingDet($service_id){
+
+        $id=$_SESSION['userId'];
+        
+        // $serName = 'Avendra';
+
+        $data['service'] = $this->ServiceModel->getServiceInfo($service_id);
+        $data['package_data'] = $this->ServiceModel->getPackageInfo($service_id);
+
+        $errors = array();
+        $errors["reservedate"] = "";
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+            //Get data from the form submission
+            $eventType = $_POST["eventType"];
+            $guestCount = $_POST["guestcount"];
+            $reserveDate = $_POST["reservedate"];
+            $packageType = $_POST["packageType"];
+
+
+            //Empty check
+            if (empty($reserveDate)) $errors["reservedate"] = "Event Date is required";
+
+            /* Count number of validation failures */
+            $numberOfErrors = 0;
+            foreach ($errors as $key => $value) {
+
+                if ($value != "") {
+                    $numberOfErrors++;
+                }
+            }
+
+            if ($numberOfErrors == 0) {
+                //Insert data
+                $this->ServiceModel->bookingDetail($eventType, $guestCount, $reserveDate, $packageType, $id,$service_id);
+                // $this->redirect('spService');
+            }
+
+
+        }
+        $data["errors"] = $errors;
+        $this->view("vendor/spServiceView", $data);
+
+    }
 }
