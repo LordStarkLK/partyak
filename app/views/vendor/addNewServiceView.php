@@ -28,7 +28,7 @@
   <div class="form_container">
     <!-- <div class="close-button"><span class="service_close">&times;</span></div> -->
     
-    <form id="regForm" action="<?php echo BASEURL . '/addNewService/index'; ?>" method="POST">
+    <form id="regForm" action="<?php echo BASEURL . '/addNewService/index'; ?>" method="POST" enctype="multipart/form-data">
 
         <h1>Service Registration Form</h1>
         
@@ -559,14 +559,14 @@
           </div>
         </div>
         <hr/>
-        <!-- <div class="row">
+        <div class="row">
           <div class="col_name">
-            <label for="simage">Image (jpg,png or jpeg)</label>
+            <label for="simage">Image (JPG, JPEG or PNG)</label>
           </div>
           <div class="col_input">
-             <input type="file" id="simage" name="file"><br><br>
+             <input id="simage" type="file" name="file"><br><br>
           </div>
-        </div> -->
+        </div>
         <hr/>
         <div class="row">
           <div class="col_name">
