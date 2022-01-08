@@ -32,7 +32,7 @@
     </header>
     <div class="container">
         <?php while ($row = mysqli_fetch_assoc($data['service'])){
-            $row2 = mysqli_fetch_assoc($data['package_data']);
+           
             $i=1;
 
             echo " 
@@ -378,17 +378,27 @@ elseif($row['service_type']=="eventPlanner"){
                 </div>
                 <div class=\"col_input\">
                     <select id=\"pType\" name=\"packageType\">
-        "; 
-        
-        echo "
+
+        ";
+}?>
+<?php while ($row2 = mysqli_fetch_assoc($data['package_data'])){
             
-                        <option value=\"package\">$row2[package_name]</option>
+
+        echo "
+       
+
+                        <option value=\"package\">$row2[package_name]</option>";}
+
+                        echo"
                         
                     </select>
                 </div>
             </div>
         ";
-  
+
+?>
+<?php mysqli_data_seek($data['service'],0);
+while ($row = mysqli_fetch_assoc($data['service'])){
 
         
     
@@ -411,37 +421,35 @@ elseif($row['service_type']=="eventPlanner"){
         //this calender should be changed
         echo " 
         <div class=\"calendar_container\">
-                        <a class=\"name\">Availability Calendar</a>
+            <a class=\"name\">Availability Calendar</a>
 
-                        <div class=\"calendar\">
-                            <div class=\"month\">
-                                <i class=\"fa fa-angle-left prev\"></i>
-                                <div class=\"date\">
-                                    <h1></h1>
-                                    <p></p>
-                                </div>
-                                <i class=\"fa fa-angle-right next\"></i>
-                            </div>
-                            <div class=\"weekdays\">
-                                <div>Sun</div>
-                                <div>Mon</div>
-                                <div>Tue</div>
-                                <div>Wed</div>
-                                <div>Thu</div>
-                                <div>Fri</div>
-                                <div>Sat</div>
-                            </div>
-                            <div class=\"days\"></div>
+                <div class=\"calendar\">
+                    <div class=\"month\">
+                        <i class=\"fa fa-angle-left prev\"></i>
+                        <div class=\"date\">
+                            <h1></h1>
+                            <p></p>
                         </div>
-
-
+                        <i class=\"fa fa-angle-right next\"></i>
                     </div>
-        ";
-        //it ends here
+                    <div class=\"weekdays\">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div class=\"days\"></div>
+                </div>
 
-        echo "
+
+                </div>
+        
             </div>
         </div>
+        
         <div class=\"additional_details\">
             <div class=\"details_row\">
                 <div class=\"title\">
@@ -505,15 +513,18 @@ elseif($row['service_type']=="eventPlanner"){
                 </div>
             </div>
         </div>
+        <div class=\"allpackages\">
+            <label for=\"package\">Packages</label>
         ";
 
         
 
-       
+    }?>
+    <?php   mysqli_data_seek($data['package_data'],0); 
+    while ($row2 = mysqli_fetch_assoc($data['package_data'])){ 
         
         echo "
-        <div class=\"allpackages\">
-            <label for=\"package\">Packages</label>
+        
             <div class=\"package\">
                 <div class=\"package_content\">
                     <label>$row2[package_name]</label>
