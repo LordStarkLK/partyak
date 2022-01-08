@@ -50,9 +50,9 @@ class AddNewService extends FrameworkPartyak
                 
 
             // $file = $_FILES['file'];
-            // $imgName = $_FILES['file']['name'];
-            // $imgTmpName = $_FILES['file']['tmp_name'];
-            // $imgError = $_FILES['file']['error'];
+            $imgName = $_FILES['file']['name'];
+            $imgTmpName = $_FILES['file']['tmp_name'];
+            $imgError = $_FILES['file']['error'];
     
             // $imgExt = explode('.' , $imgName);
             // //getting the img type 
@@ -60,21 +60,10 @@ class AddNewService extends FrameworkPartyak
     
             // $allowed = array('jpg' , 'jpeg' , 'png' );
     
-            // //check the img type
+            //check the img type
             // if(in_array($imgActualExt, $allowed)){
-            //     //ckeck errors
-            //     if($imgError === 0){
-            //             //set a unique name
-            //             $imgNameNew = uniqid('', true).".".$imgName ;
-            //             //upload to the folder
-            //             $imgDestination = '../public/img/serviceImg/'.$imgNameNew;
-            //             move_uploaded_file($imgTmpName, $imgDestination);
-            //             // $this->MarketingModel->uploadMarketingContent($id, $imgNameNew);
-            
-            //     }
-            //     else{
-            //         echo "Error in uploading the file!";
-            //     }
+                //ckeck errors
+                
     
             // }
             // else{
@@ -265,10 +254,18 @@ class AddNewService extends FrameworkPartyak
             }
 
             
+            if($imgError === 0){
+                //set a unique name
+                $imgNameNew = uniqid('', true).".".$imgName ;
+                //upload to the folder
+                $imgDestination = '../public/img/serviceImg/'.$imgNameNew;
+                move_uploaded_file($imgTmpName, $imgDestination);
+                // $this->MarketingModel->uploadMarketingContent($id, $imgNameNew);
+    
 
-            
-            $result=$this->AddNewServiceModel->addServiceDetails($id, $servName, $servDesc, $location, $serviceType, $eventType, $province, $facebook, $instagram, $linkedin, $rePrice, $iniDiscount, $count, $prepaTime, $simultaneousBooking, $cancellationPolicy, $tandc, $addiInfo, 
-            $venueType, $standingCapacity, $seatingArr, $addFeature, 
+
+                $result=$this->AddNewServiceModel->addServiceDetails($id, $servName, $servDesc, $location, $serviceType, $eventType, $province, $facebook, $instagram, $linkedin, $rePrice, $iniDiscount, $count, $prepaTime, $simultaneousBooking, $cancellationPolicy, $tandc, $addiInfo, $imgNameNew,
+            $venueType, $standingCapacity, $seatingArr, $addFeature, $imgNameNew,
             $meals, $attendantsNo, 
             $musicType,
             $danceType,
@@ -287,7 +284,33 @@ class AddNewService extends FrameworkPartyak
             else{
                 $this->redirect("addNewService/unsuccessful");
                 // $this->view("vendor/spDeleteServiceView");
-            }     
+            } 
+        }
+        // else{
+        //     echo "Error in uploading the file!";
+        // }
+            
+            // $result=$this->AddNewServiceModel->addServiceDetails($id, $servName, $servDesc, $location, $serviceType, $eventType, $province, $facebook, $instagram, $linkedin, $rePrice, $iniDiscount, $count, $prepaTime, $simultaneousBooking, $cancellationPolicy, $tandc, $addiInfo, $imgNameNew,
+            // $venueType, $standingCapacity, $seatingArr, $addFeature, 
+            // $meals, $attendantsNo, 
+            // $musicType,
+            // $danceType,
+            // $saloonType, $suppType,
+            // $cakeType, $sweetType,
+            // $decoType, $flowType,
+            // $sectionType, $dressCategory ,
+            // $caption, $video );
+
+       
+            
+            // if($result){
+            //     $this->redirect("addNewService/successful");
+            //     // $this->view("vendor/spSuccessServiceView");
+            // }
+            // else{
+            //     $this->redirect("addNewService/unsuccessful");
+            //     // $this->view("vendor/spDeleteServiceView");
+            // }     
             
 
         }

@@ -3,7 +3,7 @@
 class AddNewServiceModel extends Database
 {
     
-    public function addServiceDetails($id, $servName, $servDesc, $location, $serviceType, $eventType, $province, $facebook, $instagram, $linkedin, $rePrice, $iniDiscount, $count, $prepaTime, $simultaneousBooking, $cancellationPolicy, $tandc, $addiInfo, 
+    public function addServiceDetails($id, $servName, $servDesc, $location, $serviceType, $eventType, $province, $facebook, $instagram, $linkedin, $rePrice, $iniDiscount, $count, $prepaTime, $simultaneousBooking, $cancellationPolicy, $tandc, $addiInfo, $imgNameNew,
     $venueType, $standingCapacity, $seatingArr, $addFeature, 
     $meals, $attendantsNo, 
     $musicType,
@@ -27,7 +27,7 @@ class AddNewServiceModel extends Database
         $userId = $result["user_id"];
 
         
-         $query = "INSERT INTO other_service(user_id, service_name, description, service_location, service_type, event_type, service_areas, fb_url, instagram_url, linkedin_url, advance_price, initial_discount, initial_count, preparation_time, simultaneous_booking, cancellation_policy, payment_terms_and_conditions, additional_information, 
+         $query = "INSERT INTO other_service(user_id, service_name, description, service_location, service_type, event_type, service_areas, fb_url, instagram_url, linkedin_url, advance_price, initial_discount, initial_count, preparation_time, simultaneous_booking, cancellation_policy, payment_terms_and_conditions, additional_information, image,
          venue_type, standing_capacity, seating_arrangement, venue_features,
          meal_time, no_of_attendants, 
          music_provider_type,
@@ -38,7 +38,7 @@ class AddNewServiceModel extends Database
          dress_sections, dress_type,
          
          caption, video_url) 
-        VALUES ('$id', '$servName', '$servDesc', '$location', '$serviceType', '$eventType', '$province', '$facebook', '$instagram', '$linkedin', '$rePrice', '$iniDiscount', '$count', '$prepaTime', '$simultaneousBooking', '$cancellationPolicy', '$tandc', '$addiInfo', 
+        VALUES ('$id', '$servName', '$servDesc', '$location', '$serviceType', '$eventType', '$province', '$facebook', '$instagram', '$linkedin', '$rePrice', '$iniDiscount', '$count', '$prepaTime', '$simultaneousBooking', '$cancellationPolicy', '$tandc', '$addiInfo', '$imgNameNew',
         '$venueType', '$standingCapacity', '$seatingArr', '$addFeature', 
         '$meals', '$attendantsNo', 
         '$musicType',
