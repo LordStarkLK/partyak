@@ -73,3 +73,11 @@ deleteAllBtn.onclick = ()=>{
   localStorage.setItem("New Todo", JSON.stringify(listArray)); //set the item in localstorage
   showTasks(); //call the showTasks function
 }
+
+
+var eventbtn =document.getElementById("eventb");
+var eventdata =document.getElementById("service_det");
+
+eventbtn.onclick = function(){
+  eventdata.style.display="block";
+}

@@ -32,7 +32,7 @@
     </header>
     <div class="container">
         <?php while ($row = mysqli_fetch_assoc($data['service'])){
-            $row2 = mysqli_fetch_assoc($data['package_data']);
+           
             $i=1;
 
             echo " 
@@ -328,12 +328,14 @@ elseif($row['service_type']=="eventPlanner"){
             
         </div> 
     ";
-}
-//until now
-
-        echo "
+}?>
+    <?php
+        echo "        
         <div class=\"right_side\">
             <div class=\"request_container\">
+
+            <form action=\"http://localhost/partyak/spService/bookingDet/$row[service_id] \" class=\"form-area\" method=\"POST\">
+
                 Reserve For
             <div class=\"reserve_price\">
                 <div class=\"price\">
@@ -379,26 +381,36 @@ elseif($row['service_type']=="eventPlanner"){
                 </div>
                 <div class=\"col_input\">
                     <select id=\"pType\" name=\"packageType\">
+
         ";
-    
-        
-        
-        echo "
+}?>
+<?php while ($row2 = mysqli_fetch_assoc($data['package_data'])){
             
-                        <option value=\"package\">$row2[package_name]</option>
+
+        echo "
+       
+
+                        <option value=\"$row2[package_name]\">$row2[package_name]</option>";}
+
+                        echo"
                         
                     </select>
                 </div>
             </div>
         ";
-  
+
+?>
+<?php mysqli_data_seek($data['service'],0);
+while ($row = mysqli_fetch_assoc($data['service'])){
 
         
     
         echo "
         </div>
             <div class=\"request\">
-                <button>Request Service</button>
+                <button type=\"submit\" id=\"submitid\"  value=\"Submit\">Request Service</button>
+            </div>
+            </form>
             </div>
             <div class=\"notice\">
                 *After requesting service you will recive vendor response and then you can confirm the payment
@@ -407,41 +419,43 @@ elseif($row['service_type']=="eventPlanner"){
                 <button>Send Message</button>
             </div>
         </div>
-        ";
+        </form>
+       
+        ";?>
+    
+        <?php
         //this calender should be changed
         echo " 
         <div class=\"calendar_container\">
-                        <a class=\"name\">Availability Calendar</a>
+            <a class=\"name\">Availability Calendar</a>
 
-                        <div class=\"calendar\">
-                            <div class=\"month\">
-                                <i class=\"fa fa-angle-left prev\"></i>
-                                <div class=\"date\">
-                                    <h1></h1>
-                                    <p></p>
-                                </div>
-                                <i class=\"fa fa-angle-right next\"></i>
-                            </div>
-                            <div class=\"weekdays\">
-                                <div>Sun</div>
-                                <div>Mon</div>
-                                <div>Tue</div>
-                                <div>Wed</div>
-                                <div>Thu</div>
-                                <div>Fri</div>
-                                <div>Sat</div>
-                            </div>
-                            <div class=\"days\"></div>
+                <div class=\"calendar\">
+                    <div class=\"month\">
+                        <i class=\"fa fa-angle-left prev\"></i>
+                        <div class=\"date\">
+                            <h1></h1>
+                            <p></p>
                         </div>
-
-
+                        <i class=\"fa fa-angle-right next\"></i>
                     </div>
-        ";
-        //it ends here
+                    <div class=\"weekdays\">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div class=\"days\"></div>
+                </div>
 
-        echo "
+
+                </div>
+        
             </div>
         </div>
+        
         <div class=\"additional_details\">
             <div class=\"details_row\">
                 <div class=\"title\">
@@ -505,15 +519,18 @@ elseif($row['service_type']=="eventPlanner"){
                 </div>
             </div>
         </div>
+        <div class=\"allpackages\">
+            <label for=\"package\">Packages</label>
         ";
 
         
 
-       
+    }?>
+    <?php   mysqli_data_seek($data['package_data'],0); 
+    while ($row2 = mysqli_fetch_assoc($data['package_data'])){ 
         
         echo "
-        <div class=\"allpackages\">
-            <label for=\"package\">Packages</label>
+        
             <div class=\"package\">
                 <div class=\"package_content\">
                     <label>$row2[package_name]</label>

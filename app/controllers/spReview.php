@@ -8,10 +8,11 @@ class SpReview extends FrameworkPartyak
         $this->preventBack("vendor");
     }
 
-    public function index()
+    public function index($service_id)
     {
+        $data['service_id'] = $service_id;
         // echo "Hi";
-        $this->view("vendor/spReviewView");
+        $this->view("vendor/spReviewView",$data);
     }
 
    

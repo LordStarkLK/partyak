@@ -62,7 +62,6 @@
 <!-- <button class="signup-button" type="button"><a href="<?php echo BASEURL . '/home/signup'; ?>">Sign up</a></button>
     <button class="login-button" type="button"><a href="<?php echo BASEURL . '/logout'; ?>">Logout</a></button>
   -->
-
 <body>
 
     <div class="nav-bar" id="myTopnav">
@@ -85,7 +84,11 @@
                     </div>
                 </div>
                 <a href="<?php echo BASEURL . '/howItWork'; ?>" class="active">How it work</a>
-                <a href="<?php echo BASEURL . '/customerBecomeVendor'; ?>">Become a vendor</a>
+                <a href="<?php 
+                //    if(echo 'http://localhost/partyak/customerBecomeVendor/checkVendor'){
+                        echo  BASEURL . '/customerBecomeVendor/index';
+                    // }; 
+                    ?>">Become a vendor</a>
 
             </div>
 

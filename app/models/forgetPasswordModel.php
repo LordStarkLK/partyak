@@ -22,6 +22,22 @@ class ForgetPasswordModel extends Database{
 
         return $result;
     }
+
+    public function getUserId($email){
+        $query = "SELECT user_id FROM user where email = '$email'";
+        $result = mysqli_query($GLOBALS["db"],$query);
+
+        return mysqli_fetch_assoc($result);
+
+    }
+
+    public function getUserType($email){
+        $query = "SELECT user_type FROM user where email = '$email'";
+        $result = mysqli_query($GLOBALS["db"],$query);
+
+        return mysqli_fetch_assoc($result);
+
+    }
 }
 
 ?>

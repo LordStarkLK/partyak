@@ -103,6 +103,7 @@
       </ul>
     </div>
   </div>
+
 <!-- 
   <div class="cusContent" id="con"> 
       <p><h2>Hello  Friends,</h2><br> <h3>Let’s start finding service providers.<br><br></h3></p>
@@ -141,10 +142,10 @@
                         while($row=mysqli_fetch_assoc($data['service_detail'])  ){
                           echo "<td>";
                           if($row['service_image']){
-                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                            echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
                           }else{
                             $row['service_image']="default.png";
-                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                            echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"><img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
                           }
                           echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
                           echo "</td>"; 
@@ -158,19 +159,6 @@
                         }
           ?>
 
-          
-
-          <!-- <tr>
-            <td> <a  href="#"> <img <?php srcIMG("chanceFlowers.png") ?> alt="Chance Flowers"></a><br><p>2nd Chance Flowers <br> Colombo, Sri Lanka</p></td>
-            <td> <a  href="<?php echo BASEURL . '/venuesANDhalls'; ?>"><img <?php srcIMG("hotel/hotel1.jpg") ?> alt="Chance Flowers"></a><br><p>Mount Lavinia Hotel <br> Colombo, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("bakeriya.jpg") ?> alt="Chance Flowers"></a> <br><p>APE BAKERIYA <br>Galle, Sri Lanka</p></td>   
-          </tr>
-
-          <tr>
-            <td> <a  href="#"> <img <?php srcIMG("ashane.jpg") ?> alt="Chance Flowers"></a><br><p>Ashane Gunarathne <br>Malabe, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("dark.jpg") ?> alt="Chance Flowers"> </a><br><p>Dark Shine <br> Mathara, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("dukes.png") ?> alt="Chance Flowers"> </a><br><p>Dukes Court 1 <br>Katunayaka,Sri Lanka</p></td>  
-          </tr> -->
           
         </table>
       </div>
@@ -230,20 +218,17 @@
         <table>
             <?php
                     $i=1;
-                  
-                  
-                    
-                    
+
                         echo"<tr>";
                         $j=1;
                               
                                 while($row=mysqli_fetch_assoc($data['ep_detail'])  ){
                                   echo "<td>";
                                   if($row['service_image']){
-                                    echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                    echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
                                   }else{
                                     $row['service_image']="default.png";
-                                    echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                    echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
                                   }
                                   echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
                                   echo "</td>"; 
@@ -256,7 +241,6 @@
                                   
                                 }
             ?>
-
 
           <tr>
             <td> <a  href="#"> <img <?php srcIMG("brought.jpg") ?> alt="Chance Flowers"></a><br><p>Broghts Event Production <br> Colombo, Sri Lanka</p></td>
@@ -391,10 +375,9 @@
           
         </div>
 
-
        <div class="save" id="venueSu">
           <!-- <input type="hidden" value="venue" name="type"> -->
-          <button type="submit" class="saveb" value="submit"  >Search</button>
+          <button type="submit" class="saveb" value="submit" name="submit">Search</button>
        </div>
 
       </div>
@@ -406,20 +389,17 @@
         <table>
             <?php
                 $i=1;
-              
-              
-                
-                
+
                     echo"<tr>";
                     $j=1;
                           
                             while($row=mysqli_fetch_assoc($data['venue_detail'])  ){
                               echo "<td>";
                               if($row['service_image']){
-                                echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
                               }else{
                                 $row['service_image']="default.png";
-                                echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
                               }
                               echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
                               echo "</td>"; 
@@ -510,10 +490,10 @@
                                     while($row=mysqli_fetch_assoc($data['cate_detail'])  ){
                                       echo "<td>";
                                       if($row['service_image']){
-                                        echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                        echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
                                       }else{
                                         $row['service_image']="default.png";
-                                        echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                        echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
                                       }
                                       echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
                                       echo "</td>"; 
@@ -603,10 +583,10 @@
                                   while($row=mysqli_fetch_assoc($data['photo_detail'])  ){
                                     echo "<td>";
                                     if($row['service_image']){
-                                      echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                      echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
                                     }else{
                                       $row['service_image']="default.png";
-                                      echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                      echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
                                     }
                                     echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
                                     echo "</td>"; 
@@ -732,10 +712,10 @@
                                     while($row=mysqli_fetch_assoc($data['music_detail'])  ){
                                       echo "<td>";
                                       if($row['service_image']){
-                                        echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                        echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
                                       }else{
                                         $row['service_image']="default.png";
-                                        echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                        echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
                                       }
                                       echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
                                       echo "</td>"; 
@@ -872,10 +852,10 @@
                                     while($row=mysqli_fetch_assoc($data['dance_detail'])  ){
                                       echo "<td>";
                                       if($row['service_image']){
-                                        echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                        echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
                                       }else{
                                         $row['service_image']="default.png";
-                                        echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                        echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
                                       }
                                       echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
                                       echo "</td>"; 
@@ -985,10 +965,10 @@
                                         while($row=mysqli_fetch_assoc($data['salon_detail'])  ){
                                           echo "<td>";
                                           if($row['service_image']){
-                                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                            echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
                                           }else{
                                             $row['service_image']="default.png";
-                                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                            echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
                                           }
                                           echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
                                           echo "</td>"; 
@@ -1112,10 +1092,10 @@
                                         while($row=mysqli_fetch_assoc($data['cake_detail'])  ){
                                           echo "<td>";
                                           if($row['service_image']){
-                                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                            echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
                                           }else{
                                             $row['service_image']="default.png";
-                                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                            echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
                                           }
                                           echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
                                           echo "</td>"; 
@@ -1228,10 +1208,10 @@
                                         while($row=mysqli_fetch_assoc($data['deco_detail'])  ){
                                           echo "<td>";
                                           if($row['service_image']){
-                                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                            echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
                                           }else{
                                             $row['service_image']="default.png";
-                                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                            echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
                                           }
                                           echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
                                           echo "</td>"; 
@@ -1369,10 +1349,10 @@
                                         while($row=mysqli_fetch_assoc($data['sound_detail'])  ){
                                           echo "<td>";
                                           if($row['service_image']){
-                                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                            echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
                                           }else{
                                             $row['service_image']="default.png";
-                                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                            echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
                                           }
                                           echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
                                           echo "</td>"; 
@@ -1486,10 +1466,10 @@
                                         while($row=mysqli_fetch_assoc($data['dress_detail'])  ){
                                           echo "<td>";
                                           if($row['service_image']){
-                                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                            echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
                                           }else{
                                             $row['service_image']="default.png";
-                                            echo "<img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/>";
+                                            echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
                                           }
                                           echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
                                           echo "</td>"; 
