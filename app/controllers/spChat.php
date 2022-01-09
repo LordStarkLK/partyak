@@ -12,8 +12,12 @@ class SpChat extends FrameworkPartyak
 
     }
 
-    public function index()
+    public function index($service_id)
     {
+
+        $data['service_id'] = $service_id;
+        
+
         $id=$_SESSION['userId'];
         $data['myDetails'] = $this->user->getDetails($id);
 
@@ -33,6 +37,7 @@ class SpChat extends FrameworkPartyak
     public function userList(){
         $chatList = $this->user->chatList();
         echo $chatList;
+
     }
 
    
