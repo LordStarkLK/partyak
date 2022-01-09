@@ -30,8 +30,10 @@ class ForgetPassword extends FrameworkPartyak{
                 $otp = mt_rand(100000, 999999);
                 $this->setSession("otp",$otp);
                 $this->setSession("email",$email);
+                
 
                 $this->sendOTP();
+                // $data["email"] =$email;
 
                 return true;
 
@@ -45,13 +47,13 @@ class ForgetPassword extends FrameworkPartyak{
         $this->view("forgetPasswordView",$data);
     }
 
-    public function otpCheck(){
+    public function otpCheck($email){
         if($_SERVER["REQUEST_METHOD"] === "POST"){
             $input = $_POST["input1"] . $_POST["input2"] . $_POST["input3"] .
                 $_POST["input4"] . $_POST["input5"] . $_POST["input6"];
 
             $otp = $this->getSession("otp");
-            
+            $data["email"] = $email;
             if($otp == $input){
                 $this->unsetSession("otp");
 
@@ -102,11 +104,21 @@ class ForgetPassword extends FrameworkPartyak{
             if($numberOfErrors == 0){
                 // echo "Hi";  
                 $email = $this->getSession("email");
+                $user_id = $this->forgetPasswordModel->getUserId($email);
+                $user_type = $this->forgetPasswordModel->getUserType($email);
+                
                 $this->unsetSession("email");
 
                 if($this->forgetPasswordModel->changePassword($email,$password1)){
-                    echo "Hi - ";
-                    $this->redirect("login");
+                    // echo "Hi - ";
+                    $this->setSession("userId",$user_id["user_id"]);
+                    $this->setSession("type",$user_type["user_type"]);
+                
+                    // $this->view("VendorHomeView");
+                // After a succesful login directing to dashboard
+                    $this->redirect("dashboard/changePassword");
+
+                    
                 }
             }else{
                 $data["errors"] = $errors;
@@ -152,6 +164,7 @@ class ForgetPassword extends FrameworkPartyak{
         $send_mail_result = mail($email,$emailSubject,$emailBody,$header);
 
         $data["error"] = "";
+        // $data["email"] = $email;
 
         $this->view("otpView",$data);
 

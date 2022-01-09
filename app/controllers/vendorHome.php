@@ -12,4 +12,11 @@ class VendorHome extends FrameworkPartyak
         $this->preventBack("vendor");
         $this->view("homeView");
     }
+
+    public function changePassword()
+    {
+        $data["status"] = "passwordChanged";
+        $this->preventBack("vendor");
+        $this->view("homeView",$data);
+    }
 }
