@@ -20,6 +20,16 @@ class CustomerOnYourOwnPlanModel extends Database
         mysqli_query($GLOBALS['db'], $query);
     }
 
+    public function updateEventDetail($eventType,  $eventname,$startdate, $enddate, $city, $noofguest,$planning_id){
+            $query = "UPDATE event  SET event_type='$eventType', event_name='$eventname', start_date='$startdate', end_date= '$enddate', location='$city',noOfGuest='$noofguest' WHERE (planning_id='$planning_id') LIMIT 1";
+            mysqli_query($GLOBALS['db'], $query);
+    }
 
+    public function selectEventDetail($planning_id){
+        $query ="SELECT * FROM event WHERE planning_id='$planning_id' LIMIT 1";
+        $result = mysqli_query($GLOBALS['db'],$query);
+        $eventDet = mysqli_fetch_assoc($result);
+        return $eventDet;
+    }
 
 }

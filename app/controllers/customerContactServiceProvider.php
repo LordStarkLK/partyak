@@ -92,6 +92,4 @@ class CustomerContactServiceProvider extends FrameworkPartyak{
         $this->view("customer/customerContactServiceProviderView",$data);
     }
 
-    
-
 }
