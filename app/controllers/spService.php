@@ -13,37 +13,111 @@ class SpService extends FrameworkPartyak
 
     public function index($service_id)
     {
-
-
         $id = $_SESSION['userId'];
         // $serName = 'Avendra';
 
         $data['service'] = $this->ServiceModel->getServiceInfo($service_id);
         $data['package_data'] = $this->ServiceModel->getPackageInfo($service_id);
-
-       
-        // $errors = array();
-        // $errors["ratedStars"] = "";
-        // $errors["review"] = "";
-
-        // if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-        //     $customId = $_POST["review"];
-        //     $customName = $_POST["user_id"];
-        //     $eventName = $_POST["ratedIndex"];
-        //     $eventDate = $_POST["event_date"];
-        // }
-
+        $data['review_status'] = $this->ServiceModel->checkReviewStatus($service_id, $id);
+        $data['latest_review'] = $this->ServiceModel->getLatestReview($service_id);
 
 
         // echo "Hi";
         $this->view("vendor/spServiceView", $data);
     }
+    public function insertReview($id, $service_id)
+    {
+        $id = $_SESSION['userId'];
 
-    public function bookingDet($service_id){
+        // $serName = 'Avendra';
 
-        $id=$_SESSION['userId'];
-        
+        $data['service'] = $this->ServiceModel->getServiceInfo($service_id);
+        $data['package_data'] = $this->ServiceModel->getPackageInfo($service_id);
+
+        //review insert starts
+        $errors = array();
+        $errors["ratedStars"] = "";
+        $errors["textReview"] = "";
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+            //Get data from the form submission
+            $ratedStars = $_POST["ratedIndex"];
+            $textReview = $_POST["review"];
+
+
+            //Empty check
+            if (empty($ratedStars)) $errors["ratedStars"] = "Give a star rate";
+            if (empty($textReview)) $errors["textReview"] = "Leave your review";
+
+
+            /* Count number of validation failures */
+            $numberOfErrors = 0;
+            foreach ($errors as $key => $value) {
+
+                if ($value != "") {
+                    $numberOfErrors++;
+                }
+            }
+
+            if ($numberOfErrors == 0) {
+                //Insert data
+                $this->ServiceModel->insertReview($ratedStars,  $textReview, $id, $service_id);
+            }
+            //review insert ends
+        }
+        $data["errors"] = $errors;
+        $this->view("vendor/spServiceView", $data);
+    }
+    public function alterReview($id, $service_id)
+    {
+        $id = $_SESSION['userId'];
+
+        // $serName = 'Avendra';
+
+        $data['service'] = $this->ServiceModel->getServiceInfo($service_id);
+        $data['package_data'] = $this->ServiceModel->getPackageInfo($service_id);
+
+        //review insert starts
+        $errors = array();
+        $errors["ratedStars"] = "";
+        $errors["textReview"] = "";
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+            //Get data from the form submission
+            $ratedStars = $_POST["ratedIndex"];
+            $textReview = $_POST["review"];
+
+
+            //Empty check
+            if (empty($ratedStars)) $errors["ratedStars"] = "Give a star rate";
+            if (empty($textReview)) $errors["textReview"] = "Leave your review";
+
+
+            /* Count number of validation failures */
+            $numberOfErrors = 0;
+            foreach ($errors as $key => $value) {
+
+                if ($value != "") {
+                    $numberOfErrors++;
+                }
+            }
+
+            if ($numberOfErrors == 0) {
+                //Insert data
+                $this->ServiceModel->alterReview($ratedStars,  $textReview, $id, $service_id);
+            }
+            //review insert ends
+        }
+        $data["errors"] = $errors;
+        $this->view("vendor/spServiceView", $data);
+    }
+    public function bookingDet($service_id)
+    {
+
+        $id = $_SESSION['userId'];
+
         // $serName = 'Avendra';
 
         $data['service'] = $this->ServiceModel->getServiceInfo($service_id);
@@ -75,14 +149,11 @@ class SpService extends FrameworkPartyak
 
             if ($numberOfErrors == 0) {
                 //Insert data
-                $this->ServiceModel->bookingDetail($eventType, $guestCount, $reserveDate, $packageType, $id,$service_id);
+                $this->ServiceModel->bookingDetail($eventType, $guestCount, $reserveDate, $packageType, $id, $service_id);
                 // $this->redirect('spService');
             }
-
-
         }
         $data["errors"] = $errors;
         $this->view("vendor/spServiceView", $data);
-
     }
 }

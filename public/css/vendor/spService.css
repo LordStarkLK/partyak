@@ -494,6 +494,7 @@
 }
 
 .reviewbody {
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -570,4 +571,81 @@ form .btn button:hover {
   width: 340px;
   height: 150px;
   padding-left: 10px;
+}
+.social-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.review-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 64px;
+  margin-bottom: 64px;
+}
+.userRate {
+  display: flex;
+  font-size: 86px;
+  color: #f8f900 !important;
+  justify-content: center;
+  align-items: baseline;
+}
+.userRate .fa-star:before {
+  color: #f8f900;
+}
+.review-section h1 {
+  color: #eee;
+}
+.userReview p {
+  color: white;
+  font-style: italic;
+  font-size: 20px;
+  margin-bottom: 43px;
+}
+.userReview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.latest-review {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+.latest-review-card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border: solid;
+  border-color: white;
+  border-width: 0 0 1px 0;
+  width: 150%;
+  /* border-top-width: 5px; */
+  align-items: center;
+  padding-bottom: 8px;
+}
+.latest-review-card .rate {
+  font-size: 86px;
+  color: #f8f900 !important;
+  margin-right: 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.latest-review-card .rate p {
+  font-size: 16px;
+}
+.latest-review-card .review-text {
+  color: rgb(0, 220, 146);
+  font-style: italic;
+}
+.your-review {
+  margin-top: 80px;
 }
