@@ -533,9 +533,9 @@ border-radius: 43px;
   #rate-5:checked ~ form header:before{
     content: "I just love it ";
   }
-  .container form{
+/*   .container form{
     display: none;
-  }
+  } */
   input:checked ~ form{
     display: block;
   }

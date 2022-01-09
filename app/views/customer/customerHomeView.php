@@ -17,7 +17,7 @@
 <body>
     <header>
         <?php linkPhp("customerNavigation") ?>
-        <?php if(isset($data["status"])){
+        <?php if($data["status"] == "new"){
         echo "
         <div class=\"successful\">
         <div class=\"success-items\">
@@ -31,6 +31,19 @@
 
     </div>
         ";
+        }else if($data["status"] == "changePassword"){
+            echo "
+        <div class=\"successful\">
+        <div class=\"success-items\">
+            <div class=\"success-content\">
+            Your Password has been successfully changed
+            </div>
+            <div class=\"success-icon\">
+                <span class=\"close\">&times;</span>
+            </div>
+        </div>
+
+    </div>";
         }?>
     </header>
     

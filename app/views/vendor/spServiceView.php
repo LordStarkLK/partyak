@@ -334,6 +334,8 @@ elseif($row['service_type']=="eventPlanner"){
         echo "
         <div class=\"right_side\">
             <div class=\"request_container\">
+            <div class=\"request-form\">
+            <form>
                 Reserve For
             <div class=\"reserve_price\">
                 <div class=\"price\">
@@ -406,6 +408,8 @@ while ($row = mysqli_fetch_assoc($data['service'])){
         </div>
             <div class=\"request\">
                 <button>Request Service</button>
+            </div>
+            </form>
             </div>
             <div class=\"notice\">
                 *After requesting service you will recive vendor response and then you can confirm the payment

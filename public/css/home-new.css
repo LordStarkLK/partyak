@@ -13,6 +13,50 @@ body {
   background-position: 50% 50%;
   background-size: contain;
 }
+
+.successful{
+  z-index: 2;
+  width: 90%;
+  margin-left:auto;
+  margin-right: auto;
+  height: 50px;
+  background: #fbf6d5;
+  color: #673500;
+  border-color: rgba(220,179,0,.2);
+  box-shadow: 0 3px 0 0 #d5e1e6;
+  border-radius: 0 0 4px 4px;
+  display: block;
+  
+
+}
+
+.success-items{
+  display:flex;
+  flex-direction:row;
+
+}
+
+.success-content{
+ width: 500px;
+
+}
+.success-icon{
+  width: 700px;
+
+  cursor:pointer;
+}
+
+
+.close {
+  margin-left:901px;
+  float: right;
+  font-size: 45px;
+
+
+}
+
+
+
 .home-blob {
   position: absolute;
   right: 10%;
