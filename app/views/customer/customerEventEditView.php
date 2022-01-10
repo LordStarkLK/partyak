@@ -12,6 +12,7 @@
     <?php linkCSS("customer/customerOnYourOwnPlanView"); ?>
     <?php linkCSS("customerNavigation"); ?>
     <?php linkCSS("footer");?>
+    <?php $eventDet=$data['event']?>
    </head>
 <body>
     <header>
@@ -28,13 +29,12 @@
         <br><br><img <?php srcIMG("servicepees.png") ?> alt="Chance Flowers"> 
     </div>
   </div>
-
   <div class="cusContent" id="con"> 
-    <form action="<?php echo BASEURL . '/customerOnYourOwnPlan/index'; ?>" class="form-area" method="POST">
+    <form action="<?php echo  BASEURL . '/customerOnYourOwnPlan/editEvent/'.$eventDet['planning_id'].'' ; ?>" class="form-area" method="POST">
           <p11>Event Details</p11>
           <div class="input-box01">
-            <select name="eventType" placeholder="Event Type">
-                <option value="null">Event Type</option>
+            <select name="eventType" placeholder="Event Type" value="<?php echo "$eventDet[event_type]"; ?>">
+                <option value="<?php echo "$eventDet[event_type]"; ?>"><?php echo "$eventDet[event_type]"; ?></option>
                 <option value="Wedding">Wedding</option>
                 <option value="Party/Festival">Party/Festival</option>
                 <option value="Corparate Event">Corporate Event</option>
@@ -44,7 +44,7 @@
           </div>
               
           <div class="input-box02">
-              <input type="text" placeholder="Event Name" name="eventname">
+              <input type="text" placeholder="Event Name" name="eventname" value="<?php echo "$eventDet[event_name]"; ?>">
               <div class="error"><?php echo $errors["eventname"] ?></div> 
           </div>
 
@@ -62,7 +62,7 @@
 
             <div class="dates">
                <div class="bdate">
-                <input type="date" placeholder="Event Start Date" name="startdate" >
+                <input type="date" placeholder="Event Start Date" name="startdate" value="<?php echo "$eventDet[start_date]"; ?>" >
                 <div class="error"><?php echo $errors["startdate"] ?></div> 
               </div>
 
@@ -72,7 +72,7 @@
 
               
               <div class="sdate">
-                <input type="date" placeholder="Event End Date" name="enddate">
+                <input type="date" placeholder="Event End Date" name="enddate" value="<?php echo "$eventDet[end_date]"; ?>" >
                 <!-- <div class="error"><?php echo $errors["enddate"] ?></div>  -->
               </div>
 
@@ -82,7 +82,7 @@
 
           <div class="input-box04">
           <select name="city">
-              <option value="null">City</option>
+              <option value="<?php echo "$eventDet[location]"; ?>"><?php echo "$eventDet[location]"; ?></option>
               <option value="Colombo">Colombo</option>
               <option value="Gampaha">Gampaha</option>
               <option value="Kaluthara">Kaluthara</option>
@@ -113,7 +113,7 @@
           </div>
 
           <div class="input-box05">
-              <input type="text" placeholder="no of Guests" name="noofguest">
+              <input type="text" placeholder="no of Guests" name="noofguest" value="<?php echo "$eventDet[noOfGuest]"; ?> " >
               <div class="error"><?php echo $errors["noofguest"] ?></div> 
           </div>
 

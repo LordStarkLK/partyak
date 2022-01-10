@@ -16,6 +16,21 @@
 <body>
     <header>
         <?php linkPhp("navigation") ?>
+        <?php if(isset($data["status"])){
+        echo "
+        <div class=\"successful\">
+        <div class=\"success-items\">
+            <div class=\"success-content\">
+                Your Password has been successfully changed
+            </div>
+            <div class=\"success-icon\">
+                <span class=\"close\">&times;</span>
+            </div>
+        </div>
+
+    </div>
+        ";
+        }?>
     </header>
     <div class="container section1">
         <div class="left column">
@@ -176,6 +191,7 @@
             </div>
         </div>
     </div>
+    <?php linkJS("home");?>
     <?php linkPhp("footer") ?>
 </body>
 

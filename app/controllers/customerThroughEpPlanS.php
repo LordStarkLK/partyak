@@ -10,6 +10,8 @@ class CustomerThroughEpPlanS extends FrameworkPartyak{
 
         $this->preventBack("customer");
     }
+
+    
     
     public function index(){
         // echo $_SESSION['type'];
@@ -18,6 +20,8 @@ class CustomerThroughEpPlanS extends FrameworkPartyak{
         // }
         // $this->preventBack("customer");
         $this->view("customer/customerThroughEpPlanSView");
+        
+        $id=$_SESSION['userId'];
 
 
 
@@ -74,7 +78,7 @@ class CustomerThroughEpPlanS extends FrameworkPartyak{
           
 
             //Insert data
-            $this->ThroughEpSModel->addEventEpServicePreference( $Seating ,$indoorAgree,$outdoorAgree, $danceAgree ,$setiAgree,$poruwaAgree,$venueAgree,$breakfAgree,$lunchAgree ,$dinnerAgree ,$teaAgree, $buffeAgree ,$noServant,$cateringAgree, $budget ,$photoDetails,$photoAgree, $mbandAgree, $djAgree ,$soloAgree,$musicAgree,$kandyAgree, $lawAgree, $sabaAgree,$wesAgree ,$dancesAgree,$SalonType,$hairAgree ,$dressers,$makeupAgree,$salonAgree,$wedAgree, $partyAgree , $sweetAgree,$cakeAgree,$sbackAgree, $floralAgree,$decoAgree,$soundAgree ,$lightAgree ,$indooreAgree,$outdooreAgree,$soundsAgree,$maleAgree,$femaleAgree,$dressAgree);
+            $this->ThroughEpSModel->addEventEpServicePreference( $Seating ,$indoorAgree,$outdoorAgree, $danceAgree ,$setiAgree,$poruwaAgree,$venueAgree,$breakfAgree,$lunchAgree ,$dinnerAgree ,$teaAgree, $buffeAgree ,$noServant,$cateringAgree, $budget ,$photoDetails,$photoAgree, $mbandAgree, $djAgree ,$soloAgree,$musicAgree,$kandyAgree, $lawAgree, $sabaAgree,$wesAgree ,$dancesAgree,$SalonType,$hairAgree ,$dressers,$makeupAgree,$salonAgree,$wedAgree, $partyAgree , $sweetAgree,$cakeAgree,$sbackAgree, $floralAgree,$decoAgree,$soundAgree ,$lightAgree ,$indooreAgree,$outdooreAgree,$soundsAgree,$maleAgree,$femaleAgree,$dressAgree,$id);
          
 
         }

@@ -328,12 +328,14 @@ elseif($row['service_type']=="eventPlanner"){
             
         </div> 
     ";
-}
-//until now
-
-        echo "
+}?>
+    <?php
+        echo "        
         <div class=\"right_side\">
             <div class=\"request_container\">
+
+            <form action=\"http://localhost/partyak/spService/bookingDet/$row[service_id] \" class=\"form-area\" method=\"POST\">
+
                 Reserve For
             <div class=\"reserve_price\">
                 <div class=\"price\">
@@ -379,6 +381,7 @@ elseif($row['service_type']=="eventPlanner"){
                 </div>
                 <div class=\"col_input\">
                     <select id=\"pType\" name=\"packageType\">
+
         ";
 }?>
 <?php while ($row2 = mysqli_fetch_assoc($data['package_data'])){
@@ -387,7 +390,7 @@ elseif($row['service_type']=="eventPlanner"){
         echo "
        
 
-                        <option value=\"package\">$row2[package_name]</option>";}
+                        <option value=\"$row2[package_name]\">$row2[package_name]</option>";}
 
                         echo"
                         
@@ -405,7 +408,9 @@ while ($row = mysqli_fetch_assoc($data['service'])){
         echo "
         </div>
             <div class=\"request\">
-                <button>Request Service</button>
+                <button type=\"submit\" id=\"submitid\"  value=\"Submit\">Request Service</button>
+            </div>
+            </form>
             </div>
             <div class=\"notice\">
                 *After requesting service you will recive vendor response and then you can confirm the payment
@@ -414,7 +419,11 @@ while ($row = mysqli_fetch_assoc($data['service'])){
                 <button>Send Message</button>
             </div>
         </div>
-        ";
+        </form>
+       
+        ";?>
+    
+        <?php
         //this calender should be changed
         echo " 
         <div class=\"calendar_container\">

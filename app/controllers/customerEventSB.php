@@ -16,6 +16,7 @@ class CustomerEventSB extends FrameworkPartyak{
         // $this->preventBack("customer");
 
         $data['event']= $this->user->getEventDetails($planning_id);
+        $data['service']= $this->user->getServicePDetails($planning_id);
         $this->view("customer/customerEventSBView",$data);
     }
 

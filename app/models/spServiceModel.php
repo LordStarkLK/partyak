@@ -25,12 +25,29 @@ class SpServiceModel extends Database
             return $result;
         }
     }
+
+
     public function getPackageInfo($service_id){
         $query = "SELECT package_id,package_name, description, valid_from, valid_to, per_unit_price FROM package WHERE service_id='$service_id' ";
         $result = mysqli_query($GLOBALS['db'],$query);
         if(mysqli_num_rows($result) > 0){
             return $result;
         }
+    }
+
+    public function bookingDetail($eventType, $guestCount, $reserveDate, $packageType, $id,$service_id){
+        // echo $packageType;
+        
+        $query = "SELECT package_id FROM package WHERE package_name='$packageType'";
+        $query = mysqli_query($GLOBALS['db'],$query);
+        $result = mysqli_fetch_assoc($query);
+        $packageId = $result['package_id'];
+        // echo $packageId;
+
+        //Insert data to child tables of user - on_your_own_planning table
+        $query = "INSERT INTO booking(customer_id, service_id, event_date,event_type,noOfGuest, package_id) 
+        VALUES ('$id', '$service_id', '$reserveDate', '$eventType' , ' $guestCount', '$packageId')";
+        mysqli_query($GLOBALS['db'], $query);
     }
     
 

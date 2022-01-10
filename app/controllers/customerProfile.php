@@ -4,7 +4,7 @@ class CustomerProfile extends FrameworkPartyak{
     public function __construct(){
         $this->helper("linker");
         $this->user = $this->model('customerProfileModel');
-        $this->preventBack("customer");
+        $this->preventBack2();
     }
     
     public function index(){

@@ -12,6 +12,7 @@
     <title>Message</title>
     <?php echo linkCSS("otp"); ?>
     <link rel="stylesheet" href="/Assets/css/flashMessages.css?version=1">
+    <?php $email = $data["email"];?>
 </head>
 
 <body>
@@ -20,11 +21,12 @@
         <div class="bgWhite">
             <div class="title">
                 <h3>OTP Verification</h3>
+                
 
-                <h5>Enter the OTP code sent to your email to change your account password.</h5>
+                <h5>Enter the OTP code sent to your email (<?php echo $email; ?>) to change your account password.</h5>
             </div>
 <!-- \*onpaste="paste()"*\ -->
-            <form action="<?php echo BASEURL . "/forgetPassword/otpCheck"; ?>" method="POST">
+            <form action="<?php echo BASEURL . "/forgetPassword/otpCheck/".$email.""; ?>" method="POST">
                 <div class="otp_no">
                     <input id="input1" name="input1" class="otp" type="text" oninput='digitValidate(this)' onkeyup='tabChange(1)' maxlength=1>
                     <input id="input2" name="input2" class="otp" type="text" oninput='digitValidate(this)' onkeyup='tabChange(2)' maxlength=1>
