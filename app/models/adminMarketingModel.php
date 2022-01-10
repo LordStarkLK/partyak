@@ -74,6 +74,14 @@
             
         }
 
+        public function delete($content_id){
+            $query = "DELETE FROM marketing_content WHERE content_id = '$content_id'";
+            $result = mysqli_query($GLOBALS["db"], $query);
+            return $result;
+     
+        }
+    
+
         
     
         

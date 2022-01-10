@@ -41,16 +41,6 @@
 
                     </ul>
 
-                    <div class="search-container">
-                        <form action="/action_page.php">
-                            <input type="text" placeholder="Search Marketing.." name="search">
-
-                            <button type="submit"><i class="fa fa-search"></i></button>
-                            <!-- <i class="fas fa-search"></i> -->
-
-
-                        </form>
-                    </div>
 
 
                 </div>
@@ -104,7 +94,7 @@
                                         
                                         </div>
                                         </div>
-                                        <button>Delete Content</button>
+                                        <button onclick=\"window.location='" . BASEURL . "/adminMarketing/delete/$row[content_id]'\">Delete Content</button>
                                         </div>
 
     

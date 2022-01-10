@@ -91,8 +91,8 @@
                                 <td>$row[event_date]</td>
                                 <td>
                                 <div class=\"btn-group\">
-                                    <button onclick=\"window.location='<?php echo BASEURL . '/adminVendorBookings'; ?>'\">See in Vendor Bookings</button>
-                                    <button >Delete</button>
+                                    <button onclick=\"window.location='".BASEURL."/adminVendorBookings'\">See in Vendor Bookings</button>
+                                    <button onclick=\"window.location='" . BASEURL . "/adminBookings/delete/$row[booking_id]'\">Delete Booking</button>
 
                                 </div>
                             </td>

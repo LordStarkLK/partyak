@@ -328,8 +328,7 @@ elseif($row['service_type']=="eventPlanner"){
             
         </div> 
     ";
-}?>
-    <?php
+}
         echo "        
         <div class=\"right_side\">
             <div class=\"request_container\">
@@ -411,7 +410,7 @@ while ($row = mysqli_fetch_assoc($data['service'])){
                 <button type=\"submit\" id=\"submitid\"  value=\"Submit\">Request Service</button>
             </div>
             </form>
-            </div>
+            
             <div class=\"notice\">
                 *After requesting service you will recive vendor response and then you can confirm the payment
             </div>
@@ -419,7 +418,7 @@ while ($row = mysqli_fetch_assoc($data['service'])){
                 <button>Send Message</button>
             </div>
         </div>
-        </form>
+        
        
         ";?>
     
