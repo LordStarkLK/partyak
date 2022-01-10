@@ -4,7 +4,7 @@
 class CustomerProfileBooking extends FrameworkPartyak{
     public function __construct(){
         $this->helper("linker");
-
+        $this->booking = $this->model('customerProfileBookingModel');
         $this->preventBack("customer");
     }
     
@@ -14,7 +14,12 @@ class CustomerProfileBooking extends FrameworkPartyak{
         //     $this->redirect("login");
         // }
         // $this->preventBack("customer");
-        $this->view("customer/customerProfileBookingView");
+
+        $id=$_SESSION['userId'];
+
+        $data['bookingDetail'] = $this->booking->getBookingDetails($id);
+        $data['bookingDet'] = $this->booking->getBookingDets($id);
+        $this->view("customer/customerProfileBookingView",$data);
     }
 
 }
