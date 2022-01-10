@@ -29,7 +29,7 @@
 
             <div class="sidebar-button">
                 <i class='bx bx-menu sidebarBtn' id="iconMenu"></i>
-                <span class="dashboard">REQUESTS</span>
+                <span class="dashboard">SERVICES</span>
             </div>
 
             <div class="home-content">
@@ -37,7 +37,7 @@
                     <div class="box" id="box-marketing">
                         <span class="links_name"><img class="customer-image" <?php srcIMG("adminrequest.png") ?> width="50"
                                 height="50">
-                            <div class="box-topic">Requests</div>
+                            <div class="box-topic">Services</div>
                         </span>
 
                     </div>

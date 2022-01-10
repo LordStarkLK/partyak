@@ -93,6 +93,13 @@ class AdminBookingsModel extends database {
         return $output;
     }
 
+    public function delete($booking_id){
+        $query = "DELETE FROM booking WHERE booking_id = '$booking_id'";
+        $result = mysqli_query($GLOBALS["db"], $query);
+        return $result;
+ 
+    }
+
     
 
 

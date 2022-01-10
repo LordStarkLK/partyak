@@ -25,7 +25,8 @@
 
             <div class="home-content">
                 <div class="overview-boxes">
-                    <div class="box" id="box-marketing" onclick="window.location='<?php echo BASEURL . '/adminPayment'; ?>'">
+                    <div class="box" id="box-marketing"
+                        onclick="window.location='<?php echo BASEURL . '/adminPayment'; ?>'">
                         <span class="links_name"><img class="customer-image" <?php srcIMG("payment.png") ?> width="40"
                                 height="40">
                             <div class="box-topic">Payment</div>
@@ -33,9 +34,9 @@
 
                     </div>
 
-                    <div class="box" id="box-marketing" >
+                    <div class="box" id="box-marketing">
                         <span class="links_name"><img class="customer-image" <?php srcIMG("settlement.png") ?>
-                                width="40" height="40" >
+                                width="40" height="40">
                             <div class="box-topic">Settlements</div>
                         </span>
 
@@ -61,50 +62,90 @@
                         <div class="modal-content">
                             <span class="close">&times;</span>
                             <h2>Add payment</h2>
-                            
+
                             <div class="popup-container">
-                            <div class="popup-left">
-                            <div class="search-popup">
-                                <form action="/action_page.php">
-                                    <input type="text" placeholder="Search users.." name="search">
+                                <div class="popup-left">
+                                    <div class = "input-details">
+                                        <form action="/action_page.php">
+                                            <div>
+                                                <p>User_id of Vendor</p>
+                                                <input type="text" placeholder="user_id" name="search">
+                                            </div>
+                                            <div>
+                                                <p>Amount Payed: </p>
+                                                <input type="text" placeholder="amount (lkr)" name="search">
+                                            </div>
+                                            <div>
+                                                <p>Description: </p>
+                                                <input type="text" placeholder="description" name="search">
+                                            </div>
+                                            <div>
+                                                <p>Payment Date: </p>
+                                                <input type="date" placeholder="description" name="search">
+                                            </div>
 
-                                    <button type="submit"><i class="fa fa-search"></i></button>
-                                    <!-- <i class="fas fa-search"></i> -->
 
 
-                                </form>
 
-                            </div>
-                            <div>
-                                    <p>vendor Details:</p>
-                                    <p>Vendor Name: John Clark</p>
-                                    <p>Service Name: JK photography</p>
-                                    <p>Wallet ID: 01</p>
 
-                                    <button class="submit-button">Submit</button>
+                                            <!-- <i class="fas fa-search"></i> -->
+
+
+                                        </form>
+
+
+                                    </div>
+
+                                </div>
+                                <div>
+                                <div class="submission_area">
+                                    
+                                    <div class="title"><a>Upload Your File</a></div>
+                                    <div class="sub_title"><a>(File should be JPG, JPEG or PNG)</a></div>
+                                    <!-- here newly added codes -->
+                                    <div class="upload-container">
+                                        <div class="wrapper">
+                                            <div class="image">
+                                                <img id="contentImg" src="" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <div class="icon">
+                                                    <i class="fas fa-cloud-upload-alt"></i>
+                                                </div>
+                                                <div class="text">
+                                                    No file chosen, yet!
+                                                </div>
+                                            </div>
+                                            <div id="cancel-btn">
+                                                <i class="fas fa-times"></i>
+                                            </div>
+                                            <div class="file-name">
+                                                File name here
+                                            </div>
+                                        </div>
+
+                                        <button type="file" name="file" onclick="defaultBtnActive()"
+                                            id="custom-btn">Choose a
+                                            file</button>
+
+                                        <form action="<?php echo BASEURL . '/spMarketing/index'; ?>" method="POST"
+                                            enctype="multipart/form-data">
+
+                                            <input id="default-btn" type="file" name="file" hidden>
+                                            
+                                    </div>
+
+                                   
+
+
 
 
                                 </div>
-
-                            </div>    
-                            
-                                <div class="popup-right">
-                                
-                                    <div>
-                                        <p>Wallet amount: 10000 </p>
-
-                                    </div>
-                                    <div>
-                                        <input type="text" placeholder="paid amount.." name="paid">
-                                    </div>
-                                    <div>
-                                        <input type="date" placeholder="date paid.." name="date">
-                                    </div>
-                                    <div>
-                                        <input type="text" placeholder="transaction id.." name="transaction-id">
-                                    </div>
+                                <button class="submit-button">Submit</button>
                                 </div>
-                               
+
+
+
                             </div>
 
 
@@ -114,7 +155,7 @@
 
 
                 </div>
-                
+
 
                 <div class="search-container">
                     <form action="/action_page.php">

@@ -34,70 +34,39 @@
     <div class="cusevent">
     <table class="table-content">
           <tr>
-            <th>Booking_ID</th>
-            <th>Vendor</th>
+            <th>Booking_No</th>
+            <th>Vendor Type</th>
             <th>Vendor Name</th>
             <th>Event_Date</th>
             <th>Booking Request Status</th>
+            <th>Do Payment</th>
             <th>Payment_Status</th>
             <th>More Actions</th>
           </tr>
-  
-         <tr>
-            <td>01</td>
-            <td>Salon</td>
-            <td>Jaal Salon</td>
-            <td>10.08.2020</td>
-            <td>Accepted</td>
-            <td>Completed</td>
-            <td class="btn-row">
-                <button class="edit-booking">Edit</button>
-                <button class="cancel-booking">Cancel</button>
-            </td>
-            
-          </tr>
 
-          <tr>
-            <td>02</td>
-            <td>Photographer</td>
-            <td>DARKEYE</td>
-            <td>31.10.2020</td>
-            <td>Accepted</td>
-            <td>Pending</td>
-            <td class="btn-row">
-                <button class="edit-booking">Edit</button>
-                <button class="cancel-booking">Cancel</button>
-            </td>
-            
-          </tr>
 
-          <tr>
-            <td>03</td>
-            <td>Venues & Halls</td>
-            <td>8 Degree</td>
-            <td>20.11.2020</td>
-            <td>Accepted</td>
-            <td>Pending</td>
-            <td class="btn-row">
-                <button class="edit-booking">Edit</button>
-                <button class="cancel-booking">Cancel</button>
-            </td>
-            
-          </tr>
+          <?php
+            $i = 1;
+            while($row=mysqli_fetch_assoc($data['bookingDetail']) ){
+               
+                echo"
+                <tr>
+                  <td>$i</td>
+                  <td>$row[service_type]</td>
+                  <td>$row[service_name]</td>
+                  <td>$row[event_date]</td>
+                  <td>$row[status]</td>
+                  <td class=\"btn-row\">
+                      <button class=\"edit-booking\">Go</button>
+                  </td>
+                  <td>Completed</td>
+                  <td class=\"btn-row\">
+                      <button class=\"cancel-booking\">Cancel</button>
+                  </td>";
+                
+            $i++;
+          }?>
 
-          <tr>
-            <td>04</td>
-            <td>Catering Service</td>
-            <td>Dushan Catering</td>
-            <td>25.11.2020</td>
-            <td>Pending</td>
-            <td>Pending</td>
-            <td class="btn-row">
-                <button class="edit-booking">Edit</button>
-                <button class="cancel-booking">Cancel</button>
-            </td>
-            
-          </tr>
          
         
       </table>
