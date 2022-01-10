@@ -21,6 +21,7 @@ class SpService extends FrameworkPartyak
         $data['service'] = $this->ServiceModel->getServiceInfo($service_id);
         $data['package_data'] = $this->ServiceModel->getPackageInfo($service_id);
 
+
        
         // $errors = array();
         // $errors["ratedStars"] = "";
@@ -52,13 +53,16 @@ class SpService extends FrameworkPartyak
         $errors = array();
         $errors["reservedate"] = "";
 
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+        // if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
 
             //Get data from the form submission
             $eventType = $_POST["eventType"];
             $guestCount = $_POST["guestcount"];
             $reserveDate = $_POST["reservedate"];
             $packageType = $_POST["packageType"];
+
 
 
             //Empty check

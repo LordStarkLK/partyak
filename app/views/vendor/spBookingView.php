@@ -78,22 +78,38 @@
                 </tr>
               </thead>
               <tbody>
+              
                 <?php while ($row = mysqli_fetch_assoc($data['request_data'])) {
+                  $row2 = mysqli_fetch_assoc($data['customer_name']);
+                  $row3 = mysqli_fetch_assoc($data['package_data']);
                   $i = 1;
                       
                   echo "
                       <tr>
-                        <th>$row[customer_id]</th>
+                        <th>$row2[f_name] $row2[l_name]</th>
                         <th>$row[event_type]</th> 
-                        <th>250</th> 
+                        <th>$row[noOfGuest]</th> 
                         <th>$row[event_date]</th>
-                        <th>$row[package_id]</th> 
-                        <th class=\"btn-row\">
+                        <th>$row3[package_name]</th> 
+                        
+                  ";
+
+                  if($row['status'] == "pending"){
+                    echo "
+                    <th class=\"btn-row\">
                           <button class=\"accept-booking\">Accept</button>
                           <button class=\"reject-booking\">Reject</button>
                         </th> 
                       </tr>
-                  ";
+                    ";
+                  }
+                  elseif($row['status'] == "accepted"){
+                    echo " <th>Accepted</th> 
+                      </tr> ";
+                  }
+                  elseif($row['status'] == "rejected"){
+                    echo "Rejected";
+                  }
                       
                 } ?>
 
