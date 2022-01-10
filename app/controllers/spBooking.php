@@ -15,6 +15,8 @@ class SpBooking extends FrameworkPartyak
         $data['service_id'] = $service_id;
         // echo "Hi";
         $data['request_data'] = $this->BookingModel->getRequestDetails($service_id);
+        $data['customer_name'] = $this->BookingModel->getCustomerName();
+        $data['package_data'] = $this->BookingModel->getPackageData();
         $this->view("vendor/spBookingView", $data);
     }
 
