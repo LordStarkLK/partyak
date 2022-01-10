@@ -42,6 +42,12 @@ class AdminMarketing extends FrameworkPartyak
         echo $output;
     }
 
+    public function delete($content_id){
+        $this->marketingModel->delete($content_id);
+        $this->redirect("adminMarketing");
+    }
+
+
 
 
 }
