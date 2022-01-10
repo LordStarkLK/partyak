@@ -84,7 +84,6 @@ class SpService extends FrameworkPartyak
             }
 
 
-        }
         $data["errors"] = $errors;
         $this->view("vendor/spServiceView", $data);
 
