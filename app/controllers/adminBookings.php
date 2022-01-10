@@ -24,4 +24,9 @@ class AdminBookings extends FrameworkPartyak{
         echo $userList;
     }
 
+    public function delete($booking_id){
+        $this->bookingsModel->delete($booking_id);
+        $this->redirect("adminBookings");
+    }
+
 }
