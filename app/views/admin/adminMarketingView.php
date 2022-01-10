@@ -94,7 +94,7 @@
                                         
                                         </div>
                                         </div>
-                                        <button>Delete Content</button>
+                                        <button onclick=\"window.location='" . BASEURL . "/adminMarketing/delete/$row[content_id]'\">Delete Content</button>
                                         </div>
 
     
