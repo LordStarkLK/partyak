@@ -34,7 +34,7 @@
     <div class="container">
         <?php while ($row = mysqli_fetch_assoc($data['service'])) {
             $i = 1;
-
+            $serviceId = $data['service_id'];
             echo " 
             <div class=\"image_container\">
                 <img class=\"mySlides\" src=\"public/img/hotel/hotel1.jpg\" >
@@ -547,50 +547,25 @@
     <div class="review-section">
         <h1>Reviews</h1>
         <div class="latest-review">
-            <?php while ($latestReview = mysqli_fetch_assoc($data['latest_review'])) { ?>
+            <?php
+            if ($data['latest_review'] == null) { ?>
                 <div class="latest-review-card">
-                    <h1 class="rate"><?php echo $latestReview['ratedStar'];
-                                        echo "<p>stars</p>" ?></h1>
-                    <h3 class="review-text">"<?php echo $latestReview['textReview']; ?>"</h3>
+                    <h1 class="rate">0 Stars</h1>
+                    <h3 class="review-text">No reviews yet</h3>
                 </div>
-            <?php } ?>
+                <?php } else {
+                foreach ($data['latest_review'] as $latestReview) { ?>
+                    <div class="latest-review-card">
+                        <h1 class="rate"><?php echo $latestReview['ratedStar'];
+                                            echo "<p>stars</p>" ?></h1>
+                        <h3 class="review-text">"<?php echo $latestReview['textReview']; ?>"</h3>
+                    </div>
+            <?php }
+            } ?>
         </div>
         <h1 class="your-review">Your Review</h1>
         <?php
-        if (mysqli_fetch_assoc($data['review_status'])) {
-            $reviewStatus = mysqli_fetch_assoc($data['review_status']);
-        ?>
-            <div class="userReview">
-                <h1 class="userRate">
-                    <?php
-                    echo $reviewStatus['ratedStar'];
-                    echo " Stars";
-                    ?>
-                </h1>
-                <p>"
-                    <?php echo $reviewStatus['textReview']; ?>
-                    "
-                </p>
-            </div>
-            <div class="reviewbody">
-                <div class="review-stars">
-                    <i class="fas fa-star fa-2x" data-index="0"></i>
-                    <i class="fas fa-star fa-2x" data-index="1"></i>
-                    <i class="fas fa-star fa-2x" data-index="2"></i>
-                    <i class="fas fa-star fa-2x" data-index="3"></i>
-                    <i class="fas fa-star fa-2x" data-index="4"></i>
-                </div>
-                <form action="<?php echo BASEURL . '/partyak/spService/alterReview'; ?>" class="form-area" method="POST">
-                    <input id="ratedStars" type="hidden" name="ratedIndex">
-                    <input type="hidden" name="user_id" value="<?php echo $_SESSION["userId"] ?> ">
-                    <input class="text-area" type="text" name="review" placeholder="Leave your review...">
-                    <div class="toReview">
-                        <button type="submit" class="btn" value="Submit">Change Review</button>
-                    </div>
-                </form>
-            </div>
-        <?php
-        } else {
+        if ($data['review_status'] == null) {
         ?>
 
             <div class="reviewbody">
@@ -601,7 +576,7 @@
                     <i class="fas fa-star fa-2x" data-index="3"></i>
                     <i class="fas fa-star fa-2x" data-index="4"></i>
                 </div>
-                <form action="<?php echo BASEURL . '/partyak/spService/insertReview'; ?>" class="form-area" method="POST">
+                <form action="<?php echo BASEURL . '/spService/insertReview/$serviceId'; ?>" class="form-area" method="POST">
                     <input id="ratedStars" type="hidden" name="ratedIndex">
                     <input type="hidden" name="user_id" value="<?php echo $_SESSION["userId"] ?> ">
                     <input class="text-area" type="text" name="review" placeholder="Leave your review...">
@@ -610,7 +585,45 @@
                     </div>
                 </form>
             </div>
-        <?php } ?>
+
+
+
+            <?php
+        } else {
+            foreach ($data['review_status'] as $reviewStatus) {
+            ?>
+                <div class="userReview">
+                    <h1 class="userRate">
+                        <?php
+                        echo $reviewStatus['ratedStar'];
+                        echo " Stars";
+                        ?>
+                    </h1>
+                    <p>"
+                        <?php echo $reviewStatus['textReview']; ?>
+                        "
+                    </p>
+                </div>
+                <div class="reviewbody">
+                    <div class="review-stars">
+                        <i class="fas fa-star fa-2x" data-index="0"></i>
+                        <i class="fas fa-star fa-2x" data-index="1"></i>
+                        <i class="fas fa-star fa-2x" data-index="2"></i>
+                        <i class="fas fa-star fa-2x" data-index="3"></i>
+                        <i class="fas fa-star fa-2x" data-index="4"></i>
+                    </div>
+                    <form action="<?php echo BASEURL . '/spService/alterReview/$serviceId'; ?>" class="form-area" method="POST">
+                        <input id="ratedStars" type="hidden" name="ratedIndex">
+                        <input type="hidden" name="user_id" value="<?php echo $_SESSION["userId"] ?> ">
+                        <input class="text-area" type="text" name="review" placeholder="Leave your review...">
+                        <div class="toReview">
+                            <button type="submit" class="btn" value="Submit">Change Review</button>
+                        </div>
+                    </form>
+                </div>
+
+        <?php }
+        } ?>
     </div>
     </div>
     </div>

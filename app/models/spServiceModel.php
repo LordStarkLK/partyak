@@ -61,10 +61,21 @@ class SpServiceModel extends Database
     }
     public function checkReviewStatus($service_id, $id)
     {
-        $query = "SELECT *  FROM `service_review` WHERE `service_id`='$service_id' AND `user_id`='$id' ";
-        $reviewStatusesult = mysqli_query($GLOBALS['db'], $query);
-        if (mysqli_num_rows($reviewStatusesult) > 0) {
-            return $reviewStatusesult;
+        $checkReviewQuery = "SELECT *  FROM `service_review` WHERE `service_id`='$service_id' AND `user_id`='$id' ";
+        $reviewStatusResult = mysqli_query($GLOBALS['db'], $checkReviewQuery);
+        $reviewArray = array();
+        if ((mysqli_num_rows($reviewStatusResult) > 0)) {
+            $i = 0;
+            while ($reviewQuery = mysqli_fetch_assoc($reviewStatusResult)) {
+                $data['textReview'] = $reviewQuery['textReview'];
+                $data['ratedStar'] = $reviewQuery['ratedStar'];
+                $reviewArray[$i] = $data;
+                $i++;
+            }
+            return $reviewArray;
+        } else {
+            $reviewArray = null;
+            return $reviewArray;
         }
     }
     public function alterReview($ratedStars,  $textReview, $id, $service_id)
@@ -77,8 +88,19 @@ class SpServiceModel extends Database
     {
         $latestReviewQuery = "SELECT *  FROM `service_review` WHERE `service_id`='$service_id' ORDER BY `Date` DESC LIMIT 2;";
         $reviewLatestreview = mysqli_query($GLOBALS['db'], $latestReviewQuery);
-        if (mysqli_num_rows($reviewLatestreview) > 0) {
-            return $reviewLatestreview;
+        $latestReviewArray = array();
+        if ((mysqli_num_rows($reviewLatestreview) > 0)) {
+            $i = 0;
+            while ($latestReview = mysqli_fetch_assoc($reviewLatestreview)) {
+                $data['textReview'] = $latestReview['textReview'];
+                $data['ratedStar'] = $latestReview['ratedStar'];
+                $latestReviewArray[$i] = $data;
+                $i++;
+            }
+            return $latestReviewArray;
+        } else {
+            $latestReviewArray = null;
+            return $latestReviewArray;
         }
     }
 }

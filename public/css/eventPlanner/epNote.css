@@ -400,6 +400,9 @@ nav .sidebar-button i {
 }
 .bx-plus:before {
   font-size: 21px;
-
 }
-
+.noNote {
+  color: wheat;
+  text-align: center;
+  font-size: 36px;
+}

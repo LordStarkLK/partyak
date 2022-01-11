@@ -25,14 +25,9 @@ class SpService extends FrameworkPartyak
         // echo "Hi";
         $this->view("vendor/spServiceView", $data);
     }
-    public function insertReview($id, $service_id)
+    public function insertReview($service_id)
     {
         $id = $_SESSION['userId'];
-
-        // $serName = 'Avendra';
-
-        $data['service'] = $this->ServiceModel->getServiceInfo($service_id);
-        $data['package_data'] = $this->ServiceModel->getPackageInfo($service_id);
 
         //review insert starts
         $errors = array();
@@ -63,20 +58,16 @@ class SpService extends FrameworkPartyak
             if ($numberOfErrors == 0) {
                 //Insert data
                 $this->ServiceModel->insertReview($ratedStars,  $textReview, $id, $service_id);
+                $this->index($service_id);
             }
             //review insert ends
         }
         $data["errors"] = $errors;
-        $this->view("vendor/spServiceView", $data);
+        $this->index($service_id);
     }
-    public function alterReview($id, $service_id)
+    public function alterReview($service_id)
     {
         $id = $_SESSION['userId'];
-
-        // $serName = 'Avendra';
-
-        $data['service'] = $this->ServiceModel->getServiceInfo($service_id);
-        $data['package_data'] = $this->ServiceModel->getPackageInfo($service_id);
 
         //review insert starts
         $errors = array();
@@ -107,21 +98,18 @@ class SpService extends FrameworkPartyak
             if ($numberOfErrors == 0) {
                 //Insert data
                 $this->ServiceModel->alterReview($ratedStars,  $textReview, $id, $service_id);
+                $this->index($service_id);
             }
             //review insert ends
         }
         $data["errors"] = $errors;
-        $this->view("vendor/spServiceView", $data);
+        echo "There was an error";
+        $this->index($service_id);
     }
     public function bookingDet($service_id)
     {
 
         $id = $_SESSION['userId'];
-
-        // $serName = 'Avendra';
-
-        $data['service'] = $this->ServiceModel->getServiceInfo($service_id);
-        $data['package_data'] = $this->ServiceModel->getPackageInfo($service_id);
 
         $errors = array();
         $errors["reservedate"] = "";
@@ -150,10 +138,11 @@ class SpService extends FrameworkPartyak
             if ($numberOfErrors == 0) {
                 //Insert data
                 $this->ServiceModel->bookingDetail($eventType, $guestCount, $reserveDate, $packageType, $id, $service_id);
+                $this->index($service_id);
                 // $this->redirect('spService');
             }
         }
         $data["errors"] = $errors;
-        $this->view("vendor/spServiceView", $data);
+        $this->index($service_id);
     }
 }
