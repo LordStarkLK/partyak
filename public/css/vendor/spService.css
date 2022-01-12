@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
   font-family: 'Poppins', sans-serif;
 }
 body{
@@ -10,34 +11,43 @@ body{
   background-image: url("../../../public/img/home-confetti.png");
     background-repeat: round;}
 .container{
+
   /* z-index: 1; */
   padding: 1% 10% 1% 10%;
   background-image: url("../../../public/img/blob 1.png");
 }
+
 .sidebar{
+
   border-radius: 23px 0px 0px 23px;
   margin-top: 5%;
   position: fixed;
   /* height: 270px; */
   width: 220px;
   background-color: rgb(0, 0, 0);
-  background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
+
+  background: linear-gradient(
+    114.1deg,
+    rgba(24, 24, 24, 0.65) 18.52%,
+    rgba(15, 15, 15, 0.75) 98.52%
+  );
   backdrop-filter: blur(120px);
   transition: all 0.5s ease;
 }
-.sidebar.active{
+.sidebar.active {
   width: 20%;
 }
-.sidebar .sidenav-links{
+.sidebar .sidenav-links {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.sidebar .sidenav-links li{
+.sidebar .sidenav-links li {
   position: relative;
   list-style: none;
   height: 60px;
 }
-.sidebar .sidenav-links li a{
+.sidebar .sidenav-links li a {
+
   height: 100%;
   width: 100%;
   display: flex;
@@ -45,6 +55,7 @@ body{
   text-decoration: none;
   transition: all 0.4s ease;
 }
+
 .sidebar .sidenav-links li a.active{
   background: #081D45;
 }
@@ -53,18 +64,23 @@ body{
   border-radius: 15px;
 }
 .sidebar .sidenav-links li i{
+
   min-width: 60px;
   text-align: center;
   font-size: 18px;
   color: #fff;
 }
-.sidebar .sidenav-links li a .links_name{
+
+.sidebar .sidenav-links li a .links_name {
+
   color: rgb(245, 245, 245);
   font-size: 18px;
   font-weight: 500;
   white-space: nowrap;
 }
+
 .home-section{
+
   position: relative;
   padding: 0 20px 0 20px;
   height: 70%;
@@ -72,14 +88,20 @@ body{
   left: 220px;
   transition: all 0.5s ease;
   border-radius: 43px;
-  background: linear-gradient(114.1deg, rgba(40,40,40,0.36) 18.52%, rgba(15, 15, 15, 0.12) 98.52%);
+
+
+  background: linear-gradient(
+    114.1deg,
+    rgba(40, 40, 40, 0.36) 18.52%,
+    rgba(15, 15, 15, 0.12) 98.52%
+  );
   backdrop-filter: blur(120px);
 }
-.sidebar.active ~ .home-section{
+.sidebar.active ~ .home-section {
   width: calc(100% - 60px);
   left: 60px;
 }
-nav{
+nav {
   display: flex;
   height: 60px;
   position: fixed;
@@ -90,44 +112,52 @@ nav{
   border-radius: 43px 0 0 0;
   color: white;
 }
-nav .sidebar-button{
+nav .sidebar-button {
   display: flex;
   align-items: center;
   font-size: 40px;
   font-weight: bold;
 }
-nav .sidebar-button i{
+nav .sidebar-button i {
   font-size: 40px;
   margin-right: 10px;
 }
-.home-section .home-content{
+.home-section .home-content {
   border-radius: 43px;
   position: relative;
   padding: 60px 30px 30px 30px;
 }
-.home-content .services-box{
+.home-content .services-box {
   justify-content: center;
   padding: 36px 43px 3px 43px;
-  background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.64) 18.52%, rgba(15, 15, 15, 0.8) 98.52%);
+  background: linear-gradient(
+    114.1deg,
+    rgba(40, 40, 40, 0.64) 18.52%,
+    rgba(15, 15, 15, 0.8) 98.52%
+  );
   backdrop-filter: blur(120px);
   border-radius: 43px;
 }
-.home-content .packages-box{
+.home-content .packages-box {
   /* display: flex; */
   justify-content: center;
   padding: 36px 43px 3px 43px;
-  background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.64) 18.52%, rgba(15, 15, 15, 0.8) 98.52%);
+  background: linear-gradient(
+    114.1deg,
+    rgba(40, 40, 40, 0.64) 18.52%,
+    rgba(15, 15, 15, 0.8) 98.52%
+  );
   backdrop-filter: blur(120px);
   border-radius: 43px;
 }
-.table-content{
+.table-content {
   border-collapse: collapse;
   min-height: 340px;
   margin: 10px;
   font-size: 17px;
   width: 100%;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-  overflow-y:auto;
+  overflow-y: auto;
 }
 .table-content thead tr {
   background-color: rgb(104, 104, 104);
@@ -136,10 +166,10 @@ nav .sidebar-button i{
 }
 .table-content th,
 .table-content td {
-    padding: 5px 5px;
-    border: 2px solid #000000;
+  padding: 5px 5px;
+  border: 2px solid #000000;
 }
-.table-content tbody th a{
+.table-content tbody th a {
   color: #005cb3;
   font-size: 23px;
 }
@@ -149,7 +179,7 @@ nav .sidebar-button i{
 .table-content tbody tr:nth-of-type(even) {
   background-color: #81a7c0;
 }
-.name-container{
+.name-container {
   display: flex;
   top: 60px;
   margin: 20px 20px 0 20px;
@@ -160,24 +190,29 @@ nav .sidebar-button i{
   display: flex;
   width: 50%;
 }
-.package{
+.package {
   display: flex;
   width: 50%;
 }
-.name-container button{
+.name-container button {
   width: 250px;
   height: 50px;
   font-size: 23px;
   font-weight: bold;
   border-radius: 10px 10px 0 0;
-  background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.4) 18.52%, rgba(15, 15, 15, 0.8) 98.52%);
+  background: linear-gradient(
+    114.1deg,
+    rgba(40, 40, 40, 0.4) 18.52%,
+    rgba(15, 15, 15, 0.8) 98.52%
+  );
   backdrop-filter: blur(120px);
   border-radius: 13px 13px 0px 0px;
 }
-.name-container button:hover{
-    cursor: pointer;
+.name-container button:hover {
+  cursor: pointer;
 }
-.add-service, .add-package{
+.add-service,
+.add-package {
   height: 50px;
   margin: 30px;
   text-align: center;
@@ -188,7 +223,8 @@ nav .sidebar-button i{
   align-items: center;
   display: flex;
 }
-.new-service ,.new-package {
+.new-service,
+.new-package {
   height: 50px;
   width: 50px;
   margin-left: 20px;
@@ -196,17 +232,20 @@ nav .sidebar-button i{
   border-width: 3px;
   color: black;
   font-size: 40px;
-  background: #FFBF74;
+  background: #ffbf74;
   justify-content: center;
   align-items: center;
   display: flex;
 }
-.new-service:hover , .new-package:hover{
+.new-service:hover,
+.new-package:hover {
   color: white;
   background-color: #000000;
   cursor: pointer;
 }
-.delete-service , .edit-package , .delete-package{
+.delete-service,
+.edit-package,
+.delete-package {
   justify-content: center;
   display: flex;
   width: 80px;
@@ -220,39 +259,134 @@ nav .sidebar-button i{
   border-width: 1px;
   border-radius: 10px;
 }
-.delete-service:hover , .edit-package:hover , .delete-package:hover{
+.delete-service:hover,
+.edit-package:hover,
+.delete-package:hover {
   background-color: rgb(0, 0, 0);
   cursor: pointer;
 }
-.ser-name a{
+.ser-name a {
   font-size: 35px;
   font-weight: bold;
   color: #005cb3;
   text-decoration: none;
-
 }
 @media (max-width: 1240px) {
-  .sidebar{
+  .sidebar {
     width: 60px;
   }
-  .sidebar.active{
+  .sidebar.active {
     width: 220px;
   }
-  .home-section{
+  .home-section {
     width: calc(100% - 60px);
     left: 60px;
   }
-  .sidebar.active ~ .home-section{
+  .sidebar.active ~ .home-section {
     overflow: hidden;
     left: 220px;
   }
-  .home-section nav{
+  .home-section nav {
     width: 300px;
   }
 }
 @media (max-width: 700px) {
-  nav .sidebar-button .dashboard
-   i{
+  nav .sidebar-button .dashboard i {
     display: flex;
   }
+}
+.social {
+  display: flex;
+  width: 60%;
+  height: 100px;
+  padding: 15px;
+  /* background-color: rgb(255, 208, 0); */
+  justify-content: center;
+  flex-direction: row;
+}
+.social-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.review-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 64px;
+  margin-bottom: 64px;
+}
+.userRate {
+  display: flex;
+  font-size: 86px;
+  color: #f8f900 !important;
+  justify-content: center;
+  align-items: baseline;
+}
+.userRate .fa-star:before {
+  color: #f8f900;
+}
+.review-section h1 {
+  color: #eee;
+}
+.userReview p {
+  color: white;
+  font-style: italic;
+  font-size: 20px;
+  margin-bottom: 43px;
+}
+.userReview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.latest-review {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+.latest-review-card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border: solid;
+  border-color: white;
+  border-width: 0 0 1px 0;
+  width: 150%;
+  /* border-top-width: 5px; */
+  align-items: center;
+  padding-bottom: 8px;
+}
+.latest-review-card .rate {
+  font-size: 86px;
+  color: #f8f900 !important;
+  margin-right: 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.latest-review-card .rate p {
+  font-size: 16px;
+}
+.latest-review-card .review-text {
+  color: rgb(0, 220, 146);
+  font-style: italic;
+}
+.your-review {
+  margin-top: 80px;
+}
+.form-area {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+}
+.text-area {
+  padding: 10px;
+
 }
