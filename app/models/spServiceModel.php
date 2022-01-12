@@ -78,9 +78,9 @@ class SpServiceModel extends Database
             return $reviewArray;
         }
     }
-    public function alterReview($ratedStars,  $textReview, $id, $service_id)
+    public function alterReview($ratedStars, $textReview, $id, $service_id)
     {
-        $query = "UPDATE `service_review`SET 'ratedStar'=$ratedStars,'textReview'=$textReview WHERE `service_id`='$service_id' AND `user_id`='$id';";
+        $query = "UPDATE `service_review` SET `ratedStar`='$ratedStars',`textReview`='$textReview' WHERE `service_id`='$service_id' AND `user_id`='$id';";
 
         mysqli_query($GLOBALS['db'], $query);
     }

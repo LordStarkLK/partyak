@@ -34,7 +34,7 @@
     <div class="container">
         <?php while ($row = mysqli_fetch_assoc($data['service'])) {
             $i = 1;
-            $serviceId = $data['service_id'];
+            $serviceId = $row['service_id'];
             echo " 
             <div class=\"image_container\">
                 <img class=\"mySlides\" src=\"public/img/hotel/hotel1.jpg\" >
@@ -548,7 +548,7 @@
         <h1>Reviews</h1>
         <div class="latest-review">
             <?php
-            if ($data['latest_review'] == null) { ?>
+            if ($data['review_status'] == null) { ?>
                 <div class="latest-review-card">
                     <h1 class="rate">0 Stars</h1>
                     <h3 class="review-text">No reviews yet</h3>
@@ -576,7 +576,7 @@
                     <i class="fas fa-star fa-2x" data-index="3"></i>
                     <i class="fas fa-star fa-2x" data-index="4"></i>
                 </div>
-                <form action="<?php echo BASEURL . '/spService/insertReview/$serviceId'; ?>" class="form-area" method="POST">
+                <form action="http://localhost/partyak/spService/insertReview/<?php echo "$serviceId" ?>" class="form-area" method="POST">
                     <input id="ratedStars" type="hidden" name="ratedIndex">
                     <input type="hidden" name="user_id" value="<?php echo $_SESSION["userId"] ?> ">
                     <input class="text-area" type="text" name="review" placeholder="Leave your review...">
@@ -612,7 +612,7 @@
                         <i class="fas fa-star fa-2x" data-index="3"></i>
                         <i class="fas fa-star fa-2x" data-index="4"></i>
                     </div>
-                    <form action="<?php echo BASEURL . '/spService/alterReview/$serviceId'; ?>" class="form-area" method="POST">
+                    <form action="http://localhost/partyak/spService/alterReview/<?php echo "$serviceId" ?>" class="form-area" method="POST">
                         <input id="ratedStars" type="hidden" name="ratedIndex">
                         <input type="hidden" name="user_id" value="<?php echo $_SESSION["userId"] ?> ">
                         <input class="text-area" type="text" name="review" placeholder="Leave your review...">

@@ -57,7 +57,7 @@ class SpService extends FrameworkPartyak
 
             if ($numberOfErrors == 0) {
                 //Insert data
-                $this->ServiceModel->insertReview($ratedStars,  $textReview, $id, $service_id);
+                $this->ServiceModel->insertReview($textReview, $ratedStars, $id, $service_id);
                 $this->index($service_id);
             }
             //review insert ends
@@ -97,7 +97,7 @@ class SpService extends FrameworkPartyak
 
             if ($numberOfErrors == 0) {
                 //Insert data
-                $this->ServiceModel->alterReview($ratedStars,  $textReview, $id, $service_id);
+                $this->ServiceModel->alterReview($ratedStars, $textReview, $id, $service_id);
                 $this->index($service_id);
             }
             //review insert ends
