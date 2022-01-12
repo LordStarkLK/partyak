@@ -1,27 +1,31 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-* {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+
+  font-family: 'Poppins', sans-serif;
 }
-body {
+body{
   background-color: #202020;
   background-image: url("../../../public/img/home-confetti.png");
-  background-repeat: round;
-}
-.container {
+    background-repeat: round;}
+.container{
+
   /* z-index: 1; */
   padding: 1% 10% 1% 10%;
   background-image: url("../../../public/img/blob 1.png");
 }
-.sidebar {
+
+.sidebar{
+
   border-radius: 23px 0px 0px 23px;
   margin-top: 5%;
   position: fixed;
   /* height: 270px; */
   width: 220px;
   background-color: rgb(0, 0, 0);
+
   background: linear-gradient(
     114.1deg,
     rgba(24, 24, 24, 0.65) 18.52%,
@@ -43,6 +47,7 @@ body {
   height: 60px;
 }
 .sidebar .sidenav-links li a {
+
   height: 100%;
   width: 100%;
   display: flex;
@@ -50,26 +55,32 @@ body {
   text-decoration: none;
   transition: all 0.4s ease;
 }
-.sidebar .sidenav-links li a.active {
-  background: #081d45;
+
+.sidebar .sidenav-links li a.active{
+  background: #081D45;
 }
-.sidebar .sidenav-links li a:hover {
+.sidebar .sidenav-links li a:hover{
   background: #000000;
   border-radius: 15px;
 }
-.sidebar .sidenav-links li i {
+.sidebar .sidenav-links li i{
+
   min-width: 60px;
   text-align: center;
   font-size: 18px;
   color: #fff;
 }
+
 .sidebar .sidenav-links li a .links_name {
+
   color: rgb(245, 245, 245);
   font-size: 18px;
   font-weight: 500;
   white-space: nowrap;
 }
-.home-section {
+
+.home-section{
+
   position: relative;
   padding: 0 20px 0 20px;
   height: 70%;
@@ -77,6 +88,8 @@ body {
   left: 220px;
   transition: all 0.5s ease;
   border-radius: 43px;
+
+
   background: linear-gradient(
     114.1deg,
     rgba(40, 40, 40, 0.36) 18.52%,
@@ -375,4 +388,5 @@ nav .sidebar-button i {
 }
 .text-area {
   padding: 10px;
+
 }

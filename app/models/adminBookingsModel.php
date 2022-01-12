@@ -1,7 +1,7 @@
 <?php
 class AdminBookingsModel extends database {
     public function getBooking(){
-        $query = "SELECT * from booking ORDER BY 'booking_id' DESC";
+        $query = "SELECT * from booking ORDER BY booking_id DESC";
         $result = mysqli_query($GLOBALS['db'],$query);
         if(mysqli_num_rows($result)>0){
             return $result;

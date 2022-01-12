@@ -82,9 +82,11 @@
 
                     <table>
                         <tr>
+                            <th>Payment Id</th>
                             <th>Customer Name</th>
-                            <th>Vendor </th>
-                            <th>Description</th>
+                            <th>Service </th>
+                            <th>Package</th>
+                            <th>Details</th>
                             <th>Date</th>
                             <th>Payment Status</th>
                             <th>Paid amount</th>
@@ -92,34 +94,36 @@
 
                         </tr>
                         <tr>
-                            <td>John Doe</td>
-                            <td>Jk Photography</td>
-                            <td>Platinum package + addtional album</td>
-                            <td>Sep 10 2021</td>
-                            <td>Advance paid</td>
-                            <td>Rs. 5000</td>
-                            <td>Rs. 25000</td>
-                        </tr>
+                        <?php while($row_payment = mysqli_fetch_assoc($data['payment'])){
+                                $row_customer = mysqli_fetch_assoc($data['customer']);
+                                $row_service = mysqli_fetch_assoc($data['service']);
+                                $row_package = mysqli_fetch_assoc($data['package']);
+                                $total = $row_package['per_unit_price']*$row_payment['noOfGuest'];
+                                // function CurrencyFormat($number)
+                                //     {
+                                //         $decimalplaces = 2;
+                                //         $decimalcharacter = '.';
+                                //         $thousandseparater = ',';
+                                //         return number_format($number,$decimalplaces,$decimalcharacter,$thousandseparater);
+                                //     }
 
-                        <tr>
-                            <td>Joe Rogan</td>
-                            <td>Sunrise Catering</td>
-                            <td>Standard package + additional soft drinks</td>
-                            <td>Sep 20 2021</td>
-                            <td>Advance paid</td>
-                            <td>Rs. 3000</td>
-                            <td>Rs. 60000</td>
-                        </tr>
+                                echo"
+                                <td>$row_payment[payment_id]</td>
+                                <td>$row_customer[f_name] $row_customer[l_name]</td>
+                                <td>$row_service[service_name]</td>
+                                <td>$row_package[package_name]</td>
+                                <td>$row_package[per_unit_price] ($row_package[package_name]) x $row_payment[noOfGuest] individuals</td>
+                                <td>$row_payment[payment_date]</td>
+                                <td>$row_payment[status]</td>
+                                <td>Rs.".number_format($row_payment['amount'],2,'.',',')."</td>
+                                <td>Rs.".number_format($total,2,'.',',')."</td>
 
-                        <tr>
-                            <td>Brad Hogg</td>
-                            <td>Pan Venues</td>
-                            <td>Platinum package</td>
-                            <td>Sep 30 2021</td>
-                            <td>Advance paid</td>
-                            <td>Rs. 10000</td>
-                            <td>Rs. 60000</td>
-                        </tr>
+                                
+                            </tr>
+
+                                ";
+                            } ?>
+
 
 
                     </table>
