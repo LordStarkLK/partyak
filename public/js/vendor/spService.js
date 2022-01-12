@@ -58,35 +58,35 @@
 
 
 
-  //this is the javascripts for the star rating system
-        var ratedIndex = -1;
+   //this is the javascripts for the star rating system
+   var ratedIndex = -1;
 
-        $(document).ready(function() {
-            resetStarColors();
+   $(document).ready(function() {
+       resetStarColors();
 
-            $('.fa-star').on('click', function() {
-                ratedIndex = parseInt($(this).data('index'));
-                document.getElementById("ratedStars").placeholder = (ratedIndex+1);
-            });
+       $('.fa-star').on('click', function() {
+           ratedIndex = parseInt($(this).data('index'));
+           document.getElementById("ratedStars").value = (ratedIndex+1);
+       });
 
-            $('.fa-star').mouseover(function() {
-                resetStarColors();
+       $('.fa-star').mouseover(function() {
+           resetStarColors();
 
-                var currentIndex = parseInt($(this).data('index'));
-                for (var i = 0; i <= currentIndex; i++)
-                    $('.fa-star:eq(' + i + ')').css('color', '#f8f900');
+           var currentIndex = parseInt($(this).data('index'));
+           for (var i = 0; i <= currentIndex; i++)
+               $('.fa-star:eq(' + i + ')').css('color', '#f8f900');
 
-            });
-            $('.fa-star').mouseleave(function() {
-                resetStarColors();
+       });
+       $('.fa-star').mouseleave(function() {
+           resetStarColors();
 
-                if (ratedIndex != -1) {
-                    for (var i = 0; i <= ratedIndex; i++)
-                        $('.fa-star:eq(' + i + ')').css('color', '#f8f900');
-                }
-            });
-        });
+           if (ratedIndex != -1) {
+               for (var i = 0; i <= ratedIndex; i++)
+                   $('.fa-star:eq(' + i + ')').css('color', '#f8f900');
+           }
+       });
+   });
 
-        function resetStarColors() {
-            $('.fa-star').css('color', 'white');
-        };
+   function resetStarColors() {
+       $('.fa-star').css('color', 'white');
+   };

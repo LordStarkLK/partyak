@@ -100,52 +100,56 @@
 
             <div class="note-area">
                 <?php
-                while ($row = mysqli_fetch_assoc($data['note'])) { ?>
-                    <div class="note-cont">
-                        <span class="note-head">
-                            <h6>Cus. Id : <?php echo $row['customer_id']; ?></h6>
-                            <h6>Cus. Name : <?php echo $row['customer_name']; ?></h6>
-                            <h6>Event : <?php echo $row['event_name']; ?></h6>
-                            <h6>Date : <?php echo $row['event_date']; ?></h6>
-                        </span>
-                        <div class="note-body">
-                            <?php
+                if ($data['note'] == null) {
+                    echo "<h3 class='noNote'>No note yet</h3>";
+                } else {
+                    foreach ($data['note'] as $row) { ?>
+                        <div class="note-cont">
+                            <span class="note-head">
+                                <h6>Cus. Id : <?php echo $row['customer_id']; ?></h6>
+                                <h6>Cus. Name : <?php echo $row['customer_name']; ?></h6>
+                                <h6>Event : <?php echo $row['event_name']; ?></h6>
+                                <h6>Date : <?php echo $row['event_date']; ?></h6>
+                            </span>
+                            <div class="note-body">
+                                <?php
 
-                            if (isset($counter)) {
-                                if ($counter == mysqli_num_rows($data['noteBody'])) {
-                                    mysqli_data_seek($data['noteBody'], 0);
+                                if (isset($counter)) {
+                                    if ($counter == mysqli_num_rows($data['noteBody'])) {
+                                        mysqli_data_seek($data['noteBody'], 0);
+                                    }
                                 }
-                            }
 
-                            $counter = 0;
-                            while ($rowBody = mysqli_fetch_assoc($data['noteBody'])) {
+                                $counter = 0;
+                                while ($rowBody = mysqli_fetch_assoc($data['noteBody'])) {
 
 
-                                $counter++;
+                                    $counter++;
 
-                                if ($row['note_id'] == $rowBody['note_id']) {   ?>
-                                    <div class="note-strip">
-                                        <h4><?php echo $rowBody['vendor_name']; ?></h4>
-                                        <form action="<?php echo BASEURL . '/epnote/deleteNoteBody'; ?>" method="POST">
-                                            <input type="hidden" id="vendorNoteId" name="vendorNoteId" value="<?php echo $rowBody['vendor_note_id'] ?>">
-                                            <button type="submit" class="delete-note-text"><i class='bx bx-trash' aria-hidden="true"></i></button>
-                                        </form>
-                                    </div> <?php }
-                                    } ?>
+                                    if ($row['note_id'] == $rowBody['note_id']) {   ?>
+                                        <div class="note-strip">
+                                            <h4><?php echo $rowBody['vendor_name']; ?></h4>
+                                            <form action="<?php echo BASEURL . '/epnote/deleteNoteBody'; ?>" method="POST">
+                                                <input type="hidden" id="vendorNoteId" name="vendorNoteId" value="<?php echo $rowBody['vendor_note_id'] ?>">
+                                                <button type="submit" class="delete-note-text"><i class='bx bx-trash' aria-hidden="true"></i></button>
+                                            </form>
+                                        </div> <?php }
+                                        } ?>
+                            </div>
+                            <div class="note-foot">
+                                <form class="note-body-form" action="<?php echo BASEURL . '/epnote/insertNoteBody'; ?>" method="POST">
+                                    <input class="note-body-input" type="text" name="noteBody" id="noteBody">
+                                    <input type="hidden" id="noteId" name="noteId" value="<?php echo $row['note_id'] ?>">
+                                    <button type="submit" class="add-note-body"><i class='bx bx-plus' aria-hidden="true"></i></button>
+                                </form>
+                                <form action="<?php echo BASEURL . '/epnote/deleteNote'; ?>" method="POST">
+                                    <input type="hidden" id="noteId" name="noteId" value="<?php echo $row['note_id'] ?>">
+                                    <button type="submit" class="delete-note-text">Delete note</button>
+                                </form>
+                            </div>
                         </div>
-                        <div class="note-foot">
-                            <form class="note-body-form" action="<?php echo BASEURL . '/epnote/insertNoteBody'; ?>" method="POST">
-                                <input class="note-body-input" type="text" name="noteBody" id="noteBody">
-                                <input type="hidden" id="noteId" name="noteId" value="<?php echo $row['note_id'] ?>">
-                                <button type="submit" class="add-note-body"><i class='bx bx-plus' aria-hidden="true"></i></button>
-                            </form>
-                            <form action="<?php echo BASEURL . '/epnote/deleteNote'; ?>" method="POST">
-                                <input type="hidden" id="noteId" name="noteId" value="<?php echo $row['note_id'] ?>">
-                                <button type="submit" class="delete-note-text">Delete note</button>
-                            </form>
-                        </div>
-                    </div>
-                <?php } ?>
+                <?php }
+                } ?>
             </div>
 
 
