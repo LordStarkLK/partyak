@@ -69,25 +69,43 @@
                             <h2>Add payment</h2>
 
                             <div class="popup-container">
+                            <button type="file" name="file" id="photo" onclick="defaultBtnActive()"
+                                            id="custom-btn" >Choose a
+                                            file</button>
+
+                            <form action="<?php echo BASEURL . '/adminPaymentVendor/insertSettlement'; ?>" method="POST" enctype="multipart/form-data">
+
                                 <div class="popup-left">
                                     <div class = "input-details">
-                                        <form action="/action_page.php">
                                             <div>
                                                 <p>User_id of Vendor</p>
-                                                <input type="text" placeholder="user_id" name="search">
+                                                <input type="text" placeholder="user_id" name="user_id">
                                             </div>
                                             <div>
                                                 <p>Amount Payed: </p>
-                                                <input type="text" placeholder="amount (lkr)" name="search">
+                                                <input type="text" placeholder="amount (lkr)" name="amount">
                                             </div>
                                             <div>
                                                 <p>Description: </p>
-                                                <input type="text" placeholder="description" name="search">
+                                                <input type="text" placeholder="description" name="description">
                                             </div>
                                             <div>
                                                 <p>Payment Date: </p>
-                                                <input type="date" placeholder="description" name="search">
+                                                <input type="date" placeholder="date" name="dateupload">
                                             </div>
+                                            <div>
+                                                <p>Payment Type: </p>
+                                                <select name="type" >
+                                                    <option value="Requested Payment">Requested Payment</option>
+                                                    <option value="Monthly Payment">Monthly Payment</option>
+                                                    
+                                                </select>
+                                            </div>
+                                            <div>
+                                                <p>Request ID: (If Payment is Requested)</p>
+                                                <input type="text" placeholder="request_id" name="request_id">
+                                            </div>
+
 
 
 
@@ -96,7 +114,7 @@
                                             <!-- <i class="fas fa-search"></i> -->
 
 
-                                        </form>
+                                        
 
 
                                     </div>
@@ -129,12 +147,10 @@
                                             </div>
                                         </div>
 
-                                        <button type="file" name="file" onclick="defaultBtnActive()"
-                                            id="custom-btn">Choose a
-                                            file</button>
+                                        <!-- <button type="file" name="file" id="photo" onclick="defaultBtnActive()"
+                                            id="custom-btn" >Choose a
+                                            file</button> -->
 
-                                        <form action="<?php echo BASEURL . '/spMarketing/index'; ?>" method="POST"
-                                            enctype="multipart/form-data">
 
                                             <input id="default-btn" type="file" name="file" hidden>
                                             
@@ -146,7 +162,8 @@
 
 
                                 </div>
-                                <button class="submit-button">Submit</button>
+                                <button class="submit-button" type="submit" name="submit">Submit</button>
+                                </form>
                                 </div>
 
 
@@ -240,7 +257,9 @@
 
         </section>
     </div>
+    <?php linkJS("lib/jquery-3.6.0.min"); ?>
     <?php linkJS("admin/adminPayment");?>
+    <?php linkJS("admin/adminPaymentRequest") ?>;
     <?php linkJS("adminHomeView"); ?>
 
 

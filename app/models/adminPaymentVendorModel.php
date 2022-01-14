@@ -7,6 +7,38 @@ class AdminPaymentVendorModel extends database{
         return $result;
     }
 
+    public function insertSettlement($fileNameNew,$user_id,$amount,$description,$date,$type,$request_id)
+    {
+        // echo "Hi";
+        $query = "INSERT INTO vendor_payment(date,amount,vendor_id,content,description,type,request_id) VALUES ('$date','$amount','$user_id','$fileNameNew','$description','$type','$request_id')";
+        $result = mysqli_query($GLOBALS['db'], $query);
+        if($result){
+            if($type == "Requested Payment"){
+                $query2 = "UPDATE vendor_request SET status = 'Paid' WHERE request_id = '$request_id'";
+                $result2 = mysqli_query($GLOBALS['db'], $query2);
+            }
+
+            $query3 = "SELECT * FROM wallet WHERE user_id = '$user_id'";
+            $result3 = mysqli_query($GLOBALS['db'], $query3);
+            $row = mysqli_fetch_assoc($result3);
+            $amount1 = $amount/0.97;
+            $amountPartyak = $amount1 - $amount;
+            $amountMod = $row["amount"] - $amount1;
+            $withdrawableMod = $amountMod * 0.97;
+            $query4 = "UPDATE wallet SET amount = '$amountMod',withdrawable_amount = '$withdrawableMod' WHERE user_id = '$user_id'";
+            $result4 = mysqli_query($GLOBALS['db'], $query4);
+            $query5 = "SELECT * FROM wallet WHERE user_id = '12'";
+            $result5 = mysqli_query($GLOBALS['db'], $query5);
+            $row2 = mysqli_fetch_assoc($result5);
+            $amountPartyak = $row2["amount"] + $amountPartyak;
+            $query6 = "UPDATE wallet SET amount = '$amountPartyak', withdrawable_amount = '$amountPartyak' WHERE user_id = '12'";
+            $result6 = mysqli_query($GLOBALS['db'], $query6);
+
+
+        }
+
+    }
+
 
 
 }
