@@ -90,7 +90,7 @@
                             <th>Date</th>
                             <th>Payment Status</th>
                             <th>Paid amount</th>
-                            <th>Total</th>
+                            <th>Full Payment</th>
 
                         </tr>
                         <tr>
