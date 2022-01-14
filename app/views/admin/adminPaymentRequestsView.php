@@ -53,12 +53,12 @@
                 </div>
                 <div class="horizontal-container">
 
-                <ul class="breadcrumb">
-                    <li><a >Settlements</a></li>
-                    <li><a >Requests</a></li>
-                </ul>
+                    <ul class="breadcrumb">
+                        <li><a>Settlements</a></li>
+                        <li><a>Requests</a></li>
+                    </ul>
 
-                    <button class="addnew-button" id="myBtn" style="vertical-align:middle"><span>Add new
+                    <button class="addnew-button" id="myBtn" style="vertical-align:middle"><span>Add Payment
                         </span></button>
 
                     <div id="myModal" class="modal">
@@ -69,14 +69,15 @@
                             <h2>Add payment</h2>
 
                             <div class="popup-container">
-                            <button type="file" name="file" id="photo" onclick="defaultBtnActive()"
-                                            id="custom-btn" >Choose a
-                                            file</button>
+                                <button type="file" name="file" id="photo" onclick="defaultBtnActive()"
+                                    id="custom-btn">Choose a
+                                    file</button>
 
-                            <form action="<?php echo BASEURL . '/adminPaymentVendor/insertSettlement'; ?>" method="POST" enctype="multipart/form-data">
+                                <form action="<?php echo BASEURL . '/adminPaymentVendor/insertSettlement'; ?>"
+                                    method="POST" enctype="multipart/form-data">
 
-                                <div class="popup-left">
-                                    <div class = "input-details">
+                                    <div class="popup-left">
+                                        <div class="input-details">
                                             <div>
                                                 <p>User_id of Vendor</p>
                                                 <input type="text" placeholder="user_id" name="user_id">
@@ -95,10 +96,10 @@
                                             </div>
                                             <div>
                                                 <p>Payment Type: </p>
-                                                <select name="type" >
+                                                <select name="type">
                                                     <option value="Requested Payment">Requested Payment</option>
                                                     <option value="Monthly Payment">Monthly Payment</option>
-                                                    
+
                                                 </select>
                                             </div>
                                             <div>
@@ -114,104 +115,104 @@
                                             <!-- <i class="fas fa-search"></i> -->
 
 
-                                        
 
 
-                                    </div>
 
-                                </div>
-                                <div>
-                                <div class="submission_area">
-                                    
-                                    <div class="title"><a>Upload Your File</a></div>
-                                    <div class="sub_title"><a>(File should be JPG, JPEG or PNG)</a></div>
-                                    <!-- here newly added codes -->
-                                    <div class="upload-container">
-                                        <div class="wrapper">
-                                            <div class="image">
-                                                <img id="contentImg" src="" alt="">
-                                            </div>
-                                            <div class="content">
-                                                <div class="icon">
-                                                    <i class="fas fa-cloud-upload-alt"></i>
-                                                </div>
-                                                <div class="text">
-                                                    No file chosen, yet!
-                                                </div>
-                                            </div>
-                                            <div id="cancel-btn">
-                                                <i class="fas fa-times"></i>
-                                            </div>
-                                            <div class="file-name">
-                                                File name here
-                                            </div>
                                         </div>
 
-                                        <!-- <button type="file" name="file" id="photo" onclick="defaultBtnActive()"
+                                    </div>
+                                    <div>
+                                        <div class="submission_area">
+
+                                            <div class="title"><a>Upload Your File</a></div>
+                                            <div class="sub_title"><a>(File should be JPG, JPEG or PNG)</a></div>
+                                            <!-- here newly added codes -->
+                                            <div class="upload-container">
+                                                <div class="wrapper">
+                                                    <div class="image">
+                                                        <img id="contentImg" src="" alt="">
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="icon">
+                                                            <i class="fas fa-cloud-upload-alt"></i>
+                                                        </div>
+                                                        <div class="text">
+                                                            No file chosen, yet!
+                                                        </div>
+                                                    </div>
+                                                    <div id="cancel-btn">
+                                                        <i class="fas fa-times"></i>
+                                                    </div>
+                                                    <div class="file-name">
+                                                        File name here
+                                                    </div>
+                                                </div>
+
+                                                <!-- <button type="file" name="file" id="photo" onclick="defaultBtnActive()"
                                             id="custom-btn" >Choose a
                                             file</button> -->
 
 
-                                            <input id="default-btn" type="file" name="file" hidden>
-                                            
-                                    </div>
+                                                <input id="default-btn" type="file" name="file" hidden>
 
-                                   
+                                            </div>
 
 
 
 
-                                </div>
-                                <button class="submit-button" type="submit" name="submit">Submit</button>
+
+
+                                        </div>
+                                        <button class="submit-button" type="submit" name="submit">Submit</button>
                                 </form>
-                                </div>
-
-
-
                             </div>
+
 
 
                         </div>
 
+
                     </div>
 
-
                 </div>
 
 
-                <div class="search-container">
-                    <form action="/action_page.php">
-                        <input type="text" placeholder="Search users.." name="search">
-
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                        <!-- <i class="fas fa-search"></i> -->
+            </div>
 
 
-                    </form>
-                </div>
+            <div class="search-container">
+                <form action="/action_page.php">
+                    <input type="text" placeholder="Search users.." name="search">
+
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                    <!-- <i class="fas fa-search"></i> -->
+
+
+                </form>
+            </div>
 
 
 
 
 
 
-                <ul class="breadcrumb">
+            <ul class="breadcrumb">
 
-                </ul>
+            </ul>
 
-                <div class="sales-boxes">
+            <div class="sales-boxes">
 
-                    <table>
-                        <tr>
-                            <th>Request ID</th>
-                            <th>Vendor Name</th>
-                            <th>User Id of Vendor</th>
-                            <th>Requested Amount</th>
-                            <th>withdrawable Amount</th>
-                            <th>Status</th>
+                <table>
+                    <tr>
+                        <th>Request ID</th>
+                        <th>Vendor Name</th>
+                        <th>User Id of Vendor</th>
+                        <th>Requested Amount</th>
+                        <th>withdrawable Amount</th>
+                        <th>Status</th>
 
-                        </tr>
-                        <tr>
+                    </tr>
+                    <tr>
                         <?php 
                         
                         while($row = mysqli_fetch_assoc($data['request'])){
@@ -251,7 +252,7 @@
                         </tr> -->
 
 
-                    </table>
+                </table>
 
 
 
