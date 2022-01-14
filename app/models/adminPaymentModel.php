@@ -24,4 +24,11 @@ class AdminPaymentModel extends database{
         return $result;
         
     }
+
+    public function getMarketingpayment(){
+        $query = "SELECT marketing_payment.*,marketing_content.upload_status,user.f_name,user.l_name FROM marketing_payment,marketing_content,user WHERE marketing_payment.content_id = marketing_content.content_id AND marketing_content.user_id = user.user_id ORDER BY marketing_payment.content_id DESC";
+        $result = mysqli_query($GLOBALS['db'],$query);
+        return $result;
+        
+    }
 }
