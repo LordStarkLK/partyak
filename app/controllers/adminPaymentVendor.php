@@ -12,6 +12,12 @@ class AdminPaymentVendor extends FrameworkPartyak{
         $this->view("admin/adminPaymentRequestsView",$data);
     }
 
+    public function payments(){
+        $data["payments"] = $this->paymentModel->getPayments();
+        $data["wallet"] = $this->paymentModel->getWalletDetails();
+        $this->view("admin/adminPaymentVendorView",$data);
+    }
+
     public function insertSettlement(){
         if (isset($_POST['submit'])) {
             $fileName = $_FILES['file']['name'];

@@ -7,6 +7,24 @@ class AdminPaymentVendorModel extends database{
         return $result;
     }
 
+    public function getPayments(){
+        $query = "SELECT vendor_payment.*,user.f_name,user.l_name FROM
+         vendor_payment,user WHERE
+         vendor_payment.vendor_id = user.user_id ORDER BY vendor_payment.payment_id";
+        $result = mysqli_query($GLOBALS['db'],$query);
+        return $result;
+
+    }
+
+    public function getWalletDetails(){
+        $query = "SELECT wallet.amount,wallet.withdrawable_amount FROM
+         vendor_payment,wallet WHERE
+          vendor_payment.vendor_id = wallet.user_id ORDER BY vendor_payment.payment_id";
+
+        $result = mysqli_query($GLOBALS['db'],$query);
+        return $result;
+    }
+
     public function insertSettlement($fileNameNew,$user_id,$amount,$description,$date,$type,$request_id)
     {
         // echo "Hi";

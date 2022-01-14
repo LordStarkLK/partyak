@@ -54,7 +54,7 @@
 
                 <ul class="breadcrumb">
                     <li><a href="#">Settlements</a></li>
-                    <li><a href="#">Requests</a></li>
+                    <li><a href="#">Payments</a></li>
                 </ul>
 
 
@@ -83,40 +83,28 @@
                     <table>
                         <tr>
                             <th>Payment Id</th>
-                            <th>Customer Name</th>
-                            <th>Service </th>
-                            <th>Package</th>
-                            <th>Details</th>
-                            <th>Date</th>
-                            <th>Payment Status</th>
                             <th>Paid amount</th>
-                            <th>Full Payment</th>
+                            <th>Vendor Name</th>
+                            <th>Description</th>
+                            <th>Wallet Total amount</th>
+                            <th>Wallet Withdrawable Amount</th>
+                            <th>Payment Slip</th>
 
                         </tr>
                         <tr>
-                        <?php while($row_payment = mysqli_fetch_assoc($data['payment'])){
-                                $row_customer = mysqli_fetch_assoc($data['customer']);
-                                $row_service = mysqli_fetch_assoc($data['service']);
-                                $row_package = mysqli_fetch_assoc($data['package']);
-                                $total = $row_package['per_unit_price']*$row_payment['noOfGuest'];
-                                // function CurrencyFormat($number)
-                                //     {
-                                //         $decimalplaces = 2;
-                                //         $decimalcharacter = '.';
-                                //         $thousandseparater = ',';
-                                //         return number_format($number,$decimalplaces,$decimalcharacter,$thousandseparater);
-                                //     }
-
+                        <?php while($row = mysqli_fetch_assoc($data['payments'])){ 
+                            
+                            $row2 = mysqli_fetch_assoc($data['wallet']);
+                            
                                 echo"
-                                <td>$row_payment[payment_id]</td>
-                                <td>$row_customer[f_name] $row_customer[l_name]</td>
-                                <td>$row_service[service_name]</td>
-                                <td>$row_package[package_name]</td>
-                                <td>$row_package[per_unit_price] ($row_package[package_name]) x $row_payment[noOfGuest] individuals</td>
-                                <td>$row_payment[payment_date]</td>
-                                <td>$row_payment[status]</td>
-                                <td>Rs.".number_format($row_payment['amount'],2,'.',',')."</td>
-                                <td>Rs.".number_format($total,2,'.',',')."</td>
+                                <td>$row[payment_id]</td>
+                                <td>Rs.".number_format($row['amount'],2,'.',',')."</td>
+                                <td>$row[f_name] $row[l_name]</td>
+                                <td>$row[description]</td>
+                                <td>Rs.".number_format($row2['amount'],2,'.',',')."</td>
+                                <td>Rs.".number_format($row2['withdrawable_amount'],2,'.',',')."</td>
+                                <td><a target=\"_blank\" href=\"http://localhost/partyak/public/img/vendorPayments/$row[content]\"><img class=\"customer-image\" src=\"http://localhost/partyak/public/img/vendorPayments/$row[content]\"  width=\"60\" height=\"60\">
+
 
                                 
                             </tr>
