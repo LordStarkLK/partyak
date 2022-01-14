@@ -380,7 +380,7 @@ ul.breadcrumb {
 /* Addnew button start */
 .addnew-button {
   float: right;
-  display: inline-block;
+  /* display: inline-block; */
   border-radius: 100px;
   background-color: #55DC52;
   border: none;
@@ -438,9 +438,7 @@ ul.breadcrumb {
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-#photo{
 
-}
 
 .popup-container form{
   display:flex;
@@ -487,7 +485,7 @@ transition: 0.3s ease;
 /* Modal Content */
 .modal-content {
   
-  height: 600px;
+  height: 700px;
   left: 498px;
   top: 363px;
   background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.61) 18.52%, rgba(15, 15, 15, 0) 98.52%), linear-gradient(106.04deg, rgba(255, 255, 255, 0.12) 10.95%, rgba(255, 255, 255, 0.1) 98.32%);
@@ -517,10 +515,7 @@ backdrop-filter: blur(60px);
   cursor: pointer;
 }
 
-.popup-container{
 
-  
-}
 
 .popup-left{
   padding-left: 30px;

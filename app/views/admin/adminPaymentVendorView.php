@@ -29,7 +29,7 @@
                         onclick="window.location='<?php echo BASEURL . '/adminPayment'; ?>'">
                         <span class="links_name"><img class="customer-image" <?php srcIMG("payment.png") ?> width="40"
                                 height="40">
-                            <div class="box-topic">Settlements</div>
+                            <div class="box-topic">Payments</div>
                         </span>
 
 
