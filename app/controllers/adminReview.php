@@ -11,4 +11,13 @@ class AdminReview extends FrameworkPartyak{
         $data["review"] = $this->reviewModel->getReview();
         $this->view("admin/adminReviewView",$data);
     }
+
+    public function search(){
+        $searchTerm = mysqli_real_escape_string($GLOBALS['db'], $_POST['searchTerm']);
+
+        // echo $searchTerm;
+        $userList = $this->reviewModel->search($searchTerm);
+        echo $userList;
+    }
+
 }
