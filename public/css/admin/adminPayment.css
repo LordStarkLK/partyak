@@ -379,15 +379,15 @@ ul.breadcrumb {
 }
 /* Addnew button start */
 .addnew-button {
-  
-  display: inline-block;
+  float: right;
+  /* display: inline-block; */
   border-radius: 100px;
   background-color: #55DC52;
   border: none;
   color: black;
   text-align: center;
   font-size: 20px;
-  width: 150px;
+  width: 200px;
   height: 50px;
   transition: all 0.5s;
   cursor: pointer;
@@ -428,7 +428,7 @@ ul.breadcrumb {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */ 
   z-index: 1; /* Sit on top */
-  padding-top: 25px; /* Location of the box */ 
+  padding-top: 10px; /* Location of the box */ 
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -438,26 +438,45 @@ ul.breadcrumb {
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
+
+
+.popup-container form{
+  display:flex;
+}
+
 .input-details div{
   width: 300px;
 }
 
-.input-details input{
-  
-  outline: none;
-    margin-bottom: 15px;
-    font-stretch: 16px;
-    color: rgb(0, 0, 0);
-    text-align: left;
-    padding: 14px 20px;
-    width: 100%;
-    display: inline-block;
-    box-sizing: border-box;
-    border: 1px solid rgba(255, 255, 255, 0.09);
-    background: #ffffff;
-    box-shadow: inset 2px 2px 1px rgba(0, 0, 0, 0.25);
-    border-radius: 22px;
-    transition: 0.3s ease;
+.input-details input,select{
+    
+outline: none;
+    
+/* margin-bottom: 13px; */
+    
+font-stretch: 15px;
+    
+color: rgb(0, 0, 0);
+    
+text-align: left;
+    
+padding: 11px 20px;
+    
+width: 100%;
+    
+display: inline-block;
+    
+box-sizing: border-box;
+    
+border: 1px solid rgba(255, 255, 255, 0.09);
+    
+background: #ffffff;
+    
+box-shadow: inset 2px 2px 1px rgba(0, 0, 0, 0.25);
+    
+border-radius: 22px;
+    
+transition: 0.3s ease;
 }
 
 
@@ -466,7 +485,7 @@ ul.breadcrumb {
 /* Modal Content */
 .modal-content {
   
-  height: 600px;
+  height: 700px;
   left: 498px;
   top: 363px;
   background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.61) 18.52%, rgba(15, 15, 15, 0) 98.52%), linear-gradient(106.04deg, rgba(255, 255, 255, 0.12) 10.95%, rgba(255, 255, 255, 0.1) 98.32%);
@@ -496,16 +515,12 @@ backdrop-filter: blur(60px);
   cursor: pointer;
 }
 
-.popup-container{
 
-  display: flex;
-  flex-direction: row;
-  margin-top: 30px;
-}
 
 .popup-left{
   padding-left: 30px;
   padding-top: 30px;
+  padding-bottom: 10px;
   width: 500px;
   margin-right: 50px;  
   background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.64) 18.52%, rgba(15, 15, 15, 0.8) 98.52%);
@@ -634,7 +649,8 @@ backdrop-filter: blur(60px);
   
 }
 
-  .upload-container button{
+
+  .upload-container button,#photo{
   margin-top: 30px;
   display: block;
   width: 100%;
@@ -656,6 +672,20 @@ backdrop-filter: blur(60px);
     background-color: rgba(64, 226, 231, 0.815);
     color: rgb(0, 0, 0);
   }
+
+  #photo{
+    margin-bottom: 10px;
+    width: 400px;
+    margin-left:400px;
+  }
+
+  #photo:hover{
+    /* background-color: rgb(165, 42, 114); */
+    background-color: rgba(64, 226, 231, 0.815);
+    color: rgb(0, 0, 0);
+  }
+
+
   .upload-container button:hover{
     cursor: pointer;
     
