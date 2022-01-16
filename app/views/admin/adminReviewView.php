@@ -71,7 +71,7 @@
                             <th>Service Name</th>
                             <th>Reviewed By</th>
                             <th>Rating</th>
-                            <th>Review</th>
+                            <th id="review">Review</th>
 
                         </tr>
                         <tr>
