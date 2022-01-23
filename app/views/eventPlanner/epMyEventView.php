@@ -39,8 +39,8 @@
                 </div>
             </div>
             <div class="add-note-div">
-                <h3 class="add-note">Add a note</h3>
-                <img class="add-btn" <?php srcIMG("addButton.png") ?>>
+                <h3 class="add-note">Add an event</h3>
+                <a href="<?php echo BASEURL . '/epEventAdd'; ?>"><img class="add-btn" <?php srcIMG("addButton.png") ?>></a>
             </div>
         </section>
     </div>
