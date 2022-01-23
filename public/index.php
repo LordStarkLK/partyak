@@ -6,7 +6,7 @@ session_start();
 
 
 // Database configuration file
-include "../app/config.php";
+include "http://www.lankanphoneprice.com/../app/config.php";
 
 // Include autoloader and routing file
-include "../core/init.php";
+include "http://www.lankanphoneprice.com/../core/init.php";

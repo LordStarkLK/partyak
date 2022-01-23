@@ -14,7 +14,7 @@ class Router
         // print_r($url);
 
         if (!empty($url)) {
-            if (file_exists("../app/controllers/" . $url[0] . ".php")) {
+            if (file_exists("http://www.lankanphoneprice.com/../app/controllers/" . $url[0] . ".php")) {
                 // echo "Hi";
                 $this->controller = $url[0];
                 unset($url[0]);
@@ -24,7 +24,7 @@ class Router
         }
 
         // Including the controller file
-        require_once("../app/controllers/" . $this->controller . ".php");
+        require_once("http://www.lankanphoneprice.com/../app/controllers/" . $this->controller . ".php");
 
         // Including the controller object
         $this->controller = new $this->controller;
