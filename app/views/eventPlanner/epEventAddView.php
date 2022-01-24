@@ -17,14 +17,14 @@
     <div class="container">
         <div class="glass center form_area">
             <a href="<?php echo BASEURL . '/epMyEvent'; ?>"><button class="btn back">Back</button></a>
-            <form action="<?php echo BASEURL . '/epEventAdd/addEvent'; ?>" class="form-area" method="POST">
+            <form action="<?php echo BASEURL . '/epEventAdd/addEvent'; ?>" class="form-area" method="POST" enctype="multipart/form-data">
                 <input type="text" name="event_type" placeholder="Event Type"><br>
                 <input type="date" name="date" placeholder="Date"><br>
                 <input type="text" name="no_of_guests" placeholder="No of Guests"><br>
                 <h4 class="form-text">*Submit atleast 1 image</h4>
                 <input class="form-file" type="file" name="img1" placeholder="img1"><br>
                 <input type="text" name="location" placeholder="Location"><br>
-                <input type="text" name="description" placeholder="description"><br>
+                <textarea class="description-text" id="description" name="description" rows="4" cols="50" placeholder="Description"></textarea><br>
                 <button type="submit" class="btn add" value="Submit">Add</button> 
             </form>
         </div>
