@@ -42,7 +42,7 @@
             <a href="<?php echo BASEURL . '/adminRequest'; ?>">
                 <i class='bx bx-list-plus'></i>
                 <span class="links_name side-links"
-                    onclick="window.location='<?php echo BASEURL . '/adminRequest'; ?>'">Requests</span>
+                    onclick="window.location='<?php echo BASEURL . '/adminRequest'; ?>'">Services</span>
             </a>
         </li>
         <li>

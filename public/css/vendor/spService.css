@@ -506,7 +506,9 @@
 .review-stars {
   margin: 15px 10px 15px 10px;
 }
-
+.container form {
+  display: none;
+}
 input:checked ~ form {
   display: block;
 }

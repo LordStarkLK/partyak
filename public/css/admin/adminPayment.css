@@ -379,15 +379,15 @@ ul.breadcrumb {
 }
 /* Addnew button start */
 .addnew-button {
-  
-  display: inline-block;
+  float: right;
+  /* display: inline-block; */
   border-radius: 100px;
   background-color: #55DC52;
   border: none;
   color: black;
   text-align: center;
   font-size: 20px;
-  width: 150px;
+  width: 200px;
   height: 50px;
   transition: all 0.5s;
   cursor: pointer;
@@ -426,22 +426,66 @@ ul.breadcrumb {
 .modal {
   color: white;
   display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
+  position: fixed; /* Stay in place */ 
   z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  padding-top: 10px; /* Location of the box */ 
   left: 0;
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+/*   overflow: auto; /* Enable scroll if needed */ 
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
+
+
+.popup-container form{
+  display:flex;
+}
+
+.input-details div{
+  width: 300px;
+}
+
+.input-details input,select{
+    
+outline: none;
+    
+/* margin-bottom: 13px; */
+    
+font-stretch: 15px;
+    
+color: rgb(0, 0, 0);
+    
+text-align: left;
+    
+padding: 11px 20px;
+    
+width: 100%;
+    
+display: inline-block;
+    
+box-sizing: border-box;
+    
+border: 1px solid rgba(255, 255, 255, 0.09);
+    
+background: #ffffff;
+    
+box-shadow: inset 2px 2px 1px rgba(0, 0, 0, 0.25);
+    
+border-radius: 22px;
+    
+transition: 0.3s ease;
+}
+
+
+
+
 /* Modal Content */
 .modal-content {
   
-  height: 400px;
+  height: 700px;
   left: 498px;
   top: 363px;
   background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.61) 18.52%, rgba(15, 15, 15, 0) 98.52%), linear-gradient(106.04deg, rgba(255, 255, 255, 0.12) 10.95%, rgba(255, 255, 255, 0.1) 98.32%);
@@ -453,7 +497,7 @@ backdrop-filter: blur(60px);
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 60%;
+  width: 80%;
 }
 
 /* The Close Button */
@@ -471,18 +515,25 @@ backdrop-filter: blur(60px);
   cursor: pointer;
 }
 
-.popup-container{
-  display: flex;
- 
-  flex-direction: row;
-}
+
 
 .popup-left{
-  margin-right: 100px;  
+  padding-left: 30px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  width: 500px;
+  margin-right: 50px;  
+  background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.64) 18.52%, rgba(15, 15, 15, 0.8) 98.52%);
+  backdrop-filter: blur(120px);
+  border-radius: 43px;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* submit button start */
 .submit-button {
+  display:flex;
+  float: right;
+  
   background-color: #2fe62c;
   border: none;
   color: white;
@@ -492,7 +543,7 @@ backdrop-filter: blur(60px);
   margin: 4px 2px;
   opacity: 0.6;
   transition: 0.3s;
-  display: inline-block;
+  /* display: inline-block; */
   text-decoration: none;
   cursor: pointer;
 }
@@ -500,12 +551,97 @@ backdrop-filter: blur(60px);
 .submit-button:hover {opacity: 1}
 
 /* submit button end */
-.popup-right {
+
+.submission_area{
+  width: 350px;
+  margin: 10px 0 10px 0;
+  background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.64) 18.52%, rgba(15, 15, 15, 0.8) 98.52%);
+  backdrop-filter: blur(120px);
+  border-radius: 43px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.uploaded_area , .submission_area{
+  padding: 10px;
+  text-align: center;
+}
+.uploaded_area a , .submission_area .title a{
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+.submission_area .sub_title a{
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+.file_details{
+  width: 100%;
+  height: 70px;
+  margin: 20px 0 20px 0;
+  padding: 10px;
   display: flex;
-  flex-direction: column;
-  padding: 3%;
+  /* background: rgba(239, 239, 239, 0.86); */
+  background-color: rgb(117, 172, 204);
+  border-radius: 17px;
+}
+.file_details .details{
+  width: 80%;
+  height: 50px;
+  text-align: left;
+}
+.file_details a{
+  color: black;
+  font-weight: 600;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+}
+.file{
+  margin-top: 5px;
+  display: flex;
+}
+.file_name{
+  margin: 10px;
+}
+.status{
+  width: 100px;
+  height: 50px;
+  margin-top: 15px;
+  padding: 5px;
+  border-radius: 15px;
+  background-color: #000000;
   
+}
+.status a{
+  font-weight: 600;
+  font-size: 16px;
+}
+.fa.fa-check-circle-o, .status.accept a{
+  color: rgb(75, 224, 88);
   
+}
+.fa.fa-times-circle-o, .status.reject a{
+  color: rgb(255, 0, 0);
+}
+.fa.fa-pause-circle-o, .status.pending a{
+  color: rgb(243, 243, 61);
+}
+.submit_file{
+  width: 100%;
+  height: 250px;
+  margin: 20px 0 30px 0;
+  background-color: #beb9b9b4;
+  border: 2px dashed #000000;
+  box-sizing: border-box;
+  border-radius: 11px;
+  padding-top: 80px;
+}
+.submit_file a{
+  color: black;
+  font-weight: 600;
+  font-size: 16px;
 }
 
 .popup-right div{
@@ -513,39 +649,123 @@ backdrop-filter: blur(60px);
   
 }
 
-.popup-right div input{
-  height: 30px;
-  width: 250px;
-  padding:3%;
-  opacity: 0.9;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 15px;
-  background-color: transparent;
-  border-radius: 5px;
-  border: 1px solid #FFFFFF;
-  box-sizing: border-box;
-  color: #F5F5F5; 
-}
 
-
-
- .search-popup {
-    float: left;
+  .upload-container button,#photo{
+  margin-top: 30px;
+  display: block;
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  /* cursor: pointer; */
+  /* background: linear-gradient(135deg,#3a8ffe 0%,#9658fe 100%); */
+  background-color: black;
+  }
+  .upload-container button[type=submit]:hover{
+    /* background-color: rgb(165, 42, 114); */
+    background-color: rgba(64, 226, 231, 0.815);
+    color: rgb(0, 0, 0);
   }
 
-  .search-popup input[type=text] {
-    width: 200px;
-    height: 35px;
-    margin-left: 10px;
-    border-radius: 18px 0px 0px 18px;
-    padding: 6px;
-    margin-top: 8px;
-    font-size: 17px;
-    border: none;
+  #photo{
+    margin-bottom: 10px;
+    width: 400px;
+    margin-left:400px;
   }
 
+  #photo:hover{
+    /* background-color: rgb(165, 42, 114); */
+    background-color: rgba(64, 226, 231, 0.815);
+    color: rgb(0, 0, 0);
+  }
+
+
+  .upload-container button:hover{
+    cursor: pointer;
+    
+    color: rgb(61, 224, 230);
+  }
+
+    .upload-container .wrapper{
+  position: relative;
+  height: 250px;
+  width: 100%;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.171);
+  border: 2px dashed #c2cdda;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  }
+  .wrapper.active{
+  border: none;
+  }
+  .wrapper .image{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  .wrapper img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  }
+  .wrapper .icon{
+  font-size: 100px;
+  /* color: #7abebb; */
+  color: rgb(107, 193, 228);
+  }
+  .wrapper .text{
+  font-size: 22px;
+  font-weight: 700;
+  color: rgb(107, 193, 228);
+  }
+  .wrapper #cancel-btn i{
+  position: absolute;
+  font-size: 23px;
+  right: 15px;
+  top: 15px;
+  color: #000000;
+  cursor: pointer;
+  display: none;
+  }
+  .wrapper.active:hover #cancel-btn i{
+  display: block;
+  }
+  .wrapper #cancel-btn i:hover{
+  color: #ff1900;
+  }
+  .wrapper .file-name{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding: 8px 0;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  display: none;
+  /* background: linear-gradient(135deg,#3a8ffe 0%,#9658fe 100%); */
+  background-color: #7abebb;
+  }
+  .wrapper.active:hover .file-name{
+  display: block;
+  }
+
+
+
+
+
+
+ 
   .search-popup button {
     width: 40px;
     height: 35px;
