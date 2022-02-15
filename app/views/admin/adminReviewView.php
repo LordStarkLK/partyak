@@ -43,15 +43,10 @@
                 </div>
 
 
-                <div class="search-container">
-                    <form action="/action_page.php">
-                        <input type="text" placeholder="Search by vendor.." name="search">
-
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                        <!-- <i class="fas fa-search"></i> -->
-
-
-                    </form>
+                <div class="search">
+                    <span class="text"> View reviews by service...</span>
+                    <input type="text" name="search" placeholder="Enter name to search...">
+                    <button><i class="fas fa-search"></i></button>
                 </div>
 
 
@@ -71,11 +66,11 @@
                             <th>Service Name</th>
                             <th>Reviewed By</th>
                             <th>Rating</th>
-                            <th>Review</th>
+                            <th id="review">Review</th>
 
                         </tr>
                         <tr>
-                        <?php 
+                            <?php 
                         $checked = "checked";
                         $notchecked = "";
                         while($row = mysqli_fetch_assoc($data['review'])){
@@ -98,11 +93,11 @@
 
                                 ";
                             } ?>
-                        
 
 
 
-                        <!-- <tr>
+
+                            <!-- <tr>
                             <td>02</td>
                             <td>JK photography</td>
                             <td>Photographer</td>
@@ -136,14 +131,16 @@
 
 
                     </table>
-
+                </div>
 
 
         </section>
     </div>
 
+    <?php linkJS("lib/jquery-3.6.0.min"); ?>
     <?php linkJS("adminHomeView"); ?>
     <?php linkJS("admin/adminReview"); ?>
+
 
 
 

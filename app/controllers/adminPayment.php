@@ -14,4 +14,13 @@ class AdminPayment extends FrameworkPartyak{
         $data["service"] = $this->paymentModel->getService();
         $this->view("admin/adminPaymentView",$data);
     }
+
+    public function search(){
+        $searchTerm = mysqli_real_escape_string($GLOBALS['db'], $_POST['searchTerm']);
+
+        // echo $searchTerm;
+        $userList = $this->paymentModel->search($searchTerm);
+        echo $userList;
+    }
+
 }
