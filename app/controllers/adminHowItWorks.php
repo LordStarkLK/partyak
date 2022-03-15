@@ -27,6 +27,11 @@ class AdminHowItWorks extends FrameworkPartyak{
         // $data['tandc'] = $this->user->getTandC();
 
         $data['intro'] = $this->user->getIntro();
+        $data['main_heading_unique'] = $this->user->getMainHeadingUnique();
+        $data['unique_features'] = $this->user->getUniqueFeatures();
+        $data['steps'] = $this->user->getSteps();
+        $data['vendor_details'] = $this->user->getVendorDetails();
+        $data['customer_details'] = $this->user->getCustomerDetails();
 
         $this->view("admin/adminHowItWorksView",$data);
     }
