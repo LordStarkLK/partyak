@@ -53,19 +53,19 @@
             
         <div class="content">
             <div class="howcontent">
-                <h1>Life is an event. Make it memorable.</h1><br><br>
-                <p1>Online event management system which provides platform for<br>
-                    Users to search and hire event related service providers and event planners.<br>
-                    Event related service providers and event planners to offer their services.<br><br>
+                <div class="intro">
+                <?php while($row = mysqli_fetch_assoc($data['intro'])){
+                    echo"
+                    <h1>$row[heading]</h1><br>
+                    <p1>$row[description]</p1><br><br>
 
-                    Wide variety of services being offered and opportunity for a customer to organize and keep track of the event through the website.
-                    </p1>
+                    ";
 
-                    <p2>Everything right from your screen<br></p2>
-                    <p22>Event planning will never be scary and overwhelming again when you can plan and monitor your entire event from your screen.<br><br></p22>
 
-                    <p21>Plan your next event in Sri Lanka from anywhere anytime.<br>
-                    Your Booklu Planboard will help you keep things organized from your theme colours to vendors to your team member tasks progress.</p21><br><br>
+                   }   
+                    ?>
+                </div>
+                
 
                     <p3>Partyak offers you following unique features</p3><br><br>
                     

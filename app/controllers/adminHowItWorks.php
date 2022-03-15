@@ -3,7 +3,7 @@
 class AdminHowItWorks extends FrameworkPartyak{
     public function __construct(){
         $this->helper("linker");
-        $this->user= $this->model('adminTandCModel');
+        $this->user= $this->model('adminHowItWorksModel');
         $this->preventBack("admin");
     }
     
@@ -26,7 +26,9 @@ class AdminHowItWorks extends FrameworkPartyak{
         // }
         // $data['tandc'] = $this->user->getTandC();
 
-        $this->view("admin/adminHowItWorksView");
+        $data['intro'] = $this->user->getIntro();
+
+        $this->view("admin/adminHowItWorksView",$data);
     }
 }
 
