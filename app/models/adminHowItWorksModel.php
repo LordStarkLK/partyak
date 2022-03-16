@@ -65,6 +65,12 @@ class AdminHowItWorksModel extends database {
     
     }
 
+    public function addCustomerDetail($title,$content){
+        $query = "INSERT INTO how_it_works(heading,heading_type,description) VALUES ('$title','customer details','$content')";
+        mysqli_query($GLOBALS['db'],$query);
+    
+    }
+
 
 
     

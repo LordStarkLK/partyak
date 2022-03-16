@@ -321,12 +321,20 @@ ul.breadcrumb {
 .insert-modal2{
   padding-top: 2500px;
 }
+
+.insert-modal3{
+  padding-top: 2800px;
+}
 .update-modal{
   padding-top: 600px;
 }
 
 .update-modal2{
   padding-top: 2300px;
+}
+
+.update-modal3{
+  padding-top: 2800px;
 }
 
 /* Modal Content */

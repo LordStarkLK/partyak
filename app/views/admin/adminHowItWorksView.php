@@ -175,7 +175,7 @@
             </div>
 
 
-                </div>
+               
 
                 <div class="steps">
                 <?php $row = mysqli_fetch_assoc($data['steps']);
@@ -190,7 +190,7 @@
                 </div>
 
                 <div class="morevendor">
-                    <h1>More details for Vendors</h1>
+                    <h1 class = "left-heading">More details for Vendors</h1>
                     <?php while($row = mysqli_fetch_assoc($data['vendor_details'])){
                     echo"
                     <h2>$row[heading]</h2>
@@ -291,7 +291,7 @@
                 
 
                 <div class="morecustomer">
-                    <h1>More details for Customer</h1>
+                    <h1 class = "left-heading">More details for Customer</h1>
                     <?php while($row = mysqli_fetch_assoc($data['customer_details'])){
                     echo"
                     <h2>$row[heading]</h2>
@@ -341,17 +341,17 @@
                    }   
                     ?>
 
-                    <button class="addnew" id="myBtn" style="vertical-align:middle"
-                     onclick="addnew()"><span>Add New detail for customer
+                    <button class="addnew" id="myBtn3" style="vertical-align:middle"
+                     onclick="addnew3()"><span>Add New detail for customer
                     </span></button>
 
-                    <div id="myModal" class="modal insert-modal2">
+                    <div id="myModal3" class="modal insert-modal3">
 
                             
                             <div class="modal-content ">
-                                <span class="close" id="close">&times;</span>
+                                <span class="close" id="close3">&times;</span>
                                 <div class="container">
-                                        <form action="<?php echo BASEURL . '/adminHowItWorks/unique_features'; ?>" method="POST">
+                                        <form action="<?php echo BASEURL . '/adminHowItWorks/customerDetails'; ?>" method="POST">
                                         <div class="row">
                                             <div class="col-25">
                                             <label for="fname">Title: </label>
@@ -390,6 +390,8 @@
 
                 <h1>Join With Us & Enjoy Your Day.</h1>
 
+            </div>
+
 
 
                     
@@ -398,7 +400,7 @@
                    
 
                 
-            </div>
+            
         </div>
     
     

@@ -58,6 +58,19 @@ class AdminHowItWorks extends FrameworkPartyak{
         $this->redirect("adminHowItWorks");
 
     }
+
+    public function customerDetails(){
+        IF($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST["id"] == "insert"){
+            $title = $_POST["title"];
+            $content = $_POST["content"];
+            
+            
+            $this->user->addCustomerDetail($title,$content);
+        }
+
+        $this->redirect("adminHowItWorks");
+
+    }
 }
 
 ?>
