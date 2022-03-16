@@ -59,6 +59,12 @@ class AdminHowItWorksModel extends database {
     
     }
 
+    public function addVendorDetail($title,$content){
+        $query = "INSERT INTO how_it_works(heading,heading_type,description) VALUES ('$title','vendor details','$content')";
+        mysqli_query($GLOBALS['db'],$query);
+    
+    }
+
 
 
     

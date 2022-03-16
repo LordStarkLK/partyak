@@ -45,6 +45,19 @@ class AdminHowItWorks extends FrameworkPartyak{
 
 
     }
+
+    public function vendorDetails(){
+        IF($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST["id"] == "insert"){
+            $title = $_POST["title"];
+            $content = $_POST["content"];
+            
+            
+            $this->user->addVendorDetail($title,$content);
+        }
+
+        $this->redirect("adminHowItWorks");
+
+    }
 }
 
 ?>
