@@ -22,7 +22,7 @@ searchBar.onkeyup = ()=>{
     searchBar.classList.remove("active");
   }
   let xhr = new XMLHttpRequest();
-  xhr.open("POST", "http://localhost/partyak/adminReview/search/", true);
+  xhr.open("POST", "http://localhost/partyak/adminPayment/search/", true);
   xhr.onload = ()=>{
     if(xhr.readyState === XMLHttpRequest.DONE){
         if(xhr.status === 200){
