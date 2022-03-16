@@ -9,23 +9,9 @@ class AdminHowItWorks extends FrameworkPartyak{
     
     public function index(){
 
-        // IF($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST["id"] != "insert"){
-        //     $title = $_POST["title"];
-        //     $content = $_POST["content"];
-        //     $id = $_POST["id"];
-            
-        //     $this->user->updateTandC($title,$content,$id);
-        // }
+        
 
-        // IF($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST["id"] == "insert"){
-        //     $title = $_POST["title"];
-        //     $content = $_POST["content"];
-        //     // $id = $_POST["id"];
-            
-        //     $this->user->addTandC($title,$content);
-        // }
-        // $data['tandc'] = $this->user->getTandC();
-
+      
         $data['intro'] = $this->user->getIntro();
         $data['main_heading_unique'] = $this->user->getMainHeadingUnique();
         $data['unique_features'] = $this->user->getUniqueFeatures();
@@ -34,6 +20,30 @@ class AdminHowItWorks extends FrameworkPartyak{
         $data['customer_details'] = $this->user->getCustomerDetails();
 
         $this->view("admin/adminHowItWorksView",$data);
+    }
+
+    public function unique_features(){
+        IF($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST["id"] != "insert"){
+            $title = $_POST["title"];
+            $content = $_POST["content"];
+            $id = $_POST["id"];
+            
+            $this->user->updateUniqueFeatures($title,$content,$id);
+            
+        }
+
+        IF($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST["id"] == "insert"){
+            $title = $_POST["title"];
+            $content = $_POST["content"];
+            
+            
+            $this->user->addUniqueFeature($title,$content);
+        }
+
+        $this->redirect("adminHowItWorks");
+       
+
+
     }
 }
 

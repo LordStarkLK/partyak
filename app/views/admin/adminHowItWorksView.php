@@ -78,14 +78,103 @@
                 <div class="unique_features">
                 <?php while($row = mysqli_fetch_assoc($data['unique_features'])){
                     echo"
-                    <h2>$row[heading]</h2><br>
+                    <h2>$row[heading]</h2>
+                    <button onclick=\"funcpassid($row[section_id])\"class=\"addnew-button myBtn\" id=\"$row[section_id]-btn\" style=\"vertical-align:middle\"><span><i
+                                    class=\"fas fa-edit\"></i>
+                            </span></button>
+                           
+                    <br>      
                     <p1>$row[description]</p1><br><br>
+                    <div id=\"$row[section_id]-modal\" class=\"modal myModal update-modal\">    
+                    <div class=\"modal-content\">
+                                <span id = \"$row[section_id]-close\" class=\"close\">&times;</span>
+                                <div class=\"container\">
+                                        <form action=\"/partyak/adminHowItWorks/unique_features\" method=\"POST\">
+                                        <div class=\"row\">
+                                            <div class=\"col-25\">
+                                            <label for=\"fname\">Title: </label>
+                                            </div>
+                                            <div class=\"col-75\">
+                                            <input type=\"text\" id=\"title\" name=\"title\" placeholder=\"Insert a title..\" value=\"$row[heading]\">
+                                            </div>
+                                        </div>
+                                        <div class=\"row\">
+                                            <div class=\"col-25\">
+                                            <label for=\"subject\">Content: </label>
+                                            </div>
+                                            <div class=\"col-75\">
+                                            <textarea id=\"content\" name=\"content\" placeholder=\"Write something..\" style=\"height:200px\">$row[description]</textarea>
+                                            </div>
+                                            <input type = \"hidden\" name = \"id\" value = \"$row[section_id]\" />
+                                        </div>
+                                        <br>
+                                        <div class=\"row\">
+                                            <input type=\"submit\" value=\"Submit\">
+                                        </div>
+                                        </form>
+                                        </div>
+                                
+
+
+                            </div>
+
+                        </div>
+
+
 
                     ";
 
 
                    }   
                     ?>
+
+                    <button class="addnew" id="myBtn" style="vertical-align:middle"
+                     onclick="addnew()"><span>Add New Unique Feature
+                    </span></button>
+
+                    <div id="myModal" class="modal insert-modal">
+
+                            
+                            <div class="modal-content ">
+                                <span class="close" id="close">&times;</span>
+                                <div class="container">
+                                        <form action="<?php echo BASEURL . '/adminHowItWorks/unique_features'; ?>" method="POST">
+                                        <div class="row">
+                                            <div class="col-25">
+                                            <label for="fname">Title: </label>
+                                            </div>
+                                            <div class="col-75">
+                                            <input type="text" id="title" name="title" placeholder="Insert Title..">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-25">
+                                            <label for="subject">Content: </label>
+                                            </div>
+                                            <div class="col-75">
+                                            <textarea id="content" name="content" placeholder="Insert Content.." style="height:200px"></textarea>
+                                            </div>
+                                            <input type = "hidden" name = "id" value = "insert" />
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <input type="submit" value="Submit">
+                                        </div>
+                                        </form>
+                                        </div>
+                                
+
+
+                            
+
+
+                            </div>
+
+                        </div>
+
+            </div>
+
+
                 </div>
 
                 <div class="steps">
@@ -162,7 +251,7 @@
     </div>
 
     <?php linkJS("adminHomeView"); ?>
-    <?php linkJS("admin/adminTandC"); ?>
+    <?php linkJS("admin/adminHowItWorks"); ?>
 
 
 

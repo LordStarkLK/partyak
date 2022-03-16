@@ -48,6 +48,17 @@ class AdminHowItWorksModel extends database {
         }
     }
 
+    public function updateUniqueFeatures($title,$content,$id){
+        $query = "UPDATE how_it_works SET heading = '$title' , description = '$content' WHERE section_id = '$id'";
+        mysqli_query($GLOBALS['db'],$query);
+    }
+
+    public function addUniqueFeature($title,$content){
+        $query = "INSERT INTO how_it_works(heading,heading_type,description) VALUES ('$title','unique features','$content')";
+        mysqli_query($GLOBALS['db'],$query);
+    
+    }
+
 
 
     
