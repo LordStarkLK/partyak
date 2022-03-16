@@ -4,8 +4,15 @@
   <head>
     <meta charset="UTF-8">
     <?php linkCSS("admin/sidebar"); ?>
+    
     <?php linkCSS("admin/adminHome"); ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
     
    
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -92,6 +99,10 @@
   </section>
 </div>
 
+<?php linkPhp("notification"); ?>
+<?php linkJS("lib/jquery-3.6.0.min"); ?>
+
+<?php linkJS("admin/notification"); ?>
 <?php linkJS("adminHomeView"); ?>
 
 
