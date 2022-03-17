@@ -25,6 +25,8 @@ body {
   height: 500px;
 }
 .image-carousel button {
+  background-color: rgba(0, 0, 0, 0);
+  border: #ffffff solid 1px;
   position: absolute;
   z-index: 10;
 }
