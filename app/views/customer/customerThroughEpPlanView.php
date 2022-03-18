@@ -22,7 +22,7 @@
     <div class="sidebar">
         <button type="button" class="buttonS" name="Own" > <a href ="<?php echo BASEURL . '/customerThroughEpPlanS'; ?>"> Add Service Details</a></button> 
         <div class="sideDe">
-          <p>You can contact Event Planner after adding service details which are required for your event by clicking here.</p>
+          <p>After giving event details successfully, you can add service details which are required for your event. Then you can contact Event Planner.</p>
         </div> 
 
         <br><br><img <?php srcIMG("serviceE.png") ?> alt="Chance Flowers"> 

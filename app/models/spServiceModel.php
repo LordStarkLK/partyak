@@ -40,15 +40,22 @@ class SpServiceModel extends Database
     {
         // echo $packageType;
 
-        $query = "SELECT package_id FROM package WHERE package_name='$packageType'";
+        $query = "SELECT package_id,per_unit_price, fixed_price FROM package WHERE package_name='$packageType'";
         $query = mysqli_query($GLOBALS['db'], $query);
         $result = mysqli_fetch_assoc($query);
         $packageId = $result['package_id'];
-        // echo $packageId;
+        $pricePerUnitId = $result['per_unit_price'];
+        $fixedPrice = $result['fixed_price'];
+        
+        if ($pricePerUnitId > 0){
+            $fullPayment = $guestCount*$pricePerUnitId;
+        }else{
+            $fullPayment =  $fixedPrice;
+        }
 
         //Insert data to child tables of user - on_your_own_planning table
-        $query = "INSERT INTO booking(customer_id, service_id, event_date,event_type,noOfGuest, package_id) 
-        VALUES ('$id', '$service_id', '$reserveDate', '$eventType' , ' $guestCount', '$packageId')";
+        $query = "INSERT INTO booking(customer_id, service_id, event_date,event_type,noOfGuest, package_id,full_payment) 
+        VALUES ('$id', '$service_id', '$reserveDate', '$eventType' , ' $guestCount', '$packageId','$fullPayment')";
         mysqli_query($GLOBALS['db'], $query);
     }
     public function insertReview($textReview, $ratedStars, $id, $service_id)

@@ -187,6 +187,12 @@ nav .sidebar-button i{
     font-size: 20px;
     color:white;
 }
+
+.profile_details{
+  text-decoration: none;
+
+}
+
 .profile_details .personal_info{
     width: 100%;
     height: 450px;
@@ -249,6 +255,9 @@ font-family: 'Poppins', sans-serif;
 
 
 .eprofile_pic .eimage img{
+    display: flex;
+    flex-direction: row;
+    order:0;
     width: 250px;
     height: 250px;
     margin: 20px 0 0 50px;
@@ -343,11 +352,6 @@ font-family: 'Poppins', sans-serif;
   background-color: #9593ff;
   }
 
-
-  /* .filedd {
-    display: none;
-    display:block;
-  } */
   
   .custom-file-upload {
 
@@ -360,33 +364,61 @@ font-family: 'Poppins', sans-serif;
     border-radius: 5px;
     font-size: 16px;
   }
+
   .custom-file-upload:hover {
     transition: ease-in-out 0.3s;
     background-color: #007bff;
     color: white;
   }
-  .savebtn {
+  
+  .filec{
     color: white;
     margin: 0;
-    padding: 8px 12px;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-bottom: 5%;
+    padding-top: 5%;
     margin-top: 10%;
-    margin-left: 27%;
-    border-radius: 28px;
+    margin-left: 31%;
+    border-radius: 20px;
     border: 1px solid #18ab29;
-    display: inline-block; 
+    display: block; 
     cursor: pointer;
     color: #ffffff;
     font-family: Arial;
-    font-size: 19px;
+    font-size: 22px;
     line-height: 23px;
     background-color: #9593ff;
+    
   }
-  .savebtn:hover {
-    color: #007bff;
-    background-color: rgb(255, 255, 255);
+
+  .savebtn{
+    color: white;
+    margin: 0;
+    padding: 10%;
+    padding-left: 40%;
+    padding-right: 40%;
+    margin-top: 10%;
+    margin-left: 80%;
+    border-radius: 20px;
+    border: 1px solid #18ab29;
+    display: block; 
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 22px;
+    line-height: 23px;
+    background-color: #9593ff;
+    
+  }
+
+  .upload button:hover {
+    color: #ffffff;
+    background-color: rgb(26, 187, 66);
     font-weight: 500;
     border: 1px solid #007bff;
   }
+
 
 
 
