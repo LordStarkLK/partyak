@@ -97,7 +97,7 @@
                     <section class="chat-area">
                         <header>
 
-                            <a href="<?php echo BASEURL . '/spChat'; ?>" class="back-icon"><i
+                            <a href="<?php echo BASEURL . '/spChat/$data[service_id]'; ?>" class="back-icon"><i
                                     class="fas fa-arrow-left"></i></a>
                             <img src="<?php echo BASEURL; ?>/public/img/userImages/<?php if ($details['profilePicture']) {
                     echo $details['profilePicture'];
