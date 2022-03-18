@@ -13,7 +13,7 @@
         <div class="nav-bar-links-vendor">
             <div class="nav-item-vendor">
                 <a href="#"><i class="fa fa-comments"></i></a>
-                <a href="#"><i class="fa fa-bell"></i></a>
+                <!-- <a href="#"><i class="fa fa-bell"></i></a> -->
                 <a href="#"><i class="fa fa-user"></i></a>
 
             </div>

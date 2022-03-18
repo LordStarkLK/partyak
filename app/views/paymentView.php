@@ -8,6 +8,8 @@
     <title>Home</title>
     <?php linkCSS("payment"); ?>
     <?php linkCSS("navigation"); ?>
+
+    <?php $paymentDet = $data['payment_det']; ?>
 </head>
 
 
@@ -21,8 +23,21 @@
         <img class="background-blob" <?php srcIMG("home-blob.png") ?>>
         <div class="payment-form-container">
             <div class="first-section">
-                <h1>Total Amount : 15,000</h1>
-                <h1>Already Paid : 4,000</h1>
+                <?php
+                    if(!isset($paymentDet['amount'])){
+                        echo " 
+                        <h1>Total Amount : $paymentDet[full_payment]</h1>
+                        <h1>Advance Amount :$paymentDet[advance_price]</h1>
+                        ";
+
+                    } 
+                    else{
+                        echo " 
+                        <h1>Total Amount : $paymentDet[full_payment]</h1>
+                        <h1>Paid Amount :$paymentDet[amount]</h1>
+                        ";
+                    }
+                ?>
             </div>
             <div class="second-section">
                 <div class="card-icon">

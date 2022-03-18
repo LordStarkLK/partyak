@@ -99,14 +99,14 @@
 
                 <div class="nav-noti">
                    
-                    <div class="no">
+                    <!-- <div class="no">
                         <button class="nobtn"><i class="fa fa-bell"></i></button>
                         <div class="no-content">
                             <p>You have do reservation payment for reserve Mount Lavania Hotel.</p>
                             <a href="<?php echo BASEURL . '/payment'; ?>">Do Payment</a>
                         </div>
                     </div>
-                    
+                     -->
                 </div>
 
             </div>

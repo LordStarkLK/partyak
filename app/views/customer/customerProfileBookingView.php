@@ -34,13 +34,16 @@
     <div class="cusevent">
     <table class="table-content">
           <tr>
+
             <th>Booking_No</th>
             <th>Vendor Type</th>
             <th>Vendor Name</th>
-            <th>Event_Date</th>
+            <th>Event Date</th>
             <th>Booking Request Status</th>
+            <th>Payment Status</th>
+            <th>Paid Amount(LKR)</th>
+            <th>Total Amount(LKR)</th>
             <th>Do Payment</th>
-            <th>Payment_Status</th>
             <th>More Actions</th>
           </tr>
 
@@ -56,10 +59,12 @@
                   <td>$row[service_name]</td>
                   <td>$row[event_date]</td>
                   <td>$row[status]</td>
-                  <td class=\"btn-row\">
-                      <button class=\"edit-booking\">Go</button>
-                  </td>
                   <td>Completed</td>
+                  <td>Completed</td>
+                  <td>Completed</td>
+                  <td class=\"btn-row\">
+                      <button class=\"edit-booking\"><a href=\" ".BASEURL . "/payment/paymentDet/$row[booking_id]\">Go</a></button>
+                  </td>                 
                   <td class=\"btn-row\">
                       <button class=\"cancel-booking\">Cancel</button>
                   </td>";

@@ -151,23 +151,24 @@
 
 
     <div class="ehome-content" id="edit">
-        <form action="<?php echo BASEURL . '/customerProfile/handleThePicture'; ?>"  class="eprofile_pic" method="post" enctype="multipart/form-data" > 
-            <div class="eimage">
-                    <input type="file" name='imageUpload' id="imageUpload" class="filedd">
-                    <!-- <button type="file" class="savebb"><a href="#"><i class="fas fa-camera" ></i>Edit</a></button> -->
-                    
-                    <img src="<?php echo BASEURL; ?>/public/img/userImages/<?php if ($profi['profilePicture']) {
-                    echo $profi['profilePicture'];
-                    }  ?>" >
-                    <!-- <div class="cam" id="cami">
-                        <button type="button" class="savebb"><a href="#"><i class="fas fa-camera" ></i>Edit</a></button>
-                    </div> -->
-                    
-                    
-            </div>
-                <input type="submit" class="savebtn" value="Upload the Image" name="saveButton">
-        </form>
+        <div class="upload">
+
+            <button type="file" name="file" class="filec" onclick="defaultBtnActive()" id="custom-btn">Choose a file</button>
+
+            <form action="<?php echo BASEURL . '/customerProfile/handleThePicture'; ?>"  class="eprofile_pic" method="post" enctype="multipart/form-data" > 
+                <div class="eimage">
+    
+                        <img id="contentImg" src="<?php echo BASEURL; ?>/public/img/userImages/<?php if ($profi['profilePicture']) {
+                        echo $profi['profilePicture'];
+                        }  ?>" >
         
+                </div>
+                    <input type="file" name='imageUpload' id="default-btn" class="filedd" hidden>
+                    <button type="submit" class="savebtn" value="Upload the Image" name="saveButton">Upload</button>
+            </form>
+
+        </div>
+ 
 
         <div class="eprofile_details">
             <form action="<?php echo BASEURL . '/customerProfile/index'; ?>" class="epersonal_info" method="POST">
@@ -242,5 +243,47 @@
 <?php linkJS("vendor/spProfile"); ?>
 <?php linkJS("customer/customerProfile"); ?> 
 <?php linkPhp("footer") ?>
+
+
+<script>
+const wrapper = document.querySelector(".wrapper");
+const fileName = document.querySelector(".file-name");
+const defaultBtn = document.querySelector("#default-btn");
+const customBtn = document.querySelector("#custom-btn");
+const cancelBtn = document.querySelector("#cancel-btn i");
+// const img = document.querySelector("img");
+const img = document.getElementById("contentImg")
+let regExp = /[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_ ]+$/;
+
+function defaultBtnActive(){
+    defaultBtn.click();
+}
+
+defaultBtn.addEventListener("change", function(){
+    const file = this.files[0];
+    if(file){
+        const reader = new FileReader();
+        reader.onload = function(){
+            const result = reader.result;
+            img.src = result;
+            wrapper.classList.add("active");
+        }
+        cancelBtn.addEventListener("click", function(){
+            img.src = "";
+            wrapper.classList.remove("active");
+        })
+        //read the content of the file
+        reader.readAsDataURL(file);
+    }
+
+    if(this.value){
+        let valueStore = this.value.match(regExp);
+        fileName.textContent = valueStore;
+    }
+
+});
+</script>
+
+
 </body>
 </html>

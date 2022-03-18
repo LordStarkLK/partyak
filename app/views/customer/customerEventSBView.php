@@ -31,8 +31,6 @@
                                 </button>
                             </div></th>
                             <th><a href="<?php echo BASEURL . '/customerEventSBRecep'; ?>">Recomndations of event planner</a></th>
-                            <th><i class="fa fa-comments"></i></th>
-                            <th>Boards</th>
                         </tr>
                     </table>
                 </div>
@@ -47,8 +45,11 @@
                         <?php 
                            echo "<tr>";
                            echo "<td>Venues & Halls</td>";
-                           if($serviceP['seating_arrangement'] != "no"){
-                               echo"<td> Seating arrangement-$serviceP[seating_arrangement] <br>";
+                           if($serviceP['seating_arrangement'] == "yes"){
+                            echo"<td> Seating arrangement - $serviceP[seating_arrangement] <br>";
+                           }
+                           else{
+                            echo"<td> Seating arrangement - <br>";
                            }
                         
 
@@ -56,30 +57,41 @@
                             echo"<br> Venue type is indoor, outdoor both";
                            }
                            else if($serviceP['indoor_venue'] == "yes"){
-                            echo"<br>Venue type is indoor venue."; 
+                            echo"<br>Venue type - Indoor venue."; 
                            }
                            else if($serviceP['outdoor_venue'] == "yes"){
-                            echo"<br> Venue type is outdoor venue."; 
+                            echo"<br> Venue type - Outdoor venue."; 
                            }else{
-                            echo"<br> Venue type is not selected.";  
+                            echo"<br> Venue type - ";  
                            }
 
 
                            if($serviceP['seti_back'] == "yes"){
-                               echo " <br> Seti back is want.";
+                            echo " <br> Seti back is want.";
+                           }
+                           else{
+                            echo " <br> Seti back - ";
                            }
 
 
                            if($serviceP['poruwa'] == "yes"){
                             echo "<br>Poruwa is want.";
                            }
+                           else{
+                            echo " <br> Poruwa - ";
+                           }
+
 
 
                            if($serviceP['dancing_floor'] == "yes"){
                             echo "<br> Dancing floor is want.";
                            }
+                           else{
+                            echo " <br> Dancing floor - ";
+                           }
                            echo"</td>";
                            echo "</tr>";
+
 
                            echo "<tr>";
                            echo "<td>Catering Service</td>";
@@ -114,13 +126,20 @@
 
                            echo "<tr>";
                            echo "<td>Photographers</td>";
+                           echo "<td>";
                            if($serviceP['estimated_budget_range'] != 0){
-                            echo "<td> <br> $serviceP[estimated_budget_range]";
+                            echo " <br> Estimated budget range -  $serviceP[estimated_budget_range]";
+                           }
+                           else{
+                            echo "<br>Estimated budget range - ";
                            }
 
                            
                            if($serviceP['photo_shoot_details'] != "no"){
                             echo "<br> $serviceP[photo_shoot_details]";
+                           }
+                           else{
+                            echo "<br>Photo shoot details - ";
                            }
 
                            echo "</td>";
@@ -130,8 +149,9 @@
                            echo "<tr>";
                            echo "<td>Music</td>";
 
+                           echo "<td> Music type - ";
                            if($serviceP['music_band'] == "yes"){
-                            echo "<td><br> I want music band for my event.";
+                            echo "<br> I want music band for my event.";
                            }
 
                            if($serviceP['solo_singer'] == "yes"){
@@ -147,7 +167,7 @@
 
                            echo "<tr>";
                            echo "<td>Dancing Groups</td>";
-                           echo "<td>Dance Types-";
+                           echo "<td>Dance Types -";
 
                            if($serviceP['kandyan'] == "yes"){
                             echo "Kandyan";
@@ -172,8 +192,10 @@
                            echo "<tr>";
                            echo "<td>Saloon</td>";
 
+                           echo "<td>";
+
                            if($serviceP['saloon_type'] != "no"){
-                            echo"<td> Salon type-$serviceP[saloon_type]";
+                            echo"Salon type - $serviceP[saloon_type]";
                            }
 
                            if($serviceP['hair_style'] == "yes"){
@@ -195,8 +217,9 @@
                            echo "<tr>";
                            echo "<td>Cake & Sweet</td>";
 
+                           echo "<td>Cake & sweetes type -" ;
                            if($serviceP['wedding_cake'] == "yes"){
-                            echo"<td> I want wedding cake.";
+                            echo"I want wedding cake.";
                            }
 
                            if($serviceP['party_cake'] == "yes"){
@@ -214,8 +237,9 @@
                            echo "<tr>";
                            echo "<td>decorations</td>";
 
+                           echo "<td>Decoration details - ";
                            if($serviceP['setibackP'] == "yes"){
-                            echo"<td> I want seti back & poruwa.";
+                            echo"I want seti back & poruwa.";
                            }
 
                            if($serviceP['floral'] == "yes"){
@@ -228,8 +252,9 @@
                            echo "<tr>";
                            echo "<td>Sounds & Lightings</td>";
 
+                           echo "<td>Sound & lighting details - ";
                            if($serviceP['sound_service'] == "yes"){
-                            echo"<td> I want sound service.";
+                            echo"I want sound service.";
                            }
 
                            if($serviceP['lighting_service'] == "yes"){
@@ -255,8 +280,9 @@
                            echo "<tr>";
                            echo "<td>Dress Suppliers</td>";
 
+                           echo "<td>";
                            if($serviceP['male_dress'] == "yes" && $serviceP['female_dress'] == "yes"){
-                            echo"<td><br> I want both male and female dresses.";
+                            echo"<br> I want both male and female dresses.";
                            }
                            else if($serviceP['male_dress'] == "yes"){
                             echo"<br>I want male dresses."; 
@@ -272,15 +298,6 @@
 
                         
                         ?>
-                            <tr>
-                                <td></td>
-                                <td></td>      
-                            </tr>
-
-                            <tr>
-                                <td></td>
-                                <td></td>      
-                            </tr>
                                             
                     </table>
                 </div>
