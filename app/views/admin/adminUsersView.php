@@ -107,16 +107,36 @@
     <div class=\"btn-group\">
         <button onclick=\"window.location=' " . BASEURL . "/adminUserProfile/index/$row[user_id]'\">View Profile</button>
 
-        <button onclick=\"window.location=' " . BASEURL . "/adminUsers/deleteUser/$row[user_id]'\">Delete User</button>
+        <button onclick=\"document.getElementById('$row[user_id]').style.display='block'\">Delete User</button>
         
       </div>
+
+      <div id=\"$row[user_id]\" class=\"modal\">
+      <span onclick=\"document.getElementById('$row[user_id]').style.display='none'\" class=\"close\" title=\"Close Modal\">&times;</span>
+      <form class=\"modal-content\" action=\"/action_page.php\">
+        <div class=\"container-modal\">
+          <h1>Delete Account</h1>
+          <p>Are you sure you want to delete your account?</p>
+    
+          <div class=\"clearfix\">
+            <button type=\"button\" class=\"cancelbtn\" onclick=\"document.getElementById('$row[user_id]').style.display='none'\">Cancel</button>
+            <button type=\"button\" class=\"deletebtn\" onclick=\"window.location=' " . BASEURL . "/adminUsers/deleteUser/$row[user_id]'\">Delete</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    
+
 
     
     </td>
 </tr>   
     ";
     $i++;
-}?>
+
+}
+
+?>
 
                         <!-- deleteUser/$row[user_id] -->
                         <!-- && $row2=mysqli_fetch_assoc($data['customer_email']) -->
