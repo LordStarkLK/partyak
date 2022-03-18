@@ -57,7 +57,7 @@ $(document).ready(function () {
         $.ajax({
             type: "GET",
 
-            url: "http://localhost/ALec/notification/notificationCount/",
+            url: "http://localhost/partyak/notification/notificationCount/",
             dataType: "html",
             success: function (response) {
                 if (response == "0") {
@@ -74,7 +74,7 @@ $(document).ready(function () {
         $.ajax({
             type: "GET",
 
-            url: "http://localhost/ALec/notification/updateNotification/",
+            url: "http://localhost/partyak/notification/updateNotification/",
             dataType: "html",
             success: function (response) {
                 $(".notification-details").html(response);
