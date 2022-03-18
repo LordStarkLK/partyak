@@ -43,15 +43,10 @@
                 </div>
 
 
-                <div class="search-container">
-                    <form action="/action_page.php">
-                        <input type="text" placeholder="Search by vendor.." name="search">
-
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                        <!-- <i class="fas fa-search"></i> -->
-
-
-                    </form>
+                <div class="search">
+                    <span class="text"> View reviews by service...</span>
+                    <input type="text" name="search" placeholder="Enter name to search...">
+                    <button><i class="fas fa-search"></i></button>
                 </div>
 
 
@@ -68,30 +63,41 @@
                     <table>
                         <tr>
                             <th>Review ID</th>
-                            <th>Vendor </th>
-                            <th>Vendor type</th>
+                            <th>Service Name</th>
                             <th>Reviewed By</th>
                             <th>Rating</th>
-                            <th>Review</th>
+                            <th id="review">Review</th>
 
                         </tr>
                         <tr>
-                            <td>01</td>
-                            <td>Sean Lewis</td>
-                            <td>Event Planner</td>
-                            <td>Jake Paul</td>
-                            <td>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
+                            <?php 
+                        $checked = "checked";
+                        $notchecked = "";
+                        while($row = mysqli_fetch_assoc($data['review'])){
+
+                        
+                                echo"
+                                <td>$row[review_id]</td>
+                                <td>$row[service_name]</td>
+                                <td>$row[f_name] $row[l_name]</td>
+                                <td class = \"$row[ratedStar] \">
+                                <span class=\"fa fa-star ".(($row['ratedStar']>=1)?$checked:$notchecked)."\"></span>
+                                <span class=\"fa fa-star ".(($row['ratedStar']>=2)?$checked:$notchecked)."\"></span>
+                                <span class=\"fa fa-star ".(($row['ratedStar']>=3)?$checked:$notchecked)."\"></span>
+                                <span class=\"fa fa-star ".(($row['ratedStar']>=4)?$checked:$notchecked)."\"></span>
+                                <span class=\"fa fa-star ".(($row['ratedStar']>=5)?$checked:$notchecked)."\"></span>
                             </td>
-                            <td>Great service and assistance keep it up!</td>
+                                <td>$row[textReview]</td>
+                                
+                            </tr>
 
-                        </tr>
+                                ";
+                            } ?>
 
-                        <tr>
+
+
+
+                            <!-- <tr>
                             <td>02</td>
                             <td>JK photography</td>
                             <td>Photographer</td>
@@ -121,17 +127,20 @@
                             </td>
                             <td>Ideal venue for a wedding! loved it</td>
 
-                        </tr>
+                        </tr> -->
 
 
                     </table>
-
+                </div>
 
 
         </section>
     </div>
 
+    <?php linkJS("lib/jquery-3.6.0.min"); ?>
     <?php linkJS("adminHomeView"); ?>
+    <?php linkJS("admin/adminReview"); ?>
+
 
 
 

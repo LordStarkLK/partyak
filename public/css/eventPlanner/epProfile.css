@@ -225,6 +225,173 @@ nav .sidebar-button i {
   font-weight: 400;
   font-size: 20px;
 }
+.edit {
+  float: right;
+  margin-top: 0%;
+}
+.edit a {
+  font-family: "Poppins", sans-serif;
+  color: azure;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.home-section .ehome-content {
+  border-radius: 43px;
+  display: flex;
+  position: relative;
+  padding: 60px 30px 30px 30px;
+  background: linear-gradient(
+    114.1deg,
+    rgba(40, 40, 40, 0.64) 18.52%,
+    rgba(15, 15, 15, 0.8) 98.52%
+  );
+  backdrop-filter: blur(120px);
+  display: none;
+}
+.eprofile_pic {
+  width: 40%;
+  height: 500px;
+  border-radius: 20px;
+}
+
+.eprofile_pic .eimage img {
+  width: 250px;
+  height: 250px;
+  margin: 20px 0 0 50px;
+  border-radius: 50%;
+  border: solid;
+  background-color: lightcoral;
+  vertical-align: middle;
+}
+
+.eprofile_details {
+  display: flex;
+  flex-direction: column;
+  order: 1;
+  flex-wrap: wrap;
+  width: 60%;
+  font-size: 20px;
+  color: white;
+  margin-left: 5%;
+}
+.eprofile_details .epersonal_info {
+  width: 100%;
+  margin-top: 0%;
+  /* padding: 20px; */
+}
+.eprofile_details {
+  width: 100%;
+  padding: 20px;
+}
+.erow {
+  height: calc(100% / 7);
+  display: flex;
+  flex-wrap: wrap;
+}
+.ecol_name {
+  float: left;
+  width: 35%;
+  margin-top: 6px;
+  font-weight: 600;
+  padding: 1.3%;
+}
+
+.ecol_data {
+  float: right;
+  color: rgb(160, 148, 148);
+  font-weight: bold;
+  width: 65%;
+  margin-bottom: 10%;
+}
+
+.ecol_data input,
+.ecol_data p {
+  padding: 2%;
+  margin-left: 0%;
+  opacity: 0.9;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 24px;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  margin-right: 0%;
+  width: 100%;
+  color: #f5f5f5;
+}
+
+.epersonal_info a {
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.save {
+  display: flex;
+  padding-left: 80%;
+}
+
+.saveb,
+.savebb {
+  position: relative;
+  padding: 10px 50px;
+  border-radius: 28px;
+  border: 1px solid #18ab29;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 19px;
+  line-height: 23px;
+  background-color: #9593ff;
+}
+
+/* .filedd {
+    display: none;
+    display:block;
+  } */
+
+.custom-file-upload {
+  border: 1px solid #007bff;
+  display: inline-block;
+  padding: 7px 12px;
+  cursor: pointer;
+  color: #007bff;
+  font-weight: normal;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.custom-file-upload:hover {
+  transition: ease-in-out 0.3s;
+  background-color: #007bff;
+  color: white;
+}
+.savebtn {
+  color: white;
+  margin: 0;
+  padding: 8px 12px;
+  margin-top: 10%;
+  margin-left: 27%;
+  border-radius: 28px;
+  border: 1px solid #18ab29;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 19px;
+  line-height: 23px;
+  background-color: #9593ff;
+}
+.savebtn:hover {
+  color: #007bff;
+  background-color: rgb(255, 255, 255);
+  font-weight: 500;
+  border: 1px solid #007bff;
+}
+
 @media (max-width: 1240px) {
   .sidebar {
     width: 60px;

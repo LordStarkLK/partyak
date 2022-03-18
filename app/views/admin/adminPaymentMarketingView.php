@@ -82,26 +82,36 @@
 
                     <table>
                         <tr>
-                            <th>Customer Name</th>
-                            <th>Vendor </th>
-                            <th>Description</th>
-                            <th>Date</th>
-                            <th>Payment Status</th>
-                            <th>Paid amount</th>
-                            <th>Total</th>
-
+                            <th>Content Id</th>
+                            <th>Vendor Name</th>
+                            <th>Content Status</th>
+                            <th>Paid Date</th>
+                            <th>Price Paid</th>
                         </tr>
                         <tr>
-                            <td>John Doe</td>
-                            <td>Jk Photography</td>
-                            <td>Platinum package + addtional album</td>
-                            <td>Sep 10 2021</td>
-                            <td>Advance paid</td>
-                            <td>Rs. 5000</td>
-                            <td>Rs. 25000</td>
-                        </tr>
+                        <?php 
+                        $checked = "checked";
+                        $notchecked = "";
+                        while($row = mysqli_fetch_assoc($data['marketing'])){
 
-                        <tr>
+                        
+                                echo"
+                                <td>$row[content_id]</td>
+                                <td>$row[f_name] $row[l_name]</td>
+                                <td>$row[upload_status]</td>
+                                <td>$row[paid_date]</td>
+                                <td>Rs.".number_format($row['amount'],2,'.',',')."</td>
+                                
+                            </tr>
+
+                                ";
+                            } ?>
+                        
+
+
+
+
+                        <!-- <tr>
                             <td>Joe Rogan</td>
                             <td>Sunrise Catering</td>
                             <td>Standard package + additional soft drinks</td>
@@ -120,7 +130,7 @@
                             <td>Rs. 10000</td>
                             <td>Rs. 60000</td>
                         </tr>
-
+ -->
 
                     </table>
 

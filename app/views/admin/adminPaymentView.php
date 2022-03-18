@@ -34,9 +34,10 @@
 
                     </div>
 
-                    <div class="box" id="box-marketing" onclick="window.location='<?php echo BASEURL . '/adminPaymentVendor'; ?>'">
+                    <div class="box" id="box-marketing"
+                        onclick="window.location='<?php echo BASEURL . '/adminPaymentVendor'; ?>'">
                         <span class="links_name"><img class="customer-image" <?php srcIMG("settlement.png") ?>
-                                width="40" height="40" >
+                                width="40" height="40">
                             <div class="box-topic">Settlements</div>
                         </span>
 
@@ -58,15 +59,10 @@
                 </ul>
 
 
-                <div class="search-container">
-                    <form action="/action_page.php">
-                        <input type="text" placeholder="Search users.." name="search">
-
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                        <!-- <i class="fas fa-search"></i> -->
-
-
-                    </form>
+                <div class="search">
+                    <span class="text"> View payments by customer...</span>
+                    <input type="text" name="search" placeholder="Enter customer name to search...">
+                    <button><i class="fas fa-search"></i></button>
                 </div>
 
 
@@ -90,11 +86,11 @@
                             <th>Date</th>
                             <th>Payment Status</th>
                             <th>Paid amount</th>
-                            <th>Total</th>
+                            <th>Full Payment</th>
 
                         </tr>
                         <tr>
-                        <?php while($row_payment = mysqli_fetch_assoc($data['payment'])){
+                            <?php while($row_payment = mysqli_fetch_assoc($data['payment'])){
                                 $row_customer = mysqli_fetch_assoc($data['customer']);
                                 $row_service = mysqli_fetch_assoc($data['service']);
                                 $row_package = mysqli_fetch_assoc($data['package']);
@@ -133,6 +129,9 @@
         </section>
     </div>
 
+
+    <?php linkJS("lib/jquery-3.6.0.min"); ?>
+    <?php linkJS("admin/payment"); ?>
     <?php linkJS("adminHomeView"); ?>
 
 

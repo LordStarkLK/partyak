@@ -78,6 +78,14 @@
                     onclick="window.location='<?php echo BASEURL . '/adminTandC'; ?>'">Terms & ...</span>
             </a>
         </li>
+        <li>
+            <a href="<?php echo BASEURL . '/adminHowItWorks'; ?>">
+                <i class='bx bx-edit'></i>
+                <span class="links_name side-links"
+                    onclick="window.location='<?php echo BASEURL . '/adminHowItWorks'; ?>'">How It works</span>
+            </a>
+        </li>
+        
         <li class="log_out">
             <a href="<?php echo BASEURL . '/logout';?>">
                 <i class='bx bx-log-out'></i>

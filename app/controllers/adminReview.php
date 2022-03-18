@@ -4,10 +4,20 @@ class AdminReview extends FrameworkPartyak{
     public function __construct(){
         $this->helper("linker");
         $this->preventBack("admin");
-        $this->model("adminReviewModel");
+        $this->reviewModel = $this->model("adminReviewModel");
     }
 
     public function index(){
-        $this->view("admin/adminReviewView");
+        $data["review"] = $this->reviewModel->getReview();
+        $this->view("admin/adminReviewView",$data);
     }
+
+    public function search(){
+        $searchTerm = mysqli_real_escape_string($GLOBALS['db'], $_POST['searchTerm']);
+
+        // echo $searchTerm;
+        $userList = $this->reviewModel->search($searchTerm);
+        echo $userList;
+    }
+
 }
