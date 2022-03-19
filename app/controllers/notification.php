@@ -33,7 +33,7 @@ class Notification extends FrameworkPartyak{
         }else if(isToday === "0"){
             $output = "
             
-            "
+            ";
         }
     }
 }
