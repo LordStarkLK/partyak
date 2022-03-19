@@ -4,7 +4,7 @@
 class CustomerBecomeVendor extends FrameworkPartyak{
     public function __construct(){
         $this->helper("linker");
-        $this->preventBack("customer");
+        $this->preventBack2("vendor","customer");
 
 
         $this->AddFirstServiceModel = $this->model("CustomerBecomeVendorModel");
@@ -21,6 +21,14 @@ class CustomerBecomeVendor extends FrameworkPartyak{
         $id=$_SESSION['userId'];
 
         // $q1=implode(',', $_POST['q1']);
+
+        if($this->checkVendor()){
+            $userId = $this->getSession("userId");
+            $this->AddFirstServiceModel->changeUserRole($userId);
+            $this->setSession("type","vendor");
+            $this->redirect("vendorHome");
+        }
+        
 
         
         if (isset($_POST['submit'])) {
@@ -288,7 +296,6 @@ class CustomerBecomeVendor extends FrameworkPartyak{
             $caption, $video );
 
         }
-
         $this->view("customer/customerBecomeVendorView");
     }
 

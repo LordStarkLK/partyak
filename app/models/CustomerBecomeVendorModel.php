@@ -74,12 +74,18 @@ class CustomerBecomeVendorModel extends Database
     public function checkVendorDet($id){
         $query =  "SELECT service_id FROM other_service WHERE user_id='$id' LIMIT 1";
         $result = mysqli_query($GLOBALS['db'], $query);
-        if(mysqli_num_rows($result)>0){
-            echo "Hi";
+        if(mysqli_num_rows($result)){
+           
             return true;
         }else{
+            
             return false;
         }
 
+    }
+
+    public function changeUserRole($userId){
+        $query = "UPDATE user SET user_type = 'vendor' WHERE user_id = '$userId'";
+        $result = mysqli_query($GLOBALS['db'],$query);
     }
 }
