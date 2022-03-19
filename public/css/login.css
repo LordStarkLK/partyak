@@ -1,21 +1,22 @@
-* {
+
+*{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  
 }
 
-body {
-  margin: 0;
-  background-color: #202020;
-  background-image: url("../../img/home-confetti.png");
-  font-family: "Raleway";
+body{
+  font-family: 'Raleway';
+  background: url("../img/loginbackground.png");
   background-size: cover;
+  
 }
 
-.login-form {
+.login-form{
   position: relative;
   /* min-height: 100vh;
-    min-width: 100vw; */
+  min-width: 100vw; */
   z-index: 0;
   padding: 20px;
   justify-content: center;
@@ -23,69 +24,47 @@ body {
   grid-template-rows: 1fr auto 1fr;
   align-items: center;
   background-repeat: no-repeat;
-
+  
   background-size: cover;
 }
-.main {
-  border-radius: 43px;
-  backdrop-filter: blur(23px) saturate(200%);
-  -webkit-backdrop-filter: blur(23px) saturate(200%);
-  background-color: rgb(48 48 48 / 69%);
-  border: 1px solid rgba(255, 255, 255, 0.125);
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  margin: 30px 0;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.home-blob {
-  position: absolute;
-  left: 22%;
-  top: 11%;
-}
-a {
+a{
   width: 300px;
 }
-.container {
+.container{
   max-width: 800px;
   margin: 0 auto;
   position: absolute;
   height: 545.78px;
-  padding: 10px;
-  left: 0px;
+  padding:10px;
+  left:0px;
   right: 8.68%;
   top: 106.15px;
-  background: linear-gradient(
-    114.1deg,
-    rgba(40, 40, 40, 0.36) 18.52%,
-    rgba(15, 15, 15, 0.12) 98.52%
-  );
+  background: linear-gradient(114.1deg, rgba(40,40,40,0.36) 18.52%, rgba(15, 15, 15, 0.12) 98.52%);
   backdrop-filter: blur(1000px);
   border-radius: 43px;
   top: 10px;
+
 }
 
-.main {
+.main{
   position: relative;
   display: flex;
   flex-direction: row;
   margin: 30px 0;
 }
 
-.content {
+.content{
   flex-basis: 50%;
   padding: 8em 3em;
-
+  
   left: 50;
-
-  box-shadow: 2px 9px 49px -17px rgba(0, 0, 0, 0, 1);
+  
+  box-shadow: 2px 9px 49px -17px rgba(0,0,0,0,1);
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
 }
 
-.sociallogin {
+.sociallogin{
   flex: 50%;
   padding: 3em 3em;
   left: 50;
@@ -99,30 +78,30 @@ a {
 }
 
 /* .sociallogin .facebook {
-    position: absolute;
-    height: 44px;
-    top: 311px;
-    padding: 14px 20px;
-    background: #45619D;
-    border: 1px solid rgba(255, 255, 255, 0.09);
-    box-sizing: border-box;
-    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.25);
-    border-radius: 11px;
-    color: #FFFFFF;
-  }
-  
-  .sociallogin .apple {
-    position: absolute;
-    height: 44px;
-    top: 235px;
-    padding: 14px 20px;
-    background: rgba(0, 0, 0, 0.71);
-    border: 1px solid rgba(255, 255, 255, 0.09);
-    box-sizing: border-box;
-    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.25);
-    border-radius: 11px;
-    color: #FFFFFF;
-  } */
+  position: absolute;
+  height: 44px;
+  top: 311px;
+  padding: 14px 20px;
+  background: #45619D;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-sizing: border-box;
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 11px;
+  color: #FFFFFF;
+}
+
+.sociallogin .apple {
+  position: absolute;
+  height: 44px;
+  top: 235px;
+  padding: 14px 20px;
+  background: rgba(0, 0, 0, 0.71);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-sizing: border-box;
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 11px;
+  color: #FFFFFF;
+} */
 
 .sociallogin .google {
   position: absolute;
@@ -138,7 +117,7 @@ a {
   color: #000000;
 }
 
-p {
+p{
   color: #666;
   font-size: 16px;
   line-height: 25px;
@@ -148,48 +127,50 @@ p {
 
 .btn,
 button,
-input {
+input{
   border-radius: 35px;
 }
 
 .btn:hover,
-button:hover {
+button:hover{
   transition: 0.5s ease;
 }
 
-* {
+*{
   text-decoration: none;
 }
 
-.login-form form {
+.login-form form{
   margin: 30px 0;
 }
 
-#div-email,
-#div-password {
+#div-email,#div-password{
   display: flex;
   flex-direction: row;
+  
 }
 
-#icon-email {
+#icon-email{
   margin-top: 15px;
   margin-right: 10px;
 }
 
-#icon-password {
+#icon-password{
   margin-top: 25px;
   margin-right: 10px;
 }
 
-.helper-text {
-  margin-left: 40px;
+.helper-text{
+  margin-left:40px;
 }
 
-#password {
-  margin-top: 10px;
+#password{
+  margin-top:10px;
 }
 
-.login-form input {
+
+
+.login-form input{
   outline: none;
   margin-bottom: 15px;
   font-stretch: 16px;
@@ -206,13 +187,13 @@ button:hover {
   transition: 0.3s ease;
 }
 
-.login-form input:focus {
+.login-form input:focus{
   background: transparent;
   border: 1px solid #000000;
 }
 
-.login-form button {
-  margin-top: 5%;
+.login-form button{
+  margin-top:5%;
   margin-left: 20%;
   font-size: 18px;
   color: white;
@@ -225,11 +206,11 @@ button:hover {
   transition: 0.3s ease;
 }
 
-.login-form button:hover {
+.login-form button:hover{
   background-color: #464646;
 }
 
-p.account {
+p.account{
   font-family: Alatsi;
   font-style: normal;
   font-weight: normal;
@@ -240,8 +221,7 @@ p.account {
   line-height: 24px;
   color: white;
 }
-p.acount,
-p.account a {
+p.acount, p.account a{
   font-family: Alatsi;
   font-style: normal;
   font-weight: normal;
@@ -249,22 +229,22 @@ p.account a {
   padding-top: 20px;
   padding-bottom: 0;
   font-size: 19px;
-  line-height: 24px;
+  line-height: 24px;   
 }
-p.account a {
-  color: #7dc2ff;
+p.account a{
+  color:#7dc2ff;
 }
-p.account a:hover {
+p.account a:hover{
   text-decoration: underline;
 }
 /*responsive*/
 
-@media (max-width: 736px) {
-  .main {
-    flex-direction: column;
+@media(max-width: 736px){
+  .main{
+      flex-direction: column;
   }
-  .login-form form {
-    margin-top: 30px;
-    margin-bottom: 10px;
-  }
+  .login-form form{
+      margin-top: 30px;
+      margin-bottom: 10px;
+  }  
 }
