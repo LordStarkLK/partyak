@@ -45,6 +45,9 @@
         </section>
     </div>
     <?php linkJS("vendor/spProfile"); ?>
+   <?php if($data["status"] == 1){
+        linkJS("eventPlanner/epEventSuccessfullyAdded");
+    }?>
 </body>
 
 </html>

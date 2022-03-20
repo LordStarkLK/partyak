@@ -38,7 +38,7 @@ button {
 }
 .add {
   background-color: rgb(0 139 139);
-  float: right;
+  float: none;
   margin-right: 45px;
 }
 form {
