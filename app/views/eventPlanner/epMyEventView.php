@@ -26,18 +26,19 @@
                     <span class="dashboard">My Event</span>
                 </div>
             </nav>
+           <?php if(isset($data['event'])){foreach ($data['event'] as $row) { ?>
             <div class="glass-card-section">
                 <div class="glass card">
-                    <h1 class="card-date">24/10</h1>
+                    <h1 class="card-date"><?php echo $row['month']."/". $row['date']?></h1>
                     <span class="card-description">
-                        <p class="description-title">Office Party</p>
-                        <p class="description-place">Galadari Hotel</p>
+                        <p class="description-title"><?php echo $row['event_type'] ?></p>
+                        <p class="description-place"><?php echo $row['location'] ?></p>
                     </span>
                     <span class="card-button">
-                        <button class="card-btn">View</button>
+                        <a href="<?php echo BASEURL . '/epMyEventEvents/index/'; echo $row["event_page_id"]; ?>"><button class="card-btn">View</button></a>
                     </span>
                 </div>
-            </div>
+            </div> <?php }} ?>
             <div class="add-note-div">
                 <h3 class="add-note">Add an event</h3>
                 <a href="<?php echo BASEURL . '/epEventAdd'; ?>"><img class="add-btn" <?php srcIMG("addButton.png") ?>></a>

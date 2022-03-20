@@ -28,25 +28,25 @@
     </div>
     <div class="details-card">
         <div class="guest card">
-            <h2>45</h2>
+            <h2> <?php echo $data['eventDetails']['no_of_guests'];?></h2>
             <h4>Guests</h4>
         </div>
         <div class="place card">
-            <h2>Galadari Hotel</h2>
+            <h2> <?php echo $data['eventDetails']['location'];?></h2>
             <h4>at</h4>
         </div>
         <div class="date card">
-            <h2>2022</h2>
-            <h3>May/24</h3>
+            <h2> <?php echo $data['eventDetails']['year'];?></h2>
+            <h3> <?php echo $data['eventDetails']['month']."/".$data['eventDetails']['day'];?></h3>
             <h4>on</h4>
         </div>
     </div>
     <div class="description-section">
         <h2>Description</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p><?php echo $data['eventDetails']['description'];?></p>
     </div>
     <?php linkPhp("footer") ?>
-    <?php
+    <?php linkJS("eventPlanner/epEventPlannerEventEvents");
 ?>
 </body>
 
