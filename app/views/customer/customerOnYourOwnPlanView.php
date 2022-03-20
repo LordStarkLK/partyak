@@ -22,7 +22,7 @@
     <div class="sidebar" id="sidee">
         <button type="button" class="buttonS" name="Own" > <a href ="<?php echo BASEURL . '/customerOnYourOwnPlanS'; ?>"> Add Service Details</a></button> 
         <div class="sideDe">
-          <p>After giving event details you can add service details which are required for your event by clicking here.</p>
+          <p>After giving event details successfully, you can add service details which are required for your event.</p>
         </div> 
 
         <br><br><img <?php srcIMG("servicepees.png") ?> alt="Chance Flowers"> 
