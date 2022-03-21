@@ -67,9 +67,9 @@ class SpServiceModel extends Database
         $query = mysqli_query($GLOBALS['db'], $query);
         $result = mysqli_fetch_assoc($query);
         $service_name = $result['service_name'];
-        echo $fName;
+        
         $description = "$fName $lName have requested the service of $service_name";
-        echo $description;
+        
         $query = "INSERT INTO notifications(notification_type,heading,description,url,user_id,notification_status,date)
          VALUES ('booking_request','New Booking Request','$description','http://localhost/partyak/adminBookings','12','0',NOW())";
         mysqli_query($GLOBALS['db'], $query); 
