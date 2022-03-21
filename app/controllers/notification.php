@@ -65,7 +65,7 @@ class Notification extends FrameworkPartyak{
         $commonPath = "http://localhost/partyak/public/img/";
 
         while($row = mysqli_fetch_assoc($result)){
-            $imagePath = $commonPath . $images[$row["notification_type"]];
+            $imagePath = $commonPath . "user_avatar.png";
             $message = $row["heading"];
             $courseName = $row["description"];
             $notificationId = $row["notification_id"];
