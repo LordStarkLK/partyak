@@ -153,9 +153,8 @@ tr:hover{
 }
 
 .edit-booking , .cancel-booking, .accept-booking, .pending-booking{
-    width: 60%;
-    margin: 2px;
-    padding: 2%;
+    width: 100%;
+    padding: 3%;
     color:#202020;
     background-color: rgb(198, 255, 255);
     font-size: 16px;
@@ -164,6 +163,12 @@ tr:hover{
     border-width: 1px;
     border-radius: 10px;
 }
+
+.edit-booking a{
+    text-decoration: none;
+
+}
+
 .edit-booking:hover {
     background-color:#18ab29;
     cursor: pointer;

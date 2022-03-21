@@ -16,7 +16,8 @@
                     echo "<li><a href='";
                     echo BASEURL . '/spBusiness';
                     echo "'>Business</a></li>";
-                    echo '<li><a href="#">Be a customer</a></li>';
+                    echo '<li><a href="';
+                    echo BASEURL .'/vendorBecomeCustomer/index">Be a customer</a></li>';
                 } elseif ($_SESSION["type"] == "customer") {
                     echo '<li><a href="#">Browse</a></li>';
                 }
