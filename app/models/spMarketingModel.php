@@ -3,7 +3,7 @@
 class SpMarketingModel extends Database
 {
     
-    public function uploadMarketingContent( $id, $fileNameNew)
+    public function uploadMarketingContent($id, $fileNameNew)
     {
 
         //Insert user data
@@ -19,6 +19,21 @@ class SpMarketingModel extends Database
         // VALUES ('$userId', '$serviceName', '$packageName', '$packageDescription' , '$packageValidFrom', '$packageValidTo' , '$packageUnitprice', '$packageFixedprice')";
         $query = "INSERT INTO marketing_content(user_id, content) VALUES('$userId','$fileNameNew')";
         mysqli_query($GLOBALS['db'], $query);
+
+        $query = "SELECT f_name,l_name from user WHERE user_id='$id'";
+        $query = mysqli_query($GLOBALS['db'], $query);
+        $result = mysqli_fetch_assoc($query);
+        $fName = $result['f_name'];
+        $lName = $result['l_name'];
+        $description = "$fName $lName have uploaded an Advertisment";
+        
+        $query = "INSERT INTO notifications(notification_type,heading,description,url,user_id,notification_status,date)
+         VALUES ('new_marketing','New marketing content','$description','http://localhost/partyak/adminMarketing','12','0',NOW())";
+        mysqli_query($GLOBALS['db'], $query); 
+    
+
+
+
     }
 
 
