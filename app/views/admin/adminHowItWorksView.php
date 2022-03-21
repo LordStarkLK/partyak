@@ -79,7 +79,7 @@
                 <?php while($row = mysqli_fetch_assoc($data['unique_features'])){
                     echo"
                     <h2>$row[heading]</h2>
-                    <button onclick=\"funcpassid($row[section_id])\"class=\"addnew-button myBtn\" id=\"$row[section_id]-btn\" style=\"vertical-align:middle\"><span><i
+                        <button onclick=\"funcpassid($row[section_id])\"class=\"addnew-button myBtn\" id=\"$row[section_id]-btn\" style=\"vertical-align:middle\"><span><i
                                     class=\"fas fa-edit\"></i>
                             </span></button>
                            
@@ -420,6 +420,10 @@
 
         </section>
     </div>
+
+    <?php linkPhp("notification"); ?>
+    <?php linkJS("lib/jquery-3.6.0.min"); ?>
+    <?php linkJS("admin/notification"); ?>
 
     <?php linkJS("adminHomeView"); ?>
     <?php linkJS("admin/adminHowItWorks"); ?>

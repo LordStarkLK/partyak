@@ -5,11 +5,19 @@ class Payment extends FrameworkPartyak
     public function __construct()
     {
         $this->helper("linker");
+        $this->payment = $this->model('PaymentModel');
+        $this->preventBack("customer");
     }
 
     public function index()
     {
-        // echo "Hi";
         $this->view("paymentView");
+    }
+
+    public function paymentDet($booking_id)
+    {
+
+        $data['payment_det']= $this->payment->getPaymentDetails($booking_id);
+        $this->view("paymentView",$data);
     }
 }

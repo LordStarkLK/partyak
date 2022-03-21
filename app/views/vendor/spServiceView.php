@@ -37,11 +37,8 @@
             $serviceId = $row['service_id'];
             echo " 
             <div class=\"image_container\">
-                <img class=\"mySlides\" src=\"public/img/hotel/hotel1.jpg\" >
-                <img class=\"mySlides\" src=\"public/img/hotel/hotel2.jpg\" >
-                <img class=\"mySlides\" src=\"public/img/hotel/hotel3.jpg\" >
-                <img class=\"mySlides\" src=\"public/img/hotel/hotel4.jpg\" >
-                <img class=\"mySlides\" src=\"public/img/hotel/hotel5.png\" >
+                <img class=\"mySlides\" src=\"http://localhost/partyak/public/img/hotel/hotel1.jpg\" >
+                
                 <a href=\"https://youtu.be/G9Sf5IUsHfI\"><i class=\"fa fa-youtube-play fa-2x\" aria-hidden=\"true\"></i></a>
             </div>
             <div class=\"content\">
@@ -50,7 +47,7 @@
                     <div class=\"service_type\">
          ";
             if ($row['service_type'] == "venues_halls") {
-                echo " <img src=\"public/img/feature img/hotel.png\" alt=\"Avatar\" class=\"stype_img\">
+                echo " <img src=\"http://localhost/partyak/public/img/feature img/hotel.png\" alt=\"Avatar\" class=\"stype_img\">
             <a>Venues & Halls</a> ";
             }
             echo "
@@ -73,21 +70,21 @@
                 if ($value == 'wedding') {
                     echo " 
             <div class=\"column\">
-                <img src=\"public/img/feature img/wedding-couple.png\" alt=\"Avatar\" class=\"feature_img\">
+                <img src=\"http://localhost/partyak/public/img/feature img/wedding-couple.png\" alt=\"Avatar\" class=\"feature_img\">
                 <a>Weddings</a>
             </div>
         ";
                 } elseif ($value == 'party') {
                     echo " 
         <div class=\"column\">
-            <img src=\"public/img/feature img/celebrating.png\" alt=\"Avatar\" class=\"feature_img\">
+            <img src=\"http://localhost/partyak/public/img/feature img/celebrating.png\" alt=\"Avatar\" class=\"feature_img\">
             <a>Parties/Festivals</a>
         </div>
         ";
                 } elseif ($value == 'cooperative') {
                     echo " 
         <div class=\"column\">
-            <img src=\"public/img/feature img/meeting.png\" alt=\"Avatar\" class=\"feature_img\">
+            <img src=\"http://localhost/partyak/public/img/feature img/meeting.png\" alt=\"Avatar\" class=\"feature_img\">
             <a>Coorperative events</a>
         </div>
         ";
@@ -104,11 +101,11 @@
                         <a>Overview</a>
                         <div class=\"sub_row\">
                             <div class=\"column\">
-                                <img src=\"public/img/feature img/apartment.png\" alt=\"Avatar\" class=\"feature_img\">
+                                <img src=\"http://localhost/partyak/public/img/feature img/apartment.png\" alt=\"Avatar\" class=\"feature_img\">
                                 <a>Indoor</a>
                             </div>
                             <div class=\"column\">
-                                <img src=\"public/img/feature img/crowd.png\" alt=\"Avatar\" class=\"feature_img\">
+                                <img src=\"http://localhost/partyak/public/img/feature img/crowd.png\" alt=\"Avatar\" class=\"feature_img\">
                                 <a>600 Guests</a>
                             </div>
                         </div>
@@ -119,41 +116,41 @@
                         <a>Features</a>
                         <div class=\"sub_row\">
                             <div class=\"column\">
-                                <img src=\"public/img/feature img/wifi.png\" alt=\"Avatar\" class=\"feature_img\">
+                                <img src=\"http://localhost/partyak/public/img/feature img/wifi.png\" alt=\"Avatar\" class=\"feature_img\">
                                 <a>Wifi</a>
                             </div>
                             <div class=\"column\">
-                                <img src=\"public/img/feature img/trees.png\" alt=\"Avatar\" class=\"feature_img\">
+                                <img src=\"http://localhost/partyak/public/img/feature img/trees.png\" alt=\"Avatar\" class=\"feature_img\">
                                 <a>Garden</a>
                             </div>
                         </div>
                         <div class=\"sub_row\">
                             <div class=\"column\">
-                                <img src=\"public/img/feature img/parking-sign.png\" alt=\"Avatar\" class=\"feature_img\">
+                                <img src=\"http://localhost/partyak/public/img/feature img/parking-sign.png\" alt=\"Avatar\" class=\"feature_img\">
                                 <a>Car parking</a>
                             </div>
                             <div class=\"column\">
-                                <img src=\"public/img/feature img/smoking-area.png\" alt=\"Avatar\" class=\"feature_img\">
+                                <img src=\"http://localhost/partyak/public/img/feature img/smoking-area.png\" alt=\"Avatar\" class=\"feature_img\">
                                 <a>Smoking area</a>
                             </div>
                         </div>
                         <div class=\"sub_row\">
                             <div class=\"column\">
-                                <img src=\"public/img/feature img/reception.png\" alt=\"Avatar\" class=\"feature_img\">
+                                <img src=\"http://localhost/partyak/public/img/feature img/reception.png\" alt=\"Avatar\" class=\"feature_img\">
                                 <a>Reception area</a>
                             </div>
                             <div class=\"column\">
-                                <img src=\"public/img/feature img/dance-floor.png\" alt=\"Avatar\" class=\"feature_img\">
+                                <img src=\"http://localhost/partyak/public/img/feature img/dance-floor.png\" alt=\"Avatar\" class=\"feature_img\">
                                 <a>Dancing floor</a>
                             </div>
                         </div>
                         <div class=\"sub_row\">
                             <div class=\"column\">
-                                <img src=\"public/img/feature img/sofa.png\" alt=\"Avatar\" class=\"feature_img\">
+                                <img src=\"http://localhost/partyak/public/img/feature img/sofa.png\" alt=\"Avatar\" class=\"feature_img\">
                                 <a>Seti back</a>
                             </div>
                             <div class=\"column\">
-                                <img src=\"public/img/feature img/wedding-arch.png\" alt=\"Avatar\" class=\"feature_img\">
+                                <img src=\"http://localhost/partyak/public/img/feature img/wedding-arch.png\" alt=\"Avatar\" class=\"feature_img\">
                                 <a>Poruwa</a>
                             </div>
                         </div>
@@ -162,29 +159,29 @@
                         <a>Seating arrangement</a>
                         <div class=\"sub_row\">
                             <div class=\"column\">
-                                <img src=\"public/img/seating/banquet.jpg\" alt=\"Avatar\" class=\"feature_img\">
+                                <img src=\"http://localhost/partyak/public/img/seating/banquet.jpg\" alt=\"Avatar\" class=\"feature_img\">
                                 <a>Banquet</a>
                             </div>
                             <div class=\"column\">
-                                <img src=\"public/img/seating/board.png\" alt=\"Avatar\" class=\"feature_img\">
+                                <img src=\"http://localhost/partyak/public/img/seating/board.png\" alt=\"Avatar\" class=\"feature_img\">
                                 <a>Board</a>
                             </div>
                             <div class=\"column\">
-                                <img src=\"public/img/seating/classroom.jpg\" alt=\"Avatar\" class=\"feature_img\">
+                                <img src=\"http://localhost/partyak/public/img/seating/classroom.jpg\" alt=\"Avatar\" class=\"feature_img\">
                                 <a>Classroom</a>
                             </div>
                         </div>
                         <div class=\"sub_row\">
                             <div class=\"column\">
-                                <img src=\"public/img/seating/informal.jpg\" alt=\"Avatar\" class=\"feature_img\">
+                                <img src=\"http://localhost/partyak/public/img/seating/informal.jpg\" alt=\"Avatar\" class=\"feature_img\">
                                 <a>Informal</a>
                             </div>
                             <div class=\"column\">
-                                <img src=\"public/img/seating/Oval.jpg\" alt=\"Avatar\" class=\"feature_img\">
+                                <img src=\"http://localhost/partyak/public/img/seating/Oval.jpg\" alt=\"Avatar\" class=\"feature_img\">
                                 <a>Oval</a>
                             </div>
                             <div class=\"column\">
-                                <img src=\"public/img/seating/u shape.jpg\" alt=\"Avatar\" class=\"feature_img\">
+                                <img src=\"http://localhost/partyak/public/img/seating/u shape.jpg\" alt=\"Avatar\" class=\"feature_img\">
                                 <a>U shape</a>
                             </div>
                         </div>

@@ -110,80 +110,104 @@
         </div>
 
         <div class="review-content">
-          <div class="user-review">
-            <div class="reviewer-details">
-              <div class="reviewer-pic">
-                <img <?php srcIMG("avatar1.png") ?> alt="Avatar">
+          
+          <?php while ($row = mysqli_fetch_assoc($data['review_data'])) {
+            $row2 = mysqli_fetch_assoc($data['review_user']);
+            $i = 1;
+            $pic=$row2["profilePicture"];
+            $dateSplitArray = explode(' ', $row['Date'],2);
+            $date = $dateSplitArray[0];
+            echo " 
+              <div class=\"user-review\">
+              <div class=\"reviewer-details\">
+                <div class=\"reviewer-pic\">
+                  <img src=\"http://localhost/partyak/public/img/userImages/$pic\" >
+                </div>
+                <div class=\"reviewer-name\">
+                  <div class=\"review_date\">$date</div>
+                  <a>$row2[f_name]</a>
+                </div>
               </div>
-              <div class="reviewer-name">
-                <a>Rocky <br>Colombo</a>
+              ";
+              if($row['ratedStar'] == "1"){
+                echo "
+                <div class=\"reviewer-rating\">
+                <div class=\"star-rating\">
+                  <i class=\"fa fa-star\" aria-hidden=\"true\"></i>
+                </div>
+                <div class=\"ratingPoints\">
+                  <a>1.0</a>
+                </div>
+              </div>
+                ";
+              }
+              if($row['ratedStar'] == "2"){
+                echo "
+                <div class=\"reviewer-rating\">
+                <div class=\"star-rating\">
+                  <i class=\"fa fa-star\" aria-hidden=\"true\"></i>
+                  <i class=\"fa fa-star\" aria-hidden=\"true\"></i>
+                </div>
+                <div class=\"ratingPoints\">
+                  <a>2.0</a>
+                </div>
+              </div>
+                ";
+              }
+              if($row['ratedStar'] == "3"){
+                echo "
+                <div class=\"reviewer-rating\">
+                <div class=\"star-rating\">
+                  <i class=\"fa fa-star\" aria-hidden=\"true\"></i>
+                  <i class=\"fa fa-star\" aria-hidden=\"true\"></i>
+                  <i class=\"fa fa-star\" aria-hidden=\"true\"></i>
+                </div>
+                <div class=\"ratingPoints\">
+                  <a>3.0</a>
+                </div>
+              </div>
+                ";
+              }
+              if($row['ratedStar'] == "4"){
+                echo "
+                <div class=\"reviewer-rating\">
+                <div class=\"star-rating\">
+                  <i class=\"fa fa-star\" aria-hidden=\"true\"></i>
+                  <i class=\"fa fa-star\" aria-hidden=\"true\"></i>
+                  <i class=\"fa fa-star\" aria-hidden=\"true\"></i>
+                  <i class=\"fa fa-star\" aria-hidden=\"true\"></i>
+                </div>
+                <div class=\"ratingPoints\">
+                  <a>4.0</a>
+                </div>
+              </div>
+                ";
+              }
+              if($row['ratedStar'] == "5"){
+                echo "
+                <div class=\"reviewer-rating\">
+                <div class=\"star-rating\">
+                  <i class=\"fa fa-star\" aria-hidden=\"true\"></i>
+                  <i class=\"fa fa-star\" aria-hidden=\"true\"></i>
+                  <i class=\"fa fa-star\" aria-hidden=\"true\"></i>
+                  <i class=\"fa fa-star\" aria-hidden=\"true\"></i>
+                  <i class=\"fa fa-star\" aria-hidden=\"true\"></i>
+                </div>
+                <div class=\"ratingPoints\">
+                  <a>5.0</a>
+                </div>
+              </div>
+                ";
+              }
+              echo "
+              <div class=\"reviewer-comment\">
+                <a>$row[textReview]</a>
               </div>
             </div>
-            <div class="reviewer-rating">
-              <div class="star-rating">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-              </div>
-              <div class="ratingPoints">
-                <a>4.0</a>
-              </div>
-            </div>
-            <div class="reviewer-comment">
-              <a>This is an awasome service. I really thankfull for you. My event totally went well beacause of your best service.</a>
-            </div>
-          </div>
+            ";
+            }
+          ?>
 
-          <div class="user-review">
-            <div class="reviewer-details">
-              <div class="reviewer-pic">
-                <img <?php srcIMG("avatar2.jpg") ?> alt="Avatar">
-              </div>
-              <div class="reviewer-name">
-                <a>Tom<br>Galle</a>
-              </div>
-            </div>
-            <div class="reviewer-rating">
-              <div class="star-rating">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-              </div>
-              <div class="ratingPoints">
-                <a>3.0</a>
-              </div>
-            </div>
-            <div class="reviewer-comment">
-              <a>This is an awasome service. I really thankfull for you. My event totally went well beacause of your best service.</a>
-            </div>
-          </div>
-
-
-          <div class="user-review">
-            <div class="reviewer-details">
-              <div class="reviewer-pic">
-                <img <?php srcIMG("avatar3.png") ?> alt="Avatar">
-              </div>
-              <div class="reviewer-name">
-                <a>Jack <br> Kandy</a>
-              </div>
-            </div>
-            <div class="reviewer-rating">
-              <div class="star-rating">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-              </div>
-              <div class="ratingPoints">
-                <a>4.0</a>
-              </div>
-            </div>
-            <div class="reviewer-comment">
-              <a>This is an awasome service. I really thankfull for you. My event totally went well beacause of your best service.</a>
-            </div>
-          </div>
 
         </div>
       </div>

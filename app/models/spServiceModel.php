@@ -36,25 +36,48 @@ class SpServiceModel extends Database
         }
     }
 
-    public function bookingDetail($eventType, $guestCount, $reserveDate, $packageType, $id, $service_id)
+    public function bookingDetail($eventType, $guestCount, $reserveDate, $packageType, $id, $service_id,$userId)
     {
         // echo $packageType;
-
-        $query = "SELECT package_id FROM package WHERE package_name='$packageType'";
+        
+        $query = "SELECT package_id,per_unit_price, fixed_price FROM package WHERE package_name='$packageType'";
         $query = mysqli_query($GLOBALS['db'], $query);
         $result = mysqli_fetch_assoc($query);
         $packageId = $result['package_id'];
-        // echo $packageId;
+        $pricePerUnitId = $result['per_unit_price'];
+        $fixedPrice = $result['fixed_price'];
+        
+        if ($pricePerUnitId > 0){
+            $fullPayment = $guestCount*$pricePerUnitId;
+        }else{
+            $fullPayment =  $fixedPrice;
+        }
 
         //Insert data to child tables of user - on_your_own_planning table
-        $query = "INSERT INTO booking(customer_id, service_id, event_date,event_type,noOfGuest, package_id) 
-        VALUES ('$id', '$service_id', '$reserveDate', '$eventType' , ' $guestCount', '$packageId')";
+        $query = "INSERT INTO booking(customer_id, service_id, event_date,event_type,noOfGuest, package_id,full_payment) 
+        VALUES ('$id', '$service_id', '$reserveDate', '$eventType' , ' $guestCount', '$packageId','$fullPayment')";
         mysqli_query($GLOBALS['db'], $query);
+        
+        $query = "SELECT f_name,l_name from user WHERE user_id='$userId'";
+        $query = mysqli_query($GLOBALS['db'], $query);
+        $result = mysqli_fetch_assoc($query);
+        $fName = $result['f_name'];
+        $lName = $result['l_name'];
+        $query = "SELECT service_name from other_service WHERE service_id = $service_id";
+        $query = mysqli_query($GLOBALS['db'], $query);
+        $result = mysqli_fetch_assoc($query);
+        $service_name = $result['service_name'];
+        
+        $description = "$fName $lName have requested the service of $service_name";
+        
+        $query = "INSERT INTO notifications(notification_type,heading,description,url,user_id,notification_status,date)
+         VALUES ('booking_request','New Booking Request','$description','http://localhost/partyak/adminBookings','12','0',NOW())";
+        mysqli_query($GLOBALS['db'], $query); 
     }
     public function insertReview($textReview, $ratedStars, $id, $service_id)
     {
         //Insert data to child tables of user - on_your_own_planning table
-        $query = "INSERT INTO `service_review` (`service_id`, `user_id` , `ratedStar`, `textReview`) 
+        $query = "INSERT INTO 'service_revie' ('service_id', 'user_id' , 'ratedStar', 'textReview') 
         VALUES ('$service_id', '$id', '$ratedStars',  '$textReview');";
 
         mysqli_query($GLOBALS['db'], $query);

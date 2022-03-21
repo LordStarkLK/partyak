@@ -17,78 +17,7 @@
         <?php linkPhp("vendorNavigation") ?>
     </header>
     <div class="container">
-        <div class="sidebar">
-
-            <ul class="sidenav-links">
-                <li>
-                    <a href="<?php echo BASEURL . '/epAnalytics'; ?>">
-                        <i class="fa fa-pie-chart" aria-hidden="true"></i>
-                        <span class="links_name">Analytics</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo BASEURL . '/epProfile'; ?>">
-                        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-                        <span class="links_name">Profile</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo BASEURL . '/epService'; ?>">
-                        <i class="fa fa-server" aria-hidden="true"></i>
-                        <span class="links_name">Services</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo BASEURL . '/epBooking'; ?>">
-                        <i class="fa fa-list" aria-hidden="true"></i>
-                        <span class="links_name">Booking</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo BASEURL . '/epMarketing'; ?>">
-                        <i class="fa fa-sticky-note" aria-hidden="true"></i>
-                        <span class="links_name">Marketing</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="<?php echo BASEURL . '/epWallet'; ?>">
-                        <i class="fa fa-usd" aria-hidden="true"></i>
-                        <span class="links_name">Wallet</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <span class="links_name">Chat</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-calendar" aria-hidden="true"></i>
-                        <span class="links_name">Calendar</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo BASEURL . '/epReview '; ?>">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <span class="links_name">Review</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo BASEURL . '/epnote '; ?>">
-                        <i class='bx bx-notepad' aria-hidden="true"></i>
-                        <span class="links_name">Note</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo BASEURL . '/epmyevent '; ?>">
-                        <i class='bx bx-history' aria-hidden="true"></i>
-                        <span class="links_name">My Event</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <?php linkPhp("epSideBar") ?>
 
         <section class="home-section">
             <nav>
@@ -97,25 +26,27 @@
                     <span class="dashboard">My Event</span>
                 </div>
             </nav>
+           <?php if(isset($data['event'])){foreach ($data['event'] as $row) { ?>
             <div class="glass-card-section">
                 <div class="glass card">
-                    <h1 class="card-date">24/10</h1>
+                    <h1 class="card-date"><?php echo $row['month']."/". $row['date']?></h1>
                     <span class="card-description">
-                        <p class="description-title">Office Party</p>
-                        <p class="description-place">Galadari Hotel</p>
+                        <p class="description-title"><?php echo $row['event_type'] ?></p>
+                        <p class="description-place"><?php echo $row['location'] ?></p>
                     </span>
                     <span class="card-button">
-                        <button class="card-btn">View</button>
+                        <a href="<?php echo BASEURL . '/epMyEventEvents/index/'; echo $row["event_page_id"]; ?>"><button class="card-btn">View</button></a>
                     </span>
                 </div>
-            </div>
+            </div> <?php }} ?>
             <div class="add-note-div">
-                <h3 class="add-note">Add a note</h3>
-                <img class="add-btn" <?php srcIMG("addButton.png") ?>>
+                <h3 class="add-note">Add an event</h3>
+                <a href="<?php echo BASEURL . '/epEventAdd'; ?>"><img class="add-btn" <?php srcIMG("addButton.png") ?>></a>
             </div>
         </section>
     </div>
     <?php linkJS("vendor/spProfile"); ?>
+
 </body>
 
 </html>
