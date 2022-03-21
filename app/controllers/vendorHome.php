@@ -10,7 +10,8 @@ class VendorHome extends FrameworkPartyak
     public function index()
     {
         $this->preventBack("vendor");
-        $this->view("homeView");
+        $data["user_id"] = $this->getSession("userId");
+        $this->view("homeView",$data);
     }
 
     public function changePassword()
