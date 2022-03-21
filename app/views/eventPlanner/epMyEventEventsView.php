@@ -16,12 +16,12 @@
     </header>
     <div class="image-carousel">
         <div class="image-slide">
-        <img id="last-clone" <?php srcIMG("event-planner/download4.jpg") ?>>
-        <img <?php srcIMG("event-planner/download.jpg") ?>>
-        <img <?php srcIMG("event-planner/download2.jpg") ?>>
-        <img <?php srcIMG("event-planner/download3.jpg") ?>>
-        <img <?php srcIMG("event-planner/download4.jpg") ?>>
-        <img id="first-clone" <?php srcIMG("event-planner/download.jpg") ?>>
+        <img id="last-clone" src="<?php echo BASEURL; ?>/public/img/event-planner/event-imgs/<?php echo $data['eventDetails']['image4'] ?>">
+        <img src="<?php echo BASEURL; ?>/public/img/event-planner/event-imgs/<?php echo $data['eventDetails']['image1']?>" >
+        <img src="<?php echo BASEURL; ?>/public/img/event-planner/event-imgs/<?php echo $data['eventDetails']['image2'] ?>">
+        <img src="<?php echo BASEURL; ?>/public/img/event-planner/event-imgs/<?php echo $data['eventDetails']['image3'] ?>">
+        <img src="<?php echo BASEURL; ?>/public/img/event-planner/event-imgs/<?php echo $data['eventDetails']['image4'] ?>">
+        <img id="first-clone" src="<?php echo BASEURL; ?>/public/img/event-planner/event-imgs/<?php echo $data['eventDetails']['image1'] ?>">
         </div>
         <button id=prevBtn>Prev</button>
         <button id=nextBtn>Next</button>

@@ -70,7 +70,9 @@ class epEventAdd extends FrameworkPartyak
                             // Upload file to server 
                             if(move_uploaded_file($_FILES["file"]["tmp_name"][$key], $targetFilePath)){ 
                                 $timestamp = time();
-                                $imgIndex[$key] = $userId . $timestamp . $key."." .$fileType;
+                                $finaleFileName = $userId . $timestamp . $key."." .$fileType;
+                                $imgIndex[$key] = $finaleFileName;
+                                rename("../public/img/event-planner/event-imgs/$fileName", "../public/img/event-planner/event-imgs/$finaleFileName");
                             } 
                         }
                     } 
