@@ -6,6 +6,13 @@ class Notification extends FrameworkPartyak{
         $this->notifyModel = $this->model("notificationModel");
     }
 
+    public function readNotification($notificationId)
+    {
+        $userId = $this->getSession("userId");
+
+        $this->notifyModel->updateUserNotification($userId, $notificationId);
+    }
+
     public function notificationCount(){
         $userId = $this->getSession("userId");
         echo $this->notifyModel->getNotificationCount($userId);
