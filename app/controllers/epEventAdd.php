@@ -80,11 +80,11 @@ class epEventAdd extends FrameworkPartyak
                 //,$imgIndex[0],$imgIndex[1],$imgIndex[2],$imgIndex[3],$imgIndex[4]
                 $this->epAddEvent->addEvent($userId,$eventType,$date,$noOfGuests,$imgIndex[0],$imgIndex[1],$imgIndex[2],$imgIndex[3],$imgIndex[4],$location,$description);
                 $data["status"] = 1;
-                $this->view("eventPlanner/epMyEventView",$data);
+                $this->view("eventPlanner/epEventAdd",$data);
                 }else{
                     $errors["img1"] = "Image is required";
                     $data["errors"] = $errors; 
-                    $this->view("eventPlanner/epEventAddView", $data);
+                    $this->view("eventPlanner/epEventAdd", $data);
                 }
             
         }

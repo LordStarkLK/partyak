@@ -34,6 +34,8 @@
         </div>
     </div>
 </body>
-
+<?php if($data["status"] == 1){
+        linkJS("eventPlanner/epEventSuccessfullyAdded");
+    }?>
 </html>
 <!-- `user_id`, `event_page_id`, `date`, `event_type`, `no_of_guests`, `image1`, `image2`, `image3`, `image4`, `image5`, `Location`, `Description` -->
