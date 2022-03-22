@@ -13,7 +13,7 @@ class SpBooking extends FrameworkPartyak
     public function index($service_id)
     {
         $data['service_id'] = $service_id;
-        // echo "Hi";
+        
         $data['request_data'] = $this->BookingModel->getRequestDetails($service_id);
         $data['customer_name'] = $this->BookingModel->getCustomerName($service_id);
         $data['package_data'] = $this->BookingModel->getPackageData();
@@ -25,12 +25,16 @@ class SpBooking extends FrameworkPartyak
 
         $this->view("vendor/spBookingView", $data);
     }
-    public function accept($booking_id)
+
+    
+    public function accept($booking_id,$service_id)
     {
         // $data['service_id'] = $service_id;
         $this->BookingModel->acceptRequest($booking_id);
-        
-        $this->redirect("spBooking");
+        // $service_id = $this->BookingModel->getServiceId($booking_id);
+        // $service_id = mysqli_fetch_assoc($service_id);
+
+        $this->index($service_id);
         
     }
 
