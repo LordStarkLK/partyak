@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html lang="en" dir="ltr">
@@ -10,6 +9,7 @@
      <?php linkCSS("customer/customerOnYourOwnSView"); ?>
     <?php linkCSS("customerNavigation"); ?>
     <?php linkCSS("footer");?>
+    <?php $row=$data['eventDetail'];?>
    </head>
 <body>
     <header>
@@ -586,7 +586,7 @@
 
 
       <div class="save">
-          <button type="Submit" class="saveb"  value="Submit">Submit</button>
+          <button type="Submit" name="submit" class="saveb"  value="Submit">Submit</button>
       </div>
  
   </div>
@@ -594,6 +594,27 @@
 
 
 </form>
+
+<!-- Successful submit -->
+<?php
+      if (isset($_POST['submit'])) {
+        echo "<div class=\"sccuess-event\" onclick=\"document.getElementById($row[planning_id]).style.display='block'\"></div>
+        hi
+              <div id=\"$row[planning_id]\" class=\"modal\">
+                <span onclick=\"document.getElementById($row[planning_id]).style.display='none'\" class=\"close\" title=\"Close Modal\">&times;</span>
+                  <form class=\"modal-content\" action=\"/action_page.php\">
+                    <div class=\"container-modal\">
+                      <h1>Successfull</h1>
+                      <br><br><p>Your event details successfully submitted.</p>
+                        
+                      <div class=\"clearfix\">
+                        <button type=\"button\" class=\"deletebtn\" onclick=\"window.location=' " . BASEURL . "/customerMyEvent'\">OK</button>
+                      </div>
+                    </div>
+                  </form>
+              </div>";
+      }
+?>
 
   
 </div>

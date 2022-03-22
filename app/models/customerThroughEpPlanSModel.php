@@ -16,4 +16,16 @@ class CustomerThroughEpPlanSModel extends Database
         mysqli_query($GLOBALS['db'], $query);
     }
 
+    public function getEventDetails($id){
+        $result = mysqli_fetch_assoc(mysqli_query($GLOBALS['db'], "SELECT planning_id FROM event WHERE  user_id='$id'  ORDER BY user_id DESC LIMIT 1"));
+        return $result;
+        
+        // $query = "SELECT planning_id  FROM event WHERE user_id='$id' ";
+        // $result = mysqli_query($GLOBALS['db'],$query);
+        // if(mysqli_num_rows($result) >= 0){
+        //     return $result;
+        // }
+        // echo "hi";
+    }
+
 }

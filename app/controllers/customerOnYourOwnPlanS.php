@@ -13,10 +13,12 @@ class CustomerOnYourOwnPlanS extends FrameworkPartyak{
         // if(!isset($_SESSION['userId']) && !isset($_SESSION['type']) || $_SESSION['type'] != "customer"){
         //     $this->redirect("login");
         // }
-        // $this->preventBack("customer");
-        $this->view("customer/customerOnYourOwnPlanSView");
+        // $this->preventBack("customer")
+        $id=$_SESSION['userId'];
+        $data['eventDetail'] = $this->OnYourOwnSModel->getEventDetails($id);
+        $this->view("customer/customerOnYourOwnPlanSView",$data);
     
-            $id=$_SESSION['userId'];
+            
             
             //initilaize these varibles for server 
     
@@ -63,10 +65,11 @@ class CustomerOnYourOwnPlanS extends FrameworkPartyak{
               
     
                 //Insert data
-                $this->OnYourOwnSModel->addEventServicePreference( $Seating ,$indoorAgree,$outdoorAgree, $danceAgree ,$setiAgree,$poruwaAgree,$breakfAgree,$lunchAgree ,$dinnerAgree ,$teaAgree, $buffeAgree ,$noServant, $budget ,$photoDetails, $mbandAgree, $djAgree ,$soloAgree,$kandyAgree, $lawAgree, $sabaAgree,$wesAgree ,$SalonType,$hairAgree ,$dressers,$makeupAgree,$wedAgree, $partyAgree , $sweetAgree,$sbackAgree, $floralAgree,$soundAgree ,$lightAgree ,$indooreAgree,$outdooreAgree,$maleAgree,$femaleAgree,  $id);
+                $this->OnYourOwnSModel->addEventServicePreference( $Seating ,$indoorAgree,$outdoorAgree, $danceAgree ,$setiAgree,$poruwaAgree,$breakfAgree,$lunchAgree ,$dinnerAgree ,$teaAgree, $buffeAgree ,$noServant, $budget ,$photoDetails, $mbandAgree, $djAgree ,$soloAgree,$kandyAgree, $lawAgree, $sabaAgree,$wesAgree ,$SalonType,$hairAgree ,$dressers,$makeupAgree,$wedAgree, $partyAgree , $sweetAgree,$sbackAgree, $floralAgree,$soundAgree ,$lightAgree ,$indooreAgree,$outdooreAgree,$maleAgree,$femaleAgree,$id);
              
     
             }
+            
     
     }
 }
