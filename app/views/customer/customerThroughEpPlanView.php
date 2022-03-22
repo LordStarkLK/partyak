@@ -12,6 +12,7 @@
     <?php linkCSS("customer/customerThroughEpPlan"); ?>
     <?php linkCSS("customerNavigation"); ?>
     <?php linkCSS("footer");?>
+    <?php $row=$data['eventDetail'];?>
    </head>
 <body>
     <header>
@@ -118,11 +119,34 @@
           </div>
 
           <div class="save">
-            <button type="submit" class="saveb" value="Submit">Submit</button>
+            <button type="submit" name="submit" class="saveb" value="Submit">Submit</button>
           </div> 
 
     </form>
+
+    <!-- Successful submit -->
+    <?php
+      if (isset($_POST['submit'])) {
+        echo "<div class=\"sccuess-event\" onclick=\"document.getElementById($row[planning_id]).style.display='block'\"></div>
+              <div id=\"id\" class=\"modal\">
+                <span onclick=\"document.getElementById($row[planning_id]).style.display='none'\" class=\"close\" title=\"Close Modal\">&times;</span>
+                  <form class=\"modal-content\" action=\"/action_page.php\">
+                    <div class=\"container-modal\">
+                      <h1>Successfull</h1>
+                      <br><br><p>Your event details successfully submitted.</p>
+                      <br><br><p>Are you want to add service details for your event?</p>
+                          
+                      <div class=\"clearfix\">
+                        <button type=\"button\" class=\"cancelbtn\" onclick=\"document.getElementById($row[planning_id]).style.display='none'\">No</button>
+                        <button type=\"button\" class=\"deletebtn\" onclick=\"window.location=' " . BASEURL . "/customerThroughEpPlanS'\">Yes</button>
+                      </div>
+                    </div>
+                  </form>
+              </div>";
+      }
+    ?>
   </div> 
+  
 </div>
 
 </body>

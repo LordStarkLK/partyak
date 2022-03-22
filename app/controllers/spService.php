@@ -137,7 +137,8 @@ class SpService extends FrameworkPartyak
 
             if ($numberOfErrors == 0) {
                 //Insert data
-                $this->ServiceModel->bookingDetail($eventType, $guestCount, $reserveDate, $packageType, $id, $service_id);
+                $userId = $this->getSession("userId");
+                $this->ServiceModel->bookingDetail($eventType, $guestCount, $reserveDate, $packageType, $id, $service_id,$userId);
                 $this->index($service_id);
                 // $this->redirect('spService');
             }

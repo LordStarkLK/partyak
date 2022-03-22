@@ -74,7 +74,10 @@ class CustomerOnYourOwnPlan extends FrameworkPartyak{
 
 
         $data["errors"] = $errors;
+        $data['eventDetail'] = $this->OnYourOwnModel->getEventDetails($id);
         $this->view("customer/customerOnYourOwnPlanView", $data);
+
+        
     }
 
 
@@ -141,7 +144,6 @@ class CustomerOnYourOwnPlan extends FrameworkPartyak{
         $this->view("customer/customerEventEditView", $data);
         
     }
-
 
 
 }

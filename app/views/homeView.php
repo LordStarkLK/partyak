@@ -7,6 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+    
+
     <?php linkCSS("home-new"); ?>
     <?php linkCSS("navigation"); ?>
     <?php linkCSS("footer"); ?>
@@ -14,6 +22,7 @@
 
 
 <body>
+
     <header>
         <?php linkPhp("navigation") ?>
         <?php if(isset($data["status"])){
@@ -191,6 +200,17 @@
             </div>
         </div>
     </div>
+    <?php 
+        
+        if(isset($data["user_id"])){
+            linkPhp("notification");
+        }
+        
+    ?>
+    
+    <?php linkJS("lib/jquery-3.6.0.min"); ?>
+    <?php linkJS("admin/notification"); ?>
+
     <?php linkJS("home");?>
     <?php linkPhp("footer") ?>
 </body>
