@@ -85,7 +85,7 @@ class AddNewServiceModel extends Database
         // echo $description;
         
         $query = "INSERT INTO notifications(`notification_type`,`heading`,`description`,`url`,`user_id`,`notification_status`,`date`)
-         VALUES ('new_service','New service added','New Service is added. They're waiting to be accepted','http://localhost/partyak/adminRequest','12','0',NOW());";
+         VALUES ('new_service','New service added','A new service is created and waiting to be accepted','http://localhost/partyak/adminRequest','12','0',NOW());";
         mysqli_query($GLOBALS['db'], $query);
         
     }
