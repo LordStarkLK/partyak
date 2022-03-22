@@ -293,6 +293,7 @@ class CustomerBecomeVendor extends FrameworkPartyak{
     }
 
     public function checkVendor(){
+        echo "hi";
         $id=$_SESSION['userId']; 
         $data['vendorch']=$this->AddFirstServiceModel->checkVendorDet($id);
         // echo $data['vendorch'];

@@ -77,8 +77,22 @@
                   <td>  
                     <div class=\"btn-group\">
                         <button class=\"edit-event\"><a href =\" ".BASEURL ."/customerOnYourOwnPlan/editEvent/$row[planning_id]\">Edit</a></button>
-                        <button class=\"cancel-event\"><a href =\" ".BASEURL ."/customerMyEvent/deleteEvent/$row[planning_id]\">Cancel</a></button>
-                        
+                        <button class=\"cancel-event\" onclick=\"document.getElementById('$row[planning_id]').style.display='block'\">Cancel</button>   
+                    </div>
+
+                    <div id=\"$row[planning_id]\" class=\"modal\">
+                      <span onclick=\"document.getElementById('$row[planning_id]').style.display='none'\" class=\"close\" title=\"Close Modal\">&times;</span>
+                      <form class=\"modal-content\" action=\"/action_page.php\">
+                        <div class=\"container-modal\">
+                          <h1>Cancel Event</h1>
+                          <br><br><p>Are you sure you want to cancel your event?</p>
+                    
+                          <div class=\"clearfix\">
+                            <button type=\"button\" class=\"cancelbtn\" onclick=\"document.getElementById('$row[planning_id]').style.display='none'\">No</button>
+                            <button type=\"button\" class=\"deletebtn\" onclick=\"window.location=' " . BASEURL . "/customerMyEvent/deleteEvent/$row[planning_id]'\">Yes</button>
+                          </div>
+                        </div>
+                      </form>
                     </div>
 
                   

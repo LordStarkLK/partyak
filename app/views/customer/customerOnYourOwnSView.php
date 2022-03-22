@@ -640,7 +640,7 @@
         </div>
 
         <div class="save">
-          <button type="Submit" class="saveb"  value="Submit">Submit</button>
+          <button type="Submit" name="submit" class="saveb"  value="Submit">Submit</button>
         </div>
 
 

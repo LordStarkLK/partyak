@@ -71,6 +71,7 @@ class CustomerThroughEpPlan extends FrameworkPartyak{
 
 
         $data["errors"] = $errors;
+        $data['eventDetail'] = $this->ThroughEpModel->getEventDetails($id);
         $this->view("customer/customerThroughEpPlanView", $data);
     }
 

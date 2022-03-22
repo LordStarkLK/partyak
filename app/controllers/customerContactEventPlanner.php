@@ -4,6 +4,7 @@
 class CustomerContactEventPlanner extends FrameworkPartyak{
     public function __construct(){
         $this->helper("linker");
+        $this->serviceDetails = $this->model('customerContactEventPlannerModel');
         $this->preventBack("customer");
     }
     
@@ -13,7 +14,8 @@ class CustomerContactEventPlanner extends FrameworkPartyak{
         //     $this->redirect("login");
         // }
         // $this->preventBack("customer");
-        $this->view("customer/customerContactEventPlannerView");
+        $data['ep_detail'] = $this->serviceDetails->getEpDetails();
+        $this->view("customer/customerContactEventPlannerView",$data);
     }
 
 }
