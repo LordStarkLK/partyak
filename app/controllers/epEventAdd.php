@@ -52,32 +52,41 @@ class epEventAdd extends FrameworkPartyak
                 }
             }
 
-            if ($numberOfErrors == 0) {
-                //Insert data
-                if (!empty($_FILES["img1"]["name"])){
-
-                //Process the new image that is uploaded by the user
-                $target_dir = "../public/img/event-planner/event-imgs/";
-                $target_file = $target_dir . basename($_FILES["img1"]["name"]);
-                $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-                $filename = $_FILES["img1"]["name"];
-
-                move_uploaded_file($_FILES["img1"]["tmp_name"], $target_file);
-
-                $timestamp = time();
-                $image = $userId . $timestamp . "." . $imageFileType; //generating an unique name to the image file
-                rename("../public/img/event-planner/event-imgs/$filename", "../public/img/event-planner/event-imgs/$image"); //adding the generated name to the file
-                
-                $this->epAddEvent->addEvent($userId,$eventType,$date,$noOfGuests,$image,$location,$description);
-                $this->view("eventPlanner/epEventAddView");
+            if ($numberOfErrors == 0) { 
+                $targetDir = "../public/img/event-planner/event-imgs/"; 
+                $allowTypes = array('jpg','png','jpeg','gif'); 
+                $imgIndex = [0,0,0,0,0];
+                $fileNames = array_filter($_FILES['file']['name']); 
+                $i=0;
+                if(!empty($fileNames)){ 
+                    foreach($_FILES['file']['name'] as $key=>$val){ 
+                        // File upload path 
+                        $fileName = basename($_FILES['file']['name'][$key]); 
+                        $targetFilePath = $targetDir . $fileName; 
+                         
+                        // Check whether file type is valid 
+                        $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION); 
+                        if(in_array($fileType, $allowTypes)){ 
+                            // Upload file to server 
+                            if(move_uploaded_file($_FILES["file"]["tmp_name"][$key], $targetFilePath)){ 
+                                $timestamp = time();
+                                $finaleFileName = $userId . $timestamp . $key."." .$fileType;
+                                $imgIndex[$key] = $finaleFileName;
+                                rename("../public/img/event-planner/event-imgs/$fileName", "../public/img/event-planner/event-imgs/$finaleFileName");
+                            } 
+                        }
+                    } 
+                } 
+                //,$imgIndex[0],$imgIndex[1],$imgIndex[2],$imgIndex[3],$imgIndex[4]
+                $this->epAddEvent->addEvent($userId,$eventType,$date,$noOfGuests,$imgIndex[0],$imgIndex[1],$imgIndex[2],$imgIndex[3],$imgIndex[4],$location,$description);
+                $data["status"] = 1;
+                $this->view("eventPlanner/epEventAdd",$data);
                 }else{
                     $errors["img1"] = "Image is required";
-                    $data["errors"] = $errors;
-                    $this->view("eventPlanner/epEventAddView", $data);
+                    $data["errors"] = $errors; 
+                    $this->view("eventPlanner/epEventAdd", $data);
                 }
-            }
+            
         }
-        $data["errors"] = $errors;
-        $this->view("eventPlanner/epEventAddView", $data);
     }
 }

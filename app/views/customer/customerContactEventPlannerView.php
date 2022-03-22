@@ -7,7 +7,7 @@
     <?php linkCSS("customer/customerContactEventPlannerView"); ?>
     <?php linkCSS("customerNavigation"); ?>
     <?php linkCSS("footer");?>
-    
+    <?php $serviceI=$data['ep_detail'];?>   
    
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <!-- <link rel="stylesheet" href="Customer.browse.SearchVendor.css"> -->
@@ -17,78 +17,49 @@
 <header>
     <?php linkPhp("customerNavigation") ?>
 
-    </header>
+</header>
 <div class="container">
   <p> Event Planners </p>
 </div>
 
-  <div class="cusContent">
+    <div class="ecusDetail">
+      <div class="ecusraw1">
+        <table>
+            <?php
+                    $i=1;
 
-    <div class="cusDetail">
-      <div class="cusraw1">
-        <div class="cusGallery1">
-          <a  href="#">
-          <img <?php srcIMG("brought.jpg") ?> alt="Chance Flowers">
-          </a>
-          <div class="cusDes1">Broghts Event Production <br> Colombo, Sri Lanka</div>
-        </div>
-  
-        <div class="cusGallery2">
-          <a  href="<?php echo BASEURL . '/eventPlanner'; ?>">
-          <img <?php srcIMG("nekatha.jpg") ?> alt="Chance Flowers">
-          </a>
-          <div class="cusDes2">Nekatha <br>Colombo, Sri Lanaka</div>
-        </div>
-  
-        <div class="cusGallery3">
-          <a  href="#">
-          <img <?php srcIMG("eventers.jpg") ?> alt="Chance Flowers">
-          </a><div class="cusDes3">Eventers <br>Galle, Sri Lanka</div>
-        </div>  
+                        echo"<tr>";
+                        $j=1;
+                              
+                                while($row=mysqli_fetch_assoc($data['ep_detail'])  ){
+                                  echo "<td>";
+                                  if($row['service_image']){
+                                    echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
+                                  }else{
+                                    $row['service_image']="default.png";
+                                    echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
+                                  }
+                                  echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
+                                  echo "</td>"; 
+                                
+                                  $j++;
+                                  if($j>3){
+                                    echo "</tr>";
+                                    $j = 1;
+                                  }
+                                  
+                                }
+            ?>
 
-        <div class="cusGallery4">
-          <a  href="#">
-          <img <?php srcIMG("weddingp.png") ?> alt="Chance Flowers">
-          </a><div class="cusDes3">Wedding Planner <br>Katunayaka,Sri Lanka</div>
-        </div>  
-
+        </table>
       </div>
-
-      <div class="cusraw2">
-        <div class="cusGallery5">
-          <a  href="#">
-          <img <?php srcIMG("IEM.png") ?> alt="Chance Flowers">
-          </a>
-          <div class="cusDes4">IEM<br>Kandy,Sri Lanka</div>
-        </div>
   
-        <div class="cusGallery6">
-          <a  href="#">
-          <img <?php srcIMG("eventShy.png") ?> alt="Chance Flowers">
-          </a>
-          <div class="cusDes5">EventShy<br>Colombo, Sri Lanka</div>
-        </div>
-  
-        <div class="cusGallery7">
-          <a  href="#">
-          <img <?php srcIMG("89con.png") ?> alt="Chance Flowers">
-          </a>
-          <div class="cusDes3">89 CONCEPT<br>Mathara, Sri Lanka</div>
-        </div>
+    </div>
 
-        <div class="cusGallery8">
-          <a  href="#">
-          <img <?php srcIMG("dream.png") ?> alt="Chance Flowers">
-          </a>
-          <div class="cusDes3">Dream Planners<br>Kaluthara, Sri Lanka</div>
-        </div>
-  
-      </div>
-
-      </div>
+    
       
 
-  </div>
+
 
 
 <?php linkJS("customer/customerSearchVendor"); ?>
