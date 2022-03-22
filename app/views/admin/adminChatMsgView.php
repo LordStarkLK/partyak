@@ -12,6 +12,13 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+    
     <?php $details = $data['userDetails']; ?>
 </head>
 
@@ -72,6 +79,11 @@
 
     </section>
     </div>
+
+    <?php linkPhp("notification"); ?>
+    <?php linkJS("lib/jquery-3.6.0.min"); ?>
+    <?php linkJS("admin/notification"); ?>
+
 
     <?php linkJS("adminHomeView"); ?>
 

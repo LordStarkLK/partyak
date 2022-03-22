@@ -22,6 +22,15 @@ class CustomerBecomeVendor extends FrameworkPartyak{
 
         // $q1=implode(',', $_POST['q1']);
 
+        if($this->checkVendor()){
+           
+            $userId = $this->getSession("userId");
+            $this->AddFirstServiceModel->changeUserRole($userId);
+            $this->setSession("type","vendor");
+            $this->redirect("vendorHome");
+        }
+        
+
         
         if (isset($_POST['submit'])) {
         
@@ -288,7 +297,6 @@ class CustomerBecomeVendor extends FrameworkPartyak{
             $caption, $video );
 
         }
-
         $this->view("customer/customerBecomeVendorView");
     }
 

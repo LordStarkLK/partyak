@@ -6,11 +6,13 @@ class epMyEvent extends FrameworkPartyak
     {
         $this->helper("linker");
         $this->preventBack("vendor");
+        $this->epEvent = $this->model('eventPlannerEventModel');
     }
 
     public function index()
     {
-        // echo "Hi";
+        $data['event'] = $this->epEvent->viewEvent();
+        $this->view("eventPlanner/epMyEventView",$data);
         $this->view("eventPlanner/epMyEventView");
     }
 }
