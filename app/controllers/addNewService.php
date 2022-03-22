@@ -278,6 +278,7 @@ class AddNewService extends FrameworkPartyak
        
             
             if($result){
+                $this->AddNewServiceModel->makeNotification($id,$servName,$serviceType);
                 $this->redirect("addNewService/successful");
                 // $this->view("vendor/spSuccessServiceView");
             }
