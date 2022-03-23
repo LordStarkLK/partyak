@@ -723,7 +723,7 @@
                       <br><br><p>Your event details successfully submitted.</p>
                         
                       <div class=\"clearfix\">
-                        <button type=\"button\" class=\"deletebtn\" onclick=\"window.location=' " . BASEURL . "/customerContactEventPlanner'\">Select Event Planner</button>
+                        <button type=\"button\" class=\"deletebtn\" onclick=\"window.location=' " . BASEURL . "/customerContactEventPlanner/index/$row[planning_id]'\">Select Event Planner</button>
                       </div>
                     </div>
                   </form>

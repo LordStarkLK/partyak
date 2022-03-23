@@ -5,6 +5,7 @@ class CustomerContactEventPlanner extends FrameworkPartyak{
     public function __construct(){
         $this->helper("linker");
         $this->serviceDetails = $this->model('customerContactEventPlannerModel');
+        // $this->eventPlaningId = $this->model('spServiceModel');
         $this->preventBack("customer");
     }
     
@@ -14,6 +15,7 @@ class CustomerContactEventPlanner extends FrameworkPartyak{
         //     $this->redirect("login");
         // }
         // $this->preventBack("customer");
+        // $this->eventPlaningId->bookingDetEp($planning_id);
         $data['ep_detail'] = $this->serviceDetails->getEpDetails();
         $this->view("customer/customerContactEventPlannerView",$data);
     }
