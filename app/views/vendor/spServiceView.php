@@ -454,7 +454,7 @@
                 </div>
         ";
 
-            if ($row['cancellation_policy'] == "2 weeks") {
+            if ($row['cancellation_policy'] == "14") {
                 echo "
             <div class=\"details\">
                 *Non-refundable Reservation Fee
@@ -464,7 +464,7 @@
                 cancel before 9AM (local time of Vendor) on 17th December for a refund of any payments made excluding the reservation fee.
             </div>
             ";
-            } elseif ($row['cancellation_policy'] == "1 week") {
+            } elseif ($row['cancellation_policy'] == "7") {
                 echo "
             <div class=\"details\">
                 *Non-refundable Reservation Fee
@@ -474,7 +474,7 @@
                 cancel before 9AM (local time of Vendor) on 24th December for a refund of any payments made excluding the reservation fee.
             </div>
             ";
-            } elseif ($row['cancellation_policy'] == "3 days") {
+            } elseif ($row['cancellation_policy'] == "3") {
                 echo "
             <div class=\"details\">
                 *Non-refundable Reservation Fee

@@ -14,6 +14,7 @@ class SpService extends FrameworkPartyak
     public function index($service_id)
     {
         $id = $_SESSION['userId'];
+        $data['service_id'] = $service_id;
         // $serName = 'Avendra';
 
         $data['service'] = $this->ServiceModel->getServiceInfo($service_id);
@@ -65,6 +66,7 @@ class SpService extends FrameworkPartyak
         $data["errors"] = $errors;
         $this->index($service_id);
     }
+
     public function alterReview($service_id)
     {
         $id = $_SESSION['userId'];
@@ -106,6 +108,7 @@ class SpService extends FrameworkPartyak
         echo "There was an error";
         $this->index($service_id);
     }
+
     public function bookingDet($service_id)
     {
 
