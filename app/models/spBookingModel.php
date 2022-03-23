@@ -5,7 +5,7 @@ class SpBookingModel extends Database
     
     
     public function getRequestDetails($service_id){
-        $query = "SELECT * FROM booking WHERE service_id='$service_id' AND booking.status='pending' ";
+        $query = "SELECT * FROM booking WHERE service_id='$service_id' AND status='pending' ";
 
         $result = mysqli_query($GLOBALS['db'],$query);
         if(mysqli_num_rows($result) > 0){
@@ -66,6 +66,13 @@ class SpBookingModel extends Database
         if(mysqli_num_rows($result) > 0){
             return $result;
         }
+    }
+
+    public function getServiceId($booking_id){
+        $query = "SELECT service_id from booking WHERE booking_id = $booking_id";
+        $result = mysqli_query($GLOBALS['db'],$query);
+
+        return $result;
     }
 
 }

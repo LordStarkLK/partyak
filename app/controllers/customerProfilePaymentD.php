@@ -5,7 +5,7 @@ class CustomerProfilePaymentD extends FrameworkPartyak{
     public function __construct(){
         $this->helper("linker");
 
-        $this->preventBack("customer");
+        $this->preventBack2("customer","vendor");
     }
     
     public function index(){
