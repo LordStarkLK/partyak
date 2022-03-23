@@ -18,6 +18,23 @@ body {
 .view-note {
   color: #39a2db;
 }
+.home-content {
+  border-radius: 43px;
+  display: flex;
+  position: relative;
+  padding: 60px 30px 30px 30px;
+  background: linear-gradient(
+    114.1deg,
+    rgba(40, 40, 40, 0.64) 18.52%,
+    rgba(15, 15, 15, 0.8) 98.52%
+  );
+  backdrop-filter: blur(120px);
+  height: 90%;
+  /* background-color: antiquewhite; */
+  top: 10%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
 .table-content {
   border-collapse: collapse;
   font-size: 15px;
@@ -78,9 +95,9 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  top: 100px;
   left: 129px;
   position: relative;
+  margin-bottom: 10px;
 }
 .card-date {
   font-family: "Atlasi", sans-serif;
@@ -360,13 +377,15 @@ nav .sidebar-button i {
 }
 .add-note-div {
   top: 66%;
-  position: relative;
+  position: fixed;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   flex-wrap: wrap;
   align-items: center;
   color: white;
+  bottom: 20px;
+  right: 10px;
 }
 .add-note {
   margin-right: 10px;
