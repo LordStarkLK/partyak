@@ -14,7 +14,6 @@ class SpService extends FrameworkPartyak
     public function index($service_id)
     {
         $id = $_SESSION['userId'];
-        // $serName = 'Avendra';
 
         $data['service'] = $this->ServiceModel->getServiceInfo($service_id);
         $data['package_data'] = $this->ServiceModel->getPackageInfo($service_id);
@@ -22,9 +21,10 @@ class SpService extends FrameworkPartyak
         $data['latest_review'] = $this->ServiceModel->getLatestReview($service_id);
 
 
-        // echo "Hi";
         $this->view("vendor/spServiceView", $data);
     }
+
+    //Review
     public function insertReview($service_id)
     {
         $id = $_SESSION['userId'];
@@ -106,7 +106,52 @@ class SpService extends FrameworkPartyak
         echo "There was an error";
         $this->index($service_id);
     }
+
+    //Get booking details
     public function bookingDet($service_id)
+    {
+
+        $id = $_SESSION['userId'];
+
+        $errors = array();
+        $errors["reservedate"] = "";
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+            //Get data from the form submission
+            $eventType = $_POST["eventType"];
+            $guestCount = $_POST["guestcount"];
+            $reserveDate = $_POST["reservedate"];
+            $packageType = $_POST["packageType"];
+
+
+            //Empty check
+            if (empty($reserveDate)) $errors["reservedate"] = "Event Date is required";
+
+            /* Count number of validation failures */
+            $numberOfErrors = 0;
+            foreach ($errors as $key => $value) {
+
+                if ($value != "") {
+                    $numberOfErrors++;
+                }
+            }
+
+            if ($numberOfErrors == 0) {
+                //Insert data
+                $userId = $this->getSession("userId");
+                $this->ServiceModel->bookingDetail($eventType, $guestCount, $reserveDate, $packageType, $id, $service_id,$userId);
+                $this->index($service_id);
+                // $this->redirect('spService');
+            }
+        }
+        $data["errors"] = $errors;
+        $this->index($service_id);
+    }
+
+
+    //Get booking details for event planner the request coming from through planning event
+    public function bookingDetEp($service_id)
     {
 
         $id = $_SESSION['userId'];
