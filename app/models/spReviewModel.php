@@ -2,6 +2,11 @@
 
 class SpReviewModel extends Database
 {
+    public function getUserType($id){
+        $query = "SELECT `service_type` FROM `other_service` WHERE `service_id` = '$id' ";
+        $result = mysqli_query($GLOBALS['db'],$query);
+        return $result;
+    }
 
     public function getReviewDetails($service_id){
         $query = " SELECT user_id, ratedStar, textReview, Date FROM service_review WHERE service_id = '$service_id' ";

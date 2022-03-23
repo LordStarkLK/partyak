@@ -27,45 +27,54 @@
         <?php linkPhp("navigation") ?>
     </header>
     <div class="container">
-        <div class="sidebar">
-
-            <ul class="sidenav-links">
-
-            
-            <li>
-                <a href="<?php echo BASEURL . '/spPackage/index/'.$service_id.''?>">
-                <i class="fa fa-server" aria-hidden="true"></i>
-                <span class="links_name">Packages</span>
-                </a>
-            </li>
-            <li>
-                <a href="<?php echo BASEURL . '/spBooking/index/'.$service_id.''; ?>">
-                <i class="fa fa-list" aria-hidden="true"></i>
-                <span class="links_name">Bookings</span>
-                </a>
-            </li>
-            
-            <li>
-            <a href="<?php echo BASEURL . '/spChat/index/'.$service_id.''; ?>">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span class="links_name">Chat</span>
-                </a>
-            </li>
-            <li>
-                <a href="<?php echo BASEURL . '/spCalendar/index/'.$service_id.''; ?>">
-                <i class="fa fa-calendar" aria-hidden="true"></i>
-                <span class="links_name">Calendar</span>
-                </a>
-            </li>
-            <li>
-                <a href="<?php echo BASEURL . '/spReview/index/'.$service_id.''; ?>">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <span class="links_name">Review</span>
-                </a>
-            </li>
-
-            </ul>
-        </div>
+    <div class="sidebar">
+       <ul class="sidenav-links">
+        
+        <li>
+          <a href="<?php echo BASEURL . '/spPackage/index/'.$service_id.''?>">
+            <i class="fa fa-server" aria-hidden="true"></i>
+            <span class="links_name">Packages</span>
+          </a>
+        </li>
+        <li>
+          <a href="<?php echo BASEURL . '/spBooking/index/'.$service_id.''; ?>">
+            <i class="fa fa-list" aria-hidden="true"></i>
+            <span class="links_name">Bookings</span>
+          </a>
+        </li>
+        
+        <li>
+        <a href="<?php echo BASEURL . '/spChat/index/'.$service_id.''; ?>">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <span class="links_name">Chat</span>
+          </a>
+        </li>
+        <li>
+          <a href="<?php echo BASEURL . '/spCalendar/index/'.$service_id.''; ?>">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            <span class="links_name">Calendar</span>
+          </a>
+        </li>
+        <li>
+          <a href="<?php echo BASEURL . '/spReview/index/'.$service_id.''; ?>">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <span class="links_name">Review</span>
+          </a>
+        </li>
+        <li>
+          <a href="<?php echo BASEURL . '/epNoteNew/index/'.$service_id.''; ?>">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+            <span class="links_name">Note</span>
+          </a>
+        </li>
+        <li>
+          <a href="<?php echo BASEURL . '/epNewMyEvent/index/'.$service_id.''; ?>">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            <span class="links_name">My Event</span>
+          </a>
+        </li>
+      </ul>
+    </div>
 
         <section class="home-section">
             <nav>
@@ -75,34 +84,34 @@
                 </div>
             </nav>
             <div class="home-content">
-            <div class="wrapper">
-                        <section class="users">
-                            <header>
-                                <div class="content">
-                                    <img src="<?php echo BASEURL; ?>/public/img/userImages/<?php if ($profileInfo['profilePicture']) {
-                    echo $profileInfo['profilePicture'];
-                    } 
-                    else {
-                        echo "pp_default.png";
-                    } ?>" alt="">
-                                    <div class="details">
-                                        <span><?php echo $profileInfo['f_name']. " " . $profileInfo['l_name'] ?></span>
-                                        <!-- <p><?php echo $row['status']; ?></p> -->
+                    <div class="wrapper">
+                                <section class="users">
+                                    <header>
+                                        <div class="content">
+                                            <img src="<?php echo BASEURL; ?>/public/img/userImages/<?php if ($profileInfo['profilePicture']) {
+                            echo $profileInfo['profilePicture'];
+                            } 
+                            else {
+                                echo "pp_default.png";
+                            } ?>" alt="">
+                                            <div class="details">
+                                                <span><?php echo $profileInfo['f_name']. " " . $profileInfo['l_name'] ?></span>
+                                                <!-- <p><?php echo $row['status']; ?></p> -->
+                                            </div>
+                                        </div>
+
+                                    </header>
+                                    <div class="search">
+                                        <span class="text">Select an user to start chat</span>
+                                        <input type="text" placeholder="Enter name to search...">
+                                        <button><i class="fas fa-search"></i></button>
                                     </div>
-                                </div>
+                                    <div class="users-list">
 
-                            </header>
-                            <div class="search">
-                                <span class="text">Select an user to start chat</span>
-                                <input type="text" placeholder="Enter name to search...">
-                                <button><i class="fas fa-search"></i></button>
-                            </div>
-                            <div class="users-list">
-
-                            </div>
+                                    </div>
 
 
-                        </section>
+                                </section>
                     </div>
             </div>
         </section>

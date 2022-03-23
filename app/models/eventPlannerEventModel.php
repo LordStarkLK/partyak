@@ -1,6 +1,11 @@
 <?php
 class eventPlannerEventModel extends database
 {
+    public function getUserType($id){
+        $query = "SELECT `service_type` FROM `other_service` WHERE `service_id` = '$id' ";
+        $result = mysqli_query($GLOBALS['db'],$query);
+        return $result;
+    }
     public function viewEvent()
     {
         $query ="SELECT `user_id`, `event_page_id`, `event_type`, MONTH(date) as `month`, DAY(date) as `date`,`location` FROM `event_planner_event_pages`;";

@@ -13,6 +13,8 @@ class SpBooking extends FrameworkPartyak
     public function index($service_id)
     {
         $data['service_id'] = $service_id;
+        $id=$_SESSION['userId'];
+        $data['userType'] = $this->BookingModel->getUserType($id);
         // echo "Hi";
         $data['request_data'] = $this->BookingModel->getRequestDetails($service_id);
         $data['customer_name'] = $this->BookingModel->getCustomerName($service_id);
@@ -39,6 +41,7 @@ class SpBooking extends FrameworkPartyak
         $this->BookingModel->rejectRequest($booking_id);
         $this->redirect("spBooking");
     }
+    
 
    
 }

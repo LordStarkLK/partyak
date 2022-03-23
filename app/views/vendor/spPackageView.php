@@ -23,8 +23,8 @@
     <?php linkPhp("navigation") ?>
   </header>
   <div class="container">
-    <div class="sidebar">
-      <ul class="sidenav-links">
+  <div class="sidebar">
+       <ul class="sidenav-links">
         
         <li>
           <a href="<?php echo BASEURL . '/spPackage/index/'.$service_id.''?>">
@@ -57,6 +57,21 @@
             <span class="links_name">Review</span>
           </a>
         </li>
+        <?php if($data['userType']['service_type']=="eventPlanner"){ ?>
+        <div class="epOnlySidebar">
+          <li>
+            <a href="<?php echo BASEURL . '/epNoteNew/index/'.$service_id.''; ?>">
+              <i class="fa fa-pencil" aria-hidden="true"></i>
+              <span class="links_name">Note</span>
+            </a>
+          </li>
+          <li>
+            <a href="<?php echo BASEURL . '/epNewMyEvent/index/'.$service_id.''; ?>">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <span class="links_name">My Event</span>
+            </a>
+          </li>
+        </div> <?php } ?>
       </ul>
     </div>
 

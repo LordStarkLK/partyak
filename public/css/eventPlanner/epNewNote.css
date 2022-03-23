@@ -1,0 +1,11 @@
+.add-note {
+  position: relative;
+}
+.add-note .btn {
+  right: 10px;
+  position: absolute;
+  bottom: 1px;
+}
+.note-content-area {
+  height: 500px;
+}
