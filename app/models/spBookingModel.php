@@ -5,15 +5,15 @@ class SpBookingModel extends Database
     
     
     public function getRequestDetails($service_id){
-        $query = "SELECT customer_id, service_id, package_id, event_date, event_type, noOfGuest, status FROM booking WHERE service_id='$service_id' ";
+        $query = "SELECT * FROM booking WHERE service_id='$service_id' AND status='pending' ";
 
         $result = mysqli_query($GLOBALS['db'],$query);
         if(mysqli_num_rows($result) > 0){
             return $result;
         }
     }
-    public function getCustomerName(){
-        $query = "SELECT user.f_name, user.l_name FROM user,booking WHERE booking.customer_id = user.user_id";
+    public function getCustomerName($service_id){
+        $query = "SELECT user.f_name, user.l_name, user.email FROM user,booking WHERE  user.user_id=booking.customer_id AND service_id='$service_id' AND booking.status='pending' ";
         $result = mysqli_query($GLOBALS['db'],$query);
         if(mysqli_num_rows($result) > 0){
             return $result;
@@ -27,15 +27,52 @@ class SpBookingModel extends Database
         }
     }
 
+    //for accept and reject booking requests
     public function acceptRequest($booking_id){
         $query = "UPDATE booking SET status = 'accept' WHERE booking_id='$booking_id'";
-        mysqli_query($GLOBALS['db'],$query);
+        $result = mysqli_query($GLOBALS['db'],$query);
+        return $result;
         
     }
 
     public function rejectRequest($booking_id){
         $query = "UPDATE booking SET status = 'reject' WHERE booking_id = '$booking_id'";
-        mysqli_query($GLOBALS['db'],$query);
+        $result = mysqli_query($GLOBALS['db'],$query);
+        return $result;
+        
+    }
+
+    //functions related with paid booking details
+
+    public function acceptedBookings($service_id){
+        $query = "SELECT customer_id, booking_id, event_date, full_payment, package_id, noOfGuest FROM booking WHERE service_id='$service_id' AND status='Accepted' ORDER BY booking.event_date DESC ";
+        $result = mysqli_query($GLOBALS['db'],$query);
+        if(mysqli_num_rows($result) > 0){
+            return $result;
+        }
+    }
+
+    public function bookingPaymentDetails($service_id){
+        $query = " SELECT user.email, user.f_name, payment.amount, payment.status FROM user, booking, payment WHERE booking.customer_id = user.user_id AND payment.booking_id=booking.booking_id AND booking.service_id='$service_id' ORDER BY booking.event_date DESC ";
+        $result = mysqli_query($GLOBALS['db'],$query);
+        if(mysqli_num_rows($result) > 0){
+            return $result;
+        }
+    }
+
+    public function bookedPackageDetails($service_id){
+        $query = " SELECT package.package_name, package.per_unit_price FROM package, booking, payment WHERE booking.package_id = package.package_id AND payment.booking_id=booking.booking_id AND booking.service_id='$service_id' ORDER BY booking.event_date DESC ";
+        $result = mysqli_query($GLOBALS['db'],$query);
+        if(mysqli_num_rows($result) > 0){
+            return $result;
+        }
+    }
+
+    public function getServiceId($booking_id){
+        $query = "SELECT service_id from booking WHERE booking_id = $booking_id";
+        $result = mysqli_query($GLOBALS['db'],$query);
+
+        return $result;
     }
 
 }

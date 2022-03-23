@@ -48,6 +48,9 @@ class AddNewServiceModel extends Database
         '$decoType', '$flowType',
         '$sectionType', '$dressCategory' ,
         '$caption', '$video')";
+        
+         
+    
 
 
     
@@ -61,12 +64,29 @@ class AddNewServiceModel extends Database
 
 
         if(mysqli_query($GLOBALS['db'], $query)){
+        
             return true;
         }
         else{
          return false;
          
         }
+        
+    }
+
+    public function makeNotification($id,$servName,$serviceType){
+        echo "Hi";
+        $query = "SELECT f_name,l_name from user WHERE user_id='$id'";
+        $query = mysqli_query($GLOBALS['db'], $query);
+        $result = mysqli_fetch_assoc($query);
+        $fName = $result['f_name'];
+        $lName = $result['l_name'];
+        $description = "$fName $lName have added a new service, They're waiting to be accepted.";
+        // echo $description;
+        
+        $query = "INSERT INTO notifications(`notification_type`,`heading`,`description`,`url`,`user_id`,`notification_status`,`date`)
+         VALUES ('new_service','New service added','A new service is created and waiting to be accepted','http://localhost/partyak/adminRequest','12','0',NOW());";
+        mysqli_query($GLOBALS['db'], $query);
         
     }
 }

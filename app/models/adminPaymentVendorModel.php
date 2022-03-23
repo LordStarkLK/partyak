@@ -52,6 +52,20 @@ class AdminPaymentVendorModel extends database{
             $query6 = "UPDATE wallet SET amount = '$amountPartyak', withdrawable_amount = '$amountPartyak' WHERE user_id = '12'";
             $result6 = mysqli_query($GLOBALS['db'], $query6);
 
+            // Notification
+            $query = "SELECT f_name,l_name from user WHERE user_id='$user_id'";
+            $query = mysqli_query($GLOBALS['db'], $query);
+            $result = mysqli_fetch_assoc($query);
+            $fName = $result['f_name'];
+            $lName = $result['l_name'];
+           
+        
+            $description = "Admin have done a settlement of amonunt Rs.".number_format($amount,2,'.',',')."";
+        
+            $query = "INSERT INTO notifications(notification_type,heading,description,url,user_id,notification_status,date)
+            VALUES ('new_settlment','New Settlent Done','$description','http://localhost/partyak/adminBookings','$user_id','0',NOW())";
+            mysqli_query($GLOBALS['db'], $query);
+
 
         }
 

@@ -20,8 +20,7 @@
   <div class="container">
     <div class="sidebar">
       <ul class="sidenav-links">
-        
-        <li>
+      <li>
           <a href="<?php echo BASEURL . '/spPackage/index/'.$service_id.''?>">
             <i class="fa fa-server" aria-hidden="true"></i>
             <span class="links_name">Packages</span>
@@ -94,51 +93,35 @@
                         
                   ";
 
-                  if($row['status'] == "pending"){
+                  
                     echo "
                     <th class=\"btn-row\">
-                          <button class=\"accept-booking\">Accept</button>
-                          <button class=\"reject-booking\">Reject</button>
+                          <button class=\"accept-booking\" onclick=\"window.location='" . BASEURL . "/spBooking/accept/$row[booking_id]/$row[service_id]'  \">Accept</button>
+                          <button class=\"reject-booking\" onclick=\"window.location='" . BASEURL . "/spBooking/reject/$row[booking_id]' \">Reject</button>
                         </th> 
                       </tr>
                     ";
-                  }
-                  elseif($row['status'] == "accepted"){
-                    echo " <th>Accepted</th> 
-                      </tr> ";
-                  }
-                  elseif($row['status'] == "rejected"){
-                    echo "Rejected";
-                  }
+                  
+                  
                       
                 } ?>
 
-
-
-                <!-- <tr>
-                  <th>Kamal Perera</th>
-                  <th>Wedding</th>
-                  <th>300</th>
-                  <th>2020-10-29</th>
-                  <th>Summer Package</th>
-                  <th class="btn-row">
-                    <button class="accept-booking">Accept</button>
-                    <button class="reject-booking">Reject</button>
-                  </th>
-                </tr> -->
                 
               </tbody>
             </table>
           </div>
         </div>
-        <div class="search-bookings">
-          <input type="text" placeholder="Search" name="search">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </div>
-        <div class="filter-date-status">
-
-        </div>
+        
         <div class="bookings-table">
+          <a>Booking Details</a>
+          <div class="search-bookings">
+            <input type="text" placeholder="Search" name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </div>
+          <div class="filter-date-status">
+
+          </div>
+
           <table class="table-content">
             <thead>
               <tr>
@@ -153,7 +136,29 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <?php while ($row = mysqli_fetch_assoc($data['booking_data'])) {
+                $row2 = mysqli_fetch_assoc($data['booked_cus']);
+                $row3 = mysqli_fetch_assoc($data['booked_pack']);
+                $total = $row3['per_unit_price']*$row['noOfGuest'];
+                $i = 1;
+                      
+                echo "
+                  <tr>
+                    <th>$row[booking_id]</th>
+                    <th>$row2[f_name]</th>
+                    <th>$row2[email]</th>  
+                    <th>$row3[package_name]</th> 
+                    <th>$row[event_date]</th>
+                    <th>".number_format($total,2,'.',',')."</th>
+                    <th>".number_format($row2['amount'],2,'.',',')."</th>
+                    <th>$row2[status]</th> 
+                  <tr>     
+                  ";
+                      
+                } ?>
+
+
+              <!-- <tr>
                 <th>1</th>
                 <th>Kamal</th>
                 <th>k@gmail.com</th>
@@ -162,47 +167,10 @@
                 <th>120000</th>
                 <th>45000</th>
                 <th>In progress</th>
-              </tr>
-              <tr>
-                <th>2</th>
-                <th>Namal</th>
-                <th>n@gmail.com</th>
-                <th>Venues & Halls</th>
-                <th>2020-12-11</th>
-                <th>120000</th>
-                <th>35000</th>
-                <th>In progress</th>
-              </tr>
-              <tr>
-                <th>3</th>
-                <th>Amal</th>
-                <th>a@gmail.com</th>
-                <th>Caterings</th>
-                <th>2020-11-15</th>
-                <th>50000</th>
-                <th>20000</th>
-                <th>In progress</th>
-              </tr>
-              <tr>
-                <th>4</th>
-                <th>Kamal</th>
-                <th>k@gmail.com</th>
-                <th>Venues & Halls</th>
-                <th>2020-10-10</th>
-                <th>120000</th>
-                <th>120000</th>
-                <th>Completed</th>
-              </tr>
-              <tr>
-                <th>5</th>
-                <th>Kasun</th>
-                <th>k@gmail.com</th>
-                <th>Caterings</th>
-                <th>2020-10-01</th>
-                <th>120000</th>
-                <th>120000</th>
-                <th>Completed</th>
-              </tr>
+              </tr> -->
+              
+              
+              
             </tbody>
           </table>
         </div>
