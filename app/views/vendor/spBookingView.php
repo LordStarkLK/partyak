@@ -96,7 +96,7 @@
                   
                     echo "
                     <th class=\"btn-row\">
-                          <button class=\"accept-booking\" onclick=\"window.location='" . BASEURL . "/spBooking/accept/$row[booking_id],$row[service_id]'  \">Accept</button>
+                          <button class=\"accept-booking\" onclick=\"window.location='" . BASEURL . "/spBooking/accept/$row[booking_id]/$row[service_id]'  \">Accept</button>
                           <button class=\"reject-booking\" onclick=\"window.location='" . BASEURL . "/spBooking/reject/$row[booking_id]' \">Reject</button>
                         </th> 
                       </tr>

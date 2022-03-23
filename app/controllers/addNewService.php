@@ -278,8 +278,8 @@ class AddNewService extends FrameworkPartyak
        
             
             if($result){
-                $this->AddNewServiceModel->makeNotification($id,$servName,$serviceType);
-                $this->redirect("addNewService/successful");
+                $this->successful($servName,$serviceType);
+                // $this->redirect("addNewService/successful");
                 // $this->view("vendor/spSuccessServiceView");
             }
             else{
@@ -325,7 +325,10 @@ class AddNewService extends FrameworkPartyak
         
     }
 
-    public function successful(){
+    public function successful($servName,$serviceType){
+        $userId = $this->getSession("userId");
+        
+        $this->AddNewServiceModel->makeNotification($userId,$servName,$serviceType);
         $this->view("vendor/spSuccessServiceView");
     }
 
