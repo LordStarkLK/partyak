@@ -14,7 +14,7 @@ class EPNoteNew extends FrameworkPartyak
         $data['service_id']=$service_id;
 
         $id=$_SESSION['userId'];
-        $data['userType'] = $this->epNote->getUserType($id);
+        $data['userType'] = $this->epNote->getUserType($service_id);
 
         $this->view("eventPlanner/epNoteNewView",$data);
     }

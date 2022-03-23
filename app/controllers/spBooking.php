@@ -14,7 +14,7 @@ class SpBooking extends FrameworkPartyak
     {
         $data['service_id'] = $service_id;
         $id=$_SESSION['userId'];
-        $data['userType'] = $this->BookingModel->getUserType($id);
+        $data['userType'] = $this->BookingModel->getUserType($service_id);
         // echo "Hi";
         $data['request_data'] = $this->BookingModel->getRequestDetails($service_id);
         $data['customer_name'] = $this->BookingModel->getCustomerName($service_id);

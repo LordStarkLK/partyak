@@ -14,7 +14,7 @@ class SpCalendar extends FrameworkPartyak
     {
         $data['service_id']=$service_id;
         $id=$_SESSION['userId'];
-        $data['userType'] = $this->spCalenderModel->getUserType($id);
+        $data['userType'] = $this->spCalenderModel->getUserType($service_id);
 
         // echo "Hi";
         $this->view("vendor/spCalendarView",$data);

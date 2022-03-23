@@ -14,7 +14,7 @@ class SpReview extends FrameworkPartyak
     {
         $data['service_id'] = $service_id;
         $id=$_SESSION['userId'];
-        $data['userType'] = $this->ReviewModel->getUserType($id);
+        $data['userType'] = $this->ReviewModel->getUserType($service_id);
         // echo "Hi";
         $data['review_data'] = $this->ReviewModel->getReviewDetails($service_id);
         $data['review_user'] = $this->ReviewModel->getReviewedUserDetails();

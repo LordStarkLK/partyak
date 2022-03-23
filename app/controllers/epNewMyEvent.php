@@ -14,7 +14,7 @@ class EPNewMyEvent extends FrameworkPartyak
         $data['service_id']=$service_id;
 
         $id=$_SESSION['userId'];
-        $data['userType'] = $this->epEvent->getUserType($id);
+        $data['userType'] = $this->epEvent->getUserType($service_id);
 
         $data['event'] = $this->epEvent->viewEvent();
         $this->view("eventPlanner/epNewMyEventView",$data);

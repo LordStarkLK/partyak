@@ -19,7 +19,7 @@ class SpChat extends FrameworkPartyak
         
 
         $id=$_SESSION['userId'];
-        $data['userType'] = $this->user->getUserType($id);
+        $data['userType'] = $this->user->getUserType($service_id);
         $data['myDetails'] = $this->user->getDetails($id);
 
         // echo "Hi";
