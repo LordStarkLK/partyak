@@ -63,7 +63,7 @@
                   <td>Completed</td>
                   <td>Completed</td>
                   <td class=\"btn-row\">
-                      <button class=\"edit-booking\"><a href=\" ".BASEURL . "/payment/paymentDet/$row[booking_id]\">Go</a></button>
+                      <button class=\"edit-booking\"><a href=\" ".BASEURL . "/payment/paymentDet/$row[booking_id]/$row[user_id]\">Go</a></button>
                   </td>                 
                   <td class=\"btn-row\">
                       <button class=\"cancel-booking\">Cancel</button>

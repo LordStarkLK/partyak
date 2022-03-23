@@ -4,7 +4,7 @@ class CustomerProfileBookingModel extends database
     public function getBookingDetails($id){
         // $query = "SELECT * FROM booking WHERE customer_id='$id' ";
         // Hari 
-        $query = "SELECT booking.*,other_service.service_name,other_service.service_type FROM booking,other_service WHERE booking.service_id = other_service.service_id AND booking.customer_id = '$id'";
+        $query = "SELECT booking.*,other_service.service_name,other_service.service_type,other_service.user_id FROM booking,other_service WHERE booking.service_id = other_service.service_id AND booking.customer_id = '$id'";
         $result = mysqli_query($GLOBALS['db'],$query);
         if(mysqli_num_rows($result) >= 0){
             return $result;
