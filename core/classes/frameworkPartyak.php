@@ -75,14 +75,18 @@ class FrameworkPartyak
     }
 
     public function preventBack2(...$validTypes){
-        $userId = $this->getSession("userId");
-        $type = $this->getSession("type");
-
+        $flag = 0;
         if (isset($userId) and isset($type)) {
-            foreach ($validTypes as $validType) {
-                if ($validType != $type) {
-                    $this->redirect("login");
+            foreach ($validTypes as $type) {
+                if(!(!isset($_SESSION['userId']) && !isset($_SESSION['type']) || $_SESSION['type'] != $type)){
+                    $flag = 1;
+                    
                 }
+
+            }
+
+            if($flag == 0){
+                $this->redirect("login");
             }
         }
     }

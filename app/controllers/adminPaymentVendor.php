@@ -71,6 +71,7 @@ class AdminPaymentVendor extends FrameworkPartyak{
                         // $sql = "INSERT into upload(name) VALUES('$fileNameNew') ";
 
                         $this->paymentModel->insertSettlement($fileNameNew,$user_id,$amount,$description,$date,$type,$request_id);
+                        
                         $data["payments"] = $this->paymentModel->getPayments();
                         $data["wallet"] = $this->paymentModel->getWalletDetails();
                         $this->view("admin/adminPaymentVendorView",$data);
