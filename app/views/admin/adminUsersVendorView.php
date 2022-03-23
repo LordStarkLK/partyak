@@ -96,7 +96,6 @@
                         <th>User ID</th>
                         <th>Vendor Name</th>
                         <th>Email</th>
-                        <th>Services</th>
                         <th>More Actions</th>
 
                     </tr>
@@ -122,7 +121,6 @@
   <td>$row[user_id]</td>
   <td>$row[f_name] $row[l_name]</td>
   <td>$row[email]</td>
-  <td>Not Defined</td>
   <td>
   <div class=\"btn-group\">
   <button onclick=\"window.location=' " . BASEURL . "/adminUserProfile/index/$row[user_id]'\">View Profile</button>

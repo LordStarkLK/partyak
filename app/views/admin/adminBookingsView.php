@@ -82,23 +82,28 @@
                                 $row2 = mysqli_fetch_assoc($data['customer']);
                                 $row3 = mysqli_fetch_assoc($data['service']);
                                 $row4 = mysqli_fetch_assoc($data['package']);
-                                echo"
-                                <td>$row[booking_id]</td>
-                                <td>$row2[f_name] $row2[l_name]</td>
-                                <td>$row3[service_name]</td>
-                                <td>$row4[package_name]</td>
-                                <td>$row[status]</td>
-                                <td>$row[event_date]</td>
-                                <td>
-                                <div class=\"btn-group\">
-                                    <button onclick=\"window.location='".BASEURL."/adminVendorBookings'\">See in Vendor Bookings</button>
-                                    <button onclick=\"window.location='" . BASEURL . "/adminBookings/delete/$row[booking_id]'\">Delete Booking</button>
-
-                                </div>
-                            </td>
-                            </tr>
-
-                                ";
+                                // $now = new DateTime();
+                                $now = date("Y-m-d");
+                                if($now<$row['event_date']){
+                                    echo"
+                                    <td>$row[booking_id]</td>
+                                    <td>$row2[f_name] $row2[l_name]</td>
+                                    <td>$row3[service_name]</td>
+                                    <td>$row4[package_name]</td>
+                                    <td>$row[status]</td>
+                                    <td>$row[event_date]</td>
+                                    <td>
+                                    <div class=\"btn-group\">
+                                        <button onclick=\"window.location='".BASEURL."/adminVendorBookings'\">See in Vendor Bookings</button>
+                                        <button onclick=\"window.location='" . BASEURL . "/adminBookings/delete/$row[booking_id]'\">Delete Booking</button>
+    
+                                    </div>
+                                </td>
+                                </tr>
+    
+                                    ";
+                                }
+                                
                             } ?>
                         
 

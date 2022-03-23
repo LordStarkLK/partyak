@@ -26,6 +26,8 @@ class AdminUserVendorModel extends database
         }
     }
 
+     
+
     public function search($searchTerm){
         $searchTerm = mysqli_real_escape_string($GLOBALS['db'], $searchTerm);
         $list = explode("_",$searchTerm);
