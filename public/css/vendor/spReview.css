@@ -120,16 +120,23 @@ nav .sidebar-button i{
 .overall-stars{
   width: 100%;
   height: 50px;
+  font-size: 35px;
+  position: fixed;
+  
+}
+.colour-bar{
+  
+  width: 50%;
+  height: 50px;
+  color: rgba(238, 38, 38, 0.94);
 }
 .overall-rating a{
   font-family: Alatsi;
   font-weight: bold;
   font-size: 100px;
 }
-.overall-stars{
-  font-size: 35px;
-  color: rgba(225, 238, 38, 0.94);
-}
+
+
 .home-content .overall-chart{
     width: 90%;
     height: 300px;
@@ -157,30 +164,34 @@ nav .sidebar-button i{
 .overall-chart .rating-bar{
   width: 100%;
   height: 100%;
-  padding-top: 6px;
+  padding: 4px;
+  border-color: rgb(129, 129, 129);
+  border-style: solid;
+  border-width: thin;
+  margin-right: 6px;
 }
 .ratingBox .rating-bar .box1{
-  height: 70%;
+  height: 100%;
   width: 80%;
   background: rgba(247, 180, 23, 0.94);
 }
 .ratingBox .rating-bar .box2{
-  height: 70%;
+  height: 100%;
   width: 90%;
   background: rgba(247, 180, 23, 0.94);
 }
 .ratingBox .rating-bar .box3{
-  height: 70%;
+  height: 100%;
   width: 60%;
   background: rgba(247, 180, 23, 0.94);
 }
 .ratingBox .rating-bar .box4{
-  height: 70%;
+  height: 100%;
   width: 50%;
   background: rgba(247, 180, 23, 0.94);
 }
 .ratingBox .rating-bar .box5{
-  height: 70%;
+  height: 100%;
   width: 10%;
   background: rgba(247, 180, 23, 0.94);
 }
@@ -192,6 +203,7 @@ nav .sidebar-button i{
     align-items: center;
     margin-top: 30px;
     color: white;
+    overflow-x: scroll;
 }
 .review-content .user-review{
   width: calc(100% / 3);
@@ -201,6 +213,9 @@ nav .sidebar-button i{
   background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.36) 18.52%, rgba(15, 15, 15, 0.12) 98.52%);
   backdrop-filter: blur(120px);
   border-radius: 43px;
+  border-style: solid;
+  border-color: black;
+  
 }
 .reviewer-details , .reviewer-rating{
   width: 100%;
