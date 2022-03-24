@@ -43,9 +43,9 @@ window.onclick = function(event) {
 
 // chart js start
 
-var xValues = ["3rd Quater 2020", "4th Quater 2020", "1st Quater 2021", "2nd Quater 2021", "3rd Quater 2021"];
-var yValues = [55000, 49000, 44000, 24000, 60000];
-var barColors = ["#e6817a", "#e44e43","#a0160c","#630c06","#300b08"];
+// var xValues = ["3rd Quater 2020", "4th Quater 2020", "1st Quater 2021", "2nd Quater 2021", "3rd Quater 2021"];
+// var yValues = [55000, 49000, 44000, 24000, 60000];
+// var barColors = ["#e6817a", "#e44e43","#a0160c","#630c06","#300b08"];
 
 new Chart("myChart", {
   type: "bar",
@@ -62,7 +62,7 @@ new Chart("myChart", {
     legend: {display: false},
     title: {
       display: true,
-      text: "Sales Revenue 20/21 ",
+      text: "Sales Revenue 2022 ",
       fontColor: "#000",
       fontSize: 13,
       fontWeight: 900,
