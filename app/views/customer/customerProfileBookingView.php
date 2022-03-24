@@ -64,8 +64,12 @@
                   <td>Completed</td>
                   <td>Completed</td>
                   <td class=\"btn-row\">
-                    <button class=\"edit-booking\"><a href=\" ".BASEURL . "/payment/paymentDet/$row[booking_id]\">Go</a></button>
-                  </td>               
+
+                      <button class=\"edit-booking\"><a href=\" ".BASEURL . "/payment/paymentDet/$row[booking_id]/$row[user_id]\">Go</a></button>
+                  </td>                 
+
+
+              
                   <td class=\"btn-row\"> 
                     <button class=\"cancel-event\" onclick=\"document.getElementById('$row[booking_id]').style.display='block'\">Cancel</button> ";
                     $diff=strtotime($row['event_date']) - strtotime($today);
@@ -130,6 +134,7 @@
                     echo"
                   </td>
                 <tr>";
+
                 
             $i++;
           }?>

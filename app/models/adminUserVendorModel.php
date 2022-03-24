@@ -2,7 +2,7 @@
 class AdminUserVendorModel extends database
 {
     public function getService(){
-        $query = "SELECT user_id,f_name,l_name FROM vendor WHERE vendor_type = 'service' ORDER BY user_id";
+        $query = "SELECT user_id,f_name,l_name FROM vendor WHERE vendor_type = 'service' ORDER BY user_id DESC LIMIT 5";
         $result = mysqli_query($GLOBALS['db'],$query);
         if(mysqli_num_rows($result) > 0){
             return $result;
@@ -25,6 +25,8 @@ class AdminUserVendorModel extends database
             return $result;
         }
     }
+
+     
 
     public function search($searchTerm){
         $searchTerm = mysqli_real_escape_string($GLOBALS['db'], $searchTerm);

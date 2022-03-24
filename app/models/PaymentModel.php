@@ -18,4 +18,19 @@ class PaymentModel extends database
 
     }
 
+    public function insertPayment($amount,$booking_id,$vendor_id,$user_id){
+        $query = "SELECT other_service.advance_price from other_service,booking WHERE other_service.service_id = booking.service_id AND booking.booking_id = '$booking_id'";
+        $result = mysqli_query($GLOBALS['db'],$query);
+        $advance = mysqli_fetch_assoc($result);
+        if($advance['advance_price'] === $amount){
+            $status = "Advance Paid";
+        }else{
+            $status = "Fully Paid";
+        }
+
+        // $query = "INSERT INTO testing(amount) VALUES ('$advance[advance_price]')";
+        $query = "INSERT INTO payment(payment_date,amount,status,vendor_id,customer_id,booking_id) VALUES (NOW(),'$amount','$status','$vendor_id','$user_id','$booking_id')";
+        mysqli_query($GLOBALS['db'], $query);
+    }
+
 }
