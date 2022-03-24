@@ -200,9 +200,9 @@
             </div>
             <div class="col_input">
                 <select id="policy" name="policy">
-                  <option value="3 days">3 days before reserve date</option>
-                  <option value="1 week">1 week before reserve date</option>
-                  <option value="2 weeks">2 weeks before reserve date</option>    
+                  <option value="3">3 days before reserve date</option>
+                  <option value="7">1 week before reserve date</option>
+                  <option value="14">2 weeks before reserve date</option>    
                 </select>
             </div>
           </div>
@@ -406,7 +406,7 @@
             <hr/>
             <div class="row">
               <div class="col_name">
-                <label for="supptype">Suppling service</label>
+                <label for="supptype">Supplying service</label>
               </div>
               <div class="col_input">
                 <input type="checkbox" id="suppt1" name="supptype[]" value="hair" class="box">

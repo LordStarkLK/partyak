@@ -18,6 +18,9 @@ class SpReview extends FrameworkPartyak
         // echo "Hi";
         $data['review_data'] = $this->ReviewModel->getReviewDetails($service_id);
         $data['review_user'] = $this->ReviewModel->getReviewedUserDetails();
+        $data['review_avg'] = $this->ReviewModel->getReviewAverage($service_id);
+        $data['review_star'] = $this->ReviewModel->getStarCount($service_id);
+
         $this->view("vendor/spReviewView",$data);
     }
 

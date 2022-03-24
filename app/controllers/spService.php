@@ -20,6 +20,10 @@ class SpService extends FrameworkPartyak
         }
         $id = $_SESSION['userId'];
 
+        $data['service_id'] = $service_id;
+        // $serName = 'Avendra';
+
+
         $data['service'] = $this->ServiceModel->getServiceInfo($service_id);
         $data['package_data'] = $this->ServiceModel->getPackageInfo($service_id);
         $data['review_status'] = $this->ServiceModel->checkReviewStatus($service_id, $id);
@@ -70,6 +74,7 @@ class SpService extends FrameworkPartyak
         $data["errors"] = $errors;
         $this->index($service_id);
     }
+
     public function alterReview($service_id)
     {
         $id = $_SESSION['userId'];
@@ -111,6 +116,7 @@ class SpService extends FrameworkPartyak
         echo "There was an error";
         $this->index($service_id);
     }
+
 
     //Get booking details
     public function bookingDet(...$ids)
@@ -170,6 +176,7 @@ class SpService extends FrameworkPartyak
 
     //Get booking details for event planner the request coming from through planning event
     public function bookingDetEp($service_id)
+
     {
 
         $id = $_SESSION['userId'];

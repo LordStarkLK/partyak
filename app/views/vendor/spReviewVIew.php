@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php $service_id = $data['service_id'];?>
+  <!-- <?php $average = $data['review_avg'];?> -->
 </head>
 
 <body>
@@ -84,48 +85,107 @@
         </div>
       </nav>
       <div class="home-content">
+        
         <div class="overall-details">
           <a>Overrall Rating<br></a>
-          <div class="overall-rating"><a>4.0</a></div>
-          <div class="overall-stars">
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
-            <i class="fa fa-star" aria-hidden="true"></i>
+          <div class="overall-rating">
+          
+          <?php 
+            $avg = $data['review_avg'][0];
+             echo "<a>$avg</a>"; 
+          ?>
+              
           </div>
-          <a>Based on 23 reviews</a>
+          <!-- <div class="colour-bar">
+            <div class="overall-stars" style="width: <?php $avg = $data['review_avg'][0];
+                echo $avg*20 ;  ?>;" >
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </div>
+          </div> -->
+
+          <?php 
+          $numR = $data['review_avg'][1];
+            if($numR == 0){
+              echo "<a>No Reviews</a>";
+            }
+            else{
+              echo "<a>Based on ";
+              echo $numR;
+              echo " reviews</a>";
+            }
+          ?>
+          
         </div>
 
         <div class="overall-chart">
           <div class="ratingBox">
             <div class="name">Excellent</div>
             <div class="rating-bar">
-              <div class="box1"></div>
+              <div class="box1" style="width: <?php $count5 = $data['review_star'][4]; $numR = $data['review_star'][5];
+                echo ($count5/$numR)*20 ;  ?>;" ></div>
+            </div>
+            <div class="review-num">
+              <?php 
+                $count5 = $data['review_star'][4];
+                echo "<a>($count5)</a>"; 
+              ?>
             </div>
           </div>
+
           <div class="ratingBox">
             <div class="name">Good</div>
             <div class="rating-bar">
-              <div class="box2"></div>
+              <div class="box2" style="width: <?php $count4 = $data['review_star'][3]; $numR = $data['review_star'][5];
+                echo ($count4/$numR)*20 ;  ?>;"></div>
             </div>
+            <div class="review-num">
+              <?php 
+                $count4 = $data['review_star'][3];
+                echo "<a>($count4)</a>"; 
+              ?></div>
           </div>
+
           <div class="ratingBox">
             <div class="name">Average</div>
             <div class="rating-bar">
-              <div class="box3"></div>
+              <div class="box3" style="width: <?php $count3 = $data['review_star'][2]; $numR = $data['review_star'][5];
+                echo ($count3/$numR)*20 ;  ?>;"></div>
             </div>
+            <div class="review-num">
+              <?php 
+                $count3 = $data['review_star'][2];
+                echo "<a>($count3)</a>"; 
+              ?></div>
           </div>
+
           <div class="ratingBox">
             <div class="name">Below-average</div>
             <div class="rating-bar">
-              <div class="box4"></div>
+              <div class="box4" style="width: <?php $count2 = $data['review_star'][1]; $numR = $data['review_star'][5];
+                echo ($count2/$numR)*20 ;  ?>;"></div>
             </div>
+            <div class="review-num">
+            <?php 
+                $count2 = $data['review_star'][1];
+                echo "<a>($count2)</a>"; 
+              ?></div>
           </div>
+
           <div class="ratingBox">
             <div class="name">Poor</div>
             <div class="rating-bar">
-              <div class="box5"></div>
+              <div class="box5" style="width: <?php $count1 = $data['review_star'][0]; $numR = $data['review_star'][5];
+                echo ($count1/$numR)*20 ;  ?>;"></div>
             </div>
+            <div class="review-num">
+            <?php 
+                $count1 = $data['review_star'][0];
+                echo "<a>($count1)</a>"; 
+              ?></div>
           </div>
         </div>
 
