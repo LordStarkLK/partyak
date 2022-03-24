@@ -49,10 +49,11 @@
 
 
           <?php
+            $today=date('Y-m-j');
             $i = 1;
             while($row=mysqli_fetch_assoc($data['bookingDetail']) ){
                
-                echo"
+              echo"
                 <tr>
                   <td>$i</td>
                   <td>$row[service_type]</td>
@@ -63,11 +64,77 @@
                   <td>Completed</td>
                   <td>Completed</td>
                   <td class=\"btn-row\">
-                      <button class=\"edit-booking\"><a href=\" ".BASEURL . "/payment/paymentDet/$row[booking_id]\">Go</a></button>
+
+                      <button class=\"edit-booking\"><a href=\" ".BASEURL . "/payment/paymentDet/$row[booking_id]/$row[user_id]\">Go</a></button>
                   </td>                 
-                  <td class=\"btn-row\">
-                      <button class=\"cancel-booking\">Cancel</button>
-                  </td>";
+
+
+              
+                  <td class=\"btn-row\"> 
+                    <button class=\"cancel-event\" onclick=\"document.getElementById('$row[booking_id]').style.display='block'\">Cancel</button> ";
+                    $diff=strtotime($row['event_date']) - strtotime($today);
+                    $dateCount=round($diff / 86400);
+
+                    if ($row['status'] == "Accepted"){
+
+                      if($dateCount > $row['cancellation_policy'] ){
+                        echo"
+                          <div id=\"$row[booking_id]\" class=\"modal\">
+                            <span onclick=\"document.getElementById('$row[booking_id]').style.display='none'\" class=\"close\" title=\"Close Modal\">&times;</span>
+                            <form class=\"modal-content\" action=\"/action_page.php\">
+                              <div class=\"container-modal\">
+                                <h1>Cancel Booking.</h1>
+                                <br><br><p>Are you sure you want to cancel your booking?</p>
+                          
+                                <div class=\"clearfix\">
+                                  <button type=\"button\" class=\"cancelbtn\" onclick=\"document.getElementById('$row[booking_id]').style.display='none'\">No</button>
+                                  <button type=\"button\" class=\"deletebtn\" onclick=\"window.location=' " . BASEURL . "/customerProfileBooking/deleteBooking/$row[booking_id]'\">Yes</button>
+                                </div>
+                              </div>
+                            </form>
+                          </div>";
+                      }else{
+                        echo"
+                          <div id=\"$row[booking_id]\" class=\"modal\">
+                            <span onclick=\"document.getElementById('$row[booking_id]').style.display='none'\" class=\"close\" title=\"Close Modal\">&times;</span>
+                            <form class=\"modal-content\" action=\"/action_page.php\">
+                              <div class=\"container-modal\">
+                                <h1>Cancel Booking.</h1>
+                                <br><br><p>You cann't cancel your booking because of the service cancellation policy.</p>
+                          
+                                <div class=\"clearfix\">
+                                  <button type=\"button\" class=\"cancelbtn\" onclick=\"document.getElementById('$row[booking_id]').style.display='none'\">OK</button>
+                                </div>
+                              </div>
+                            </form>
+                          </div>";
+                      }
+
+                    }
+                    else{
+                      echo"
+                          <div id=\"$row[booking_id]\" class=\"modal\">
+                            <span onclick=\"document.getElementById('$row[booking_id]').style.display='none'\" class=\"close\" title=\"Close Modal\">&times;</span>
+                            <form class=\"modal-content\" action=\"/action_page.php\">
+                              <div class=\"container-modal\">
+                                <h1>Cancel Booking.</h1>
+                                <br><br><p>Are you sure you want to cancel your booking?</p>
+                          
+                                <div class=\"clearfix\">
+                                  <button type=\"button\" class=\"cancelbtn\" onclick=\"document.getElementById('$row[booking_id]').style.display='none'\">No</button>
+                                  <button type=\"button\" class=\"deletebtn\" onclick=\"window.location=' " . BASEURL . "/customerProfileBooking/deleteBooking/$row[booking_id]'\">Yes</button>
+                                </div>
+                              </div>
+                            </form>
+                          </div>";
+                      
+
+                    }
+                    
+                    echo"
+                  </td>
+                <tr>";
+
                 
             $i++;
           }?>

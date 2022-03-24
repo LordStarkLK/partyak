@@ -10,7 +10,7 @@ class AdminUserModel extends database
     // }
 
     public function getCustomerDetails(){
-        $query = "SELECT * FROM user where user_type='customer' ORDER BY 'user_id'";
+        $query = "SELECT * FROM user where user_type='customer' ORDER BY 'user_id' DESC LIMIT 5";
         $result = mysqli_query($GLOBALS['db'],$query);
         if(mysqli_num_rows($result) > 0){
             return $result;

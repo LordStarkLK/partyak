@@ -316,7 +316,6 @@
                       </div>
 
                       <form action='<?php echo BASEURL . "/customerEventSB/index/$eventname[planning_id]"; ?>' class="form_area" method="POST">
-                      <?php echo $eventname['planning_id'];?>
                         <div class="bodi">
                             <input type="text" id="todo_input" name="todo_input">
                             <input type="submit" value="Add Todo" >
@@ -342,13 +341,13 @@
                             ?>
                               
                       </div>
-                      <div class="status">
+                      <div class="status" name="toDoStatus">
                           <h1>TO DO</h1>
                       </div>
-                      <div class="status">
+                      <div class="status" name="inprogressStatus">
                           <h1>INPROGRESS</h1>
                       </div>
-                      <div class="status">
+                      <div class="status" name="completedStatus">
                           <h1>COMPLETED</h1>
                       </div>
                     </div>
@@ -356,6 +355,7 @@
                     <div id="overlay"></div>
 
                     <script>
+
                         const todos = document.querySelectorAll(".todo");
                         const all_status = document.querySelectorAll(".status");
                         let draggableTodo = null;

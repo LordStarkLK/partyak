@@ -1,44 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-body{
+body {
   background-color: #202020;
   background-image: url("../../../public/img/home-confetti.png");
-    background-repeat: round;
-    
+  background-repeat: round;
 }
-.container{
+.container {
   padding: 1% 10% 1% 10%;
   background-image: url("../../../public/img/blob 1.png");
 }
-.sidebar{
+.sidebar {
   border-radius: 23px 0px 0px 23px;
   margin-top: 5%;
-  position: fixed;
+  position: absolute;
   /* height: 470px; */
   width: 220px;
   background-color: rgb(0, 0, 0);
-  background: linear-gradient(114.1deg, rgba(24,24,24,0.65) 18.52%, rgba(15,15,15,0.75) 98.52%);
+  background: linear-gradient(
+    114.1deg,
+    rgba(24, 24, 24, 0.65) 18.52%,
+    rgba(15, 15, 15, 0.75) 98.52%
+  );
   backdrop-filter: blur(120px);
   transition: all 0.5s ease;
 }
-.sidebar.active{
+.sidebar.active {
   width: 20%;
 }
-.sidebar .sidenav-links{
+.sidebar .sidenav-links {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.sidebar .sidenav-links li{
+.sidebar .sidenav-links li {
   position: relative;
   list-style: none;
   height: 60px;
 }
-.sidebar .sidenav-links li a{
+.sidebar .sidenav-links li a {
   height: 100%;
   width: 100%;
   display: flex;
@@ -46,26 +49,26 @@ body{
   text-decoration: none;
   transition: all 0.4s ease;
 }
-.sidebar .sidenav-links li a.active{
-  background: #081D45;
+.sidebar .sidenav-links li a.active {
+  background: #081d45;
 }
-.sidebar .sidenav-links li a:hover{
+.sidebar .sidenav-links li a:hover {
   background: #000000;
   border-radius: 15px;
 }
-.sidebar .sidenav-links li i{
+.sidebar .sidenav-links li i {
   min-width: 60px;
   text-align: center;
   font-size: 18px;
   color: #fff;
 }
-.sidebar .sidenav-links li a .links_name{
+.sidebar .sidenav-links li a .links_name {
   color: rgb(245, 245, 245);
   font-size: 18px;
   font-weight: 500;
   white-space: nowrap;
 }
-.home-section{
+.home-section {
   position: relative;
   padding: 0 20px 0 20px;
   height: 70%;
@@ -73,14 +76,18 @@ body{
   left: 220px;
   transition: all 0.5s ease;
   border-radius: 43px;
-  background: linear-gradient(114.1deg, rgba(40,40,40,0.36) 18.52%, rgba(15, 15, 15, 0.12) 98.52%);
+  background: linear-gradient(
+    114.1deg,
+    rgba(40, 40, 40, 0.36) 18.52%,
+    rgba(15, 15, 15, 0.12) 98.52%
+  );
   backdrop-filter: blur(120px);
 }
-.sidebar.active ~ .home-section{
+.sidebar.active ~ .home-section {
   width: calc(100% - 60px);
   left: 60px;
 }
-nav{
+nav {
   display: flex;
   height: 60px;
   position: fixed;
@@ -91,33 +98,32 @@ nav{
   border-radius: 43px 0 0 0;
   color: white;
 }
-nav .sidebar-button{
+nav .sidebar-button {
   display: flex;
   align-items: center;
   font-size: 40px;
   font-weight: bold;
 }
-nav .sidebar-button i{
+nav .sidebar-button i {
   font-size: 40px;
   margin-right: 10px;
 }
-.home-section .home-content{
+.home-section .home-content {
   border-radius: 43px;
   position: relative;
   padding: 60px 30px 30px 30px;
 }
-.home-content .overall-details{
-    width: 100%;
-    text-align: center;
-    
+.home-content .overall-details {
+  width: 100%;
+  text-align: center;
 }
-.overall-details a{
+.overall-details a {
   font-size: 24px;
   font-weight: 400;
   color: white;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-.overall-stars{
+.overall-stars {
   width: 100%;
   height: 50px;
   font-size: 35px;
@@ -130,11 +136,12 @@ nav .sidebar-button i{
   height: 50px;
   color: rgba(238, 38, 38, 0.94);
 }
-.overall-rating a{
+.overall-rating a {
   font-family: Alatsi;
   font-weight: bold;
   font-size: 100px;
 }
+
 
 
 .home-content .overall-chart{
@@ -147,21 +154,29 @@ nav .sidebar-button i{
     padding: 15px;
     
 }
-.overall-chart .ratingBox{
+
+
+.overall-stars {
+  font-size: 35px;
+  color: rgba(225, 238, 38, 0.94);
+}
+
+.overall-chart .ratingBox {
+
   width: 100%;
   height: calc(100% / 5);
   margin: 2px;
   padding: 10px;
   display: flex;
 }
-.overall-chart .name{
+.overall-chart .name {
   width: 200px;
   font-size: 18px;
   font-weight: bold;
   color: white;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-.overall-chart .rating-bar{
+.overall-chart .rating-bar {
   width: 100%;
   height: 100%;
   padding: 4px;
@@ -170,6 +185,7 @@ nav .sidebar-button i{
   border-width: thin;
   margin-right: 6px;
 }
+
 .ratingBox .rating-bar .box1{
   height: 100%;
   width: 80%;
@@ -204,105 +220,108 @@ nav .sidebar-button i{
     margin-top: 30px;
     color: white;
     overflow-x: scroll;
+
 }
-.review-content .user-review{
+.review-content .user-review {
   width: calc(100% / 3);
   min-height: 400px;
   margin: 10px;
   padding: 20px;
-  background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.36) 18.52%, rgba(15, 15, 15, 0.12) 98.52%);
+  background: linear-gradient(
+    114.1deg,
+    rgba(40, 40, 40, 0.36) 18.52%,
+    rgba(15, 15, 15, 0.12) 98.52%
+  );
   backdrop-filter: blur(120px);
   border-radius: 43px;
   border-style: solid;
   border-color: black;
   
 }
-.reviewer-details , .reviewer-rating{
+.reviewer-details,
+.reviewer-rating {
   width: 100%;
   padding: 5px;
 }
-.reviewer-details{
+.reviewer-details {
   display: flex;
 }
-.reviewer-details .reviewer-pic img{
-    background-color: darkmagenta;
-    border-radius: 50%;
-    border-style: solid;
-    border-color: black;
-    width: 80px;
-    height: 80px;
+.reviewer-details .reviewer-pic img {
+  background-color: darkmagenta;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: black;
+  width: 80px;
+  height: 80px;
 }
-.reviewer-details .reviewer-name{
-    width: 120px;
-    margin-left: 15px;
-    
+.reviewer-details .reviewer-name {
+  width: 120px;
+  margin-left: 15px;
 }
-.reviewer-name .review_date{
+.reviewer-name .review_date {
   font-size: 16px;
   font-weight: 500;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: grey;
 }
-.reviewer-name a{
+.reviewer-name a {
   font-size: 23px;
   font-weight: bold;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-.reviewer-rating{
+.reviewer-rating {
   text-align: center;
 }
-.reviewer-rating .star-rating{
+.reviewer-rating .star-rating {
   width: 100%;
   height: 50%;
   color: rgba(225, 238, 38, 0.94);
 }
-.reviewer-rating .ratingPoints{
+.reviewer-rating .ratingPoints {
   width: 100%;
   height: 50%;
 }
-.ratingPoints a{
+.ratingPoints a {
   font-size: 24px;
   font-weight: bold;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-.reviewer-comment{
+.reviewer-comment {
   width: 100%;
   min-height: 50%;
   padding: 5px;
   /* color: rgb(212, 212, 212); */
 }
-.reviewer-comment a{
+.reviewer-comment a {
   font-size: 18px;
   font-weight: 600;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-
 @media (max-width: 1240px) {
-  .sidebar{
+  .sidebar {
     width: 60px;
   }
-  .sidebar.active{
+  .sidebar.active {
     width: 220px;
   }
-  .home-section{
+  .home-section {
     width: calc(100% - 60px);
     left: 60px;
   }
-  .sidebar.active ~ .home-section{
+  .sidebar.active ~ .home-section {
     overflow: hidden;
     left: 220px;
   }
-  .home-section nav{
+  .home-section nav {
     width: 300px;
   }
-  
 }
 @media (max-width: 1150px) {
-  .home-content .sales-boxes{
+  .home-content .sales-boxes {
     flex-direction: column;
   }
-  .home-content .sales-boxes .box{
+  .home-content .sales-boxes .box {
     width: 100%;
     margin-bottom: 30px;
   }
@@ -310,18 +329,17 @@ nav .sidebar-button i{
     margin: 0;
     padding: 10px;
   }
-  .home-content .sales-boxes .recent-sales{
+  .home-content .sales-boxes .recent-sales {
     margin: 0;
     margin-bottom: 15px;
   }
 }
 
 @media (max-width: 700px) {
-  nav .sidebar-button .dashboard
-   i{
+  nav .sidebar-button .dashboard i {
     display: flex;
   }
-  .home-content .sales-boxes .sales-details{
+  .home-content .sales-boxes .sales-details {
     width: 560px;
     margin-bottom: 15px;
   }

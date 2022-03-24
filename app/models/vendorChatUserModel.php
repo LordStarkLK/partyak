@@ -23,6 +23,11 @@
         //     $result = mysqli_query($GLOBALS['db'],$userDetails);
         //     return mysqli_fetch_assoc($result);
         // }
+        public function getUserType($id){
+            $query = "SELECT `service_type` FROM `other_service` WHERE `service_id` = '$id' ";
+            $result = mysqli_fetch_assoc(mysqli_query($GLOBALS['db'],$query));
+            return $result;
+        }
 
         public function getDetails($id){
             $query = "SELECT f_name,l_name,profilePicture FROM user WHERE user_id='$id' LIMIT 1";
