@@ -9,10 +9,10 @@ class epEventAdd extends FrameworkPartyak
         $this->epAddEvent = $this->model("eventPlannerAddEventModel");
     }
 
-    public function index()
+    public function index($service_id)
     {
-        // echo "Hi";
-        $this->view("eventPlanner/epEventAddView");
+        $data['service_id']=$service_id;
+        $this->view("eventPlanner/epEventAddView",$data);
     }
     public function addEvent()
     {

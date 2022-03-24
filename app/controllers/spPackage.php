@@ -15,8 +15,8 @@ class SpPackage extends FrameworkPartyak
     public function index($service_id)
     {
         //initilaize these varibles for server 
-
         $id=$_SESSION['userId'];
+        $data['userType'] = $this->PackageModel->getUserType($service_id);
 
         $errors = array();
         $errors["serviceName"] = "";

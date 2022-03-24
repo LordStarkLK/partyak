@@ -315,6 +315,8 @@
         </div> 
     ";
             } ?>
+
+        <!-- Booking request  -->
         <?php
             echo "        
         <div class=\"right_side\">
@@ -368,6 +370,9 @@
 
         ";
         } ?>
+
+        <!-- Pacakge  -->
+
         <?php while ($row2 = mysqli_fetch_assoc($data['package_data'])) {
 
 
@@ -541,6 +546,8 @@
             <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
         </div>
     </div>
+
+    <!-- Review service -->
     <div class="review-section">
         <h1>Reviews</h1>
         <div class="latest-review">
