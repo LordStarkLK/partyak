@@ -2,15 +2,17 @@
 
 .pop-up {
   display: none;
+  color:white;
   position: fixed;
-  bottom: 43px;
-  right: 0;
-  background-color: white;
+  bottom: 70px;
+  right: -20px;
+  background: linear-gradient(114.1deg, rgba(40,40,40,0.36) 18.52%, rgba(15, 15, 15, 0.12) 98.52%);
+  backdrop-filter: blur(120px);
   width: 375px;
   height: 576px;
   border-radius: 10px;
   margin: 20px;
-  border: 1px solid #ddd;
+  
 }
 .pop-up .heading {
   display: flex;
@@ -55,7 +57,7 @@
 }
 .pop-up .notification-details .notes .note .read-status {
   font-size: 10px;
-  color: #1b83cd;
+  color: #008000;
   width: 25px;
   text-align: right;
 }
@@ -90,10 +92,10 @@
   position: fixed;
   bottom: 67px;
   right: 24px;
-  height: 56px;
-  width: 56px;
+  height: 55px;
+  width: 55px;
   border-radius: 50%;
-  background-color: #19345d;
+  background-color: #5a5e5b;
   color: white;
   overflow: hidden;
   display: flex;
@@ -103,6 +105,12 @@
   border: 1px solid rgba(0, 0, 0, 0.05);
   transition: 200ms opacity ease;
   z-index: 10;
+}
+
+.notification-container:hover{
+      background: linear-gradient(114.1deg, #84D2F8 18.52%, #FFBBC9 98.52%);
+      color: black;
+      backdrop-filter: blur(120px);
 }
 
 .bell-notification {
@@ -167,7 +175,7 @@
 }
 
 input:checked + .slider {
-  background-color: #2B4F82;
+  background-color: #66b0ff;
 }
 
 input:focus + .slider {
