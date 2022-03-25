@@ -99,20 +99,10 @@
                   <i class="fas fa-female" ></i>
                 <span class="links_name" id="dress">Dress Suppliers</span>
               </a>
-            </li>
+          </li>
         </ul>
       </div>
     </div>
-
-<!-- 
-  <div class="cusContent" id="con"> 
-      <p><h2>Hello  Friends,</h2><br> <h3>Let’s start finding service providers.<br><br></h3></p>
-
-      <div class="cusDetail">
-      <img <?php srcIMG("riding.png") ?> alt="Chance Flowers">
-      </div>
-
-  </div>  -->
 
 
   <div class="cakeContent" id=popup-7>
@@ -120,7 +110,7 @@
 
       <div class="cakeq">
         <div class="back" id="backb">
-            <button type="submit" class="bac" value="Submit"><i class="fas fa-arrow-left"></i></button>
+        <button type="button" class="bac" value="Submit"><a href ="<?php echo BASEURL . '/customerContactServiceProvider'; ?>"><i class="fas fa-arrow-left"></i> </a></button>
         </div>
 
     

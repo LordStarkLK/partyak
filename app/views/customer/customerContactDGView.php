@@ -113,7 +113,7 @@
       <div class="danceq">
 
       <div class="back" id="backb">
-          <button type="submit" class="bac" value="Submit"><i class="fas fa-arrow-left"></i></button>
+        <button type="button" class="bac" value="Submit"><a href ="<?php echo BASEURL . '/customerContactServiceProvider'; ?>"><i class="fas fa-arrow-left"></i> </a></button>
       </div>
     
 

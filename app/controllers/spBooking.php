@@ -36,10 +36,10 @@ class SpBooking extends FrameworkPartyak
         
     }
 
-    public function reject($booking_id)
+    public function reject($booking_id,$service_id)
     {
         $this->BookingModel->rejectRequest($booking_id);
-        $this->redirect("spBooking");
+        $this->index($service_id);
     }
     
 
