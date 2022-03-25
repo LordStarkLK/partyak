@@ -98,10 +98,10 @@
                     //add service name of the packages
                     if($data['userType']['service_type']=='eventPlanner'){
                       ?>
-                      <a href="<?php echo BASEURL . '/epOnlyService/index/'.$row['service_id'].''; ?>"><?php echo $row['service_name'] ?>"</a>
+                      <a href="<?php echo BASEURL . '/epOnlyService/index/'.$row['service_id'].''; ?>"><?php echo $row['service_name'] ?></a>
                       <?php
                     } else{ ?>
-                      <a href="<?php echo BASEURL . '/spService/index/'.$row['service_id'].''; ?>"><?php echo $row['service_name'] ?>"</a>
+                      <a href="<?php echo BASEURL . '/spService/index/'.$row['service_id'].''; ?>"><?php echo $row['service_name'] ?></a>
                       <?php }
                } ?>
           </div>
