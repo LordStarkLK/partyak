@@ -34,7 +34,7 @@
       
         <ul class="sidenav-links">
             <li>
-              <a href="<?php echo BASEURL . '/customerContactServiceProvider/getEp'; ?>" id="epl">
+              <a href="<?php echo BASEURL . '/customerContactServiceProvider/getEp'; ?>" id="ep1">
                   <i class="fas fa-user-tie" ></i>
                 <span class="links_name" id="ep">Event Planners</span>
               </a>
@@ -108,7 +108,7 @@
     <form action="<?php echo BASEURL . '/customerContactServiceProvider/getEp'; ?>" class="form-area" method="POST">
       <div class="eventq">
         <div class="back" id="backb">
-          <button type="submit" class="bac" value="Submit"><i class="fas fa-arrow-left"></i></button>
+          <button type="button" class="bac" value="Submit"><a href ="<?php echo BASEURL . '/customerContactServiceProvider'; ?>"><i class="fas fa-arrow-left"></i> </a></button>
         </div>
         <div class="input-box3">
             <select name="city">
@@ -189,8 +189,8 @@
 </div>
 
 </body>
-<!-- <?php linkJS("customer/customerSearchVendor"); ?>
-<?php linkJS("customer/customerContactServiceProvicer"); ?> -->
+<?php linkJS("customer/customerSearchVendor"); ?>
+<?php linkJS("customer/customerContactServiceProvicer"); ?>
 <?php linkPhp("footer") ?>
 </html>
 
