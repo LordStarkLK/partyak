@@ -25,8 +25,11 @@ body{
 
 .sidebar{
   display: flex;
+  /* display:none; */
   flex-direction: column;
   order:0;
+  padding-left: 1%;
+  padding-right: 1%;
   border-radius: 30px 0px 0px 30px;
   margin-top: 2%;
   position: fixed;
@@ -61,7 +64,6 @@ body{
 }
 .sidebar .sidenav-links li a.active{
   background: #626a79;
-  border-radius: 19px 0px 0px 19px;
 }
 .sidebar .sidenav-links li a:hover{
    background: linear-gradient(114.1deg, rgba(129, 129, 129, 0.08) 18.52%, rgba(49, 49, 49, 0.51) 98.52%);
@@ -82,13 +84,37 @@ body{
   white-space: nowrap;
 }
 
-/* .side{ 
-  background-image:url("../../../public/img/searchVenR.png"); 
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-top:5%;
-}*/
+.buttonS{
+  position:relative;
+  margin-top: 15%;
+  text-align: center;
+  padding:3%;
+  border-radius: 10px;
+  border: 1px solid #18ab29;
+  display: inline-block; 
+  cursor: pointer;
+  background-color: #18ab29 ;
+}
+
+.buttonS a{
+  color: #ffffff;
+  font-size: 19px;
+  line-height: 23px;
+  text-decoration: none;
+}
+
+.sideDe{
+  position:relative;
+  margin-top: 10%;
+  padding:3%;
+  display: flex;
+  opacity: 85%;
+  text-align:center;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 28px;
+
+}
 
 
 .cusContent{
@@ -722,7 +748,7 @@ background-color: #9593ff;
   background-color: #9593ff;
   }
 
-  /* feedback popup*/
+/* feedback popup*/
 
 
 /* popup start */
@@ -733,8 +759,9 @@ background-color: #9593ff;
   border:none;
   margin-top: 30px;
   margin-right: 30px;
+  margin-left:30%;
   float: left;
-  width: 40%;
+  width: 30%;
   height: 40px;
 }
 
@@ -755,7 +782,7 @@ background-color: #9593ff;
 
 /* Add a color to the delete button */
 .deletebtn {
-  background-color: #f44336;
+  background-color: #35a842fa;
 }
 
 .deletebtn:hover{
@@ -769,18 +796,27 @@ background-color: #9593ff;
   
 }
 
+.container-modal h1{
+  color: #35a842fa;
+}
+
+.container-modal p{
+  color: rgb(238, 229, 229);
+  font-size: 18px;
+}
+
 
 .modal {
     border-radius: 43px;
    /* display: none;  Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    left: 25%;
-    top: 23%;
-    width: 50%;
+    left: 30%;
+    top: 36%;
+    width: 40%;
     overflow: auto; /* Enable scroll if needed */
-    background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.61) 18.52%, rgba(15, 15, 15, 0) 98.52%), linear-gradient(106.04deg, rgba(255, 255, 255, 0.12) 10.95%, rgba(255, 255, 255, 0.1) 98.32%);
-    backdrop-filter: blur(0px);
+    background: #202020;
+    opacity: 100%;
     border: 1px solid #888;
     padding-top: 1%;
   }
@@ -789,7 +825,6 @@ background-color: #9593ff;
   .modal-content {
    
     margin: 5% auto 5% auto; /* 5% from the top, 15% from the bottom and centered */
-    
     width: 80%; /* Could be more or less, depending on screen size */
   }
   
@@ -820,5 +855,7 @@ background-color: #9593ff;
     content: "";
     clear: both;
     display: table;
+    padding-left: 60%;
   }
+
 

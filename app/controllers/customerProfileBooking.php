@@ -15,6 +15,8 @@ class CustomerProfileBooking extends FrameworkPartyak{
         //Get booking details
         $data['bookingDetail'] = $this->booking->getBookingDetails($id);
         $data['bookingDet'] = $this->booking->getBookingDets($id);
+        //Get payment details
+        $data['paymentDetails'] = $this->booking->getPaymentDetails($id);
         $this->view("customer/customerProfileBookingView",$data);
     }
 
