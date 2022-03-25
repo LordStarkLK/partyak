@@ -21,9 +21,8 @@
 <div class="container">
   <div class="side">
     <div class="sidebar" id="sidee">
-        <button type="button" class="buttonS" name="Own" > <a href ="<?php echo BASEURL . '/customerOnYourOwnPlanS'; ?>"> Add Service Details</a></button> 
         <div class="sideDe">
-          <p>After giving event details you can add service details which are required for your event by clicking here.</p>
+          <p>You can edit basic event details and also you can edit service details by using Event Schedule Board.</p>
         </div> 
 
         <br><br><img <?php srcIMG("servicepees.png") ?> alt="Chance Flowers"> 
@@ -118,10 +117,30 @@
           </div>
 
           <div class="save">
-            <button type="submit" class="saveb" id="submitid"  value="Submit">Submit</button>
+            <button type="submit" name="submit" class="saveb" id="submitid"  value="Submit">Submit</button>
           </div> 
 
     </form>
+
+    <!-- Successful submit -->
+    <?php
+      if (isset($_POST['submit'])) {
+        echo "<div class=\"sccuess-event\" onclick=\"document.getElementById($eventDet[planning_id]).style.display='block'\"></div>
+              <div id=\"id\" class=\"modal\">
+                <span onclick=\"document.getElementById(id).style.display='none'\" class=\"close\" title=\"Close Modal\">&times;</span>
+                  <form class=\"modal-content\" action=\"/action_page.php\">
+                    <div class=\"container-modal\">
+                      <h1>Success!</h1>
+                      <br><p>Your event details successfully updated.</p>
+                          
+                      <div class=\"clearfix\">
+                        <button type=\"button\" class=\"cancelbtn\" onclick=\"window.location=' " . BASEURL . "/customerMyEvent'\">OK</button>
+                      </div>
+                    </div>
+                  </form>
+              </div>";
+      }
+    ?>
   </div> 
   
 </div>
