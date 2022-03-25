@@ -15,8 +15,19 @@
     </header>
 
     <div class="container">
-        <div class="content">
-            <div class="howcontent">
+        <div class="howcontent">
+            <div class="intro">
+                <?php while($row = mysqli_fetch_assoc($data['intro'])){
+                    echo"
+                    <h1>$row[heading]</h1><br>
+                    <p1>$row[description]</p1><br><br>
+
+                    ";
+
+
+                   }   
+                ?>
+            </div>
                 <h1>Life is an event. Make it memorable.</h1><br><br>
                 <p1>Online event management system which provides platform for<br>
                     Users to search and hire event related service providers and event planners.<br>
@@ -70,7 +81,7 @@
                     <br><br><br><p5>Join With Us & Enjoy Your Day.</p5>
 
                 
-            </div>
+            
         </div>
     </div>
     

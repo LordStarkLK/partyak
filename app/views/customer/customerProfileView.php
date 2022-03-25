@@ -47,12 +47,12 @@
           </a>
         </li>
         
-        <li>
+        <!-- <li>
           <a href="#">
             <i class="fas fa-bell" ></i>
             <span class="links_name">Notification</span>
           </a>
-        </li>
+        </li> -->
         <li>
 
           <a href="<?php echo BASEURL . '/customerProfile/resetPassword'; ?>">
