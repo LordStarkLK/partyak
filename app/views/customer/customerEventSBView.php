@@ -34,6 +34,7 @@
                         </tr>
                     </table>
                 </div>
+                <!-- Customer service preference -->
                 <div class="cusevent" id="service_det">
                     <table>
                         <div class="cusraw1">
@@ -42,52 +43,350 @@
                                 <th>Service Details</th>
                             </tr>
                         </div>
-                        <?php 
-                           echo "<tr>";
+                        <?php
+                          if($eventname['plan_type'] == "Through Event Planner"){
+                            echo "<tr>";
+                            echo "<td>Venues & Halls</td>";
+                            if($serviceP['venue_handle_EP'] == "yes"){
+                              echo" <td>This service is needed to be handle by event planner.";
+                            }
+
+                            if($serviceP['seating_arrangement'] == "yes"){
+                              echo"<br><br>Seating arrangement - $serviceP[seating_arrangement]";
+                            }
+                            else{
+                              echo"<br><br>Seating arrangement - Not slected.";
+                            }
+                          
+
+                            if($serviceP['indoor_venue'] == "yes" && $serviceP['outdoor_venue'] == "yes"){
+                              echo"<br><br> Venue type is indoor, outdoor both.";
+                            }
+                            else if($serviceP['indoor_venue'] == "yes"){
+                              echo"<br><br>Venue type - Indoor venue."; 
+                            }
+                            else if($serviceP['outdoor_venue'] == "yes"){
+                              echo"<br><br> Venue type - Outdoor venue."; 
+                            }else{
+                              echo"<br><br> Venue type - ";  
+                            }
+
+
+                            if($serviceP['seti_back'] == "yes"){
+                              echo " <br><br> Seti back is want.";
+                            }
+                            else{
+                              echo " <br> <br>Seti back - ";
+                            }
+
+
+                            if($serviceP['poruwa'] == "yes"){
+                              echo "<br><br>Poruwa is want.";
+                            }
+                            else{
+                              echo " <br> <br>Poruwa - ";
+                            }
+
+
+
+                            if($serviceP['dancing_floor'] == "yes"){
+                              echo "<br><br> Dancing floor is want.";
+                            }
+                            else{
+                              echo " <br><br> Dancing floor - ";
+                            }
+                            echo"</td>";
+                            echo "</tr>";
+
+
+                            echo "<tr>";
+                            echo "<td>Catering Service</td>";
+
+                            if($serviceP['catering_handle_EP'] == "yes"){
+                              echo" <td>This service is needed to be handle by event planner.";
+                            }
+
+                            echo "<br><br> Meal Types-";
+
+                            if($serviceP['breakfast'] == "yes"){
+                              echo "<br> Breakfast";
+                            }
+                            if($serviceP['lunch'] == "yes"){
+                              echo "<br> Lunch";
+                            }
+                            if($serviceP['dinner'] == "yes"){
+                              echo "<br> Dinner";
+                            }
+                            if($serviceP['tea_time'] == "yes"){
+                              echo "<br> Tea time";
+                            }
+
+                            if($serviceP['buffet'] == "yes"){
+                              echo "<br><br> I want buffet set for my event.";
+                            }
+
+                            if($serviceP['no_of_servents'] != 0){
+                              echo "<br><br>No of servents -  $serviceP[no_of_servents]";
+                            }
+
+                            echo "</td>";
+
+                            echo "</tr>";
+
+
+                            echo "<tr>";
+                            echo "<td>Photographers</td>";
+                            echo "<td>";
+                            if($serviceP['photo_handle_EP'] == "yes"){
+                              echo"This service is needed to be handle by event planner.";
+                            }
+
+                            if($serviceP['estimated_budget_range'] != 0){
+                              echo "<br><br> Estimated budget range -  $serviceP[estimated_budget_range]";
+                            }
+                            else{
+                              echo "<br><br> Estimated budget range - Not mentioned.";
+                            }
+
+                            
+                            if($serviceP['photo_shoot_details'] != "no"){
+                              echo "<br><br>Photo shoot details - $serviceP[photo_shoot_details]";
+                            }
+                            else{
+                              echo "<br><br>Photo shoot details - Not mentioned. ";
+                            }
+
+                            echo "</td>";
+                            echo "</tr>";
+
+
+                            echo "<tr>";
+                            echo "<td>Music</td>";
+
+                            if($serviceP['music_handle_EP'] == "yes"){
+                              echo" <td>This service is needed to be handle by event planner.";
+                            }
+
+                            echo "<br><br> Music type - ";
+                            if($serviceP['music_band'] == "yes"){
+                              echo "<br> I want music band for my event.";
+                            }
+
+                            if($serviceP['solo_singer'] == "yes"){
+                              echo "<br> I want solo singer for my event.";
+                            }
+
+                            if($serviceP['dj'] == "yes"){
+                              echo "<br> I want dj set for my event.";
+                            }
+    
+                            echo "</td>";
+                            echo "</tr>";
+
+                            echo "<tr>";
+                            echo "<td>Dancing Groups</td>";
+
+                            if($serviceP['dance_handle_EP'] == "yes"){
+                              echo" <td>This service is needed to be handle by event planner.";
+                            }
+
+                            echo "<br><br>Dance Types -";
+
+                            if($serviceP['kandyan'] == "yes"){
+                              echo "<br>Kandyan";
+                            }
+
+                            if($serviceP['sabaragamuwa'] == "yes"){
+                              echo "<br> Sabaragamuwa";
+                            }
+
+                            if($serviceP['low_country'] == "yes"){
+                              echo "<br> Low country";
+                            }
+
+                            if($serviceP['western'] == "yes"){
+                              echo "<br> Western";
+                            }
+
+                            echo "</td>";
+                            echo "</tr>";
+
+
+                            echo "<tr>";
+                            echo "<td>Saloon</td>";
+
+                            echo "<td>";
+
+                            if($serviceP['salon_handle_EP'] == "yes"){
+                              echo"This service is needed to be handle by event planner.";
+                            }
+
+                            if($serviceP['saloon_type'] != "no"){
+                              echo"<br><br>Salon type - $serviceP[saloon_type]";
+                            }
+
+                            if($serviceP['hair_style'] == "yes"){
+                              echo"<br><br> I want hair style.";
+                            }
+
+                            if($serviceP['make_up'] == "yes"){
+                              echo"<br><br> I want make up.";
+                            }
+
+                            if($serviceP['no_of_dressers'] != 0){
+                              echo"<br><br> Number of dressers - $serviceP[no_of_dressers]";
+                            }
+
+                            echo "</td>";
+                            echo "</tr>";
+
+
+                            echo "<tr>";
+                            echo "<td>Cake & Sweet</td>";
+
+                            if($serviceP['cake_handle_EP'] == "yes"){
+                              echo"<td>This service is needed to be handle by event planner.";
+                            }
+
+                            echo "<br><br>Cake & sweetes type -" ;
+                            if($serviceP['wedding_cake'] == "yes"){
+                              echo"<br>I want wedding cake.";
+                            }
+
+                            if($serviceP['party_cake'] == "yes"){
+                              echo"<br> I want party cake.";
+                            }
+
+                            if($serviceP['sweet'] == "yes"){
+                              echo"<br> I want sweets.";
+                            }
+
+                            echo "</td>";
+                            echo "</tr>";
+
+
+                            echo "<tr>";
+                            echo "<td>decorations</td>";
+
+                            if($serviceP['deco_handle_EP'] == "yes"){
+                              echo"<td>This service is needed to be handle by event planner.";
+                            }
+
+                            echo "<br><br>Decoration details - ";
+                            if($serviceP['setibackP'] == "yes"){
+                              echo"<br> I want seti back & poruwa.";
+                            }
+
+                            if($serviceP['floral'] == "yes"){
+                              echo"<br> I want floral arrangement.";
+                            }
+
+                            echo "</td>";
+                            echo "</tr>";
+
+                            echo "<tr>";
+                            echo "<td>Sounds & Lightings</td>";
+
+                            if($serviceP['sound_handle_EP'] == "yes"){
+                              echo"<td>This service is needed to be handle by event planner.";
+                            }
+
+                            echo "<br><br>Sound & lighting details - ";
+                            if($serviceP['sound_service'] == "yes"){
+                              echo"<br>I want sound service.";
+                            }
+
+                            if($serviceP['lighting_service'] == "yes"){
+                              echo"<br> I want lighting service.";
+                            }
+
+                            if($serviceP['indoor_event'] == "yes" && $serviceP['outdoor_event'] == "yes"){
+                              echo"<br><br> Event environment is indoor, outdoor both.";
+                            }
+                            else if($serviceP['indoor_event'] == "yes"){
+                              echo"<br><br>Event environment is indoor venue."; 
+                            }
+                            else if($serviceP['outdoor_event'] == "yes"){
+                              echo"<br><br> Event environment is outdoor venue."; 
+                            }else{
+                              echo"<br><br> Event environmente is not selected.";  
+                            }
+
+                            echo "</td>";
+                            echo "</tr>";
+
+
+                            echo "<tr>";
+                            echo "<td>Dress Suppliers</td>";
+
+                            echo "<td>";
+
+                            if($serviceP['dressers_handle_EP'] == "yes"){
+                              echo"This service is needed to be handle by event planner.";
+                            }
+
+                            if($serviceP['male_dress'] == "yes" && $serviceP['female_dress'] == "yes"){
+                              echo"<br><br>I want both male and female dresses.";
+                            }
+                            else if($serviceP['male_dress'] == "yes"){
+                              echo"<br><br>I want male dresses."; 
+                            }
+                            else if($serviceP['female_dress'] == "yes"){
+                              echo"<br><br>I want male dresses."; 
+                            }else{
+                              echo"<br><br>Dress types are not selected.";  
+                            }
+
+                            echo "</td>";
+                            echo "</tr>";
+                          
+                          
+                          }else{
+                            echo "<tr>";
                            echo "<td>Venues & Halls</td>";
                            if($serviceP['seating_arrangement'] == "yes"){
-                            echo"<td> Seating arrangement - $serviceP[seating_arrangement] <br>";
+                            echo"<td> Seating arrangement - $serviceP[seating_arrangement]";
                            }
                            else{
-                            echo"<td> Seating arrangement - <br>";
+                            echo"<td> Seating arrangement - Not slected.";
                            }
                         
 
                            if($serviceP['indoor_venue'] == "yes" && $serviceP['outdoor_venue'] == "yes"){
-                            echo"<br> Venue type is indoor, outdoor both";
+                            echo"<br><br> Venue type is indoor, outdoor both.";
                            }
                            else if($serviceP['indoor_venue'] == "yes"){
-                            echo"<br>Venue type - Indoor venue."; 
+                            echo"<br><br>Venue type - Indoor venue."; 
                            }
                            else if($serviceP['outdoor_venue'] == "yes"){
-                            echo"<br> Venue type - Outdoor venue."; 
+                            echo"<br><br> Venue type - Outdoor venue."; 
                            }else{
-                            echo"<br> Venue type - ";  
+                            echo"<br><br> Venue type - ";  
                            }
 
 
                            if($serviceP['seti_back'] == "yes"){
-                            echo " <br> Seti back is want.";
+                            echo " <br><br> Seti back is want.";
                            }
                            else{
-                            echo " <br> Seti back - ";
+                            echo " <br> <br>Seti back - ";
                            }
 
 
                            if($serviceP['poruwa'] == "yes"){
-                            echo "<br>Poruwa is want.";
+                            echo "<br><br>Poruwa is want.";
                            }
                            else{
-                            echo " <br> Poruwa - ";
+                            echo " <br> <br>Poruwa - ";
                            }
 
 
 
                            if($serviceP['dancing_floor'] == "yes"){
-                            echo "<br> Dancing floor is want.";
+                            echo "<br><br> Dancing floor is want.";
                            }
                            else{
-                            echo " <br> Dancing floor - ";
+                            echo " <br><br> Dancing floor - ";
                            }
                            echo"</td>";
                            echo "</tr>";
@@ -112,11 +411,11 @@
                            }
 
                            if($serviceP['buffet'] == "yes"){
-                            echo "<br> I want buffet set for my event.";
+                            echo "<br><br> I want buffet set for my event.";
                            }
 
                            if($serviceP['no_of_servents'] != 0){
-                            echo "<br> $serviceP[no_of_servents]";
+                            echo "<br><br>No of servents -  $serviceP[no_of_servents]";
                            }
 
                            echo "</td>";
@@ -128,18 +427,18 @@
                            echo "<td>Photographers</td>";
                            echo "<td>";
                            if($serviceP['estimated_budget_range'] != 0){
-                            echo " <br> Estimated budget range -  $serviceP[estimated_budget_range]";
+                            echo "Estimated budget range -  $serviceP[estimated_budget_range]";
                            }
                            else{
-                            echo "<br>Estimated budget range - ";
+                            echo "Estimated budget range - Not mentioned.";
                            }
 
                            
                            if($serviceP['photo_shoot_details'] != "no"){
-                            echo "<br> $serviceP[photo_shoot_details]";
+                            echo "<br><br>Photo shoot details - $serviceP[photo_shoot_details]";
                            }
                            else{
-                            echo "<br>Photo shoot details - ";
+                            echo "<br><br>Photo shoot details - Not mentioned. ";
                            }
 
                            echo "</td>";
@@ -170,7 +469,7 @@
                            echo "<td>Dance Types -";
 
                            if($serviceP['kandyan'] == "yes"){
-                            echo "Kandyan";
+                            echo "<br>Kandyan";
                            }
 
                            if($serviceP['sabaragamuwa'] == "yes"){
@@ -199,15 +498,15 @@
                            }
 
                            if($serviceP['hair_style'] == "yes"){
-                            echo"<br> I want hair style.";
+                            echo"<br><br> I want hair style.";
                            }
 
                            if($serviceP['make_up'] == "yes"){
-                            echo"<br> I want make up.";
+                            echo"<br><br> I want make up.";
                            }
 
                            if($serviceP['no_of_dressers'] != 0){
-                            echo"<br> Number of dressers - $serviceP[no_of_dressers]";
+                            echo"<br><br> Number of dressers - $serviceP[no_of_dressers]";
                            }
 
                            echo "</td>";
@@ -219,7 +518,7 @@
 
                            echo "<td>Cake & sweetes type -" ;
                            if($serviceP['wedding_cake'] == "yes"){
-                            echo"I want wedding cake.";
+                            echo"<br>I want wedding cake.";
                            }
 
                            if($serviceP['party_cake'] == "yes"){
@@ -239,7 +538,7 @@
 
                            echo "<td>Decoration details - ";
                            if($serviceP['setibackP'] == "yes"){
-                            echo"I want seti back & poruwa.";
+                            echo"<br> I want seti back & poruwa.";
                            }
 
                            if($serviceP['floral'] == "yes"){
@@ -254,7 +553,7 @@
 
                            echo "<td>Sound & lighting details - ";
                            if($serviceP['sound_service'] == "yes"){
-                            echo"I want sound service.";
+                            echo"<br>I want sound service.";
                            }
 
                            if($serviceP['lighting_service'] == "yes"){
@@ -262,15 +561,15 @@
                            }
 
                            if($serviceP['indoor_event'] == "yes" && $serviceP['outdoor_event'] == "yes"){
-                            echo"<br> Event environment is indoor, outdoor both";
+                            echo"<br><br> Event environment is indoor, outdoor both.";
                            }
                            else if($serviceP['indoor_event'] == "yes"){
-                            echo"<br>Event environment is indoor venue."; 
+                            echo"<br><br>Event environment is indoor venue."; 
                            }
                            else if($serviceP['outdoor_event'] == "yes"){
-                            echo"<br> Event environment is outdoor venue."; 
+                            echo"<br><br> Event environment is outdoor venue."; 
                            }else{
-                            echo"<br> Event environmente is not selected.";  
+                            echo"<br><br> Event environmente is not selected.";  
                            }
 
                            echo "</td>";
@@ -282,21 +581,22 @@
 
                            echo "<td>";
                            if($serviceP['male_dress'] == "yes" && $serviceP['female_dress'] == "yes"){
-                            echo"<br> I want both male and female dresses.";
+                            echo"I want both male and female dresses.";
                            }
                            else if($serviceP['male_dress'] == "yes"){
-                            echo"<br>I want male dresses."; 
+                            echo"I want male dresses."; 
                            }
                            else if($serviceP['female_dress'] == "yes"){
-                            echo"<br> I want male dresses."; 
+                            echo"I want male dresses."; 
                            }else{
-                            echo"<br>Dress types are not selected.";  
+                            echo"Dress types are not selected.";  
                            }
 
                            echo "</td>";
                            echo "</tr>";
+                          }
+                          
 
-                        
                         ?>
                                             
                     </table>
