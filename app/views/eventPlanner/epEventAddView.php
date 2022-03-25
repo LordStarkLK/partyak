@@ -12,11 +12,13 @@
 
 <body>
     <header>
-        <?php linkPhp("vendorNavigation") ?>
+        <?php
+        $service_id=$data['service_id'];
+        linkPhp("vendorNavigation") ?>
     </header>
     <div class="container">
         <div class="glass center form_area">
-            <a href="<?php echo BASEURL . '/epMyEvent'; ?>"><button class="btn back">Back</button></a>
+            <a href="<?php echo BASEURL . '/epNewMyEvent/index/'.$service_id.''; ?>"><button class="btn back">Back</button></a>
             <form action="<?php echo BASEURL . '/epEventAdd/addEvent'; ?>" class="form-area" method="POST" enctype="multipart/form-data">
                 <input type="text" name="event_type" placeholder="Event Type" required><br>
                 <input type="date" name="date" placeholder="Date" required><br>

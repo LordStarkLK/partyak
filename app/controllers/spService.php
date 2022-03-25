@@ -11,9 +11,18 @@ class SpService extends FrameworkPartyak
         $this->ServiceModel = $this->model("SpServiceModel");
     }
 
-    public function index($service_id)
+    public function index(...$ids)
     {
+        $service_id = $ids[0];
+        if(isset($ids[1])){
+            // $planning_id = $ids[1];
+            $data['planning_id'] = $ids[1];
+        }
         $id = $_SESSION['userId'];
+
+        $data['service_id'] = $service_id;
+        // $serName = 'Avendra';
+
 
         $data['service'] = $this->ServiceModel->getServiceInfo($service_id);
         $data['package_data'] = $this->ServiceModel->getPackageInfo($service_id);
@@ -65,6 +74,7 @@ class SpService extends FrameworkPartyak
         $data["errors"] = $errors;
         $this->index($service_id);
     }
+
     public function alterReview($service_id)
     {
         $id = $_SESSION['userId'];
@@ -107,14 +117,19 @@ class SpService extends FrameworkPartyak
         $this->index($service_id);
     }
 
-    //Get booking details
-    public function bookingDet($service_id)
-    {
 
+    //Get booking details
+    public function bookingDet(...$ids)
+    {
         $id = $_SESSION['userId'];
 
         $errors = array();
         $errors["reservedate"] = "";
+
+        $service_id = $ids[0];
+        
+
+        
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -140,8 +155,17 @@ class SpService extends FrameworkPartyak
             if ($numberOfErrors == 0) {
                 //Insert data
                 $userId = $this->getSession("userId");
-                $this->ServiceModel->bookingDetail($eventType, $guestCount, $reserveDate, $packageType, $id, $service_id,$userId);
-                $this->index($service_id);
+                if(isset($ids[1])){
+                    $planning_id = $ids[1];
+                    $this->ServiceModel->bookingDetailWithEvent($eventType, $guestCount, $reserveDate, $packageType, $id, $service_id,$userId,$planning_id);
+                    $this->index($service_id,$planning_id);
+
+                }else{
+                    $this->ServiceModel->bookingDetail($eventType, $guestCount, $reserveDate, $packageType, $id, $service_id,$userId);
+                    $this->index($service_id);
+                }
+                
+                
                 // $this->redirect('spService');
             }
         }
@@ -152,6 +176,7 @@ class SpService extends FrameworkPartyak
 
     //Get booking details for event planner the request coming from through planning event
     public function bookingDetEp($service_id)
+
     {
 
         $id = $_SESSION['userId'];

@@ -10,10 +10,13 @@
     <?php linkCSS("navigation"); ?>
 
     <?php $paymentDet = $data['payment_det']; ?>
+    
 </head>
 
 
 <body>
+    <?php $booking_id = $data['booking_id']; ?>
+    <?php $vendor_id = $data['vendor_id']; ?>
     <header>
         <?php linkPhp("navigation") ?>
     </header>
@@ -74,7 +77,9 @@
                         <input class="input" type="text" name="address" placeholder="Street">
                         <input class="input" type="text" name="city" placeholder="City">
                         <input class="input" type="hidden" name="country" placeholder="Sri Lanka"><br><br>
-                        <input class="button" type="submit" value="Buy Now">
+                        <input class="input" type="hidden" name="booking_id" value="<?php echo $booking_id; ?>">
+                        <input class="input" type="hidden" name="vendor_id" value="<?php echo $vendor_id; ?>">
+                        <input class="button" id="mySubmitButton" type="submit" value="Buy Now">
                     </form>
                 </div>
             </div>
@@ -83,6 +88,9 @@
 
 
     </html>
+    <?php linkJS("lib/jquery-3.6.0.min"); ?>
+   
+    <?php linkJS("customer/paymentForm"); ?>
 </body>
 
 </html>
