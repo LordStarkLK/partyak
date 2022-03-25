@@ -4,7 +4,7 @@
   display: none;
   color:white;
   position: fixed;
-  bottom: 70px;
+  bottom: 40px;
   right: -20px;
   background: linear-gradient(114.1deg, rgba(40,40,40,0.36) 18.52%, rgba(15, 15, 15, 0.12) 98.52%);
   backdrop-filter: blur(120px);
