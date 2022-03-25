@@ -119,7 +119,7 @@
                                         
                                         </div>
                                         </div>
-                                        <button>View Service page</button>
+                                        <button onclick=\"window.location=' " . BASEURL . "/spService/index/$row[service_id]'\">View Service page</button>
                                         </div>
 
     

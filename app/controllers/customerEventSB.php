@@ -5,7 +5,7 @@ class CustomerEventSB extends FrameworkPartyak{
     public function __construct(){
         $this->helper("linker");
         $this->preventBack("customer");
-        $this->user = $this->model('customerEventSBModel');
+        $this->EventSB = $this->model('customerEventSBModel');
     }
     
     public function index($planning_id){
@@ -15,8 +15,19 @@ class CustomerEventSB extends FrameworkPartyak{
         // }
         // $this->preventBack("customer");
 
-        $data['event']= $this->user->getEventDetails($planning_id);
-        $data['service']= $this->user->getServicePDetails($planning_id);
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+            //Get data from the form submission
+            $taskName = $_POST["todo_input"];
+            // $planning_id=42;
+
+            $this->EventSB->addToDoTasks($taskName,$planning_id);
+        }
+
+        $data['event']= $this->EventSB->getEventDetails($planning_id);
+        $data['service']= $this->EventSB->getServicePDetails($planning_id);
+        $data['todo']= $this->EventSB->getTodoTasks($planning_id);
         $this->view("customer/customerEventSBView",$data);
     }
 

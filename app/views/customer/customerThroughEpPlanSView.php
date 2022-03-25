@@ -9,6 +9,7 @@
      <?php linkCSS("customer/customerThroughEpPlanS"); ?>
     <?php linkCSS("customerNavigation"); ?>
     <?php linkCSS("footer");?>
+    <?php $row=$data['eventDetail'];?>
    </head>
 <body>
     <header>
@@ -16,74 +17,14 @@
     </header>
 <div class="container">
   <div class="side">
-    <div class="sidebar">
-    
-      <ul class="sidenav-links">
-      <li>
-            <a href="#"  id="ve">
-              <i class="fas fa-hotel" ></i>
-              <span class="links_name" > Venues & Halls</span>
-            </a>
-          </li>
-        <li>
-          <a href="#"  id="ca">
-            <i class="fas fa-utensils" ></i>
-            <span class="links_name" >Catering Service</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" id="ph">
-            <i class="fas fa-camera" ></i>
-            <span class="links_name" >Photographers</span>
-          </a>
-        </li>
-        
-        <li>
-          <a href="#" id="mu">
-            <i class="fas fa-guitar" ></i>
-            <span class="links_name" >Musical Service</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" id= "da">
-            <i class="fas fa-child" ></i>
-            <span class="links_name" >Dancing Groups</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" id="sa">
-            <i class="fas fa-building" ></i>
-            <span class="links_name" >Saloon</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" id="cak">
-            <i class="fas fa-birthday-cake" ></i>
-            <span class="links_name" >Cake & Sweet</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" id="dec">
-            <i class="fas fa-holly-berry" ></i>
-            <span class="links_name" >Decorations</span>
-          </a>
-        </li>
-        <li>
-            <a href="#" id="so">
-                <i class="fas fa-microphone" ></i>
-              <span class="links_name" >Sounds & Lightings</span>
-            </a>
-        </li>
-        <li>
-            <a href="#" id="dr">
-                <i class="fas fa-female" ></i>
-              <span class="links_name" >Dress Suppliers</span>
-            </a>
-          </li>
-      </ul>
+    <div class="sidebar" id="sidee">
+        <div class="sideDe">
+          <p>Now you can add service details which are required for your event.</p>
+        </div> 
+
+        <br><br><img <?php srcIMG("servicepees.png") ?> alt="Chance Flowers"> 
     </div>
   </div>
-
 
 
 <form action="<?php echo BASEURL . '/customerThroughEpPlanS/index'; ?>" class="form-area" method="POST">
@@ -169,7 +110,7 @@
 
         <div class="input-box07">
          
-         <p3>Please put a tick when this service is needed to be handle by event planner</p3>
+         <p3>Please put a tick when this service is needed to be handle by event planner.</p3>
            
            <div class="handletick">
              <input type="checkbox" placeholder="Agree" value="yes" name="venueAgree">
@@ -254,7 +195,7 @@
 
         <div class="input-box07">
          
-         <p3>Please put a tick when this service is needed to be handle by event planner</p3>
+         <p3>Please put a tick when this service is needed to be handle by event planner.</p3>
            
            <div class="handletick">
              <input type="checkbox" placeholder="Agree" value="yes" name="cateringAgree">
@@ -285,7 +226,7 @@
 
         <div class="input-box07">
          
-         <p3>Please put a tick when this service is needed to be handle by event planner</p3>
+         <p3>Please put a tick when this service is needed to be handle by event planner.</p3>
            
            <div class="handletick">
              <input type="checkbox" placeholder="Agree" value="yes" name="photoAgree">
@@ -341,7 +282,7 @@
 
         <div class="input-box07">
          
-         <p3>Please put a tick when this service is needed to be handle by event planner</p3>
+         <p3>Please put a tick when this service is needed to be handle by event planner.</p3>
            
            <div class="handletick">
              <input type="checkbox" placeholder="Agree" value="yes" name="musicAgree">
@@ -406,7 +347,7 @@
 
         <div class="input-box07">
          
-         <p3>Please put a tick when this service is needed to be handle by event planner</p3>
+         <p3>Please put a tick when this service is needed to be handle by event planner.</p3>
            
            <div class="handletick">
              <input type="checkbox" placeholder="Agree" value="yes" name="dancesAgree">
@@ -469,7 +410,7 @@
 
         <div class="input-box07">
          
-         <p3>Please put a tick when this service is needed to be handle by event planner</p3>
+         <p3>Please put a tick when this service is needed to be handle by event planner.</p3>
            
            <div class="handletick">
              <input type="checkbox" placeholder="Agree" value="yes" name="salonAgree">
@@ -528,7 +469,7 @@
 
         <div class="input-box07">
          
-         <p3>Please put a tick when this service is needed to be handle by event planner</p3>
+         <p3>Please put a tick when this service is needed to be handle by event planner.</p3>
            
            <div class="handletick">
              <input type="checkbox" placeholder="Agree" value="yes" name="cakeAgree">
@@ -572,7 +513,7 @@
 
         <div class="input-box07">
          
-         <p3>Please put a tick when this service is needed to be handle by event planner</p3>
+         <p3>Please put a tick when this service is needed to be handle by event planner.</p3>
            
            <div class="handletick">
              <input type="checkbox" placeholder="Agree" value="yes" name="decoAgree">
@@ -642,7 +583,7 @@
 
         <div class="input-box07">
          
-         <p3>Please put a tick when this service is needed to be handle by event planner</p3>
+         <p3>Please put a tick when this service is needed to be handle by event planner.</p3>
            
            <div class="handletick">
              <input type="checkbox" placeholder="Agree" value="yes" name="soundsAgree">
@@ -686,7 +627,7 @@
 
         <div class="input-box07">
          
-         <p3>Please put a tick when this service is needed to be handle by event planner</p3>
+         <p3>Please put a tick when this service is needed to be handle by event planner.</p3>
            
            <div class="handletick">
              <input type="checkbox" placeholder="Agree" value="yes" name="dressAgree">
@@ -699,7 +640,7 @@
 
       
       <div class="save">
-          <button type="Submit" class="savebb"  value="Submit">Select Event Planner</a></button>
+          <button type="Submit" name="submit" class="savebb"  value="Submit">Submit</a></button>
       </div>
  
   </div>
@@ -707,6 +648,27 @@
 
 
 </form>
+
+
+<!-- Successful submit -->
+<?php
+      if (isset($_POST['submit'])) {
+        echo "<div class=\"sccuess-event\" onclick=\"document.getElementById($row[planning_id]).style.display='block'\"></div>
+        hi
+              <div id=\"$row[planning_id]\" class=\"modal\">
+                  <form class=\"modal-content\" action=\"/action_page.php\">
+                    <div class=\"container-modal\">
+                      <h1>Success!</h1>
+                      <br><p>Your service details successfully submitted.Now you can select your event planner.</p>
+                        
+                      <div class=\"clearfix\">
+                        <button type=\"button\" class=\"deletebtn\" onclick=\"window.location=' " . BASEURL . "/customerContactEventPlanner/index/$row[planning_id]'\">Select Event Planner</button>
+                      </div>
+                    </div>
+                  </form>
+              </div>";
+      }
+?>
 
 
       </div>

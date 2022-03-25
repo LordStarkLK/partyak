@@ -123,7 +123,7 @@
       <form class=\"modal-content\" action=\"/action_page.php\">
         <div class=\"container-modal\">
           <h1>Delete Account</h1>
-          <p>Are you sure you want to delete your account?</p>
+          <p>Are you sure you want to delete this account?</p>
     
           <div class=\"clearfix\">
             <button type=\"button\" class=\"cancelbtn\" onclick=\"document.getElementById('$row[user_id]').style.display='none'\">Cancel</button>

@@ -4,11 +4,10 @@
 class CustomerThroughEpPlanS extends FrameworkPartyak{
     public function __construct(){
         $this->helper("linker");
-
+        $this->preventBack("customer");
         //include this to call CRUD functions from the controller files
         $this->ThroughEpSModel = $this->model("customerThroughEpPlanSModel");
 
-        $this->preventBack("customer");
     }
 
     
@@ -19,9 +18,11 @@ class CustomerThroughEpPlanS extends FrameworkPartyak{
         //     $this->redirect("login");
         // }
         // $this->preventBack("customer");
-        $this->view("customer/customerThroughEpPlanSView");
+        
         
         $id=$_SESSION['userId'];
+        $data['eventDetail'] = $this->ThroughEpSModel->getEventDetails($id);
+        $this->view("customer/customerThroughEpPlanSView",$data);
 
 
 

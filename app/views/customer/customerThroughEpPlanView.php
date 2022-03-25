@@ -12,6 +12,7 @@
     <?php linkCSS("customer/customerThroughEpPlan"); ?>
     <?php linkCSS("customerNavigation"); ?>
     <?php linkCSS("footer");?>
+    <?php $row=$data['eventDetail'];?>
    </head>
 <body>
     <header>
@@ -20,7 +21,6 @@
 <div class="container">
   <div class="side">
     <div class="sidebar">
-        <button type="button" class="buttonS" name="Own" > <a href ="<?php echo BASEURL . '/customerThroughEpPlanS'; ?>"> Add Service Details</a></button> 
         <div class="sideDe">
           <p>After giving event details successfully, you can add service details which are required for your event. Then you can contact Event Planner.</p>
         </div> 
@@ -118,11 +118,32 @@
           </div>
 
           <div class="save">
-            <button type="submit" class="saveb" value="Submit">Submit</button>
+            <button type="submit" name="submit" class="saveb" value="Submit">Submit</button>
           </div> 
 
     </form>
+
+    <!-- Successful submit -->
+    <?php
+      if (isset($_POST['submit'])) {
+        echo "<div class=\"sccuess-event\" onclick=\"document.getElementById($row[planning_id]).style.display='block'\"></div>
+              <div id=\"id\" class=\"modal\">
+                  <form class=\"modal-content\" action=\"/action_page.php\">
+                    <div class=\"container-modal\">
+                      <h1>Success!</h1>
+                      <br><p>Your event details successfully submitted.</p>
+                      <br><p>Now you should add your service details which are requied for you.</p>
+                          
+                      <div class=\"clearfix\">
+                        <button type=\"button\" class=\"deletebtn\" onclick=\"window.location=' " . BASEURL . "/customerThroughEpPlanS'\">OK</button>
+                      </div>
+                    </div>
+                  </form>
+              </div>";
+      }
+    ?>
   </div> 
+  
 </div>
 
 </body>

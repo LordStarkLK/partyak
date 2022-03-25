@@ -58,27 +58,73 @@
                 if(($date > $row['start_date']) && ($date <= $row['end_date'])){
                   $status = 'Ongoing';
                 }
+
+                if($date == $row['start_date']){
+                  $status = 'Happening';
+                
+                }
                
                 echo"
                 <tr>
                   <td>$i</td>
                   <td>$row[event_name]</td>
                   <td>$row[event_type]</td>
-                  <td>$row[location]</td>
-                  <td>$row[start_date] to $row[end_date]</td>
+                  <td>$row[location]</td>";
+                  if($row['end_date'] != "0000-00-00"){
+                    echo"<td>$row[start_date] to $row[end_date]</td>";
+                  }else{
+                    echo"<td>$row[start_date]</td>";
+                  }
+                  echo"
                   <td>$row[noOfGuest]</td>
                   <td>$row[plan_type]</td>
                   <td>$status</td>
                   <td><button class=\"go-event\"><a href =\" ".BASEURL ."/customerEventSB/index/$row[planning_id]\">Go</a></button></td>";
                 if($status == "Complete"){
-                  echo "<td><button class=\"cancel-event\"><a href =\" ".BASEURL ."/customerMyEvent/deleteEvent/$row[planning_id]\">Remove</button></td>";
+                  echo "
+                  <td>  
+                    <div class=\"btn-group\">
+                        <button class=\"cancel-event\" onclick=\"document.getElementById('$row[planning_id]').style.display='block'\">Remove</button>   
+                    </div>
+
+                    <div id=\"$row[planning_id]\" class=\"modal\">
+                      <span onclick=\"document.getElementById('$row[planning_id]').style.display='none'\" class=\"close\" title=\"Close Modal\">&times;</span>
+                      <form class=\"modal-content\" action=\"/action_page.php\">
+                        <div class=\"container-modal\">
+                          <h1>Remove Event?</h1>
+                          <br><br><p>Are you sure you want to remove your event?</p>
+                    
+                          <div class=\"clearfix\">
+                            <button type=\"button\" class=\"cancelbtn\" onclick=\"document.getElementById('$row[planning_id]').style.display='none'\">No</button>
+                            <button type=\"button\" class=\"deletebtn\" onclick=\"window.location=' " . BASEURL . "/customerMyEvent/deleteEvent/$row[planning_id]'\">Yes</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+
+                  
+                  </td>";
                 }else{
                   echo "
                   <td>  
                     <div class=\"btn-group\">
                         <button class=\"edit-event\"><a href =\" ".BASEURL ."/customerOnYourOwnPlan/editEvent/$row[planning_id]\">Edit</a></button>
-                        <button class=\"cancel-event\"><a href =\" ".BASEURL ."/customerMyEvent/deleteEvent/$row[planning_id]\">Cancel</a></button>
-                        
+                        <button class=\"cancel-event\" onclick=\"document.getElementById('$row[planning_id]').style.display='block'\">Cancel</button>   
+                    </div>
+
+                    <div id=\"$row[planning_id]\" class=\"modal\">
+                      <span onclick=\"document.getElementById('$row[planning_id]').style.display='none'\" class=\"close\" title=\"Close Modal\">&times;</span>
+                      <form class=\"modal-content\" action=\"/action_page.php\">
+                        <div class=\"container-modal\">
+                          <h1>Cancel Event?</h1>
+                          <br><br><p>Are you sure you want to cancel your event?</p>
+                    
+                          <div class=\"clearfix\">
+                            <button type=\"button\" class=\"cancelbtn\" onclick=\"document.getElementById('$row[planning_id]').style.display='none'\">No</button>
+                            <button type=\"button\" class=\"deletebtn\" onclick=\"window.location=' " . BASEURL . "/customerMyEvent/deleteEvent/$row[planning_id]'\">Yes</button>
+                          </div>
+                        </div>
+                      </form>
                     </div>
 
                   
