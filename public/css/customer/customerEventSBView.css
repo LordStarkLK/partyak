@@ -71,6 +71,27 @@ body{
 
 }
 
+.tab a{
+  position: relative;
+  font-size: 24px;
+  line-height: 38px;
+  text-align: center;
+  padding-left:1%;
+  padding-right: 1%;;
+  margin-left:28%;
+  margin-top:0%;
+  height: 38px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #202020;
+  border-radius: 5px;
+}
+
+.tab a:hover {
+  background-color:#9593ff;
+  cursor: pointer;
+}
+
 .custopic table {
     position: relative;
     font-family: arial, sans-serif;
@@ -106,10 +127,16 @@ body{
 }
 
 .eventdetails button{
-  background-color: #5B5B5B;
+  background-color: #202020;;
   color: #FFFFFF;
   border-color: none;
+  margin-left:25%;
   padding:2%;
+}
+
+.eventdetails button:hover {
+  background-color:#9593ff;
+  cursor: pointer;
 }
 
 .custodo th, .cusin th, .cusdone th {
