@@ -18,6 +18,7 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <?php $errors = $data["errors"]; ?>
 </head>
 
 <body>
@@ -110,6 +111,8 @@
                                         </div>
                                         <br>
                                         <div class=\"row\">
+                                            
+
                                             <input type=\"submit\" value=\"Submit\">
                                         </div>
                                         </form>
@@ -173,7 +176,8 @@
                     </div> -->
 
 
-
+                    <div class = "error"><?php echo $errors["title"] ?></div>
+                    <div class = "error"><?php echo $errors["content"] ?></div>
 
 
                 <button class="addnew" id="myBtn" style="vertical-align:middle" onclick="addnew()"><span>Add new Section
