@@ -53,7 +53,7 @@ class SpBookingModel extends Database
     }
 
     public function bookingPaymentDetails($service_id){
-        $query = " SELECT user.email, user.f_name, payment.amount, payment.status FROM user, booking, payment WHERE booking.customer_id = user.user_id AND payment.booking_id=booking.booking_id AND booking.service_id='$service_id' ORDER BY booking.event_date DESC ";
+        $query = " SELECT user.email, user.f_name, payment.amount, payment.p_status FROM user, booking, payment WHERE booking.customer_id = user.user_id AND payment.booking_id=booking.booking_id AND booking.service_id='$service_id' ORDER BY booking.event_date DESC ";
         $result = mysqli_query($GLOBALS['db'],$query);
         if(mysqli_num_rows($result) > 0){
             return $result;

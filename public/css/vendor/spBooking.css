@@ -188,6 +188,7 @@ width: 100%;
 .table-content td {
       padding: 5px;
       border: 2px solid #000000;
+      color: black;
 }
 .table-content tbody tr {
     background-color: #b4dbff;
@@ -215,6 +216,9 @@ width: 100%;
 .accept-booking:hover , .reject-booking:hover {
     background-color: rgb(0, 0, 0);
     cursor: pointer;
+}
+#th{
+  color: black;
 }
 
 @media (max-width: 1240px) {
