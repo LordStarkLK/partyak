@@ -315,11 +315,14 @@
         </div> 
     ";
             } ?>
+
+        <!-- Booking request  -->
         <?php
+        if(isset($data['planning_id'])){
             echo "        
         <div class=\"right_side\">
             <div class=\"request_container\">
-            <form action=\"http://localhost/partyak/spService/bookingDet/$row[service_id] \" class=\"form-area\" method=\"POST\">
+            <form action=\"http://localhost/partyak/spService/bookingDet/$row[service_id]/$data[planning_id]\" class=\"form-area\" method=\"POST\">
                 Reserve For
             <div class=\"reserve_price\">
                 <div class=\"price\">
@@ -367,7 +370,64 @@
                     <select id=\"pType\" name=\"packageType\">
 
         ";
+        }else{
+            echo "        
+            <div class=\"right_side\">
+                <div class=\"request_container\">
+                <form action=\"http://localhost/partyak/spService/bookingDet/$row[service_id] \" class=\"form-area\" method=\"POST\">
+                    Reserve For
+                <div class=\"reserve_price\">
+                    <div class=\"price\">
+                        $row[advance_price]
+                    </div>
+                    <div class=\"lkr\">
+                        LKR
+                    </div>
+                </div>
+                <div class=\"reserve_details\">
+                    <div class=\"row\">
+                        <div class=\"col_name\">
+                            <label>Event type</label>
+                        </div>
+                        <div class=\"col_input\">
+                            <select id=\"eType\" name=\"eventType\">
+                                <option value=\"Wedding\">Wedding</option>
+                                <option value=\"Party\">Party/Festival</option>
+                                <option value=\"Cooperative event\">Cooperative event</option>
+                                <option value=\"Personal\">Personalize event</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class=\"row\">
+                        <div class=\"col_name\">
+                            <label>Guest count</label>
+                        </div>
+                        <div class=\"col_input\">
+                            <input type=\"text\" id=\"sname\" name=\"guestcount\" placeholder>
+                        </div>
+                    </div>
+                    <div class=\"row\">
+                        <div class=\"col_name\">
+                            <label>Pick your date</label>
+                        </div>
+                        <div class=\"col_input\">
+                            <input type=\"date\" id=\"sname\" name=\"reservedate\" placeholder>
+                        </div>
+                    </div>
+                    <div class=\"row\">
+                    <div class=\"col_name\">
+                        <label>Pick your package</label>
+                    </div>
+                    <div class=\"col_input\">
+                        <select id=\"pType\" name=\"packageType\">
+    
+            ";
+        }
+           
         } ?>
+
+        <!-- Pacakge  -->
+
         <?php while ($row2 = mysqli_fetch_assoc($data['package_data'])) {
 
 
@@ -541,6 +601,8 @@
             <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
         </div>
     </div>
+
+    <!-- Review service -->
     <div class="review-section">
         <h1>Reviews</h1>
         <div class="latest-review">

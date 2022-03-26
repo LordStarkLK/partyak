@@ -8,6 +8,7 @@
     <?php linkCSS("customerNavigation"); ?>
     <?php linkCSS("footer");?>
     <?php $serviceI=$data['ep_detail'];?>   
+    <?php $planning_id = $data['planning_id']; ?>
    
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <!-- <link rel="stylesheet" href="Customer.browse.SearchVendor.css"> -->
@@ -34,10 +35,10 @@
                                 while($row=mysqli_fetch_assoc($data['ep_detail'])  ){
                                   echo "<td>";
                                   if($row['service_image']){
-                                    echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
+                                    echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]/$planning_id\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
                                   }else{
                                     $row['service_image']="default.png";
-                                    echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
+                                    echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]/$planning_id\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
                                   }
                                   echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
                                   echo "</td>"; 

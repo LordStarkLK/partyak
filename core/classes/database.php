@@ -12,6 +12,11 @@ class Database
     public $database = "u117929562_partyak";
     public $password = "";
 
+    // public $host = "localhost";
+    // public $user = "root";
+    // public $database = "u117929562_partyak";
+    // public $password = "";
+
     public function __construct()
     {
         $GLOBALS['db'] = mysqli_connect($this->host, $this->user, $this->password, $this->database);

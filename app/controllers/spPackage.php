@@ -15,9 +15,9 @@ class SpPackage extends FrameworkPartyak
     public function index($service_id)
     {
         //initilaize these varibles for server 
-
         $id=$_SESSION['userId'];
         $data['service_id'] = $service_id;
+        $data['userType'] = $this->PackageModel->getUserType($service_id);
 
         $errors = array();
         $errors["serviceName"] = "";
@@ -74,7 +74,6 @@ class SpPackage extends FrameworkPartyak
             $data['serName'] = $this->PackageModel->getReleventServiceName($service_id);
             // echo "Hi";
             $this->view("vendor/spPackageView" , $data);
-
     }
 
     public function updatePackage($package_id){

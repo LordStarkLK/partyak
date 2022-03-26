@@ -133,7 +133,7 @@ class CustomerContactServiceProviderModel extends database
             }
 
         }else{
-            $query = "SELECT * FROM other_service WHERE service_type='saloon' AND ( (service_location LIKE '%{$city}%') OR (saloon_type LIKE '%{$gender}%')  )";
+            $query = "SELECT * FROM other_service WHERE (service_type='saloon') AND ( (service_location LIKE '%{$city}%') OR (saloon_type LIKE '%{$gender}%')  )";
             $result = mysqli_query($GLOBALS['db'],$query);
             if(mysqli_num_rows($result) >= 0){
                 return $result;

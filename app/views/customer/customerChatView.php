@@ -20,50 +20,6 @@
         <?php linkPhp("customerNavigation") ?>
     </header>
     <div class="container">
-        <div class="sidebar">
-
-            <ul class="sidenav-links">
-                <li>
-                    <a href="#">
-                        <i class="fas fa-user-tie"></i>
-                        <span class="links_name">Personal Info</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo BASEURL . '/customerProfileBooking'; ?>">
-                        <i class="fas fa-book"></i>
-                        <span class="links_name">Booking Details</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo BASEURL . '/customerProfilePaymentD'; ?>">
-                        <i class="fas fa-money-check-alt"></i>
-                        <span class="links_name">Payment Details</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo BASEURL . '/customerChat'; ?>">
-                        <i class="fas fa-comments"></i>
-                        <span class="links_name">Chat</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <i class="fas fa-bell"></i>
-                        <span class="links_name">Notification</span>
-                    </a>
-                </li>
-                <li>
-
-                    <a href="<?php echo BASEURL . '/customerProfile/resetPassword'; ?>">
-                        <i class="fas fa-unlock"></i>
-                        <span class="links_name">Change Password</span>
-                    </a>
-                </li>
-
-            </ul>
-        </div>
 
         <section class="home-section">
             <nav>

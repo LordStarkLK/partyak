@@ -34,12 +34,12 @@
               <span class="links_name">Booking Details</span>
             </a>
           </li>
-        <li>
+        <!-- <li>
           <a href="<?php echo BASEURL . '/customerProfilePaymentD'; ?>">
             <i class="fas fa-money-check-alt" ></i>
             <span class="links_name">Payment Details</span>
           </a>
-        </li>
+        </li> -->
         <li>
           <a href="<?php echo BASEURL . '/customerChat'; ?>">
             <i class="fas fa-comments" ></i>
@@ -47,12 +47,12 @@
           </a>
         </li>
         
-        <li>
+        <!-- <li>
           <a href="#">
             <i class="fas fa-bell" ></i>
             <span class="links_name">Notification</span>
           </a>
-        </li>
+        </li> -->
         <li>
 
           <a href="<?php echo BASEURL . '/customerProfile/resetPassword'; ?>">
@@ -246,42 +246,42 @@
 
 
 <script>
-const wrapper = document.querySelector(".wrapper");
-const fileName = document.querySelector(".file-name");
-const defaultBtn = document.querySelector("#default-btn");
-const customBtn = document.querySelector("#custom-btn");
-const cancelBtn = document.querySelector("#cancel-btn i");
-// const img = document.querySelector("img");
-const img = document.getElementById("contentImg")
-let regExp = /[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_ ]+$/;
+    const wrapper = document.querySelector(".wrapper");
+    const fileName = document.querySelector(".file-name");
+    const defaultBtn = document.querySelector("#default-btn");
+    const customBtn = document.querySelector("#custom-btn");
+    const cancelBtn = document.querySelector("#cancel-btn i");
+    // const img = document.querySelector("img");
+    const img = document.getElementById("contentImg")
+    let regExp = /[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_ ]+$/;
 
-function defaultBtnActive(){
-    defaultBtn.click();
-}
+    function defaultBtnActive(){
+        defaultBtn.click();
+    }
 
-defaultBtn.addEventListener("change", function(){
-    const file = this.files[0];
-    if(file){
-        const reader = new FileReader();
-        reader.onload = function(){
-            const result = reader.result;
-            img.src = result;
-            wrapper.classList.add("active");
+    defaultBtn.addEventListener("change", function(){
+        const file = this.files[0];
+        if(file){
+            const reader = new FileReader();
+            reader.onload = function(){
+                const result = reader.result;
+                img.src = result;
+                wrapper.classList.add("active");
+            }
+            cancelBtn.addEventListener("click", function(){
+                img.src = "";
+                wrapper.classList.remove("active");
+            })
+            //read the content of the file
+            reader.readAsDataURL(file);
         }
-        cancelBtn.addEventListener("click", function(){
-            img.src = "";
-            wrapper.classList.remove("active");
-        })
-        //read the content of the file
-        reader.readAsDataURL(file);
-    }
 
-    if(this.value){
-        let valueStore = this.value.match(regExp);
-        fileName.textContent = valueStore;
-    }
+        if(this.value){
+            let valueStore = this.value.match(regExp);
+            fileName.textContent = valueStore;
+        }
 
-});
+    });
 </script>
 
 

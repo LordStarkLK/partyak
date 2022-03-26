@@ -47,13 +47,15 @@ class ForgetPassword extends FrameworkPartyak{
         $this->view("forgetPasswordView",$data);
     }
 
-    public function otpCheck($email){
+    public function otpCheck(){
         if($_SERVER["REQUEST_METHOD"] === "POST"){
             $input = $_POST["input1"] . $_POST["input2"] . $_POST["input3"] .
                 $_POST["input4"] . $_POST["input5"] . $_POST["input6"];
 
             $otp = $this->getSession("otp");
-            $data["email"] = $email;
+            $data["email"] = $this->getSession("email");
+
+            // $data["email"] = $email;
             if($otp == $input){
                 $this->unsetSession("otp");
 
@@ -134,6 +136,7 @@ class ForgetPassword extends FrameworkPartyak{
     public function sendOTP(){
         $email = $this->getSession("email");
         $otp = $this->getSession("otp");
+        $data["email"] = $email;
 
         $emailBody = '
         <div style="font-family: Helvetica,Arial,sans-serif;min-width:1000px;overflow:auto;line-height:2">

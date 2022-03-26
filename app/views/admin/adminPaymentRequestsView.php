@@ -60,10 +60,10 @@
                 </div>
                 <div class="horizontal-container">
 
-                    <ul class="breadcrumb">
+                    <!-- <ul class="breadcrumb">
                         <li><a>Settlements</a></li>
                         <li><a>Requests</a></li>
-                    </ul>
+                    </ul> -->
 
                     <button class="addnew-button" id="myBtn" style="vertical-align:middle"><span>Add Payment
                         </span></button>
@@ -187,16 +187,7 @@
             </div>
 
 
-            <div class="search-container">
-                <form action="/action_page.php">
-                    <input type="text" placeholder="Search users.." name="search">
-
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                    <!-- <i class="fas fa-search"></i> -->
-
-
-                </form>
-            </div>
+            
 
 
 

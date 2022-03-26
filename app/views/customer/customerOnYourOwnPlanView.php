@@ -21,7 +21,6 @@
 <div class="container">
   <div class="side">
     <div class="sidebar" id="sidee">
-        <button type="button" class="buttonS" name="Own" > <a href ="<?php echo BASEURL . '/customerOnYourOwnPlanS'; ?>"> Add Service Details</a></button> 
         <div class="sideDe">
           <p>After giving event details successfully, you can add service details which are required for your event.</p>
         </div> 
@@ -132,12 +131,12 @@
                 <span onclick=\"document.getElementById(id).style.display='none'\" class=\"close\" title=\"Close Modal\">&times;</span>
                   <form class=\"modal-content\" action=\"/action_page.php\">
                     <div class=\"container-modal\">
-                      <h1>Successfull</h1>
-                      <br><br><p>Your event details successfully submitted.</p>
-                      <br><br><p>Are you want to add service details for your event?</p>
+                      <h1>Success!</h1>
+                      <br><p>Your event details successfully submitted.</p>
+                      <br><p>Are you want to add service details for your event?</p>
                           
                       <div class=\"clearfix\">
-                        <button type=\"button\" class=\"cancelbtn\" onclick=\"document.getElementById(id).style.display='none'\">No</button>
+                        <button type=\"button\" class=\"cancelbtn\" onclick=\"window.location=' " . BASEURL . "/customerMyEvent'\">No</button>
                         <button type=\"button\" class=\"deletebtn\" onclick=\"window.location=' " . BASEURL . "/customerOnYourOwnPlanS/'\">Yes</button>
                       </div>
                     </div>

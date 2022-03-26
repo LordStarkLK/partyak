@@ -82,23 +82,43 @@
                                 $row2 = mysqli_fetch_assoc($data['customer']);
                                 $row3 = mysqli_fetch_assoc($data['service']);
                                 $row4 = mysqli_fetch_assoc($data['package']);
-                                echo"
-                                <td>$row[booking_id]</td>
-                                <td>$row2[f_name] $row2[l_name]</td>
-                                <td>$row3[service_name]</td>
-                                <td>$row4[package_name]</td>
-                                <td>$row[status]</td>
-                                <td>$row[event_date]</td>
-                                <td>
-                                <div class=\"btn-group\">
-                                    <button onclick=\"window.location='".BASEURL."/adminVendorBookings'\">See in Vendor Bookings</button>
-                                    <button onclick=\"window.location='" . BASEURL . "/adminBookings/delete/$row[booking_id]'\">Delete Booking</button>
-
-                                </div>
-                            </td>
-                            </tr>
-
-                                ";
+                                // $now = new DateTime();
+                                $now = date("Y-m-d");
+                                if($now<$row['event_date']){
+                                    echo"
+                                    <td>$row[booking_id]</td>
+                                    <td>$row2[f_name] $row2[l_name]</td>
+                                    <td>$row3[service_name]</td>
+                                    <td>$row4[package_name]</td>
+                                    <td>$row[status]</td>
+                                    <td>$row[event_date]</td>
+                                    <td>
+                                    <div class=\"btn-group\">
+                                        <button onclick=\"window.location='".BASEURL."/adminVendorBookings'\">See in Vendor Bookings</button>
+                                        <button onclick=\"document.getElementById('$row[booking_id]').style.display='block'\">Delete Booking</button>
+                                        
+    
+                                    </div>
+                                    <div id=\"$row[booking_id]\" class=\"modal\">
+                                        <span onclick=\"document.getElementById('$row[booking_id]').style.display='none'\" class=\"close\" title=\"Close Modal\">&times;</span>
+                                        <form class=\"modal-content\" action=\"/action_page.php\">
+                                            <div class=\"container-modal\">
+                                            <h1>Delete Account</h1>
+                                            <p>Are you sure you want to delete this Booking?</p>
+                                        
+                                            <div class=\"clearfix\">
+                                                <button type=\"button\" class=\"cancelbtn\" onclick=\"document.getElementById('$row[booking_id]').style.display='none'\">Cancel</button>
+                                                <button type=\"button\" class=\"deletebtn\" onclick=\"window.location='" . BASEURL . "/adminBookings/delete/$row[booking_id]'\">Delete</button>
+                                            </div>
+                                            </div>
+                                        </form>
+                                        </div>
+                                </td>
+                                </tr>
+    
+                                    ";
+                                }
+                                
                             } ?>
                         
 
