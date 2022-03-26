@@ -12,6 +12,7 @@ class epEventAdd extends FrameworkPartyak
     public function index($service_id)
     {
         $data['service_id']=$service_id;
+        $data['status'] = 0;
         $this->view("eventPlanner/epEventAddView",$data);
     }
     public function addEvent()
@@ -79,14 +80,16 @@ class epEventAdd extends FrameworkPartyak
                 } 
                 //,$imgIndex[0],$imgIndex[1],$imgIndex[2],$imgIndex[3],$imgIndex[4]
                 $this->epAddEvent->addEvent($userId,$eventType,$date,$noOfGuests,$imgIndex[0],$imgIndex[1],$imgIndex[2],$imgIndex[3],$imgIndex[4],$location,$description);
-                $data["status"] = 1;
-                $this->view("eventPlanner/epEventAdd",$data);
+                $_SESSION['noteStatus'] = 1;
+                $this->view("eventPlanner/epEventAddView");
                 }else{
                     $errors["img1"] = "Image is required";
-                    $data["errors"] = $errors; 
-                    $this->view("eventPlanner/epEventAdd", $data);
+                    $data["errors"] = $errors;
+                    $_SESSION['noteStatus'] = 0;
+                    $this->view("eventPlanner/epEventAddView", $data);
                 }
             
         }
+        $_SESSION['noteStatus'] = 0;
     }
 }

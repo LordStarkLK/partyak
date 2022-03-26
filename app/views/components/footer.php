@@ -9,7 +9,7 @@
                 <li><a href='#'>F A Qs</a></li><br>
                 <li><a href='#'>About us</a></li><br>
                 <li><a href='#'>Privacy Policy</a></li><br>
-                <li><a href='#'>Terms and Conditions</a></li><br>
+                <li><a href="<?php echo BASEURL . '/termsAndConditions'; ?>">Terms and Conditions</a></li><br>
             </ul>
         </div>
         <div class="quick">
