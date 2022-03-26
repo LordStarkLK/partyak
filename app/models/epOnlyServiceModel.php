@@ -37,25 +37,12 @@ class epOnlyServiceModel extends Database
     }
 
     //Insert booking details
-    public function bookingDetail($eventType, $guestCount, $reserveDate, $packageType, $id, $service_id,$userId)
+    public function bookingDetail($userId, $service_id,$reserveDate,$eventType, $guestCount)
     {
-        // echo $packageType;
-        
-        $query = "SELECT package_id,per_unit_price, fixed_price FROM package WHERE package_name='$packageType'";
-        $query = mysqli_query($GLOBALS['db'], $query);
-        $result = mysqli_fetch_assoc($query);
-        $packageId = $result['package_id'];
-        $pricePerUnitId = $result['per_unit_price'];
-        $fixedPrice = $result['fixed_price'];
-        
-        if ($pricePerUnitId > 0){
-            $fullPayment = $guestCount*$pricePerUnitId;
-        }else{
-            $fullPayment =  $fixedPrice;
-        }
 
-        $query = "INSERT INTO booking(customer_id, service_id, event_date,event_type,noOfGuest, package_id,full_payment) 
-        VALUES ('$id', '$service_id', '$reserveDate', '$eventType' , ' $guestCount', '$packageId','$fullPayment')";
+        $query = "INSERT INTO `booking`(`customer_id`, `service_id`, `event_date`, `event_type`, `noOfGuest`, `package_id`, `full_payment`, `status`, `planning_id`) 
+        VALUES 
+        ('$userId','$service_id','$reserveDate','$eventType','$guestCount','0','0','pending','0')";
         mysqli_query($GLOBALS['db'], $query);
 
         //Notification

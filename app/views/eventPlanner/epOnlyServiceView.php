@@ -101,7 +101,7 @@
             <div class="request-container">
                 <div class="right_side">
                         <div class="request_container">
-                                <form action="<?php echo BASEURL . '/spService/bookingDet/'.$data['service']['service_id']; ?>" class="form-area" method="POST">
+                                <form action="<?php echo BASEURL . '/epOnlyService/bookingDet/'.$data['service']['service_id']; ?>" class="form-area" method="POST">
                                         Reserve For
                                     <div class="reserve_price">
                                         <div class="price">

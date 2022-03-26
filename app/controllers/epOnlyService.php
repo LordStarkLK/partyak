@@ -23,4 +23,13 @@ class epOnlyService extends FrameworkPartyak
 
         $this->view("eventPlanner/epOnlyServiceView", $data);
     }
+    public function bookingDet($service_id)
+    {
+        $id = $_SESSION['userId'];
+        $eventType = $_POST["eventType"];
+        $guestCount = $_POST["guestcount"];
+        $reserveDate = $_POST["reservedate"];
+        $this->epServiceModel->bookingDetail($id, $service_id,$reserveDate,$eventType, $guestCount);
+        $this->index($service_id);
+    }
 }
