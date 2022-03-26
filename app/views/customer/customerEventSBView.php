@@ -629,25 +629,30 @@
                           <button id="add_btn" data-target-modal="#todo_form">+ Add Todo</button>
                           <?php
                               $i = 1;
-                              while($todoP=mysqli_fetch_assoc($data['todo']) ){?>
-                                <div class="todo" draggable="true" >
+                              while($todoP=mysqli_fetch_assoc($data['todo']) ){
+                                echo "
+                                <div class=\"todo\" id = \"$todoP[task_id]\" draggable=\"true\" >
                            
-                                  <?php echo "$todoP[task_name]"; ?>
-                                  <span class="close">&times;</span>
-                                </div>
-                                <?php
+                                $todoP[task_name]
+                                <span class=\"close\">&times;</span>
+                              </div>
+                                  
+                                ";
+                                
+                                
+                              
                                 $i++;
                               }
                             ?>
                               
                       </div>
-                      <div class="status" name="toDoStatus">
+                      <div class="status" name="toDoStatus" id="todo">
                           <h1>TO DO</h1>
                       </div>
-                      <div class="status" name="inprogressStatus">
+                      <div class="status" name="inprogressStatus" id="inProgress">
                           <h1>INPROGRESS</h1>
                       </div>
-                      <div class="status" name="completedStatus">
+                      <div class="status" name="completedStatus" id="completed">
                           <h1>COMPLETED</h1>
                       </div>
                     </div>
@@ -655,7 +660,7 @@
                     <div id="overlay"></div>
 
                     <script>
-
+                        
                         const todos = document.querySelectorAll(".todo");
                         const all_status = document.querySelectorAll(".status");
                         let draggableTodo = null;
@@ -671,6 +676,7 @@
                             this.style.display = "none";
                           }, 0);
                           console.log("dragStart");
+                          
                         }
 
                         function dragEnd() {
@@ -679,6 +685,9 @@
                             this.style.display = "block";
                           }, 0);
                           console.log("dragEnd");
+                          
+
+
                         }
 
                         all_status.forEach((status) => {
@@ -702,12 +711,21 @@
                           this.style.border = "none";
                           console.log("dragLeave");
                         }
+                        status_change = null;
 
                         function dragDrop() {
                           this.style.border = "none";
                           this.appendChild(draggableTodo);
                           console.log("dropped");
-                        }
+                          let Status = this.id;
+                          let task = draggableTodo.id;
+                          console.log(task);
+                          status_change(Status,task);
+                          // console.log(Status);
+                          
+                          }
+
+                        
 
                         /* modal */
                         const btns = document.querySelectorAll("[data-target-modal]");
@@ -793,6 +811,7 @@
 
 
 </body>
+<?php linkJS("lib/jquery-3.6.0.min"); ?>
 <?php linkJS("customer/customerSearchVendor"); ?>
 <?php linkJS("customer/customerContactServiceProvicer"); ?>
 <?php linkJS("customer/customerEventSB"); ?>
