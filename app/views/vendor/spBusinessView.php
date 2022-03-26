@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <?php linkCSS("vendor/spBusiness");  ?>
+    <?php linkCSS("vendor/spDeleteService");  ?>
     <?php linkCSS("navigation"); ?>
     <?php linkCSS("footer");?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -132,13 +133,19 @@
 
                     echo "
                         <div class=\"action\">
-                            <a>Delete Service</a>
+                            <button class=\"delete-btn\" onclick=\"document.getElementById('$row[service_id]').style.display='block'\"><a>Delete Service</a></button>
                         </div>
+
+                        
+
+
+
                     </div>
                     ";
 
                 }
                 ?>
+                
             
             </div>
             <div class="addingService">
@@ -156,6 +163,31 @@
                 </a>
                 
             </div>
+            <?php mysqli_data_seek($data['business'], 0); while($row=mysqli_fetch_assoc($data['business'])){ echo"
+                <div id=\"$row[service_id]\" class=\"delContainer\">
+                        
+                <div class=\"delContent\">
+                    <div class=\"container-top\">
+                        
+                            <div class=\"del-icon\"><i class=\"fa fa-trash fa-3x\" aria-hidden=\"true\"></i></div>
+                            
+                           
+                    </div>
+                    <div class=\"container-bottom\">
+                        <div class=\"title\"><a>You are about to delete a service!</a></div>
+                        
+                        <div class=\"ser-name\"><a>$row[service_name]</a><br><a>$row[service_location]</a></div>
+                        <div class=\"description\"><a>All the related details to the service will be deleted.</a><br><a>Are you sure?</a></div>
+                        <div class=\"action\">
+                            <button class=\"action-btn delete\" onclick=\"window.location=' " . BASEURL . "/spBusiness/deleteService/$row[service_id]'\">Confirm</button>
+                            <button class=\"action-btn cancel\" onclick=\"document.getElementById('$row[service_id]').style.display='none'\">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+             
+            </div>
+                ";
+                } ?>
         </div>
     </div>
     <?php linkPhp("footer") ?>
