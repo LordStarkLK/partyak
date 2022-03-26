@@ -23,7 +23,7 @@
   var sou= document.getElementById("soun");
   var dre = document.getElementById("dres");
 
-  var eBtn = document.getElementById("ep");
+  var eBtn = document.getElementById("ep1");
   var vBtn = document.getElementById("venue");
   var cBtn = document.getElementById("catering");
   var pBtn = document.getElementById("photo");
@@ -39,18 +39,18 @@
 
 
   VSBtn.onclick = function(){
-    cate.style.display="none";
-    photo.style.display="none";
-    ven.style.display="block";
-    music.style.display="none";
-    dance.style.display="none";
-    salon.style.display="none";
-    cake.style.display="none";
-    deco.style.display="none";
-    sound.style.display="none";
-    dress.style.display="none";
-    conent.style.display="none";
-    eventp.style.display="none";
+    // cate.style.display="none";
+    // photo.style.display="none";
+    // ven.style.display="block";
+    // music.style.display="none";
+    // dance.style.display="none";
+    // salon.style.display="none";
+    // cake.style.display="none";
+    // deco.style.display="none";
+    // sound.style.display="none";
+    // dress.style.display="none";
+    // conent.style.display="none";
+    // eventp.style.display="none";
     e.className = "no";
     vn.className = "active";
     cat.className = "no";
@@ -67,18 +67,18 @@
   
 
   eBtn.onclick = function(){
-    eventp.style.display="block";
-    ven.style.display="none";
-    cate.style.display="none";
-    photo.style.display="none";
-    music.style.display="none";
-    dance.style.display="none";
-    salon.style.display="none";
-    cake.style.display="none";
-    deco.style.display="none";
-    sound.style.display="none";
-    dress.style.display="none";
-    conent.style.display="none";
+    // eventp.style.display="block";
+    // ven.style.display="none";
+    // cate.style.display="none";
+    // photo.style.display="none";
+    // music.style.display="none";
+    // dance.style.display="none";
+    // salon.style.display="none";
+    // cake.style.display="none";
+    // deco.style.display="none";
+    // sound.style.display="none";
+    // dress.style.display="none";
+    // conent.style.display="none";
     e.className = "active";
     vn.className = "no";
     cat.className = "no";
@@ -94,18 +94,18 @@
   }
 
   vBtn.onclick = function(){
-    cate.style.display="none";
-    photo.style.display="none";
-    ven.style.display="block";
-    music.style.display="none";
-    dance.style.display="none";
-    salon.style.display="none";
-    cake.style.display="none";
-    deco.style.display="none";
-    sound.style.display="none";
-    dress.style.display="none";
-    conent.style.display="none";
-    eventp.style.display="none";
+    // cate.style.display="none";
+    // photo.style.display="none";
+    // ven.style.display="block";
+    // music.style.display="none";
+    // dance.style.display="none";
+    // salon.style.display="none";
+    // cake.style.display="none";
+    // deco.style.display="none";
+    // sound.style.display="none";
+    // dress.style.display="none";
+    // conent.style.display="none";
+    // eventp.style.display="none";
     e.className = "no";
     vn.className = "active";
     cat.className = "no";
@@ -121,18 +121,18 @@
   }
 
   cBtn.onclick = function(){
-    cate.style.display="block";
-    ven.style.display="none";
-    photo.style.display="none";
-    music.style.display="none";
-    dance.style.display="none";
-    salon.style.display="none";
-    cake.style.display="none";
-    deco.style.display="none";
-    sound.style.display="none";
-    dress.style.display="none";
-    conent.style.display="none";
-    eventp.style.display="none";
+    // cate.style.display="block";
+    // ven.style.display="none";
+    // photo.style.display="none";
+    // music.style.display="none";
+    // dance.style.display="none";
+    // salon.style.display="none";
+    // cake.style.display="none";
+    // deco.style.display="none";
+    // sound.style.display="none";
+    // dress.style.display="none";
+    // conent.style.display="none";
+    // eventp.style.display="none";
     e.className = "no";
     vn.className = "no";
     cat.className = "active";
@@ -147,17 +147,17 @@
   }
    
   pBtn.onclick = function(){
-    cate.style.display="none";
-    ven.style.display="none";
-    photo.style.display="block";
-    music.style.display="none";
-    dance.style.display="none";
-    salon.style.display="none";
-    cake.style.display="none";
-    sound.style.display="none";
-    dress.style.display="none";
-    conent.style.display="none";
-    eventp.style.display="none";
+    // cate.style.display="none";
+    // ven.style.display="none";
+    // photo.style.display="block";
+    // music.style.display="none";
+    // dance.style.display="none";
+    // salon.style.display="none";
+    // cake.style.display="none";
+    // sound.style.display="none";
+    // dress.style.display="none";
+    // conent.style.display="none";
+    // eventp.style.display="none";
     e.className = "no";
     vn.className = "no";
     cat.className = "no";
@@ -172,17 +172,17 @@
   }
 
   mBtn.onclick = function(){
-    cate.style.display="none";
-    ven.style.display="none";
-    photo.style.display="none";
-    music.style.display="block";
-    dance.style.display="none";
-    salon.style.display="none";
-    cake.style.display="none";
-    sound.style.display="none";
-    dress.style.display="none";
-    conent.style.display="none";
-    eventp.style.display="none";
+    // cate.style.display="none";
+    // ven.style.display="none";
+    // photo.style.display="none";
+    // music.style.display="block";
+    // dance.style.display="none";
+    // salon.style.display="none";
+    // cake.style.display="none";
+    // sound.style.display="none";
+    // dress.style.display="none";
+    // conent.style.display="none";
+    // eventp.style.display="none";
     e.className = "no";
     vn.className = "no";
     cat.className = "no";
@@ -197,18 +197,18 @@
   }
 
   dBtn.onclick = function(){
-    cate.style.display="none";
-    ven.style.display="none";
-    photo.style.display="none";
-    music.style.display="none";
-    dance.style.display="block";
-    salon.style.display="none";
-    cake.style.display="none";
-    deco.style.display="none";
-    sound.style.display="none";
-    dress.style.display="none";
-    conent.style.display="none";
-    eventp.style.display="none";
+    // cate.style.display="none";
+    // ven.style.display="none";
+    // photo.style.display="none";
+    // music.style.display="none";
+    // dance.style.display="block";
+    // salon.style.display="none";
+    // cake.style.display="none";
+    // deco.style.display="none";
+    // sound.style.display="none";
+    // dress.style.display="none";
+    // conent.style.display="none";
+    // eventp.style.display="none";
     e.className = "no";
     vn.className = "no";
     cat.className = "no";
@@ -223,18 +223,18 @@
   }
 
   sBtn.onclick = function(){
-    cate.style.display="none";
-    ven.style.display="none";
-    photo.style.display="none";
-    music.style.display="none";
-    dance.style.display="none";
-    salon.style.display="block";
-    cake.style.display="none";
-    deco.style.display="none";
-    sound.style.display="none";
-    dress.style.display="none";
-    conent.style.display="none";
-    eventp.style.display="none";
+    // cate.style.display="none";
+    // ven.style.display="none";
+    // photo.style.display="none";
+    // music.style.display="none";
+    // dance.style.display="none";
+    // salon.style.display="block";
+    // cake.style.display="none";
+    // deco.style.display="none";
+    // sound.style.display="none";
+    // dress.style.display="none";
+    // conent.style.display="none";
+    // eventp.style.display="none";
     e.className = "no";
     vn.className = "no";
     cat.className = "no";
@@ -249,18 +249,18 @@
   }
 
   caBtn.onclick = function(){
-    cate.style.display="none";
-    ven.style.display="none";
-    photo.style.display="none";
-    music.style.display="none";
-    dance.style.display="none";
-    salon.style.display="none";
-    cake.style.display="block";
-    deco.style.display="none";
-    sound.style.display="none";
-    dress.style.display="none";
-    conent.style.display="none";
-    eventp.style.display="none";
+    // cate.style.display="none";
+    // ven.style.display="none";
+    // photo.style.display="none";
+    // music.style.display="none";
+    // dance.style.display="none";
+    // salon.style.display="none";
+    // cake.style.display="block";
+    // deco.style.display="none";
+    // sound.style.display="none";
+    // dress.style.display="none";
+    // conent.style.display="none";
+    // eventp.style.display="none";
     e.className = "no";
     vn.className = "no";
     cat.className = "no";
@@ -275,18 +275,18 @@
   }
 
   deBtn.onclick = function(){
-    cate.style.display="none";
-    ven.style.display="none";
-    photo.style.display="none";
-    music.style.display="none";
-    dance.style.display="none";
-    salon.style.display="none";
-    cake.style.display="none";
-    deco.style.display="block";
-    sound.style.display="none";
-    dress.style.display="none";
-    conent.style.display="none";
-    eventp.style.display="none";
+    // cate.style.display="none";
+    // ven.style.display="none";
+    // photo.style.display="none";
+    // music.style.display="none";
+    // dance.style.display="none";
+    // salon.style.display="none";
+    // cake.style.display="none";
+    // deco.style.display="block";
+    // sound.style.display="none";
+    // dress.style.display="none";
+    // conent.style.display="none";
+    // eventp.style.display="none";
     e.className = "no";
     vn.className = "no";
     cat.className = "no";
@@ -301,18 +301,18 @@
   }
 
   slBtn.onclick = function(){
-    cate.style.display="none";
-    ven.style.display="none";
-    photo.style.display="none";
-    music.style.display="none";
-    dance.style.display="none";
-    salon.style.display="none";
-    cake.style.display="none";
-    deco.style.display="none";
-    sound.style.display="block";
-    dress.style.display="none";
-    conent.style.display="none";
-    eventp.style.display="none";
+    // cate.style.display="none";
+    // ven.style.display="none";
+    // photo.style.display="none";
+    // music.style.display="none";
+    // dance.style.display="none";
+    // salon.style.display="none";
+    // cake.style.display="none";
+    // deco.style.display="none";
+    // sound.style.display="block";
+    // dress.style.display="none";
+    // conent.style.display="none";
+    // eventp.style.display="none";
     e.className = "no";
     vn.className = "no";
     cat.className = "no";
@@ -327,18 +327,18 @@
   }
 
   dsBtn.onclick = function(){
-    cate.style.display="none";
-    ven.style.display="none";
-    photo.style.display="none";
-    music.style.display="none";
-    dance.style.display="none";
-    salon.style.display="none";
-    cake.style.display="none";
-    deco.style.display="none";
-    sound.style.display="none";
-    dress.style.display="block";
-    conent.style.display="none";
-    eventp.style.display="none";
+    // cate.style.display="none";
+    // ven.style.display="none";
+    // photo.style.display="none";
+    // music.style.display="none";
+    // dance.style.display="none";
+    // salon.style.display="none";
+    // cake.style.display="none";
+    // deco.style.display="none";
+    // sound.style.display="none";
+    // dress.style.display="block";
+    // conent.style.display="none";
+    // eventp.style.display="none";
     e.className = "no";
     vn.className = "no";
     cat.className = "no";
@@ -352,17 +352,17 @@
     dre.className ="active";
   }
 
-  backBtn.onclick = function(){
-    cate.style.display="none";
-    ven.style.display="none";
-    photo.style.display="none";
-    music.style.display="none";
-    dance.style.display="none";
-    salon.style.display="none";
-    cake.style.display="none";
-    deco.style.display="none";
-    sound.style.display="none";
-    dress.style.display="none";
-    conent.style.display="block";
-    eventp.style.display="none";
-  }
+  // backBtn.onclick = function(){
+  //   cate.style.display="none";
+  //   ven.style.display="none";
+  //   photo.style.display="none";
+  //   music.style.display="none";
+  //   dance.style.display="none";
+  //   salon.style.display="none";
+  //   cake.style.display="none";
+  //   deco.style.display="none";
+  //   sound.style.display="none";
+  //   dress.style.display="none";
+  //   conent.style.display="block";
+  //   eventp.style.display="none";
+  // }

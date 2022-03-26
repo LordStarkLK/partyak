@@ -152,7 +152,7 @@ tr:hover{
     background-color:#424242;
 }
 
-.edit-booking , .cancel-booking, .accept-booking, .pending-booking{
+.edit-booking , .cancel-booking, .accept-booking, .pending-booking, .cancel-event{
     width: 100%;
     padding: 3%;
     color:#202020;
@@ -174,7 +174,7 @@ tr:hover{
     cursor: pointer;
 }
 
-.cancel-booking:hover {
+.cancel-event:hover {
     background-color:brown;
     cursor: pointer;
 }
@@ -186,7 +186,7 @@ tr:hover{
 }
 
 
-/* Cancel popup*/
+/* feedback popup*/
 
 
 /* popup start */
@@ -233,18 +233,27 @@ tr:hover{
   
 }
 
+.container-modal h1{
+  color: #f44336;
+}
+
+.container-modal p{
+  color: rgb(238, 229, 229);
+  font-size: 18px;
+}
+
 
 .modal {
     border-radius: 43px;
-    display: none; /* Hidden by default */
+    display: none;  /*Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    left: 50%;
-    top: 50%;
-    width: 35%;
+    left: 30%;
+    top: 23%;
+    width: 40%;
     overflow: auto; /* Enable scroll if needed */
-    background: linear-gradient(114.1deg, rgba(40, 40, 40, 0.61) 18.52%, rgba(15, 15, 15, 0) 98.52%), linear-gradient(106.04deg, rgba(255, 255, 255, 0.12) 10.95%, rgba(255, 255, 255, 0.1) 98.32%);
-    backdrop-filter: blur(0px);
+    background: #202020;
+    opacity: 100%;
     border: 1px solid #888;
     padding-top: 1%;
   }

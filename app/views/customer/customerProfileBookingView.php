@@ -51,8 +51,8 @@
           <?php
             $today=date('Y-m-j');
             $i = 1;
-            while($row=mysqli_fetch_assoc($data['bookingDetail']) ){
-               
+            while($row=mysqli_fetch_assoc($data['bookingDetail'])){
+              $row2=mysqli_fetch_assoc($data['paymentDetails']); 
               echo"
                 <tr>
                   <td>$i</td>
@@ -60,8 +60,22 @@
                   <td>$row[service_name]</td>
                   <td>$row[event_date]</td>
                   <td>$row[status]</td>
-                  <td>Completed</td>
-                  <td>Completed</td>
+                  <td>";
+                  if($row2['p_status']){
+                    echo $row2['p_status'];
+                  }else{
+                    echo "Not paid";
+                  }
+                  echo"
+                  </td>
+                  <td>";
+                  if($row2['amount']){
+                    echo $row2['amount'];
+                  }else{
+                    echo"Not paid";
+                  }
+                  echo"
+                  </td>
                   <td>Completed</td>
                   <td class=\"btn-row\">
 
@@ -83,7 +97,7 @@
                             <span onclick=\"document.getElementById('$row[booking_id]').style.display='none'\" class=\"close\" title=\"Close Modal\">&times;</span>
                             <form class=\"modal-content\" action=\"/action_page.php\">
                               <div class=\"container-modal\">
-                                <h1>Cancel Booking.</h1>
+                                <h1>Cancel Booking?</h1>
                                 <br><br><p>Are you sure you want to cancel your booking?</p>
                           
                                 <div class=\"clearfix\">

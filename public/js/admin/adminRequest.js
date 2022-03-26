@@ -1,7 +1,7 @@
 $(document).ready(function(){
     
     $(".accept-btn").click(function(){
-        alert("Budu saranai");
+        
         console.log($(this).attr('class').split(' ')[1]);
         var service_id = $(this).attr('class').split(' ')[1];
         

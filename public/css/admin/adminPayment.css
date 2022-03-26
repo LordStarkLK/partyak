@@ -422,6 +422,7 @@ ul.breadcrumb {
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
+  margin-left: 800px;
 }
 
 .addnew-button span {

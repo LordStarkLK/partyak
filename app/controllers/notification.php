@@ -61,11 +61,11 @@ class Notification extends FrameworkPartyak{
             ";
         }
 
-        $images = array("new_service" => "user_avatar.png");
+        $images = array("new_service" => "notify.webp");
         $commonPath = "http://localhost/partyak/public/img/";
 
         while($row = mysqli_fetch_assoc($result)){
-            $imagePath = $commonPath . "user_avatar.png";
+            $imagePath = $commonPath . "notify.webp";
             $message = $row["heading"];
             $courseName = $row["description"];
             $notificationId = $row["notification_id"];

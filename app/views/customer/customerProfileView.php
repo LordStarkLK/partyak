@@ -34,12 +34,12 @@
               <span class="links_name">Booking Details</span>
             </a>
           </li>
-        <li>
+        <!-- <li>
           <a href="<?php echo BASEURL . '/customerProfilePaymentD'; ?>">
             <i class="fas fa-money-check-alt" ></i>
             <span class="links_name">Payment Details</span>
           </a>
-        </li>
+        </li> -->
         <li>
           <a href="<?php echo BASEURL . '/customerChat'; ?>">
             <i class="fas fa-comments" ></i>
@@ -47,12 +47,12 @@
           </a>
         </li>
         
-        <li>
+        <!-- <li>
           <a href="#">
             <i class="fas fa-bell" ></i>
             <span class="links_name">Notification</span>
           </a>
-        </li>
+        </li> -->
         <li>
 
           <a href="<?php echo BASEURL . '/customerProfile/resetPassword'; ?>">
