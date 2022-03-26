@@ -133,7 +133,7 @@ class CustomerOnYourOwnPlan extends FrameworkPartyak{
             if ($numberOfErrors == 0) {
                 //Update data
                 $this->OnYourOwnModel->updateEventDetail($eventType, $eventname, $startdate, $enddate, $city, $noofguest,$planning_id);
-                $this->redirect('customerMyEvent');
+                // $this->redirect('customerMyEvent');
             }
 
 

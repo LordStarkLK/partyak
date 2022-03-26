@@ -12,7 +12,7 @@
     <title>Message</title>
     <?php echo linkCSS("otp"); ?>
     <link rel="stylesheet" href="/Assets/css/flashMessages.css?version=1">
-    <?php $email = $data["email"];?>
+    <?php $email = $data['email'];?>
 </head>
 
 <body>
