@@ -6,7 +6,7 @@ class Payment extends FrameworkPartyak
     {
         $this->helper("linker");
         $this->payment = $this->model('PaymentModel');
-        $this->preventBack("customer");
+        $this->preventBack2("customer","vendor");
     }
 
     public function index()

@@ -154,6 +154,7 @@
                 <option value="classroom">Classroom</option>
                 <option value="informal">Informal</option>
                 <option value="ushape">U shape</option>
+                <option value="ushape">Oval</option>
               </select>
               <!-- <div class="error"><?php echo $errors["seatingA"] ?></div> --> 
       </div>
@@ -256,11 +257,6 @@
                             }
             ?>
 
-          <!-- <tr>
-            <td> <a href="<?php echo BASEURL . '/venuesANDhalls'; ?>"><img <?php srcIMG("hotel/hotel1.jpg") ?> alt="Chance Flowers"></a><br><p>Mount Lavinia Hotel <br> Colombo, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("modernbanquet.jpg") ?> alt="Chance Flowers"></a><br><p>Modern Banquet Hotel <br> Colombo, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("dukes.png") ?> alt="Chance Flowers"> </a><br><p>Dukes Court 1 <br>Katunayaka,Sri Lanka</p></td>  
-          </tr> -->
         </table>
       </div>
   
