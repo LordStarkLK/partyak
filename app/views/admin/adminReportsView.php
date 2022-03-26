@@ -14,7 +14,7 @@
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
-      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+     integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
       crossorigin="anonymous"
     />
     
@@ -34,7 +34,7 @@
                 <div class="overview-boxes">
                     <div class="box" id="box-marketing">
                         <span class="links_name"><img class="customer-image" <?php srcIMG("reports.webP") ?> width="40"
-                                height="40">
+    height="40">
                             <div class="box-topic">Reports</div>
                         </span>
 
