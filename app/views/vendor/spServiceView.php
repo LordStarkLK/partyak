@@ -37,9 +37,9 @@
             $serviceId = $row['service_id'];
             echo " 
             <div class=\"image_container\">
-                <img class=\"mySlides\" src=\"http://localhost/partyak/public/img/hotel/hotel1.jpg\" >
+                <img class=\"mySlides\" src=\"http://localhost/partyak/public/img/serviceImg/$row[image]\" >
                 
-                <a href=\"https://youtu.be/G9Sf5IUsHfI\"><i class=\"fa fa-youtube-play fa-2x\" aria-hidden=\"true\"></i></a>
+                <a href=\"$row[video_url]\"><i class=\"fa fa-youtube-play fa-2x\" aria-hidden=\"true\"></i></a>
             </div>
             <div class=\"content\">
             <div class=\"basic_details\">
@@ -594,13 +594,19 @@
         <div class="location"></div>
     </div>
 
-    <div class="social-section">
-        <div class="social">
-            <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
-            <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
-            <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+    <?php mysqli_data_seek($data['service'], 0); while ($row = mysqli_fetch_assoc($data['service'])){
+        echo " 
+        <div class=\"social-section\">
+            <div class=\"social\">
+                <a href=\"$row[fb_url]\"><i class=\"fa fa-facebook fa-2x\" aria-hidden=\"true\"></i></a>
+                <a href=\"$row[linkedin_url]\"><i class=\"fa fa-linkedin fa-2x\" aria-hidden=\"true\"></i></a>
+                <a href=\"$row[instagram_url]\"><i class=\"fa fa-instagram fa-2x\" aria-hidden=\"true\"></i></a>
+            </div>
         </div>
-    </div>
+        ";
+    }  ?>
+
+    
 
     <!-- Review service -->
     <div class="review-section">

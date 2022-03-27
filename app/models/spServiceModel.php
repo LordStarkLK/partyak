@@ -7,16 +7,7 @@ class SpServiceModel extends Database
     {
 
 
-        $query = "SELECT service_id, service_name, description, service_location, service_type, event_type, service_areas, fb_url, instagram_url, linkedin_url, advance_price, initial_discount, initial_count, preparation_time, simultaneous_booking, cancellation_policy, payment_terms_and_conditions, additional_information, 
-         venue_type, standing_capacity, seating_arrangement, venue_features,
-         meal_time, no_of_attendants, 
-         music_provider_type,
-         dancing_type_name,
-         saloon_type, supplying_services,
-         cake_type, sweet_type,
-         decoration_type, floral_arrangement,
-         dress_sections, dress_type,
-         caption, video_url FROM other_service WHERE service_id='$service_id' ";
+        $query = "SELECT * FROM other_service WHERE service_id='$service_id' ";
 
 
 

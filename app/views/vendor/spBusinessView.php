@@ -102,15 +102,16 @@
                             <a>Decoration</a>
                         </div>";
                     }
-                    echo "      
+                        
+                        
+                    
+                    if($row['status'] == "accepted"){
+                        echo "
                         <div class=\"ser-details\">
                         
                             <div class=\"service_name\"><a href=\" ".BASEURL ."/spPackage/index/$row[service_id]\">$row[service_name]</a></div>
                             <div class=\"location_name\">$row[service_location]</div>
-                        </div>";
-                    
-                    if($row['status'] == "accepted"){
-                        echo "
+                        </div>
                         <div class=\"curr_status accept\">
                             <i class=\"fa fa-check-circle-o fa-2x\" aria-hidden=\"true\" ></i>
                             <a>Accepted</a>
@@ -118,6 +119,11 @@
                     }  
                     elseif($row['status'] == "rejected"){
                         echo "
+                        <div class=\"ser-details\">
+                        
+                            <div class=\"service_name\"><a>$row[service_name]</a></div>
+                            <div class=\"location_name\">$row[service_location]</div>
+                        </div>
                         <div class=\"curr_status reject\">
                             <i class=\"fa fa-times-circle-o fa-2x\" aria-hidden=\"true\" ></i>
                             <a>Rejected</a>
@@ -125,6 +131,11 @@
                     }
                     elseif($row['status'] == "pending"){
                         echo "
+                        <div class=\"ser-details\">
+                        
+                            <div class=\"service_name\"><a href=\" ".BASEURL ."/spPackage/index/$row[service_id]\">$row[service_name]</a></div>
+                            <div class=\"location_name\">$row[service_location]</div>
+                        </div>
                         <div class=\"curr_status pending\">
                             <i class=\"fa fa-pause-circle-o fa-2x\" aria-hidden=\"true\" ></i>
                             <a>Pending</a>
