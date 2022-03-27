@@ -186,15 +186,6 @@
       <h2>ADD SERVICE PACKAGE</h2>
       <div class="p_row">
         <div class="p_colName">
-          <label>Service Name</label>
-        </div>
-        <div class="p_colData">
-          <input type="text" id="s_name" name="serviceName" placeholder>
-          <div class="error"><?php echo $errors["serviceName"] ?></div>
-        </div>
-      </div>
-      <div class="p_row">
-        <div class="p_colName">
           <label>Package Name</label>
         </div>
         <div class="p_colData">
@@ -244,6 +235,7 @@
           <!-- <div class="error"><?php echo $errors["packageUnitprice"] ?></div> -->
         </div>
       </div>
+      <input type = "hidden" name = "package_id" value = "insert" />
       <div class="package-submit-btn">
         <button id="request-submit" type="submit">Submit</button>
       </div>
@@ -264,18 +256,10 @@ echo "
 <!-- Modal content -->
 <div class=\"modal-content\">
   <span class=\"close\">&times;</span>
-  <form action\BASEURL . '/spPackage/updatePackage/$row3[package_id]';\" method=\"POST\">
+  <form action=\"".BASEURL."/spPackage/index/$row3[service_id]\" method=\"POST\">
     <div class=\"package-details\">
       <h2>EDIT SERVICE PACKAGE</h2>
-      <div class=\"p_row\">
-        <div class=\"p_colName\">
-          <label>Service Name</label>
-        </div>
-        <div class=\"p_colData\">
-          <input type=\"text\" id=\"s_name\" name=\"serviceName\" value=\"$row3[service_name]\" placeholder>
-          <div class=\"error\">$errors[serviceName]</div>
-        </div>
-      </div>
+      
       <div class=\"p_row\">
         <div class=\"p_colName\">
           <label>Package Name</label>
@@ -325,6 +309,7 @@ echo "
           <input type=\"text\" id=\"p_unitprice\" name=\"packageUnitprice\" value=\"$row3[per_unit_price]\" placeholder>
         </div>
       </div>
+      <input type = \"hidden\" name = \"package_id\" value = \"$row3[package_id]\" />
       <div class=\"package-submit-btn\">
         <button id=\"request-submit\" type=\"submit\">Submit</button>
       </div>
