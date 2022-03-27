@@ -47,8 +47,9 @@
                           if($eventname['plan_type'] == "Through Event Planner"){
                             echo "<tr>";
                             echo "<td>Venues & Halls</td>";
+                            echo" <td>";
                             if($serviceP['venue_handle_EP'] == "yes"){
-                              echo" <td>This service is needed to be handle by event planner.";
+                              echo"This service is needed to be handle by event planner.";
                             }
 
                             if($serviceP['seating_arrangement'] == "yes"){
@@ -101,9 +102,10 @@
 
                             echo "<tr>";
                             echo "<td>Catering Service</td>";
+                            echo" <td>";
 
                             if($serviceP['catering_handle_EP'] == "yes"){
-                              echo" <td>This service is needed to be handle by event planner.";
+                              echo"This service is needed to be handle by event planner.";
                             }
 
                             echo "<br><br> Meal Types-";
@@ -162,9 +164,10 @@
 
                             echo "<tr>";
                             echo "<td>Music</td>";
+                            echo" <td>";
 
                             if($serviceP['music_handle_EP'] == "yes"){
-                              echo" <td>This service is needed to be handle by event planner.";
+                              echo"This service is needed to be handle by event planner.";
                             }
 
                             echo "<br><br> Music type - ";
@@ -185,9 +188,10 @@
 
                             echo "<tr>";
                             echo "<td>Dancing Groups</td>";
+                            echo" <td>";
 
                             if($serviceP['dance_handle_EP'] == "yes"){
-                              echo" <td>This service is needed to be handle by event planner.";
+                              echo"This service is needed to be handle by event planner.";
                             }
 
                             echo "<br><br>Dance Types -";
@@ -243,9 +247,10 @@
 
                             echo "<tr>";
                             echo "<td>Cake & Sweet</td>";
+                            echo" <td>";
 
                             if($serviceP['cake_handle_EP'] == "yes"){
-                              echo"<td>This service is needed to be handle by event planner.";
+                              echo"This service is needed to be handle by event planner.";
                             }
 
                             echo "<br><br>Cake & sweetes type -" ;
@@ -267,9 +272,10 @@
 
                             echo "<tr>";
                             echo "<td>decorations</td>";
+                            echo" <td>";
 
                             if($serviceP['deco_handle_EP'] == "yes"){
-                              echo"<td>This service is needed to be handle by event planner.";
+                              echo"This service is needed to be handle by event planner.";
                             }
 
                             echo "<br><br>Decoration details - ";
@@ -286,9 +292,10 @@
 
                             echo "<tr>";
                             echo "<td>Sounds & Lightings</td>";
+                            echo" <td>";
 
                             if($serviceP['sound_handle_EP'] == "yes"){
-                              echo"<td>This service is needed to be handle by event planner.";
+                              echo"This service is needed to be handle by event planner.";
                             }
 
                             echo "<br><br>Sound & lighting details - ";

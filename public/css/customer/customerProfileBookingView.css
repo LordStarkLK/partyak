@@ -166,6 +166,7 @@ tr:hover{
 
 .edit-booking a{
     text-decoration: none;
+    color:#202020;
 
 }
 
@@ -181,7 +182,7 @@ tr:hover{
 
 
 .custopic a:hover {
-    background-color:#18ab29;
+    background-color:#9593ff;
     cursor: pointer;
 }
 
