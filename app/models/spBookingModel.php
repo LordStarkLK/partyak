@@ -30,8 +30,23 @@ class SpBookingModel extends Database
     //for accept and reject booking requests
     public function acceptRequest($booking_id){
         $query = "UPDATE booking SET status = 'accept' WHERE booking_id='$booking_id'";
+        mysqli_query($GLOBALS['db'],$query);
+        // return $result;
+
+        // notification
+        $query = "SELECT booking.customer_id,other_service.service_name from booking,other_service WHERE booking.service_id = other_service.service_id AND booking.booking_id = '$booking_id'";
         $result = mysqli_query($GLOBALS['db'],$query);
-        return $result;
+        $result = mysqli_fetch_assoc($result);
+        $customer_id = $result["customer_id"];
+        $service_name = $result["service_name"];
+
+        $description = "Your request to the service of $service_name has been accepted, You can hire it by doing the advanced payment";
+        $query = "INSERT INTO notifications(notification_type,heading,description,url,user_id,notification_status,date)
+         VALUES ('booking_accept','Booking Accepted','$description','http://localhost/partyak/customerProfileBooking','$customer_id','0',NOW())";
+        mysqli_query($GLOBALS['db'], $query); 
+
+
+
         
     }
 

@@ -168,6 +168,7 @@
   </div>
 
 </div>
+
 <script type="text/javascript" >
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -198,6 +199,12 @@ var request_submit = document.getElementById("request-submit");
 request_submit.onclick=function(){
   modal.style.display = "none";
 }
+
+  <!-- Notification adding -->
+<?php linkPhp("notification"); ?>
+<?php linkJS("lib/jquery-3.6.0.min"); ?>
+<?php linkJS("admin/notification"); ?>
+
 
 </script>
   <!-- <?php linkJS("vendor/spWallet"); ?> -->

@@ -218,11 +218,6 @@
                                       
                                     }
             ?>
-          <tr>
-            <td> <a  href="#"> <img <?php srcIMG("ashane.jpg") ?> alt="Chance Flowers"></a><br><p>Ashane Gunarathne <br>Colombo, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("Wavemusic.jpg") ?> alt="Chance Flowers"> </a><br><p>Waves<br> Mathara, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("DjAzthu.jpg") ?> alt="Chance Flowers"> </a><br><p>DJ Azthu <br>Kegalle,Sri Lanka</p></td>  
-          </tr>
         </table>
       </div>
   
@@ -231,8 +226,14 @@
   </div>
 
 </div>
+<!-- Notification adding -->
+<?php linkPhp("notification"); ?>
+<?php linkJS("lib/jquery-3.6.0.min"); ?>
+<?php linkJS("admin/notification"); ?>
 
 </body>
+
+
 <?php linkJS("customer/customerSearchVendor"); ?>
 <?php linkJS("customer/customerContactServiceProvicer"); ?>
 <?php linkPhp("footer") ?>

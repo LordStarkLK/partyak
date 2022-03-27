@@ -27,12 +27,12 @@ class SpBooking extends FrameworkPartyak
 
         $this->view("vendor/spBookingView", $data);
     }
-    public function accept($booking_id)
+    public function accept($booking_id,$service_id)
     {
         // $data['service_id'] = $service_id;
         $this->BookingModel->acceptRequest($booking_id);
         
-        $this->redirect("spBooking");
+        $this->index($service_id);
         
     }
 

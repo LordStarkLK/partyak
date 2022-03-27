@@ -42,4 +42,9 @@ class CustomerEventSBModel extends database
         return $serviceP;
     }
 
+    public function updateStatus($status,$task){
+        $query = "UPDATE event_schedule_board SET status = '$status' WHERE task_id = '$task'";
+        mysqli_query($GLOBALS['db'],$query);
+    }
+
 }

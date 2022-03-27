@@ -31,4 +31,9 @@ class CustomerEventSB extends FrameworkPartyak{
         $this->view("customer/customerEventSBView",$data);
     }
 
+    public function statusChange($status,$task){
+        $this->EventSB->updateStatus($status,$task);
+        // echo $status;
+    }
+
 }

@@ -147,51 +147,7 @@
           <!-- <div class="error"><?php echo $errors["city"] ?></div> -->
         </div>
 
-        <p6>Require Service</p6>
-
-        <div class="input-box84">
-          <div class="soundt">
-            <input placeholder="Sound Service" name="sound">
-          </div>
-          
-          <div class="soundtick">
-            <input type="checkbox" placeholder="Agree" value="mensec" name="maleAgree">
-            <!-- <div class="error"><?php echo $errors["sound"] ?></div> -->
-          </div>
-
-          <div class="light">
-            <input placeholder="Lighting Service" name="light">
-          </div>
-          
-          <div class="lightick">
-            <input type="checkbox" placeholder="Agree" value="womensec" name="femaleAgree">
-            <!-- <div class="error"><?php echo $errors["light"] ?></div> -->
-          </div>
-    
-        </div>
-
-        <p7>Event Environment</p7>
-
-        <div class="input-box85">
-          <div class="int">
-            <input placeholder="Indoor Event" name="in">
-          </div>
-          
-          <div class="intick">
-            <input type="checkbox" placeholder="Agree" name="agree">
-            <!-- <div class="error"><?php echo $errors["in"] ?></div> -->
-          </div>
-
-          <div class="out">
-            <input placeholder="Outdoor Event" name="out">
-          </div>
-          
-          <div class="outick">
-            <input type="checkbox" placeholder="Agree" name="agree">
-            <!-- <div class="error"><?php echo $errors["out"] ?></div> -->
-          </div>
-    
-        </div>
+      
 
         <div class="save">
           <button type="submit" class="saveb" value="Submit">Search</button>
@@ -244,8 +200,14 @@
   </div>
 
 </div>
+<!-- Notification adding -->
+<?php linkPhp("notification"); ?>
+<?php linkJS("lib/jquery-3.6.0.min"); ?>
+<?php linkJS("admin/notification"); ?>
 
 </body>
+
+
 <?php linkJS("customer/customerSearchVendor"); ?>
 <?php linkJS("customer/customerContactServiceProvicer"); ?>
 <?php linkPhp("footer") ?>
