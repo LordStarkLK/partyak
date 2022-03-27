@@ -86,12 +86,21 @@
       </nav>
       <div class="home-content">
               <div class="note-content-area">
-
+              <?php if(isset($data['bookingInfo'])){foreach ($data['bookingInfo'] as $row) { ?>
+            <div class="glass-card-section">
+                <div class="glass card">
+                    <h1 class="card-date"><?php echo $row['event_type']." | id-".$row['booking_id']  ?></h1>
+                    <span class="card-description">
+                        <p class="description-title"><?php echo $row['event_date'] ?></p>
+                        <p class="description-place"><?php echo $row['noOfGuest']." guests" ?></p>
+                    </span>
+                    <span class="card-button">
+                          <a href="<?php echo BASEURL . '/epNotePage/index/'.$row['booking_id'].''; ?>"><button class="card-btn">View notes</button></a>
+                      </span>
+                </div>
+            </div> <?php }} ?>
               </div>
-              <div class="add-note">
-                <a href="<?php echo BASEURL . '/epNoteNewAdd/index/'.$service_id.''; ?>"><button class="btn" >Add Note</button></a>
-              </div>
-            </div>
+       </div>
     </section>
   </div>
   <?php linkJS("vendor/spReview"); ?>

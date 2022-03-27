@@ -23,7 +23,7 @@
     <a id="backBtn" href="<?php echo BASEURL . '/epNoteNew/index/'.$service_id.''; ?>"> <button id="backBtnId">Back</button></a>
     <h1 id="mainTitle">Add Note</h1>
       <div class="home-content">
-              <form action="<?php echo BASEURL . '/epNoteNewAdd/index'; ?>" class="form-area" method="POST"> 
+              <form action="<?php echo BASEURL . '/epNoteNewAdd/insertNote'; ?>" class="form-area" method="POST"> 
               <select name="recmndSerName" id="recmndSerName" placeholder="Select Service Type" value="Select Service Type">
                  <option value="slctSerType">Select Servie Type</option>   
                  <option value="venNhalls">Venues & Halls</option>

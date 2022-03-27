@@ -9,6 +9,28 @@ class EventPlannerNewNoteModel extends database
     
     public function getNotes()
     {
+        $query = "SELECT * FROM `booking` WHERE `planning_id` != 0";
+        $filtredBookings = mysqli_query($GLOBALS['db'],$query);
+        $bookingResult = array();
 
+        if ((mysqli_num_rows($filtredBookings) > 0)) {
+            $i = 0;
+            while ($eventResultArray = mysqli_fetch_assoc($filtredBookings)) {
+                // $data['booking_id'] = $bookingResultArray['booking_id '];
+                // $data['customer_id'] = $bookingResultArray['customer_id'];
+                // $data['service_id'] = $bookingResultArray['service_id'];
+                // $data['event_date'] = $bookingResultArray['event_date']; 
+                // $data['event_type'] = $bookingResultArray['event_type'];
+                // $data['noOfGuest'] = $bookingResultArray['noOfGuest'];
+                // $data['full_payment'] = $bookingResultArray['full_payment'];
+                // $data['planning_id'] = $bookingResultArray['planning_id'];
+                $bookingResult[$i] = $eventResultArray;
+                $i++;
+            }
+            return $bookingResult;
+        } else {
+            $bookingResult = null;
+            return $bookingResult;
+        }
     }
 }
