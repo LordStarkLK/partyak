@@ -7,9 +7,13 @@ class EventPlannerNewNoteModel extends database
         return $result;
     }
     
-    public function getNotes()
+    public function getNotes($id)
     {
-        $query = "SELECT * FROM `booking` WHERE `planning_id` != 0";
+        $query1 = "SELECT `service_id` FROM `other_service` WHERE `user_id`='$id'";
+        $result1 = mysqli_query($GLOBALS['db'],$query1);
+        while ($row = mysqli_fetch_assoc($result1)) {
+
+        $query = "SELECT * FROM `booking` WHERE `planning_id` != 0 AND `service_id`='$row[service_id]'";
         $filtredBookings = mysqli_query($GLOBALS['db'],$query);
         $bookingResult = array();
 
@@ -33,4 +37,5 @@ class EventPlannerNewNoteModel extends database
             return $bookingResult;
         }
     }
+}
 }

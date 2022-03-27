@@ -11,7 +11,7 @@
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <?php $service_id = $data['service_id'];?>
+  <?php $booking_id = $data['booking_id'];?>
 </head>
 
 <body>
@@ -20,7 +20,7 @@
   </header>
   <div class="container">
     <section class="home-section">
-    <a id="backBtn" href="<?php echo BASEURL . '/epNoteNew/index/'.$service_id.''; ?>"> <button id="backBtnId">Back</button></a>
+   <button id="backBtnId" onclick="history.go(-2);">Back</button>
     <h1 id="mainTitle">Add Note</h1>
       <div class="home-content">
               <form action="<?php echo BASEURL . '/epNoteNewAdd/insertNote'; ?>" class="form-area" method="POST"> 
@@ -46,12 +46,14 @@
                  <option value="fulPaid">Full Paid</option>
               </select><br>
               <input type="text" name="OthrSugst" placeholder="Other Suggestions"><br>
+              <input type="hidden" name="bookingId" value="<?php echo $booking_id ?>">
               <button type="submit" id="submitBtn">Submit</button>
               </form>
             </div>
     </section>
   </div>
   <?php linkJS("vendor/spReview"); ?>
+  <?php if($data['status']==1){ linkJS("eventPlanner/epNoteSuccessfullyAdded");} ?>
   <?php linkPhp("footer") ?>
 </body>
 
