@@ -6,11 +6,16 @@ class SpAnalytics extends FrameworkPartyak
     {
         $this->helper("linker");
         $this->preventBack("vendor");
+        $this->AnalyticModel = $this->Model("spAnalyticModel");
     }
 
     public function index()
     {
         // echo "Hi";
-        $this->view("vendor/spanalyticsView");
+        $user_id = $this->getSession("userId");
+        $data["payment"] = $this->AnalyticModel->getPaymentDetails($user_id);
+        $data["settlement"] = $this->AnalyticModel->getSettlementDetails($user_id);
+
+        $this->view("vendor/spanalyticsView",$data);
     }
 }

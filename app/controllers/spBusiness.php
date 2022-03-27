@@ -20,5 +20,11 @@ class SpBusiness extends FrameworkPartyak
         $this->view("vendor/spBusinessView" ,$data);
     }
 
+    public function deleteService($service_id)
+    {
+        $this->BusinessModel->deleteService($service_id);
+        $this->redirect("spBusiness");
+    }
+
    
 }

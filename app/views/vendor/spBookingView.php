@@ -173,7 +173,7 @@
                     <th>$row[event_date]</th>
                     <th>".number_format($total,2,'.',',')."</th>
                     <th>".number_format($row2['amount'],2,'.',',')."</th>
-                    <th>$row2[status]</th> 
+                    <th>$row2[p_status]</th> 
                   <tr>     
                   ";
                       
