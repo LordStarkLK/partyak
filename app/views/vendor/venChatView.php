@@ -136,7 +136,12 @@
     </div>
 
     </div>
-    <?php linkJS("lib/jquery-3.6.0.min"); ?>
+    <!-- Notification adding -->
+<?php linkPhp("notification"); ?>
+<?php linkJS("lib/jquery-3.6.0.min"); ?>
+<?php linkJS("admin/notification"); ?>
+
+    
     <?php linkJS("vendor/chat"); ?>
     <?php linkJS("vendor/chatUserList"); ?>
     <?php linkJS("vendor/spService"); ?>

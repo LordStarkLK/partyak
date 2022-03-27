@@ -153,6 +153,10 @@
       </div>
     </section>
   </div>
+  <!-- Notification adding -->
+<?php linkPhp("notification"); ?>
+<?php linkJS("lib/jquery-3.6.0.min"); ?>
+<?php linkJS("admin/notification"); ?>
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <?php linkJS("vendor/spAnalytics"); ?>
