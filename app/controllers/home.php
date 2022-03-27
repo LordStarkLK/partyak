@@ -5,12 +5,14 @@ class Home extends FrameworkPartyak
     public function __construct()
     {
         $this->helper("linker");
+        $this->homeModel = $this->model('homeModel');
     }
 
     public function index()
     {
         // echo "Hi";
-        $this->view("homeView");
+        $data['marketingContent'] = $this->homeModel->getMarketingContent();
+        $this->view("homeView",$data); 
     }
 
     public function signup()
