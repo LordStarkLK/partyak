@@ -30,4 +30,8 @@ class eventPlannerEventModel extends database
             return $eventResult;
         }
     }
+    public function delEvent($eventId){
+        $query ="DELETE FROM `event_planner_event_pages` WHERE `event_page_id`=$eventId ";
+        mysqli_query($GLOBALS['db'], $query);
+    }
 }

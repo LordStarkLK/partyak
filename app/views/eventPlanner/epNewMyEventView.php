@@ -96,6 +96,13 @@
                       <span class="card-button">
                           <a href="<?php echo BASEURL . '/epMyEventEvents/index/'; echo $row["event_page_id"]; ?>"><button class="card-btn">View</button></a>
                       </span>
+                      <?php
+                        if(($row['user_id']==$_SESSION['userId'])){ ?>
+                                <form action="<?php echo BASEURL . '/epNewMyEvent/delEvent'; ?>" method="POST">
+                                    <input type="hidden" id="noteId" name="eventId" value="<?php echo $row["event_page_id"] ?>">
+                                    <button type="submit" class="delete-note-text">Delete Event</button>
+                                </form>
+                      <?php  } ?>
                   </div>
               </div> <?php }} ?>
               <div class="add-note-div">
@@ -105,6 +112,11 @@
        </div>
     </section>
   </div>
+   <!-- Notification adding -->
+<?php linkPhp("notification"); ?>
+<?php linkJS("lib/jquery-3.6.0.min"); ?>
+<?php linkJS("admin/notification"); ?>
+
   <?php linkJS("vendor/spReview"); ?>
   <!-- <?php linkPhp("footer") ?> -->
 </body>

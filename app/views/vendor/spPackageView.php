@@ -98,9 +98,14 @@
                 
                 $i = 1;
                     //add service name of the packages
-                echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\">  $row[service_name]";
-                    
-              } ?></a>
+                    if($data['userType']['service_type']=='eventPlanner'){
+                      ?>
+                      <a href="<?php echo BASEURL . '/epOnlyService/index/'.$row['service_id'].''; ?>"><?php echo $row['service_name'] ?></a>
+                      <?php
+                    } else{ ?>
+                      <a href="<?php echo BASEURL . '/spService/index/'.$row['service_id'].''; ?>"><?php echo $row['service_name'] ?></a>
+                      <?php }
+               } ?>
           </div>
           <table class="table-content">
             <thead>
@@ -329,6 +334,11 @@ echo "
 </div>
 
 </div>
+
+  <!-- Notification adding -->
+<?php linkPhp("notification"); ?>
+<?php linkJS("lib/jquery-3.6.0.min"); ?>
+<?php linkJS("admin/notification"); ?>
  
 <?php linkJS("vendor/spService"); ?>
   <?php linkJS("vendor/spAddPackage"); ?>

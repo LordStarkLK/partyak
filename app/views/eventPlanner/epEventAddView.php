@@ -18,7 +18,7 @@
     </header>
     <div class="container">
         <div class="glass center form_area">
-            <a href="<?php echo BASEURL . '/epNewMyEvent/index/'.$service_id.''; ?>"><button class="btn back">Back</button></a>
+            <button class="btn back" onclick="history.go(-2);">Back</button>
             <form action="<?php echo BASEURL . '/epEventAdd/addEvent'; ?>" class="form-area" method="POST" enctype="multipart/form-data">
                 <input type="text" name="event_type" placeholder="Event Type" required><br>
                 <input type="date" name="date" placeholder="Date" required><br>
@@ -35,9 +35,15 @@
             </form>
         </div>
     </div>
+
+     <!-- Notification adding -->
+<?php linkPhp("notification"); ?>
+<?php linkJS("lib/jquery-3.6.0.min"); ?>
+<?php linkJS("admin/notification"); ?>
 </body>
-<?php if($data["status"] == 1){
+<?php if($_SESSION['noteStatus'] == 1){
         linkJS("eventPlanner/epEventSuccessfullyAdded");
+        $_SESSION['noteStatus']=0;
     }?>
 </html>
 <!-- `user_id`, `event_page_id`, `date`, `event_type`, `no_of_guests`, `image1`, `image2`, `image3`, `image4`, `image5`, `Location`, `Description` -->

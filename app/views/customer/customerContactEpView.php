@@ -162,10 +162,10 @@
                                 while($row=mysqli_fetch_assoc($data['ep_detail'])  ){
                                   echo "<td>";
                                   if($row['service_image']){
-                                    echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
+                                    echo "<a href=\" ".BASEURL ."/epOnlyService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
                                   }else{
                                     $row['service_image']="default.png";
-                                    echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
+                                    echo "<a href=\" ".BASEURL ."/epOnlyService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
                                   }
                                   echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
                                   echo "</td>"; 
@@ -188,7 +188,14 @@
 
 </div>
 
+<!-- Notification adding -->
+<?php linkPhp("notification"); ?>
+<?php linkJS("lib/jquery-3.6.0.min"); ?>
+<?php linkJS("admin/notification"); ?>
+
 </body>
+
+
 <?php linkJS("customer/customerSearchVendor"); ?>
 <?php linkJS("customer/customerContactServiceProvicer"); ?>
 <?php linkPhp("footer") ?>

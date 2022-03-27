@@ -195,11 +195,6 @@
                                       
                                     }
             ?>
-          <tr>
-            <td> <a  href="#"> <img <?php srcIMG("cate.png") ?> alt="Chance Flowers"></a><br><p>Dushan Catering <br> Colombo, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("jayamalpng.png") ?> alt="Chance Flowers"></a> <br><p>Jayamal Caterers <br> Galle, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("papscate.jpg") ?> alt="Chance Flowers"> </a><br><p>Paps Catering <br>Kandy,Sri Lanka</p></td>  
-          </tr>
         </table>
       </div>
   
@@ -209,7 +204,14 @@
 
 </div>
 
+<!-- Notification adding -->
+<?php linkPhp("notification"); ?>
+<?php linkJS("lib/jquery-3.6.0.min"); ?>
+<?php linkJS("admin/notification"); ?>
+
 </body>
+
+
 <?php linkJS("customer/customerSearchVendor"); ?>
 <?php linkJS("customer/customerContactServiceProvicer"); ?>
 <?php linkPhp("footer") ?>

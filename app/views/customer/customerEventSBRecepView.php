@@ -24,7 +24,7 @@
   <div class="container">
     <div class="custopic">
       <p>Recomndations of Event Planner</p>
-      <!-- <a href="<?php echo BASEURL . '/customerProfile'; ?>">Back to profile</a> -->
+      <a href="<?php echo BASEURL . '/customerEventSB'; ?>">Event Schedule Board</a>
     </div>
 
     <div class="cusevent">
@@ -85,6 +85,11 @@
 
 
   </div>
+
+  <!-- Notification adding -->
+<?php linkPhp("notification"); ?>
+    <?php linkJS("lib/jquery-3.6.0.min"); ?>
+    <?php linkJS("admin/notification"); ?>
 
   <?php linkPhp("footer") ?>
 

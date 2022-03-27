@@ -130,21 +130,40 @@
                 $j=1;
                       
                         while($row=mysqli_fetch_assoc($data['service_detail'])  ){
-                          echo "<td>";
-                          if($row['service_image']){
-                            echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
+                          if($row['service_type']=="eventPlanner"){
+                            echo "<td>";
+                            if($row['service_image']){
+                              echo "<a href=\" ".BASEURL ."/epOnlyService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
+                            }else{
+                              $row['service_image']="default.png";
+                              echo "<a href=\" ".BASEURL ."/epOnlyService/index/$row[service_id]\"><img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
+                            }
+                            echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
+                            echo "</td>"; 
+                           
+                            $j++;
+                            if($j>3){
+                              echo "</tr>";
+                              $j = 1;
+                            }
                           }else{
-                            $row['service_image']="default.png";
-                            echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"><img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
+                            echo "<td>";
+                            if($row['service_image']){
+                              echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
+                            }else{
+                              $row['service_image']="default.png";
+                              echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"><img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
+                            }
+                            echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
+                            echo "</td>"; 
+                           
+                            $j++;
+                            if($j>3){
+                              echo "</tr>";
+                              $j = 1;
+                            }
                           }
-                          echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
-                          echo "</td>"; 
-                         
-                          $j++;
-                          if($j>3){
-                            echo "</tr>";
-                            $j = 1;
-                          }
+
                           
                         }
           ?>
@@ -158,8 +177,14 @@
   </div>
 
 </div>
+<?php linkPhp("notification"); ?>
+<?php linkJS("lib/jquery-3.6.0.min"); ?>
+<?php linkJS("admin/notification"); ?>
 
 </body>
+<!-- Notification adding -->
+
+
 <!-- <?php linkJS("customer/customerSearchVendor"); ?>
 <?php linkJS("customer/customerContactServiceProvicer"); ?> -->
 <?php linkPhp("footer") ?>
