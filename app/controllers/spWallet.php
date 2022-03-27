@@ -16,6 +16,13 @@ class SpWallet extends FrameworkPartyak
         $data["wallet"] = $this->user->getWalletDetails($user_id);
         $data["payment"] = $this->user->getPaymentDetails($user_id);
         $data["settlement"] = $this->user->getSettlementDetails($user_id);
+        $data["user"] = $this->user->getUserDetails($user_id);
+
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $amount = $_POST["requestAmount"];
+            $this->user->requestPayment($user_id, $amount);
+        }
+
         $this->view("vendor/spWalletView",$data);
     }
 

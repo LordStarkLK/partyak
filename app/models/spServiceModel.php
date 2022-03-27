@@ -7,16 +7,7 @@ class SpServiceModel extends Database
     {
 
 
-        $query = "SELECT service_id, service_name, description, service_location, service_type, event_type, service_areas, fb_url, instagram_url, linkedin_url, advance_price, initial_discount, initial_count, preparation_time, simultaneous_booking, cancellation_policy, payment_terms_and_conditions, additional_information, 
-         venue_type, standing_capacity, seating_arrangement, venue_features,
-         meal_time, no_of_attendants, 
-         music_provider_type,
-         dancing_type_name,
-         saloon_type, supplying_services,
-         cake_type, sweet_type,
-         decoration_type, floral_arrangement,
-         dress_sections, dress_type,
-         caption, video_url FROM other_service WHERE service_id='$service_id' ";
+        $query = "SELECT * FROM other_service WHERE service_id='$service_id' ";
 
 
 
@@ -64,23 +55,24 @@ class SpServiceModel extends Database
         $result = mysqli_fetch_assoc($query);
         $fName = $result['f_name'];
         $lName = $result['l_name'];
-        $query = "SELECT service_name,user_id from other_service WHERE service_id = $service_id";
+        $query = "SELECT service_name,user_id,service_id from other_service WHERE service_id = $service_id";
         $query = mysqli_query($GLOBALS['db'], $query);
         $result = mysqli_fetch_assoc($query);
         $service_name = $result['service_name'];
         $vendor_id = $result['user_id'];
+        $service_id = $result["service_id"];
                 
         $description = "$fName $lName have requested the service of $service_name , The customer is waiting to be accepted";
         // notification for the vendor
         $query = "INSERT INTO notifications(notification_type,heading,description,url,user_id,notification_status,date)
-         VALUES ('booking_request','New Booking Request','$description','http://localhost/partyak/adminBookings','$vendor_id','0',NOW())";
+         VALUES ('booking_request','New Booking Request','$description','http://localhost/partyak/spBooking/index/$service_id','$vendor_id','0',NOW())";
         mysqli_query($GLOBALS['db'], $query); 
 
         $description = "You have requested to hire $service_name , You got 24 hours to cancel the request";
 
         // notification for the customer
         $query = "INSERT INTO notifications(notification_type,heading,description,url,user_id,notification_status,date)
-         VALUES ('booking_request','New Booking Request','$description','http://localhost/partyak/adminBookings','$id','0',NOW())";
+         VALUES ('booking_request','New Booking Request','$description','http://localhost/partyak/customerProfileBooking','$id','0',NOW())";
 
         mysqli_query($GLOBALS['db'], $query);
 

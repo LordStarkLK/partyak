@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php $wallet = mysqli_fetch_assoc($data["wallet"]); ?>
+  <?php $user = mysqli_fetch_assoc($data["user"]); ?>
 </head>
 
 <body>
@@ -60,7 +61,7 @@
         </div>
       </div>
       <div class="transaction-boxes">
-        <a class="title"> Recent Payments</a>
+        <a class="title"> Customer Payments</a>
         <table class="table-content">
           <thead>
             <tr>
@@ -76,7 +77,7 @@
                 echo "
                 <tr>
                 <th>$row[payment_id]</th>
-                <th>$row[status]</th>
+                <th>$row[p_status]</th>
                 <th>$row[payment_date]</th>
                 <th>Rs.".number_format($row['amount'],2,'.',',')."</th>
                 </tr>
@@ -96,7 +97,7 @@
               if($data['settlement']){
                 echo "
                 <div class=\"transaction-boxes\">
-                <a class=\"title\"> Recent Settlements</a>
+                <a class=\"title\"> Settlements</a>
                 <table class=\"table-content\">
                   <thead>
                     <tr>
@@ -131,43 +132,6 @@
         </table>
       </div>
       
-            
-            <!-- <tr>
-              <th>2</th>
-              <th>Deposit</th>
-              <th>Monthly payment</th>
-              <th>1234</th>
-              <th>BOC</th>
-              <th>19-08-2021</th>
-              <th>30000</th>
-            </tr> -->
-            <!-- <tr>
-              <th>2</th>
-              <th>Deposit</th>
-              <th>Request payment</th>
-              <th>1234</th>
-              <th>BOC</th>
-              <th>01-08-2021</th>
-              <th>30000</th>
-            </tr>
-            <tr>
-              <th>3</th>
-              <th>Withdraw</th>
-              <th>Marketing</th>
-              <th>1234</th>
-              <th>BOC</th>
-              <th>29-07-2021</th>
-              <th>2000</th>
-            </tr>
-            <tr>
-              <th>4</th>
-              <th>Deposit</th>
-              <th>Monthly payment</th>
-              <th>1234</th>
-              <th>BOC</th>
-              <th>19-07-2021</th>
-              <th>30000</th>
-            </tr> -->
           
       
     </section>
@@ -179,20 +143,21 @@
   <div class="modal-content">
     
     <span class="close">&times;</span>
-    <form>
+    <form action="<?php echo BASEURL . '/spWallet/index'; ?>" method="POST">
       <div class="request-details">
         <h2>Early Payment Request</h2>
         <p>
-            Service provider name : Lara Fernando <br>
-            Date : 27/10/2021 <br>
+            User ID : <?php echo $wallet['user_id']; ?> <br>
+            User Name : <?php echo $user['f_name']," ", $user['l_name'] ; ?> <br>
+            Date : <?php echo date("Y/m/d"); ?> <br>
             Amount(LKR) :
         </p>
         
-        <input id="request-amount" type="text" placeholder="Enter the amount" required>
+        <input id="request-amount" name="requestAmount" type="text" placeholder="Enter the amount" required>
       </div>
       <div class="request-submit-btn">
         <!-- <input id="request-submit" type="submit"> -->
-        <button id="request-submit" type="submit">Submit</button>
+        <button id="request-submit" type="submit" name="request">Submit</button>
       </div>
     <!-- <div id="request-submit" class="request-submit-btn">
       <input type="submit" value="Submit" >
@@ -204,7 +169,45 @@
 
 </div>
 
-  <?php linkJS("vendor/spWallet"); ?>
+<script type="text/javascript" >
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("request-button");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+var request_submit = document.getElementById("request-submit");
+request_submit.onclick=function(){
+  modal.style.display = "none";
+}
+
+  <!-- Notification adding -->
+<?php linkPhp("notification"); ?>
+<?php linkJS("lib/jquery-3.6.0.min"); ?>
+<?php linkJS("admin/notification"); ?>
+
+
+</script>
+  <!-- <?php linkJS("vendor/spWallet"); ?> -->
   <?php linkPhp("footer") ?>
 
 </body>

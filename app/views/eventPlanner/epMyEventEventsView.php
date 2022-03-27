@@ -45,6 +45,11 @@
         <h2>Description</h2>
         <p><?php echo $data['eventDetails']['description'];?></p>
     </div>
+     <!-- Notification adding -->
+<?php linkPhp("notification"); ?>
+<?php linkJS("lib/jquery-3.6.0.min"); ?>
+<?php linkJS("admin/notification"); ?>
+
     <?php linkPhp("footer") ?>
     <?php linkJS("eventPlanner/epEventPlannerEventEvents");
 ?>

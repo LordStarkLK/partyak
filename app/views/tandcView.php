@@ -76,6 +76,11 @@
 </div>
 
     </div>
+
+<!-- Notification adding -->
+<?php linkPhp("notification"); ?>
+<?php linkJS("lib/jquery-3.6.0.min"); ?>
+<?php linkJS("admin/notification"); ?>    
     
 </body>
 <?php linkPhp("footer") ?>

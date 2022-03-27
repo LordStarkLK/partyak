@@ -80,7 +80,7 @@ body{
     text-decoration: none;
     font-size: 28px;
     font-weight: bold;
-    color: black;
+    color: rgb(107, 19, 92);
 }
 .service_name a:hover{
     cursor: pointer;
@@ -124,7 +124,7 @@ body{
 .curr_status.accept{
     color: rgb(37, 228, 53);
 }
-.action{
+.action .delete-btn{
     height: 55px;
     background-color: #000000;
     
@@ -136,12 +136,12 @@ body{
     align-items: center;
     
 }
-.action a{
+.action .delete-btn a{
     font-size: 23px;
     font-weight: 800;
     color: rgb(204, 44, 44);
 }
-.action:hover{
+.action:hover, .delete-btn:hover{
     cursor: pointer;
 }
 

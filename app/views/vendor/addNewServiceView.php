@@ -60,7 +60,35 @@
                 <label for="sname">Location</label>
               </div>
               <div class="col_input">
-                <input type="text" id="location" name="location" placeholder="Your service location">
+                
+                <select id="location" name="location">
+                    <option value="null">-select city-</option>
+                    <option value="Colombo">Colombo</option>
+                    <option value="Gampaha">Gampaha</option>
+                    <option value="Kaluthara">Kaluthara</option>
+                    <option value="Galle">Galle</option>
+                    <option value="Matara">Matara</option>
+                    <option value="Hambanthota">Hambanthota</option>
+                    <option value="Rathnapura">Rathnapura</option>
+                    <option value="Kegalle">Kegalle</option>
+                    <option value="Kandy">Kandy</option>
+                    <option value="Nuwara Eliya">Nuwara Eliya</option>
+                    <option value="Matale">Matale</option>
+                    <option value="Kurunegala">Kurunegala</option>
+                    <option value="Puttalam">Puttalam</option>
+                    <option value="Badulla">Badulla</option>
+                    <option value="Monaragala">Monaragala</option>
+                    <option value="Batticaloa">Batticaloa</option>
+                    <option value="Trincomalee">Trincomalee</option>
+                    <option value="Ampara">Ampara</option>
+                    <option value="Anuradapura">Anuradapura</option>
+                    <option value="Polonnaruwa">Polonnaruwa</option>
+                    <option value="Vavuniya">Vavuniya</option>
+                    <option value="Kilinochchi">Kilinochchi</option>
+                    <option value="Jaffna">Jaffna</option>
+                    <option value="Mannar">Mannar</option>
+                    <option value="Mullathivu">Mullathivu</option>
+                </select>
               </div>
             </div>
             <hr/>
@@ -540,6 +568,21 @@
             <hr/>
           </div>
 
+<!-- this is for event planner -->
+          <div id="ep_features" class="div">
+            <div class="row">
+                <div class="col_name">
+                  <label for="epFixedPrice">Fixed price for an event</label>
+                </div>
+                <div class="col_input">
+                  <input type="text" id="epFixedPrice" name="epFixedPrice" placeholder >
+                </div>
+            </div>
+            <hr/>
+          
+          </div>
+
+<!-- this is for nothing -->
       <div id="no_features" class="no_features">
         <a>No features available</a>
       </div>          
@@ -618,11 +661,13 @@
   var cakesF = document.getElementById("cakes_features");
   var decoF = document.getElementById("deco_features");
   var dressF = document.getElementById("dress_features");
+  var ePlannerF = document.getElementById("ep_features");
   var noF = document.getElementById("no_features");
         
   function populate(serType) {
             
     var serType = document.getElementById("serviceType");
+
     if(serType.value=="catering"){
       venueF.style.display = "none";
       cateF.style.display = "block";
@@ -632,6 +677,7 @@
       cakesF.style.display = "none";
       decoF.style.display = "none";
       dressF.style.display = "none";
+      ePlannerF.style.display = "none";
       noF.style.display = "none";
 
     }
@@ -644,6 +690,7 @@
       cakesF.style.display = "block";
       decoF.style.display = "none";
       dressF.style.display = "none";
+      ePlannerF.style.display = "none";
       noF.style.display = "none";
     }
     else if(serType.value=="dancing"){
@@ -655,6 +702,7 @@
       cakesF.style.display = "none";
       decoF.style.display = "none";
       dressF.style.display = "none";
+      ePlannerF.style.display = "none";
       noF.style.display = "none";
     }
     else if(serType.value=="decoration"){
@@ -666,6 +714,7 @@
       cakesF.style.display = "none";
       decoF.style.display = "block";
       dressF.style.display = "none";
+      ePlannerF.style.display = "none";
       noF.style.display = "none";
     }
     else if(serType.value=="dresses"){
@@ -677,6 +726,7 @@
       cakesF.style.display = "none";
       decoF.style.display = "none";
       dressF.style.display = "block";
+      ePlannerF.style.display = "none";
       noF.style.display = "none";
     }
     else if(serType.value=="musical"){
@@ -688,6 +738,7 @@
       cakesF.style.display = "none";
       decoF.style.display = "none";
       dressF.style.display = "none";
+      ePlannerF.style.display = "none";
       noF.style.display = "none";
     }
     else if(serType.value=="saloon"){
@@ -699,6 +750,7 @@
       cakesF.style.display = "none";
       decoF.style.display = "none";
       dressF.style.display = "none";
+      ePlannerF.style.display = "none";
       noF.style.display = "none";
     }
     else if(serType.value=="venues_halls"){
@@ -710,6 +762,19 @@
       cakesF.style.display = "none";
       decoF.style.display = "none";
       dressF.style.display = "none";
+      ePlannerF.style.display = "none";
+      noF.style.display = "none";
+    }
+    else if(serType.value=="eventPlanner"){
+      venueF.style.display = "none";
+      cateF.style.display = "none";
+      musicF.style.display = "none";
+      danceF.style.display = "none";
+      saloonF.style.display = "none";
+      cakesF.style.display = "none";
+      decoF.style.display = "none";
+      dressF.style.display = "none";
+      ePlannerF.style.display = "block";
       noF.style.display = "none";
     }
     else{
@@ -728,6 +793,11 @@
   }
 
   </script>
+
+  <!-- Notification adding -->
+<?php linkPhp("notification"); ?>
+<?php linkJS("lib/jquery-3.6.0.min"); ?>
+<?php linkJS("admin/notification"); ?>
 
   <?php linkJS("vendor/addNewService"); ?>
   <?php linkPhp("footer") ?>
