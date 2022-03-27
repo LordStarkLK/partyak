@@ -19,8 +19,9 @@ class EPNewMyEvent extends FrameworkPartyak
         $data['event'] = $this->epEvent->viewEvent();
         $this->view("eventPlanner/epNewMyEventView",$data);
     }
-    public function delEvent(){
+    public function delEvent($service_id){
         $eventId=$_POST["eventId"];
         $this->epEvent->delEvent($eventId);
+        $this->index($service_id);
     }
 }
