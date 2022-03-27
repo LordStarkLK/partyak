@@ -18,21 +18,58 @@ h1 {
   color: aliceblue;
   position: relative;
   font-size: xxx-large;
-  top: 50%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
+  margin-bottom: 50px;
 }
 .container {
   width: 600px;
-  height: 218px;
+  height: 448px;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin: -25px 0 0 -25px;
+  margin: 25px 0 0 25px;
   backdrop-filter: blur(23px) saturate(200%);
   -webkit-backdrop-filter: blur(23px) saturate(200%);
   background-color: rgba(73, 73, 73, 0.54);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
+  
 }
+
+p{
+  margin-left: 10%;
+  color: aliceblue;
+  font-size: x-large;
+  
+}
+
+.container button{ 
+  width: 30%;
+  margin: 2%;
+  margin-top:10%;
+  margin-bottom:10%;
+  padding: 3%;
+  margin-left:35%;
+  color:#202020;
+  background-color:#18ab29;
+  font-size: 22px;
+  font-weight: bold;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 10px;
+}
+
+.container button a{ 
+  text-decoration: none;
+  color:#ffff;
+}
+
+.container button:hover {
+  background-color:#18ab29;
+  opacity: 60%;
+  cursor: pointer;
+}
+

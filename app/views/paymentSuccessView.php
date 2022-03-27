@@ -8,6 +8,7 @@
     <title>Home</title>
     <?php linkCSS("paymentSuccessful"); ?>
     <?php linkCSS("navigation"); ?>
+    <?php $reciept = $data["reciept"]; ?>
 </head>
 
 
@@ -20,6 +21,10 @@
     <body>
         <div class="container">
             <h1>Payment Successful!</h1><br>
+            <p><br>Payment Order ID : <?php echo $reciept["payment_id"]; ?></p>
+            <p><br>Payment Amount : <?php echo $reciept["amount"]; ?></p>
+            <p><br>Payment Date and Time : <?php echo date_format(new DateTime($reciept["payment_date"]),'Y-m-d H:i:s')?></p>
+            <button type="button" class="okbtn" ><a href="<?php echo BASEURL . '/customerProfileBooking'; ?>">OK</a></button>
         </div>
 
     </body>
