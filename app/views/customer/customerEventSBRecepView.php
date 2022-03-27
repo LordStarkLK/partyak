@@ -24,7 +24,7 @@
   <div class="container">
     <div class="custopic">
       <p>Recomndations of Event Planner</p>
-      <!-- <a href="<?php echo BASEURL . '/customerProfile'; ?>">Back to profile</a> -->
+      <a href="<?php echo BASEURL . '/customerEventSB'; ?>">Event Schedule Board</a>
     </div>
 
     <div class="cusevent">

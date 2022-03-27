@@ -218,11 +218,6 @@
                                       
                                     }
             ?>
-          <tr>
-            <td> <a  href="#"> <img <?php srcIMG("ashane.jpg") ?> alt="Chance Flowers"></a><br><p>Ashane Gunarathne <br>Colombo, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("Wavemusic.jpg") ?> alt="Chance Flowers"> </a><br><p>Waves<br> Mathara, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("DjAzthu.jpg") ?> alt="Chance Flowers"> </a><br><p>DJ Azthu <br>Kegalle,Sri Lanka</p></td>  
-          </tr>
         </table>
       </div>
   
