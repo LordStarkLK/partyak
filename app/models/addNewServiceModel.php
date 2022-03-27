@@ -13,7 +13,7 @@ class AddNewServiceModel extends Database
     $decoType, $flowType,
     $sectionType, $dressCategory ,
     
-    $caption, $video )
+    $caption, $video,$epFixedPrice )
     
     
     // public function addServiceDetails($id, $servName, $servDesc, $location, $eventType, $facebook, $instagram, $linkedin, $rePrice, $iniDiscount, $count, $prepaTime,$simultaneousBooking, $cancellationPolicy, $tandc, $addiInfo, $caption, $video )
@@ -37,7 +37,7 @@ class AddNewServiceModel extends Database
          decoration_type, floral_arrangement,
          dress_sections, dress_type,
          
-         caption, video_url) 
+         caption, video_url,epFixedPrice) 
         VALUES ('$id', '$servName', '$servDesc', '$location', '$serviceType', '$eventType', '$province', '$facebook', '$instagram', '$linkedin', '$rePrice', '$iniDiscount', '$count', '$prepaTime', '$simultaneousBooking', '$cancellationPolicy', '$tandc', '$addiInfo', '$imgNameNew',
         '$venueType', '$standingCapacity', '$seatingArr', '$addFeature', 
         '$meals', '$attendantsNo', 
@@ -47,7 +47,7 @@ class AddNewServiceModel extends Database
         '$cakeType', '$sweetType',
         '$decoType', '$flowType',
         '$sectionType', '$dressCategory' ,
-        '$caption', '$video')";
+        '$caption', '$video' ,'$epFixedPrice')";
         
          
     
