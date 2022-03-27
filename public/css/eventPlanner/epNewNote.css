@@ -9,3 +9,69 @@
 .note-content-area {
   height: 500px;
 }
+.card {
+  display: flex;
+  width: 750px;
+  height: 142px;
+  flex-direction: row;
+  padding-right: 20px;
+  padding-left: 38px;
+  align-items: center;
+  left: 129px;
+  position: relative;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+.glass {
+  backdrop-filter: blur(23px) saturate(200%);
+  -webkit-backdrop-filter: blur(23px) saturate(200%);
+  background-color: rgba(73, 73, 73, 0.3);
+  border-radius: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+.card-button .card-btn {
+  padding: 7px 32px !important;
+  border-radius: 18px !important;
+  background-color: #616161;
+  color: #d8ff3b;
+  font-size: 16px;
+}
+button {
+  background-color: darkcyan;
+  border-radius: 28px;
+  border: none;
+  cursor: pointer;
+  font-family: Arial;
+  /* font-size: 18px; */
+  line-height: 23px;
+  color: #e8f0f2;
+  padding: 6px 35px;
+  text-decoration: none;
+}
+.card-date {
+  font-family: "Atlasi", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 73px;
+  color: #ffffff;
+}
+.description-place {
+  font-family: "Atlasi", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 55px;
+  color: #ffffff;
+}
+.description-title {
+  font-family: "Atlasi", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 36px;
+  color: rgba(255, 255, 255, 0.71);
+}
+.home-content {
+  overflow-y: scroll;
+}
