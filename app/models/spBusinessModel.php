@@ -12,5 +12,10 @@ class SpBusinessModel extends Database
         }
     }
     
+    public function deleteService($service_id){
+        $query = "DELETE FROM other_service WHERE service_id=$service_id";
+        $result = mysqli_query($GLOBALS["db"], $query);
+        return $result;
+    }
 
 }

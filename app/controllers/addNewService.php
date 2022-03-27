@@ -47,6 +47,9 @@ class AddNewService extends FrameworkPartyak
             // additional features
             $caption = $_POST['caption'];
             $video = $_POST['vurl'];
+
+            //event planner
+            $epFixedPrice = $_POST['epFixedPrice'];
                 
 
             // $file = $_FILES['file'];
@@ -232,6 +235,7 @@ class AddNewService extends FrameworkPartyak
                 $dressCategory = implode(',' , $_POST['dresscat']);
                 
             }
+            
 
             else{
                 $venueType = isset($_POST["venuetype"]) ? $_POST["venuetype"] : 'Null';
@@ -273,7 +277,7 @@ class AddNewService extends FrameworkPartyak
             $cakeType, $sweetType,
             $decoType, $flowType,
             $sectionType, $dressCategory ,
-            $caption, $video );
+            $caption, $video,$epFixedPrice );
 
        
             
