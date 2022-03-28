@@ -192,11 +192,6 @@
           ?>
 
 
-          <tr>
-            <td> <a  href="#"> <img <?php srcIMG("pob.jpg") ?> alt="Chance Flowers"></a><br><p>OB Sudio <br> Galle, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("pOminro.jpg") ?> alt="Chance Flowers"></a> <br><p>Ominro <br> Gampaha, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("pDarkeye.jpg") ?> alt="Chance Flowers"> </a><br><p>DARKEYE <br>Kaluthara,Sri Lanka</p></td>  
-          </tr>
         </table>
       </div>
   

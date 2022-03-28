@@ -209,11 +209,7 @@
                                           
                                         }
             ?>
-          <tr>
-            <td> <a  href="#"> <img <?php srcIMG("chanceFlowers.png") ?> alt="Chance Flowers"></a><br><p>2nd Chance Flowers <br> Colombo, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("setiback.png") ?> alt="Chance Flowers"> </a><br><p>Evntro<br> Nuwara Eliya, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("designer.jpg") ?> alt="Chance Flowers"></a> <br><p>Event Decos <br>Hambanthota,Sri Lanka</p></td>  
-          </tr>
+          
         </table>
       </div>
   
