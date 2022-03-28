@@ -35,7 +35,7 @@
     <table class="table-content">
           <tr>
 
-            <th>Booking_No</th>
+            <th>Booking No</th>
             <th>Vendor Type</th>
             <th>Vendor Name</th>
             <th>Event Date</th>
@@ -76,9 +76,8 @@
                   }
                   echo"
                   </td>
-                  <td>Completed</td>
+                  <td>$row[full_payment]</td>
                   <td class=\"btn-row\">
-
                       <button class=\"edit-booking\"><a href=\" ".BASEURL . "/payment/paymentDet/$row[booking_id]/$row[user_id]\">Go</a></button>
                   </td>                 
 
