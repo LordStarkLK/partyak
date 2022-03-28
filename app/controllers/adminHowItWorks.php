@@ -22,6 +22,7 @@ class AdminHowItWorks extends FrameworkPartyak{
         $this->view("admin/adminHowItWorksView",$data);
     }
 
+    // edits and inserts in unique features
     public function unique_features(){
         IF($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST["id"] != "insert"){
             $title = $_POST["title"];
@@ -45,7 +46,7 @@ class AdminHowItWorks extends FrameworkPartyak{
 
 
     }
-
+    // edits and inserts in vendor details
     public function vendorDetails(){
         IF($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST["id"] == "insert"){
             $title = $_POST["title"];
@@ -59,6 +60,7 @@ class AdminHowItWorks extends FrameworkPartyak{
 
     }
 
+    // edits and insets in customer details 
     public function customerDetails(){
         IF($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST["id"] == "insert"){
             $title = $_POST["title"];

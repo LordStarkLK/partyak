@@ -13,6 +13,7 @@ class AdminTandC extends FrameworkPartyak{
         $errors["title"] = "";
         $errors["content"] = "";
 
+        // for the update section
         IF($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST["id"] != "insert"){
             $title = $_POST["title"];
             $content = $_POST["content"];
@@ -38,6 +39,7 @@ class AdminTandC extends FrameworkPartyak{
            
         }
 
+        // for the insert new section
         IF($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST["id"] == "insert"){
             $title = $_POST["title"];
             $content = $_POST["content"];

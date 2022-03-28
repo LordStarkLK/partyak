@@ -2,6 +2,7 @@ const searchBar = document.querySelector(".search input"),
 searchIcon = document.querySelector(".search button"),
 usersList = document.querySelector(".sales-boxes");
 
+// changing to search and to show the labels
 searchIcon.onclick = ()=>{
     searchBar.classList.toggle("show");
     searchIcon.classList.toggle("active");

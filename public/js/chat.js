@@ -16,6 +16,7 @@ $(document).ready(function(){
     function sendMessage()
     {
         // let message = $(".input-field").val();
+        // to send through post method
         var formData = $(".typing-area").serialize();
         // console.log(formData);
         $(".input-field").val("");

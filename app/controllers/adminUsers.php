@@ -23,9 +23,10 @@ class AdminUsers extends FrameworkPartyak{
     }
 
     public function search(){
+        // POST from the users js file
         $searchTerm = mysqli_real_escape_string($GLOBALS['db'], $_POST['searchTerm']);
 
-        // echo $searchTerm;
+        
         $userList = $this->user->search($searchTerm);
         echo $userList;
     }

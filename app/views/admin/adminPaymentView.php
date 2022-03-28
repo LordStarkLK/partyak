@@ -97,6 +97,7 @@
 
                         </tr>
                         <tr>
+                            <!-- table row content -->
                             <?php while($row_payment = mysqli_fetch_assoc($data['payment'])){
                                 $row_customer = mysqli_fetch_assoc($data['customer']);
                                 $row_service = mysqli_fetch_assoc($data['service']);
@@ -109,7 +110,7 @@
                                 //         $thousandseparater = ',';
                                 //         return number_format($number,$decimalplaces,$decimalcharacter,$thousandseparater);
                                 //     }
-
+                                // number format used to get number in monetory format
                                 echo"
                                 <td>$row_payment[payment_id]</td>
                                 <td>$row_customer[f_name] $row_customer[l_name]</td>

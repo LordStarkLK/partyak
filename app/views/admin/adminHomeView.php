@@ -35,7 +35,7 @@
         <i class='bx bx-menu sidebarBtn' id="iconMenu"></i>
         <span class="dashboard">ANALYTICS</span>
       </div>
-   
+   <!-- Detail showing area -->
     <div class="home-content">
       <div class="overview-boxes">
         <div class="box">
@@ -60,7 +60,7 @@
           <i class='bx bxs-user-rectangle cart three' ></i>
         </div>
       </div>
-
+      <!-- Chart area -->
       <div class="sales-boxes">
         <div class="recent-sales box">
           <div class="title">Sales Summery</div>
@@ -107,7 +107,7 @@
   </section>
 </div>
 
-
+<!-- Getting values for the chart js -->
 <script>
   var xValues = ["January 2022", "February 2022", "March 2022"];
   var yValues = [<?php echo $total[0] ; ?> , <?php echo $total[1] ?>, <?php echo $total[2]; ?>];

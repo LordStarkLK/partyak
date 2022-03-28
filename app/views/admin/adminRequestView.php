@@ -92,6 +92,7 @@
                         </tr>
 
                         <?php
+                        // table content
                         $x = 1;
                          while($row=mysqli_fetch_assoc($data['services'])){
                             $id_name = 'myDropdown';

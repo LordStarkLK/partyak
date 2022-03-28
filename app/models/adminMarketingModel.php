@@ -18,6 +18,7 @@
         }
 
         public function onlineStatus($content_id){
+            // Change status to online
             $query = "UPDATE marketing_content SET upload_status = 'online' WHERE content_id = '$content_id'";
             $result = mysqli_query($GLOBALS['db'],$query);
             // should be the html to change the table row column to onlineed status
@@ -26,6 +27,7 @@
                 $output = ' <i class="fas fa-circle online"></i> online';
             }
 
+            // notification generation
             $query = "SELECT user_id from marketing_content WHERE content_id = '$content_id'";
             $query = mysqli_query($GLOBALS['db'],$query);
             $result = mysqli_fetch_assoc($query);
@@ -42,6 +44,7 @@
     
     
         public function offlineStatus($content_id){
+            // Change status to offline
             $query = "UPDATE marketing_content SET upload_status = 'offline' WHERE content_id = '$content_id'";
             $result = mysqli_query($GLOBALS['db'],$query);
             // should be the html to change the table row column to onlineed status
@@ -50,6 +53,7 @@
                 $output = ' <i class="fas fa-circle offline"></i> offline';
             }
 
+            // notification generation
             $query = "SELECT user_id from marketing_content WHERE content_id = '$content_id'";
             $query = mysqli_query($GLOBALS['db'],$query);
             $result = mysqli_fetch_assoc($query);
@@ -66,6 +70,7 @@
         }
 
         public function acceptStatus($content_id){
+            // Change status to accepted
             $query = "UPDATE marketing_content SET upload_status = 'Accepted' WHERE content_id = '$content_id'";
             $result = mysqli_query($GLOBALS['db'],$query);
 
@@ -86,6 +91,7 @@
         }
 
         public function rejectStatus($content_id){
+            // Change status to rejected
             $query = "UPDATE marketing_content SET upload_status = 'Rejected' WHERE content_id = '$content_id'";
             $result = mysqli_query($GLOBALS['db'],$query);
             // should be the html to change the table row column to onlineed status
@@ -99,6 +105,7 @@
             
         }
 
+        // delete the content
         public function delete($content_id){
             $query = "DELETE FROM marketing_content WHERE content_id = '$content_id'";
             $result = mysqli_query($GLOBALS["db"], $query);

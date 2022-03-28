@@ -1,5 +1,6 @@
 <?php
 class AdminBookingsModel extends database {
+    // DESC in booking_id used to get everything in one order
     public function getBooking(){
         $query = "SELECT * from booking ORDER BY booking_id DESC";
         $result = mysqli_query($GLOBALS['db'],$query);
@@ -92,7 +93,7 @@ class AdminBookingsModel extends database {
 
         return $output;
     }
-
+    
     public function delete($booking_id){
         $query = "DELETE FROM booking WHERE booking_id = '$booking_id'";
         $result = mysqli_query($GLOBALS["db"], $query);
