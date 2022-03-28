@@ -34,7 +34,6 @@
           <th>Recommned No</th>
           <th>Service Type</th>
           <th>Recommanded Service Name</th>
-          <th>Customer Prefer Status</th>
           <th>Advanced Payment Amount</th>
           <th>Full Payment Amount</th>
           <th>Payment Status</th>
@@ -51,7 +50,6 @@
                   <td>$i</td>
                   <td>$row[service_type]</td>
                   <td>$row[recom_service_name]</td>
-                  <td>Status</td>
                   <td>$row[adv_pay_amount]</td>
                   <td>$row[full_pay_amount]</td>
                   <td>$row[payment_status]</td>

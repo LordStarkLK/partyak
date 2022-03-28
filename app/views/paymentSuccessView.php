@@ -8,13 +8,25 @@
     <title>Home</title>
     <?php linkCSS("paymentSuccessful"); ?>
     <?php linkCSS("navigation"); ?>
+    <?php linkCSS("navigation"); ?>
     <?php $reciept = $data["reciept"]; ?>
 </head>
 
 
 <body>
     <header>
-        <?php linkPhp("navigation") ?>
+        <?php
+                if (!isset($_SESSION["type"])) {
+                    linkPhp("Navigation");
+                } else {
+                    if ($_SESSION["type"] == "customer") {
+                        linkPhp("customerNavigation");
+                    } else {
+                        linkPhp("Navigation");
+                    }
+                }
+
+        ?>
     </header>
     <html>
 
