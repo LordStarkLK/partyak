@@ -175,7 +175,7 @@ class CustomerContactServiceProviderModel extends database
     }
 
     public function getSoundDetails(){
-        $query = "SELECT 8 FROM other_service WHERE service_type='sounds_lightings'";
+        $query = "SELECT * FROM other_service WHERE service_type='sounds_lightings'";
         $result = mysqli_query($GLOBALS['db'],$query);
         if(mysqli_num_rows($result) >= 0){
             return $result;

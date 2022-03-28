@@ -64,13 +64,13 @@
                     onclick="window.location='<?php echo BASEURL . '/adminReview'; ?>'">Review</span>
             </a>
         </li>
-        <li>
+        <!-- <li>
             <a href="<?php echo BASEURL . '/adminReports'; ?>">
                 <i class='bx bxs-detail'></i>
                 <span class="links_name side-links"
                     onclick="window.location='<?php echo BASEURL . '/adminReports'; ?>'">Reports</span>
             </a>
-        </li>
+        </li> -->
         <li>
             <a href="<?php echo BASEURL . '/adminTandC'; ?>">
                 <i class='bx bx-edit'></i>
