@@ -136,13 +136,13 @@
         
         <div class="bookings-table">
           <a>Booking Details</a>
-          <div class="search-bookings">
+          <!-- <div class="search-bookings">
             <input type="text" placeholder="Search" name="search">
             <button type="submit"><i class="fa fa-search"></i></button>
-          </div>
-          <div class="filter-date-status">
+          </div> -->
+          <!-- <div class="filter-date-status">
 
-          </div>
+          </div> -->
 
           <table class="table-content">
             <thead>

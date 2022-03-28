@@ -39,7 +39,7 @@ class SpMarketingModel extends Database
 
     public function getUploadedContentDetails($id)
     {
-        $query ="SELECT content, upload_status, upload_date FROM marketing_content WHERE user_id='$id' ORDER BY content_id DESC";
+        $query ="SELECT * FROM marketing_content WHERE user_id='$id' ORDER BY content_id DESC";
         $result = mysqli_query($GLOBALS['db'], $query) ;
         if(mysqli_num_rows($result) >= 0){
             return $result;

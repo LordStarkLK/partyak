@@ -19,6 +19,21 @@ class SpAnalyticModel extends Database
         }
     }
 
+    public function getMonthlyIncome($user_id){
+        
+
+        $query = " SELECT date_format(payment_date,'%M') AS month, sum(amount) AS sales FROM payment WHERE vendor_id='$user_id' GROUP BY month(payment_date) ORDER BY month(payment_date) ";
+        
+        $result = mysqli_query($GLOBALS['db'],$query);
+        while($row=mysqli_fetch_array($result)){
+            $monthName[] =$row['month'];
+            $sales[] = $row['sales'];
+
+        }
+        return array($monthName,$sales);
+        
+    }
+
     
 }
 

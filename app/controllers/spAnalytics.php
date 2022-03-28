@@ -15,7 +15,8 @@ class SpAnalytics extends FrameworkPartyak
         $user_id = $this->getSession("userId");
         $data["payment"] = $this->AnalyticModel->getPaymentDetails($user_id);
         $data["settlement"] = $this->AnalyticModel->getSettlementDetails($user_id);
+        $data["income"] = $this->AnalyticModel->getMonthlyIncome($user_id);
 
-        $this->view("vendor/spanalyticsView",$data);
+        $this->view("vendor/spAnalyticsView",$data);
     }
 }
