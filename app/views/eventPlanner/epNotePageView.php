@@ -11,7 +11,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php $id=$_SESSION['userId'];
-  $bookingId=$data['bookingId'];?>
+  $bookingId=$data['bookingId'];
+  $planningId=$data['planning_id'];?>
 </head>
 
     <body>
@@ -41,7 +42,7 @@
                     </tr>        <?php }} ?>
             </table>
             </div>
-            <div class="add-btn"><button id="add-btn-btn"><a href="<?php echo BASEURL . '/epNoteNewAdd/index/'.$bookingId.'/0'.''; ?>">+add</a></button></div>
+            <div class="add-btn"><button id="add-btn-btn"><a href="<?php echo BASEURL . '/epNoteNewAdd/index/'.$bookingId.'/0'.'/'.$planningId.''; ?>">+add</a></button></div>
             <?php linkJS("eventPlanner/epNotePage"); ?>
     </body>
 </html>

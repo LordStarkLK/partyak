@@ -9,11 +9,12 @@ class EPNotePage extends FrameworkPartyak
         $this->epNotePage = $this->model('EventPlannerNotePageModel');
     }
 
-    public function index($bookingId)
+    public function index($bookingId,$planning_id)
     {
         $id=$_SESSION['userId'];
         $data['noteDetails'] = $this->epNotePage->getNotes($bookingId);
         $data['bookingId']=$bookingId;
+        $data['planning_id']=$planning_id;
         $this->view("eventPlanner/epNotePageView",$data);
     }
 

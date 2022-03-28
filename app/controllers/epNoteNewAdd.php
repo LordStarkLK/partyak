@@ -9,10 +9,11 @@ class EPNoteNewAdd extends FrameworkPartyak
         $this->epNoteNewAdd = $this->model("EventPlannerNewNoteAddModel");
     }
 
-    public function index($booking_id,$status)
+    public function index($booking_id,$status,$planning_id)
     {
         $data['booking_id']=$booking_id;
         $data['status']=$status;
+        $data['$planning_id']=$planning_id;
         $this->view("eventPlanner/epNoteNewAddView",$data);
     }
     public function insertNote(){
@@ -25,10 +26,11 @@ class EPNoteNewAdd extends FrameworkPartyak
             $pymntSts = $_POST["pymntSts"];
             $OthrSugst = $_POST["OthrSugst"];
             $bookingId = $_POST["bookingId"];
+            $planningId = $_POST["planningId"];
 
-            $this->epNoteNewAdd->insertNote($recmndSerName,$serviceName,$AdvPayAmnt,$fulPaymnt,$pymntSts,$OthrSugst,$bookingId);
+            $this->epNoteNewAdd->insertNote($recmndSerName,$serviceName,$AdvPayAmnt,$fulPaymnt,$pymntSts,$OthrSugst,$bookingId,$planningId);
             // $this->redirect("epNoteNew/index/$booking_id");
-            $this->index($bookingId,1);
+            $this->index($bookingId,1,$planningId);
         }
     }
 

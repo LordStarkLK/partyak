@@ -95,7 +95,7 @@
                         <p class="description-place"><?php echo $row['noOfGuest']." guests" ?></p>
                     </span>
                     <span class="card-button">
-                          <a href="<?php echo BASEURL . '/epNotePage/index/'.$row['booking_id'].''; ?>"><button class="card-btn">View notes</button></a>
+                          <a href="<?php echo BASEURL . '/epNotePage/index/'.$row['booking_id'].'/'.$row['planning_id'].''; ?>"><button class="card-btn">View notes</button></a>
                       </span>
                 </div>
             </div> <?php }} ?>

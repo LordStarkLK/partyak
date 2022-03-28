@@ -47,6 +47,7 @@
               </select><br>
               <input type="text" name="OthrSugst" placeholder="Other Suggestions"><br>
               <input type="hidden" name="bookingId" value="<?php echo $booking_id ?>">
+              <input type="hidden" name="planningId" value="<?php echo $data['$planning_id'] ?>">
               <button type="submit" id="submitBtn">Submit</button>
               </form>
             </div>
