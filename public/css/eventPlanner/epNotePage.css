@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  margin: 0;
+  background-color: #202020;
+  background-image: url("../../img/home-confetti.png");
+  background-position: 50% 50%;
+  background-size: contain;
+}
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+}
+#customers td {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #ddd;
+  color: rgb(39, 38, 38);
+  font-weight: 600;
+  text-align: center;
+}
+#customers td,
+#customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+  background-color: #b4dbff;
+}
+
+#customers tr:hover {
+  background-color: #ddd;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #81a7c0;
+  color: white;
+}
+.table-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+#status {
+  color: #202020;
+}
+#add-btn-btn {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  background-color: #b23c54;
+}
