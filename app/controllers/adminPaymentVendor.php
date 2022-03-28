@@ -72,12 +72,14 @@ class AdminPaymentVendor extends FrameworkPartyak{
 
                         $this->paymentModel->insertSettlement($fileNameNew,$user_id,$amount,$description,$date,$type,$request_id);
                         
-                        $data["payments"] = $this->paymentModel->getPayments();
-                        $data["wallet"] = $this->paymentModel->getWalletDetails();
-                        $this->view("admin/adminPaymentVendorView",$data);
+                        
+                        // $data["payments"] = $this->paymentModel->getPayments();
+                        // $data["wallet"] = $this->paymentModel->getWalletDetails();
+                        // $this->view("admin/adminPaymentVendorView",$data);
 
                 }
             }
         }
+        $this->index();
     }
 }
