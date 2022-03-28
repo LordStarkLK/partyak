@@ -23,6 +23,12 @@ class Payment extends FrameworkPartyak
         $this->view("paymentView",$data);
     }
 
+    public function payMarketing($marketing_id,$user_id){
+        $data['marketing_id'] = $marketing_id;
+        $data['vendor_id'] = $user_id;
+        $this->view("payMarketingView",$data);
+    }
+
     public function insertPayment(){
         $booking_id = mysqli_real_escape_string($GLOBALS['db'],$_POST['booking_id']);
         $amount = mysqli_real_escape_string($GLOBALS['db'],$_POST['amount']);
