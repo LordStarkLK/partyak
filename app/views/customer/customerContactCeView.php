@@ -7,8 +7,8 @@
     <!-- <?php linkCSS("adminHomeView"); ?> -->
    
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <?php linkCSS("customer/customerContactServiceProviderView"); ?>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php linkCSS("customer/customerContactServiceProviderView"); ?>
     <?php linkCSS("customerNavigation"); ?>
     <?php linkCSS("footer");?>
     <!-- <?php $serviceI=$data['service_detail'];?>
@@ -200,29 +200,30 @@
                                 $j=1;
                                       
                                         while($row=mysqli_fetch_assoc($data['cake_detail'])  ){
-                                          echo "<td>";
-                                          if($row['service_image']){
-                                            echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
-                                          }else{
-                                            $row['service_image']="default.png";
-                                            echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
+
+                                          if($row['status']== "accepted"){
+                                            echo "<td>";
+                                            if($row['service_image']){
+                                              echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
+                                            }else{
+                                              $row['service_image']="default.png";
+                                              echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
+                                            }
+                                            echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
+                                            echo "</td>"; 
+                                          
+                                            $j++;
+                                            if($j>3){
+                                              echo "</tr>";
+                                              $j = 1;
+                                            }
+
                                           }
-                                          echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
-                                          echo "</td>"; 
-                                        
-                                          $j++;
-                                          if($j>3){
-                                            echo "</tr>";
-                                            $j = 1;
-                                          }
+                                          
                                           
                                         }
             ?>
-          <tr>
-            <td> <a  href="#"> <img <?php srcIMG("bakeriya.jpg") ?> alt="Chance Flowers"></a><br><p>APE BAKERIYA <br>Galle, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("cakelicious.jpg") ?> alt="Chance Flowers"> </a><br><p>Calelicious <br> Jaffna, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("rash.jpg") ?> alt="Chance Flowers"> </a><br><p>Rush bakers <br>Colombo,Sri Lanka</p></td>  
-          </tr>
+
         </table>
       </div>
   
