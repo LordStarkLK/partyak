@@ -6,12 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php linkCSS("howItWorkView"); ?>
     <?php linkCSS("customerNavigation"); ?>
+    <?php linkCSS("navigation"); ?>
     <?php linkCSS("footer");?>
     <title>How it work</title>
 </head>
 <body>
     <header>
-        <?php linkPhp("customerNavigation") ?>
+        <?php
+                if (!isset($_SESSION["type"])) {
+                    linkPhp("Navigation");
+                } else {
+                    if ($_SESSION["type"] == "customer") {
+                        linkPhp("customerNavigation");
+                    } else {
+                        linkPhp("Navigation");
+                    }
+                }
+
+        ?>
     </header>
 
     <div class="container">
