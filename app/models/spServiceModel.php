@@ -30,7 +30,6 @@ class SpServiceModel extends Database
     //Insert booking details
     public function bookingDetail($eventType, $guestCount, $reserveDate, $packageType, $id, $service_id,$userId)
     {
-        // echo $packageType;
         
         $query = "SELECT package_id,per_unit_price, fixed_price FROM package WHERE package_name='$packageType'";
         $query = mysqli_query($GLOBALS['db'], $query);
@@ -80,7 +79,6 @@ class SpServiceModel extends Database
 
     public function bookingDetailWithEvent($eventType, $guestCount, $reserveDate, $packageType, $id, $service_id,$userId,$planning_id)
     {
-        // echo $packageType;
         
         $query = "SELECT package_id,per_unit_price, fixed_price FROM package WHERE package_name='$packageType'";
         $query = mysqli_query($GLOBALS['db'], $query);

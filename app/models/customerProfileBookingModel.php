@@ -12,6 +12,8 @@ class CustomerProfileBookingModel extends database
 
     }
 
+
+
     //Get payment details
     public function getPaymentDetails($id){
 
@@ -41,6 +43,8 @@ class CustomerProfileBookingModel extends database
 
     }
 
+
+    
     //Delete booking
     public function deleteBooking($booking_id){
         $query = "DELETE FROM booking WHERE booking_id = '$booking_id'";

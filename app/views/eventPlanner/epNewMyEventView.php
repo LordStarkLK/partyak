@@ -98,7 +98,7 @@
                       </span>
                       <?php
                         if(($row['user_id']==$_SESSION['userId'])){ ?>
-                                <form action="<?php echo BASEURL . '/epNewMyEvent/delEvent'; ?>" method="POST">
+                                <form action="<?php echo BASEURL . '/epNewMyEvent/delEvent/'.$service_id.''; ?>" method="POST">
                                     <input type="hidden" id="noteId" name="eventId" value="<?php echo $row["event_page_id"] ?>">
                                     <button type="submit" class="delete-note-text">Delete Event</button>
                                 </form>
@@ -107,7 +107,7 @@
               </div> <?php }} ?>
               <div class="add-note-div">
                   <h3 class="add-note">Add an event</h3>
-                  <a href="<?php echo BASEURL . '/epEventAdd/index/'.$service_id.''; ?>"><img class="add-btn" <?php srcIMG("addButton.png") ?>></a>
+                  <a href="<?php echo BASEURL . '/epEventAdd/index/'.$service_id.'/0'.''; ?>"><img class="add-btn" <?php srcIMG("addButton.png") ?>></a>
               </div>
        </div>
     </section>
