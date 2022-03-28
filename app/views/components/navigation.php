@@ -9,7 +9,6 @@
             <?php
             if (!isset($_SESSION["type"])) {
                 echo '<li><a href="#">Browse</a></li>';
-                echo '<li><a href="#">Contact Us</a></li>';
             } else {
                 if ($_SESSION["type"] == "vendor") {
 
@@ -23,7 +22,7 @@
                 }
             }
             ?>
-            <li><a href="<?php echo BASEURL . '/epAnalytics'; ?>">How it works</a></li>
+            <li><a href="<?php echo BASEURL . '/howItWork'; ?>">How it works</a></li>
         </ul>
     </div>
     <?php
@@ -43,7 +42,6 @@
             <div class="nav-bar-links-vendor">
             <div class="nav-item-vendor">
                 <a href="#"><i class="fa fa-comments"></i></a>
-                <a href="#"><i class="fa fa-bell"></i></a>
                 <a href ="';
                 echo BASEURL .'/customerProfile';
                 echo'"<i class="fa fa-user"></i></a>
