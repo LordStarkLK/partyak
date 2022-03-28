@@ -73,12 +73,12 @@
 
         </div>
     </div>
-    <div class="container section2">
-        <div class="ads-logo"><img class="ads-logo-img" <?php srcIMG("kingbury-ad-logo.png") ?> alt="logo"></div>
-        <div class="ad-details">
-            <img class="ad-details-img" <?php srcIMG("ad-details.png") ?>>
+    <div class="container section2" id="slideshow-example" data-component="slideshow">
+       <div role="list"> <!-- 1035x400 imgs -->
+    <?php if(isset($data['marketingContent'])){foreach ($data['marketingContent'] as $row) { ?>
+         <div class="slide"><img name = "slide" class="marketin-imgs" <?php srcIMG("marketingContent/".$row['content']); ?>></div>
+        <?php } }?>
         </div>
-        <div class="ad-imgs"><img class="ad-imgs-cards" <?php srcIMG("visacards.png") ?>></div>
     </div>
     <div class="container section3">
         <div class="column best-seller-text">
@@ -212,6 +212,7 @@
     <?php linkJS("admin/notification"); ?>
 
     <?php linkJS("home");?>
+    <?php linkJS("marketing");?>
     <?php linkPhp("footer") ?>
 </body>
 

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <?php linkCSS("vendor/spBusiness");  ?>
+    <?php linkCSS("vendor/spDeleteService");  ?>
     <?php linkCSS("navigation"); ?>
     <?php linkCSS("footer");?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -101,15 +102,16 @@
                             <a>Decoration</a>
                         </div>";
                     }
-                    echo "      
+                        
+                        
+                    
+                    if($row['status'] == "accepted"){
+                        echo "
                         <div class=\"ser-details\">
                         
                             <div class=\"service_name\"><a href=\" ".BASEURL ."/spPackage/index/$row[service_id]\">$row[service_name]</a></div>
                             <div class=\"location_name\">$row[service_location]</div>
-                        </div>";
-                    
-                    if($row['status'] == "accepted"){
-                        echo "
+                        </div>
                         <div class=\"curr_status accept\">
                             <i class=\"fa fa-check-circle-o fa-2x\" aria-hidden=\"true\" ></i>
                             <a>Accepted</a>
@@ -117,6 +119,11 @@
                     }  
                     elseif($row['status'] == "rejected"){
                         echo "
+                        <div class=\"ser-details\">
+                        
+                            <div class=\"service_name\"><a>$row[service_name]</a></div>
+                            <div class=\"location_name\">$row[service_location]</div>
+                        </div>
                         <div class=\"curr_status reject\">
                             <i class=\"fa fa-times-circle-o fa-2x\" aria-hidden=\"true\" ></i>
                             <a>Rejected</a>
@@ -124,6 +131,11 @@
                     }
                     elseif($row['status'] == "pending"){
                         echo "
+                        <div class=\"ser-details\">
+                        
+                            <div class=\"service_name\"><a href=\" ".BASEURL ."/spPackage/index/$row[service_id]\">$row[service_name]</a></div>
+                            <div class=\"location_name\">$row[service_location]</div>
+                        </div>
                         <div class=\"curr_status pending\">
                             <i class=\"fa fa-pause-circle-o fa-2x\" aria-hidden=\"true\" ></i>
                             <a>Pending</a>
@@ -132,13 +144,19 @@
 
                     echo "
                         <div class=\"action\">
-                            <a>Delete Service</a>
+                            <button class=\"delete-btn\" onclick=\"document.getElementById('$row[service_id]').style.display='block'\"><a>Delete Service</a></button>
                         </div>
+
+                        
+
+
+
                     </div>
                     ";
 
                 }
                 ?>
+                
             
             </div>
             <div class="addingService">
@@ -156,8 +174,38 @@
                 </a>
                 
             </div>
+            <?php mysqli_data_seek($data['business'], 0); while($row=mysqli_fetch_assoc($data['business'])){ echo"
+                <div id=\"$row[service_id]\" class=\"delContainer\">
+                        
+                <div class=\"delContent\">
+                    <div class=\"container-top\">
+                        
+                            <div class=\"del-icon\"><i class=\"fa fa-trash fa-3x\" aria-hidden=\"true\"></i></div>
+                            
+                           
+                    </div>
+                    <div class=\"container-bottom\">
+                        <div class=\"title\"><a>You are about to delete a service!</a></div>
+                        
+                        <div class=\"ser-name\"><a>$row[service_name]</a><br><a>$row[service_location]</a></div>
+                        <div class=\"description\"><a>All the related details to the service will be deleted.</a><br><a>Are you sure?</a></div>
+                        <div class=\"action\">
+                            <button class=\"action-btn delete\" onclick=\"window.location=' " . BASEURL . "/spBusiness/deleteService/$row[service_id]'\">Confirm</button>
+                            <button class=\"action-btn cancel\" onclick=\"document.getElementById('$row[service_id]').style.display='none'\">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+             
+            </div>
+                ";
+                } ?>
         </div>
     </div>
+    <!-- Notification adding -->
+<?php linkPhp("notification"); ?>
+<?php linkJS("lib/jquery-3.6.0.min"); ?>
+<?php linkJS("admin/notification"); ?>
+
     <?php linkPhp("footer") ?>
 </body>
 </html>

@@ -173,7 +173,7 @@
                     <th>$row[event_date]</th>
                     <th>".number_format($total,2,'.',',')."</th>
                     <th>".number_format($row2['amount'],2,'.',',')."</th>
-                    <th>$row2[status]</th> 
+                    <th>$row2[p_status]</th> 
                   <tr>     
                   ";
                       
@@ -201,6 +201,11 @@
       </div>
     </section>
   </div>
+  <!-- Notification adding -->
+<?php linkPhp("notification"); ?>
+<?php linkJS("lib/jquery-3.6.0.min"); ?>
+<?php linkJS("admin/notification"); ?>
+
   <?php linkJS("vendor/spBooking"); ?>
   <?php linkPhp("footer") ?>
 </body>
