@@ -453,7 +453,7 @@
             echo "
         </div>
             <div class=\"request\">
-                <button type=\"submit\" id=\"submitid\"  value=\"Submit\">Request Service</button>
+                <button type=\"submit\" name=\"submit\" id=\"submitid\"  value=\"Submit\">Request Service</button>
             </div>
             <div class=\"notice\">
                 *After requesting service you will recive vendor response and then you can confirm the payment
@@ -462,9 +462,27 @@
                 <button>Send Message</button>
             </div>
         </div>
-        </form>
+        </form>";
+
+        if (isset($_POST['submit'])) {
+            echo "<div class=\"sccuess-event\" onclick=\"document.getElementById($row[service_id]).style.display='block'\"></div>
+                <div id=\"id\" class=\"modal\">
+                    <span onclick=\"document.getElementById(id).style.display='none'\" class=\"close\" title=\"Close Modal\">&times;</span>
+                    <form class=\"modal-content\" action=\"/action_page.php\">
+                        <div class=\"container-modal\">
+                        <h1>Success!</h1>
+                        <br><p>Your booking details successfully submitted.</p>
+                        <br><p>Please waiting for vendor response.</p>
+                            
+                        <div class=\"clearfix\">
+                            <button type=\"button\" class=\"deletebtn\" onclick=\"window.location=' " . BASEURL . "/customerProfileBooking/'\">OK</button>
+                        </div>
+                        </div>
+                    </form>
+                </div>";
+        }
        
-        "; ?>
+        ?>
 
         <?php
             //this calender should be changed
