@@ -211,11 +211,7 @@
                                           
                                         }
             ?>
-          <tr>
-            <td> <a  href="#"> <img <?php srcIMG("Rayman.png") ?> alt="Chance Flowers"></a><br><p>Rayman <br> Colombo, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("H&h.jpg") ?> alt="Chance Flowers"> </a><br><p>H & h Suppliers <br> Ampara, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("nb.png") ?> alt="Chance Flowers"></a> <br><p>NB Suppliers <br>Mathara,Sri Lanka</p></td>  
-          </tr>
+         
         </table>
       </div>
   
