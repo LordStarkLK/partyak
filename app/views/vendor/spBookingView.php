@@ -46,12 +46,12 @@
               <span class="links_name">Chat</span>
             </a>
           </li>
-          <li>
+          <!-- <li>
             <a href="<?php echo BASEURL . '/spCalendar/index/'.$service_id.''; ?>">
               <i class="fa fa-calendar" aria-hidden="true"></i>
               <span class="links_name">Calendar</span>
             </a>
-          </li>
+          </li> -->
           <li>
             <a href="<?php echo BASEURL . '/spReview/index/'.$service_id.''; ?>">
               <i class="fa fa-star" aria-hidden="true"></i>
