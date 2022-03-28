@@ -2,15 +2,15 @@
 
 class Database
 {
-    // public $host = "sql238.main-hosting.eu";
-    // public $user = "u117929562_dhp2";
-    // public $database = "u117929562_Partyak";
-    // public $password = "Partyak#2021";
-
-    public $host = "localhost";
-    public $user = "root";
+    public $host = "sql238.main-hosting.eu";
+    public $user = "u117929562_dhp2";
     public $database = "u117929562_Partyak";
-    public $password = "";
+    public $password = "Partyak#2021";
+
+    // public $host = "localhost";
+    // public $user = "root";
+    // public $database = "u117929562_Partyak";
+    // public $password = "";
 
     // public $host = "localhost";
     // public $user = "root";
