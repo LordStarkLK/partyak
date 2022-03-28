@@ -55,11 +55,11 @@
               </div>";
               
               
-               if($row['upload_status'] == "accept" ){
+               if($row['upload_status'] == "Accepted" ){
                 echo "
                 <div class=\"status accept\">
                   <a>Accepted</a>
-                  <i class=\"fa fa-check-circle-o fa-lg\" aria-hidden=\"true\" ></i>
+                  <a href=\" ".BASEURL ."/payment/payMarketing/$row[content_id]/$row[user_id]\"><button class=\"pay-btn\">Pay</button></a>
                 </div>
               </div>";
               }
@@ -71,7 +71,7 @@
                 </div>
               </div>";
               }
-              else{
+              elseif($row['upload_status'] == "pending"){
                 echo "
                 <div class=\"status pending\">
                   <a>Pending</a>
@@ -79,12 +79,20 @@
                 </div>
               </div>";
               }
+              else{
+                echo "
+                <div class=\"status upload\">
+                  <a> In progress</a>
+                  <i class=\"fa fa-circle-o-notch fa-lg\" aria-hidden=\"true\"></i>
+                </div>
+              </div>";
+              }
           }
           ?>
           
-          <div class="paymentBtn">
+          <!-- <div class="paymentBtn">
             <a href="<?php echo BASEURL . '/payment'; ?>"><button>Pay now</button></a>
-          </div>
+          </div> -->
           
         </div>
 
