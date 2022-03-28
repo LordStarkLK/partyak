@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php $payment = mysqli_fetch_assoc($data["payment"]); ?>
+  <?php $income = $data["income"]; ?>
 </head>
 
 
@@ -101,10 +102,12 @@
 <?php linkJS("lib/jquery-3.6.0.min"); ?>
 <?php linkJS("admin/notification"); ?>
 
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript" >
+<script src="//code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
+<!-- <script type="text/javascript" >
 
-google.charts.load('current', {'packages':['corechart']});
+    google.charts.load('current', {'packages':['corechart']});
     google.charts.setOnLoadCallback(drawChart);
     // $i=$payment['amount'];
     // $w=$payment['withdrawable_amount'];
@@ -133,8 +136,10 @@ google.charts.load('current', {'packages':['corechart']});
     }    
 
     //sales summary chart
-var xValues = ["Jan","Feb","Mar","Apr","May","Jun","July","Aug","Sep","Oct","Nov","Dec"];
-var yValues = [3000,10000,5000,18000,40000,60000,50000,55000,80000,65000];
+var xValues = ["Jan","Feb","Mar","Apr","May","Jun","July"];
+// var yValues = [3000,10000,5000,18000,40000,60000,50000,55000,80000,65000];
+
+var yValues = [<?php echo $income[0];?>,<?php echo $income[1];?>,<?php echo $income[2];?>,<?php echo $income[3];?>,<?php echo $income[4];?>,<?php echo $income[5];?>,<?php echo $income[6];?>]
 
 new Chart("myChart", {
   type: "line",
@@ -151,12 +156,80 @@ new Chart("myChart", {
   options: {
     legend: {display: false},
     scales: {
-      yAxes: [{ticks: {min: 1000, max:100000}}],
+      yAxes: [{ticks: {min: 10000, max:1000000}}],
     }
   }
 });
   
-</script>
+</script> -->
+
+<script type="text/javascript">
+      var ctx = document.getElementById("myChart").getContext('2d');
+      var barColors = ["#e44ab5", "blue","orange","brown"];
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels:<?php echo json_encode($income[0]); ?>,
+                        datasets: [{
+                          fill: false,
+                        lineTension: 0,
+                        backgroundColor: barColors,
+                        borderColor: "#84cddf",
+                            data:<?php echo json_encode($income[1]); ?>,
+                        }]
+                    },
+                    options: {
+                        legend: {
+                        display: true,
+                        position: 'bottom',
+ 
+                        labels: {
+                            fontColor: 'white',
+                            fontFamily: 'Poppins',
+                            fontSize: 14,
+                        }
+                    },
+ 
+ 
+                }
+                });
+
+
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    // $i=$payment['amount'];
+    // $w=$payment['withdrawable_amount'];
+    // $c=$
+
+    // Draw the chart and set the chart values
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+      ['sales', 'amount'],
+      ['Income', <?php echo $payment['amount']; ?>],
+      
+      ['withdrawable', <?php echo $payment['withdrawable_amount']; ?>],
+      ['Charges',  <?php echo $payment['amount'] - $payment['withdrawable_amount']; ?>],
+      
+    ]);
+    
+      // Optional; add a title and set the width and height of the chart
+      var options = {
+              pieHole: 0.6,
+              backgroundColor: 'black',
+              legend: {alignment: 'center', position: 'right', textStyle: {color: 'white', fontSize: 16}},
+              chartArea: {left:20,top:10,width:'100%',height:'100%'},
+            };
+      // Display the chart inside the <div> element with id="piechart"
+      var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+      chart.draw(data, options);
+    } 
+
+
+
+
+
+    </script>
+
   <?php linkJS("vendor/spAnalytics"); ?>
   <?php linkPhp("footer") ?>
 </body>
