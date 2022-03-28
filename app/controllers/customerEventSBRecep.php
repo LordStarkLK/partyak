@@ -4,17 +4,15 @@
 class CustomerEventSBRecep extends FrameworkPartyak{
     public function __construct(){
         $this->helper("linker");
+        $this->EventSB = $this->model('customerEventSBRecepModel');
 
         $this->preventBack("customer");
     }
     
-    public function index(){
-        // echo $_SESSION['type'];
-        // if(!isset($_SESSION['userId']) && !isset($_SESSION['type']) || $_SESSION['type'] != "customer"){
-        //     $this->redirect("login");
-        // }
-        // $this->preventBack("customer");
-        $this->view("customer/customerEventSBRecepView");
+    public function index($planning_id){
+
+        $data['recomandDetail'] = $this->EventSB->getRecommendDetails($planning_id);
+        $this->view("customer/customerEventSBRecepView",$data);
     }
 
 }

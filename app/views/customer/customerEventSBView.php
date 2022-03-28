@@ -5,36 +5,41 @@
     <meta charset="UTF-8">
     <title>Event Schedule Board</title>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <?php linkCSS("customer/customerEventSBview"); ?>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php linkCSS("customer/customerEventSBview"); ?>
     <?php linkCSS("customerNavigation"); ?>
     <?php linkCSS("footer");?>
     <?php $eventname=$data['event'];?>
     <?php $serviceP=$data['service'];?>
-   </head>
+  </head>
 <body>
-    <header>
-        <?php linkPhp("customerNavigation") ?>
-    </header>
+  <header>
+    <?php linkPhp("customerNavigation") ?>
+  </header>
 
     <div class="container">
         <div class="cusdetail">
             <div class="custopic">
                 <div class="tab" >
                     <table>
-                        <tr>
-                            <th><i class="fas fa-user-plus"></i></th>
-                            <?php echo "<th> $eventname[event_name] </th>"; ?>
+                      <tr>
+                        <th><i class="fas fa-user-plus"></i></th>
+                          <?php echo "<th> $eventname[event_name] </th>"; ?>
                             <th><div class="eventdetails" id="eventb">
-                                <button class="dropbtn">Event Details
-                                    <i class="fa fa-caret-down"></i>
-                                </button>
+                              <button class="dropbtn">Event Details
+                                <i class="fa fa-caret-down"></i>
+                              </button>
                             </div></th>
-                            <th><a href="<?php echo BASEURL . '/customerEventSBRecep'; ?>">Recomndations of event planner</a></th>
-                        </tr>
+                        <?php 
+                          if($eventname['plan_type']== "Through Event Planner"){
+                            echo"<th><a href=\" ".BASEURL ." /customerEventSBRecep/index/$eventname[planning_id]\">Recomndations of event planner</a></th>";
+                          }
+                        ?>
+                      </tr>
                     </table>
                 </div>
-                <!-- Customer service preference -->
+                
+<!-- Customer service preference -->
                 <div class="cusevent" id="service_det">
                     <table>
                         <div class="cusraw1">
@@ -629,6 +634,7 @@
                         </div>
                       </form>
                     </div>
+
                     <!-- todo -->
                     <div class="todo-container">
                       <div class="status" id="no_status">
@@ -636,31 +642,82 @@
                           <button id="add_btn" data-target-modal="#todo_form">+ Add Todo</button>
                           <?php
                               $i = 1;
-                              while($todoP=mysqli_fetch_assoc($data['todo']) ){
-                                echo "
-                                <div class=\"todo\" id = \"$todoP[task_id]\" draggable=\"true\" >
-                           
-                                $todoP[task_name]
-                                <span class=\"close\">&times;</span>
-                              </div>
-                                  
-                                ";
-                                
-                                
+                              while($todoP=mysqli_fetch_assoc($data['todoN']) ){
+                                  echo "
+                                  <div class=\"todo\" id = \"$todoP[task_id]\" draggable=\"true\" >
+                            
+                                    $todoP[task_name]
+                                    <span class=\"close\" onclick=\"window.location=' " . BASEURL . "/customerEventSB/deleteTask/$todoP[task_id]/$eventname[planning_id]'\">&times;</span>
+                                  </div>
+                                    
+                                  ";
+
+ 
                               
                                 $i++;
                               }
-                            ?>
+                          ?>
                               
                       </div>
                       <div class="status" name="toDoStatus" id="todo">
                           <h1>TO DO</h1>
+                          <?php
+                              $i = 1;
+                              while($inproP=mysqli_fetch_assoc($data['todoT']) ){
+                                  echo "
+                                  <div class=\"todo\" id = \"$inproP[task_id]\" draggable=\"true\" >
+                            
+                                    $inproP[task_name]
+                                    <span class=\"close\">&times;</span>
+                                  </div>
+                                    
+                                  ";
+
+ 
+                              
+                                $i++;
+                              }
+                          ?>
                       </div>
                       <div class="status" name="inprogressStatus" id="inProgress">
-                          <h1>INPROGRESS</h1>
+                        <h1>INPROGRESS</h1>
+                        <?php
+                              $i = 1;
+                              while($inproP=mysqli_fetch_assoc($data['inproT']) ){
+                                  echo "
+                                  <div class=\"todo\" id = \"$inproP[task_id]\" draggable=\"true\" >
+                            
+                                    $inproP[task_name]
+                                    <span class=\"close\">&times;</span>
+                                  </div>
+                                    
+                                  ";
+
+ 
+                              
+                                $i++;
+                              }
+                        ?>
                       </div>
                       <div class="status" name="completedStatus" id="completed">
-                          <h1>COMPLETED</h1>
+                        <h1>COMPLETED</h1>
+                        <?php
+                              $i = 1;
+                              while($inproP=mysqli_fetch_assoc($data['comT']) ){
+                                  echo "
+                                  <div class=\"todo\" id = \"$inproP[task_id]\" draggable=\"true\" >
+                            
+                                    $inproP[task_name]
+                                    <span class=\"close\">&times;</span>
+                                  </div>
+                                    
+                                  ";
+
+ 
+                              
+                                $i++;
+                              }
+                        ?>
                       </div>
                     </div>
 
