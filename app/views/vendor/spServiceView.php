@@ -102,11 +102,11 @@
                         <div class=\"sub_row\">
                             <div class=\"column\">
                                 <img src=\"http://localhost/partyak/public/img/feature img/apartment.png\" alt=\"Avatar\" class=\"feature_img\">
-                                <a>Indoor</a>
+                                <a>$row[venue_type]</a>
                             </div>
                             <div class=\"column\">
                                 <img src=\"http://localhost/partyak/public/img/feature img/crowd.png\" alt=\"Avatar\" class=\"feature_img\">
-                                <a>600 Guests</a>
+                                <a>$row[standing_capacity] Guests</a>
                             </div>
                         </div>
                     </div> ";
@@ -291,7 +291,7 @@
             } elseif ($row['service_type'] == "saloon") {
                 echo " 
         <div class=\"left_row type2\">
-            <a>supplying services/a>
+            <a>supplying services</a>
             <div class=\"sub_row\">
                 <div class=\"column\">
                     <a>Makeup</a>
@@ -311,8 +311,8 @@
                 echo " 
         <div class=\"left_row type2\">
             <a>no features</a>
-            
-        </div> 
+          
+        </div>
     ";
             } ?>
 
@@ -470,34 +470,15 @@
             //this calender should be changed
             echo " 
         <div class=\"calendar_container\">
-            <a class=\"name\">Availability Calendar</a>
+            
 
-                <div class=\"calendar\">
-                    <div class=\"month\">
-                        <i class=\"fa fa-angle-left prev\"></i>
-                        <div class=\"date\">
-                            <h1></h1>
-                            <p></p>
-                        </div>
-                        <i class=\"fa fa-angle-right next\"></i>
-                    </div>
-                    <div class=\"weekdays\">
-                        <div>Sun</div>
-                        <div>Mon</div>
-                        <div>Tue</div>
-                        <div>Wed</div>
-                        <div>Thu</div>
-                        <div>Fri</div>
-                        <div>Sat</div>
-                    </div>
-                    <div class=\"days\"></div>
-                </div>
+                
 
 
-                </div>
-        
-            </div>
         </div>
+        
+         </div>
+     </div>   
         
         <div class=\"additional_details\">
             <div class=\"details_row\">
@@ -577,22 +558,31 @@
                     </div>
                     <a class=\"validation\"> Valid from : $row2[valid_from] &emsp; Valid Until : $row2[valid_to]</a>
                 </div>
-                <div class=\"package_price\">
-                    LKR
-                    <br><a class=\"p_price\">$row2[per_unit_price]</a>
-                    <br>per unit
-                </div>
-            </div>
+                
         ";
+        if($row2['fixed_price'] == 0){
+            echo "<div class=\"package_price\">
+            LKR
+            <br><a class=\"p_price\">$row2[per_unit_price]</a>
+            <br>per unit
+        </div>
+    </div>";
+        }
+        else{
+            echo "
+            <div class=\"package_price\">
+                    LKR
+                    <br><a class=\"p_price\">$row2[fixed_price]</a>
+                    <br>fixed price
+                </div>
+            </div>";
+        }
         }
         ?>
     </div>
 
 
-    <div class="service_location">
-        <label for="location">Location</label>
-        <div class="location"></div>
-    </div>
+    
 
     <?php mysqli_data_seek($data['service'], 0); while ($row = mysqli_fetch_assoc($data['service'])){
         echo " 
