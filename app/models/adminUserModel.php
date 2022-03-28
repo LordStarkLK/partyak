@@ -10,7 +10,7 @@ class AdminUserModel extends database
     // }
 
     public function getCustomerDetails(){
-        $query = "SELECT * FROM user where user_type='customer' ORDER BY 'user_id' DESC LIMIT 5";
+        $query = "SELECT * FROM user where user_type='customer' ORDER BY user_id DESC LIMIT 5";
         $result = mysqli_query($GLOBALS['db'],$query);
         if(mysqli_num_rows($result) > 0){
             return $result;
@@ -48,6 +48,7 @@ class AdminUserModel extends database
 
         foreach($list as $searchTerm){
             $searchTerm = "%" . $searchTerm . "%";
+            // Getting all the user name wild cards used.
             $query = "SELECT *  FROM user WHERE user_type = 'customer' AND (f_name LIKE '$searchTerm' OR l_name LIKE '$searchTerm' )";
             $query = mysqli_query($GLOBALS['db'],$query);
             if(mysqli_num_rows($query) > 0)
@@ -57,6 +58,7 @@ class AdminUserModel extends database
 
         }
         $output = "";
+        // if no search users
         if(mysqli_num_rows($query)== 0){
             $output .= "No users available as the search term";
         }
@@ -94,7 +96,7 @@ class AdminUserModel extends database
                 $i++;
             }
         }
-
+        // return html to echo to js file
         return $output;
     }
 

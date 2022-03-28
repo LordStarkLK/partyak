@@ -82,7 +82,7 @@ class epOnlyServiceModel extends Database
         $query = mysqli_query($GLOBALS['db'], $query);
         $result = mysqli_fetch_assoc($query);
         $epPay = $result['epFixedPrice'];
-        echo $service_id;
+        // echo $service_id;
 
         //Insert booking details
         $query = "INSERT INTO booking( event_date,event_type,noOfGuest,full_payment,customer_id, service_id,planning_id) 

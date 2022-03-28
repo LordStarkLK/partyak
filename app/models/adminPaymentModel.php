@@ -1,5 +1,6 @@
 <?php
 class AdminPaymentModel extends database{
+    // Details for tables
     public function getPayment(){
         $query = "SELECT * FROM booking,payment WHERE payment.booking_id = booking.booking_id ORDER BY payment_id DESC";
         $result = mysqli_query($GLOBALS['db'],$query);
@@ -34,6 +35,7 @@ class AdminPaymentModel extends database{
 
     public function search($searchTerm){
         $searchTerm = mysqli_real_escape_string($GLOBALS['db'], $searchTerm);
+        // used to break works into an array
         $list = explode("_",$searchTerm);
 
         foreach($list as $searchTerm){
@@ -58,6 +60,7 @@ class AdminPaymentModel extends database{
         if(mysqli_num_rows($query)== 0){
             $output .= "No service reviews available as the search term";
         }
+        // table header
         if(mysqli_num_rows($query)>0){
             $output .='<table>
             <tr>
@@ -72,7 +75,7 @@ class AdminPaymentModel extends database{
                 <th>Full Payment</th>
 
             </tr>';
-                    
+            // table row content
             while($row = mysqli_fetch_assoc($query)){
                 $total = $row['per_unit_price']*$row['noOfGuest'];
                 $output .= '

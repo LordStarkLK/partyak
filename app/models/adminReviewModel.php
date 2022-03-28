@@ -22,6 +22,7 @@ class AdminReviewModel extends database{
                 }
 
         }
+        // output to echo to review js file (ajax)
         $output = "";
         if(mysqli_num_rows($query)== 0){
             $output .= "No service reviews available as the search term";

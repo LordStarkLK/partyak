@@ -99,7 +99,7 @@
                             <th>More Actions</th>
 
                         </tr>
-
+<!-- table data -->
                         <?php while($row=mysqli_fetch_assoc($data['customer']) ){
     $i = 1;
     // $row2=mysqli_fetch_assoc($data['customer_email']);

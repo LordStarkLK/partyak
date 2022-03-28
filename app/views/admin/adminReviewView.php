@@ -78,6 +78,7 @@
                         </tr>
                         <tr>
                             <?php 
+                            // to add as a class (if checked color is yellow)
                         $checked = "checked";
                         $notchecked = "";
                         while($row = mysqli_fetch_assoc($data['review'])){

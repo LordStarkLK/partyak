@@ -8,6 +8,7 @@ class AdminBookings extends FrameworkPartyak{
     }
 
     public function index(){
+        // data relating to the table
         $data['booking'] = $this->bookingsModel->getBooking();
         $data['customer'] =$this->bookingsModel->getCusName();
         $data['service'] = $this->bookingsModel->getServiceName();
@@ -17,6 +18,7 @@ class AdminBookings extends FrameworkPartyak{
     }
 
     public function search(){
+        // POST taken from bookings js file
         $searchTerm = mysqli_real_escape_string($GLOBALS['db'], $_POST['searchTerm']);
 
         // echo $searchTerm;

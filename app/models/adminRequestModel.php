@@ -1,6 +1,7 @@
 <?php
 
 class AdminRequestModel extends database {
+    // pending services
     public function getRequests(){
         $query = "SELECT * from other_service WHERE status = 'pending' ORDER BY service_id";
         $result = mysqli_query($GLOBALS['db'],$query);
@@ -18,6 +19,7 @@ class AdminRequestModel extends database {
         }
     }
 
+    // rejected services
     public function getRejected(){
         $query = "SELECT * from other_service WHERE status = 'rejected' ORDER BY service_id";
         $result = mysqli_query($GLOBALS['db'],$query);
@@ -38,7 +40,7 @@ class AdminRequestModel extends database {
         
     }
 
-
+    // rejected services
     public function getAccepted(){
         $query = "SELECT * from other_service WHERE status = 'accepted' ORDER BY service_id";
         $result = mysqli_query($GLOBALS['db'],$query);
@@ -58,7 +60,7 @@ class AdminRequestModel extends database {
     }
 
 
-
+    // accept the service
     public function acceptStatus($service_id){
         $query = "UPDATE other_service SET status = 'accepted' WHERE service_id = '$service_id'";
         $result = mysqli_query($GLOBALS['db'],$query);
@@ -73,7 +75,7 @@ class AdminRequestModel extends database {
         
     }
 
-
+    // reject the service
     public function rejectStatus($service_id){
         $query = "UPDATE other_service SET status = 'rejected' WHERE service_id = '$service_id'";
         $result = mysqli_query($GLOBALS['db'],$query);
@@ -88,6 +90,7 @@ class AdminRequestModel extends database {
         
     }
 
+    // service
     public function search($searchTerm){
         $searchTerm = mysqli_real_escape_string($GLOBALS['db'], $searchTerm);
         $list = explode("_",$searchTerm);

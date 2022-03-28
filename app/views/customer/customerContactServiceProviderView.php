@@ -134,10 +134,10 @@
                             if($row['service_type']=="eventPlanner"){
                               echo "<td>";
                               if($row['service_image']){
-                                echo "<a href=\" ".BASEURL ."/epOnlyService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
+                                echo "<a href=\" ".BASEURL ."/epOnlyService/index/$row[service_id]\"> <img src=\"http://localhost/partyak/public/img/serviceImg/$row[image]\"/> </a>";
                               }else{
                                 $row['service_image']="default.png";
-                                echo "<a href=\" ".BASEURL ."/epOnlyService/index/$row[service_id]\"><img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
+                                echo "<a href=\" ".BASEURL ."/epOnlyService/index/$row[service_id]\"><img src=\"http://localhost/partyak/public/img/serviceImg/$row[image]\"/> </a>";
                               }
                               echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
                               echo "</td>"; 
@@ -149,11 +149,13 @@
                               }
                             }else{
                               echo "<td>";
-                              if($row['service_image']){
-                                echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
+
+                              if($row['image']){
+                                echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src=\"http://localhost/partyak/public/img/serviceImg/$row[image]\"/> </a>";
                               }else{
-                                $row['service_image']="default.png";
-                                echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"><img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
+                                $row['image']="default.png";
+
+                                echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"><img src=\"http://localhost/partyak/public/img/serviceImg/$row[image]\"/> </a>";
                               }
                               echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
                               echo "</td>"; 

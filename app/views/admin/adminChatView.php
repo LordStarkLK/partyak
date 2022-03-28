@@ -38,6 +38,7 @@
                     <div class="wrapper">
                         <section class="users">
                             <header>
+                                <!-- profile picture -->
                                 <div class="content">
                                     <img src="<?php echo BASEURL; ?>/public/img/userImages/<?php if ($profileInfo['profilePicture']) {
                     echo $profileInfo['profilePicture'];

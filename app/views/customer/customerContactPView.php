@@ -170,11 +170,12 @@
                                   while($row=mysqli_fetch_assoc($data['photo_detail'])  ){
                                     if($row['status']== "accepted"){
                                       echo "<td>";
-                                      if($row['service_image']){
-                                        echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
+                                      if($row['image']){
+                                        echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src=\"http://localhost/partyak/public/img/serviceImg/$row[image]\"
+                                        /> </a>";
                                       }else{
-                                        $row['service_image']="default.png";
-                                        echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
+                                        $row['image']="default.png";
+                                        echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src=\"http://localhost/partyak/public/img/serviceImg/$row[image]\"/> </a>";
                                       }
                                       echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
                                       echo "</td>"; 
@@ -192,11 +193,6 @@
           ?>
 
 
-          <tr>
-            <td> <a  href="#"> <img <?php srcIMG("pob.jpg") ?> alt="Chance Flowers"></a><br><p>OB Sudio <br> Galle, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("pOminro.jpg") ?> alt="Chance Flowers"></a> <br><p>Ominro <br> Gampaha, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("pDarkeye.jpg") ?> alt="Chance Flowers"> </a><br><p>DARKEYE <br>Kaluthara,Sri Lanka</p></td>  
-          </tr>
         </table>
       </div>
   

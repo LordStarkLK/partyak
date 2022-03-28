@@ -72,6 +72,8 @@
 
                         </tr>
                         <tr>
+                            <!-- table content -->
+                            <!-- jquery fuctions called to change status from class name-->
                             <?php
                                 $x = 1;
                                 while($row = mysqli_fetch_assoc($data['marketing'])){
@@ -125,20 +127,20 @@
                                 <div class="btn-group">
                                     <div class="dropdown">
                                         <?php
-        $id_name = 'myDropdown';
-        
-         $x = 1;
-         $id_name .= $x;
-        echo"
-        <button onclick=\"myFunction($x)\" class=\"dropbtn\">Change Status <i class=\"fas fa-caret-down\"></i></button>
-        <div id=$id_name class=\"dropdown-content\">
-          <a href=\"#home\">Online</a>
-          <a href=\"#about\">Offline</a>
-          
-        </div>
-        "; 
-    
-    ?>
+                                $id_name = 'myDropdown';
+                                
+                                $x = 1;
+                                $id_name .= $x;
+                                echo"
+                                <button onclick=\"myFunction($x)\" class=\"dropbtn\">Change Status <i class=\"fas fa-caret-down\"></i></button>
+                                <div id=$id_name class=\"dropdown-content\">
+                                <a href=\"#home\">Online</a>
+                                <a href=\"#about\">Offline</a>
+                                
+                                </div>
+                                "; 
+                            
+                            ?>
                                     </div>
                                     <button>Delete</button>
 
@@ -155,20 +157,20 @@
                                 <div class="btn-group">
                                     <div class="dropdown">
                                         <?php
-        $id_name = 'myDropdown';
-        
-         $x = 2;
-         $id_name .= $x;
-        echo"
-        <button onclick=\"myFunction($x)\" class=\"dropbtn\">Change status <i class=\"fas fa-caret-down\"></i></button>
-        <div id=$id_name class=\"dropdown-content\">
-          <a href=\"#home\">Online</a>
-          <a href=\"#about\">Offline</a>
-          
-        </div>
-        "; 
-    
-    ?>
+                            $id_name = 'myDropdown';
+                            
+                            $x = 2;
+                            $id_name .= $x;
+                            echo"
+                            <button onclick=\"myFunction($x)\" class=\"dropbtn\">Change status <i class=\"fas fa-caret-down\"></i></button>
+                            <div id=$id_name class=\"dropdown-content\">
+                            <a href=\"#home\">Online</a>
+                            <a href=\"#about\">Offline</a>
+                            
+                            </div>
+                            "; 
+                        
+                        ?>
 
                                     </div>
                                     <button>Delete</button>
@@ -186,20 +188,20 @@
                                 <div class="btn-group">
                                     <div class="dropdown">
                                         <?php
-        $id_name = 'myDropdown';
-        
-         $x = 3;
-         $id_name .= $x;
-        echo"
-        <button onclick=\"myFunction($x)\" class=\"dropbtn\">Change status <i class=\"fas fa-caret-down\"></i></button>
-        <div id=$id_name class=\"dropdown-content\">
-          <a href=\"#home\">Online</a>
-          <a href=\"#about\">Offline</a>
-          
-        </div>
-        "; 
-    
-    ?>
+                            $id_name = 'myDropdown';
+                            
+                            $x = 3;
+                            $id_name .= $x;
+                            echo"
+                            <button onclick=\"myFunction($x)\" class=\"dropbtn\">Change status <i class=\"fas fa-caret-down\"></i></button>
+                            <div id=$id_name class=\"dropdown-content\">
+                            <a href=\"#home\">Online</a>
+                            <a href=\"#about\">Offline</a>
+                            
+                            </div>
+                            "; 
+                        
+                        ?>
 
                                     </div>
                                     <button>Delete</button>
@@ -217,20 +219,20 @@
                                 <div class="btn-group">
                                     <div class="dropdown">
                                         <?php
-        $id_name = 'myDropdown';
-        
-         $x = 4;
-         $id_name .= $x;
-        echo"
-        <button onclick=\"myFunction($x)\" class=\"dropbtn\">Change status <i class=\"fas fa-caret-down\"></i></button>
-        <div id=$id_name class=\"dropdown-content\">
-          <a href=\"#home\">Online</a>
-          <a href=\"#about\">Offline</a>
-          
-        </div>
-        "; 
-    
-    ?>
+                            $id_name = 'myDropdown';
+                            
+                            $x = 4;
+                            $id_name .= $x;
+                            echo"
+                            <button onclick=\"myFunction($x)\" class=\"dropbtn\">Change status <i class=\"fas fa-caret-down\"></i></button>
+                            <div id=$id_name class=\"dropdown-content\">
+                            <a href=\"#home\">Online</a>
+                            <a href=\"#about\">Offline</a>
+                            
+                            </div>
+                            "; 
+                        
+                        ?>
 
                                     </div>
                                     <button>Delete</button>

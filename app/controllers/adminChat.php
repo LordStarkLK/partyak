@@ -11,6 +11,7 @@ class AdminChat extends FrameworkPartyak{
     
     public function index(){
         $id=$_SESSION['userId'];
+        // getting chatted users 
         $data['myDetails'] = $this->user->getDetails($id);
         // echo $_SESSION['type'];
         // if(!isset($_SESSION['userId']) && !isset($_SESSION['type']) || $_SESSION['type'] != "customer"){
@@ -20,6 +21,7 @@ class AdminChat extends FrameworkPartyak{
         $this->view("admin/adminChatView",$data);
     }
 
+    
     public function search(){
         $id=$_SESSION['userId'];
         $searchTerm = mysqli_real_escape_string($GLOBALS['db'], $_POST['searchTerm']);

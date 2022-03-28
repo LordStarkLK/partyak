@@ -7,11 +7,12 @@ class AdminPaymentVendor extends FrameworkPartyak{
         $this->paymentModel = $this->model("adminPaymentVendorModel");
     }
 
+    // To show the requests for payments
     public function index(){
         $data["request"] = $this->paymentModel->getRequest();
         $this->view("admin/adminPaymentRequestsView",$data);
     }
-
+    // to show settlements
     public function payments(){
         $data["payments"] = $this->paymentModel->getPayments();
         $data["wallet"] = $this->paymentModel->getWalletDetails();
@@ -19,6 +20,7 @@ class AdminPaymentVendor extends FrameworkPartyak{
     }
 
     public function insertSettlement(){
+        // file uploading data inserting
         if (isset($_POST['submit'])) {
             $fileName = $_FILES['file']['name'];
             $fileTmpName = $_FILES['file']['tmp_name'];

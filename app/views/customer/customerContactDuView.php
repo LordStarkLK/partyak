@@ -192,11 +192,13 @@
                                           
                                           if($row['status']== "accepted"){
                                             echo "<td>";
+
                                             if($row['service_image']){
-                                              echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
+                                              echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src=\"http://localhost/partyak/public/img/serviceImg/$row[image]\"/> </a>";
                                             }else{
                                               $row['service_image']="default.png";
-                                              echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
+                                              echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src=\"http://localhost/partyak/public/img/serviceImg/$row[image]\"/> </a>";
+
                                             }
                                             echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
                                             echo "</td>"; 
@@ -211,11 +213,7 @@
                                           
                                         }
             ?>
-          <tr>
-            <td> <a  href="#"> <img <?php srcIMG("Rayman.png") ?> alt="Chance Flowers"></a><br><p>Rayman <br> Colombo, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("H&h.jpg") ?> alt="Chance Flowers"> </a><br><p>H & h Suppliers <br> Ampara, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("nb.png") ?> alt="Chance Flowers"></a> <br><p>NB Suppliers <br>Mathara,Sri Lanka</p></td>  
-          </tr>
+         
         </table>
       </div>
   

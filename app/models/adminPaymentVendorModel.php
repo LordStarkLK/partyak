@@ -28,6 +28,7 @@ class AdminPaymentVendorModel extends database{
     public function insertSettlement($fileNameNew,$user_id,$amount,$description,$date,$type,$request_id)
     {
         // echo "Hi";
+        // insert to vendor payment table
         $query = "INSERT INTO vendor_payment(date,amount,vendor_id,content,description,type,request_id) VALUES ('$date','$amount','$user_id','$fileNameNew','$description','$type','$request_id')";
         $result = mysqli_query($GLOBALS['db'], $query);
         if($result){
@@ -36,6 +37,7 @@ class AdminPaymentVendorModel extends database{
                 $result2 = mysqli_query($GLOBALS['db'], $query2);
             }
 
+            // wallet details checking
             $query3 = "SELECT * FROM wallet WHERE user_id = '$user_id'";
             $result3 = mysqli_query($GLOBALS['db'], $query3);
             $row = mysqli_fetch_assoc($result3);

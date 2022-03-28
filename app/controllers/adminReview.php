@@ -12,6 +12,7 @@ class AdminReview extends FrameworkPartyak{
         $this->view("admin/adminReviewView",$data);
     }
 
+    // search from the service
     public function search(){
         $searchTerm = mysqli_real_escape_string($GLOBALS['db'], $_POST['searchTerm']);
 
