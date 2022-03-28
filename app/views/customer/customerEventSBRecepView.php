@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
-    <title>Payment Details</title>
+    <title>Recommandations of Event Planner</title>
     <?php linkCSS("customer/customerEventSBRecepView"); ?>
     <?php linkCSS("customerNavigation"); ?>
     <?php linkCSS("footer");?>
@@ -24,7 +24,7 @@
   <div class="container">
     <div class="custopic">
       <p>Recomndations of Event Planner</p>
-      <a href="<?php echo BASEURL . '/customerEventSB'; ?>">Event Schedule Board</a>
+      <!-- <a href="<?php echo BASEURL . '/customerEventSB/index/$eventS[planning_id]'; ?>">Event Schedule Board</a> -->
     </div>
 
     <div class="cusevent">
@@ -34,7 +34,6 @@
           <th>Recommned No</th>
           <th>Service Type</th>
           <th>Recommanded Service Name</th>
-          <th>Customer Prefer Status</th>
           <th>Advanced Payment Amount</th>
           <th>Full Payment Amount</th>
           <th>Payment Status</th>
@@ -42,40 +41,25 @@
         </tr>
       </div>
 
-      <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>  
-          <td> </td>
-          <td> </td>       
-      </tr>
+      <?php
+            $i = 1;
+            while($row=mysqli_fetch_assoc($data['recomandDetail']) ){
+               
+                echo"
+                <tr>
+                  <td>$i</td>
+                  <td>$row[service_type]</td>
+                  <td>$row[recom_service_name]</td>
+                  <td>$row[adv_pay_amount]</td>
+                  <td>$row[full_pay_amount]</td>
+                  <td>$row[payment_status]</td>
+                  <td>$row[other_suggest]</td>";
 
-      <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>  
-          <td> </td>
-          <td> </td>       
-      </tr>
-
-      <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>  
-          <td> </td>
-          <td> </td>       
-      </tr>
-        
-        
+ 
+                echo"</tr>";   
+                
+            $i++;
+      }?>
  
         
       </table>

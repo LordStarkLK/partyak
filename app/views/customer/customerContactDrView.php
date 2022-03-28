@@ -182,37 +182,34 @@
         <table>
             <?php
                             $i=1;
-                          
-                          
-                            
-                            
+
                                 echo"<tr>";
                                 $j=1;
                                       
                                         while($row=mysqli_fetch_assoc($data['deco_detail'])  ){
-                                          echo "<td>";
-                                          if($row['service_image']){
-                                            echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
-                                          }else{
-                                            $row['service_image']="default.png";
-                                            echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
+                                          if($row['status']== "accepted"){
+                                            echo "<td>";
+                                            if($row['service_image']){
+                                              echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
+                                            }else{
+                                              $row['service_image']="default.png";
+                                              echo "<a href=\" ".BASEURL ."/spService/index/$row[service_id]\"> <img src='http://localhost/partyak/public/img/serviceImages/$row[service_image]'/> </a>";
+                                            }
+                                            echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
+                                            echo "</td>"; 
+                                          
+                                            $j++;
+                                            if($j>3){
+                                              echo "</tr>";
+                                              $j = 1;
+                                            }
+
                                           }
-                                          echo " <br><p>$row[service_name]<br>$row[service_location], Sri Lanka</p>";
-                                          echo "</td>"; 
-                                        
-                                          $j++;
-                                          if($j>3){
-                                            echo "</tr>";
-                                            $j = 1;
-                                          }
+                                          
                                           
                                         }
             ?>
-          <tr>
-            <td> <a  href="#"> <img <?php srcIMG("chanceFlowers.png") ?> alt="Chance Flowers"></a><br><p>2nd Chance Flowers <br> Colombo, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("setiback.png") ?> alt="Chance Flowers"> </a><br><p>Evntro<br> Nuwara Eliya, Sri Lanka</p></td>
-            <td> <a  href="#"> <img <?php srcIMG("designer.jpg") ?> alt="Chance Flowers"></a> <br><p>Event Decos <br>Hambanthota,Sri Lanka</p></td>  
-          </tr>
+          
         </table>
       </div>
   

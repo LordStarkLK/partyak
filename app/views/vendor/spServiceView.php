@@ -453,7 +453,7 @@
             echo "
         </div>
             <div class=\"request\">
-                <button type=\"submit\" id=\"submitid\"  value=\"Submit\">Request Service</button>
+                <button type=\"submit\" name=\"submit\" id=\"submitid\"  value=\"Submit\">Request Service</button>
             </div>
             <div class=\"notice\">
                 *After requesting service you will recive vendor response and then you can confirm the payment
@@ -462,9 +462,27 @@
                 <button>Send Message</button>
             </div>
         </div>
-        </form>
+        </form>";
+
+        if (isset($_POST['submit'])) {
+            echo "<div class=\"sccuess-event\" onclick=\"document.getElementById($row[service_id]).style.display='block'\"></div>
+                <div id=\"id\" class=\"modal\">
+                    <span onclick=\"document.getElementById(id).style.display='none'\" class=\"close\" title=\"Close Modal\">&times;</span>
+                    <form class=\"modal-content\" action=\"/action_page.php\">
+                        <div class=\"container-modal\">
+                        <h1>Success!</h1>
+                        <br><p>Your booking details successfully submitted.</p>
+                        <br><p>Please waiting for vendor response.</p>
+                            
+                        <div class=\"clearfix\">
+                            <button type=\"button\" class=\"deletebtn\" onclick=\"window.location=' " . BASEURL . "/customerProfileBooking/'\">OK</button>
+                        </div>
+                        </div>
+                    </form>
+                </div>";
+        }
        
-        "; ?>
+        ?>
 
         <?php
             //this calender should be changed
@@ -541,21 +559,33 @@
                 </div>
             </div>
         </div>
-        <div class=\"allpackages\">
-            <label for=\"package\">Packages</label>
+        
         ";
         } ?>
-        <?php mysqli_data_seek($data['package_data'], 0);
-        while ($row2 = mysqli_fetch_assoc($data['package_data'])) {
+        <?php 
+        if($data['package_data']){
+            mysqli_data_seek($data['package_data'], 0);
+            echo "<div class=\"allpackages\">
+            <label for=\"package\">Packages</label>";
 
-            echo "
-        
-            <div class=\"package\">
-                <div class=\"package_content\">
-                    <label>$row2[package_name]</label>
-                    <div class=\"package_summary\">
-                        $row2[description]
+            while ($row2 = mysqli_fetch_assoc($data['package_data'])) {
+
+                echo "
+            
+                <div class=\"package\">
+                    <div class=\"package_content\">
+                        <label>$row2[package_name]</label>
+                        <div class=\"package_summary\">
+                            $row2[description]
+                        </div>
+                        <a class=\"validation\"> Valid from : $row2[valid_from] &emsp; Valid Until : $row2[valid_to]</a>
                     </div>
+                    <div class=\"package_price\">
+                        LKR
+                        <br><a class=\"p_price\">$row2[per_unit_price]</a>
+                        <br>per unit
+                    </div>
+
                     <a class=\"validation\"> Valid from : $row2[valid_from] &emsp; Valid Until : $row2[valid_to]</a>
                 </div>
                 
@@ -577,7 +607,9 @@
                 </div>
             </div>";
         }
+
         }
+        
         ?>
     </div>
 
