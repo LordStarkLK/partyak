@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <?php linkCSS("home-new"); ?> -->
     <?php linkCSS("navigation"); ?>
-    <!-- <?php linkCSS("customerNavigation"); ?> -->
+    <?php linkCSS("customerNavigation"); ?>
     <?php linkCSS("footer"); ?>
     <title>service</title>
 </head>
@@ -101,7 +101,7 @@
             <div class="request-container">
                 <div class="right_side">
                         <div class="request_container">
-                                <form action="<?php echo BASEURL . '/epOnlyService/bookingDet/'.$data['service']['service_id']; ?>" class="form-area" method="POST">
+                                <form action="<?php if(isset($data['planning_id'])){echo BASEURL . '/epOnlyService/bookingDet/'.$data['service']['service_id'].'/'.$data['planning_id'];}else {echo BASEURL . '/epOnlyService/bookingDet/'.$data['service']['service_id'];} ?>" class="form-area" method="POST">
                                         Reserve For
                                     <div class="reserve_price">
                                         <div class="price">
@@ -146,7 +146,7 @@
                                     </div>
                                         <div class="row-form">
                                             <div class="request">
-                                                    <button type="submit" id="submitid"  value="Submit">Request Service</button>
+                                                    <button type="submit" name="submit" id="submitid"  value="Submit">Request Service</button>
                                             </div><br>
                                             <div class="notice">
                                                     *After requesting service you will recive vendor response and then you can confirm the payment
