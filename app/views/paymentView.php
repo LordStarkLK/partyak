@@ -8,6 +8,7 @@
     <title>Home</title>
     <?php linkCSS("payment"); ?>
     <?php linkCSS("navigation"); ?>
+    <?php linkCSS("customerNavigation"); ?>
 
     <?php $paymentDet = $data['payment_det']; ?>
     
@@ -18,7 +19,18 @@
     <?php $booking_id = $data['booking_id']; ?>
     <?php $vendor_id = $data['vendor_id']; ?>
     <header>
-        <?php linkPhp("navigation") ?>
+    <?php
+            if (!isset($_SESSION["type"])) {
+                linkPhp("Navigation");
+            } else {
+                if ($_SESSION["type"] == "customer") {
+                    linkPhp("customerNavigation");
+                } else {
+                    linkPhp("Navigation");
+                }
+            }
+
+    ?>
     </header>
     <html>
 

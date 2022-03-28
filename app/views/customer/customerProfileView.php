@@ -6,17 +6,29 @@
     <title>Profile</title>
     <?php linkCSS("customer/customerProfileView"); ?>
     <?php linkCSS("customerNavigation"); ?>
+    <?php linkCSS("navigation"); ?>
     <?php linkCSS("footer");?>
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <?php $name=$data['profile'];?>
-     <?php $email=$data['cus_email'];?>
-     <?php $profi=$data['profileimage'];?>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php $name=$data['profile'];?>
+    <?php $email=$data['cus_email'];?>
+    <?php $profi=$data['profileimage'];?>
    </head>
 <body>
 <header>
-    <?php linkPhp("customerNavigation") ?>
+    <?php
+            if (!isset($_SESSION["type"])) {
+                linkPhp("Navigation");
+            } else {
+                if ($_SESSION["type"] == "customer") {
+                    linkPhp("customerNavigation");
+                } else {
+                    linkPhp("Navigation");
+                }
+            }
+
+    ?>
 </header>
 <div class="container">
 <div class="sidebar">
