@@ -6,6 +6,7 @@ class Notification extends FrameworkPartyak{
         $this->notifyModel = $this->model("notificationModel");
     }
 
+    // change the status of read into 1
     public function readNotification($notificationId)
     {
         $userId = $this->getSession("userId");
@@ -13,11 +14,13 @@ class Notification extends FrameworkPartyak{
         $this->notifyModel->updateUserNotification($userId, $notificationId);
     }
 
+    // get notification count
     public function notificationCount(){
         $userId = $this->getSession("userId");
         echo $this->notifyModel->getNotificationCount($userId);
     }
 
+    // getting the html of notifications to echo to notification js file
     public function updateNotification(){
         $userId = $this->getSession("userId");
         $notifyToday = $this->notifyModel->getNotificationDetails($userId,"1");
@@ -30,6 +33,7 @@ class Notification extends FrameworkPartyak{
         
     }
 
+    // display unread 
     public function getUnreadNotification()
     {
         $userId = $this->getSession("userId");
@@ -46,6 +50,7 @@ class Notification extends FrameworkPartyak{
 
 
 
+    // html parts of notifications
     public function getNotificationTags($result,$isToday){
         if($isToday === "1"){
             $output = "

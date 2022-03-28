@@ -9,7 +9,7 @@ class AdminDashboard extends FrameworkPartyak{
     }
     
     public function index(){
-        
+        // Getting analytics details
         $data['user_total'] = $this->dashBoardModel->getUserTotal();
         $data['customer_total'] = $this->dashBoardModel->getCustomerTotal();
         $data['vendor_total'] = $this->dashBoardModel->getVendorTotal();

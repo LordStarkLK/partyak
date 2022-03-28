@@ -78,6 +78,7 @@
 
                         </tr>
                         <tr>
+                            <!-- tables rows -->
                             <?php while($row = mysqli_fetch_assoc($data['booking'])){
                                 $row2 = mysqli_fetch_assoc($data['customer']);
                                 $row3 = mysqli_fetch_assoc($data['service']);
@@ -94,7 +95,7 @@
                                     <td>$row[event_date]</td>
                                     <td>
                                     <div class=\"btn-group\">
-                                        <button onclick=\"window.location='".BASEURL."/adminVendorBookings'\">See in Vendor Bookings</button>
+                                        
                                         <button onclick=\"document.getElementById('$row[booking_id]').style.display='block'\">Delete Booking</button>
                                         
     

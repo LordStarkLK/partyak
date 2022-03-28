@@ -8,6 +8,7 @@ class AdminPayment extends FrameworkPartyak{
     }
 
     public function index(){
+        // details for the tables
         $data["payment"] = $this->paymentModel->getPayment();
         $data["customer"] = $this->paymentModel->getCustomer();
         $data["package"] = $this->paymentModel->getPackage();
@@ -16,6 +17,7 @@ class AdminPayment extends FrameworkPartyak{
     }
 
     public function search(){
+        // POST taken from payment js
         $searchTerm = mysqli_real_escape_string($GLOBALS['db'], $_POST['searchTerm']);
 
         // echo $searchTerm;

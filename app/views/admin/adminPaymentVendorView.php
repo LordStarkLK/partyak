@@ -205,6 +205,7 @@
 
                     </tr>
                     <tr>
+                        <!-- row content -->
                         <?php while($row = mysqli_fetch_assoc($data['payments'])){ 
                             
                             $row2 = mysqli_fetch_assoc($data['wallet']);
@@ -233,7 +234,7 @@
 
         </section>
     </div>
-
+    <!-- Notification -->
     <?php linkPhp("notification"); ?>
     <?php linkJS("lib/jquery-3.6.0.min"); ?>
     <?php linkJS("admin/notification"); ?>                        

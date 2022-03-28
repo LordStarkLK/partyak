@@ -24,6 +24,7 @@ class AdminChatMsg extends FrameworkPartyak{
         echo $chatList;
     }
 
+    // sending messages (inserting to table)
     public function sendMessage(){
         // $message = str_replace('~', ' ', $message);
         // echo "message";

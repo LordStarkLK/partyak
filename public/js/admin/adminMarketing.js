@@ -1,6 +1,7 @@
 $(document).ready(function(){
     
     $(".online-btn").click(function(){
+        // used to get the content id from the class list
         console.log($(this).attr('class').split(' ')[1]);
         var content_id = $(this).attr('class').split(' ')[1];
         
@@ -18,6 +19,7 @@ $(document).ready(function(){
     })
 
     $(".offline-btn").click(function(){
+        // used to get the content id from the class list
         console.log($(this).attr('class').split(' ')[1]);
         var content_id = $(this).attr('class').split(' ')[1];
         
@@ -36,6 +38,7 @@ $(document).ready(function(){
     })
 
     $(".accept-btn").click(function(){
+        // used to get the content id from the class list
         console.log($(this).attr('class').split(' ')[1]);
         var content_id = $(this).attr('class').split(' ')[1];
         
@@ -53,6 +56,7 @@ $(document).ready(function(){
     })
 
     $(".reject-btn").click(function(){
+        // used to get the content id from the class list
         console.log($(this).attr('class').split(' ')[1]);
         var content_id = $(this).attr('class').split(' ')[1];
         
