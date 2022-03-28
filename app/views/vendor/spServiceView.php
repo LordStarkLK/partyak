@@ -578,31 +578,38 @@
                 </div>
             </div>
         </div>
-        <div class=\"allpackages\">
-            <label for=\"package\">Packages</label>
+        
         ";
         } ?>
-        <?php mysqli_data_seek($data['package_data'], 0);
-        while ($row2 = mysqli_fetch_assoc($data['package_data'])) {
+        <?php 
+        if($data['package_data']){
+            mysqli_data_seek($data['package_data'], 0);
+            echo "<div class=\"allpackages\">
+            <label for=\"package\">Packages</label>";
 
-            echo "
-        
-            <div class=\"package\">
-                <div class=\"package_content\">
-                    <label>$row2[package_name]</label>
-                    <div class=\"package_summary\">
-                        $row2[description]
+            while ($row2 = mysqli_fetch_assoc($data['package_data'])) {
+
+                echo "
+            
+                <div class=\"package\">
+                    <div class=\"package_content\">
+                        <label>$row2[package_name]</label>
+                        <div class=\"package_summary\">
+                            $row2[description]
+                        </div>
+                        <a class=\"validation\"> Valid from : $row2[valid_from] &emsp; Valid Until : $row2[valid_to]</a>
                     </div>
-                    <a class=\"validation\"> Valid from : $row2[valid_from] &emsp; Valid Until : $row2[valid_to]</a>
+                    <div class=\"package_price\">
+                        LKR
+                        <br><a class=\"p_price\">$row2[per_unit_price]</a>
+                        <br>per unit
+                    </div>
                 </div>
-                <div class=\"package_price\">
-                    LKR
-                    <br><a class=\"p_price\">$row2[per_unit_price]</a>
-                    <br>per unit
-                </div>
-            </div>
-        ";
+            ";
+            }
+
         }
+        
         ?>
     </div>
 
