@@ -1,3 +1,6 @@
+![Screenshot (1526)](https://user-images.githubusercontent.com/62317033/175130056-a71a894a-8921-4d3e-97de-6318c7b2ccc4.png)
+
+
 Partyak is an online event management system which provides a platform for
 
    •	 Users to search and hire event related services and event planning services.
